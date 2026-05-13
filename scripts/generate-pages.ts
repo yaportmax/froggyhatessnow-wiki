@@ -120,11 +120,31 @@ type SteamSnapshot = {
   }>;
   steam_news_findings: {
     source_url: string;
+    api_url?: string;
+    fetched_news_item_count?: number;
     playable_frogs_count: number;
     locations_count: number;
     minimum_combined_skills_tools_attacks_companions: number;
     demo_progress_carries_over: boolean;
     confirmed_terms: string[];
+    all_news_items?: Array<{
+      source_id: string;
+      mapped_source_id: string | null;
+      gid: string;
+      title: string;
+      date: string;
+      url: string;
+      feedname: string;
+      author: string;
+      classification: string;
+      evidence_strength: string;
+      fact_scope: string[];
+      claim_limits: string;
+      needs_gameplay_verification: boolean;
+      wiki_targets: string[];
+      verified_terms: string[];
+      notes: string;
+    }>;
     news_items?: Array<{
       source_id: string;
       gid: string;
@@ -326,6 +346,7 @@ function screenshotGrid(snapshot: SteamSnapshot) {
 function steamNewsFindings(snapshot: SteamSnapshot) {
   const findings = snapshot.steam_news_findings;
   const newsItems = findings.news_items ?? [];
+  const allNewsItems = findings.all_news_items ?? [];
   return (
     "## Steam News & Devlogs\n\n" +
     `Source stream: [Steam community news/devlogs](${findings.source_url}).\n\n` +
@@ -335,6 +356,8 @@ function steamNewsFindings(snapshot: SteamSnapshot) {
       ["Locations", String(findings.locations_count)],
       ["Skills/tools/attacks/companions", `${findings.minimum_combined_skills_tools_attacks_companions}+`],
       ["Demo progress carries over", findings.demo_progress_carries_over ? "yes" : "no"],
+      ["Steam News API items classified", String(findings.fetched_news_item_count ?? allNewsItems.length)],
+      ["Direct gameplay/update sources mapped", String(newsItems.length)],
       ["Confirmed named terms", findings.confirmed_terms.join(", ")]
     ]
       .map(([field, value]) => `| ${field} | ${mdEscape(value)} |`)
@@ -347,6 +370,18 @@ function steamNewsFindings(snapshot: SteamSnapshot) {
         "| Date | Source ID | Title | Supports |\n|---|---|---|---|\n" +
         newsItems
           .map((item) => `| ${mdEscape(item.date)} | ${inlineCode(item.source_id)} | [${mdEscape(item.title)}](${item.url}) | ${mdEscape(item.supports)} |`)
+          .join("\n") +
+        "\n\n"
+      : "") +
+    (allNewsItems.length > 0
+      ? "### All Steam News Items\n\n" +
+        "Every current Steam News API item is recorded below. Items classified as marketing/event or weak/no-gameplay are kept for audit coverage but should not be used as gameplay evidence.\n\n" +
+        "| Date | Source ID | Title | Classification | Evidence | Scope | Limits |\n|---|---|---|---|---|---|---|\n" +
+        allNewsItems
+          .map(
+            (item) =>
+              `| ${mdEscape(item.date)} | ${inlineCode(item.source_id)} | [${mdEscape(item.title)}](${item.url}) | ${mdEscape(item.classification)} | ${mdEscape(item.evidence_strength)} | ${mdEscape(item.fact_scope.join(", "))} | ${mdEscape(item.claim_limits)} |`
+          )
           .join("\n") +
         "\n\n"
       : "") +

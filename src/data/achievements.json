@@ -95,7 +95,7 @@
       "cost"
     ],
     "steam_internal_name": "assemble_the_team_1",
-    "steam_global_percent_api": "68.7",
+    "steam_global_percent_api": "68.5",
     "steam_community_percent": "68.5%",
     "icon_url": "https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/3232380/5cd2fccb5cf20d7040827d0d8de2d10a0819398d.jpg"
   },
@@ -143,7 +143,7 @@
       "cost"
     ],
     "steam_internal_name": "assemble_the_team_2",
-    "steam_global_percent_api": "19.3",
+    "steam_global_percent_api": "19.4",
     "steam_community_percent": "19.4%",
     "icon_url": "https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/3232380/1bbb38ad30784505fedab4f60794df1164004cea.jpg"
   },
@@ -549,7 +549,7 @@
       "cost"
     ],
     "steam_internal_name": "deadly_dose",
-    "steam_global_percent_api": "1.1",
+    "steam_global_percent_api": "1.2",
     "steam_community_percent": "1.2%",
     "icon_url": "https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/3232380/b67f31250ed7791be3af0893996ca1b2376c55e5.jpg"
   },
@@ -807,7 +807,7 @@
       "cost"
     ],
     "steam_internal_name": "old_school_explorer",
-    "steam_global_percent_api": "64.8",
+    "steam_global_percent_api": "64.5",
     "steam_community_percent": "64.5%",
     "icon_url": "https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/3232380/bde329e39e9e27b133ff5d81c290e393e03e78d0.jpg"
   },
@@ -855,7 +855,7 @@
       "cost"
     ],
     "steam_internal_name": "pathfinder_1",
-    "steam_global_percent_api": "76.5",
+    "steam_global_percent_api": "76.1",
     "steam_community_percent": "76.1%",
     "icon_url": "https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/3232380/31af8b6e05d7297508a48e6e4150d2f17b53e00e.jpg"
   },
@@ -903,7 +903,7 @@
       "cost"
     ],
     "steam_internal_name": "pathfinder_2",
-    "steam_global_percent_api": "13.1",
+    "steam_global_percent_api": "13.5",
     "steam_community_percent": "13.5%",
     "icon_url": "https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/3232380/6df446f0d745aee517a763c851184c518aa63408.jpg"
   },
@@ -999,7 +999,7 @@
       "cost"
     ],
     "steam_internal_name": "peak_performance_1",
-    "steam_global_percent_api": "22.0",
+    "steam_global_percent_api": "22.1",
     "steam_community_percent": "22.1%",
     "icon_url": "https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/3232380/b3f991fc4e86534db8723a2d25ad66dd9ac13583.jpg"
   },
@@ -1143,7 +1143,7 @@
       "cost"
     ],
     "steam_internal_name": "power_hungry_1",
-    "steam_global_percent_api": "86.4",
+    "steam_global_percent_api": "85.8",
     "steam_community_percent": "85.8%",
     "icon_url": "https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/3232380/96da977920e03d5fbd67c8bc03773312cc532365.jpg"
   },
@@ -1191,7 +1191,7 @@
       "cost"
     ],
     "steam_internal_name": "power_hungry_2",
-    "steam_global_percent_api": "64.6",
+    "steam_global_percent_api": "64.3",
     "steam_community_percent": "64.3%",
     "icon_url": "https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/3232380/72db0c5f030a54daa0e77598fa24e82fedc6f20d.jpg"
   },
@@ -1239,7 +1239,7 @@
       "cost"
     ],
     "steam_internal_name": "power_hungry_3",
-    "steam_global_percent_api": "45.4",
+    "steam_global_percent_api": "45.0",
     "steam_community_percent": "45.0%",
     "icon_url": "https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/3232380/958b2564a92ff6fa29076c35c9163a5df9a94e8b.jpg"
   },
@@ -1287,7 +1287,7 @@
       "cost"
     ],
     "steam_internal_name": "power_hungry_4",
-    "steam_global_percent_api": "16.0",
+    "steam_global_percent_api": "15.9",
     "steam_community_percent": "15.9%",
     "icon_url": "https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/3232380/42099f9e33e311a52976bbe3dcee92b85dba6d5c.jpg"
   },
@@ -1335,7 +1335,7 @@
       "cost"
     ],
     "steam_internal_name": "power_hungry_5",
-    "steam_global_percent_api": "3.9",
+    "steam_global_percent_api": "4.0",
     "steam_community_percent": "4.0%",
     "icon_url": "https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/3232380/bfaaac25d21fc0d18d95f30093f2f37b67913874.jpg"
   },
@@ -1383,7 +1383,7 @@
       "cost"
     ],
     "steam_internal_name": "relic_hunter_1",
-    "steam_global_percent_api": "85.4",
+    "steam_global_percent_api": "84.8",
     "steam_community_percent": "84.8%",
     "icon_url": "https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/3232380/3f175040ca91ea04fcde8eb34bb14b2733e9d46c.jpg"
   },
@@ -1431,7 +1431,7 @@
       "cost"
     ],
     "steam_internal_name": "relic_hunter_2",
-    "steam_global_percent_api": "68.1",
+    "steam_global_percent_api": "67.9",
     "steam_community_percent": "67.9%",
     "icon_url": "https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/3232380/b204cfb2d1e5a4a6b3b417beeb4d2759df4dbd07.jpg"
   },
@@ -1479,7 +1479,7 @@
       "cost"
     ],
     "steam_internal_name": "relic_hunter_3",
-    "steam_global_percent_api": "49.3",
+    "steam_global_percent_api": "49.2",
     "steam_community_percent": "49.2%",
     "icon_url": "https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/3232380/3345ad2a1fa71647051e1a10929b06e6cf883e43.jpg"
   },
@@ -1825,7 +1825,7 @@
       "cost"
     ],
     "steam_internal_name": "snow_master_2",
-    "steam_global_percent_api": "14.3",
+    "steam_global_percent_api": "14.5",
     "steam_community_percent": "14.5%",
     "icon_url": "https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/3232380/067fe6301f3c88d490d13b3c170ed2b8f45d49de.jpg"
   },

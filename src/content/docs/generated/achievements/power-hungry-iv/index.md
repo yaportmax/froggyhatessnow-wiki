@@ -26,7 +26,7 @@ Unlock 20 Skills
 | Last Verified | Public Steam metadata accessed 2026-05-13 |
 | Notes | Global percentage is volatile; refresh before publishing exact percentage-driven claims. |
 | Steam Internal Achievement ID | power_hungry_4 |
-| Steam Global Percent API | 16.0% |
+| Steam Global Percent API | 15.9% |
 | Steam Community Percent | 15.9% |
 
 ## Related

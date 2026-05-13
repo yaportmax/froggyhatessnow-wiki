@@ -26,7 +26,7 @@ Fully upgrade 1 Character
 | Last Verified | Public Steam metadata accessed 2026-05-13 |
 | Notes | Global percentage is volatile; refresh before publishing exact percentage-driven claims. |
 | Steam Internal Achievement ID | peak_performance_1 |
-| Steam Global Percent API | 22.0% |
+| Steam Global Percent API | 22.1% |
 | Steam Community Percent | 22.1% |
 
 ## Related

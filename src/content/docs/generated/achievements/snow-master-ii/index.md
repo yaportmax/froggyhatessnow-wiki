@@ -26,7 +26,7 @@ Fully complete 5 Locations
 | Last Verified | Public Steam metadata accessed 2026-05-13 |
 | Notes | Global percentage is volatile; refresh before publishing exact percentage-driven claims. |
 | Steam Internal Achievement ID | snow_master_2 |
-| Steam Global Percent API | 14.3% |
+| Steam Global Percent API | 14.5% |
 | Steam Community Percent | 14.5% |
 
 ## Related

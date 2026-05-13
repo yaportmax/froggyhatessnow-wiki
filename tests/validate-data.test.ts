@@ -1,4 +1,4 @@
-import { mkdtemp, rm, writeFile } from "node:fs/promises";
+import { mkdtemp, readFile, rm, writeFile } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import path from "node:path";
 import { afterEach, describe, expect, test } from "vitest";
@@ -85,7 +85,20 @@ async function makeDataDir(overrides: Record<string, unknown[]> = {}) {
           notes: []
         },
         public_gameplay_claims: [],
-        steam_news_findings: {},
+        steam_news_findings: {
+          source_url: "https://steamcommunity.com/app/3232380/allnews/?l=english",
+          api_url: "https://api.steampowered.com/ISteamNews/GetNewsForApp/v0002/?appid=3232380&count=20&maxlength=50000&format=json",
+          fetched_news_item_count: 0,
+          news_item_count: 0,
+          playable_frogs_count: 0,
+          locations_count: 0,
+          minimum_combined_skills_tools_attacks_companions: 0,
+          demo_progress_carries_over: false,
+          confirmed_terms: [],
+          all_news_items: [],
+          news_items: [],
+          notes: []
+        },
         research_gaps: [],
         refresh_commands: []
       },
@@ -125,6 +138,107 @@ function entity(id: string, extra: Record<string, unknown> = {}) {
     notes: "Stub.",
     ...extra
   };
+}
+
+async function addSteamNewsFixture(dir: string) {
+  const publicSourcesPath = path.join(dir, "public-sources.json");
+  const publicSources = JSON.parse(await readFile(publicSourcesPath, "utf8"));
+  publicSources.push(
+    {
+      id: "steam-news-a",
+      source_id: "steam-news-a",
+      type: "public_source",
+      path_or_url: "https://steam.example/news-a",
+      label: "Steam news A",
+      confidence: "high",
+      notes: "Mapped gameplay devlog."
+    },
+    {
+      id: "steam-news-b",
+      source_id: "steam-news-b",
+      type: "public_source",
+      path_or_url: "https://steam.example/news-b",
+      label: "Steam news B",
+      confidence: "high",
+      notes: "Mapped gameplay devlog."
+    }
+  );
+  await writeFile(publicSourcesPath, JSON.stringify(publicSources, null, 2));
+
+  const snapshotPath = path.join(dir, "steam-snapshot.json");
+  const snapshot = JSON.parse(await readFile(snapshotPath, "utf8"));
+  snapshot.steam_news_findings = {
+    ...snapshot.steam_news_findings,
+    fetched_news_item_count: 2,
+    news_item_count: 2,
+    confirmed_terms: ["Skill A", "Skill B"],
+    news_items: [
+      {
+        source_id: "steam-news-a",
+        gid: "gid-a",
+        title: "Steam news A",
+        date: "2026-05-01",
+        url: "https://steam.example/news-a",
+        feedname: "steam_community_announcements",
+        author: "Developer",
+        wiki_targets: ["skills"],
+        verified_terms: ["Skill A"],
+        supports: "Test mapped Steam news item A."
+      },
+      {
+        source_id: "steam-news-b",
+        gid: "gid-b",
+        title: "Steam news B",
+        date: "2026-05-02",
+        url: "https://steam.example/news-b",
+        feedname: "steam_community_announcements",
+        author: "Developer",
+        wiki_targets: ["tools"],
+        verified_terms: ["Skill B"],
+        supports: "Test mapped Steam news item B."
+      }
+    ],
+    all_news_items: [
+      {
+        source_id: "steam-news-a",
+        mapped_source_id: "steam-news-a",
+        gid: "gid-a",
+        title: "Steam news A",
+        date: "2026-05-01",
+        url: "https://steam.example/news-a",
+        feedname: "steam_community_announcements",
+        author: "Developer",
+        classification: "gameplay_devlog",
+        evidence_strength: "strong",
+        fact_scope: ["mechanics"],
+        claim_limits: "Do not infer exact balance values.",
+        needs_gameplay_verification: true,
+        wiki_targets: ["skills"],
+        verified_terms: ["Skill A"],
+        notes: "Test mapped Steam news item A."
+      },
+      {
+        source_id: "steam-news-b",
+        mapped_source_id: "steam-news-b",
+        gid: "gid-b",
+        title: "Steam news B",
+        date: "2026-05-02",
+        url: "https://steam.example/news-b",
+        feedname: "steam_community_announcements",
+        author: "Developer",
+        classification: "gameplay_devlog",
+        evidence_strength: "strong",
+        fact_scope: ["mechanics"],
+        claim_limits: "Do not infer exact balance values.",
+        needs_gameplay_verification: true,
+        wiki_targets: ["tools"],
+        verified_terms: ["Skill B"],
+        notes: "Test mapped Steam news item B."
+      }
+    ]
+  };
+  await writeFile(snapshotPath, JSON.stringify(snapshot, null, 2));
+  return { snapshot, snapshotPath };
 }
 
 afterEach(async () => {
@@ -185,5 +299,41 @@ describe("validateAllData", () => {
 
     expect(result.ok).toBe(false);
     expect(result.errors.join("\n")).toContain("Verified entry has no sources");
+  });
+
+  test("rejects Steam news snapshots missing the all-news catalog", async () => {
+    const dir = await makeDataDir();
+    const snapshotPath = path.join(dir, "steam-snapshot.json");
+    const snapshot = JSON.parse(await readFile(snapshotPath, "utf8"));
+    delete snapshot.steam_news_findings.all_news_items;
+    await writeFile(snapshotPath, JSON.stringify(snapshot, null, 2));
+
+    const result = await validateAllData(dir);
+
+    expect(result.ok).toBe(false);
+    expect(result.errors.join("\n")).toContain("steam_news_findings.all_news_items");
+  });
+
+  test("rejects malformed Steam news classification and mapping fields", async () => {
+    const dir = await makeDataDir();
+    const { snapshot, snapshotPath } = await addSteamNewsFixture(dir);
+    snapshot.steam_news_findings.all_news_items[0].classification = "made_up";
+    snapshot.steam_news_findings.all_news_items[0].evidence_strength = "strongish";
+    snapshot.steam_news_findings.all_news_items[0].mapped_source_id = "steam-news-b";
+    delete snapshot.steam_news_findings.all_news_items[1].mapped_source_id;
+    snapshot.steam_news_findings.all_news_items[1].wiki_targets = [];
+    snapshot.steam_news_findings.all_news_items[1].verified_terms = [];
+    await writeFile(snapshotPath, JSON.stringify(snapshot, null, 2));
+
+    const result = await validateAllData(dir);
+    const errors = result.errors.join("\n");
+
+    expect(result.ok).toBe(false);
+    expect(errors).toContain("invalid classification made_up");
+    expect(errors).toContain("invalid evidence_strength strongish");
+    expect(errors).toContain("does not match mapped_source_id steam-news-b gid gid-b");
+    expect(errors).toContain("missing required field mapped_source_id");
+    expect(errors).toContain("gameplay-like classification must have wiki_targets");
+    expect(errors).toContain("gameplay-like classification must have verified_terms");
   });
 });

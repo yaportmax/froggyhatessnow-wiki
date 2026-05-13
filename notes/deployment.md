@@ -29,18 +29,24 @@ gh repo create yaportmax/froggyhatessnow-wiki --public --source=. --remote=origi
 
 The folder was linked to Vercel project `yaportmax-5253s-projects/froggyhatessnow-wiki`.
 
-Production deploy completed on 2026-05-13:
+Latest successful production deploy completed on 2026-05-13:
 
-- Current production URL: https://froggyhatessnow-wiki-2w4p63co5-yaportmax-5253s-projects.vercel.app
+- Current production URL: https://froggyhatessnow-wiki-biugqd5z2-yaportmax-5253s-projects.vercel.app
 - Alias: https://froggyhatessnow-wiki.vercel.app
-- Inspect URL: https://vercel.com/yaportmax-5253s-projects/froggyhatessnow-wiki/3XnAZe8aBePhHR6K483smUq9wjPJ
+- Inspect URL: https://vercel.com/yaportmax-5253s-projects/froggyhatessnow-wiki/CtCq5rTqmVrmgzvutbv6vXLNy9fr
 
-The current deploy includes the expanded Steam source snapshot, Steam news/devlog findings, 42-row achievement source matrix, generated source ledger, game metadata page, and 178 static HTML pages. The build now clears Astro's local content cache in `prebuild` so restored Vercel caches do not emit stale duplicate-doc warnings.
+The current deploy includes the expanded Steam source snapshot, all 15 Steam News API items with evidence classifications, Steam news/devlog findings, 42-row achievement source matrix, generated source ledger, game metadata page, and 178 static HTML pages. The build now clears Astro's local content cache in `prebuild` so restored Vercel caches do not emit stale duplicate-doc warnings.
 Astro's `site` setting points to the Vercel alias until `froggyhatessnow.wiki` is actually registered and connected.
+
+Later deploy attempts after validator hardening did not become the active production deployment:
+
+- `dpl_BysoqF8R65bguRBehVoXhJXeRPYW` / `https://froggyhatessnow-wiki-md282qwlk-yaportmax-5253s-projects.vercel.app` is stuck in `BUILDING`; build logs stop after downloading deployment files.
+- `dpl_J1kt8Sbkz5hSUBLvGjKMwjtPTm58` / `https://froggyhatessnow-wiki-kyvn13zp7-yaportmax-5253s-projects.vercel.app` was created with `vercel build --prod --yes` plus `vercel deploy --prebuilt --prod`, but is still `QUEUED` behind the stuck build.
+- Latest successful production alias remains `https://froggyhatessnow-wiki.vercel.app`. Do not remove queued/building deployments without explicit approval.
 
 Live checks after this deploy:
 
-- `https://froggyhatessnow-wiki.vercel.app/steam-source-snapshot/` returns 200 and contains the Direct Steam News Sources, Local Metadata Scan, 14 full-game screenshot count, and Achievement Source Matrix link.
+- `https://froggyhatessnow-wiki.vercel.app/steam-source-snapshot/` returns 200 and contains Steam News API items classified, All Steam News Items, Direct Steam News Sources, Local Metadata Scan, 14 full-game screenshot count, and Achievement Source Matrix link.
 - `https://froggyhatessnow-wiki.vercel.app/achievement-source-matrix/` returns 200 and contains Milestone Series and Loadout Names sections.
 - `https://froggyhatessnow-wiki.vercel.app/game-metadata/` returns 200.
 - `https://froggyhatessnow-wiki.vercel.app/generated/frogs/puff/` returns 200 and contains Puff/ranged poison spit source data.

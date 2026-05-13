@@ -26,7 +26,7 @@ Unlock 1 Location
 | Last Verified | Public Steam metadata accessed 2026-05-13 |
 | Notes | Global percentage is volatile; refresh before publishing exact percentage-driven claims. |
 | Steam Internal Achievement ID | pathfinder_1 |
-| Steam Global Percent API | 76.5% |
+| Steam Global Percent API | 76.1% |
 | Steam Community Percent | 76.1% |
 
 ## Related

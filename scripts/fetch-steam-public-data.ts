@@ -117,15 +117,30 @@ type PublicGameplayClaim = {
   notes: string;
 };
 
+type SteamNewsClassification =
+  | "patch_or_update"
+  | "release_marketing_no_gameplay"
+  | "gameplay_devlog"
+  | "scope_marketing"
+  | "demo_update_gameplay"
+  | "demo_devlog_gameplay"
+  | "demo_devlog_partial"
+  | "developer_intro_weak_gameplay"
+  | "marketing_or_event"
+  | "weak_or_no_gameplay_facts";
+type EvidenceStrength = "strong" | "moderate" | "weak" | "metadata_only";
+
 type SteamNewsFindings = {
   source_url: string;
   api_url: string;
+  fetched_news_item_count: number;
   news_item_count: number;
   playable_frogs_count: number;
   locations_count: number;
   minimum_combined_skills_tools_attacks_companions: number;
   demo_progress_carries_over: boolean;
   confirmed_terms: string[];
+  all_news_items: SteamNewsCatalogItem[];
   news_items: SteamNewsItemSummary[];
   notes: string[];
 };
@@ -157,6 +172,25 @@ type SteamNewsItemSummary = {
   wiki_targets: string[];
   verified_terms: string[];
   supports: string;
+};
+
+type SteamNewsCatalogItem = {
+  source_id: string;
+  mapped_source_id: string | null;
+  gid: string;
+  title: string;
+  date: string;
+  url: string;
+  feedname: string;
+  author: string;
+  classification: SteamNewsClassification;
+  evidence_strength: EvidenceStrength;
+  fact_scope: string[];
+  claim_limits: string;
+  needs_gameplay_verification: boolean;
+  wiki_targets: string[];
+  verified_terms: string[];
+  notes: string;
 };
 
 type SteamSnapshot = {
@@ -609,7 +643,175 @@ function buildSteamNewsItems(response: SteamNewsApiResponse): SteamNewsItemSumma
   return summaries.sort((a, b) => b.date.localeCompare(a.date));
 }
 
-function extractSteamNewsFindings(html: string, newsItems: SteamNewsItemSummary[]): SteamNewsFindings {
+function mappedSteamNewsClassification(sourceId: string): {
+  classification: SteamNewsClassification;
+  evidence_strength: EvidenceStrength;
+  fact_scope: string[];
+  claim_limits: string;
+  needs_gameplay_verification: boolean;
+} {
+  const sharedLimits = "Do not infer exact balance values, unlock costs, complete rosters, or unstated entity behavior.";
+  switch (sourceId) {
+    case "steam-post-launch-update":
+      return {
+        classification: "patch_or_update",
+        evidence_strength: "strong",
+        fact_scope: ["patch_notes", "entity_names", "comfort_options"],
+        claim_limits: "Use only dated post-launch patch facts and explicitly named terms; do not apply to future patch states without refresh.",
+        needs_gameplay_verification: true
+      };
+    case "steam-launch-news":
+      return {
+        classification: "release_marketing_no_gameplay",
+        evidence_strength: "metadata_only",
+        fact_scope: ["release_status"],
+        claim_limits: "Use for launch availability only; do not use as mechanics evidence.",
+        needs_gameplay_verification: false
+      };
+    case "steam-release-date-news":
+      return {
+        classification: "scope_marketing",
+        evidence_strength: "strong",
+        fact_scope: ["scope_counts", "release_status", "demo_carryover"],
+        claim_limits: "Use for public scope counts only; do not infer individual roster names, map names, or exact mechanics.",
+        needs_gameplay_verification: true
+      };
+    case "steam-demo-overhaul-news":
+      return {
+        classification: "demo_update_gameplay",
+        evidence_strength: "strong",
+        fact_scope: ["demo_update", "entity_names", "progression"],
+        claim_limits: sharedLimits,
+        needs_gameplay_verification: true
+      };
+    case "steam-next-demo-devlog":
+      return {
+        classification: "demo_devlog_gameplay",
+        evidence_strength: "strong",
+        fact_scope: ["demo_devlog", "frog_structure", "attacks", "progression"],
+        claim_limits: "Use for broad frog/attack/progression structure; do not map attack examples to individual frogs without another source.",
+        needs_gameplay_verification: true
+      };
+    case "steam-demo-update-devlog":
+      return {
+        classification: "demo_devlog_partial",
+        evidence_strength: "moderate",
+        fact_scope: ["demo_devlog", "planned_progression"],
+        claim_limits: "Treat as planned/demo-direction evidence; refresh against launch/gameplay before making exact guide claims.",
+        needs_gameplay_verification: true
+      };
+    case "steam-developer-intro-devlog":
+      return {
+        classification: "developer_intro_weak_gameplay",
+        evidence_strength: "weak",
+        fact_scope: ["broad_concepts"],
+        claim_limits: "Use only for broad interactive snow and digging concepts.",
+        needs_gameplay_verification: true
+      };
+    default:
+      return {
+        classification: "gameplay_devlog",
+        evidence_strength: "strong",
+        fact_scope: ["mechanics", "entity_names"],
+        claim_limits: sharedLimits,
+        needs_gameplay_verification: true
+      };
+  }
+}
+
+function classifyUnmappedSteamNewsItem(item: SteamNewsApiItem): {
+  classification: SteamNewsClassification;
+  evidence_strength: EvidenceStrength;
+  fact_scope: string[];
+  claim_limits: string;
+  needs_gameplay_verification: boolean;
+  notes: string;
+} {
+  const title = String(item.title ?? "");
+  if (/out now|release date|one week to go|launch/i.test(title)) {
+    return {
+      classification: "release_marketing_no_gameplay",
+      evidence_strength: "metadata_only",
+      fact_scope: ["release_status", "marketing"],
+      claim_limits: "Use for release/update timing context only; no gameplay facts are extracted from this unmapped post.",
+      needs_gameplay_verification: false,
+      notes: "Recorded for release/update source coverage; no additional gameplay facts are extracted unless mapped by direct source rules."
+    };
+  }
+  if (/wishlist|fan fest|plays|stream|spotlight|thank you/i.test(title)) {
+    return {
+      classification: "marketing_or_event",
+      evidence_strength: "metadata_only",
+      fact_scope: ["marketing", "event"],
+      claim_limits: "Do not use as gameplay evidence.",
+      needs_gameplay_verification: false,
+      notes: "Recorded for complete Steam News coverage; treated as marketing/event context, not gameplay evidence."
+    };
+  }
+  return {
+    classification: "weak_or_no_gameplay_facts",
+    evidence_strength: "weak",
+    fact_scope: ["source_coverage"],
+    claim_limits: "No gameplay facts are extracted by current source rules.",
+    needs_gameplay_verification: true,
+    notes: "Recorded for complete Steam News coverage; no gameplay facts are extracted by current source rules."
+  };
+}
+
+function buildAllSteamNewsItems(response: SteamNewsApiResponse, mappedItems: SteamNewsItemSummary[]): SteamNewsCatalogItem[] {
+  const mappedByGid = new Map(mappedItems.map((item) => [item.gid, item]));
+
+  return (response.appnews?.newsitems ?? [])
+    .map((item) => {
+      const gid = String(item.gid ?? "");
+      const mapped = mappedByGid.get(gid);
+      const date = item.date ? new Date(item.date * 1000).toISOString().slice(0, 10) : "unknown";
+      if (mapped) {
+        const classification = mappedSteamNewsClassification(mapped.source_id);
+        return {
+          source_id: mapped.source_id,
+          mapped_source_id: mapped.source_id,
+          gid,
+          title: String(item.title ?? mapped.title),
+          date,
+          url: String(item.url ?? urls.news),
+          feedname: String(item.feedname ?? ""),
+          author: String(item.author ?? ""),
+          classification: classification.classification,
+          evidence_strength: classification.evidence_strength,
+          fact_scope: classification.fact_scope,
+          claim_limits: classification.claim_limits,
+          needs_gameplay_verification: classification.needs_gameplay_verification,
+          wiki_targets: mapped.wiki_targets,
+          verified_terms: mapped.verified_terms,
+          notes: mapped.supports
+        };
+      }
+
+      const classification = classifyUnmappedSteamNewsItem(item);
+      return {
+        source_id: `steam-news-${gid || slugify(String(item.title ?? "unknown"))}`,
+        mapped_source_id: null,
+        gid,
+        title: String(item.title ?? "Untitled Steam news item"),
+        date,
+        url: String(item.url ?? urls.news),
+        feedname: String(item.feedname ?? ""),
+        author: String(item.author ?? ""),
+        classification: classification.classification,
+        evidence_strength: classification.evidence_strength,
+        fact_scope: classification.fact_scope,
+        claim_limits: classification.claim_limits,
+        needs_gameplay_verification: classification.needs_gameplay_verification,
+        wiki_targets: [],
+        verified_terms: [],
+        notes: classification.notes
+      };
+    })
+    .sort((a, b) => b.date.localeCompare(a.date));
+}
+
+function extractSteamNewsFindings(html: string, newsItems: SteamNewsItemSummary[], allNewsItems: SteamNewsCatalogItem[]): SteamNewsFindings {
   const text = stripHtml(html);
   const required: Array<[string, RegExp]> = [
     ["10 playable frogs", /\b10 playable frogs\b/i],
@@ -663,16 +865,19 @@ function extractSteamNewsFindings(html: string, newsItems: SteamNewsItemSummary[
   return {
     source_url: urls.news,
     api_url: urls.newsApi,
+    fetched_news_item_count: allNewsItems.length,
     news_item_count: newsItems.length,
     playable_frogs_count: 10,
     locations_count: 16,
     minimum_combined_skills_tools_attacks_companions: 60,
     demo_progress_carries_over: true,
     confirmed_terms: [...new Set(confirmedTerms)],
+    all_news_items: allNewsItems,
     news_items: newsItems,
     notes: [
       "Steam news/devlog text is treated as public first-party source material, but exact numeric balance values still need gameplay or patch-note verification.",
-      "Counts from news/devlogs establish scope; they do not provide complete names for every frog, location, skill, tool, attack, or companion."
+      "Counts from news/devlogs establish scope; they do not provide complete names for every frog, location, skill, tool, attack, or companion.",
+      "All Steam News API items are recorded with a classification so weak marketing/event posts are explicit instead of silently ignored."
     ]
   };
 }
@@ -1209,7 +1414,13 @@ function seedCoreEntities() {
   }
 }
 
-async function buildPublicSources(fullDetails: Record<string, unknown>, demoDetails: Record<string, unknown>, fullReviews: Record<string, unknown>, demoReviews: Record<string, unknown>, newsItems: SteamNewsItemSummary[]) {
+async function buildPublicSources(
+  fullDetails: Record<string, unknown>,
+  demoDetails: Record<string, unknown>,
+  fullReviews: Record<string, unknown>,
+  demoReviews: Record<string, unknown>,
+  allNewsItems: SteamNewsCatalogItem[]
+) {
   const fullData = (fullDetails[String(FULL_APP_ID)] as { data?: Record<string, unknown> } | undefined)?.data ?? {};
   const demoData = (demoDetails[String(DEMO_APP_ID)] as { data?: Record<string, unknown> } | undefined)?.data ?? {};
   const fullAchievements = asRecord(fullData.achievements);
@@ -1295,10 +1506,16 @@ async function buildPublicSources(fullDetails: Record<string, unknown>, demoDeta
     )
   });
 
-  for (const item of newsItems) {
+  for (const item of allNewsItems) {
     rows.push({
       id: item.source_id,
-      ...source(item.title, item.url, `${item.date}: ${item.supports}`, "high", item.source_id)
+      ...source(
+        item.title,
+        item.url,
+        `${item.date}: classification=${item.classification}; evidence=${item.evidence_strength}; ${item.notes}`,
+        item.evidence_strength === "strong" ? "high" : "medium",
+        item.source_id
+      )
     });
   }
 
@@ -1573,6 +1790,12 @@ function buildPublicResearchMarkdown(args: {
   const demoLanguages = stripHtml(String(demoData.supported_languages ?? ""));
   const fullPrice = asRecord(fullData.price_overview);
   const fullRecommendations = asRecord(fullData.recommendations);
+  const achievementFacts = buildAchievementFacts(args.achievementRows, args.achievementPercentages);
+  const achievementLoadoutFactCount = achievementFacts.filter((fact) => fact.mentioned_entities.length > 0).length;
+  const newsClassificationCounts = args.newsFindings.all_news_items.reduce<Record<string, number>>((counts, item) => {
+    counts[item.classification] = (counts[item.classification] ?? 0) + 1;
+    return counts;
+  }, {});
 
   const lines = [
     "# Public Research",
@@ -1628,6 +1851,8 @@ function buildPublicResearchMarkdown(args: {
     "",
     "## Steam News / Devlog Source Items",
     "",
+    `- Steam News API items classified: ${args.newsFindings.fetched_news_item_count}`,
+    `- Steam News API classification counts: ${JSON.stringify(newsClassificationCounts)}`,
     `- Direct news/devlog records parsed from Steam News API: ${args.newsFindings.news_item_count}`,
     ...args.newsItems.map((item) => `- ${item.date} - ${item.title}: ${item.url} (${item.supports})`),
     "",
@@ -1635,6 +1860,9 @@ function buildPublicResearchMarkdown(args: {
     "",
     `- Public community page rows parsed: ${args.achievementRows.length}`,
     `- Public global achievement API ids parsed: ${args.achievementPercentages.length}`,
+    `- Achievement fact matrix rows stored in src/data/steam-snapshot.json: ${achievementFacts.length}`,
+    `- Achievement rows with parsed public loadout names: ${achievementLoadoutFactCount}`,
+    "- Generated source page: /achievement-source-matrix/, covering milestone series, loadout-name evidence, Steam API ids, API percentages, community percentages, and source ids.",
     `- Demo global achievement API status: ${args.demoAchievementPercentagesResult.status}${args.demoAchievementPercentagesResult.error ? ` (${args.demoAchievementPercentagesResult.error})` : ""}`,
     `- Demo global achievement API ids parsed: ${args.demoAchievementPercentages.length}`,
     "- Achievement percentages are volatile and may differ slightly by endpoint/cache. Use them as as-of metadata only.",
@@ -1703,10 +1931,20 @@ async function main() {
     throw new Error(`Steam achievement fact matrix has duplicate slugs: ${[...new Set(duplicateAchievementSlugs)].join(", ")}`);
   }
   const newsItems = buildSteamNewsItems(newsApiRaw);
-  const newsFindings = extractSteamNewsFindings(newsHtml, newsItems);
+  const allNewsItems = buildAllSteamNewsItems(newsApiRaw, newsItems);
+  if (allNewsItems.length !== (newsApiRaw.appnews?.newsitems ?? []).length) {
+    throw new Error(`Steam News API classification mismatch: fetched ${(newsApiRaw.appnews?.newsitems ?? []).length} items but classified ${allNewsItems.length}`);
+  }
+  const duplicateNewsSourceIds = allNewsItems
+    .map((item) => item.source_id)
+    .filter((sourceId, index, sourceIds) => sourceIds.indexOf(sourceId) !== index);
+  if (duplicateNewsSourceIds.length > 0) {
+    throw new Error(`Steam News API classification has duplicate source ids: ${[...new Set(duplicateNewsSourceIds)].join(", ")}`);
+  }
+  const newsFindings = extractSteamNewsFindings(newsHtml, newsItems, allNewsItems);
   addAchievementData(achievementRows, achievementPercentages);
 
-  const publicSources = await buildPublicSources(fullDetails, demoDetails, fullReviews, demoReviews, newsItems);
+  const publicSources = await buildPublicSources(fullDetails, demoDetails, fullReviews, demoReviews, allNewsItems);
   await writeJson(path.resolve("src/data/public-sources.json"), publicSources);
   await writeJson(
     path.resolve("src/data/steam-snapshot.json"),

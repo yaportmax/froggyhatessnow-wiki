@@ -1,6 +1,6 @@
 {
   "accessed_date": "2026-05-13",
-  "generated_at": "2026-05-13T11:53:54.447Z",
+  "generated_at": "2026-05-13T12:20:58.464Z",
   "source_policy": [
     "Prefer official public Steam endpoints and pages for game metadata.",
     "Do not copy raw long descriptions, review text, proprietary assets, binaries, source code, or decompiled content.",
@@ -313,7 +313,7 @@
         "slug": "power-hungry-i",
         "description": "Unlock 1 Skill",
         "steam_internal_name": "power_hungry_1",
-        "steam_global_percent_api": "86.4",
+        "steam_global_percent_api": "85.8",
         "steam_community_percent": "85.8%",
         "mentioned_entities": [],
         "source_ids": [
@@ -327,7 +327,7 @@
         "slug": "relic-hunter-i",
         "description": "Collect 1 Artifact",
         "steam_internal_name": "relic_hunter_1",
-        "steam_global_percent_api": "85.4",
+        "steam_global_percent_api": "84.8",
         "steam_community_percent": "84.8%",
         "mentioned_entities": [],
         "source_ids": [
@@ -341,7 +341,7 @@
         "slug": "pathfinder-i",
         "description": "Unlock 1 Location",
         "steam_internal_name": "pathfinder_1",
-        "steam_global_percent_api": "76.5",
+        "steam_global_percent_api": "76.1",
         "steam_community_percent": "76.1%",
         "mentioned_entities": [],
         "source_ids": [
@@ -355,7 +355,7 @@
         "slug": "assemble-the-team-i",
         "description": "Unlock 1 Character",
         "steam_internal_name": "assemble_the_team_1",
-        "steam_global_percent_api": "68.7",
+        "steam_global_percent_api": "68.5",
         "steam_community_percent": "68.5%",
         "mentioned_entities": [],
         "source_ids": [
@@ -369,7 +369,7 @@
         "slug": "relic-hunter-ii",
         "description": "Collect 5 Artifacts",
         "steam_internal_name": "relic_hunter_2",
-        "steam_global_percent_api": "68.1",
+        "steam_global_percent_api": "67.9",
         "steam_community_percent": "67.9%",
         "mentioned_entities": [],
         "source_ids": [
@@ -397,7 +397,7 @@
         "slug": "old-school-explorer",
         "description": "Survive a run with Map, Shovel & Cart",
         "steam_internal_name": "old_school_explorer",
-        "steam_global_percent_api": "64.8",
+        "steam_global_percent_api": "64.5",
         "steam_community_percent": "64.5%",
         "mentioned_entities": [
           {
@@ -433,7 +433,7 @@
         "slug": "power-hungry-ii",
         "description": "Unlock 5 Skills",
         "steam_internal_name": "power_hungry_2",
-        "steam_global_percent_api": "64.6",
+        "steam_global_percent_api": "64.3",
         "steam_community_percent": "64.3%",
         "mentioned_entities": [],
         "source_ids": [
@@ -447,7 +447,7 @@
         "slug": "relic-hunter-iii",
         "description": "Collect 10 Artifacts",
         "steam_internal_name": "relic_hunter_3",
-        "steam_global_percent_api": "49.3",
+        "steam_global_percent_api": "49.2",
         "steam_community_percent": "49.2%",
         "mentioned_entities": [],
         "source_ids": [
@@ -461,7 +461,7 @@
         "slug": "power-hungry-iii",
         "description": "Unlock 10 Skills",
         "steam_internal_name": "power_hungry_3",
-        "steam_global_percent_api": "45.4",
+        "steam_global_percent_api": "45.0",
         "steam_community_percent": "45.0%",
         "mentioned_entities": [],
         "source_ids": [
@@ -475,7 +475,7 @@
         "slug": "peak-performance-i",
         "description": "Fully upgrade 1 Character",
         "steam_internal_name": "peak_performance_1",
-        "steam_global_percent_api": "22.0",
+        "steam_global_percent_api": "22.1",
         "steam_community_percent": "22.1%",
         "mentioned_entities": [],
         "source_ids": [
@@ -503,7 +503,7 @@
         "slug": "assemble-the-team-ii",
         "description": "Unlock 3 Characters",
         "steam_internal_name": "assemble_the_team_2",
-        "steam_global_percent_api": "19.3",
+        "steam_global_percent_api": "19.4",
         "steam_community_percent": "19.4%",
         "mentioned_entities": [],
         "source_ids": [
@@ -517,7 +517,7 @@
         "slug": "power-hungry-iv",
         "description": "Unlock 20 Skills",
         "steam_internal_name": "power_hungry_4",
-        "steam_global_percent_api": "16.0",
+        "steam_global_percent_api": "15.9",
         "steam_community_percent": "15.9%",
         "mentioned_entities": [],
         "source_ids": [
@@ -531,7 +531,7 @@
         "slug": "snow-master-ii",
         "description": "Fully complete 5 Locations",
         "steam_internal_name": "snow_master_2",
-        "steam_global_percent_api": "14.3",
+        "steam_global_percent_api": "14.5",
         "steam_community_percent": "14.5%",
         "mentioned_entities": [],
         "source_ids": [
@@ -545,7 +545,7 @@
         "slug": "pathfinder-ii",
         "description": "Unlock 5 Locations",
         "steam_internal_name": "pathfinder_2",
-        "steam_global_percent_api": "13.1",
+        "steam_global_percent_api": "13.5",
         "steam_community_percent": "13.5%",
         "mentioned_entities": [],
         "source_ids": [
@@ -588,7 +588,7 @@
         "slug": "power-hungry-v",
         "description": "Unlock 30 Skills",
         "steam_internal_name": "power_hungry_5",
-        "steam_global_percent_api": "3.9",
+        "steam_global_percent_api": "4.0",
         "steam_community_percent": "4.0%",
         "mentioned_entities": [],
         "source_ids": [
@@ -775,7 +775,7 @@
         "slug": "deadly-dose",
         "description": "Survive a run with Poison Flask & Poison Infusion",
         "steam_internal_name": "deadly_dose",
-        "steam_global_percent_api": "1.1",
+        "steam_global_percent_api": "1.2",
         "steam_community_percent": "1.2%",
         "mentioned_entities": [
           {
@@ -1249,23 +1249,23 @@
     "highest_global_percentages": [
       {
         "name": "power_hungry_1",
-        "percent": "86.4"
+        "percent": "85.8"
       },
       {
         "name": "relic_hunter_1",
-        "percent": "85.4"
+        "percent": "84.8"
       },
       {
         "name": "pathfinder_1",
-        "percent": "76.5"
+        "percent": "76.1"
       },
       {
         "name": "assemble_the_team_1",
-        "percent": "68.7"
+        "percent": "68.5"
       },
       {
         "name": "relic_hunter_2",
-        "percent": "68.1"
+        "percent": "67.9"
       },
       {
         "name": "snow_master_1",
@@ -1273,11 +1273,11 @@
       },
       {
         "name": "old_school_explorer",
-        "percent": "64.8"
+        "percent": "64.5"
       },
       {
         "name": "power_hungry_2",
-        "percent": "64.6"
+        "percent": "64.3"
       }
     ],
     "lowest_global_percentages": [
@@ -1532,6 +1532,7 @@
   "steam_news_findings": {
     "source_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
     "api_url": "https://api.steampowered.com/ISteamNews/GetNewsForApp/v0002/?appid=3232380&count=20&maxlength=50000&format=json",
+    "fetched_news_item_count": 15,
     "news_item_count": 10,
     "playable_frogs_count": 10,
     "locations_count": 16,
@@ -1599,6 +1600,447 @@
       "unique skin",
       "interactive snow",
       "digging"
+    ],
+    "all_news_items": [
+      {
+        "source_id": "steam-post-launch-update",
+        "mapped_source_id": "steam-post-launch-update",
+        "gid": "1832065502824701",
+        "title": "Thank You for an Incredible Launch — First Update and What Comes Next",
+        "date": "2026-05-12",
+        "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1832065502824701",
+        "feedname": "steam_community_announcements",
+        "author": "BanJamUK",
+        "classification": "patch_or_update",
+        "evidence_strength": "strong",
+        "fact_scope": [
+          "patch_notes",
+          "entity_names",
+          "comfort_options"
+        ],
+        "claim_limits": "Use only dated post-launch patch facts and explicitly named terms; do not apply to future patch states without refresh.",
+        "needs_gameplay_verification": true,
+        "wiki_targets": [
+          "frogs",
+          "skills",
+          "maps",
+          "guides",
+          "glossary"
+        ],
+        "verified_terms": [
+          "Zippy",
+          "Invincible Roll",
+          "Energy Wave",
+          "Destructive Field",
+          "Armor",
+          "Night Mode",
+          "UI Scale"
+        ],
+        "notes": "First post-launch update with Zippy, projectile-defense skills, early unlock/progression adjustments, Night Mode visibility, and UI scale changes."
+      },
+      {
+        "source_id": "steam-launch-news",
+        "mapped_source_id": "steam-launch-news",
+        "gid": "1832065502812843",
+        "title": "Froggy Hates Snow is out now!",
+        "date": "2026-05-07",
+        "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1832065502812843",
+        "feedname": "steam_community_announcements",
+        "author": "BanJamUK",
+        "classification": "release_marketing_no_gameplay",
+        "evidence_strength": "metadata_only",
+        "fact_scope": [
+          "release_status"
+        ],
+        "claim_limits": "Use for launch availability only; do not use as mechanics evidence.",
+        "needs_gameplay_verification": false,
+        "wiki_targets": [
+          "glossary",
+          "guides"
+        ],
+        "verified_terms": [
+          "full game launch"
+        ],
+        "notes": "Launch announcement for the released full game."
+      },
+      {
+        "source_id": "steam-launch-devlog",
+        "mapped_source_id": "steam-launch-devlog",
+        "gid": "1831432155577514",
+        "title": "Devlog #7: What's New For Launch?",
+        "date": "2026-05-04",
+        "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1831432155577514",
+        "feedname": "steam_community_announcements",
+        "author": "BanJamUK",
+        "classification": "gameplay_devlog",
+        "evidence_strength": "strong",
+        "fact_scope": [
+          "mechanics",
+          "entity_names"
+        ],
+        "claim_limits": "Do not infer exact balance values, unlock costs, complete rosters, or unstated entity behavior.",
+        "needs_gameplay_verification": true,
+        "wiki_targets": [
+          "skills",
+          "companions",
+          "upgrades",
+          "glossary",
+          "guides"
+        ],
+        "verified_terms": [
+          "Glider",
+          "Snowball Roll",
+          "Leap Chain",
+          "Delivery Bot",
+          "Flamethrower Bot",
+          "Scanner Drone",
+          "Piercing Icicles",
+          "Fireworks",
+          "Snowball Volley",
+          "Skill Banishing",
+          "Stun",
+          "Fire",
+          "Frost",
+          "Poison",
+          "Lightning"
+        ],
+        "notes": "Launch devlog naming movement skills, projectile skills, robotic helpers, status effects, and skill-management systems."
+      },
+      {
+        "source_id": "steam-news-1831432155568094",
+        "mapped_source_id": null,
+        "gid": "1831432155568094",
+        "title": "One Week To Go!",
+        "date": "2026-04-30",
+        "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1831432155568094",
+        "feedname": "steam_community_announcements",
+        "author": "BanJamUK",
+        "classification": "release_marketing_no_gameplay",
+        "evidence_strength": "metadata_only",
+        "fact_scope": [
+          "release_status",
+          "marketing"
+        ],
+        "claim_limits": "Use for release/update timing context only; no gameplay facts are extracted from this unmapped post.",
+        "needs_gameplay_verification": false,
+        "wiki_targets": [],
+        "verified_terms": [],
+        "notes": "Recorded for release/update source coverage; no additional gameplay facts are extracted unless mapped by direct source rules."
+      },
+      {
+        "source_id": "steam-anomalous-zones-devlog",
+        "mapped_source_id": "steam-anomalous-zones-devlog",
+        "gid": "1831432155565119",
+        "title": "Devlog #6: Introduction to Anomalous Zones",
+        "date": "2026-04-29",
+        "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1831432155565119",
+        "feedname": "steam_community_announcements",
+        "author": "BanJamUK",
+        "classification": "gameplay_devlog",
+        "evidence_strength": "strong",
+        "fact_scope": [
+          "mechanics",
+          "entity_names"
+        ],
+        "claim_limits": "Do not infer exact balance values, unlock costs, complete rosters, or unstated entity behavior.",
+        "needs_gameplay_verification": true,
+        "wiki_targets": [
+          "items",
+          "glossary",
+          "guides"
+        ],
+        "verified_terms": [
+          "Anomalous Zones",
+          "Blue Gems",
+          "Common artifacts",
+          "Uncommon artifacts",
+          "Rare artifacts",
+          "Legendary artifacts"
+        ],
+        "notes": "Anomalous-zone devlog with challenge examples, hazards, Blue Gems, artifacts, and artifact rarity tiers."
+      },
+      {
+        "source_id": "steam-release-date-news",
+        "mapped_source_id": "steam-release-date-news",
+        "gid": "1830797770242233",
+        "title": "Froggy Hates Snow release date revealed",
+        "date": "2026-04-27",
+        "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1830797770242233",
+        "feedname": "steam_community_announcements",
+        "author": "BanJamUK",
+        "classification": "scope_marketing",
+        "evidence_strength": "strong",
+        "fact_scope": [
+          "scope_counts",
+          "release_status",
+          "demo_carryover"
+        ],
+        "claim_limits": "Use for public scope counts only; do not infer individual roster names, map names, or exact mechanics.",
+        "needs_gameplay_verification": true,
+        "wiki_targets": [
+          "frogs",
+          "maps",
+          "skills",
+          "tools",
+          "companions",
+          "guides"
+        ],
+        "verified_terms": [
+          "10 playable frogs",
+          "16 locations",
+          "60+ skills/tools/attacks/companions",
+          "demo progress carryover"
+        ],
+        "notes": "Release-date post with launch scope counts and demo progress carryover."
+      },
+      {
+        "source_id": "steam-snow-devlog",
+        "mapped_source_id": "steam-snow-devlog",
+        "gid": "1827626365766540",
+        "title": "Devlog #5: How Snow Works in Froggy Hates Snow",
+        "date": "2026-03-24",
+        "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1827626365766540",
+        "feedname": "steam_community_announcements",
+        "author": "BanJamUK",
+        "classification": "gameplay_devlog",
+        "evidence_strength": "strong",
+        "fact_scope": [
+          "mechanics",
+          "entity_names"
+        ],
+        "claim_limits": "Do not infer exact balance values, unlock costs, complete rosters, or unstated entity behavior.",
+        "needs_gameplay_verification": true,
+        "wiki_targets": [
+          "tools",
+          "glossary",
+          "guides"
+        ],
+        "verified_terms": [
+          "heightmap snow",
+          "snow layers",
+          "Dynamite",
+          "Air Bomb",
+          "Snowblower",
+          "Flamethrower"
+        ],
+        "notes": "Snow-system devlog explaining snow interaction, density/layers, and named snow/ice tools."
+      },
+      {
+        "source_id": "steam-news-1826992588596358",
+        "mapped_source_id": null,
+        "gid": "1826992588596358",
+        "title": "Devlog #4: 20,000 Wishlists! Thank You ❤️(Plus, a hint at what's next...)",
+        "date": "2026-03-13",
+        "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1826992588596358",
+        "feedname": "steam_community_announcements",
+        "author": "BanJamUK",
+        "classification": "marketing_or_event",
+        "evidence_strength": "metadata_only",
+        "fact_scope": [
+          "marketing",
+          "event"
+        ],
+        "claim_limits": "Do not use as gameplay evidence.",
+        "needs_gameplay_verification": false,
+        "wiki_targets": [],
+        "verified_terms": [],
+        "notes": "Recorded for complete Steam News coverage; treated as marketing/event context, not gameplay evidence."
+      },
+      {
+        "source_id": "steam-news-1826362059919554",
+        "mapped_source_id": null,
+        "gid": "1826362059919554",
+        "title": "You Have Froggy's Wishlists Flying! 🐸❄️",
+        "date": "2026-03-04",
+        "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1826362059919554",
+        "feedname": "steam_community_announcements",
+        "author": "Sixteen60",
+        "classification": "marketing_or_event",
+        "evidence_strength": "metadata_only",
+        "fact_scope": [
+          "marketing",
+          "event"
+        ],
+        "claim_limits": "Do not use as gameplay evidence.",
+        "needs_gameplay_verification": false,
+        "wiki_targets": [],
+        "verified_terms": [],
+        "notes": "Recorded for complete Steam News coverage; treated as marketing/event context, not gameplay evidence."
+      },
+      {
+        "source_id": "steam-news-1825093633186467",
+        "mapped_source_id": null,
+        "gid": "1825093633186467",
+        "title": "Zephyora Plays Froggy Hates Snow",
+        "date": "2026-02-19",
+        "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1825093633186467",
+        "feedname": "steam_community_announcements",
+        "author": "Sixteen60",
+        "classification": "marketing_or_event",
+        "evidence_strength": "metadata_only",
+        "fact_scope": [
+          "marketing",
+          "event"
+        ],
+        "claim_limits": "Do not use as gameplay evidence.",
+        "needs_gameplay_verification": false,
+        "wiki_targets": [],
+        "verified_terms": [],
+        "notes": "Recorded for complete Steam News coverage; treated as marketing/event context, not gameplay evidence."
+      },
+      {
+        "source_id": "steam-news-1825093633185930",
+        "mapped_source_id": null,
+        "gid": "1825093633185930",
+        "title": "Froggy just hopped into the spotlight at Indie Fan Fest",
+        "date": "2026-02-19",
+        "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1825093633185930",
+        "feedname": "steam_community_announcements",
+        "author": "BanJamUK",
+        "classification": "marketing_or_event",
+        "evidence_strength": "metadata_only",
+        "fact_scope": [
+          "marketing",
+          "event"
+        ],
+        "claim_limits": "Do not use as gameplay evidence.",
+        "needs_gameplay_verification": false,
+        "wiki_targets": [],
+        "verified_terms": [],
+        "notes": "Recorded for complete Steam News coverage; treated as marketing/event context, not gameplay evidence."
+      },
+      {
+        "source_id": "steam-demo-overhaul-news",
+        "mapped_source_id": "steam-demo-overhaul-news",
+        "gid": "1823825466505761",
+        "title": "The Froggy Hates Snow demo is back – and it’s had a major overhaul",
+        "date": "2026-02-09",
+        "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1823825466505761",
+        "feedname": "steam_community_announcements",
+        "author": "BanJamUK",
+        "classification": "demo_update_gameplay",
+        "evidence_strength": "strong",
+        "fact_scope": [
+          "demo_update",
+          "entity_names",
+          "progression"
+        ],
+        "claim_limits": "Do not infer exact balance values, unlock costs, complete rosters, or unstated entity behavior.",
+        "needs_gameplay_verification": true,
+        "wiki_targets": [
+          "frogs",
+          "items",
+          "guides",
+          "glossary"
+        ],
+        "verified_terms": [
+          "Puff",
+          "ranged poison spit",
+          "quests",
+          "Blue Gems",
+          "abilities",
+          "locations",
+          "first two arenas"
+        ],
+        "notes": "Updated-demo announcement describing Puff, ranged poison spit, quest-based progress, Blue Gems, and unlocks for characters, abilities, and locations."
+      },
+      {
+        "source_id": "steam-next-demo-devlog",
+        "mapped_source_id": "steam-next-demo-devlog",
+        "gid": "1823825466494740",
+        "title": "Devlog #3: What to expect from the next demo",
+        "date": "2026-02-04",
+        "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1823825466494740",
+        "feedname": "steam_community_announcements",
+        "author": "BanJamUK",
+        "classification": "demo_devlog_gameplay",
+        "evidence_strength": "strong",
+        "fact_scope": [
+          "demo_devlog",
+          "frog_structure",
+          "attacks",
+          "progression"
+        ],
+        "claim_limits": "Use for broad frog/attack/progression structure; do not map attack examples to individual frogs without another source.",
+        "needs_gameplay_verification": true,
+        "wiki_targets": [
+          "frogs",
+          "skills",
+          "items",
+          "glossary",
+          "guides"
+        ],
+        "verified_terms": [
+          "10 playable frog characters",
+          "unique specialization",
+          "main attack",
+          "starting skillset",
+          "tongue attacks",
+          "spits",
+          "snow minigun",
+          "electric staff",
+          "hockey stick",
+          "Blue Gems",
+          "quest-based meta-progression"
+        ],
+        "notes": "Pre-demo devlog describing ten frogs, unique specializations, main attacks, starting skillsets, and Blue Gem/quest meta-progression."
+      },
+      {
+        "source_id": "steam-demo-update-devlog",
+        "mapped_source_id": "steam-demo-update-devlog",
+        "gid": "1821922921824108",
+        "title": "Devlog #2: A quick update about the Froggy Hates Snow demo",
+        "date": "2026-01-20",
+        "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1821922921824108",
+        "feedname": "steam_community_announcements",
+        "author": "BanJamUK",
+        "classification": "demo_devlog_partial",
+        "evidence_strength": "moderate",
+        "fact_scope": [
+          "demo_devlog",
+          "planned_progression"
+        ],
+        "claim_limits": "Treat as planned/demo-direction evidence; refresh against launch/gameplay before making exact guide claims.",
+        "needs_gameplay_verification": true,
+        "wiki_targets": [
+          "frogs",
+          "skills",
+          "glossary"
+        ],
+        "verified_terms": [
+          "quest-based meta-progression",
+          "10 playable characters",
+          "unique skin",
+          "main attack"
+        ],
+        "notes": "Demo update devlog previewing quest-based meta-progression and ten planned characters with unique skins, skills, and main attacks."
+      },
+      {
+        "source_id": "steam-developer-intro-devlog",
+        "mapped_source_id": "steam-developer-intro-devlog",
+        "gid": "1819386365096417",
+        "title": "Devlog #1: Meet The Developer",
+        "date": "2025-12-19",
+        "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1819386365096417",
+        "feedname": "steam_community_announcements",
+        "author": "BanJamUK",
+        "classification": "developer_intro_weak_gameplay",
+        "evidence_strength": "weak",
+        "fact_scope": [
+          "broad_concepts"
+        ],
+        "claim_limits": "Use only for broad interactive snow and digging concepts.",
+        "needs_gameplay_verification": true,
+        "wiki_targets": [
+          "glossary",
+          "guides"
+        ],
+        "verified_terms": [
+          "interactive snow",
+          "digging"
+        ],
+        "notes": "Developer introduction describing the game's interactive snow and digging ideas."
+      }
     ],
     "news_items": [
       {
@@ -1845,7 +2287,8 @@
     ],
     "notes": [
       "Steam news/devlog text is treated as public first-party source material, but exact numeric balance values still need gameplay or patch-note verification.",
-      "Counts from news/devlogs establish scope; they do not provide complete names for every frog, location, skill, tool, attack, or companion."
+      "Counts from news/devlogs establish scope; they do not provide complete names for every frog, location, skill, tool, attack, or companion.",
+      "All Steam News API items are recorded with a classification so weak marketing/event posts are explicit instead of silently ignored."
     ]
   },
   "research_gaps": [

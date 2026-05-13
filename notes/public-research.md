@@ -51,6 +51,8 @@ This note summarizes public metadata used to seed the wiki. It intentionally avo
 
 ## Steam News / Devlog Source Items
 
+- Steam News API items classified: 15
+- Steam News API classification counts: {"patch_or_update":1,"release_marketing_no_gameplay":2,"gameplay_devlog":3,"scope_marketing":1,"marketing_or_event":4,"demo_update_gameplay":1,"demo_devlog_gameplay":1,"demo_devlog_partial":1,"developer_intro_weak_gameplay":1}
 - Direct news/devlog records parsed from Steam News API: 10
 - 2026-05-12 - Thank You for an Incredible Launch — First Update and What Comes Next: https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1832065502824701 (First post-launch update with Zippy, projectile-defense skills, early unlock/progression adjustments, Night Mode visibility, and UI scale changes.)
 - 2026-05-07 - Froggy Hates Snow is out now!: https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1832065502812843 (Launch announcement for the released full game.)
@@ -67,9 +69,9 @@ This note summarizes public metadata used to seed the wiki. It intentionally avo
 
 - Public community page rows parsed: 42
 - Public global achievement API ids parsed: 42
-- Achievement fact matrix rows stored in `src/data/steam-snapshot.json`: 42
+- Achievement fact matrix rows stored in src/data/steam-snapshot.json: 42
 - Achievement rows with parsed public loadout names: 20
-- Generated source page: `/achievement-source-matrix/`, covering milestone series, loadout-name evidence, Steam API ids, API percentages, community percentages, and source ids.
+- Generated source page: /achievement-source-matrix/, covering milestone series, loadout-name evidence, Steam API ids, API percentages, community percentages, and source ids.
 - Demo global achievement API status: 403 (https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=4037600&format=json returned 403)
 - Demo global achievement API ids parsed: 0
 - Achievement percentages are volatile and may differ slightly by endpoint/cache. Use them as as-of metadata only.

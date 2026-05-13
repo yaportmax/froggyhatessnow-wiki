@@ -8,7 +8,7 @@ draft: false
 
 ![FROGGY HATES SNOW Steam header](https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3232380/4aec6dc45dab3a096faeda88c8036627817f0cfe/header_alt_assets_0.jpg?t=1778580427)
 
-Accessed: **2026-05-13**. Generated: 2026-05-13T11:53:54.447Z.
+Accessed: **2026-05-13**. Generated: 2026-05-13T12:20:58.464Z.
 
 This page is the main sourcing checkpoint for game-populating wiki data. It uses official public Steam pages/APIs first, then marks anything not confirmed by those sources as inferred or needing verification.
 
@@ -65,10 +65,13 @@ Source stream: [Steam community news/devlogs](https://steamcommunity.com/app/323
 | Locations | 16 |
 | Skills/tools/attacks/companions | 60+ |
 | Demo progress carries over | yes |
+| Steam News API items classified | 15 |
+| Direct gameplay/update sources mapped | 10 |
 | Confirmed named terms | Zippy, Puff, Glider, Snowball Roll, Leap Chain, Delivery Bot, Flamethrower Bot, Scanner Drone, Piercing Icicles, Fireworks, Snowball Volley, Energy Wave, Destructive Field, Invincible Roll, Armor, ranged poison spit, Drill, Salt Sack, Snowblower, Blue Gems, Common artifacts, Uncommon artifacts, Rare artifacts, Legendary artifacts, Night Mode, UI Scale, full game launch, Skill Banishing, Stun, Fire, Frost, Poison, Lightning, Anomalous Zones, 10 playable frogs, 16 locations, 60+ skills/tools/attacks/companions, demo progress carryover, heightmap snow, snow layers, Dynamite, Air Bomb, Flamethrower, quests, abilities, locations, first two arenas, 10 playable frog characters, unique specialization, main attack, starting skillset, tongue attacks, spits, snow minigun, electric staff, hockey stick, quest-based meta-progression, 10 playable characters, unique skin, interactive snow, digging |
 
 - Steam news/devlog text is treated as public first-party source material, but exact numeric balance values still need gameplay or patch-note verification.
 - Counts from news/devlogs establish scope; they do not provide complete names for every frog, location, skill, tool, attack, or companion.
+- All Steam News API items are recorded with a classification so weak marketing/event posts are explicit instead of silently ignored.
 
 ### Direct Steam News Sources
 
@@ -84,6 +87,28 @@ Source stream: [Steam community news/devlogs](https://steamcommunity.com/app/323
 | 2026-02-04 | `steam-next-demo-devlog` | [Devlog #3: What to expect from the next demo](https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1823825466494740) | Pre-demo devlog describing ten frogs, unique specializations, main attacks, starting skillsets, and Blue Gem/quest meta-progression. |
 | 2026-01-20 | `steam-demo-update-devlog` | [Devlog #2: A quick update about the Froggy Hates Snow demo](https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1821922921824108) | Demo update devlog previewing quest-based meta-progression and ten planned characters with unique skins, skills, and main attacks. |
 | 2025-12-19 | `steam-developer-intro-devlog` | [Devlog #1: Meet The Developer](https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1819386365096417) | Developer introduction describing the game's interactive snow and digging ideas. |
+
+### All Steam News Items
+
+Every current Steam News API item is recorded below. Items classified as marketing/event or weak/no-gameplay are kept for audit coverage but should not be used as gameplay evidence.
+
+| Date | Source ID | Title | Classification | Evidence | Scope | Limits |
+|---|---|---|---|---|---|---|
+| 2026-05-12 | `steam-post-launch-update` | [Thank You for an Incredible Launch — First Update and What Comes Next](https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1832065502824701) | patch_or_update | strong | patch_notes, entity_names, comfort_options | Use only dated post-launch patch facts and explicitly named terms; do not apply to future patch states without refresh. |
+| 2026-05-07 | `steam-launch-news` | [Froggy Hates Snow is out now!](https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1832065502812843) | release_marketing_no_gameplay | metadata_only | release_status | Use for launch availability only; do not use as mechanics evidence. |
+| 2026-05-04 | `steam-launch-devlog` | [Devlog #7: What's New For Launch?](https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1831432155577514) | gameplay_devlog | strong | mechanics, entity_names | Do not infer exact balance values, unlock costs, complete rosters, or unstated entity behavior. |
+| 2026-04-30 | `steam-news-1831432155568094` | [One Week To Go!](https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1831432155568094) | release_marketing_no_gameplay | metadata_only | release_status, marketing | Use for release/update timing context only; no gameplay facts are extracted from this unmapped post. |
+| 2026-04-29 | `steam-anomalous-zones-devlog` | [Devlog #6: Introduction to Anomalous Zones](https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1831432155565119) | gameplay_devlog | strong | mechanics, entity_names | Do not infer exact balance values, unlock costs, complete rosters, or unstated entity behavior. |
+| 2026-04-27 | `steam-release-date-news` | [Froggy Hates Snow release date revealed](https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1830797770242233) | scope_marketing | strong | scope_counts, release_status, demo_carryover | Use for public scope counts only; do not infer individual roster names, map names, or exact mechanics. |
+| 2026-03-24 | `steam-snow-devlog` | [Devlog #5: How Snow Works in Froggy Hates Snow](https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1827626365766540) | gameplay_devlog | strong | mechanics, entity_names | Do not infer exact balance values, unlock costs, complete rosters, or unstated entity behavior. |
+| 2026-03-13 | `steam-news-1826992588596358` | [Devlog #4: 20,000 Wishlists! Thank You ❤️(Plus, a hint at what's next...)](https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1826992588596358) | marketing_or_event | metadata_only | marketing, event | Do not use as gameplay evidence. |
+| 2026-03-04 | `steam-news-1826362059919554` | [You Have Froggy's Wishlists Flying! 🐸❄️](https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1826362059919554) | marketing_or_event | metadata_only | marketing, event | Do not use as gameplay evidence. |
+| 2026-02-19 | `steam-news-1825093633186467` | [Zephyora Plays Froggy Hates Snow](https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1825093633186467) | marketing_or_event | metadata_only | marketing, event | Do not use as gameplay evidence. |
+| 2026-02-19 | `steam-news-1825093633185930` | [Froggy just hopped into the spotlight at Indie Fan Fest](https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1825093633185930) | marketing_or_event | metadata_only | marketing, event | Do not use as gameplay evidence. |
+| 2026-02-09 | `steam-demo-overhaul-news` | [The Froggy Hates Snow demo is back – and it’s had a major overhaul](https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1823825466505761) | demo_update_gameplay | strong | demo_update, entity_names, progression | Do not infer exact balance values, unlock costs, complete rosters, or unstated entity behavior. |
+| 2026-02-04 | `steam-next-demo-devlog` | [Devlog #3: What to expect from the next demo](https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1823825466494740) | demo_devlog_gameplay | strong | demo_devlog, frog_structure, attacks, progression | Use for broad frog/attack/progression structure; do not map attack examples to individual frogs without another source. |
+| 2026-01-20 | `steam-demo-update-devlog` | [Devlog #2: A quick update about the Froggy Hates Snow demo](https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1821922921824108) | demo_devlog_partial | moderate | demo_devlog, planned_progression | Treat as planned/demo-direction evidence; refresh against launch/gameplay before making exact guide claims. |
+| 2025-12-19 | `steam-developer-intro-devlog` | [Devlog #1: Meet The Developer](https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1819386365096417) | developer_intro_weak_gameplay | weak | broad_concepts | Use only for broad interactive snow and digging concepts. |
 
 
 
@@ -109,14 +134,14 @@ Demo achievement endpoint note: https://api.steampowered.com/ISteamUserStats/Get
 
 | Highest Public API Percentages | Percent |
 |---|---:|
-| `power_hungry_1` | 86.4% |
-| `relic_hunter_1` | 85.4% |
-| `pathfinder_1` | 76.5% |
-| `assemble_the_team_1` | 68.7% |
-| `relic_hunter_2` | 68.1% |
+| `power_hungry_1` | 85.8% |
+| `relic_hunter_1` | 84.8% |
+| `pathfinder_1` | 76.1% |
+| `assemble_the_team_1` | 68.5% |
+| `relic_hunter_2` | 67.9% |
 | `snow_master_1` | 67.3% |
-| `old_school_explorer` | 64.8% |
-| `power_hungry_2` | 64.6% |
+| `old_school_explorer` | 64.5% |
+| `power_hungry_2` | 64.3% |
 
 | Lowest Public API Percentages | Percent |
 |---|---:|

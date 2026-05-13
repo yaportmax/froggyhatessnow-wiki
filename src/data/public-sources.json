@@ -159,7 +159,7 @@
     "path_or_url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1832065502824701",
     "label": "Thank You for an Incredible Launch — First Update and What Comes Next",
     "confidence": "high",
-    "notes": "2026-05-12: First post-launch update with Zippy, projectile-defense skills, early unlock/progression adjustments, Night Mode visibility, and UI scale changes."
+    "notes": "2026-05-12: classification=patch_or_update; evidence=strong; First post-launch update with Zippy, projectile-defense skills, early unlock/progression adjustments, Night Mode visibility, and UI scale changes."
   },
   {
     "id": "steam-launch-news",
@@ -167,8 +167,8 @@
     "type": "public_source",
     "path_or_url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1832065502812843",
     "label": "Froggy Hates Snow is out now!",
-    "confidence": "high",
-    "notes": "2026-05-07: Launch announcement for the released full game."
+    "confidence": "medium",
+    "notes": "2026-05-07: classification=release_marketing_no_gameplay; evidence=metadata_only; Launch announcement for the released full game."
   },
   {
     "id": "steam-launch-devlog",
@@ -177,7 +177,16 @@
     "path_or_url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1831432155577514",
     "label": "Devlog #7: What's New For Launch?",
     "confidence": "high",
-    "notes": "2026-05-04: Launch devlog naming movement skills, projectile skills, robotic helpers, status effects, and skill-management systems."
+    "notes": "2026-05-04: classification=gameplay_devlog; evidence=strong; Launch devlog naming movement skills, projectile skills, robotic helpers, status effects, and skill-management systems."
+  },
+  {
+    "id": "steam-news-1831432155568094",
+    "source_id": "steam-news-1831432155568094",
+    "type": "public_source",
+    "path_or_url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1831432155568094",
+    "label": "One Week To Go!",
+    "confidence": "medium",
+    "notes": "2026-04-30: classification=release_marketing_no_gameplay; evidence=metadata_only; Recorded for release/update source coverage; no additional gameplay facts are extracted unless mapped by direct source rules."
   },
   {
     "id": "steam-anomalous-zones-devlog",
@@ -186,7 +195,7 @@
     "path_or_url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1831432155565119",
     "label": "Devlog #6: Introduction to Anomalous Zones",
     "confidence": "high",
-    "notes": "2026-04-29: Anomalous-zone devlog with challenge examples, hazards, Blue Gems, artifacts, and artifact rarity tiers."
+    "notes": "2026-04-29: classification=gameplay_devlog; evidence=strong; Anomalous-zone devlog with challenge examples, hazards, Blue Gems, artifacts, and artifact rarity tiers."
   },
   {
     "id": "steam-release-date-news",
@@ -195,7 +204,7 @@
     "path_or_url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1830797770242233",
     "label": "Froggy Hates Snow release date revealed",
     "confidence": "high",
-    "notes": "2026-04-27: Release-date post with launch scope counts and demo progress carryover."
+    "notes": "2026-04-27: classification=scope_marketing; evidence=strong; Release-date post with launch scope counts and demo progress carryover."
   },
   {
     "id": "steam-snow-devlog",
@@ -204,7 +213,43 @@
     "path_or_url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1827626365766540",
     "label": "Devlog #5: How Snow Works in Froggy Hates Snow",
     "confidence": "high",
-    "notes": "2026-03-24: Snow-system devlog explaining snow interaction, density/layers, and named snow/ice tools."
+    "notes": "2026-03-24: classification=gameplay_devlog; evidence=strong; Snow-system devlog explaining snow interaction, density/layers, and named snow/ice tools."
+  },
+  {
+    "id": "steam-news-1826992588596358",
+    "source_id": "steam-news-1826992588596358",
+    "type": "public_source",
+    "path_or_url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1826992588596358",
+    "label": "Devlog #4: 20,000 Wishlists! Thank You ❤️(Plus, a hint at what's next...)",
+    "confidence": "medium",
+    "notes": "2026-03-13: classification=marketing_or_event; evidence=metadata_only; Recorded for complete Steam News coverage; treated as marketing/event context, not gameplay evidence."
+  },
+  {
+    "id": "steam-news-1826362059919554",
+    "source_id": "steam-news-1826362059919554",
+    "type": "public_source",
+    "path_or_url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1826362059919554",
+    "label": "You Have Froggy's Wishlists Flying! 🐸❄️",
+    "confidence": "medium",
+    "notes": "2026-03-04: classification=marketing_or_event; evidence=metadata_only; Recorded for complete Steam News coverage; treated as marketing/event context, not gameplay evidence."
+  },
+  {
+    "id": "steam-news-1825093633186467",
+    "source_id": "steam-news-1825093633186467",
+    "type": "public_source",
+    "path_or_url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1825093633186467",
+    "label": "Zephyora Plays Froggy Hates Snow",
+    "confidence": "medium",
+    "notes": "2026-02-19: classification=marketing_or_event; evidence=metadata_only; Recorded for complete Steam News coverage; treated as marketing/event context, not gameplay evidence."
+  },
+  {
+    "id": "steam-news-1825093633185930",
+    "source_id": "steam-news-1825093633185930",
+    "type": "public_source",
+    "path_or_url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1825093633185930",
+    "label": "Froggy just hopped into the spotlight at Indie Fan Fest",
+    "confidence": "medium",
+    "notes": "2026-02-19: classification=marketing_or_event; evidence=metadata_only; Recorded for complete Steam News coverage; treated as marketing/event context, not gameplay evidence."
   },
   {
     "id": "steam-demo-overhaul-news",
@@ -213,7 +258,7 @@
     "path_or_url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1823825466505761",
     "label": "The Froggy Hates Snow demo is back – and it’s had a major overhaul",
     "confidence": "high",
-    "notes": "2026-02-09: Updated-demo announcement describing Puff, ranged poison spit, quest-based progress, Blue Gems, and unlocks for characters, abilities, and locations."
+    "notes": "2026-02-09: classification=demo_update_gameplay; evidence=strong; Updated-demo announcement describing Puff, ranged poison spit, quest-based progress, Blue Gems, and unlocks for characters, abilities, and locations."
   },
   {
     "id": "steam-next-demo-devlog",
@@ -222,7 +267,7 @@
     "path_or_url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1823825466494740",
     "label": "Devlog #3: What to expect from the next demo",
     "confidence": "high",
-    "notes": "2026-02-04: Pre-demo devlog describing ten frogs, unique specializations, main attacks, starting skillsets, and Blue Gem/quest meta-progression."
+    "notes": "2026-02-04: classification=demo_devlog_gameplay; evidence=strong; Pre-demo devlog describing ten frogs, unique specializations, main attacks, starting skillsets, and Blue Gem/quest meta-progression."
   },
   {
     "id": "steam-demo-update-devlog",
@@ -230,8 +275,8 @@
     "type": "public_source",
     "path_or_url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1821922921824108",
     "label": "Devlog #2: A quick update about the Froggy Hates Snow demo",
-    "confidence": "high",
-    "notes": "2026-01-20: Demo update devlog previewing quest-based meta-progression and ten planned characters with unique skins, skills, and main attacks."
+    "confidence": "medium",
+    "notes": "2026-01-20: classification=demo_devlog_partial; evidence=moderate; Demo update devlog previewing quest-based meta-progression and ten planned characters with unique skins, skills, and main attacks."
   },
   {
     "id": "steam-developer-intro-devlog",
@@ -239,7 +284,7 @@
     "type": "public_source",
     "path_or_url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1819386365096417",
     "label": "Devlog #1: Meet The Developer",
-    "confidence": "high",
-    "notes": "2025-12-19: Developer introduction describing the game's interactive snow and digging ideas."
+    "confidence": "medium",
+    "notes": "2025-12-19: classification=developer_intro_weak_gameplay; evidence=weak; Developer introduction describing the game's interactive snow and digging ideas."
   }
 ]
