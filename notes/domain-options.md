@@ -75,7 +75,7 @@ Manual verification path from Porkbun's own account-contact documentation:
 
 Porkbun's subaccount documentation also identifies the same `Account Owner and Recovery` section as the place to verify the parent account email address and phone number. Porkbun separately documents that some new accounts may be prompted for photo ID verification through Veriff.
 
-Fresh read-only API/account checks on 2026-05-13 confirmed the stored Porkbun API credentials are valid, but `/account/balance` reports `0` account credit and `/account/apiSettings` reports auto-topup disabled. Porkbun's current API spec says `POST /domain/create/{domain}` registers by using account credit and requires sufficient credit, so the Porkbun account may need manual credit/payment setup in addition to email/phone verification before API registration can succeed.
+Fresh read-only API/account checks on 2026-05-13 confirmed the stored Porkbun API credentials are valid, but `/account/balance` reports `0` account credit and `/account/apiSettings` reports auto-topup disabled. Porkbun's current API spec says `POST /domain/create/{domain}` registers by using account credit and requires sufficient credit, so the Porkbun account may need manual credit/payment setup in addition to email/phone verification before API registration can succeed. A fresh official-doc refresh on 2026-05-13 did not reveal an API endpoint to verify/resend existing account email or phone verification; Porkbun's account-contact KB still points this to `ACCOUNT` -> `Settings / Billing` -> `Account Owner and Recovery`.
 
 - `ping` request id: `019e2211-5316-7f37-be69-b58aa4a50816`
 - `account/balance` request id: `019e2211-807a-7806-882d-e3a08507cf80`

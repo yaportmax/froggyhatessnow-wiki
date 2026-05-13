@@ -74,7 +74,7 @@ The current Porkbun OpenAPI spec explicitly lists domain registration requiremen
 - Account must have placed at least one previous domain registration.
 - Premium domains cannot be registered via API.
 
-Spec search on 2026-05-13 found account/API-key paths for spend settings, balance, account invites, API-key authorization, and email-hosting password management, but no endpoint to verify or resend verification for the existing account email or phone number. Treat email/phone verification as a manual Porkbun account UI or support action.
+Spec search on 2026-05-13 found account/API-key paths for spend settings, balance, account invites, API-key authorization, and email-hosting password management, but no endpoint to verify or resend verification for the existing account email or phone number. A fresh official-doc refresh on 2026-05-13 still showed the same shape: `domain/create` requires verified account email/phone and sufficient credit; account endpoints expose balance and API spend settings; Porkbun's account-contact KB points account email/phone updates to `ACCOUNT` -> `Settings / Billing` -> `Account Owner and Recovery`. Treat email/phone verification as a manual Porkbun account UI or support action.
 
 Fresh read-only account checks on 2026-05-13 confirmed the API credentials are valid, but the account balance endpoint reports `0` available account credit and auto-topup is disabled. Because Porkbun's API registration endpoint uses account credit, the Porkbun UI may also need account credit or payment/autotopup setup after email/phone verification clears.
 
