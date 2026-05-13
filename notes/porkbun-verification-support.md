@@ -21,8 +21,8 @@ Latest API availability result before create:
 Latest failed finisher attempt:
 
 - Command: `npm run domain:finish:post-verification`
-- Check request id: `019e21e6-e51a-7786-95c9-efe33d7ff01b`
-- Create request id: `019e21e6-e84d-7d71-96bc-2b2f010622da`
+- Check request id: `019e220c-60f0-74ba-8e06-3f80a7ec134d`
+- Create request id: `019e220c-6355-7ff9-bfc3-b7586cddb14e`
 - Error code: `VERIFICATION_REQUIRED`
 - Error message: `Your account phone number and email address must be verified.`
 
@@ -67,7 +67,7 @@ Spec search on 2026-05-13 found account/API-key paths for spend settings, balanc
 
 ## Browser Automation Status
 
-Chrome checks on 2026-05-13 found Google Chrome installed and running, the Codex Chrome Extension installed/enabled in `Profile 1`, and the native host manifest present with the expected extension origin. However, no Chrome browser-control tools are exposed in this session, and Computer Use cannot attach to the Chrome window (`cgWindowNotFound`). Treat Porkbun account verification as a manual browser task unless a later session exposes working Chrome controls.
+Chrome checks on 2026-05-13 found Google Chrome installed and running, the Codex Chrome Extension installed/enabled in `Profile 1`, and the native host manifest present with the expected extension origin. However, no Chrome browser-control tools are exposed in this session, and a fresh Computer Use attach attempt still returned `cgWindowNotFound`. Treat Porkbun account verification as a manual browser task unless a later session exposes working Chrome controls.
 
 ## Support Message Draft
 
@@ -90,8 +90,8 @@ Latest failed attempt:
 - Domain: froggyhatessnow.wiki
 - First-year price returned by API: $2.06
 - Renewal price returned by API: $26.26
-- Check request id: 019e21e6-e51a-7786-95c9-efe33d7ff01b
-- Create request id: 019e21e6-e84d-7d71-96bc-2b2f010622da
+- Check request id: 019e220c-60f0-74ba-8e06-3f80a7ec134d
+- Create request id: 019e220c-6355-7ff9-bfc3-b7586cddb14e
 
 Can you confirm what account verification step is still missing, or help clear the email/phone verification requirement so the API registration can complete?
 

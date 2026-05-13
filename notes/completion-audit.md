@@ -70,14 +70,14 @@ curl -I --max-time 20 https://froggyhatessnow.wiki/
 - `npx tsc --noEmit`: currently fails in Starlight generated utility types (`astro:content` has no exported `RenderResult`); `npm run build`, `npm test`, and `npm run validate` pass.
 - `git diff --check`: passed.
 - `npm run deploy:status`: stable alias live checks passed for homepage, Steam source snapshot, current source timestamp, achievement matrix, homepage Open Graph image metadata, `/robots.txt`, and `/llms.txt`.
-- `npm run domain:status`: `domain_available_not_registered`; latest check request id `019e21ab-80ae-7745-b332-2ff15488d479`, DNS retrieve request id `019e21ab-837a-79e8-b69a-70789fcf5b03`.
+- `npm run domain:status`: `domain_available_not_registered`; latest check request id `019e220c-0e0a-7365-b1e6-33177486f862`, DNS retrieve request id `019e220c-111c-7ffa-945f-fc505d889e4d`.
 - `npm run domain:health`: expected failure while registration/DNS/canonical switch are incomplete. It now includes an `astro-canonical-site` check for `astro.config.mjs` in addition to Porkbun registration state, Vercel attachment, DNS A records, and custom-domain page markers.
 - `npm run domain:finish:post-verification`: guarded post-verification wrapper exists; after registration/DNS it commits/pushes the canonical config before deployment and then deploys from the clean committed canonical state.
 - `npm run domain:finish:vercel-post-purchase`: guarded non-financial fallback helper exists for after an approved Vercel registrar purchase. It refuses to run unless Vercel attachment and DNS are healthy, switches the Astro canonical site, validates/builds, and then delegates to `domain:commit-canonical -- --deploy-after-commit`.
 - `npm run domain:commit-canonical`: guarded manual recovery helper exists; it commits/pushes the canonical config switch only after `domain:health` passes and only if `astro.config.mjs` is the sole dirty file. When run with `--deploy-after-commit`, it redeploys from the clean committed canonical state before the completion audit.
 - `domain:register` and `domain:finish` now generate a fresh timestamped idempotency suffix by default so a post-verification attempt does not reuse the earlier failed `post-verification` create request.
 - `npm run domain:finish -- --confirm-register-and-dns`: failed at `domain:register` with Porkbun `VERIFICATION_REQUIRED`; check request id `019e219a-80e4-723c-af60-4191806fc087`, create request id `019e217f-e6ac-723c-8134-3613a780f093`.
-- `npm run domain:finish:post-verification`: latest confirmed attempt also stopped at `domain:register` with Porkbun `VERIFICATION_REQUIRED`; check request id `019e21e6-e51a-7786-95c9-efe33d7ff01b`, create request id `019e21e6-e84d-7d71-96bc-2b2f010622da`.
+- `npm run domain:finish:post-verification`: latest confirmed attempt also stopped at `domain:register` with Porkbun `VERIFICATION_REQUIRED`; check request id `019e220c-60f0-74ba-8e06-3f80a7ec134d`, create request id `019e220c-6355-7ff9-bfc3-b7586cddb14e`.
 - `curl -I --max-time 20 https://froggyhatessnow.wiki/`: `Could not resolve host`, as expected while the domain is unregistered.
 
 ## Remaining Work

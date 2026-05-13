@@ -141,6 +141,13 @@ A later post-verification finisher attempt on 2026-05-13 again used a fresh time
 - Create request id: `019e21e6-e84d-7d71-96bc-2b2f010622da`
 - Error code: `VERIFICATION_REQUIRED`
 
+A fresh continuation attempt on 2026-05-13 again used a new timestamped idempotency suffix and still stopped at the same registration gate before DNS, Astro site, build, or deploy steps ran.
+
+- Command: `npm run domain:finish:post-verification`
+- Check request id: `019e220c-60f0-74ba-8e06-3f80a7ec134d`
+- Create request id: `019e220c-6355-7ff9-bfc3-b7586cddb14e`
+- Error code: `VERIFICATION_REQUIRED`
+
 The read-only helper checks currently succeed:
 
 ```bash
@@ -173,6 +180,11 @@ A later continuation check still reported `domain_available_not_registered`:
 
 - `domain:status` check: `019e21e6-8c56-7892-b4b4-428ae8bf4597`
 - `domain:status` DNS retrieve: `019e21e6-8fb7-7266-b347-a60fc0a695f8`
+
+A fresh continuation check still reported `domain_available_not_registered`:
+
+- `domain:status` check: `019e220c-0e0a-7365-b1e6-33177486f862`
+- `domain:status` DNS retrieve: `019e220c-111c-7ffa-945f-fc505d889e4d`
 
 The latest direct custom-domain URL check failed before HTTP because DNS does not resolve yet:
 
