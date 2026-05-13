@@ -53,7 +53,13 @@ The read-only helper check currently succeeds:
 npm run domain:check
 ```
 
-Latest read-only check request id: `019e20e6-7d9f-72de-b65c-877ad75010f3`.
+Latest read-only check request id: `019e20f1-eb98-7952-a792-b855c6f2a08c`.
+
+DNS setup was also attempted through the helper before registration completed:
+
+- Command: `npm run domain:dns`
+- Result: not configured. Porkbun returned `INVALID_DOMAIN` because the domain is not registered in the account yet.
+- DNS retrieve request id: `019e20f4-1c03-7a52-ba90-64e1bb4a9fef`
 
 ## DNS / Vercel Plan
 
@@ -63,6 +69,11 @@ The Vercel project already has both target hostnames attached:
 - `www.froggyhatessnow.wiki`
 
 Vercel currently reports both as third-party domains on the edge network but not configured because the domain is not registered/DNS-configured yet.
+
+Current Vercel recommended records:
+
+- `A froggyhatessnow.wiki 76.76.21.21`
+- `A www.froggyhatessnow.wiki 76.76.21.21`
 
 After Porkbun account verification:
 

@@ -40,7 +40,7 @@ Everything is implemented, validated, pushed, and deployed except the explicit d
 | Live source page | `https://froggyhatessnow-wiki.vercel.app/steam-source-snapshot/` returns 200 and contains the Steam News & Devlogs table. | Done |
 | Domain research | `notes/domain-options.md` lists required candidates, prices, pros/cons, recommendation, backups, and sources. | Done |
 | Domain purchase | `npm run domain:check` confirms `froggyhatessnow.wiki` is available, non-premium, `$2.06` first year / `$26.26` renewal. Purchase attempts fail with Porkbun `VERIFICATION_REQUIRED`. | Blocked |
-| Vercel domain setup | Vercel has `froggyhatessnow.wiki` and `www.froggyhatessnow.wiki` attached to the project. It reports DNS not configured and recommends `A froggyhatessnow.wiki 76.76.21.21`; `www` uses the same IP per prior inspect. | Waiting on purchase/DNS |
+| Vercel domain setup | Vercel has `froggyhatessnow.wiki` and `www.froggyhatessnow.wiki` attached to the project. It reports DNS not configured and recommends `A froggyhatessnow.wiki 76.76.21.21` and `A www.froggyhatessnow.wiki 76.76.21.21`. | Waiting on purchase/DNS |
 | README and AGENTS | Both exist and document workflow, data rules, deployment, domain blocker, and fail-loud behavior. | Done |
 
 ## Latest Verification Commands
@@ -51,7 +51,9 @@ npm run validate
 npm test
 npm run build
 npm run domain:check
+npm run domain:dns
 npx vercel domains inspect froggyhatessnow.wiki
+npx vercel domains inspect www.froggyhatessnow.wiki
 curl -fsS -o /tmp/froggy-live-home.html -w '%{http_code}\n' https://froggyhatessnow-wiki.vercel.app/
 curl -fsS -o /tmp/froggy-live-steam.html -w '%{http_code}\n' https://froggyhatessnow-wiki.vercel.app/steam-source-snapshot/
 ```
@@ -63,7 +65,8 @@ curl -fsS -o /tmp/froggy-live-steam.html -w '%{http_code}\n' https://froggyhates
 - `npm test`: 2 test files / 7 tests passed.
 - `npm run build`: 164 pages built; 163 pages indexed by Pagefind.
 - `npm run domain:check`: `froggyhatessnow.wiki` available yes, type registration, price `2.06`, regularPrice `26.26`, premium no, request id `019e20f1-eb98-7952-a792-b855c6f2a08c`.
-- Vercel domain inspect: domain found, edge network yes, DNS not configured, intended nameservers `ns1.vercel-dns.com` and `ns2.vercel-dns.com`, recommended apex A record `76.76.21.21`.
+- `npm run domain:dns`: blocked before registration; Porkbun returned `INVALID_DOMAIN`, request id `019e20f4-1c03-7a52-ba90-64e1bb4a9fef`.
+- Vercel domain inspect: apex and `www` domains found, edge network yes, DNS not configured, intended nameservers `ns1.vercel-dns.com` and `ns2.vercel-dns.com`, recommended records `A froggyhatessnow.wiki 76.76.21.21` and `A www.froggyhatessnow.wiki 76.76.21.21`.
 - Live homepage and Steam source snapshot both returned HTTP 200.
 
 ## Remaining Work
