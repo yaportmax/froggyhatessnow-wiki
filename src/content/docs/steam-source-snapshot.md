@@ -8,7 +8,7 @@ draft: false
 
 ![FROGGY HATES SNOW Steam header](https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3232380/4aec6dc45dab3a096faeda88c8036627817f0cfe/header_alt_assets_0.jpg?t=1778580427)
 
-Accessed: **2026-05-13**. Generated: 2026-05-13T13:41:44.440Z.
+Accessed: **2026-05-13**. Generated: 2026-05-13T14:41:46.504Z.
 
 This page is the main sourcing checkpoint for game-populating wiki data. It uses official public Steam pages/APIs first, then marks anything not confirmed by those sources as inferred or needing verification.
 
@@ -18,6 +18,7 @@ This page is the main sourcing checkpoint for game-populating wiki data. It uses
 - Do not copy raw long descriptions, review text, proprietary assets, binaries, source code, or decompiled content.
 - Treat prices, review counts, recommendations, player counts, and achievement percentages as volatile as-of metadata.
 - Treat achievement names as public names; classify gameplay effects only when another source or safe local metadata confirms them.
+- Fetch non-Steam public pages during refresh and fail if marker text for cited claims disappears.
 
 ## App Metadata
 
@@ -33,7 +34,7 @@ This page is the main sourcing checkpoint for game-populating wiki data. It uses
 | Genres | Action, Indie, Strategy | Action, Indie, Strategy |
 | Categories | Single-player, Steam Achievements, Full controller support, Adjustable Difficulty, Playable without Timed Input, Steam Cloud, Family Sharing | Single-player, Game demo, Full controller support, Adjustable Difficulty, Steam Cloud |
 | Current US Price | {"currency":"USD","initial":1499,"final":1349,"discount_percent":10,"initial_formatted":"$14.99","final_formatted":"$13.49"} | None listed |
-| Recommendations | 175 | None listed |
+| Recommendations | 177 | None listed |
 | Achievements | 42 | None listed |
 | Screenshots | 14 | 13 |
 | Movies | Indie Fan Fest Trailer | Indie Fan Fest Trailer |
@@ -52,8 +53,17 @@ Steam appdetails currently lists 14 full-game screenshots. The thumbnails below 
 
 | App | Review Summary |
 |---|---|
-| Full game | {"num_reviews":10,"review_score":8,"review_score_desc":"Very Positive","total_positive":179,"total_negative":14,"total_reviews":193} |
+| Full game | {"num_reviews":10,"review_score":8,"review_score_desc":"Very Positive","total_positive":181,"total_negative":14,"total_reviews":195} |
 | Demo | {"num_reviews":10,"review_score":8,"review_score_desc":"Very Positive","total_positive":140,"total_negative":3,"total_reviews":143} |
+
+## External Source Checks
+
+These non-Steam public pages are fetched during `npm run fetch:steam`; missing marker text fails the refresh so cited non-Steam claims do not silently rot.
+
+| Source | Status | Matched Markers | Notes |
+|---|---:|---|---|
+| [Digital Bandidos game page](https://digitalbandidos.com/games/froggy-hates-snow/) | 200 | Froggy Hates Snow, Digital Bandidos, Crying Brick | Fetched live during the public-source refresh and checked for marker text used by wiki claims. |
+| [Xbox Wire developer interview](https://news.xbox.com/en-us/2026/05/05/froggy-hates-snow-interview/) | 200 | Froggy Hates Snow, 16 maps, Peaceful Mode, heightmap, companions, tools, skills | Fetched live during the public-source refresh and checked for marker text used by wiki claims. |
 
 ## Steam News & Devlogs
 
@@ -116,7 +126,7 @@ Every current Steam News API item is recorded below. Items classified as marketi
 
 | Field | Value |
 |---|---|
-| Generated | 2026-05-13T13:41:43.964Z |
+| Generated | 2026-05-13T14:41:46.909Z |
 | Game files present | yes |
 | Game files contain files | no |
 | Scan root | /Users/myaport/Documents/maxyaport-codex-project/froggyhatessnow_wiki/game-files |

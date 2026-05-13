@@ -42,7 +42,7 @@
     "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
     "label": "Steam community achievements page",
     "confidence": "high",
-    "notes": "Public display names, descriptions, icons, and current global percentages."
+    "notes": "Public display names, descriptions, achievement icon URLs, and current global percentages."
   },
   {
     "id": "steam-full-global-achievement-percentages",
@@ -52,6 +52,15 @@
     "label": "Steam global achievement percentages API",
     "confidence": "high",
     "notes": "Public no-key endpoint for internal achievement ids and volatile global percentages."
+  },
+  {
+    "id": "steam-demo-global-achievement-percentages",
+    "source_id": "steam-demo-global-achievement-percentages",
+    "type": "public_source",
+    "path_or_url": "https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=4037600&format=json",
+    "label": "Steam demo global achievement percentages API",
+    "confidence": "low",
+    "notes": "Public no-key endpoint status for demo achievement percentages. Current status=403; error=https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=4037600&format=json returned 403."
   },
   {
     "id": "steam-news-devlogs",
@@ -66,7 +75,7 @@
     "id": "steam-news-api",
     "source_id": "steam-news-api",
     "type": "public_source",
-    "path_or_url": "https://api.steampowered.com/ISteamNews/GetNewsForApp/v0002/?appid=3232380&count=20&maxlength=50000&format=json",
+    "path_or_url": "https://api.steampowered.com/ISteamNews/GetNewsForApp/v0002/?appid=3232380&count=100&maxlength=50000&format=json",
     "label": "Steam News API",
     "confidence": "high",
     "notes": "Public Steam News API used to map individual news/devlog posts to direct source records."
@@ -78,7 +87,7 @@
     "path_or_url": "https://store.steampowered.com/appreviews/3232380?json=1&language=all&filter=summary&purchase_type=all&num_per_page=0",
     "label": "Steam full-game review summary API",
     "confidence": "medium",
-    "notes": "Summary fetched only; review text not redistributed. Current summary: {\"num_reviews\":10,\"review_score\":8,\"review_score_desc\":\"Very Positive\",\"total_positive\":179,\"total_negative\":14,\"total_reviews\":193}."
+    "notes": "Summary fetched only; review text not redistributed. Current summary: {\"num_reviews\":10,\"review_score\":8,\"review_score_desc\":\"Very Positive\",\"total_positive\":181,\"total_negative\":14,\"total_reviews\":195}."
   },
   {
     "id": "steam-demo-review-summary",

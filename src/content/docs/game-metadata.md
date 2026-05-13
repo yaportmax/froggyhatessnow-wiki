@@ -22,7 +22,7 @@ This page keeps volatile store metadata separate from gameplay guidance. Refresh
 | Genres | Action, Indie, Strategy | Action, Indie, Strategy |
 | Categories | Single-player, Steam Achievements, Full controller support, Adjustable Difficulty, Playable without Timed Input, Steam Cloud, Family Sharing | Single-player, Game demo, Full controller support, Adjustable Difficulty, Steam Cloud |
 | Current US Price | {"currency":"USD","initial":1499,"final":1349,"discount_percent":10,"initial_formatted":"$14.99","final_formatted":"$13.49"} | None listed |
-| Recommendations | 175 | None listed |
+| Recommendations | 177 | None listed |
 | Achievements | 42 | None listed |
 | Screenshots | 14 | 13 |
 | Movies | Indie Fan Fest Trailer | Indie Fan Fest Trailer |
@@ -34,7 +34,7 @@ This page keeps volatile store metadata separate from gameplay guidance. Refresh
 - [Full game appdetails API](https://store.steampowered.com/api/appdetails?appids=3232380&cc=us&l=english)
 - [Demo appdetails API](https://store.steampowered.com/api/appdetails?appids=4037600&cc=us&l=english)
 - [Steam achievement page](https://steamcommunity.com/stats/3232380/achievements/?l=english)
-- [Steam News API](https://api.steampowered.com/ISteamNews/GetNewsForApp/v0002/?appid=3232380&count=20&maxlength=50000&format=json)
+- [Steam News API](https://api.steampowered.com/ISteamNews/GetNewsForApp/v0002/?appid=3232380&count=100&maxlength=50000&format=json)
 
 ## Current Snapshot
 
@@ -51,7 +51,7 @@ This page keeps volatile store metadata separate from gameplay guidance. Refresh
 | Languages | English * , French * , German * , Spanish - Spain * , Japanese * , Korean * , Polish * , Portuguese - Brazil * , Simplified Chinese * , Ukrainian * , Turkish * , Traditional Chinese * * languages with full audio support | English * , French * , Italian * , German * , Spanish - Spain * , Ukrainian * * languages with full audio support |
 | Achievements | 42 | None listed |
 | Screenshots | 14 | 13 |
-| Review summary | {"num_reviews":10,"review_score":8,"review_score_desc":"Very Positive","total_positive":179,"total_negative":14,"total_reviews":193} | {"num_reviews":10,"review_score":8,"review_score_desc":"Very Positive","total_positive":140,"total_negative":3,"total_reviews":143} |
+| Review summary | {"num_reviews":10,"review_score":8,"review_score_desc":"Very Positive","total_positive":181,"total_negative":14,"total_reviews":195} | {"num_reviews":10,"review_score":8,"review_score_desc":"Very Positive","total_positive":140,"total_negative":3,"total_reviews":143} |
 
 ## Demo Relationship
 

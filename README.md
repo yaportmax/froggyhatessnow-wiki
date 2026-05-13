@@ -16,16 +16,20 @@ This project is built with Astro Starlight and seeded from public Steam metadata
 
 The strongest current source is Steam/public metadata. The source snapshot records Steam appdetails, review summaries, all public Steam screenshots currently exposed by appdetails, a 42-row achievement fact matrix, all 15 current Steam News API items with evidence classifications, volatile price/review/achievement data, and explicit research gaps. Steam news/devlogs now confirm 10 playable frogs, 16 locations, 60+ skills/tools/attacks/companions, demo progress carryover, Puff, Zippy, several launch/update skills, robotic helpers, Blue Gems, artifact rarity tiers, character main-attack concepts, quest-based meta-progression, and snow-system mechanics. Local demo file extraction is blocked in this shell; see `notes/public-research.md` and `notes/extracted-metadata.md`.
 
+The Steam refresh fails loudly when expected source structure drifts: it requests up to 100 Steam News items and errors if the feed may be truncated, derives the achievement count from Steam appdetails, checks non-Steam corroborating pages for marker text, and records the currently blocked demo achievement API as its own source.
+
 ## Commands
 
 ```bash
 npm install
 npm run fetch:steam
 npm run scan
+npm run refresh:data
 npm run validate
 npm run audit:completion
 npm run generate
 npm run build
+npm run build:verified
 npm run dev
 npm run deploy:status
 npm run deploy:publish
@@ -76,9 +80,7 @@ Result in this environment: Homebrew SteamCMD installed, but the macOS SteamCMD 
 When SteamCMD is working, rerun:
 
 ```bash
-npm run scan
-npm run validate
-npm run generate
+npm run refresh:data
 npm run build
 ```
 

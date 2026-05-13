@@ -35,3 +35,14 @@
   object-fit: cover;
   width: 100%;
 }
+
+.achievement-icon {
+  image-rendering: auto;
+  height: 64px;
+  width: 64px;
+}
+
+.achievement-icon--table {
+  height: 32px;
+  width: 32px;
+}

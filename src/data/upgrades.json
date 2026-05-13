@@ -29,14 +29,6 @@
         "notes": "Official public Steam demo listing."
       },
       {
-        "source_id": "steam-news-devlogs",
-        "type": "public_source",
-        "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
-        "label": "Steam community news/devlogs",
-        "confidence": "high",
-        "notes": "Official public Steam news and developer posts for launch, systems, updates, and devlogs."
-      },
-      {
         "source_id": "steam-full-achievements-page",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
@@ -87,14 +79,6 @@
         "label": "Steam demo store page",
         "confidence": "high",
         "notes": "Official public Steam demo listing."
-      },
-      {
-        "source_id": "steam-news-devlogs",
-        "type": "public_source",
-        "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
-        "label": "Steam community news/devlogs",
-        "confidence": "high",
-        "notes": "Official public Steam news and developer posts for launch, systems, updates, and devlogs."
       },
       {
         "source_id": "steam-full-achievements-page",
@@ -149,14 +133,6 @@
         "notes": "Official public Steam demo listing."
       },
       {
-        "source_id": "steam-news-devlogs",
-        "type": "public_source",
-        "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
-        "label": "Steam community news/devlogs",
-        "confidence": "high",
-        "notes": "Official public Steam news and developer posts for launch, systems, updates, and devlogs."
-      },
-      {
         "source_id": "steam-full-achievements-page",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
@@ -207,14 +183,6 @@
         "label": "Steam demo store page",
         "confidence": "high",
         "notes": "Official public Steam demo listing."
-      },
-      {
-        "source_id": "steam-news-devlogs",
-        "type": "public_source",
-        "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
-        "label": "Steam community news/devlogs",
-        "confidence": "high",
-        "notes": "Official public Steam news and developer posts for launch, systems, updates, and devlogs."
       },
       {
         "source_id": "steam-full-achievements-page",
@@ -269,14 +237,6 @@
         "notes": "Official public Steam demo listing."
       },
       {
-        "source_id": "steam-news-devlogs",
-        "type": "public_source",
-        "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
-        "label": "Steam community news/devlogs",
-        "confidence": "high",
-        "notes": "Official public Steam news and developer posts for launch, systems, updates, and devlogs."
-      },
-      {
         "source_id": "steam-full-achievements-page",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
@@ -329,14 +289,6 @@
         "notes": "Official public Steam demo listing."
       },
       {
-        "source_id": "steam-news-devlogs",
-        "type": "public_source",
-        "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
-        "label": "Steam community news/devlogs",
-        "confidence": "high",
-        "notes": "Official public Steam news and developer posts for launch, systems, updates, and devlogs."
-      },
-      {
         "source_id": "steam-full-achievements-page",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
@@ -387,14 +339,6 @@
         "label": "Steam demo store page",
         "confidence": "high",
         "notes": "Official public Steam demo listing."
-      },
-      {
-        "source_id": "steam-news-devlogs",
-        "type": "public_source",
-        "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
-        "label": "Steam community news/devlogs",
-        "confidence": "high",
-        "notes": "Official public Steam news and developer posts for launch, systems, updates, and devlogs."
       },
       {
         "source_id": "steam-full-achievements-page",

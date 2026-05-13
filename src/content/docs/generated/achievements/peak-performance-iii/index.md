@@ -7,8 +7,12 @@ draft: false
 # Peak Performance III
 
 :::tip[Verified]
-This entry is backed by at least one listed public source or safe metadata source.
+This entry is backed by listed public source or safe metadata evidence, with no tracked fields currently marked unverified.
 :::
+
+<img src="https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/3232380/9192f0067e2fd9f0d33ab27e30b688f94219768a.jpg" alt="Steam achievement icon for Peak Performance III" class="achievement-icon" loading="lazy" />
+
+_Public Steam achievement icon._
 
 Fully upgrade 10 Characters
 
@@ -19,10 +23,10 @@ Fully upgrade 10 Characters
 | Aliases | None listed |
 | Effect | Steam achievement condition: Fully upgrade 10 Characters |
 | Unlock Method | Fully upgrade 10 Characters |
-| Cost | Needs verification. |
+| Cost | Not applicable. |
 | Mode | Full game. |
-| Verified Fields | name, category, effect, unlock_method, mode |
-| Fields Needing Verification | cost |
+| Verified Fields | name, category, effect, unlock_method, cost, mode |
+| Fields Needing Verification | None listed |
 | Last Verified | Public Steam metadata accessed 2026-05-13 |
 | Notes | Global percentage is volatile; refresh before publishing exact percentage-driven claims. |
 | Steam Internal Achievement ID | peak_performance_3 |

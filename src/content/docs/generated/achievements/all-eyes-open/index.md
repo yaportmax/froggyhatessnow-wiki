@@ -7,8 +7,12 @@ draft: false
 # All Eyes Open
 
 :::tip[Verified]
-This entry is backed by at least one listed public source or safe metadata source.
+This entry is backed by listed public source or safe metadata evidence, with no tracked fields currently marked unverified.
 :::
+
+<img src="https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/3232380/92e5a230136868e1d6650d53a7e3de9edd767b94.jpg" alt="Steam achievement icon for All Eyes Open" class="achievement-icon" loading="lazy" />
+
+_Public Steam achievement icon._
 
 Survive a run with Map, Scanner & Locator
 
@@ -19,10 +23,10 @@ Survive a run with Map, Scanner & Locator
 | Aliases | None listed |
 | Effect | Steam achievement condition: Survive a run with Map, Scanner & Locator |
 | Unlock Method | Survive a run with Map, Scanner & Locator |
-| Cost | Needs verification. |
+| Cost | Not applicable. |
 | Mode | Full game. |
-| Verified Fields | name, category, effect, unlock_method, mode |
-| Fields Needing Verification | cost |
+| Verified Fields | name, category, effect, unlock_method, cost, mode |
+| Fields Needing Verification | None listed |
 | Last Verified | Public Steam metadata accessed 2026-05-13 |
 | Notes | Global percentage is volatile; refresh before publishing exact percentage-driven claims. |
 | Steam Internal Achievement ID | all_eyes_open |
@@ -31,9 +35,9 @@ Survive a run with Map, Scanner & Locator
 
 ## Related
 
-- [Map](/generated/tools/map/)
-- [Scanner](/generated/tools/scanner/)
-- [Locator](/generated/tools/locator/)
+- [Map](/generated/tools/map/) (Inferred)
+- [Scanner](/generated/tools/scanner/) (Inferred)
+- [Locator](/generated/tools/locator/) (Inferred)
 
 ## Sources
 

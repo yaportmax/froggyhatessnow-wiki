@@ -7,8 +7,12 @@ draft: false
 # Elemental Mayhem
 
 :::tip[Verified]
-This entry is backed by at least one listed public source or safe metadata source.
+This entry is backed by listed public source or safe metadata evidence, with no tracked fields currently marked unverified.
 :::
+
+<img src="https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/3232380/bd3ea5da666bdae5907a0eaf0d7c782ef1677c3f.jpg" alt="Steam achievement icon for Elemental Mayhem" class="achievement-icon" loading="lazy" />
+
+_Public Steam achievement icon._
 
 Survive a run with Chain Lightning, Frost Bomb & Poison Flask
 
@@ -19,10 +23,10 @@ Survive a run with Chain Lightning, Frost Bomb & Poison Flask
 | Aliases | None listed |
 | Effect | Steam achievement condition: Survive a run with Chain Lightning, Frost Bomb & Poison Flask |
 | Unlock Method | Survive a run with Chain Lightning, Frost Bomb & Poison Flask |
-| Cost | Needs verification. |
+| Cost | Not applicable. |
 | Mode | Full game. |
-| Verified Fields | name, category, effect, unlock_method, mode |
-| Fields Needing Verification | cost |
+| Verified Fields | name, category, effect, unlock_method, cost, mode |
+| Fields Needing Verification | None listed |
 | Last Verified | Public Steam metadata accessed 2026-05-13 |
 | Notes | Global percentage is volatile; refresh before publishing exact percentage-driven claims. |
 | Steam Internal Achievement ID | elemental_mayhem |
@@ -31,9 +35,9 @@ Survive a run with Chain Lightning, Frost Bomb & Poison Flask
 
 ## Related
 
-- [Chain Lightning](/generated/skills/chain-lightning/)
-- [Frost Bomb](/generated/items/frost-bomb/)
-- [Poison Flask](/generated/items/poison-flask/)
+- [Chain Lightning](/generated/skills/chain-lightning/) (Inferred)
+- [Frost Bomb](/generated/items/frost-bomb/) (Inferred)
+- [Poison Flask](/generated/items/poison-flask/) (Inferred)
 
 ## Sources
 

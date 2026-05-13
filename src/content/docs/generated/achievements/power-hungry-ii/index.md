@@ -7,8 +7,12 @@ draft: false
 # Power Hungry II
 
 :::tip[Verified]
-This entry is backed by at least one listed public source or safe metadata source.
+This entry is backed by listed public source or safe metadata evidence, with no tracked fields currently marked unverified.
 :::
+
+<img src="https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/3232380/72db0c5f030a54daa0e77598fa24e82fedc6f20d.jpg" alt="Steam achievement icon for Power Hungry II" class="achievement-icon" loading="lazy" />
+
+_Public Steam achievement icon._
 
 Unlock 5 Skills
 
@@ -19,10 +23,10 @@ Unlock 5 Skills
 | Aliases | None listed |
 | Effect | Steam achievement condition: Unlock 5 Skills |
 | Unlock Method | Unlock 5 Skills |
-| Cost | Needs verification. |
+| Cost | Not applicable. |
 | Mode | Full game. |
-| Verified Fields | name, category, effect, unlock_method, mode |
-| Fields Needing Verification | cost |
+| Verified Fields | name, category, effect, unlock_method, cost, mode |
+| Fields Needing Verification | None listed |
 | Last Verified | Public Steam metadata accessed 2026-05-13 |
 | Notes | Global percentage is volatile; refresh before publishing exact percentage-driven claims. |
 | Steam Internal Achievement ID | power_hungry_2 |

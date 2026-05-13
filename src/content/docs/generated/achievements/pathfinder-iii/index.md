@@ -7,8 +7,12 @@ draft: false
 # Pathfinder III
 
 :::tip[Verified]
-This entry is backed by at least one listed public source or safe metadata source.
+This entry is backed by listed public source or safe metadata evidence, with no tracked fields currently marked unverified.
 :::
+
+<img src="https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/3232380/42b00f6185c8b7dd32bd8d46cb0c1d28b70458e6.jpg" alt="Steam achievement icon for Pathfinder III" class="achievement-icon" loading="lazy" />
+
+_Public Steam achievement icon._
 
 Unlock 15 Locations
 
@@ -19,10 +23,10 @@ Unlock 15 Locations
 | Aliases | None listed |
 | Effect | Steam achievement condition: Unlock 15 Locations |
 | Unlock Method | Unlock 15 Locations |
-| Cost | Needs verification. |
+| Cost | Not applicable. |
 | Mode | Full game. |
-| Verified Fields | name, category, effect, unlock_method, mode |
-| Fields Needing Verification | cost |
+| Verified Fields | name, category, effect, unlock_method, cost, mode |
+| Fields Needing Verification | None listed |
 | Last Verified | Public Steam metadata accessed 2026-05-13 |
 | Notes | Global percentage is volatile; refresh before publishing exact percentage-driven claims. |
 | Steam Internal Achievement ID | pathfinder_3 |

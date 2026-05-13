@@ -15,6 +15,13 @@ async function makeDataDir(overrides: Record<string, unknown[]> = {}) {
     await writeFile(path.join(dir, `${dataset}.json`), JSON.stringify(rows, null, 2));
   }
 
+  const screenshots = (appId: number, count: number) =>
+    Array.from({ length: count }, (_, index) => ({
+      id: index,
+      thumbnail_url: `https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/${appId}/test/ss_${index}.600x338.jpg`,
+      full_url: `https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/${appId}/test/ss_${index}.1920x1080.jpg`
+    }));
+
   await writeFile(
     path.join(dir, "public-sources.json"),
     JSON.stringify(
@@ -27,6 +34,33 @@ async function makeDataDir(overrides: Record<string, unknown[]> = {}) {
           label: "Steam demo store page",
           confidence: "high",
           notes: "Public Steam listing"
+        },
+        {
+          id: "steam-full-achievements-page",
+          source_id: "steam-full-achievements-page",
+          type: "public_source",
+          path_or_url: "https://steamcommunity.com/stats/3232380/achievements/?l=english",
+          label: "Steam community achievements page",
+          confidence: "high",
+          notes: "Public Steam achievements"
+        },
+        {
+          id: "steam-full-global-achievement-percentages",
+          source_id: "steam-full-global-achievement-percentages",
+          type: "public_source",
+          path_or_url: "https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=3232380&format=json",
+          label: "Steam global achievement percentages API",
+          confidence: "high",
+          notes: "Public Steam achievement percentages"
+        },
+        {
+          id: "digital-bandidos-page",
+          source_id: "digital-bandidos-page",
+          type: "public_source",
+          path_or_url: "https://digitalbandidos.com/games/froggy-hates-snow/",
+          label: "Digital Bandidos game page",
+          confidence: "medium",
+          notes: "Publisher page"
         }
       ],
       null,
@@ -38,7 +72,7 @@ async function makeDataDir(overrides: Record<string, unknown[]> = {}) {
     JSON.stringify(
       {
         accessed_date: "2026-05-13",
-        generated_at: "2026-05-13T00:00:00.000Z",
+        generated_at: new Date().toISOString(),
         source_policy: ["Test policy"],
         sources: {},
         apps: {
@@ -50,8 +84,9 @@ async function makeDataDir(overrides: Record<string, unknown[]> = {}) {
             api_url: "https://store.steampowered.com/api/appdetails?appids=3232380",
             genres: [],
             categories: [],
-            screenshots_count: 0,
-            screenshots: [],
+            achievements_total: 1,
+            screenshots_count: 10,
+            screenshots: screenshots(3232380, 10),
             movies: []
           },
           demo: {
@@ -62,26 +97,66 @@ async function makeDataDir(overrides: Record<string, unknown[]> = {}) {
             api_url: "https://store.steampowered.com/api/appdetails?appids=4037600",
             genres: [],
             categories: [],
-            screenshots_count: 0,
-            screenshots: [],
+            achievements_total: null,
+            screenshots_count: 8,
+            screenshots: screenshots(4037600, 8),
             movies: []
           }
         },
         reviews: {
-          full_game: {},
-          demo: {}
+          full_game: {
+            num_reviews: 10,
+            review_score: 8,
+            review_score_desc: "Very Positive",
+            total_positive: 12,
+            total_negative: 1,
+            total_reviews: 13
+          },
+          demo: {
+            num_reviews: 10,
+            review_score: 8,
+            review_score_desc: "Very Positive",
+            total_positive: 10,
+            total_negative: 1,
+            total_reviews: 11
+          }
         },
+        external_source_checks: [
+          {
+            source_id: "digital-bandidos-page",
+            label: "Digital Bandidos game page",
+            url: "https://digitalbandidos.com/games/froggy-hates-snow/",
+            status: 200,
+            ok: true,
+            required_markers: ["Froggy Hates Snow"],
+            matched_markers: ["Froggy Hates Snow"],
+            notes: "Test source check"
+          }
+        ],
         achievements: {
           community_page_url: "https://steamcommunity.com/stats/3232380/achievements/?l=english",
           global_percentages_api_url: "https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=3232380&format=json",
           demo_global_percentages_api_url: "https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=4037600&format=json",
           demo_global_percentages_api_status: 403,
-          community_rows_count: 0,
-          full_game_api_ids_count: 0,
+          community_rows_count: 1,
+          full_game_api_ids_count: 1,
           demo_api_ids_count: 0,
-          facts: [],
-          highest_global_percentages: [],
-          lowest_global_percentages: [],
+          facts: [
+            {
+              title: "Test Achievement",
+              slug: "test-achievement",
+              description: "Test achievement condition",
+              icon_url: "https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/3232380/test.jpg",
+              steam_internal_name: "TEST_ACHIEVEMENT",
+              steam_global_percent_api: "1.0",
+              steam_community_percent: "1.0%",
+              source_ids: ["steam-full-achievements-page", "steam-full-global-achievement-percentages"],
+              mentioned_entities: [],
+              notes: "Test fact"
+            }
+          ],
+          highest_global_percentages: [{ name: "TEST_ACHIEVEMENT", percent: "1.0" }],
+          lowest_global_percentages: [{ name: "TEST_ACHIEVEMENT", percent: "1.0" }],
           notes: []
         },
         public_gameplay_claims: [],

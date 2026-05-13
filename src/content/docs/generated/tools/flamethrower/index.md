@@ -6,8 +6,8 @@ draft: false
 
 # Flamethrower
 
-:::tip[Verified]
-This entry is backed by at least one listed public source or safe metadata source.
+:::caution[Partially verified]
+The listed sources verify this entry, but these fields still need confirmation: unlock_method, cost.
 :::
 
 Flamethrower is mentioned in official Steam copy or Steam devlogs as part of digging, movement, ice handling, or resource carrying.
@@ -34,4 +34,4 @@ No related entities listed yet.
 
 - [Steam full-game store page](https://store.steampowered.com/app/3232380/FROGGY_HATES_SNOW/) — public_source, confidence high, source `steam-full-store`. Official public Steam store listing.
 - [Steam demo store page](https://store.steampowered.com/app/4037600/FROGGY_HATES_SNOW_Demo/) — public_source, confidence high, source `steam-demo-store`. Official public Steam demo listing.
-- [Steam community news/devlogs](https://steamcommunity.com/app/3232380/allnews/?l=english) — public_source, confidence high, source `steam-news-devlogs`. Official public Steam news and developer posts for launch, systems, updates, and devlogs.
+- [Devlog #5: How Snow Works in Froggy Hates Snow](https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1827626365766540) — public_source, confidence high, source `steam-snow-devlog`. 2026-03-24 snow-system devlog.

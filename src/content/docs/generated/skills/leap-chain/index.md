@@ -6,8 +6,8 @@ draft: false
 
 # Leap Chain
 
-:::tip[Verified]
-This entry is backed by at least one listed public source or safe metadata source.
+:::caution[Partially verified]
+The listed sources verify this entry, but these fields still need confirmation: unlock_method, cost, mode.
 :::
 
 Leap Chain is named in official Steam news or devlog copy.
@@ -32,4 +32,4 @@ No related entities listed yet.
 
 ## Sources
 
-- [Steam community news/devlogs](https://steamcommunity.com/app/3232380/allnews/?l=english) — public_source, confidence high, source `steam-news-devlogs`. Official public Steam news and developer posts for launch, systems, updates, and devlogs.
+- [Devlog #7: What's New For Launch?](https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1831432155577514) — public_source, confidence high, source `steam-launch-devlog`. 2026-05-04 launch devlog.

@@ -5,6 +5,7 @@ import { REQUIRED_DATASETS } from "./validate-data";
 
 const FULL_APP_ID = 3232380;
 const DEMO_APP_ID = 4037600;
+const STEAM_NEWS_REQUEST_COUNT = 100;
 const ACCESSED_DATE = new Date().toISOString().slice(0, 10);
 
 type SourceType = "game_file" | "public_source" | "gameplay_note" | "inferred" | "unknown";
@@ -65,6 +66,7 @@ type AchievementFact = {
   title: string;
   slug: string;
   description: string;
+  icon_url: string;
   steam_internal_name: string | null;
   steam_global_percent_api: string | null;
   steam_community_percent: string;
@@ -114,6 +116,17 @@ type PublicGameplayClaim = {
   source_ids: string[];
   confidence: Source["confidence"];
   wiki_targets: string[];
+  notes: string;
+};
+
+type ExternalSourceCheck = {
+  source_id: string;
+  label: string;
+  url: string;
+  status: number;
+  ok: boolean;
+  required_markers: string[];
+  matched_markers: string[];
   notes: string;
 };
 
@@ -206,6 +219,7 @@ type SteamSnapshot = {
     full_game: unknown;
     demo: unknown;
   };
+  external_source_checks: ExternalSourceCheck[];
   achievements: {
     community_page_url: string;
     global_percentages_api_url: string;
@@ -237,7 +251,7 @@ const urls = {
   demoAchievementPercentages: `https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=${DEMO_APP_ID}&format=json`,
   achievementsPage: `https://steamcommunity.com/stats/${FULL_APP_ID}/achievements/?l=english`,
   news: `https://steamcommunity.com/app/${FULL_APP_ID}/allnews/?l=english`,
-  newsApi: `https://api.steampowered.com/ISteamNews/GetNewsForApp/v0002/?appid=${FULL_APP_ID}&count=20&maxlength=50000&format=json`,
+  newsApi: `https://api.steampowered.com/ISteamNews/GetNewsForApp/v0002/?appid=${FULL_APP_ID}&count=${STEAM_NEWS_REQUEST_COUNT}&maxlength=50000&format=json`,
   steamDbFull: `https://steamdb.info/app/${FULL_APP_ID}/`,
   steamDbDemo: `https://steamdb.info/app/${DEMO_APP_ID}/`,
   publisherPage: "https://digitalbandidos.com/games/froggy-hates-snow/",
@@ -322,6 +336,26 @@ function stripHtml(value: string) {
 
 function stripSteamNews(value: string) {
   return stripHtml(value.replace(/\[\/?[^\]]+\]/g, " "));
+}
+
+function checkExternalSource(sourceId: string, label: string, url: string, html: string, requiredMarkers: string[]): ExternalSourceCheck {
+  const text = stripHtml(html).toLowerCase();
+  const matchedMarkers = requiredMarkers.filter((marker) => text.includes(marker.toLowerCase()));
+  const missingMarkers = requiredMarkers.filter((marker) => !matchedMarkers.includes(marker));
+  if (missingMarkers.length > 0) {
+    throw new Error(`${label}: missing expected public markers: ${missingMarkers.join(", ")}`);
+  }
+
+  return {
+    source_id: sourceId,
+    label,
+    url,
+    status: 200,
+    ok: true,
+    required_markers: requiredMarkers,
+    matched_markers: matchedMarkers,
+    notes: "Fetched live during the public-source refresh and checked for marker text used by wiki claims."
+  };
 }
 
 function asRecord(value: unknown): Record<string, unknown> {
@@ -1009,6 +1043,7 @@ function buildAchievementFacts(rows: AchievementRow[], percentages: SteamAchieve
       title: row.title,
       slug: slugify(row.title),
       description: row.description,
+      icon_url: row.icon_url,
       steam_internal_name: internal?.name ?? null,
       steam_global_percent_api: internal?.percent ?? null,
       steam_community_percent: row.percent,
@@ -1040,6 +1075,63 @@ function seedCoreEntities() {
   const fullStore = source("Steam full-game store page", urls.fullStore, "Official public Steam store listing.");
   const demoStore = source("Steam demo store page", urls.demoStore, "Official public Steam demo listing.");
   const steamNews = source("Steam community news/devlogs", urls.news, "Official public Steam news and developer posts for launch, systems, updates, and devlogs.");
+  const achievementsSource = source("Steam community achievements page", urls.achievementsPage, "Public achievement names and descriptions.");
+  const postLaunchUpdate = source(
+    "Thank You for an Incredible Launch — First Update and What Comes Next",
+    "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1832065502824701",
+    "2026-05-12 first post-launch update.",
+    "high",
+    "steam-post-launch-update"
+  );
+  const launchDevlog = source(
+    "Devlog #7: What's New For Launch?",
+    "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1831432155577514",
+    "2026-05-04 launch devlog.",
+    "high",
+    "steam-launch-devlog"
+  );
+  const anomalousZonesDevlog = source(
+    "Devlog #6: Introduction to Anomalous Zones",
+    "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1831432155565119",
+    "2026-04-29 anomalous-zone devlog.",
+    "high",
+    "steam-anomalous-zones-devlog"
+  );
+  const releaseDateNews = source(
+    "Froggy Hates Snow release date revealed",
+    "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1830797770242233",
+    "2026-04-27 release-date and scope post.",
+    "high",
+    "steam-release-date-news"
+  );
+  const snowDevlog = source(
+    "Devlog #5: How Snow Works in Froggy Hates Snow",
+    "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1827626365766540",
+    "2026-03-24 snow-system devlog.",
+    "high",
+    "steam-snow-devlog"
+  );
+  const demoOverhaulNews = source(
+    "The Froggy Hates Snow demo is back – and it’s had a major overhaul",
+    "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1823825466505761",
+    "2026-02-09 updated-demo announcement.",
+    "high",
+    "steam-demo-overhaul-news"
+  );
+  const nextDemoDevlog = source(
+    "Devlog #3: What to expect from the next demo",
+    "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1823825466494740",
+    "2026-02-04 pre-demo devlog.",
+    "high",
+    "steam-next-demo-devlog"
+  );
+  const demoUpdateDevlog = source(
+    "Devlog #2: A quick update about the Froggy Hates Snow demo",
+    "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1821922921824108",
+    "2026-01-20 demo update devlog.",
+    "high",
+    "steam-demo-update-devlog"
+  );
   const publisher = source("Digital Bandidos game page", urls.publisherPage, "Publisher page for FROGGY HATES SNOW.", "medium");
   const xboxWire = source("Xbox Wire developer interview", urls.xboxWireInterview, "Developer interview corroborating launch counts, snow tech, skill/tool variety, companions, and Peaceful Mode.", "medium");
 
@@ -1066,7 +1158,7 @@ function seedCoreEntities() {
       effect: "The full roster has 10 playable frogs with distinct public loadout concepts; each name, stat line, and exact attack behavior still needs verification unless listed separately.",
       unlock_method: "Achievements mention unlocking 1, 3, and 9 characters.",
       verification_status: "Verified",
-      sources: [steamNews, source("Steam community achievements page", urls.achievementsPage, "Public achievement names and descriptions."), xboxWire],
+      sources: [releaseDateNews, nextDemoDevlog, demoUpdateDevlog, achievementsSource, xboxWire],
       notes: "Public devlogs mention examples such as tongue attacks, spits, snow minigun, electric staff, and hockey stick, but do not map them to named frogs in the available source pass."
     })
   );
@@ -1080,7 +1172,7 @@ function seedCoreEntities() {
       effect: "Seven playable frog names, stat lines, main attacks, and starting skillsets still need direct verification.",
       unlock_method: "Needs verification.",
       verification_status: "Needs verification",
-      sources: [steamNews, xboxWire],
+      sources: [releaseDateNews, nextDemoDevlog, xboxWire],
       notes: "Tracker entry for missing roster coverage; do not convert the remaining slots into named pages until a source names them."
     })
   );
@@ -1095,7 +1187,7 @@ function seedCoreEntities() {
       unlock_method: "Needs verification.",
       related_entities: ["invincible-roll"],
       verification_status: "Verified",
-      sources: [steamNews],
+      sources: [postLaunchUpdate],
       notes: "Exact character stats and attack details need gameplay verification."
     })
   );
@@ -1111,7 +1203,7 @@ function seedCoreEntities() {
       mode: "Updated Steam demo; full-game status needs verification.",
       related_entities: ["poison-infusion"],
       verification_status: "Verified",
-      sources: [source("The Froggy Hates Snow demo is back – and it’s had a major overhaul", "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1823825466505761", "2026-02-09 updated-demo announcement.", "high", "steam-demo-overhaul-news")],
+      sources: [demoOverhaulNews],
       notes: "Exact full-game stats, starting skillset, and full-game unlock cost need gameplay or safe metadata verification."
     })
   );
@@ -1125,7 +1217,7 @@ function seedCoreEntities() {
       effect: "Locations structure progression and completion; exact map names remain unverified.",
       unlock_method: "Achievements mention unlock thresholds at 1, 5, and 15 locations.",
       verification_status: "Verified",
-      sources: [steamNews, source("Steam community achievements page", urls.achievementsPage, "Public achievement names and descriptions.")],
+      sources: [releaseDateNews, achievementsSource],
       notes: "Individual location names need verification."
     })
   );
@@ -1139,7 +1231,7 @@ function seedCoreEntities() {
       effect: "Location names, location order, completion requirements, and boss links still need direct verification.",
       unlock_method: "Achievements mention unlock thresholds at 1, 5, and 15 locations.",
       verification_status: "Needs verification",
-      sources: [steamNews, source("Steam community achievements page", urls.achievementsPage, "Public location unlock/completion achievement names and descriptions."), xboxWire],
+      sources: [releaseDateNews, achievementsSource, xboxWire],
       notes: "Tracker entry for missing map roster coverage; individual location pages should be added only after names are sourced."
     })
   );
@@ -1154,7 +1246,7 @@ function seedCoreEntities() {
       unlock_method: "Progress by completing runs.",
       mode: "Full game post-launch state.",
       verification_status: "Verified",
-      sources: [source("Thank You for an Incredible Launch — First Update and What Comes Next", "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1832065502824701", "2026-05-12 first post-launch update.", "high", "steam-post-launch-update")],
+      sources: [postLaunchUpdate],
       notes: "This is progression metadata, not an individual map name."
     })
   );
@@ -1168,7 +1260,7 @@ function seedCoreEntities() {
       effect: "Primary setting where the player digs, fights, gathers resources, and searches for exits.",
       mode: "Core game and demo.",
       verification_status: "Verified",
-      sources: [fullStore, demoStore, steamNews],
+      sources: [fullStore, demoStore],
       notes: "This is a setting term, not a confirmed map name."
     })
   );
@@ -1183,7 +1275,7 @@ function seedCoreEntities() {
       unlock_method: "Needs verification.",
       mode: "Updated demo/full-game direction from public devlog.",
       verification_status: "Verified",
-      sources: [source("Devlog #3: What to expect from the next demo", "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1823825466494740", "2026-02-04 pre-demo devlog.", "high", "steam-next-demo-devlog")],
+      sources: [nextDemoDevlog],
       notes: "These are point-of-interest and theme examples, not confirmed individual map names."
     })
   );
@@ -1201,6 +1293,19 @@ function seedCoreEntities() {
     ["Skis", "Movement or traversal tool mentioned in public Steam copy."],
     ["Cart", "Resource-carrying tool mentioned in public Steam copy and anomalous-zone devlog."]
   ]);
+  const snowToolSources = new Map<string, Source[]>([
+    ["Hands", [fullStore, demoStore, snowDevlog]],
+    ["Shovel", [fullStore, demoStore, snowDevlog]],
+    ["Pickaxe", [fullStore, demoStore, snowDevlog]],
+    ["Drill", [snowDevlog]],
+    ["Salt Sack", [snowDevlog]],
+    ["Dynamite", [fullStore, demoStore, snowDevlog]],
+    ["Air Bomb", [snowDevlog]],
+    ["Snowblower", [fullStore, demoStore, snowDevlog]],
+    ["Flamethrower", [fullStore, demoStore, snowDevlog]],
+    ["Skis", [fullStore, demoStore]],
+    ["Cart", [fullStore, demoStore, anomalousZonesDevlog]]
+  ]);
 
   for (const [name, effect] of snowTools) {
     addUnique(
@@ -1212,7 +1317,7 @@ function seedCoreEntities() {
         effect,
         mode: "Core game and demo.",
         verification_status: "Verified",
-        sources: [fullStore, demoStore, steamNews],
+        sources: snowToolSources.get(name) ?? [fullStore, demoStore],
         notes: "Specific stats and unlock details need verification from gameplay or safe local metadata."
       })
     );
@@ -1226,6 +1331,15 @@ function seedCoreEntities() {
     ["Flamethrower Bot", "A robotic helper added for launch, according to the launch devlog."],
     ["Scanner Drone", "A robotic helper added for launch, according to the launch devlog."]
   ]);
+  const animalSquadAchievement = source("Steam community achievements page", urls.achievementsPage, "The Animal Squad achievement mentions Penguin, Mole, and Owl.");
+  const companionSources = new Map<string, Source[]>([
+    ["Penguin", [fullStore, demoStore, animalSquadAchievement, xboxWire]],
+    ["Mole", [fullStore, demoStore, snowDevlog, animalSquadAchievement, xboxWire]],
+    ["Owl", [fullStore, demoStore, animalSquadAchievement, xboxWire]],
+    ["Delivery Bot", [launchDevlog, xboxWire]],
+    ["Flamethrower Bot", [launchDevlog, xboxWire]],
+    ["Scanner Drone", [launchDevlog, xboxWire]]
+  ]);
 
   for (const [name, effect] of companions) {
     addUnique(
@@ -1236,7 +1350,7 @@ function seedCoreEntities() {
         short_description: `${name} is listed publicly as a companion or ally type.`,
         effect,
         verification_status: "Verified",
-        sources: [fullStore, demoStore, steamNews, source("Steam community achievements page", urls.achievementsPage, "The Animal Squad achievement mentions Penguin, Mole, and Owl.")],
+        sources: companionSources.get(name) ?? [fullStore, demoStore],
         notes: "Specific behavior, rarity, and unlock details need gameplay verification."
       })
     );
@@ -1251,6 +1365,15 @@ function seedCoreEntities() {
     ["Traps", "Hazard concept mentioned by official Steam copy."],
     ["Artifacts", "Permanent build-expanding items granted by anomalous zones; devlog lists Common, Uncommon, Rare, and Legendary rarity tiers."]
   ]);
+  const publicItemSources = new Map<string, Source[]>([
+    ["Gems", [fullStore, demoStore, achievementsSource]],
+    ["Blue Gems", [demoOverhaulNews, nextDemoDevlog, anomalousZonesDevlog]],
+    ["Keys", [fullStore, demoStore, achievementsSource]],
+    ["Treasure chests", [fullStore, demoStore, achievementsSource]],
+    ["Treasures", [fullStore, demoStore]],
+    ["Traps", [fullStore, demoStore]],
+    ["Artifacts", [anomalousZonesDevlog, achievementsSource]]
+  ]);
 
   for (const [name, effect] of publicItems) {
     addUnique(
@@ -1261,7 +1384,7 @@ function seedCoreEntities() {
         short_description: `${name} are mentioned by official Steam copy or public achievements.`,
         effect,
         verification_status: "Verified",
-        sources: [fullStore, demoStore, steamNews, source("Steam community achievements page", urls.achievementsPage, "Public achievement names and descriptions.")],
+        sources: publicItemSources.get(name) ?? [fullStore, demoStore],
         notes: "Amounts, drop rules, and exact use cases need verification."
       })
     );
@@ -1277,7 +1400,7 @@ function seedCoreEntities() {
         effect: "Needs verification.",
         cost: name === "Powerful upgrades" ? "Keys may be spent on treasure chests for powerful upgrades, per official Steam copy." : "Needs verification.",
         verification_status: "Verified",
-        sources: [fullStore, demoStore, steamNews, source("Steam community achievements page", urls.achievementsPage, "Public achievement names and descriptions.")],
+        sources: [fullStore, demoStore, achievementsSource],
         notes: "Specific upgrade tree entries need verification."
       })
     );
@@ -1297,6 +1420,8 @@ function seedCoreEntities() {
     ["Skill Banishing", "Launch devlog describes removing skills from the pool so preferred builds appear more often."],
     ["In-run skill reordering", "Launch devlog describes reordering skills to match preferred hotkeys."]
   ]);
+  const launchSkillNames = new Set(["Glider", "Snowball Roll", "Leap Chain", "Piercing Icicles", "Fireworks", "Snowball Volley", "Skill Banishing", "In-run skill reordering"]);
+  const postLaunchSkillNames = new Set(["Energy Wave", "Destructive Field", "Invincible Roll", "Armor"]);
 
   for (const [name, effect] of publicSkills) {
     addUnique(
@@ -1307,7 +1432,7 @@ function seedCoreEntities() {
         short_description: `${name} is named in official Steam news or devlog copy.`,
         effect,
         verification_status: "Verified",
-        sources: [steamNews],
+        sources: postLaunchSkillNames.has(name) ? [postLaunchUpdate] : launchSkillNames.has(name) ? [launchDevlog] : [steamNews],
         notes: "Exact rarity, cooldown, scaling, and unlock details need gameplay verification."
       })
     );
@@ -1336,7 +1461,7 @@ function seedCoreEntities() {
       effect: "Post-launch update says boss projectile speeds were reduced by 30% on Easy and 15% on Medium.",
       mode: "Full game post-launch state.",
       verification_status: "Verified",
-      sources: [source("Thank You for an Incredible Launch — First Update and What Comes Next", "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1832065502824701", "2026-05-12 first post-launch update.", "high", "steam-post-launch-update")],
+      sources: [postLaunchUpdate],
       notes: "This entry tracks patch-state boss behavior, not a named boss."
     })
   );
@@ -1397,6 +1522,27 @@ function seedCoreEntities() {
     ["Steam demo", `Public demo app ${DEMO_APP_ID}; free Windows demo linked to the full app.`],
     ["Full game", `Public full game app ${FULL_APP_ID}; released on Steam May 7, 2026.`]
   ];
+  const glossarySources = new Map<string, Source[]>([
+    ["Heightmap snow", [snowDevlog, xboxWire]],
+    ["Snow layers", [snowDevlog]],
+    ["Anomaly zones", [fullStore, demoStore, anomalousZonesDevlog]],
+    ["Anomalous zone challenges", [anomalousZonesDevlog]],
+    ["Anomalous zone hazards", [anomalousZonesDevlog]],
+    ["Artifact rarity tiers", [anomalousZonesDevlog]],
+    ["Elemental status effects", [launchDevlog]],
+    ["Character leveling", [launchDevlog]],
+    ["Character specializations", [nextDemoDevlog, demoUpdateDevlog, xboxWire]],
+    ["Character main attacks", [nextDemoDevlog, demoUpdateDevlog, launchDevlog]],
+    ["Core attacks", [launchDevlog, demoOverhaulNews, nextDemoDevlog]],
+    ["Attacks", [releaseDateNews, launchDevlog]],
+    ["Quest-based meta-progression", [demoOverhaulNews, nextDemoDevlog, demoUpdateDevlog]],
+    ["Peaceful Mode", [fullStore, demoStore, xboxWire]],
+    ["Demo progress carryover", [releaseDateNews]],
+    ["Night Mode", [postLaunchUpdate]],
+    ["UI Scale", [postLaunchUpdate]],
+    ["Steam demo", [demoStore]],
+    ["Full game", [fullStore]]
+  ]);
 
   for (const [name, description] of glossaryTerms) {
     addUnique(
@@ -1410,7 +1556,7 @@ function seedCoreEntities() {
         cost: "Not applicable.",
         mode: "Reference glossary.",
         verification_status: "Verified",
-        sources: [fullStore, demoStore, steamNews, publisher],
+        sources: glossarySources.get(name) ?? [fullStore, demoStore, publisher],
         notes: "Glossary summary is paraphrased from public pages."
       })
     );
@@ -1422,6 +1568,7 @@ async function buildPublicSources(
   demoDetails: Record<string, unknown>,
   fullReviews: Record<string, unknown>,
   demoReviews: Record<string, unknown>,
+  demoAchievementPercentagesResult: FetchResult<{ achievementpercentages?: { achievements?: SteamAchievement[] } }>,
   allNewsItems: SteamNewsCatalogItem[]
 ) {
   const fullData = (fullDetails[String(FULL_APP_ID)] as { data?: Record<string, unknown> } | undefined)?.data ?? {};
@@ -1446,11 +1593,21 @@ async function buildPublicSources(
     },
     {
       id: "steam-full-achievements-page",
-      ...source("Steam community achievements page", urls.achievementsPage, "Public display names, descriptions, icons, and current global percentages.")
+      ...source("Steam community achievements page", urls.achievementsPage, "Public display names, descriptions, achievement icon URLs, and current global percentages.")
     },
     {
       id: "steam-full-global-achievement-percentages",
       ...source("Steam global achievement percentages API", urls.achievementPercentages, "Public no-key endpoint for internal achievement ids and volatile global percentages.")
+    },
+    {
+      id: "steam-demo-global-achievement-percentages",
+      ...source(
+        "Steam demo global achievement percentages API",
+        urls.demoAchievementPercentages,
+        `Public no-key endpoint status for demo achievement percentages. Current status=${demoAchievementPercentagesResult.status}; error=${demoAchievementPercentagesResult.error ?? "none"}.`,
+        demoAchievementPercentagesResult.ok ? "medium" : "low",
+        "steam-demo-global-achievement-percentages"
+      )
     },
     {
       id: "steam-news-devlogs",
@@ -1537,6 +1694,7 @@ function buildSteamSnapshot(args: {
   demoAchievementPercentagesResult: FetchResult<{ achievementpercentages?: { achievements?: SteamAchievement[] } }>;
   newsFindings: SteamNewsFindings;
   newsItems: SteamNewsItemSummary[];
+  externalSourceChecks: ExternalSourceCheck[];
 }): SteamSnapshot {
   const fullData = (args.fullDetails[String(FULL_APP_ID)] as { data?: Record<string, unknown> } | undefined)?.data ?? {};
   const demoData = (args.demoDetails[String(DEMO_APP_ID)] as { data?: Record<string, unknown> } | undefined)?.data ?? {};
@@ -1549,7 +1707,8 @@ function buildSteamSnapshot(args: {
       "Prefer official public Steam endpoints and pages for game metadata.",
       "Do not copy raw long descriptions, review text, proprietary assets, binaries, source code, or decompiled content.",
       "Treat prices, review counts, recommendations, player counts, and achievement percentages as volatile as-of metadata.",
-      "Treat achievement names as public names; classify gameplay effects only when another source or safe local metadata confirms them."
+      "Treat achievement names as public names; classify gameplay effects only when another source or safe local metadata confirms them.",
+      "Fetch non-Steam public pages during refresh and fail if marker text for cited claims disappears."
     ],
     sources: {
       full_store: urls.fullStore,
@@ -1576,6 +1735,7 @@ function buildSteamSnapshot(args: {
       full_game: (args.fullReviews as { query_summary?: unknown }).query_summary ?? null,
       demo: (args.demoReviews as { query_summary?: unknown }).query_summary ?? null
     },
+    external_source_checks: args.externalSourceChecks,
     achievements: {
       community_page_url: urls.achievementsPage,
       global_percentages_api_url: urls.achievementPercentages,
@@ -1751,6 +1911,7 @@ function addAchievementData(rows: AchievementRow[], percentages: SteamAchievemen
         short_description: row.description,
         effect: `Steam achievement condition: ${row.description}`,
         unlock_method: row.description,
+        cost: "Not applicable.",
         mode: "Full game.",
         related_entities: related,
         verification_status: "Verified",
@@ -1782,6 +1943,7 @@ function buildPublicResearchMarkdown(args: {
   demoAchievementPercentagesResult: FetchResult<{ achievementpercentages?: { achievements?: SteamAchievement[] } }>;
   newsFindings: SteamNewsFindings;
   newsItems: SteamNewsItemSummary[];
+  externalSourceChecks: ExternalSourceCheck[];
 }) {
   const fullData = (args.fullDetails[String(FULL_APP_ID)] as { data?: Record<string, unknown> } | undefined)?.data ?? {};
   const demoData = (args.demoDetails[String(DEMO_APP_ID)] as { data?: Record<string, unknown> } | undefined)?.data ?? {};
@@ -1859,6 +2021,12 @@ function buildPublicResearchMarkdown(args: {
     `- Direct news/devlog records parsed from Steam News API: ${args.newsFindings.news_item_count}`,
     ...args.newsItems.map((item) => `- ${item.date} - ${item.title}: ${item.url} (${item.supports})`),
     "",
+    "## External Source Checks",
+    "",
+    ...args.externalSourceChecks.map(
+      (check) => `- ${check.label}: ${check.url} (matched markers: ${check.matched_markers.join(", ")})`
+    ),
+    "",
     "## Achievements",
     "",
     `- Public community page rows parsed: ${args.achievementRows.length}`,
@@ -1898,7 +2066,19 @@ async function main() {
   await mkdir(path.resolve("notes"), { recursive: true });
   seedCoreEntities();
 
-  const [fullDetails, demoDetails, fullReviews, demoReviews, achievementPercentagesRaw, demoAchievementPercentagesResult, achievementsHtml, newsHtml, newsApiRaw] = await Promise.all([
+  const [
+    fullDetails,
+    demoDetails,
+    fullReviews,
+    demoReviews,
+    achievementPercentagesRaw,
+    demoAchievementPercentagesResult,
+    achievementsHtml,
+    newsHtml,
+    newsApiRaw,
+    publisherHtml,
+    xboxWireHtml
+  ] = await Promise.all([
     fetchJson<Record<string, unknown>>(urls.fullAppDetails),
     fetchJson<Record<string, unknown>>(urls.demoAppDetails),
     fetchJson<Record<string, unknown>>(urls.fullReviews),
@@ -1907,20 +2087,26 @@ async function main() {
     fetchJsonResult<{ achievementpercentages?: { achievements?: SteamAchievement[] } }>(urls.demoAchievementPercentages),
     fetchText(urls.achievementsPage),
     fetchText(urls.news),
-    fetchJson<SteamNewsApiResponse>(urls.newsApi)
+    fetchJson<SteamNewsApiResponse>(urls.newsApi),
+    fetchText(urls.publisherPage),
+    fetchText(urls.xboxWireInterview)
   ]);
 
-  requireSteamAppDetails(fullDetails, FULL_APP_ID, "game", "FROGGY HATES SNOW", 10, 42);
+  const fullAppData = requireSteamAppDetails(fullDetails, FULL_APP_ID, "game", "FROGGY HATES SNOW", 10);
   requireSteamAppDetails(demoDetails, DEMO_APP_ID, "demo", "FROGGY HATES SNOW Demo", 8);
+  const expectedAchievementCount = numberOrNull(asRecord(fullAppData.achievements).total);
+  if (!expectedAchievementCount || expectedAchievementCount < 1) {
+    throw new Error(`Steam appdetails ${FULL_APP_ID}: expected a positive achievements.total, got ${String(asRecord(fullAppData.achievements).total ?? "missing")}`);
+  }
 
   const achievementRows = parseAchievementRows(achievementsHtml);
   const achievementPercentages = achievementPercentagesRaw.achievementpercentages?.achievements ?? [];
   const demoAchievementPercentages = demoAchievementPercentagesResult.data?.achievementpercentages?.achievements ?? [];
-  if (achievementRows.length !== 42) {
-    throw new Error(`Steam achievements page: expected 42 rows, got ${achievementRows.length}`);
+  if (achievementRows.length !== expectedAchievementCount) {
+    throw new Error(`Steam achievements page: expected ${expectedAchievementCount} rows from appdetails, got ${achievementRows.length}`);
   }
-  if (achievementPercentages.length !== 42) {
-    throw new Error(`Steam global achievement percentages API: expected 42 ids, got ${achievementPercentages.length}`);
+  if (achievementPercentages.length !== expectedAchievementCount) {
+    throw new Error(`Steam global achievement percentages API: expected ${expectedAchievementCount} ids from appdetails, got ${achievementPercentages.length}`);
   }
   const achievementFacts = buildAchievementFacts(achievementRows, achievementPercentages);
   const unmatchedAchievements = achievementFacts.filter((fact) => !fact.steam_internal_name);
@@ -1935,6 +2121,9 @@ async function main() {
   }
   const newsItems = buildSteamNewsItems(newsApiRaw);
   const allNewsItems = buildAllSteamNewsItems(newsApiRaw, newsItems);
+  if (allNewsItems.length >= STEAM_NEWS_REQUEST_COUNT) {
+    throw new Error(`Steam News API returned ${allNewsItems.length} items for count=${STEAM_NEWS_REQUEST_COUNT}; feed may be truncated.`);
+  }
   if (allNewsItems.length !== (newsApiRaw.appnews?.newsitems ?? []).length) {
     throw new Error(`Steam News API classification mismatch: fetched ${(newsApiRaw.appnews?.newsitems ?? []).length} items but classified ${allNewsItems.length}`);
   }
@@ -1945,9 +2134,25 @@ async function main() {
     throw new Error(`Steam News API classification has duplicate source ids: ${[...new Set(duplicateNewsSourceIds)].join(", ")}`);
   }
   const newsFindings = extractSteamNewsFindings(newsHtml, newsItems, allNewsItems);
+  const externalSourceChecks = [
+    checkExternalSource("digital-bandidos-page", "Digital Bandidos game page", urls.publisherPage, publisherHtml, [
+      "Froggy Hates Snow",
+      "Digital Bandidos",
+      "Crying Brick"
+    ]),
+    checkExternalSource("xbox-wire-interview", "Xbox Wire developer interview", urls.xboxWireInterview, xboxWireHtml, [
+      "Froggy Hates Snow",
+      "16 maps",
+      "Peaceful Mode",
+      "heightmap",
+      "companions",
+      "tools",
+      "skills"
+    ])
+  ];
   addAchievementData(achievementRows, achievementPercentages);
 
-  const publicSources = await buildPublicSources(fullDetails, demoDetails, fullReviews, demoReviews, allNewsItems);
+  const publicSources = await buildPublicSources(fullDetails, demoDetails, fullReviews, demoReviews, demoAchievementPercentagesResult, allNewsItems);
   await writeJson(path.resolve("src/data/public-sources.json"), publicSources);
   await writeJson(
     path.resolve("src/data/steam-snapshot.json"),
@@ -1962,7 +2167,8 @@ async function main() {
       demoAchievementPercentages,
       demoAchievementPercentagesResult,
       newsFindings,
-      newsItems
+      newsItems,
+      externalSourceChecks
     })
   );
 
@@ -1982,7 +2188,8 @@ async function main() {
       demoAchievementPercentages,
       demoAchievementPercentagesResult,
       newsFindings,
-      newsItems
+      newsItems,
+      externalSourceChecks
     })
   );
 

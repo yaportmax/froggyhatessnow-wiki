@@ -8,7 +8,7 @@
     "short_description": "Survive a run with Map, Scanner & Locator",
     "effect": "Steam achievement condition: Survive a run with Map, Scanner & Locator",
     "unlock_method": "Survive a run with Map, Scanner & Locator",
-    "cost": "Needs verification.",
+    "cost": "Not applicable.",
     "mode": "Full game.",
     "related_entities": [
       "map",
@@ -41,11 +41,10 @@
       "category",
       "effect",
       "unlock_method",
+      "cost",
       "mode"
     ],
-    "unverified_fields": [
-      "cost"
-    ],
+    "unverified_fields": [],
     "steam_internal_name": "all_eyes_open",
     "steam_global_percent_api": "0.3",
     "steam_community_percent": "0.3%",
@@ -60,7 +59,7 @@
     "short_description": "Unlock 1 Character",
     "effect": "Steam achievement condition: Unlock 1 Character",
     "unlock_method": "Unlock 1 Character",
-    "cost": "Needs verification.",
+    "cost": "Not applicable.",
     "mode": "Full game.",
     "related_entities": [],
     "sources": [
@@ -89,11 +88,10 @@
       "category",
       "effect",
       "unlock_method",
+      "cost",
       "mode"
     ],
-    "unverified_fields": [
-      "cost"
-    ],
+    "unverified_fields": [],
     "steam_internal_name": "assemble_the_team_1",
     "steam_global_percent_api": "68.5",
     "steam_community_percent": "69.1%",
@@ -108,7 +106,7 @@
     "short_description": "Unlock 3 Characters",
     "effect": "Steam achievement condition: Unlock 3 Characters",
     "unlock_method": "Unlock 3 Characters",
-    "cost": "Needs verification.",
+    "cost": "Not applicable.",
     "mode": "Full game.",
     "related_entities": [],
     "sources": [
@@ -137,11 +135,10 @@
       "category",
       "effect",
       "unlock_method",
+      "cost",
       "mode"
     ],
-    "unverified_fields": [
-      "cost"
-    ],
+    "unverified_fields": [],
     "steam_internal_name": "assemble_the_team_2",
     "steam_global_percent_api": "19.4",
     "steam_community_percent": "19.6%",
@@ -156,7 +153,7 @@
     "short_description": "Unlock 9 Characters",
     "effect": "Steam achievement condition: Unlock 9 Characters",
     "unlock_method": "Unlock 9 Characters",
-    "cost": "Needs verification.",
+    "cost": "Not applicable.",
     "mode": "Full game.",
     "related_entities": [],
     "sources": [
@@ -185,11 +182,10 @@
       "category",
       "effect",
       "unlock_method",
+      "cost",
       "mode"
     ],
-    "unverified_fields": [
-      "cost"
-    ],
+    "unverified_fields": [],
     "steam_internal_name": "assemble_the_team_3",
     "steam_global_percent_api": "0.3",
     "steam_community_percent": "0.3%",
@@ -204,7 +200,7 @@
     "short_description": "Survive a run with Teleport & Magnet",
     "effect": "Steam achievement condition: Survive a run with Teleport & Magnet",
     "unlock_method": "Survive a run with Teleport & Magnet",
-    "cost": "Needs verification.",
+    "cost": "Not applicable.",
     "mode": "Full game.",
     "related_entities": [
       "teleport",
@@ -236,11 +232,10 @@
       "category",
       "effect",
       "unlock_method",
+      "cost",
       "mode"
     ],
-    "unverified_fields": [
-      "cost"
-    ],
+    "unverified_fields": [],
     "steam_internal_name": "bending_reality",
     "steam_global_percent_api": "0.7",
     "steam_community_percent": "0.7%",
@@ -255,7 +250,7 @@
     "short_description": "Survive a run with Flamethrower & Fire Infusion",
     "effect": "Steam achievement condition: Survive a run with Flamethrower & Fire Infusion",
     "unlock_method": "Survive a run with Flamethrower & Fire Infusion",
-    "cost": "Needs verification.",
+    "cost": "Not applicable.",
     "mode": "Full game.",
     "related_entities": [
       "flamethrower",
@@ -287,11 +282,10 @@
       "category",
       "effect",
       "unlock_method",
+      "cost",
       "mode"
     ],
-    "unverified_fields": [
-      "cost"
-    ],
+    "unverified_fields": [],
     "steam_internal_name": "burning_through",
     "steam_global_percent_api": "0.2",
     "steam_community_percent": "0.2%",
@@ -306,7 +300,7 @@
     "short_description": "Survive a run with Hot Tea & Energy Drink",
     "effect": "Steam achievement condition: Survive a run with Hot Tea & Energy Drink",
     "unlock_method": "Survive a run with Hot Tea & Energy Drink",
-    "cost": "Needs verification.",
+    "cost": "Not applicable.",
     "mode": "Full game.",
     "related_entities": [
       "hot-tea",
@@ -338,11 +332,10 @@
       "category",
       "effect",
       "unlock_method",
+      "cost",
       "mode"
     ],
-    "unverified_fields": [
-      "cost"
-    ],
+    "unverified_fields": [],
     "steam_internal_name": "caffeinated_chaos",
     "steam_global_percent_api": "0.4",
     "steam_community_percent": "0.4%",
@@ -357,7 +350,7 @@
     "short_description": "Survive a run with Adrenaline & Spark",
     "effect": "Steam achievement condition: Survive a run with Adrenaline & Spark",
     "unlock_method": "Survive a run with Adrenaline & Spark",
-    "cost": "Needs verification.",
+    "cost": "Not applicable.",
     "mode": "Full game.",
     "related_entities": [
       "adrenaline",
@@ -389,11 +382,10 @@
       "category",
       "effect",
       "unlock_method",
+      "cost",
       "mode"
     ],
-    "unverified_fields": [
-      "cost"
-    ],
+    "unverified_fields": [],
     "steam_internal_name": "close_call_energy",
     "steam_global_percent_api": "0.7",
     "steam_community_percent": "0.7%",
@@ -408,7 +400,7 @@
     "short_description": "Survive a run with Heater Sled, Hot Tea & Gloves",
     "effect": "Steam achievement condition: Survive a run with Heater Sled, Hot Tea & Gloves",
     "unlock_method": "Survive a run with Heater Sled, Hot Tea & Gloves",
-    "cost": "Needs verification.",
+    "cost": "Not applicable.",
     "mode": "Full game.",
     "related_entities": [
       "heater-sled",
@@ -441,11 +433,10 @@
       "category",
       "effect",
       "unlock_method",
+      "cost",
       "mode"
     ],
-    "unverified_fields": [
-      "cost"
-    ],
+    "unverified_fields": [],
     "steam_internal_name": "cozy_on_the_go",
     "steam_global_percent_api": "0.1",
     "steam_community_percent": "0.1%",
@@ -460,7 +451,7 @@
     "short_description": "Survive a run with Voodoo Curse & Vampirism",
     "effect": "Steam achievement condition: Survive a run with Voodoo Curse & Vampirism",
     "unlock_method": "Survive a run with Voodoo Curse & Vampirism",
-    "cost": "Needs verification.",
+    "cost": "Not applicable.",
     "mode": "Full game.",
     "related_entities": [
       "voodoo-curse",
@@ -492,11 +483,10 @@
       "category",
       "effect",
       "unlock_method",
+      "cost",
       "mode"
     ],
-    "unverified_fields": [
-      "cost"
-    ],
+    "unverified_fields": [],
     "steam_internal_name": "cursed_survival",
     "steam_global_percent_api": "3.9",
     "steam_community_percent": "4.0%",
@@ -511,7 +501,7 @@
     "short_description": "Survive a run with Poison Flask & Poison Infusion",
     "effect": "Steam achievement condition: Survive a run with Poison Flask & Poison Infusion",
     "unlock_method": "Survive a run with Poison Flask & Poison Infusion",
-    "cost": "Needs verification.",
+    "cost": "Not applicable.",
     "mode": "Full game.",
     "related_entities": [
       "poison-flask",
@@ -543,11 +533,10 @@
       "category",
       "effect",
       "unlock_method",
+      "cost",
       "mode"
     ],
-    "unverified_fields": [
-      "cost"
-    ],
+    "unverified_fields": [],
     "steam_internal_name": "deadly_dose",
     "steam_global_percent_api": "1.2",
     "steam_community_percent": "1.2%",
@@ -562,7 +551,7 @@
     "short_description": "Survive a run with Frost Bomb & Frost Infusion",
     "effect": "Steam achievement condition: Survive a run with Frost Bomb & Frost Infusion",
     "unlock_method": "Survive a run with Frost Bomb & Frost Infusion",
-    "cost": "Needs verification.",
+    "cost": "Not applicable.",
     "mode": "Full game.",
     "related_entities": [
       "frost-bomb",
@@ -594,11 +583,10 @@
       "category",
       "effect",
       "unlock_method",
+      "cost",
       "mode"
     ],
-    "unverified_fields": [
-      "cost"
-    ],
+    "unverified_fields": [],
     "steam_internal_name": "deep_freeze",
     "steam_global_percent_api": "0.1",
     "steam_community_percent": "0.1%",
@@ -613,7 +601,7 @@
     "short_description": "Survive a run with Dynamite, Air Bomb & Pickaxe",
     "effect": "Steam achievement condition: Survive a run with Dynamite, Air Bomb & Pickaxe",
     "unlock_method": "Survive a run with Dynamite, Air Bomb & Pickaxe",
-    "cost": "Needs verification.",
+    "cost": "Not applicable.",
     "mode": "Full game.",
     "related_entities": [
       "dynamite",
@@ -646,11 +634,10 @@
       "category",
       "effect",
       "unlock_method",
+      "cost",
       "mode"
     ],
-    "unverified_fields": [
-      "cost"
-    ],
+    "unverified_fields": [],
     "steam_internal_name": "demolition_run",
     "steam_global_percent_api": "2.8",
     "steam_community_percent": "2.8%",
@@ -665,7 +652,7 @@
     "short_description": "Survive a run with Chain Lightning, Frost Bomb & Poison Flask",
     "effect": "Steam achievement condition: Survive a run with Chain Lightning, Frost Bomb & Poison Flask",
     "unlock_method": "Survive a run with Chain Lightning, Frost Bomb & Poison Flask",
-    "cost": "Needs verification.",
+    "cost": "Not applicable.",
     "mode": "Full game.",
     "related_entities": [
       "chain-lightning",
@@ -698,11 +685,10 @@
       "category",
       "effect",
       "unlock_method",
+      "cost",
       "mode"
     ],
-    "unverified_fields": [
-      "cost"
-    ],
+    "unverified_fields": [],
     "steam_internal_name": "elemental_mayhem",
     "steam_global_percent_api": "0.0",
     "steam_community_percent": "0.1%",
@@ -717,7 +703,7 @@
     "short_description": "Survive a run with Tongue Attack & Curvy Tongue",
     "effect": "Steam achievement condition: Survive a run with Tongue Attack & Curvy Tongue",
     "unlock_method": "Survive a run with Tongue Attack & Curvy Tongue",
-    "cost": "Needs verification.",
+    "cost": "Not applicable.",
     "mode": "Full game.",
     "related_entities": [
       "tongue-attack",
@@ -749,11 +735,10 @@
       "category",
       "effect",
       "unlock_method",
+      "cost",
       "mode"
     ],
-    "unverified_fields": [
-      "cost"
-    ],
+    "unverified_fields": [],
     "steam_internal_name": "master_of_the_tongue",
     "steam_global_percent_api": "9.6",
     "steam_community_percent": "9.7%",
@@ -768,7 +753,7 @@
     "short_description": "Survive a run with Map, Shovel & Cart",
     "effect": "Steam achievement condition: Survive a run with Map, Shovel & Cart",
     "unlock_method": "Survive a run with Map, Shovel & Cart",
-    "cost": "Needs verification.",
+    "cost": "Not applicable.",
     "mode": "Full game.",
     "related_entities": [
       "map",
@@ -801,11 +786,10 @@
       "category",
       "effect",
       "unlock_method",
+      "cost",
       "mode"
     ],
-    "unverified_fields": [
-      "cost"
-    ],
+    "unverified_fields": [],
     "steam_internal_name": "old_school_explorer",
     "steam_global_percent_api": "64.5",
     "steam_community_percent": "65.1%",
@@ -820,7 +804,7 @@
     "short_description": "Unlock 1 Location",
     "effect": "Steam achievement condition: Unlock 1 Location",
     "unlock_method": "Unlock 1 Location",
-    "cost": "Needs verification.",
+    "cost": "Not applicable.",
     "mode": "Full game.",
     "related_entities": [],
     "sources": [
@@ -849,11 +833,10 @@
       "category",
       "effect",
       "unlock_method",
+      "cost",
       "mode"
     ],
-    "unverified_fields": [
-      "cost"
-    ],
+    "unverified_fields": [],
     "steam_internal_name": "pathfinder_1",
     "steam_global_percent_api": "76.1",
     "steam_community_percent": "76.5%",
@@ -868,7 +851,7 @@
     "short_description": "Unlock 5 Locations",
     "effect": "Steam achievement condition: Unlock 5 Locations",
     "unlock_method": "Unlock 5 Locations",
-    "cost": "Needs verification.",
+    "cost": "Not applicable.",
     "mode": "Full game.",
     "related_entities": [],
     "sources": [
@@ -897,11 +880,10 @@
       "category",
       "effect",
       "unlock_method",
+      "cost",
       "mode"
     ],
-    "unverified_fields": [
-      "cost"
-    ],
+    "unverified_fields": [],
     "steam_internal_name": "pathfinder_2",
     "steam_global_percent_api": "13.5",
     "steam_community_percent": "14.0%",
@@ -916,7 +898,7 @@
     "short_description": "Unlock 15 Locations",
     "effect": "Steam achievement condition: Unlock 15 Locations",
     "unlock_method": "Unlock 15 Locations",
-    "cost": "Needs verification.",
+    "cost": "Not applicable.",
     "mode": "Full game.",
     "related_entities": [],
     "sources": [
@@ -945,11 +927,10 @@
       "category",
       "effect",
       "unlock_method",
+      "cost",
       "mode"
     ],
-    "unverified_fields": [
-      "cost"
-    ],
+    "unverified_fields": [],
     "steam_internal_name": "pathfinder_3",
     "steam_global_percent_api": "0.4",
     "steam_community_percent": "0.4%",
@@ -964,7 +945,7 @@
     "short_description": "Fully upgrade 1 Character",
     "effect": "Steam achievement condition: Fully upgrade 1 Character",
     "unlock_method": "Fully upgrade 1 Character",
-    "cost": "Needs verification.",
+    "cost": "Not applicable.",
     "mode": "Full game.",
     "related_entities": [],
     "sources": [
@@ -993,11 +974,10 @@
       "category",
       "effect",
       "unlock_method",
+      "cost",
       "mode"
     ],
-    "unverified_fields": [
-      "cost"
-    ],
+    "unverified_fields": [],
     "steam_internal_name": "peak_performance_1",
     "steam_global_percent_api": "22.1",
     "steam_community_percent": "22.5%",
@@ -1012,7 +992,7 @@
     "short_description": "Fully upgrade 5 Characters",
     "effect": "Steam achievement condition: Fully upgrade 5 Characters",
     "unlock_method": "Fully upgrade 5 Characters",
-    "cost": "Needs verification.",
+    "cost": "Not applicable.",
     "mode": "Full game.",
     "related_entities": [],
     "sources": [
@@ -1041,11 +1021,10 @@
       "category",
       "effect",
       "unlock_method",
+      "cost",
       "mode"
     ],
-    "unverified_fields": [
-      "cost"
-    ],
+    "unverified_fields": [],
     "steam_internal_name": "peak_performance_2",
     "steam_global_percent_api": "0.8",
     "steam_community_percent": "0.8%",
@@ -1060,7 +1039,7 @@
     "short_description": "Fully upgrade 10 Characters",
     "effect": "Steam achievement condition: Fully upgrade 10 Characters",
     "unlock_method": "Fully upgrade 10 Characters",
-    "cost": "Needs verification.",
+    "cost": "Not applicable.",
     "mode": "Full game.",
     "related_entities": [],
     "sources": [
@@ -1089,11 +1068,10 @@
       "category",
       "effect",
       "unlock_method",
+      "cost",
       "mode"
     ],
-    "unverified_fields": [
-      "cost"
-    ],
+    "unverified_fields": [],
     "steam_internal_name": "peak_performance_3",
     "steam_global_percent_api": "0.0",
     "steam_community_percent": "0.1%",
@@ -1108,7 +1086,7 @@
     "short_description": "Unlock 1 Skill",
     "effect": "Steam achievement condition: Unlock 1 Skill",
     "unlock_method": "Unlock 1 Skill",
-    "cost": "Needs verification.",
+    "cost": "Not applicable.",
     "mode": "Full game.",
     "related_entities": [],
     "sources": [
@@ -1137,11 +1115,10 @@
       "category",
       "effect",
       "unlock_method",
+      "cost",
       "mode"
     ],
-    "unverified_fields": [
-      "cost"
-    ],
+    "unverified_fields": [],
     "steam_internal_name": "power_hungry_1",
     "steam_global_percent_api": "85.8",
     "steam_community_percent": "86.3%",
@@ -1156,7 +1133,7 @@
     "short_description": "Unlock 5 Skills",
     "effect": "Steam achievement condition: Unlock 5 Skills",
     "unlock_method": "Unlock 5 Skills",
-    "cost": "Needs verification.",
+    "cost": "Not applicable.",
     "mode": "Full game.",
     "related_entities": [],
     "sources": [
@@ -1185,11 +1162,10 @@
       "category",
       "effect",
       "unlock_method",
+      "cost",
       "mode"
     ],
-    "unverified_fields": [
-      "cost"
-    ],
+    "unverified_fields": [],
     "steam_internal_name": "power_hungry_2",
     "steam_global_percent_api": "64.3",
     "steam_community_percent": "64.7%",
@@ -1204,7 +1180,7 @@
     "short_description": "Unlock 10 Skills",
     "effect": "Steam achievement condition: Unlock 10 Skills",
     "unlock_method": "Unlock 10 Skills",
-    "cost": "Needs verification.",
+    "cost": "Not applicable.",
     "mode": "Full game.",
     "related_entities": [],
     "sources": [
@@ -1233,11 +1209,10 @@
       "category",
       "effect",
       "unlock_method",
+      "cost",
       "mode"
     ],
-    "unverified_fields": [
-      "cost"
-    ],
+    "unverified_fields": [],
     "steam_internal_name": "power_hungry_3",
     "steam_global_percent_api": "45.0",
     "steam_community_percent": "45.4%",
@@ -1252,7 +1227,7 @@
     "short_description": "Unlock 20 Skills",
     "effect": "Steam achievement condition: Unlock 20 Skills",
     "unlock_method": "Unlock 20 Skills",
-    "cost": "Needs verification.",
+    "cost": "Not applicable.",
     "mode": "Full game.",
     "related_entities": [],
     "sources": [
@@ -1281,11 +1256,10 @@
       "category",
       "effect",
       "unlock_method",
+      "cost",
       "mode"
     ],
-    "unverified_fields": [
-      "cost"
-    ],
+    "unverified_fields": [],
     "steam_internal_name": "power_hungry_4",
     "steam_global_percent_api": "15.9",
     "steam_community_percent": "16.1%",
@@ -1300,7 +1274,7 @@
     "short_description": "Unlock 30 Skills",
     "effect": "Steam achievement condition: Unlock 30 Skills",
     "unlock_method": "Unlock 30 Skills",
-    "cost": "Needs verification.",
+    "cost": "Not applicable.",
     "mode": "Full game.",
     "related_entities": [],
     "sources": [
@@ -1329,11 +1303,10 @@
       "category",
       "effect",
       "unlock_method",
+      "cost",
       "mode"
     ],
-    "unverified_fields": [
-      "cost"
-    ],
+    "unverified_fields": [],
     "steam_internal_name": "power_hungry_5",
     "steam_global_percent_api": "4.0",
     "steam_community_percent": "4.0%",
@@ -1348,7 +1321,7 @@
     "short_description": "Collect 1 Artifact",
     "effect": "Steam achievement condition: Collect 1 Artifact",
     "unlock_method": "Collect 1 Artifact",
-    "cost": "Needs verification.",
+    "cost": "Not applicable.",
     "mode": "Full game.",
     "related_entities": [],
     "sources": [
@@ -1377,11 +1350,10 @@
       "category",
       "effect",
       "unlock_method",
+      "cost",
       "mode"
     ],
-    "unverified_fields": [
-      "cost"
-    ],
+    "unverified_fields": [],
     "steam_internal_name": "relic_hunter_1",
     "steam_global_percent_api": "84.8",
     "steam_community_percent": "85.5%",
@@ -1396,7 +1368,7 @@
     "short_description": "Collect 5 Artifacts",
     "effect": "Steam achievement condition: Collect 5 Artifacts",
     "unlock_method": "Collect 5 Artifacts",
-    "cost": "Needs verification.",
+    "cost": "Not applicable.",
     "mode": "Full game.",
     "related_entities": [],
     "sources": [
@@ -1425,11 +1397,10 @@
       "category",
       "effect",
       "unlock_method",
+      "cost",
       "mode"
     ],
-    "unverified_fields": [
-      "cost"
-    ],
+    "unverified_fields": [],
     "steam_internal_name": "relic_hunter_2",
     "steam_global_percent_api": "67.9",
     "steam_community_percent": "68.4%",
@@ -1444,7 +1415,7 @@
     "short_description": "Collect 10 Artifacts",
     "effect": "Steam achievement condition: Collect 10 Artifacts",
     "unlock_method": "Collect 10 Artifacts",
-    "cost": "Needs verification.",
+    "cost": "Not applicable.",
     "mode": "Full game.",
     "related_entities": [],
     "sources": [
@@ -1473,11 +1444,10 @@
       "category",
       "effect",
       "unlock_method",
+      "cost",
       "mode"
     ],
-    "unverified_fields": [
-      "cost"
-    ],
+    "unverified_fields": [],
     "steam_internal_name": "relic_hunter_3",
     "steam_global_percent_api": "49.2",
     "steam_community_percent": "49.8%",
@@ -1492,7 +1462,7 @@
     "short_description": "Collect 20 Artifacts",
     "effect": "Steam achievement condition: Collect 20 Artifacts",
     "unlock_method": "Collect 20 Artifacts",
-    "cost": "Needs verification.",
+    "cost": "Not applicable.",
     "mode": "Full game.",
     "related_entities": [],
     "sources": [
@@ -1521,11 +1491,10 @@
       "category",
       "effect",
       "unlock_method",
+      "cost",
       "mode"
     ],
-    "unverified_fields": [
-      "cost"
-    ],
+    "unverified_fields": [],
     "steam_internal_name": "relic_hunter_4",
     "steam_global_percent_api": "20.3",
     "steam_community_percent": "20.7%",
@@ -1540,7 +1509,7 @@
     "short_description": "Collect 30 Artifacts",
     "effect": "Steam achievement condition: Collect 30 Artifacts",
     "unlock_method": "Collect 30 Artifacts",
-    "cost": "Needs verification.",
+    "cost": "Not applicable.",
     "mode": "Full game.",
     "related_entities": [],
     "sources": [
@@ -1569,11 +1538,10 @@
       "category",
       "effect",
       "unlock_method",
+      "cost",
       "mode"
     ],
-    "unverified_fields": [
-      "cost"
-    ],
+    "unverified_fields": [],
     "steam_internal_name": "relic_hunter_5",
     "steam_global_percent_api": "3.2",
     "steam_community_percent": "3.3%",
@@ -1588,7 +1556,7 @@
     "short_description": "Survive a run with Flashbang & Stun Infusion",
     "effect": "Steam achievement condition: Survive a run with Flashbang & Stun Infusion",
     "unlock_method": "Survive a run with Flashbang & Stun Infusion",
-    "cost": "Needs verification.",
+    "cost": "Not applicable.",
     "mode": "Full game.",
     "related_entities": [
       "flashbang",
@@ -1620,11 +1588,10 @@
       "category",
       "effect",
       "unlock_method",
+      "cost",
       "mode"
     ],
-    "unverified_fields": [
-      "cost"
-    ],
+    "unverified_fields": [],
     "steam_internal_name": "seeing_stars",
     "steam_global_percent_api": "0.1",
     "steam_community_percent": "0.1%",
@@ -1639,7 +1606,7 @@
     "short_description": "Survive a run with Chain Lightning & Electric Infusion",
     "effect": "Steam achievement condition: Survive a run with Chain Lightning & Electric Infusion",
     "unlock_method": "Survive a run with Chain Lightning & Electric Infusion",
-    "cost": "Needs verification.",
+    "cost": "Not applicable.",
     "mode": "Full game.",
     "related_entities": [
       "chain-lightning",
@@ -1671,11 +1638,10 @@
       "category",
       "effect",
       "unlock_method",
+      "cost",
       "mode"
     ],
-    "unverified_fields": [
-      "cost"
-    ],
+    "unverified_fields": [],
     "steam_internal_name": "shock_therapy",
     "steam_global_percent_api": "0.0",
     "steam_community_percent": "0.1%",
@@ -1690,7 +1656,7 @@
     "short_description": "Survive a run with Gloves, Snowball Volley & Piercing Icicles",
     "effect": "Steam achievement condition: Survive a run with Gloves, Snowball Volley & Piercing Icicles",
     "unlock_method": "Survive a run with Gloves, Snowball Volley & Piercing Icicles",
-    "cost": "Needs verification.",
+    "cost": "Not applicable.",
     "mode": "Full game.",
     "related_entities": [
       "gloves",
@@ -1723,11 +1689,10 @@
       "category",
       "effect",
       "unlock_method",
+      "cost",
       "mode"
     ],
-    "unverified_fields": [
-      "cost"
-    ],
+    "unverified_fields": [],
     "steam_internal_name": "snow_day_arsenal",
     "steam_global_percent_api": "0.0",
     "steam_community_percent": "0.1%",
@@ -1742,7 +1707,7 @@
     "short_description": "Fully complete 1 Location",
     "effect": "Steam achievement condition: Fully complete 1 Location",
     "unlock_method": "Fully complete 1 Location",
-    "cost": "Needs verification.",
+    "cost": "Not applicable.",
     "mode": "Full game.",
     "related_entities": [],
     "sources": [
@@ -1771,11 +1736,10 @@
       "category",
       "effect",
       "unlock_method",
+      "cost",
       "mode"
     ],
-    "unverified_fields": [
-      "cost"
-    ],
+    "unverified_fields": [],
     "steam_internal_name": "snow_master_1",
     "steam_global_percent_api": "67.3",
     "steam_community_percent": "67.9%",
@@ -1790,7 +1754,7 @@
     "short_description": "Fully complete 5 Locations",
     "effect": "Steam achievement condition: Fully complete 5 Locations",
     "unlock_method": "Fully complete 5 Locations",
-    "cost": "Needs verification.",
+    "cost": "Not applicable.",
     "mode": "Full game.",
     "related_entities": [],
     "sources": [
@@ -1819,11 +1783,10 @@
       "category",
       "effect",
       "unlock_method",
+      "cost",
       "mode"
     ],
-    "unverified_fields": [
-      "cost"
-    ],
+    "unverified_fields": [],
     "steam_internal_name": "snow_master_2",
     "steam_global_percent_api": "14.5",
     "steam_community_percent": "15.0%",
@@ -1838,7 +1801,7 @@
     "short_description": "Fully complete 15 Locations",
     "effect": "Steam achievement condition: Fully complete 15 Locations",
     "unlock_method": "Fully complete 15 Locations",
-    "cost": "Needs verification.",
+    "cost": "Not applicable.",
     "mode": "Full game.",
     "related_entities": [],
     "sources": [
@@ -1867,11 +1830,10 @@
       "category",
       "effect",
       "unlock_method",
+      "cost",
       "mode"
     ],
-    "unverified_fields": [
-      "cost"
-    ],
+    "unverified_fields": [],
     "steam_internal_name": "snow_master_3",
     "steam_global_percent_api": "0.3",
     "steam_community_percent": "0.3%",
@@ -1886,7 +1848,7 @@
     "short_description": "Survive a run with Shield & Revive",
     "effect": "Steam achievement condition: Survive a run with Shield & Revive",
     "unlock_method": "Survive a run with Shield & Revive",
-    "cost": "Needs verification.",
+    "cost": "Not applicable.",
     "mode": "Full game.",
     "related_entities": [
       "shield",
@@ -1918,11 +1880,10 @@
       "category",
       "effect",
       "unlock_method",
+      "cost",
       "mode"
     ],
-    "unverified_fields": [
-      "cost"
-    ],
+    "unverified_fields": [],
     "steam_internal_name": "still_standing",
     "steam_global_percent_api": "2.2",
     "steam_community_percent": "2.3%",
@@ -1937,7 +1898,7 @@
     "short_description": "Survive a run with Penguin, Mole & Owl",
     "effect": "Steam achievement condition: Survive a run with Penguin, Mole & Owl",
     "unlock_method": "Survive a run with Penguin, Mole & Owl",
-    "cost": "Needs verification.",
+    "cost": "Not applicable.",
     "mode": "Full game.",
     "related_entities": [
       "penguin",
@@ -1970,11 +1931,10 @@
       "category",
       "effect",
       "unlock_method",
+      "cost",
       "mode"
     ],
-    "unverified_fields": [
-      "cost"
-    ],
+    "unverified_fields": [],
     "steam_internal_name": "the_animal_squad",
     "steam_global_percent_api": "2.0",
     "steam_community_percent": "2.0%",
@@ -1989,7 +1949,7 @@
     "short_description": "Survive a run with Flamethrower & Frost Bomb",
     "effect": "Steam achievement condition: Survive a run with Flamethrower & Frost Bomb",
     "unlock_method": "Survive a run with Flamethrower & Frost Bomb",
-    "cost": "Needs verification.",
+    "cost": "Not applicable.",
     "mode": "Full game.",
     "related_entities": [
       "flamethrower",
@@ -2021,11 +1981,10 @@
       "category",
       "effect",
       "unlock_method",
+      "cost",
       "mode"
     ],
-    "unverified_fields": [
-      "cost"
-    ],
+    "unverified_fields": [],
     "steam_internal_name": "thermal_shock",
     "steam_global_percent_api": "2.0",
     "steam_community_percent": "2.0%",
@@ -2040,7 +1999,7 @@
     "short_description": "Survive a run with Death Field & Shield",
     "effect": "Steam achievement condition: Survive a run with Death Field & Shield",
     "unlock_method": "Survive a run with Death Field & Shield",
-    "cost": "Needs verification.",
+    "cost": "Not applicable.",
     "mode": "Full game.",
     "related_entities": [
       "death-field",
@@ -2072,11 +2031,10 @@
       "category",
       "effect",
       "unlock_method",
+      "cost",
       "mode"
     ],
-    "unverified_fields": [
-      "cost"
-    ],
+    "unverified_fields": [],
     "steam_internal_name": "walking_through_hell",
     "steam_global_percent_api": "0.1",
     "steam_community_percent": "0.1%",

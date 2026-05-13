@@ -31,6 +31,11 @@ const VALID_STEAM_NEWS_CLASSIFICATIONS = new Set([
   "weak_or_no_gameplay_facts"
 ]);
 const VALID_EVIDENCE_STRENGTHS = new Set(["strong", "moderate", "weak", "metadata_only"]);
+const MAX_SNAPSHOT_AGE_DAYS = 14;
+const EXPECTED_APPS = {
+  full_game: { app_id: 3232380, title: "FROGGY HATES SNOW", type: "game", minimumScreenshots: 10 },
+  demo: { app_id: 4037600, title: "FROGGY HATES SNOW Demo", type: "demo", minimumScreenshots: 8 }
+} as const;
 const ENTITY_REQUIRED_FIELDS = [
   "id",
   "slug",
@@ -92,6 +97,25 @@ async function readJsonRecord(filePath: string, errors: string[]): Promise<Recor
 
 function isRecord(value: unknown): value is Record<string, unknown> {
   return typeof value === "object" && value !== null && !Array.isArray(value);
+}
+
+function validDateMs(value: unknown) {
+  if (typeof value !== "string" || value.length === 0) return null;
+  const ms = Date.parse(value);
+  return Number.isFinite(ms) ? ms : null;
+}
+
+function validateReviewSummary(owner: string, value: unknown, errors: string[]) {
+  if (!isRecord(value)) {
+    errors.push(`${owner} must be an object`);
+    return;
+  }
+  for (const field of ["num_reviews", "review_score", "total_positive", "total_negative", "total_reviews"]) {
+    if (typeof value[field] !== "number") errors.push(`${owner}.${field} must be a number`);
+  }
+  if (typeof value.review_score_desc !== "string" || value.review_score_desc.length === 0) {
+    errors.push(`${owner}.review_score_desc must be a non-empty string`);
+  }
 }
 
 function validateSources(owner: string, sources: unknown, errors: string[]) {
@@ -157,6 +181,7 @@ function validateSteamSnapshot(snapshot: Record<string, unknown>, errors: string
     "sources",
     "apps",
     "reviews",
+    "external_source_checks",
     "achievements",
     "public_gameplay_claims",
     "steam_news_findings",
@@ -167,18 +192,29 @@ function validateSteamSnapshot(snapshot: Record<string, unknown>, errors: string
   }
 
   if (typeof snapshot.accessed_date !== "string") errors.push("steam-snapshot.json: accessed_date must be a string");
+  const generatedAtMs = validDateMs(snapshot.generated_at);
+  if (generatedAtMs === null) {
+    errors.push("steam-snapshot.json: generated_at must be a valid ISO date string");
+  } else {
+    const ageMs = Date.now() - generatedAtMs;
+    if (ageMs > MAX_SNAPSHOT_AGE_DAYS * 24 * 60 * 60 * 1000) {
+      errors.push(`steam-snapshot.json: generated_at is older than ${MAX_SNAPSHOT_AGE_DAYS} days`);
+    }
+  }
   if (!Array.isArray(snapshot.source_policy)) errors.push("steam-snapshot.json: source_policy must be an array");
   if (!isRecord(snapshot.sources)) errors.push("steam-snapshot.json: sources must be an object");
   if (!isRecord(snapshot.apps)) errors.push("steam-snapshot.json: apps must be an object");
   if (!isRecord(snapshot.reviews)) errors.push("steam-snapshot.json: reviews must be an object");
+  if (!Array.isArray(snapshot.external_source_checks)) errors.push("steam-snapshot.json: external_source_checks must be an array");
   if (!isRecord(snapshot.achievements)) errors.push("steam-snapshot.json: achievements must be an object");
   if (!Array.isArray(snapshot.public_gameplay_claims)) errors.push("steam-snapshot.json: public_gameplay_claims must be an array");
   if (!isRecord(snapshot.steam_news_findings)) errors.push("steam-snapshot.json: steam_news_findings must be an object");
   if (!Array.isArray(snapshot.research_gaps)) errors.push("steam-snapshot.json: research_gaps must be an array");
 
   const apps = isRecord(snapshot.apps) ? snapshot.apps : {};
-  for (const key of ["full_game", "demo"]) {
+  for (const key of ["full_game", "demo"] as const) {
     const app = apps[key];
+    const expected = EXPECTED_APPS[key];
     if (!isRecord(app)) {
       errors.push(`steam-snapshot.json: apps.${key} must be an object`);
       continue;
@@ -186,12 +222,41 @@ function validateSteamSnapshot(snapshot: Record<string, unknown>, errors: string
     for (const field of ["app_id", "title", "type", "source_url", "api_url", "genres", "categories", "screenshots_count", "screenshots", "movies"]) {
       if (!(field in app)) errors.push(`steam-snapshot.json: apps.${key} missing required field ${field}`);
     }
+    if (app.app_id !== expected.app_id) errors.push(`steam-snapshot.json: apps.${key}.app_id must be ${expected.app_id}`);
+    if (app.title !== expected.title) errors.push(`steam-snapshot.json: apps.${key}.title must be ${expected.title}`);
+    if (app.type !== expected.type) errors.push(`steam-snapshot.json: apps.${key}.type must be ${expected.type}`);
+    if (typeof app.source_url !== "string" || !app.source_url.includes(`/${expected.app_id}/`)) {
+      errors.push(`steam-snapshot.json: apps.${key}.source_url must contain app id ${expected.app_id}`);
+    }
+    if (typeof app.api_url !== "string" || !app.api_url.includes(`appids=${expected.app_id}`)) {
+      errors.push(`steam-snapshot.json: apps.${key}.api_url must contain app id ${expected.app_id}`);
+    }
     if (!Array.isArray(app.genres)) errors.push(`steam-snapshot.json: apps.${key}.genres must be an array`);
     if (!Array.isArray(app.categories)) errors.push(`steam-snapshot.json: apps.${key}.categories must be an array`);
     if (!Array.isArray(app.screenshots)) errors.push(`steam-snapshot.json: apps.${key}.screenshots must be an array`);
     if (!Array.isArray(app.movies)) errors.push(`steam-snapshot.json: apps.${key}.movies must be an array`);
+    if (typeof app.screenshots_count === "number" && app.screenshots_count < expected.minimumScreenshots) {
+      errors.push(`steam-snapshot.json: apps.${key}.screenshots_count must be at least ${expected.minimumScreenshots}`);
+    }
     if (typeof app.screenshots_count === "number" && Array.isArray(app.screenshots) && app.screenshots_count !== app.screenshots.length) {
       errors.push(`steam-snapshot.json: apps.${key}.screenshots_count does not match screenshots length`);
+    }
+    if (Array.isArray(app.screenshots)) {
+      app.screenshots.forEach((screenshot, screenshotIndex) => {
+        const prefix = `steam-snapshot.json: apps.${key}.screenshots[${screenshotIndex}]`;
+        if (!isRecord(screenshot)) {
+          errors.push(`${prefix} must be an object`);
+          return;
+        }
+        for (const field of ["thumbnail_url", "full_url"]) {
+          if (typeof screenshot[field] !== "string" || !String(screenshot[field]).startsWith("https://")) {
+            errors.push(`${prefix}.${field} must be an https URL`);
+          }
+          if (typeof screenshot[field] === "string" && !String(screenshot[field]).includes(`/apps/${expected.app_id}/`)) {
+            errors.push(`${prefix}.${field} must contain app id ${expected.app_id}`);
+          }
+        }
+      });
     }
   }
 
@@ -210,7 +275,30 @@ function validateSteamSnapshot(snapshot: Record<string, unknown>, errors: string
   const reviews = isRecord(snapshot.reviews) ? snapshot.reviews : {};
   for (const key of ["full_game", "demo"]) {
     if (!(key in reviews)) errors.push(`steam-snapshot.json: reviews.${key} missing`);
+    else validateReviewSummary(`steam-snapshot.json: reviews.${key}`, reviews[key], errors);
   }
+
+  const externalSourceChecks = Array.isArray(snapshot.external_source_checks) ? snapshot.external_source_checks : [];
+  externalSourceChecks.forEach((check, index) => {
+    const prefix = `steam-snapshot.json: external_source_checks[${index}]`;
+    if (!isRecord(check)) {
+      errors.push(`${prefix} must be an object`);
+      return;
+    }
+    for (const field of ["source_id", "label", "url", "status", "ok", "required_markers", "matched_markers", "notes"]) {
+      if (!(field in check)) errors.push(`${prefix}: missing required field ${field}`);
+    }
+    if (typeof check.source_id !== "string" || check.source_id.length === 0) errors.push(`${prefix}.source_id must be a non-empty string`);
+    if (typeof check.url !== "string" || !check.url.startsWith("https://")) errors.push(`${prefix}.url must be an https URL`);
+    if (check.status !== 200) errors.push(`${prefix}.status must be 200`);
+    if (check.ok !== true) errors.push(`${prefix}.ok must be true`);
+    if (!Array.isArray(check.required_markers)) errors.push(`${prefix}.required_markers must be an array`);
+    if (!Array.isArray(check.matched_markers)) {
+      errors.push(`${prefix}.matched_markers must be an array`);
+    } else if (Array.isArray(check.required_markers) && check.matched_markers.length !== check.required_markers.length) {
+      errors.push(`${prefix}.matched_markers must match all required markers`);
+    }
+  });
 
   const achievements = isRecord(snapshot.achievements) ? snapshot.achievements : {};
   for (const field of [
@@ -233,6 +321,18 @@ function validateSteamSnapshot(snapshot: Record<string, unknown>, errors: string
       errors.push(`steam-snapshot.json: achievements.${field} must be a number`);
     }
   }
+  const fullApp = isRecord(apps.full_game) ? apps.full_game : {};
+  const expectedAchievementTotal = typeof fullApp.achievements_total === "number" ? fullApp.achievements_total : null;
+  if (expectedAchievementTotal === null || expectedAchievementTotal < 1) {
+    errors.push("steam-snapshot.json: apps.full_game.achievements_total must be a positive number");
+  } else {
+    if (achievements.community_rows_count !== expectedAchievementTotal) {
+      errors.push("steam-snapshot.json: achievements.community_rows_count must match apps.full_game.achievements_total");
+    }
+    if (achievements.full_game_api_ids_count !== expectedAchievementTotal) {
+      errors.push("steam-snapshot.json: achievements.full_game_api_ids_count must match apps.full_game.achievements_total");
+    }
+  }
   if (!Array.isArray(achievements.facts)) {
     errors.push("steam-snapshot.json: achievements.facts must be an array");
   } else {
@@ -246,8 +346,11 @@ function validateSteamSnapshot(snapshot: Record<string, unknown>, errors: string
         errors.push(`${prefix} must be an object`);
         return;
       }
-      for (const field of ["title", "slug", "description", "steam_community_percent", "source_ids", "mentioned_entities", "notes"]) {
+      for (const field of ["title", "slug", "description", "icon_url", "steam_community_percent", "source_ids", "mentioned_entities", "notes"]) {
         if (!(field in fact)) errors.push(`${prefix}: missing required field ${field}`);
+      }
+      if (typeof fact.icon_url !== "string" || !fact.icon_url.startsWith("https://")) {
+        errors.push(`${prefix}: icon_url must be an https URL`);
       }
       if (typeof fact.slug === "string") {
         if (factSlugs.has(fact.slug)) errors.push(`${prefix}: duplicate slug ${fact.slug}`);
@@ -529,6 +632,15 @@ export async function validateAllData(dataDir = path.resolve("src/data")): Promi
       if (!isRecord(item) || typeof item.source_id !== "string") return;
       if (!sourceIds.has(item.source_id)) {
         errors.push(`steam-snapshot.json: steam_news_findings.all_news_items[${index}].source_id ${item.source_id} is not present in public-sources.json`);
+      }
+    });
+  }
+
+  if (Array.isArray(steamSnapshot.external_source_checks)) {
+    steamSnapshot.external_source_checks.forEach((check, index) => {
+      if (!isRecord(check) || typeof check.source_id !== "string") return;
+      if (!sourceIds.has(check.source_id)) {
+        errors.push(`steam-snapshot.json: external_source_checks[${index}].source_id ${check.source_id} is not present in public-sources.json`);
       }
     });
   }

@@ -7,8 +7,12 @@ draft: false
 # Snow Master II
 
 :::tip[Verified]
-This entry is backed by at least one listed public source or safe metadata source.
+This entry is backed by listed public source or safe metadata evidence, with no tracked fields currently marked unverified.
 :::
+
+<img src="https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/3232380/067fe6301f3c88d490d13b3c170ed2b8f45d49de.jpg" alt="Steam achievement icon for Snow Master II" class="achievement-icon" loading="lazy" />
+
+_Public Steam achievement icon._
 
 Fully complete 5 Locations
 
@@ -19,10 +23,10 @@ Fully complete 5 Locations
 | Aliases | None listed |
 | Effect | Steam achievement condition: Fully complete 5 Locations |
 | Unlock Method | Fully complete 5 Locations |
-| Cost | Needs verification. |
+| Cost | Not applicable. |
 | Mode | Full game. |
-| Verified Fields | name, category, effect, unlock_method, mode |
-| Fields Needing Verification | cost |
+| Verified Fields | name, category, effect, unlock_method, cost, mode |
+| Fields Needing Verification | None listed |
 | Last Verified | Public Steam metadata accessed 2026-05-13 |
 | Notes | Global percentage is volatile; refresh before publishing exact percentage-driven claims. |
 | Steam Internal Achievement ID | snow_master_2 |

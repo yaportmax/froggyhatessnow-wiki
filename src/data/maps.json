@@ -49,12 +49,12 @@
     "related_entities": [],
     "sources": [
       {
-        "source_id": "steam-news-devlogs",
+        "source_id": "steam-release-date-news",
         "type": "public_source",
-        "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
-        "label": "Steam community news/devlogs",
+        "path_or_url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1830797770242233",
+        "label": "Froggy Hates Snow release date revealed",
         "confidence": "high",
-        "notes": "Official public Steam news and developer posts for launch, systems, updates, and devlogs."
+        "notes": "2026-04-27 release-date and scope post."
       },
       {
         "source_id": "steam-full-achievements-page",
@@ -143,14 +143,6 @@
         "label": "Steam demo store page",
         "confidence": "high",
         "notes": "Official public Steam demo listing."
-      },
-      {
-        "source_id": "steam-news-devlogs",
-        "type": "public_source",
-        "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
-        "label": "Steam community news/devlogs",
-        "confidence": "high",
-        "notes": "Official public Steam news and developer posts for launch, systems, updates, and devlogs."
       }
     ],
     "verification_status": "Verified",
@@ -181,12 +173,12 @@
     "related_entities": [],
     "sources": [
       {
-        "source_id": "steam-news-devlogs",
+        "source_id": "steam-release-date-news",
         "type": "public_source",
-        "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
-        "label": "Steam community news/devlogs",
+        "path_or_url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1830797770242233",
+        "label": "Froggy Hates Snow release date revealed",
         "confidence": "high",
-        "notes": "Official public Steam news and developer posts for launch, systems, updates, and devlogs."
+        "notes": "2026-04-27 release-date and scope post."
       },
       {
         "source_id": "steam-full-achievements-page",
@@ -194,7 +186,7 @@
         "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
         "label": "Steam community achievements page",
         "confidence": "high",
-        "notes": "Public location unlock/completion achievement names and descriptions."
+        "notes": "Public achievement names and descriptions."
       },
       {
         "source_id": "xbox-wire-interview",

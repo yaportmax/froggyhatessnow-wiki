@@ -10,6 +10,8 @@
     "preview": "astro preview",
     "scan": "tsx scripts/scan-game-files.ts",
     "fetch:steam": "tsx scripts/fetch-steam-public-data.ts",
+    "refresh:data": "npm run fetch:steam && npm run scan && npm run validate && npm run generate",
+    "build:verified": "npm run refresh:data && npm run build",
     "domain:check": "tsx scripts/porkbun-domain.ts check",
     "domain:status": "tsx scripts/porkbun-domain.ts status",
     "domain:register": "tsx scripts/porkbun-domain.ts register",

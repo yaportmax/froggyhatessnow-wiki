@@ -13,28 +13,12 @@
     "related_entities": [],
     "sources": [
       {
-        "source_id": "steam-full-store",
+        "source_id": "steam-anomalous-zones-devlog",
         "type": "public_source",
-        "path_or_url": "https://store.steampowered.com/app/3232380/FROGGY_HATES_SNOW/",
-        "label": "Steam full-game store page",
+        "path_or_url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1831432155565119",
+        "label": "Devlog #6: Introduction to Anomalous Zones",
         "confidence": "high",
-        "notes": "Official public Steam store listing."
-      },
-      {
-        "source_id": "steam-demo-store",
-        "type": "public_source",
-        "path_or_url": "https://store.steampowered.com/app/4037600/FROGGY_HATES_SNOW_Demo/",
-        "label": "Steam demo store page",
-        "confidence": "high",
-        "notes": "Official public Steam demo listing."
-      },
-      {
-        "source_id": "steam-news-devlogs",
-        "type": "public_source",
-        "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
-        "label": "Steam community news/devlogs",
-        "confidence": "high",
-        "notes": "Official public Steam news and developer posts for launch, systems, updates, and devlogs."
+        "notes": "2026-04-29 anomalous-zone devlog."
       },
       {
         "source_id": "steam-full-achievements-page",
@@ -73,36 +57,28 @@
     "related_entities": [],
     "sources": [
       {
-        "source_id": "steam-full-store",
+        "source_id": "steam-demo-overhaul-news",
         "type": "public_source",
-        "path_or_url": "https://store.steampowered.com/app/3232380/FROGGY_HATES_SNOW/",
-        "label": "Steam full-game store page",
+        "path_or_url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1823825466505761",
+        "label": "The Froggy Hates Snow demo is back – and it’s had a major overhaul",
         "confidence": "high",
-        "notes": "Official public Steam store listing."
+        "notes": "2026-02-09 updated-demo announcement."
       },
       {
-        "source_id": "steam-demo-store",
+        "source_id": "steam-next-demo-devlog",
         "type": "public_source",
-        "path_or_url": "https://store.steampowered.com/app/4037600/FROGGY_HATES_SNOW_Demo/",
-        "label": "Steam demo store page",
+        "path_or_url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1823825466494740",
+        "label": "Devlog #3: What to expect from the next demo",
         "confidence": "high",
-        "notes": "Official public Steam demo listing."
+        "notes": "2026-02-04 pre-demo devlog."
       },
       {
-        "source_id": "steam-news-devlogs",
+        "source_id": "steam-anomalous-zones-devlog",
         "type": "public_source",
-        "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
-        "label": "Steam community news/devlogs",
+        "path_or_url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1831432155565119",
+        "label": "Devlog #6: Introduction to Anomalous Zones",
         "confidence": "high",
-        "notes": "Official public Steam news and developer posts for launch, systems, updates, and devlogs."
-      },
-      {
-        "source_id": "steam-full-achievements-page",
-        "type": "public_source",
-        "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
-        "label": "Steam community achievements page",
-        "confidence": "high",
-        "notes": "Public achievement names and descriptions."
+        "notes": "2026-04-29 anomalous-zone devlog."
       }
     ],
     "verification_status": "Verified",
@@ -281,14 +257,6 @@
         "notes": "Official public Steam demo listing."
       },
       {
-        "source_id": "steam-news-devlogs",
-        "type": "public_source",
-        "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
-        "label": "Steam community news/devlogs",
-        "confidence": "high",
-        "notes": "Official public Steam news and developer posts for launch, systems, updates, and devlogs."
-      },
-      {
         "source_id": "steam-full-achievements-page",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
@@ -385,14 +353,6 @@
         "notes": "Official public Steam demo listing."
       },
       {
-        "source_id": "steam-news-devlogs",
-        "type": "public_source",
-        "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
-        "label": "Steam community news/devlogs",
-        "confidence": "high",
-        "notes": "Official public Steam news and developer posts for launch, systems, updates, and devlogs."
-      },
-      {
         "source_id": "steam-full-achievements-page",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
@@ -487,22 +447,6 @@
         "label": "Steam demo store page",
         "confidence": "high",
         "notes": "Official public Steam demo listing."
-      },
-      {
-        "source_id": "steam-news-devlogs",
-        "type": "public_source",
-        "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
-        "label": "Steam community news/devlogs",
-        "confidence": "high",
-        "notes": "Official public Steam news and developer posts for launch, systems, updates, and devlogs."
-      },
-      {
-        "source_id": "steam-full-achievements-page",
-        "type": "public_source",
-        "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
-        "label": "Steam community achievements page",
-        "confidence": "high",
-        "notes": "Public achievement names and descriptions."
       }
     ],
     "verification_status": "Verified",
@@ -547,14 +491,6 @@
         "label": "Steam demo store page",
         "confidence": "high",
         "notes": "Official public Steam demo listing."
-      },
-      {
-        "source_id": "steam-news-devlogs",
-        "type": "public_source",
-        "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
-        "label": "Steam community news/devlogs",
-        "confidence": "high",
-        "notes": "Official public Steam news and developer posts for launch, systems, updates, and devlogs."
       },
       {
         "source_id": "steam-full-achievements-page",
@@ -607,22 +543,6 @@
         "label": "Steam demo store page",
         "confidence": "high",
         "notes": "Official public Steam demo listing."
-      },
-      {
-        "source_id": "steam-news-devlogs",
-        "type": "public_source",
-        "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
-        "label": "Steam community news/devlogs",
-        "confidence": "high",
-        "notes": "Official public Steam news and developer posts for launch, systems, updates, and devlogs."
-      },
-      {
-        "source_id": "steam-full-achievements-page",
-        "type": "public_source",
-        "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
-        "label": "Steam community achievements page",
-        "confidence": "high",
-        "notes": "Public achievement names and descriptions."
       }
     ],
     "verification_status": "Verified",

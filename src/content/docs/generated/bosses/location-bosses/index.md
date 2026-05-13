@@ -6,8 +6,8 @@ draft: false
 
 # Location bosses
 
-:::tip[Verified]
-This entry is backed by at least one listed public source or safe metadata source.
+:::caution[Partially verified]
+The listed sources verify this entry, but these fields still need confirmation: effect, unlock_method, cost, mode.
 :::
 
 Official Steam copy says each new map hides its own boss.

@@ -7,8 +7,12 @@ draft: false
 # Bending Reality
 
 :::tip[Verified]
-This entry is backed by at least one listed public source or safe metadata source.
+This entry is backed by listed public source or safe metadata evidence, with no tracked fields currently marked unverified.
 :::
+
+<img src="https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/3232380/09676731a24ea33371063f26e82ab18a33dac762.jpg" alt="Steam achievement icon for Bending Reality" class="achievement-icon" loading="lazy" />
+
+_Public Steam achievement icon._
 
 Survive a run with Teleport & Magnet
 
@@ -19,10 +23,10 @@ Survive a run with Teleport & Magnet
 | Aliases | None listed |
 | Effect | Steam achievement condition: Survive a run with Teleport & Magnet |
 | Unlock Method | Survive a run with Teleport & Magnet |
-| Cost | Needs verification. |
+| Cost | Not applicable. |
 | Mode | Full game. |
-| Verified Fields | name, category, effect, unlock_method, mode |
-| Fields Needing Verification | cost |
+| Verified Fields | name, category, effect, unlock_method, cost, mode |
+| Fields Needing Verification | None listed |
 | Last Verified | Public Steam metadata accessed 2026-05-13 |
 | Notes | Global percentage is volatile; refresh before publishing exact percentage-driven claims. |
 | Steam Internal Achievement ID | bending_reality |
@@ -31,8 +35,8 @@ Survive a run with Teleport & Magnet
 
 ## Related
 
-- [Teleport](/generated/skills/teleport/)
-- [Magnet](/generated/skills/magnet/)
+- [Teleport](/generated/skills/teleport/) (Inferred)
+- [Magnet](/generated/skills/magnet/) (Inferred)
 
 ## Sources
 

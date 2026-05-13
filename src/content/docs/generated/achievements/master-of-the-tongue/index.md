@@ -7,8 +7,12 @@ draft: false
 # Master of the Tongue
 
 :::tip[Verified]
-This entry is backed by at least one listed public source or safe metadata source.
+This entry is backed by listed public source or safe metadata evidence, with no tracked fields currently marked unverified.
 :::
+
+<img src="https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/3232380/60ec9b9fc17b2fb2dec41279f98cfdedcee24bfb.jpg" alt="Steam achievement icon for Master of the Tongue" class="achievement-icon" loading="lazy" />
+
+_Public Steam achievement icon._
 
 Survive a run with Tongue Attack & Curvy Tongue
 
@@ -19,10 +23,10 @@ Survive a run with Tongue Attack & Curvy Tongue
 | Aliases | None listed |
 | Effect | Steam achievement condition: Survive a run with Tongue Attack & Curvy Tongue |
 | Unlock Method | Survive a run with Tongue Attack & Curvy Tongue |
-| Cost | Needs verification. |
+| Cost | Not applicable. |
 | Mode | Full game. |
-| Verified Fields | name, category, effect, unlock_method, mode |
-| Fields Needing Verification | cost |
+| Verified Fields | name, category, effect, unlock_method, cost, mode |
+| Fields Needing Verification | None listed |
 | Last Verified | Public Steam metadata accessed 2026-05-13 |
 | Notes | Global percentage is volatile; refresh before publishing exact percentage-driven claims. |
 | Steam Internal Achievement ID | master_of_the_tongue |
@@ -31,8 +35,8 @@ Survive a run with Tongue Attack & Curvy Tongue
 
 ## Related
 
-- [Tongue Attack](/generated/skills/tongue-attack/)
-- [Curvy Tongue](/generated/skills/curvy-tongue/)
+- [Tongue Attack](/generated/skills/tongue-attack/) (Inferred)
+- [Curvy Tongue](/generated/skills/curvy-tongue/) (Inferred)
 
 ## Sources
 

@@ -7,8 +7,12 @@ draft: false
 # Deep Freeze
 
 :::tip[Verified]
-This entry is backed by at least one listed public source or safe metadata source.
+This entry is backed by listed public source or safe metadata evidence, with no tracked fields currently marked unverified.
 :::
+
+<img src="https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/3232380/6d7d12be4c98f5f76e55b1d178af46b8f50ee70a.jpg" alt="Steam achievement icon for Deep Freeze" class="achievement-icon" loading="lazy" />
+
+_Public Steam achievement icon._
 
 Survive a run with Frost Bomb & Frost Infusion
 
@@ -19,10 +23,10 @@ Survive a run with Frost Bomb & Frost Infusion
 | Aliases | None listed |
 | Effect | Steam achievement condition: Survive a run with Frost Bomb & Frost Infusion |
 | Unlock Method | Survive a run with Frost Bomb & Frost Infusion |
-| Cost | Needs verification. |
+| Cost | Not applicable. |
 | Mode | Full game. |
-| Verified Fields | name, category, effect, unlock_method, mode |
-| Fields Needing Verification | cost |
+| Verified Fields | name, category, effect, unlock_method, cost, mode |
+| Fields Needing Verification | None listed |
 | Last Verified | Public Steam metadata accessed 2026-05-13 |
 | Notes | Global percentage is volatile; refresh before publishing exact percentage-driven claims. |
 | Steam Internal Achievement ID | deep_freeze |
@@ -31,8 +35,8 @@ Survive a run with Frost Bomb & Frost Infusion
 
 ## Related
 
-- [Frost Bomb](/generated/items/frost-bomb/)
-- [Frost Infusion](/generated/skills/frost-infusion/)
+- [Frost Bomb](/generated/items/frost-bomb/) (Inferred)
+- [Frost Infusion](/generated/skills/frost-infusion/) (Inferred)
 
 ## Sources
 

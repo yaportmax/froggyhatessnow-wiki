@@ -6,8 +6,8 @@ draft: false
 
 # Eerie creatures
 
-:::tip[Verified]
-This entry is backed by at least one listed public source or safe metadata source.
+:::caution[Partially verified]
+The listed sources verify this entry, but these fields still need confirmation: effect, unlock_method, cost.
 :::
 
 Eerie creatures are public enemy descriptors from official Steam copy.

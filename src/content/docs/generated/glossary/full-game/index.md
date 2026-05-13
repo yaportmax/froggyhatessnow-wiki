@@ -7,7 +7,7 @@ draft: false
 # Full game
 
 :::tip[Verified]
-This entry is backed by at least one listed public source or safe metadata source.
+This entry is backed by listed public source or safe metadata evidence, with no tracked fields currently marked unverified.
 :::
 
 Public full game app 3232380; released on Steam May 7, 2026.
@@ -33,6 +33,3 @@ No related entities listed yet.
 ## Sources
 
 - [Steam full-game store page](https://store.steampowered.com/app/3232380/FROGGY_HATES_SNOW/) — public_source, confidence high, source `steam-full-store`. Official public Steam store listing.
-- [Steam demo store page](https://store.steampowered.com/app/4037600/FROGGY_HATES_SNOW_Demo/) — public_source, confidence high, source `steam-demo-store`. Official public Steam demo listing.
-- [Steam community news/devlogs](https://steamcommunity.com/app/3232380/allnews/?l=english) — public_source, confidence high, source `steam-news-devlogs`. Official public Steam news and developer posts for launch, systems, updates, and devlogs.
-- [Digital Bandidos game page](https://digitalbandidos.com/games/froggy-hates-snow/) — public_source, confidence medium, source `digital-bandidos-page`. Publisher page for FROGGY HATES SNOW.

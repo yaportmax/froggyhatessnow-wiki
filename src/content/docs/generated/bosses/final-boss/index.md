@@ -6,8 +6,8 @@ draft: false
 
 # Final boss
 
-:::tip[Verified]
-This entry is backed by at least one listed public source or safe metadata source.
+:::caution[Partially verified]
+The listed sources verify this entry, but these fields still need confirmation: unlock_method, cost.
 :::
 
 Official Steam copy says a run can be survived by finding the escape door or defeating the final boss.

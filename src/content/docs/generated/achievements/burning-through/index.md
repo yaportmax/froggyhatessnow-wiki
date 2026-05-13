@@ -7,8 +7,12 @@ draft: false
 # Burning Through
 
 :::tip[Verified]
-This entry is backed by at least one listed public source or safe metadata source.
+This entry is backed by listed public source or safe metadata evidence, with no tracked fields currently marked unverified.
 :::
+
+<img src="https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/3232380/d125013a03049fb4ce3494e76f8bb90d06badac2.jpg" alt="Steam achievement icon for Burning Through" class="achievement-icon" loading="lazy" />
+
+_Public Steam achievement icon._
 
 Survive a run with Flamethrower & Fire Infusion
 
@@ -19,10 +23,10 @@ Survive a run with Flamethrower & Fire Infusion
 | Aliases | None listed |
 | Effect | Steam achievement condition: Survive a run with Flamethrower & Fire Infusion |
 | Unlock Method | Survive a run with Flamethrower & Fire Infusion |
-| Cost | Needs verification. |
+| Cost | Not applicable. |
 | Mode | Full game. |
-| Verified Fields | name, category, effect, unlock_method, mode |
-| Fields Needing Verification | cost |
+| Verified Fields | name, category, effect, unlock_method, cost, mode |
+| Fields Needing Verification | None listed |
 | Last Verified | Public Steam metadata accessed 2026-05-13 |
 | Notes | Global percentage is volatile; refresh before publishing exact percentage-driven claims. |
 | Steam Internal Achievement ID | burning_through |
@@ -31,8 +35,8 @@ Survive a run with Flamethrower & Fire Infusion
 
 ## Related
 
-- [Flamethrower](/generated/tools/flamethrower/)
-- [Fire Infusion](/generated/skills/fire-infusion/)
+- [Flamethrower](/generated/tools/flamethrower/) (Verified)
+- [Fire Infusion](/generated/skills/fire-infusion/) (Inferred)
 
 ## Sources
 

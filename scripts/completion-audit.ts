@@ -41,9 +41,8 @@ const REQUIRED_PATHS = [
   "src/content/docs/achievement-source-matrix.md",
   "src/content/docs/source-ledger.md"
 ];
-const REQUIRED_SCRIPTS = ["dev", "build", "preview", "scan", "generate", "validate"];
+const REQUIRED_SCRIPTS = ["dev", "build", "preview", "scan", "fetch:steam", "refresh:data", "generate", "validate", "build:verified"];
 const SUPPORTING_SCRIPTS = [
-  "fetch:steam",
   "test",
   "deploy:status",
   "deploy:publish",

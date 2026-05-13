@@ -7,8 +7,12 @@ draft: false
 # Shock Therapy
 
 :::tip[Verified]
-This entry is backed by at least one listed public source or safe metadata source.
+This entry is backed by listed public source or safe metadata evidence, with no tracked fields currently marked unverified.
 :::
+
+<img src="https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/3232380/798cbf84ac7294477441fcf28da6d4e19ce3745e.jpg" alt="Steam achievement icon for Shock Therapy" class="achievement-icon" loading="lazy" />
+
+_Public Steam achievement icon._
 
 Survive a run with Chain Lightning & Electric Infusion
 
@@ -19,10 +23,10 @@ Survive a run with Chain Lightning & Electric Infusion
 | Aliases | None listed |
 | Effect | Steam achievement condition: Survive a run with Chain Lightning & Electric Infusion |
 | Unlock Method | Survive a run with Chain Lightning & Electric Infusion |
-| Cost | Needs verification. |
+| Cost | Not applicable. |
 | Mode | Full game. |
-| Verified Fields | name, category, effect, unlock_method, mode |
-| Fields Needing Verification | cost |
+| Verified Fields | name, category, effect, unlock_method, cost, mode |
+| Fields Needing Verification | None listed |
 | Last Verified | Public Steam metadata accessed 2026-05-13 |
 | Notes | Global percentage is volatile; refresh before publishing exact percentage-driven claims. |
 | Steam Internal Achievement ID | shock_therapy |
@@ -31,8 +35,8 @@ Survive a run with Chain Lightning & Electric Infusion
 
 ## Related
 
-- [Chain Lightning](/generated/skills/chain-lightning/)
-- [Electric Infusion](/generated/skills/electric-infusion/)
+- [Chain Lightning](/generated/skills/chain-lightning/) (Inferred)
+- [Electric Infusion](/generated/skills/electric-infusion/) (Inferred)
 
 ## Sources
 

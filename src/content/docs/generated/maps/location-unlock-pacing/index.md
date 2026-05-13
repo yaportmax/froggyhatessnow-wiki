@@ -6,8 +6,8 @@ draft: false
 
 # Location unlock pacing
 
-:::tip[Verified]
-This entry is backed by at least one listed public source or safe metadata source.
+:::caution[Partially verified]
+The listed sources verify this entry, but these fields still need confirmation: cost.
 :::
 
 The first post-launch Steam update describes changed location unlock pacing for early and later locations.

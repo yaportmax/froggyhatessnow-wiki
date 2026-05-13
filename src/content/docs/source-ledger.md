@@ -14,17 +14,21 @@ Entity status counts: Verified: 124, Needs verification: 2, Inferred: 27.
 
 | Source Label | Referenced Entities |
 |---|---:|
-| Steam community achievements page | 92 |
-| Steam community news/devlogs | 74 |
-| Steam full-game store page | 63 |
-| Steam demo store page | 63 |
+| Steam community achievements page | 86 |
 | Steam global achievement percentages API | 42 |
+| Steam full-game store page | 39 |
+| Steam demo store page | 39 |
 | Achievement condition classification | 27 |
-| Digital Bandidos game page | 25 |
-| Xbox Wire developer interview | 3 |
-| Thank You for an Incredible Launch — First Update and What Comes Next | 2 |
-| The Froggy Hates Snow demo is back – and it’s had a major overhaul | 1 |
-| Devlog #3: What to expect from the next demo | 1 |
+| Devlog #7: What's New For Launch? | 16 |
+| Xbox Wire developer interview | 12 |
+| Devlog #5: How Snow Works in Froggy Hates Snow | 12 |
+| Thank You for an Incredible Launch — First Update and What Comes Next | 9 |
+| Devlog #3: What to expect from the next demo | 8 |
+| Devlog #6: Introduction to Anomalous Zones | 7 |
+| Froggy Hates Snow release date revealed | 6 |
+| Digital Bandidos game page | 6 |
+| Devlog #2: A quick update about the Froggy Hates Snow demo | 4 |
+| The Froggy Hates Snow demo is back – and it’s had a major overhaul | 4 |
 
 ## Public Sources
 
@@ -34,11 +38,12 @@ Entity status counts: Verified: 124, Needs verification: 2, Inferred: 27.
 | `steam-demo-store` | [Steam demo store page](https://store.steampowered.com/app/4037600/FROGGY_HATES_SNOW_Demo/) | high | Official public Steam listing for demo app 4037600. |
 | `steam-full-appdetails` | [Steam full-game appdetails API](https://store.steampowered.com/api/appdetails?appids=3232380&cc=us&l=english) | high | Public Steam store API data summarized without raw long description dumps. |
 | `steam-demo-appdetails` | [Steam demo appdetails API](https://store.steampowered.com/api/appdetails?appids=4037600&cc=us&l=english) | high | Public Steam store API data summarized without raw long description dumps. |
-| `steam-full-achievements-page` | [Steam community achievements page](https://steamcommunity.com/stats/3232380/achievements/?l=english) | high | Public display names, descriptions, icons, and current global percentages. |
+| `steam-full-achievements-page` | [Steam community achievements page](https://steamcommunity.com/stats/3232380/achievements/?l=english) | high | Public display names, descriptions, achievement icon URLs, and current global percentages. |
 | `steam-full-global-achievement-percentages` | [Steam global achievement percentages API](https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=3232380&format=json) | high | Public no-key endpoint for internal achievement ids and volatile global percentages. |
+| `steam-demo-global-achievement-percentages` | [Steam demo global achievement percentages API](https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=4037600&format=json) | low | Public no-key endpoint status for demo achievement percentages. Current status=403; error=https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=4037600&format=json returned 403. |
 | `steam-news-devlogs` | [Steam community news/devlogs](https://steamcommunity.com/app/3232380/allnews/?l=english) | high | Official public Steam news/devlog stream used for launch counts, named mechanics, named skills/tools/companions, update notes, and system descriptions. |
-| `steam-news-api` | [Steam News API](https://api.steampowered.com/ISteamNews/GetNewsForApp/v0002/?appid=3232380&count=20&maxlength=50000&format=json) | high | Public Steam News API used to map individual news/devlog posts to direct source records. |
-| `steam-full-review-summary` | [Steam full-game review summary API](https://store.steampowered.com/appreviews/3232380?json=1&language=all&filter=summary&purchase_type=all&num_per_page=0) | medium | Summary fetched only; review text not redistributed. Current summary: {"num_reviews":10,"review_score":8,"review_score_desc":"Very Positive","total_positive":179,"total_negative":14,"total_reviews":193}. |
+| `steam-news-api` | [Steam News API](https://api.steampowered.com/ISteamNews/GetNewsForApp/v0002/?appid=3232380&count=100&maxlength=50000&format=json) | high | Public Steam News API used to map individual news/devlog posts to direct source records. |
+| `steam-full-review-summary` | [Steam full-game review summary API](https://store.steampowered.com/appreviews/3232380?json=1&language=all&filter=summary&purchase_type=all&num_per_page=0) | medium | Summary fetched only; review text not redistributed. Current summary: {"num_reviews":10,"review_score":8,"review_score_desc":"Very Positive","total_positive":181,"total_negative":14,"total_reviews":195}. |
 | `steam-demo-review-summary` | [Steam demo review summary API](https://store.steampowered.com/appreviews/4037600?json=1&language=all&filter=summary&purchase_type=all&num_per_page=0) | medium | Summary fetched only; review text not redistributed. Current summary: {"num_reviews":10,"review_score":8,"review_score_desc":"Very Positive","total_positive":140,"total_negative":3,"total_reviews":143}. |
 | `steamdb-full` | [SteamDB full-game page](https://steamdb.info/app/3232380/) | medium | Third-party corroboration for app metadata, changenumbers, technologies, depots, and timestamps. |
 | `steamdb-demo` | [SteamDB demo page](https://steamdb.info/app/4037600/) | medium | Third-party corroboration for demo metadata, parent app, depot, build, and timestamps. |

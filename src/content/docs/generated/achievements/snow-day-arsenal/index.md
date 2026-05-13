@@ -7,8 +7,12 @@ draft: false
 # Snow Day Arsenal
 
 :::tip[Verified]
-This entry is backed by at least one listed public source or safe metadata source.
+This entry is backed by listed public source or safe metadata evidence, with no tracked fields currently marked unverified.
 :::
+
+<img src="https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/3232380/3eb5f0757eb6b208adac802ea2af678fea1594c5.jpg" alt="Steam achievement icon for Snow Day Arsenal" class="achievement-icon" loading="lazy" />
+
+_Public Steam achievement icon._
 
 Survive a run with Gloves, Snowball Volley & Piercing Icicles
 
@@ -19,10 +23,10 @@ Survive a run with Gloves, Snowball Volley & Piercing Icicles
 | Aliases | None listed |
 | Effect | Steam achievement condition: Survive a run with Gloves, Snowball Volley & Piercing Icicles |
 | Unlock Method | Survive a run with Gloves, Snowball Volley & Piercing Icicles |
-| Cost | Needs verification. |
+| Cost | Not applicable. |
 | Mode | Full game. |
-| Verified Fields | name, category, effect, unlock_method, mode |
-| Fields Needing Verification | cost |
+| Verified Fields | name, category, effect, unlock_method, cost, mode |
+| Fields Needing Verification | None listed |
 | Last Verified | Public Steam metadata accessed 2026-05-13 |
 | Notes | Global percentage is volatile; refresh before publishing exact percentage-driven claims. |
 | Steam Internal Achievement ID | snow_day_arsenal |
@@ -31,9 +35,9 @@ Survive a run with Gloves, Snowball Volley & Piercing Icicles
 
 ## Related
 
-- [Gloves](/generated/tools/gloves/)
-- [Snowball Volley](/generated/skills/snowball-volley/)
-- [Piercing Icicles](/generated/skills/piercing-icicles/)
+- [Gloves](/generated/tools/gloves/) (Inferred)
+- [Snowball Volley](/generated/skills/snowball-volley/) (Verified)
+- [Piercing Icicles](/generated/skills/piercing-icicles/) (Verified)
 
 ## Sources
 

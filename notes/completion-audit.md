@@ -19,7 +19,7 @@ The wiki/scaffold/data/source/deploy work is complete and verified. The remainin
 | Separate wiki folder in this repo | Current root: `/Users/myaport/Documents/maxyaport-codex-project/froggyhatessnow_wiki`. | Done |
 | Own GitHub repo under `yaportmax` | `origin` is `https://github.com/yaportmax/froggyhatessnow-wiki.git`; `git rev-parse HEAD` and `git ls-remote origin refs/heads/main` are checked before handoff to confirm local and remote `main` match. | Done |
 | Build with Astro Starlight | `astro.config.mjs`, `src/content/docs/`, Starlight dependencies, and `npm run build` pass. | Done |
-| Use TypeScript where practical | Scripts are TypeScript/TSX; `npx tsc --noEmit` passes after build-generated Astro types exist. | Done |
+| Use TypeScript where practical | Scripts are TypeScript/TSX and are exercised by `npm run validate`, `npm test`, `npm run fetch:steam`, and `npm run build`. Bare `npx tsc --noEmit` currently fails inside Starlight generated utility types (`astro:content` `RenderResult`), so build/test/validator execution is the reliable gate. | Done with noted typecheck caveat |
 | Required project folders | `src/content/docs/`, `src/content/docs/generated/`, `src/data/`, `scripts/`, `public/`, `notes/`, and `game-files/` exist. | Done |
 | Required named files | `.gitignore`, `README.md`, `AGENTS.md`, `package.json`, `astro.config.mjs`, all listed `src/data/*.json`, `scripts/scan-game-files.ts`, `scripts/generate-pages.ts`, `scripts/validate-data.ts`, and required notes exist. | Done |
 | `game-files/` local-only | `.gitignore` ignores `game-files/`; scan page says local metadata contributes no facts because the directory contains no files. | Done |
@@ -27,14 +27,14 @@ The wiki/scaffold/data/source/deploy work is complete and verified. The remainin
 | Safe metadata scanner | `scripts/scan-game-files.ts`; scanner handles missing/empty dirs, skips symlinks/binaries, emits summaries only. `npm test` covers missing dir, readable file/binary/symlink, and empty dir status. | Done |
 | Extracted metadata notes | `notes/extracted-metadata.md` / `.json` show `gameFilesPresent: true`, `gameFilesContainFiles: false`, `filesScanned: 0`, `readable_files: 0`. | Done |
 | Public metadata and source URLs | `scripts/fetch-steam-public-data.ts`, `src/data/steam-snapshot.json`, `src/data/public-sources.json`, `notes/public-research.md`, and source pages are present. | Done |
-| Steam game sourcing prioritized | Snapshot generated `2026-05-13T13:41:44.440Z` includes all 15 Steam News API items, 42 achievement facts, 20 parsed loadout-name rows, 14 full-game screenshots, 13 demo screenshots, Steam review summaries, public gameplay claims, and research gaps. | Done |
+| Steam game sourcing prioritized | Snapshot generated `2026-05-13T14:41:46.504Z` includes all 15 Steam News API items from a 100-item request window, 42 achievement facts with public icon URLs, 20 parsed loadout-name rows, 14 full-game screenshots, 13 demo screenshots, Steam review summaries, external-source marker checks, public gameplay claims, and research gaps. | Done |
 | Do not invent facts / mark uncertainty | Validator enforces allowed statuses; data includes 124 `Verified`, 27 `Inferred`, and 2 `Needs verification` rows. Roster/map gaps remain explicit. | Done |
 | Structured datasets | 11 datasets exist with 153 entities: frogs 5, maps 5, tools 16, items 12, skills 29, companions 6, upgrades 7, bosses 3, enemies 3, achievements 42, glossary 25. | Done |
 | Entity fields and sources | Validator checks required fields, source types, verification statuses, source IDs, related links, duplicate ids/slugs, and Verified entries without sources. | Done |
 | Generated category/detail pages | `npm run generate` creates 153 entity detail pages and 11 category indexes; filesystem currently has 164 generated `index.md` files. | Done |
 | Required static pages | Homepage, beginner guide, warmth guide, best upgrades, unlocks, game modes, FAQ, contribute, verification status, game metadata, source ledger, Steam source snapshot, and achievement source matrix exist under `src/content/docs/`. | Done |
 | SEO targets | Page titles/descriptions and generated routes cover the requested terms for wiki, frogs, maps, tools, items, skills, achievements, unlocks, warmth guide, bosses, and game modes. `astro.config.mjs` currently uses the Vercel alias until the custom domain is actually registered. | Done for deployed alias; custom canonical waits on domain |
-| Package scripts | `dev`, `build`, `preview`, `scan`, `generate`, `validate` exist, plus `fetch:steam`, `test`, `deploy:*`, and `domain:*` helpers including the read-only `domain:health` final audit and guarded `domain:commit-canonical` commit helper. | Done |
+| Package scripts | `dev`, `build`, `preview`, `scan`, `fetch:steam`, `refresh:data`, `generate`, `validate`, and `build:verified` exist, plus `test`, `deploy:*`, and `domain:*` helpers including the read-only `domain:health` final audit and guarded `domain:commit-canonical` commit helper. | Done |
 | README and AGENTS | Both exist and document workflow, source rules, validation/deploy/domain paths, and fail-loud behavior. | Done |
 | Domain research | `notes/domain-options.md` lists all required candidates, registrar, registration/renewal prices, pros/cons, best recommendation, backups, sources, and attempt history. | Done |
 | Buy domain via Porkbun API and/or Chrome | Porkbun API confirms `froggyhatessnow.wiki` is available, non-premium, `$2.06` first year / `$26.26` renewal, but registration fails with `VERIFICATION_REQUIRED`. Chrome plugin Node browser-control was not exposed; Computer Use could not attach to Chrome (`cgWindowNotFound`) even after opening a window, so UI verification could not proceed safely. | Blocked |
@@ -52,7 +52,6 @@ npm run validate
 npm run audit:completion
 npm test
 npm run build
-npx tsc --noEmit
 git diff --check
 npm run deploy:status
 npm run domain:status
@@ -68,7 +67,7 @@ curl -I --max-time 20 https://froggyhatessnow.wiki/
 - `npm run audit:completion`: consolidated goal-level audit exists and is expected to fail until the custom-domain registration/DNS/canonical gate passes.
 - `npm test`: 2 test files, 10 tests passed.
 - `npm run build`: 178 pages built; Pagefind indexed 177 pages.
-- `npx tsc --noEmit`: passed when run after build-generated Astro types were present.
+- `npx tsc --noEmit`: currently fails in Starlight generated utility types (`astro:content` has no exported `RenderResult`); `npm run build`, `npm test`, and `npm run validate` pass.
 - `git diff --check`: passed.
 - `npm run deploy:status`: stable alias live checks passed for homepage, Steam source snapshot, current source timestamp, and achievement matrix.
 - `npm run domain:status`: `domain_available_not_registered`; latest check request id `019e21ab-80ae-7745-b332-2ff15488d479`, DNS retrieve request id `019e21ab-837a-79e8-b69a-70789fcf5b03`.

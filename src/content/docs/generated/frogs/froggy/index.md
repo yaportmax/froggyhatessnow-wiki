@@ -6,8 +6,8 @@ draft: false
 
 # Froggy
 
-:::tip[Verified]
-This entry is backed by at least one listed public source or safe metadata source.
+:::caution[Partially verified]
+The listed sources verify this entry, but these fields still need confirmation: unlock_method, cost.
 :::
 
 The public Steam description identifies the player as Froggy, a survivor in a snowy desert.

@@ -7,8 +7,12 @@ draft: false
 # Caffeinated Chaos
 
 :::tip[Verified]
-This entry is backed by at least one listed public source or safe metadata source.
+This entry is backed by listed public source or safe metadata evidence, with no tracked fields currently marked unverified.
 :::
+
+<img src="https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/3232380/b2b562f22a7a4965285d5dd66f7063e3629f5e16.jpg" alt="Steam achievement icon for Caffeinated Chaos" class="achievement-icon" loading="lazy" />
+
+_Public Steam achievement icon._
 
 Survive a run with Hot Tea & Energy Drink
 
@@ -19,10 +23,10 @@ Survive a run with Hot Tea & Energy Drink
 | Aliases | None listed |
 | Effect | Steam achievement condition: Survive a run with Hot Tea & Energy Drink |
 | Unlock Method | Survive a run with Hot Tea & Energy Drink |
-| Cost | Needs verification. |
+| Cost | Not applicable. |
 | Mode | Full game. |
-| Verified Fields | name, category, effect, unlock_method, mode |
-| Fields Needing Verification | cost |
+| Verified Fields | name, category, effect, unlock_method, cost, mode |
+| Fields Needing Verification | None listed |
 | Last Verified | Public Steam metadata accessed 2026-05-13 |
 | Notes | Global percentage is volatile; refresh before publishing exact percentage-driven claims. |
 | Steam Internal Achievement ID | caffeinated_chaos |
@@ -31,8 +35,8 @@ Survive a run with Hot Tea & Energy Drink
 
 ## Related
 
-- [Hot Tea](/generated/items/hot-tea/)
-- [Energy Drink](/generated/items/energy-drink/)
+- [Hot Tea](/generated/items/hot-tea/) (Inferred)
+- [Energy Drink](/generated/items/energy-drink/) (Inferred)
 
 ## Sources
 

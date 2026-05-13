@@ -57,12 +57,28 @@
     "related_entities": [],
     "sources": [
       {
-        "source_id": "steam-news-devlogs",
+        "source_id": "steam-release-date-news",
         "type": "public_source",
-        "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
-        "label": "Steam community news/devlogs",
+        "path_or_url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1830797770242233",
+        "label": "Froggy Hates Snow release date revealed",
         "confidence": "high",
-        "notes": "Official public Steam news and developer posts for launch, systems, updates, and devlogs."
+        "notes": "2026-04-27 release-date and scope post."
+      },
+      {
+        "source_id": "steam-next-demo-devlog",
+        "type": "public_source",
+        "path_or_url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1823825466494740",
+        "label": "Devlog #3: What to expect from the next demo",
+        "confidence": "high",
+        "notes": "2026-02-04 pre-demo devlog."
+      },
+      {
+        "source_id": "steam-demo-update-devlog",
+        "type": "public_source",
+        "path_or_url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1821922921824108",
+        "label": "Devlog #2: A quick update about the Froggy Hates Snow demo",
+        "confidence": "high",
+        "notes": "2026-01-20 demo update devlog."
       },
       {
         "source_id": "steam-full-achievements-page",
@@ -147,12 +163,20 @@
     "related_entities": [],
     "sources": [
       {
-        "source_id": "steam-news-devlogs",
+        "source_id": "steam-release-date-news",
         "type": "public_source",
-        "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
-        "label": "Steam community news/devlogs",
+        "path_or_url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1830797770242233",
+        "label": "Froggy Hates Snow release date revealed",
         "confidence": "high",
-        "notes": "Official public Steam news and developer posts for launch, systems, updates, and devlogs."
+        "notes": "2026-04-27 release-date and scope post."
+      },
+      {
+        "source_id": "steam-next-demo-devlog",
+        "type": "public_source",
+        "path_or_url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1823825466494740",
+        "label": "Devlog #3: What to expect from the next demo",
+        "confidence": "high",
+        "notes": "2026-02-04 pre-demo devlog."
       },
       {
         "source_id": "xbox-wire-interview",
@@ -193,12 +217,12 @@
     ],
     "sources": [
       {
-        "source_id": "steam-news-devlogs",
+        "source_id": "steam-post-launch-update",
         "type": "public_source",
-        "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
-        "label": "Steam community news/devlogs",
+        "path_or_url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1832065502824701",
+        "label": "Thank You for an Incredible Launch — First Update and What Comes Next",
         "confidence": "high",
-        "notes": "Official public Steam news and developer posts for launch, systems, updates, and devlogs."
+        "notes": "2026-05-12 first post-launch update."
       }
     ],
     "verification_status": "Verified",

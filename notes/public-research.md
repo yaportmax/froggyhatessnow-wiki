@@ -13,7 +13,7 @@ This note summarizes public metadata used to seed the wiki. It intentionally avo
 - Steam community achievements page: https://steamcommunity.com/stats/3232380/achievements/?l=english
 - Steam global achievement percentages API: https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=3232380&format=json
 - Steam community news/devlogs: https://steamcommunity.com/app/3232380/allnews/?l=english
-- Steam News API: https://api.steampowered.com/ISteamNews/GetNewsForApp/v0002/?appid=3232380&count=20&maxlength=50000&format=json
+- Steam News API: https://api.steampowered.com/ISteamNews/GetNewsForApp/v0002/?appid=3232380&count=100&maxlength=50000&format=json
 - Xbox Wire developer interview: https://news.xbox.com/en-us/2026/05/05/froggy-hates-snow-interview/
 
 ## Game-Level Facts
@@ -30,7 +30,7 @@ This note summarizes public metadata used to seed the wiki. It intentionally avo
 - Genres from Steam appdetails: [{"id":"1","description":"Action"},{"id":"23","description":"Indie"},{"id":"2","description":"Strategy"}]
 - Categories from Steam appdetails: [{"id":2,"description":"Single-player"},{"id":22,"description":"Steam Achievements"},{"id":28,"description":"Full controller support"},{"id":78,"description":"Adjustable Difficulty"},{"id":74,"description":"Playable without Timed Input"},{"id":23,"description":"Steam Cloud"},{"id":62,"description":"Family Sharing"}]
 - Full game current US price from Steam appdetails: {"currency":"USD","initial":1499,"final":1349,"discount_percent":10,"initial_formatted":"$14.99","final_formatted":"$13.49"}
-- Full game Steam recommendations total from appdetails: 175
+- Full game Steam recommendations total from appdetails: 177
 - Full game screenshots listed by appdetails: 14
 - Demo screenshots listed by appdetails: 13
 - Full-game languages: English * , French * , German * , Spanish - Spain * , Japanese * , Korean * , Polish * , Portuguese - Brazil * , Simplified Chinese * , Ukrainian * , Turkish * , Traditional Chinese * * languages with full audio support
@@ -65,6 +65,11 @@ This note summarizes public metadata used to seed the wiki. It intentionally avo
 - 2026-01-20 - Devlog #2: A quick update about the Froggy Hates Snow demo: https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1821922921824108 (Demo update devlog previewing quest-based meta-progression and ten planned characters with unique skins, skills, and main attacks.)
 - 2025-12-19 - Devlog #1: Meet The Developer: https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1819386365096417 (Developer introduction describing the game's interactive snow and digging ideas.)
 
+## External Source Checks
+
+- Digital Bandidos game page: https://digitalbandidos.com/games/froggy-hates-snow/ (matched markers: Froggy Hates Snow, Digital Bandidos, Crying Brick)
+- Xbox Wire developer interview: https://news.xbox.com/en-us/2026/05/05/froggy-hates-snow-interview/ (matched markers: Froggy Hates Snow, 16 maps, Peaceful Mode, heightmap, companions, tools, skills)
+
 ## Achievements
 
 - Public community page rows parsed: 42
@@ -78,7 +83,7 @@ This note summarizes public metadata used to seed the wiki. It intentionally avo
 
 ## Review Summaries
 
-- Full game review summary: {"num_reviews":10,"review_score":8,"review_score_desc":"Very Positive","total_positive":179,"total_negative":14,"total_reviews":193}
+- Full game review summary: {"num_reviews":10,"review_score":8,"review_score_desc":"Very Positive","total_positive":181,"total_negative":14,"total_reviews":195}
 - Demo review summary: {"num_reviews":10,"review_score":8,"review_score_desc":"Very Positive","total_positive":140,"total_negative":3,"total_reviews":143}
 
 ## SteamCMD / Local Demo Acquisition Status

@@ -32,6 +32,6 @@ No related entities listed yet.
 
 ## Sources
 
-- [Steam community news/devlogs](https://steamcommunity.com/app/3232380/allnews/?l=english) — public_source, confidence high, source `steam-news-devlogs`. Official public Steam news and developer posts for launch, systems, updates, and devlogs.
-- [Steam community achievements page](https://steamcommunity.com/stats/3232380/achievements/?l=english) — public_source, confidence high, source `steam-full-achievements-page`. Public location unlock/completion achievement names and descriptions.
+- [Froggy Hates Snow release date revealed](https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1830797770242233) — public_source, confidence high, source `steam-release-date-news`. 2026-04-27 release-date and scope post.
+- [Steam community achievements page](https://steamcommunity.com/stats/3232380/achievements/?l=english) — public_source, confidence high, source `steam-full-achievements-page`. Public achievement names and descriptions.
 - [Xbox Wire developer interview](https://news.xbox.com/en-us/2026/05/05/froggy-hates-snow-interview/) — public_source, confidence medium, source `xbox-wire-interview`. Developer interview corroborating launch counts, snow tech, skill/tool variety, companions, and Peaceful Mode.

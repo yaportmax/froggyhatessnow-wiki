@@ -13,36 +13,20 @@
     "related_entities": [],
     "sources": [
       {
-        "source_id": "steam-full-store",
+        "source_id": "steam-launch-devlog",
         "type": "public_source",
-        "path_or_url": "https://store.steampowered.com/app/3232380/FROGGY_HATES_SNOW/",
-        "label": "Steam full-game store page",
+        "path_or_url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1831432155577514",
+        "label": "Devlog #7: What's New For Launch?",
         "confidence": "high",
-        "notes": "Official public Steam store listing."
+        "notes": "2026-05-04 launch devlog."
       },
       {
-        "source_id": "steam-demo-store",
+        "source_id": "xbox-wire-interview",
         "type": "public_source",
-        "path_or_url": "https://store.steampowered.com/app/4037600/FROGGY_HATES_SNOW_Demo/",
-        "label": "Steam demo store page",
-        "confidence": "high",
-        "notes": "Official public Steam demo listing."
-      },
-      {
-        "source_id": "steam-news-devlogs",
-        "type": "public_source",
-        "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
-        "label": "Steam community news/devlogs",
-        "confidence": "high",
-        "notes": "Official public Steam news and developer posts for launch, systems, updates, and devlogs."
-      },
-      {
-        "source_id": "steam-full-achievements-page",
-        "type": "public_source",
-        "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
-        "label": "Steam community achievements page",
-        "confidence": "high",
-        "notes": "The Animal Squad achievement mentions Penguin, Mole, and Owl."
+        "path_or_url": "https://news.xbox.com/en-us/2026/05/05/froggy-hates-snow-interview/",
+        "label": "Xbox Wire developer interview",
+        "confidence": "medium",
+        "notes": "Developer interview corroborating launch counts, snow tech, skill/tool variety, companions, and Peaceful Mode."
       }
     ],
     "verification_status": "Verified",
@@ -73,36 +57,20 @@
     "related_entities": [],
     "sources": [
       {
-        "source_id": "steam-full-store",
+        "source_id": "steam-launch-devlog",
         "type": "public_source",
-        "path_or_url": "https://store.steampowered.com/app/3232380/FROGGY_HATES_SNOW/",
-        "label": "Steam full-game store page",
+        "path_or_url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1831432155577514",
+        "label": "Devlog #7: What's New For Launch?",
         "confidence": "high",
-        "notes": "Official public Steam store listing."
+        "notes": "2026-05-04 launch devlog."
       },
       {
-        "source_id": "steam-demo-store",
+        "source_id": "xbox-wire-interview",
         "type": "public_source",
-        "path_or_url": "https://store.steampowered.com/app/4037600/FROGGY_HATES_SNOW_Demo/",
-        "label": "Steam demo store page",
-        "confidence": "high",
-        "notes": "Official public Steam demo listing."
-      },
-      {
-        "source_id": "steam-news-devlogs",
-        "type": "public_source",
-        "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
-        "label": "Steam community news/devlogs",
-        "confidence": "high",
-        "notes": "Official public Steam news and developer posts for launch, systems, updates, and devlogs."
-      },
-      {
-        "source_id": "steam-full-achievements-page",
-        "type": "public_source",
-        "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
-        "label": "Steam community achievements page",
-        "confidence": "high",
-        "notes": "The Animal Squad achievement mentions Penguin, Mole, and Owl."
+        "path_or_url": "https://news.xbox.com/en-us/2026/05/05/froggy-hates-snow-interview/",
+        "label": "Xbox Wire developer interview",
+        "confidence": "medium",
+        "notes": "Developer interview corroborating launch counts, snow tech, skill/tool variety, companions, and Peaceful Mode."
       }
     ],
     "verification_status": "Verified",
@@ -149,12 +117,12 @@
         "notes": "Official public Steam demo listing."
       },
       {
-        "source_id": "steam-news-devlogs",
+        "source_id": "steam-snow-devlog",
         "type": "public_source",
-        "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
-        "label": "Steam community news/devlogs",
+        "path_or_url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1827626365766540",
+        "label": "Devlog #5: How Snow Works in Froggy Hates Snow",
         "confidence": "high",
-        "notes": "Official public Steam news and developer posts for launch, systems, updates, and devlogs."
+        "notes": "2026-03-24 snow-system devlog."
       },
       {
         "source_id": "steam-full-achievements-page",
@@ -163,6 +131,14 @@
         "label": "Steam community achievements page",
         "confidence": "high",
         "notes": "The Animal Squad achievement mentions Penguin, Mole, and Owl."
+      },
+      {
+        "source_id": "xbox-wire-interview",
+        "type": "public_source",
+        "path_or_url": "https://news.xbox.com/en-us/2026/05/05/froggy-hates-snow-interview/",
+        "label": "Xbox Wire developer interview",
+        "confidence": "medium",
+        "notes": "Developer interview corroborating launch counts, snow tech, skill/tool variety, companions, and Peaceful Mode."
       }
     ],
     "verification_status": "Verified",
@@ -209,20 +185,20 @@
         "notes": "Official public Steam demo listing."
       },
       {
-        "source_id": "steam-news-devlogs",
-        "type": "public_source",
-        "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
-        "label": "Steam community news/devlogs",
-        "confidence": "high",
-        "notes": "Official public Steam news and developer posts for launch, systems, updates, and devlogs."
-      },
-      {
         "source_id": "steam-full-achievements-page",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
         "label": "Steam community achievements page",
         "confidence": "high",
         "notes": "The Animal Squad achievement mentions Penguin, Mole, and Owl."
+      },
+      {
+        "source_id": "xbox-wire-interview",
+        "type": "public_source",
+        "path_or_url": "https://news.xbox.com/en-us/2026/05/05/froggy-hates-snow-interview/",
+        "label": "Xbox Wire developer interview",
+        "confidence": "medium",
+        "notes": "Developer interview corroborating launch counts, snow tech, skill/tool variety, companions, and Peaceful Mode."
       }
     ],
     "verification_status": "Verified",
@@ -269,20 +245,20 @@
         "notes": "Official public Steam demo listing."
       },
       {
-        "source_id": "steam-news-devlogs",
-        "type": "public_source",
-        "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
-        "label": "Steam community news/devlogs",
-        "confidence": "high",
-        "notes": "Official public Steam news and developer posts for launch, systems, updates, and devlogs."
-      },
-      {
         "source_id": "steam-full-achievements-page",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
         "label": "Steam community achievements page",
         "confidence": "high",
         "notes": "The Animal Squad achievement mentions Penguin, Mole, and Owl."
+      },
+      {
+        "source_id": "xbox-wire-interview",
+        "type": "public_source",
+        "path_or_url": "https://news.xbox.com/en-us/2026/05/05/froggy-hates-snow-interview/",
+        "label": "Xbox Wire developer interview",
+        "confidence": "medium",
+        "notes": "Developer interview corroborating launch counts, snow tech, skill/tool variety, companions, and Peaceful Mode."
       }
     ],
     "verification_status": "Verified",
@@ -313,36 +289,20 @@
     "related_entities": [],
     "sources": [
       {
-        "source_id": "steam-full-store",
+        "source_id": "steam-launch-devlog",
         "type": "public_source",
-        "path_or_url": "https://store.steampowered.com/app/3232380/FROGGY_HATES_SNOW/",
-        "label": "Steam full-game store page",
+        "path_or_url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1831432155577514",
+        "label": "Devlog #7: What's New For Launch?",
         "confidence": "high",
-        "notes": "Official public Steam store listing."
+        "notes": "2026-05-04 launch devlog."
       },
       {
-        "source_id": "steam-demo-store",
+        "source_id": "xbox-wire-interview",
         "type": "public_source",
-        "path_or_url": "https://store.steampowered.com/app/4037600/FROGGY_HATES_SNOW_Demo/",
-        "label": "Steam demo store page",
-        "confidence": "high",
-        "notes": "Official public Steam demo listing."
-      },
-      {
-        "source_id": "steam-news-devlogs",
-        "type": "public_source",
-        "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
-        "label": "Steam community news/devlogs",
-        "confidence": "high",
-        "notes": "Official public Steam news and developer posts for launch, systems, updates, and devlogs."
-      },
-      {
-        "source_id": "steam-full-achievements-page",
-        "type": "public_source",
-        "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
-        "label": "Steam community achievements page",
-        "confidence": "high",
-        "notes": "The Animal Squad achievement mentions Penguin, Mole, and Owl."
+        "path_or_url": "https://news.xbox.com/en-us/2026/05/05/froggy-hates-snow-interview/",
+        "label": "Xbox Wire developer interview",
+        "confidence": "medium",
+        "notes": "Developer interview corroborating launch counts, snow tech, skill/tool variety, companions, and Peaceful Mode."
       }
     ],
     "verification_status": "Verified",

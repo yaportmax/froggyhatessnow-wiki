@@ -7,8 +7,12 @@ draft: false
 # Assemble the Team II
 
 :::tip[Verified]
-This entry is backed by at least one listed public source or safe metadata source.
+This entry is backed by listed public source or safe metadata evidence, with no tracked fields currently marked unverified.
 :::
+
+<img src="https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/3232380/1bbb38ad30784505fedab4f60794df1164004cea.jpg" alt="Steam achievement icon for Assemble the Team II" class="achievement-icon" loading="lazy" />
+
+_Public Steam achievement icon._
 
 Unlock 3 Characters
 
@@ -19,10 +23,10 @@ Unlock 3 Characters
 | Aliases | None listed |
 | Effect | Steam achievement condition: Unlock 3 Characters |
 | Unlock Method | Unlock 3 Characters |
-| Cost | Needs verification. |
+| Cost | Not applicable. |
 | Mode | Full game. |
-| Verified Fields | name, category, effect, unlock_method, mode |
-| Fields Needing Verification | cost |
+| Verified Fields | name, category, effect, unlock_method, cost, mode |
+| Fields Needing Verification | None listed |
 | Last Verified | Public Steam metadata accessed 2026-05-13 |
 | Notes | Global percentage is volatile; refresh before publishing exact percentage-driven claims. |
 | Steam Internal Achievement ID | assemble_the_team_2 |

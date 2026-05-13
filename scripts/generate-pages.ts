@@ -33,6 +33,7 @@ type Entity = {
   steam_internal_name?: string | null;
   steam_global_percent_api?: string | null;
   steam_community_percent?: string | null;
+  icon_url?: string;
 };
 
 type PublicSource = Source & {
@@ -43,6 +44,7 @@ type AchievementFact = {
   title: string;
   slug: string;
   description: string;
+  icon_url?: string;
   steam_internal_name: string | null;
   steam_global_percent_api: string | null;
   steam_community_percent: string;
@@ -97,6 +99,16 @@ type SteamSnapshot = {
     full_game: Record<string, unknown> | null;
     demo: Record<string, unknown> | null;
   };
+  external_source_checks?: Array<{
+    source_id: string;
+    label: string;
+    url: string;
+    status: number;
+    ok: boolean;
+    required_markers: string[];
+    matched_markers: string[];
+    notes: string;
+  }>;
   achievements: {
     community_page_url: string;
     global_percentages_api_url: string;
@@ -236,9 +248,15 @@ async function clearAstroContentCache() {
   ]);
 }
 
-function statusCallout(status: string) {
-  if (status === "Verified") return ":::tip[Verified]\nThis entry is backed by at least one listed public source or safe metadata source.\n:::\n\n";
-  if (status === "Inferred") return ":::caution[Inferred]\nThe name is public, but one or more type/effect details are inferred and need gameplay or metadata confirmation.\n:::\n\n";
+function statusCallout(entity: Entity) {
+  const unverifiedFields = entity.unverified_fields ?? [];
+  if (entity.verification_status === "Verified" && unverifiedFields.length === 0) {
+    return ":::tip[Verified]\nThis entry is backed by listed public source or safe metadata evidence, with no tracked fields currently marked unverified.\n:::\n\n";
+  }
+  if (entity.verification_status === "Verified") {
+    return `:::caution[Partially verified]\nThe listed sources verify this entry, but these fields still need confirmation: ${mdEscape(unverifiedFields.join(", "))}.\n:::\n\n`;
+  }
+  if (entity.verification_status === "Inferred") return ":::caution[Inferred]\nThe name is public, but one or more type/effect details are inferred and need gameplay or metadata confirmation.\n:::\n\n";
   return ":::danger[Needs verification]\nThis entry is a stub and should not be treated as confirmed.\n:::\n\n";
 }
 
@@ -390,6 +408,23 @@ function steamNewsFindings(snapshot: SteamSnapshot) {
   );
 }
 
+function externalSourceChecks(snapshot: SteamSnapshot) {
+  const checks = snapshot.external_source_checks ?? [];
+  if (checks.length === 0) return "";
+  return (
+    "## External Source Checks\n\n" +
+    "These non-Steam public pages are fetched during `npm run fetch:steam`; missing marker text fails the refresh so cited non-Steam claims do not silently rot.\n\n" +
+    "| Source | Status | Matched Markers | Notes |\n|---|---:|---|---|\n" +
+    checks
+      .map(
+        (check) =>
+          `| [${mdEscape(check.label)}](${check.url}) | ${check.status} | ${mdEscape(check.matched_markers.join(", "))} | ${mdEscape(check.notes)} |`
+      )
+      .join("\n") +
+    "\n\n"
+  );
+}
+
 function localMetadataStatus(snapshot: ExtractedMetadataSnapshot) {
   const filesScanned = typeof snapshot.filesScanned === "number" ? snapshot.filesScanned : 0;
   const readableCount = Array.isArray(snapshot.readable_files) ? snapshot.readable_files.length : 0;
@@ -465,6 +500,7 @@ function steamSnapshotPage(snapshot: SteamSnapshot, extractedMetadata: Extracted
     screenshotGrid(snapshot) +
     "## Reviews\n\n" +
     reviewSummaryTable(snapshot) +
+    externalSourceChecks(snapshot) +
     steamNewsFindings(snapshot) +
     localMetadataStatus(extractedMetadata) +
     "## Achievements\n\n" +
@@ -537,14 +573,15 @@ function achievementSourceMatrixPage(snapshot: SteamSnapshot) {
       })
       .join("\n") +
     "\n\n## Full Matrix\n\n" +
-    "| Achievement | Condition | Steam API ID | API % | Community % | Mentioned Entities |\n|---|---|---|---:|---:|---|\n" +
+    "| Achievement | Icon | Condition | Steam API ID | API % | Community % | Mentioned Entities |\n|---|---|---|---|---:|---:|---|\n" +
     facts
       .map((fact) => {
         const entities =
           fact.mentioned_entities.length > 0
             ? fact.mentioned_entities.map((entity) => `${entity.name} (${entity.category})`).join(", ")
             : "None parsed";
-        return `| [${mdEscape(fact.title)}](/generated/achievements/${fact.slug}/) | ${mdEscape(fact.description)} | ${fact.steam_internal_name ? inlineCode(fact.steam_internal_name) : "Missing"} | ${mdEscape(fact.steam_global_percent_api ?? "Missing")} | ${mdEscape(fact.steam_community_percent)} | ${mdEscape(entities)} |`;
+        const icon = fact.icon_url ? `<img src="${fact.icon_url}" alt="" class="achievement-icon achievement-icon--table" loading="lazy" />` : "Missing";
+        return `| [${mdEscape(fact.title)}](/generated/achievements/${fact.slug}/) | ${icon} | ${mdEscape(fact.description)} | ${fact.steam_internal_name ? inlineCode(fact.steam_internal_name) : "Missing"} | ${mdEscape(fact.steam_global_percent_api ?? "Missing")} | ${mdEscape(fact.steam_community_percent)} | ${mdEscape(entities)} |`;
       })
       .join("\n") +
     "\n"
@@ -597,7 +634,7 @@ function relatedList(entity: Entity, lookup: Map<string, Entity>) {
     .map((related) => {
       const target = lookup.get(related);
       if (!target) return `- ${related}`;
-      return `- [${target.name}](${linkForEntity(target)})`;
+      return `- [${target.name}](${linkForEntity(target)}) (${target.verification_status})`;
     })
     .join("\n")
     .concat("\n");
@@ -625,10 +662,15 @@ function categoryIndex(dataset: string, rows: Entity[]) {
 }
 
 function entityPage(entity: Entity, lookup: Map<string, Entity>) {
+  const achievementIcon =
+    entity.icon_url && entity.category === "achievements"
+      ? `<img src="${entity.icon_url}" alt="Steam achievement icon for ${mdEscape(entity.name)}" class="achievement-icon" loading="lazy" />\n\n_Public Steam achievement icon._\n\n`
+      : "";
   return (
     frontmatter(entity.name, entity.short_description) +
     `# ${entity.name}\n\n` +
-    statusCallout(entity.verification_status) +
+    statusCallout(entity) +
+    achievementIcon +
     `${entity.short_description}\n\n` +
     entityTable(entity) +
     "## Related\n\n" +

@@ -6,8 +6,8 @@ draft: false
 
 # Points of interest
 
-:::tip[Verified]
-This entry is backed by at least one listed public source or safe metadata source.
+:::caution[Partially verified]
+The listed sources verify this entry, but these fields still need confirmation: unlock_method, cost.
 :::
 
 Steam devlog #3 describes richer location points of interest in the updated demo/full-game direction.

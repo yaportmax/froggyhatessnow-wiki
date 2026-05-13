@@ -7,8 +7,12 @@ draft: false
 # The Animal Squad
 
 :::tip[Verified]
-This entry is backed by at least one listed public source or safe metadata source.
+This entry is backed by listed public source or safe metadata evidence, with no tracked fields currently marked unverified.
 :::
+
+<img src="https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/3232380/e4a87926d00adb628d458992170897da75009ad7.jpg" alt="Steam achievement icon for The Animal Squad" class="achievement-icon" loading="lazy" />
+
+_Public Steam achievement icon._
 
 Survive a run with Penguin, Mole & Owl
 
@@ -19,10 +23,10 @@ Survive a run with Penguin, Mole & Owl
 | Aliases | None listed |
 | Effect | Steam achievement condition: Survive a run with Penguin, Mole & Owl |
 | Unlock Method | Survive a run with Penguin, Mole & Owl |
-| Cost | Needs verification. |
+| Cost | Not applicable. |
 | Mode | Full game. |
-| Verified Fields | name, category, effect, unlock_method, mode |
-| Fields Needing Verification | cost |
+| Verified Fields | name, category, effect, unlock_method, cost, mode |
+| Fields Needing Verification | None listed |
 | Last Verified | Public Steam metadata accessed 2026-05-13 |
 | Notes | Global percentage is volatile; refresh before publishing exact percentage-driven claims. |
 | Steam Internal Achievement ID | the_animal_squad |
@@ -31,9 +35,9 @@ Survive a run with Penguin, Mole & Owl
 
 ## Related
 
-- [Penguin](/generated/companions/penguin/)
-- [Mole](/generated/companions/mole/)
-- [Owl](/generated/companions/owl/)
+- [Penguin](/generated/companions/penguin/) (Verified)
+- [Mole](/generated/companions/mole/) (Verified)
+- [Owl](/generated/companions/owl/) (Verified)
 
 ## Sources
 

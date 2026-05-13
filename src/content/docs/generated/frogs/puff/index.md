@@ -6,8 +6,8 @@ draft: false
 
 # Puff
 
-:::tip[Verified]
-This entry is backed by at least one listed public source or safe metadata source.
+:::caution[Partially verified]
+The listed sources verify this entry, but these fields still need confirmation: unlock_method, cost, mode.
 :::
 
 The Steam demo overhaul announcement identifies Puff as a playable character added to the updated demo.
@@ -28,7 +28,7 @@ The Steam demo overhaul announcement identifies Puff as a playable character add
 
 ## Related
 
-- [Poison Infusion](/generated/skills/poison-infusion/)
+- [Poison Infusion](/generated/skills/poison-infusion/) (Inferred)
 
 ## Sources
 

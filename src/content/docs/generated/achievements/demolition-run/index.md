@@ -7,8 +7,12 @@ draft: false
 # Demolition Run
 
 :::tip[Verified]
-This entry is backed by at least one listed public source or safe metadata source.
+This entry is backed by listed public source or safe metadata evidence, with no tracked fields currently marked unverified.
 :::
+
+<img src="https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/3232380/fefe74c85a716c758e4a532d746e6990f1b6e020.jpg" alt="Steam achievement icon for Demolition Run" class="achievement-icon" loading="lazy" />
+
+_Public Steam achievement icon._
 
 Survive a run with Dynamite, Air Bomb & Pickaxe
 
@@ -19,10 +23,10 @@ Survive a run with Dynamite, Air Bomb & Pickaxe
 | Aliases | None listed |
 | Effect | Steam achievement condition: Survive a run with Dynamite, Air Bomb & Pickaxe |
 | Unlock Method | Survive a run with Dynamite, Air Bomb & Pickaxe |
-| Cost | Needs verification. |
+| Cost | Not applicable. |
 | Mode | Full game. |
-| Verified Fields | name, category, effect, unlock_method, mode |
-| Fields Needing Verification | cost |
+| Verified Fields | name, category, effect, unlock_method, cost, mode |
+| Fields Needing Verification | None listed |
 | Last Verified | Public Steam metadata accessed 2026-05-13 |
 | Notes | Global percentage is volatile; refresh before publishing exact percentage-driven claims. |
 | Steam Internal Achievement ID | demolition_run |
@@ -31,9 +35,9 @@ Survive a run with Dynamite, Air Bomb & Pickaxe
 
 ## Related
 
-- [Dynamite](/generated/tools/dynamite/)
-- [Air Bomb](/generated/tools/air-bomb/)
-- [Pickaxe](/generated/tools/pickaxe/)
+- [Dynamite](/generated/tools/dynamite/) (Verified)
+- [Air Bomb](/generated/tools/air-bomb/) (Verified)
+- [Pickaxe](/generated/tools/pickaxe/) (Verified)
 
 ## Sources
 
