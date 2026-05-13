@@ -46,7 +46,7 @@ Porkbun documentation points the manual account-contact path at `ACCOUNT` -> `Se
 
 If the account verification UI does not clear the block, use `notes/porkbun-verification-support.md` to contact Porkbun support without exposing API keys, passwords, payment details, SMS codes, email verification codes, or ID documents.
 
-Alternative registrar fallback: Vercel CLI quotes `froggyhatessnow.wiki` at `$2.99` purchase / `$23` renewal. `npm run domain:vercel-buy -- --confirm-financial-purchase --max-purchase-usd=2.99 --max-renewal-usd=23` wraps the purchase with a fresh price check and hard caps. This is a financial purchase path; run it only after explicit human approval. After a Vercel purchase and DNS propagation, run `npm run domain:finish:vercel-post-purchase`; it verifies Vercel/DNS readiness, switches `astro.config.mjs`, validates, builds, commits/pushes, deploys, and audits. See `notes/domain-options.md`.
+Alternative registrar fallback: Vercel CLI still quotes `froggyhatessnow.wiki` at `$2.99` purchase / `$23` renewal / `$23` transfer as of the fresh read-only 2026-05-13 09:33 PDT check. `npm run domain:vercel-buy -- --confirm-financial-purchase --max-purchase-usd=2.99 --max-renewal-usd=23` wraps the purchase with a fresh price check and hard caps. This is a financial purchase path; run it only after explicit human approval. After a Vercel purchase and DNS propagation, run `npm run domain:finish:vercel-post-purchase`; it verifies Vercel/DNS readiness, switches `astro.config.mjs`, validates, builds, commits/pushes, deploys, and audits. See `notes/domain-options.md`.
 
 Run:
 

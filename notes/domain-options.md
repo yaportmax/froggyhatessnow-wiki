@@ -38,6 +38,8 @@ Read-only Vercel price checks on 2026-05-13:
 | `froggyhatessnow.net` | $13.50 | $13.50 | Exact title, less wiki-specific. |
 | `froggyhatessnow.gg` | n/a | n/a | Vercel CLI reported the TLD is not supported for price lookup. |
 
+A fresh read-only Vercel fallback quote at 2026-05-13 09:33 PDT still reports `froggyhatessnow.wiki` at `$2.99` purchase / `$23` renewal / `$23` transfer for a 1-year term. No purchase was made.
+
 If Vercel registration is approved, the command shape is:
 
 ```bash
