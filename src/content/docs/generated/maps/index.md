@@ -12,5 +12,5 @@ Status counts: Verified: 2.
 
 | Name | Status | Summary |
 |---|---|---|
-| [Locations](locations/) | Verified | Achievements refer to unlocking and fully completing locations. |
+| [Locations](locations/) | Verified | Steam news confirms 16 snow-covered, treasure-filled, anomaly-hiding locations. |
 | [Snowy desert](snowy-desert/) | Verified | The official Steam description places the survival loop in a hostile snowy desert. |

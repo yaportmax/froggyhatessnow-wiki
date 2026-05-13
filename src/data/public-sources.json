@@ -48,6 +48,54 @@
     "notes": "Public no-key endpoint for internal achievement ids and volatile global percentages."
   },
   {
+    "id": "steam-news-devlogs",
+    "type": "public_source",
+    "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
+    "label": "Steam community news/devlogs",
+    "confidence": "high",
+    "notes": "Official public Steam news/devlog stream used for launch counts, named mechanics, named skills/tools/companions, update notes, and system descriptions."
+  },
+  {
+    "id": "steam-release-date-news",
+    "type": "public_source",
+    "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
+    "label": "Steam release-date news post",
+    "confidence": "high",
+    "notes": "All-news page includes the public launch-count post: 10 playable frogs, 16 locations, 60+ skills/tools/attacks/companions, and demo progress carryover."
+  },
+  {
+    "id": "steam-launch-devlog",
+    "type": "public_source",
+    "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
+    "label": "Steam launch devlog",
+    "confidence": "high",
+    "notes": "All-news page includes launch additions such as movement skills, robotic helpers, projectile skills, character leveling, artifact upgrades, status effects, roll upgrades, and skill banishing."
+  },
+  {
+    "id": "steam-anomalous-zones-devlog",
+    "type": "public_source",
+    "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
+    "label": "Steam anomalous zones devlog",
+    "confidence": "high",
+    "notes": "All-news page includes anomalous-zone challenge types, hazards, Blue Gems, artifacts, and artifact rarity tiers."
+  },
+  {
+    "id": "steam-snow-devlog",
+    "type": "public_source",
+    "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
+    "label": "Steam snow systems devlog",
+    "confidence": "high",
+    "notes": "All-news page includes snow heightmap behavior, snow density/layers, and named snow or ice tools."
+  },
+  {
+    "id": "steam-post-launch-update",
+    "type": "public_source",
+    "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
+    "label": "Steam first post-launch update",
+    "confidence": "high",
+    "notes": "All-news page includes first update changes for readability, boss projectile speed, projectile defense skills, Zippy, early unlocks, location progression, and UI scale."
+  },
+  {
     "id": "steam-full-review-summary",
     "type": "public_source",
     "path_or_url": "https://store.steampowered.com/appreviews/3232380?json=1&language=all&filter=summary&purchase_type=all&num_per_page=0",

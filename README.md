@@ -9,12 +9,12 @@ This project is built with Astro Starlight and seeded from public Steam metadata
 - Full game Steam app ID: `3232380`
 - Demo Steam app ID: `4037600`
 - Parsed public achievements: `42`
-- Generated entity pages: `114`
-- Generated static HTML pages: `137`
+- Generated entity pages: `141`
+- Generated static HTML pages: `164`
 - Verification statuses used: `Verified`, `Inferred`, `Needs verification`
 - First-class source pages: `/steam-source-snapshot/` and `/source-ledger/`
 
-The strongest current source is Steam/public metadata. The source snapshot records Steam appdetails, review summaries, public achievement rows, Steam media URLs, volatile price/review/achievement data, and explicit research gaps. Local demo file extraction is blocked in this shell; see `notes/public-research.md` and `notes/extracted-metadata.md`.
+The strongest current source is Steam/public metadata. The source snapshot records Steam appdetails, review summaries, public achievement rows, Steam media URLs, Steam news/devlog claims, volatile price/review/achievement data, and explicit research gaps. Steam news/devlogs now confirm 10 playable frogs, 16 locations, 60+ skills/tools/attacks/companions, demo progress carryover, Zippy, several launch/update skills, robotic helpers, Blue Gems, artifact rarity tiers, and snow-system mechanics. Local demo file extraction is blocked in this shell; see `notes/public-research.md` and `notes/extracted-metadata.md`.
 
 ## Commands
 
@@ -26,6 +26,7 @@ npm run validate
 npm run generate
 npm run build
 npm run dev
+npm run domain:check
 ```
 
 ## Data Rules
@@ -68,6 +69,13 @@ The site builds as a static Astro/Starlight site.
 
 Recommended domain from research: `froggyhatessnow.wiki`.
 
-Domain registration was attempted through the Porkbun API and blocked by account verification: Porkbun requires the account email and phone number to be verified before the API can register the domain. See `notes/domain-options.md`.
+Domain registration was attempted through the Porkbun API and blocked by account verification: Porkbun requires the account email and phone number to be verified before the API can register the domain. The Vercel project already has `froggyhatessnow.wiki` and `www.froggyhatessnow.wiki` attached, ready for DNS after purchase. See `notes/domain-options.md`.
+
+After the Porkbun account is verified:
+
+```bash
+npm run domain:register -- --max-cost-usd=2.06
+npm run domain:dns
+```
 
 See `notes/domain-options.md` for pricing and next steps.

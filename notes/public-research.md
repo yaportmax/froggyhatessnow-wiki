@@ -12,6 +12,7 @@ This note summarizes public metadata used to seed the wiki. It intentionally avo
 - Steam appdetails API, demo: https://store.steampowered.com/api/appdetails?appids=4037600&cc=us&l=english
 - Steam community achievements page: https://steamcommunity.com/stats/3232380/achievements/?l=english
 - Steam global achievement percentages API: https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=3232380&format=json
+- Steam community news/devlogs: https://steamcommunity.com/app/3232380/allnews/?l=english
 
 ## Game-Level Facts
 
@@ -32,12 +33,18 @@ This note summarizes public metadata used to seed the wiki. It intentionally avo
 - Demo screenshots listed by appdetails: 13
 - Full-game languages: English * , French * , German * , Spanish - Spain * , Japanese * , Korean * , Polish * , Portuguese - Brazil * , Simplified Chinese * , Ukrainian * , Turkish * , Traditional Chinese * * languages with full audio support
 - Demo languages: English * , French * , Italian * , German * , Spanish - Spain * , Ukrainian * * languages with full audio support
+- Playable frogs confirmed by Steam news/devlogs: 10
+- Locations confirmed by Steam news/devlogs: 16
+- Minimum combined skills/tools/attacks/companions confirmed by Steam news/devlogs: 60+
+- Demo progress carryover confirmed by Steam news/devlogs: yes
 
 ## Public Gameplay Concepts
 
 - Verified from official Steam copy: digging through snow, warmth/freezing as survival pressure, gems, keys, treasure chests, artifacts, anomaly zones, escape door, bosses, enemies, Peaceful Mode, upgrades, tools, companions, and a snowy-desert setting.
+- Verified from official Steam news/devlogs: 10 playable frogs, 16 locations, 60+ skills/tools/attacks/companions, demo progress carryover, launch movement/projectile skills, robotic helpers, elemental status effects, anomalous-zone rewards, snow heightmap behavior, and first post-launch update changes.
 - Verified named companions/tools/items from public copy or achievements include Penguin, Mole, Owl, Map, Shovel, Cart, Scanner, Locator, Pickaxe, Dynamite, Air Bomb, Flamethrower, Heater Sled, Gloves, Hot Tea, Energy Drink, Poison Flask, Frost Bomb, and Flashbang.
-- Exact stats, unlock costs, named map roster, named boss roster, named enemy roster, and individual frog/character roster remain Needs verification unless local metadata or gameplay notes confirm them.
+- Steam news/devlog confirmed terms added to the wiki: Zippy, Glider, Snowball Roll, Leap Chain, Delivery Bot, Flamethrower Bot, Scanner Drone, Piercing Icicles, Fireworks, Snowball Volley, Energy Wave, Destructive Field, Invincible Roll, Armor, Drill, Salt Sack, Snowblower, Blue Gems, Common artifacts, Uncommon artifacts, Rare artifacts, Legendary artifacts.
+- Exact stats, unlock costs, complete named map roster, named boss roster, named enemy roster, and the remaining frog/character roster remain Needs verification unless local metadata or gameplay notes confirm them.
 
 ## Achievements
 

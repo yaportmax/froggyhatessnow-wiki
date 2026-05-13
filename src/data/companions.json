@@ -1,12 +1,12 @@
 [
   {
-    "id": "mole",
-    "slug": "mole",
-    "name": "Mole",
+    "id": "delivery-bot",
+    "slug": "delivery-bot",
+    "name": "Delivery Bot",
     "aliases": [],
     "category": "companions",
-    "short_description": "Mole is listed publicly as a companion or ally type.",
-    "effect": "Aids the player; exact behavior needs verification.",
+    "short_description": "Delivery Bot is listed publicly as a companion or ally type.",
+    "effect": "A robotic helper added for launch, according to the launch devlog.",
     "unlock_method": "Needs verification.",
     "cost": "Needs verification.",
     "mode": "Needs verification.",
@@ -28,6 +28,13 @@
       },
       {
         "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
+        "label": "Steam community news/devlogs",
+        "confidence": "high",
+        "notes": "Official public Steam news and developer posts for launch, systems, updates, and devlogs."
+      },
+      {
+        "type": "public_source",
         "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
         "label": "Steam community achievements page",
         "confidence": "high",
@@ -36,7 +43,99 @@
     ],
     "verification_status": "Verified",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
-    "notes": "The official store copy uses plural animal names; achievement text uses singular names."
+    "notes": "Specific behavior, rarity, and unlock details need gameplay verification."
+  },
+  {
+    "id": "flamethrower-bot",
+    "slug": "flamethrower-bot",
+    "name": "Flamethrower Bot",
+    "aliases": [],
+    "category": "companions",
+    "short_description": "Flamethrower Bot is listed publicly as a companion or ally type.",
+    "effect": "A robotic helper added for launch, according to the launch devlog.",
+    "unlock_method": "Needs verification.",
+    "cost": "Needs verification.",
+    "mode": "Needs verification.",
+    "related_entities": [],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://store.steampowered.com/app/3232380/FROGGY_HATES_SNOW/",
+        "label": "Steam full-game store page",
+        "confidence": "high",
+        "notes": "Official public Steam store listing."
+      },
+      {
+        "type": "public_source",
+        "path_or_url": "https://store.steampowered.com/app/4037600/FROGGY_HATES_SNOW_Demo/",
+        "label": "Steam demo store page",
+        "confidence": "high",
+        "notes": "Official public Steam demo listing."
+      },
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
+        "label": "Steam community news/devlogs",
+        "confidence": "high",
+        "notes": "Official public Steam news and developer posts for launch, systems, updates, and devlogs."
+      },
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
+        "label": "Steam community achievements page",
+        "confidence": "high",
+        "notes": "The Animal Squad achievement mentions Penguin, Mole, and Owl."
+      }
+    ],
+    "verification_status": "Verified",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Specific behavior, rarity, and unlock details need gameplay verification."
+  },
+  {
+    "id": "mole",
+    "slug": "mole",
+    "name": "Mole",
+    "aliases": [],
+    "category": "companions",
+    "short_description": "Mole is listed publicly as a companion or ally type.",
+    "effect": "A helper that digs tunnels automatically, according to the snow devlog.",
+    "unlock_method": "Needs verification.",
+    "cost": "Needs verification.",
+    "mode": "Needs verification.",
+    "related_entities": [],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://store.steampowered.com/app/3232380/FROGGY_HATES_SNOW/",
+        "label": "Steam full-game store page",
+        "confidence": "high",
+        "notes": "Official public Steam store listing."
+      },
+      {
+        "type": "public_source",
+        "path_or_url": "https://store.steampowered.com/app/4037600/FROGGY_HATES_SNOW_Demo/",
+        "label": "Steam demo store page",
+        "confidence": "high",
+        "notes": "Official public Steam demo listing."
+      },
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
+        "label": "Steam community news/devlogs",
+        "confidence": "high",
+        "notes": "Official public Steam news and developer posts for launch, systems, updates, and devlogs."
+      },
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
+        "label": "Steam community achievements page",
+        "confidence": "high",
+        "notes": "The Animal Squad achievement mentions Penguin, Mole, and Owl."
+      }
+    ],
+    "verification_status": "Verified",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Specific behavior, rarity, and unlock details need gameplay verification."
   },
   {
     "id": "owl",
@@ -45,7 +144,7 @@
     "aliases": [],
     "category": "companions",
     "short_description": "Owl is listed publicly as a companion or ally type.",
-    "effect": "Aids the player; exact behavior needs verification.",
+    "effect": "A companion or ally type; exact behavior needs verification.",
     "unlock_method": "Needs verification.",
     "cost": "Needs verification.",
     "mode": "Needs verification.",
@@ -67,6 +166,13 @@
       },
       {
         "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
+        "label": "Steam community news/devlogs",
+        "confidence": "high",
+        "notes": "Official public Steam news and developer posts for launch, systems, updates, and devlogs."
+      },
+      {
+        "type": "public_source",
         "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
         "label": "Steam community achievements page",
         "confidence": "high",
@@ -75,7 +181,7 @@
     ],
     "verification_status": "Verified",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
-    "notes": "The official store copy uses plural animal names; achievement text uses singular names."
+    "notes": "Specific behavior, rarity, and unlock details need gameplay verification."
   },
   {
     "id": "penguin",
@@ -84,7 +190,7 @@
     "aliases": [],
     "category": "companions",
     "short_description": "Penguin is listed publicly as a companion or ally type.",
-    "effect": "Aids the player; exact behavior needs verification.",
+    "effect": "A companion or ally type; exact behavior needs verification.",
     "unlock_method": "Needs verification.",
     "cost": "Needs verification.",
     "mode": "Needs verification.",
@@ -106,6 +212,13 @@
       },
       {
         "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
+        "label": "Steam community news/devlogs",
+        "confidence": "high",
+        "notes": "Official public Steam news and developer posts for launch, systems, updates, and devlogs."
+      },
+      {
+        "type": "public_source",
         "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
         "label": "Steam community achievements page",
         "confidence": "high",
@@ -114,6 +227,52 @@
     ],
     "verification_status": "Verified",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
-    "notes": "The official store copy uses plural animal names; achievement text uses singular names."
+    "notes": "Specific behavior, rarity, and unlock details need gameplay verification."
+  },
+  {
+    "id": "scanner-drone",
+    "slug": "scanner-drone",
+    "name": "Scanner Drone",
+    "aliases": [],
+    "category": "companions",
+    "short_description": "Scanner Drone is listed publicly as a companion or ally type.",
+    "effect": "A robotic helper added for launch, according to the launch devlog.",
+    "unlock_method": "Needs verification.",
+    "cost": "Needs verification.",
+    "mode": "Needs verification.",
+    "related_entities": [],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://store.steampowered.com/app/3232380/FROGGY_HATES_SNOW/",
+        "label": "Steam full-game store page",
+        "confidence": "high",
+        "notes": "Official public Steam store listing."
+      },
+      {
+        "type": "public_source",
+        "path_or_url": "https://store.steampowered.com/app/4037600/FROGGY_HATES_SNOW_Demo/",
+        "label": "Steam demo store page",
+        "confidence": "high",
+        "notes": "Official public Steam demo listing."
+      },
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
+        "label": "Steam community news/devlogs",
+        "confidence": "high",
+        "notes": "Official public Steam news and developer posts for launch, systems, updates, and devlogs."
+      },
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
+        "label": "Steam community achievements page",
+        "confidence": "high",
+        "notes": "The Animal Squad achievement mentions Penguin, Mole, and Owl."
+      }
+    ],
+    "verification_status": "Verified",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Specific behavior, rarity, and unlock details need gameplay verification."
   }
 ]

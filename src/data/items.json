@@ -6,7 +6,7 @@
     "aliases": [],
     "category": "items",
     "short_description": "Artifacts are mentioned by official Steam copy or public achievements.",
-    "effect": "Needs verification.",
+    "effect": "Permanent build-expanding items granted by anomalous zones; devlog lists Common, Uncommon, Rare, and Legendary rarity tiers.",
     "unlock_method": "Needs verification.",
     "cost": "Needs verification.",
     "mode": "Needs verification.",
@@ -25,6 +25,59 @@
         "label": "Steam demo store page",
         "confidence": "high",
         "notes": "Official public Steam demo listing."
+      },
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
+        "label": "Steam community news/devlogs",
+        "confidence": "high",
+        "notes": "Official public Steam news and developer posts for launch, systems, updates, and devlogs."
+      },
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
+        "label": "Steam community achievements page",
+        "confidence": "high",
+        "notes": "Public achievement names and descriptions."
+      }
+    ],
+    "verification_status": "Verified",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Amounts, drop rules, and exact use cases need verification."
+  },
+  {
+    "id": "blue-gems",
+    "slug": "blue-gems",
+    "name": "Blue Gems",
+    "aliases": [],
+    "category": "items",
+    "short_description": "Blue Gems are mentioned by official Steam copy or public achievements.",
+    "effect": "Meta currency granted by anomalous zones and used to unlock new characters.",
+    "unlock_method": "Needs verification.",
+    "cost": "Needs verification.",
+    "mode": "Needs verification.",
+    "related_entities": [],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://store.steampowered.com/app/3232380/FROGGY_HATES_SNOW/",
+        "label": "Steam full-game store page",
+        "confidence": "high",
+        "notes": "Official public Steam store listing."
+      },
+      {
+        "type": "public_source",
+        "path_or_url": "https://store.steampowered.com/app/4037600/FROGGY_HATES_SNOW_Demo/",
+        "label": "Steam demo store page",
+        "confidence": "high",
+        "notes": "Official public Steam demo listing."
+      },
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
+        "label": "Steam community news/devlogs",
+        "confidence": "high",
+        "notes": "Official public Steam news and developer posts for launch, systems, updates, and devlogs."
       },
       {
         "type": "public_source",
@@ -141,7 +194,7 @@
     "aliases": [],
     "category": "items",
     "short_description": "Gems are mentioned by official Steam copy or public achievements.",
-    "effect": "Needs verification.",
+    "effect": "General resource mentioned by official Steam copy.",
     "unlock_method": "Needs verification.",
     "cost": "Needs verification.",
     "mode": "Needs verification.",
@@ -160,6 +213,13 @@
         "label": "Steam demo store page",
         "confidence": "high",
         "notes": "Official public Steam demo listing."
+      },
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
+        "label": "Steam community news/devlogs",
+        "confidence": "high",
+        "notes": "Official public Steam news and developer posts for launch, systems, updates, and devlogs."
       },
       {
         "type": "public_source",
@@ -212,7 +272,7 @@
     "aliases": [],
     "category": "items",
     "short_description": "Keys are mentioned by official Steam copy or public achievements.",
-    "effect": "Needs verification.",
+    "effect": "Used for the escape door and treasure chests, according to public Steam copy.",
     "unlock_method": "Needs verification.",
     "cost": "Needs verification.",
     "mode": "Needs verification.",
@@ -231,6 +291,13 @@
         "label": "Steam demo store page",
         "confidence": "high",
         "notes": "Official public Steam demo listing."
+      },
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
+        "label": "Steam community news/devlogs",
+        "confidence": "high",
+        "notes": "Official public Steam news and developer posts for launch, systems, updates, and devlogs."
       },
       {
         "type": "public_source",
@@ -283,7 +350,7 @@
     "aliases": [],
     "category": "items",
     "short_description": "Traps are mentioned by official Steam copy or public achievements.",
-    "effect": "Needs verification.",
+    "effect": "Hazard concept mentioned by official Steam copy.",
     "unlock_method": "Needs verification.",
     "cost": "Needs verification.",
     "mode": "Needs verification.",
@@ -302,6 +369,13 @@
         "label": "Steam demo store page",
         "confidence": "high",
         "notes": "Official public Steam demo listing."
+      },
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
+        "label": "Steam community news/devlogs",
+        "confidence": "high",
+        "notes": "Official public Steam news and developer posts for launch, systems, updates, and devlogs."
       },
       {
         "type": "public_source",
@@ -322,7 +396,7 @@
     "aliases": [],
     "category": "items",
     "short_description": "Treasure chests are mentioned by official Steam copy or public achievements.",
-    "effect": "Needs verification.",
+    "effect": "Reward container mentioned by public Steam copy and anomalous-zone devlog.",
     "unlock_method": "Needs verification.",
     "cost": "Needs verification.",
     "mode": "Needs verification.",
@@ -341,6 +415,13 @@
         "label": "Steam demo store page",
         "confidence": "high",
         "notes": "Official public Steam demo listing."
+      },
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
+        "label": "Steam community news/devlogs",
+        "confidence": "high",
+        "notes": "Official public Steam news and developer posts for launch, systems, updates, and devlogs."
       },
       {
         "type": "public_source",
@@ -361,7 +442,7 @@
     "aliases": [],
     "category": "items",
     "short_description": "Treasures are mentioned by official Steam copy or public achievements.",
-    "effect": "Needs verification.",
+    "effect": "General hidden reward concept mentioned by official Steam copy.",
     "unlock_method": "Needs verification.",
     "cost": "Needs verification.",
     "mode": "Needs verification.",
@@ -380,6 +461,13 @@
         "label": "Steam demo store page",
         "confidence": "high",
         "notes": "Official public Steam demo listing."
+      },
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
+        "label": "Steam community news/devlogs",
+        "confidence": "high",
+        "notes": "Official public Steam news and developer posts for launch, systems, updates, and devlogs."
       },
       {
         "type": "public_source",

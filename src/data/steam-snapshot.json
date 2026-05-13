@@ -1,6 +1,6 @@
 {
   "accessed_date": "2026-05-13",
-  "generated_at": "2026-05-13T10:12:51.063Z",
+  "generated_at": "2026-05-13T10:33:31.198Z",
   "source_policy": [
     "Prefer official public Steam endpoints and pages for game metadata.",
     "Do not copy raw long descriptions, review text, proprietary assets, binaries, source code, or decompiled content.",
@@ -17,6 +17,7 @@
     "full_achievements_page": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
     "full_global_achievement_percentages": "https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=3232380&format=json",
     "demo_global_achievement_percentages": "https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=4037600&format=json",
+    "steam_news_devlogs": "https://steamcommunity.com/app/3232380/allnews/?l=english",
     "publisher_page": "https://digitalbandidos.com/games/froggy-hates-snow/",
     "steamdb_full": "https://steamdb.info/app/3232380/",
     "steamdb_demo": "https://steamdb.info/app/4037600/"
@@ -389,11 +390,120 @@
         "unlocks"
       ],
       "notes": "Achievement percentages are volatile and should be refreshed before percentage-based claims."
+    },
+    {
+      "claim": "Steam news confirms 10 playable frogs, 16 locations, 60+ skills/tools/attacks/companions, and demo progress carryover.",
+      "source_ids": [
+        "steam-release-date-news",
+        "steam-news-devlogs"
+      ],
+      "confidence": "high",
+      "wiki_targets": [
+        "frogs",
+        "maps",
+        "skills",
+        "tools",
+        "companions",
+        "guides"
+      ],
+      "notes": "Use these as scope counts only; the complete named roster still needs verification."
+    },
+    {
+      "claim": "Steam devlogs confirm specific launch additions including Glider, Snowball Roll, Leap Chain, Delivery Bot, Flamethrower Bot, Scanner Drone, Piercing Icicles, Fireworks, and Snowball Volley.",
+      "source_ids": [
+        "steam-launch-devlog",
+        "steam-news-devlogs"
+      ],
+      "confidence": "high",
+      "wiki_targets": [
+        "skills",
+        "companions",
+        "guides"
+      ],
+      "notes": "Names and broad categories are public; exact stats, rarity, and unlock requirements need gameplay verification."
+    },
+    {
+      "claim": "Steam devlogs confirm anomalous zones as short challenge areas with rewards including Blue Gems and artifacts in Common, Uncommon, Rare, and Legendary tiers.",
+      "source_ids": [
+        "steam-anomalous-zones-devlog",
+        "steam-news-devlogs"
+      ],
+      "confidence": "high",
+      "wiki_targets": [
+        "items",
+        "glossary",
+        "guides"
+      ],
+      "notes": "Challenge examples are public; exact layouts, timers, and reward quantities need verification."
+    },
+    {
+      "claim": "Steam snow-system devlog confirms snow as an interactable heightmap-like material with density/layers and named digging or ice tools.",
+      "source_ids": [
+        "steam-snow-devlog",
+        "steam-news-devlogs"
+      ],
+      "confidence": "high",
+      "wiki_targets": [
+        "tools",
+        "glossary",
+        "guides"
+      ],
+      "notes": "Use for mechanics scaffolding; exact tool stats and upgrade scaling need verification."
+    },
+    {
+      "claim": "The first post-launch Steam update confirms Zippy, Invincible Roll, Energy Wave, Destructive Field, Armor, and early location progression changes.",
+      "source_ids": [
+        "steam-post-launch-update",
+        "steam-news-devlogs"
+      ],
+      "confidence": "high",
+      "wiki_targets": [
+        "frogs",
+        "skills",
+        "maps",
+        "guides"
+      ],
+      "notes": "This is a post-launch state source and should be refreshed when later patch notes are added."
     }
   ],
+  "steam_news_findings": {
+    "source_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
+    "playable_frogs_count": 10,
+    "locations_count": 16,
+    "minimum_combined_skills_tools_attacks_companions": 60,
+    "demo_progress_carries_over": true,
+    "confirmed_terms": [
+      "Zippy",
+      "Glider",
+      "Snowball Roll",
+      "Leap Chain",
+      "Delivery Bot",
+      "Flamethrower Bot",
+      "Scanner Drone",
+      "Piercing Icicles",
+      "Fireworks",
+      "Snowball Volley",
+      "Energy Wave",
+      "Destructive Field",
+      "Invincible Roll",
+      "Armor",
+      "Drill",
+      "Salt Sack",
+      "Snowblower",
+      "Blue Gems",
+      "Common artifacts",
+      "Uncommon artifacts",
+      "Rare artifacts",
+      "Legendary artifacts"
+    ],
+    "notes": [
+      "Steam news/devlog text is treated as public first-party source material, but exact numeric balance values still need gameplay or patch-note verification.",
+      "Counts from news/devlogs establish scope; they do not provide complete names for every frog, location, skill, tool, attack, or companion."
+    ]
+  },
   "research_gaps": [
-    "Exact character/frog roster beyond Froggy and achievement-count thresholds.",
-    "Named map/location roster, map unlock order, and location-specific boss names.",
+    "Exact character/frog roster beyond Froggy, Zippy, and the verified 10-playable-frog count.",
+    "Named map/location roster, map unlock order beyond public thresholds/update notes, and location-specific boss names.",
     "Named enemy roster and enemy behavior.",
     "Exact stats, costs, cooldowns, drop rates, and upgrade tree order.",
     "Whether demo metadata differs from the released full game after SteamCMD/local file extraction works.",

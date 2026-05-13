@@ -1,28 +1,28 @@
 ---
 title: "Piercing Icicles"
-description: "Piercing Icicles is named in a public achievement condition."
+description: "Piercing Icicles is named in official Steam news or devlog copy."
 draft: false
 ---
 
 # Piercing Icicles
 
-:::caution[Inferred]
-The name is public, but one or more type/effect details are inferred and need gameplay or metadata confirmation.
+:::tip[Verified]
+This entry is backed by at least one listed public source or safe metadata source.
 :::
 
-Piercing Icicles is named in a public achievement condition.
+Piercing Icicles is named in official Steam news or devlog copy.
 
 | Field | Value |
 |---|---|
-| Status | Inferred |
+| Status | Verified |
 | Category | skills |
 | Aliases | None listed |
-| Effect | Needs verification. |
+| Effect | Projectile-based snow digging skill added for launch. |
 | Unlock Method | Needs verification. |
 | Cost | Needs verification. |
 | Mode | Needs verification. |
 | Last Verified | Public Steam metadata accessed 2026-05-13 |
-| Notes | Name is public; category/effect details may need gameplay or local metadata verification. |
+| Notes | Exact rarity, cooldown, scaling, and unlock details need gameplay verification. |
 
 ## Related
 
@@ -30,5 +30,4 @@ No related entities listed yet.
 
 ## Sources
 
-- [Steam community achievements page](https://steamcommunity.com/stats/3232380/achievements/?l=english) — public_source, confidence high. Public achievement display names and descriptions.
-- [Achievement condition classification](local inference from public-source wording) — inferred, confidence medium. Classified as skills from public achievement wording; exact in-game type needs verification.
+- [Steam community news/devlogs](https://steamcommunity.com/app/3232380/allnews/?l=english) — public_source, confidence high. Official public Steam news and developer posts for launch, systems, updates, and devlogs.

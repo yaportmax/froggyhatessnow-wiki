@@ -5,13 +5,20 @@
     "name": "Locations",
     "aliases": [],
     "category": "maps",
-    "short_description": "Achievements refer to unlocking and fully completing locations.",
-    "effect": "Locations appear to structure progression.",
+    "short_description": "Steam news confirms 16 snow-covered, treasure-filled, anomaly-hiding locations.",
+    "effect": "Locations structure progression and completion; exact map names remain unverified.",
     "unlock_method": "Achievements mention unlock thresholds at 1, 5, and 15 locations.",
     "cost": "Needs verification.",
     "mode": "Needs verification.",
     "related_entities": [],
     "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
+        "label": "Steam community news/devlogs",
+        "confidence": "high",
+        "notes": "Official public Steam news and developer posts for launch, systems, updates, and devlogs."
+      },
       {
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
@@ -50,6 +57,13 @@
         "label": "Steam demo store page",
         "confidence": "high",
         "notes": "Official public Steam demo listing."
+      },
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
+        "label": "Steam community news/devlogs",
+        "confidence": "high",
+        "notes": "Official public Steam news and developer posts for launch, systems, updates, and devlogs."
       }
     ],
     "verification_status": "Verified",

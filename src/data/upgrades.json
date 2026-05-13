@@ -1,5 +1,51 @@
 [
   {
+    "id": "artifact-upgrades",
+    "slug": "artifact-upgrades",
+    "name": "Artifact upgrades",
+    "aliases": [],
+    "category": "upgrades",
+    "short_description": "Artifact upgrades is a public upgrade concept from Steam copy or achievements.",
+    "effect": "Needs verification.",
+    "unlock_method": "Needs verification.",
+    "cost": "Needs verification.",
+    "mode": "Needs verification.",
+    "related_entities": [],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://store.steampowered.com/app/3232380/FROGGY_HATES_SNOW/",
+        "label": "Steam full-game store page",
+        "confidence": "high",
+        "notes": "Official public Steam store listing."
+      },
+      {
+        "type": "public_source",
+        "path_or_url": "https://store.steampowered.com/app/4037600/FROGGY_HATES_SNOW_Demo/",
+        "label": "Steam demo store page",
+        "confidence": "high",
+        "notes": "Official public Steam demo listing."
+      },
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
+        "label": "Steam community news/devlogs",
+        "confidence": "high",
+        "notes": "Official public Steam news and developer posts for launch, systems, updates, and devlogs."
+      },
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
+        "label": "Steam community achievements page",
+        "confidence": "high",
+        "notes": "Public achievement names and descriptions."
+      }
+    ],
+    "verification_status": "Verified",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Specific upgrade tree entries need verification."
+  },
+  {
     "id": "character-upgrades",
     "slug": "character-upgrades",
     "name": "Character upgrades",
@@ -25,6 +71,13 @@
         "label": "Steam demo store page",
         "confidence": "high",
         "notes": "Official public Steam demo listing."
+      },
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
+        "label": "Steam community news/devlogs",
+        "confidence": "high",
+        "notes": "Official public Steam news and developer posts for launch, systems, updates, and devlogs."
       },
       {
         "type": "public_source",
@@ -67,6 +120,13 @@
       },
       {
         "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
+        "label": "Steam community news/devlogs",
+        "confidence": "high",
+        "notes": "Official public Steam news and developer posts for launch, systems, updates, and devlogs."
+      },
+      {
+        "type": "public_source",
         "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
         "label": "Steam community achievements page",
         "confidence": "high",
@@ -103,6 +163,13 @@
         "label": "Steam demo store page",
         "confidence": "high",
         "notes": "Official public Steam demo listing."
+      },
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
+        "label": "Steam community news/devlogs",
+        "confidence": "high",
+        "notes": "Official public Steam news and developer posts for launch, systems, updates, and devlogs."
       },
       {
         "type": "public_source",
@@ -145,6 +212,13 @@
       },
       {
         "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
+        "label": "Steam community news/devlogs",
+        "confidence": "high",
+        "notes": "Official public Steam news and developer posts for launch, systems, updates, and devlogs."
+      },
+      {
+        "type": "public_source",
         "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
         "label": "Steam community achievements page",
         "confidence": "high",
@@ -181,6 +255,59 @@
         "label": "Steam demo store page",
         "confidence": "high",
         "notes": "Official public Steam demo listing."
+      },
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
+        "label": "Steam community news/devlogs",
+        "confidence": "high",
+        "notes": "Official public Steam news and developer posts for launch, systems, updates, and devlogs."
+      },
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
+        "label": "Steam community achievements page",
+        "confidence": "high",
+        "notes": "Public achievement names and descriptions."
+      }
+    ],
+    "verification_status": "Verified",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Specific upgrade tree entries need verification."
+  },
+  {
+    "id": "roll-upgrades",
+    "slug": "roll-upgrades",
+    "name": "Roll upgrades",
+    "aliases": [],
+    "category": "upgrades",
+    "short_description": "Roll upgrades is a public upgrade concept from Steam copy or achievements.",
+    "effect": "Needs verification.",
+    "unlock_method": "Needs verification.",
+    "cost": "Needs verification.",
+    "mode": "Needs verification.",
+    "related_entities": [],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://store.steampowered.com/app/3232380/FROGGY_HATES_SNOW/",
+        "label": "Steam full-game store page",
+        "confidence": "high",
+        "notes": "Official public Steam store listing."
+      },
+      {
+        "type": "public_source",
+        "path_or_url": "https://store.steampowered.com/app/4037600/FROGGY_HATES_SNOW_Demo/",
+        "label": "Steam demo store page",
+        "confidence": "high",
+        "notes": "Official public Steam demo listing."
+      },
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
+        "label": "Steam community news/devlogs",
+        "confidence": "high",
+        "notes": "Official public Steam news and developer posts for launch, systems, updates, and devlogs."
       },
       {
         "type": "public_source",

@@ -37,13 +37,20 @@
     "name": "Playable characters",
     "aliases": [],
     "category": "frogs",
-    "short_description": "Steam achievements refer to unlocking and upgrading characters, but public metadata does not list their names.",
-    "effect": "Needs verification.",
+    "short_description": "Steam news confirms 10 playable frogs, and public achievements refer to unlocking and upgrading characters.",
+    "effect": "The full roster has 10 playable frogs; each name, stat line, and attack still needs verification unless listed separately.",
     "unlock_method": "Achievements mention unlocking 1, 3, and 9 characters.",
     "cost": "Needs verification.",
     "mode": "Needs verification.",
     "related_entities": [],
     "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
+        "label": "Steam community news/devlogs",
+        "confidence": "high",
+        "notes": "Official public Steam news and developer posts for launch, systems, updates, and devlogs."
+      },
       {
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
@@ -54,6 +61,33 @@
     ],
     "verification_status": "Verified",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
-    "notes": "Use as a roster placeholder until local metadata or gameplay notes identify character names."
+    "notes": "Use as a roster placeholder until local metadata or gameplay notes identify the remaining character names."
+  },
+  {
+    "id": "zippy",
+    "slug": "zippy",
+    "name": "Zippy",
+    "aliases": [],
+    "category": "frogs",
+    "short_description": "The first post-launch Steam update identifies Zippy as a playable character.",
+    "effect": "The update says Zippy starts with Invincible Roll as a default skill.",
+    "unlock_method": "Needs verification.",
+    "cost": "Needs verification.",
+    "mode": "Needs verification.",
+    "related_entities": [
+      "invincible-roll"
+    ],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
+        "label": "Steam community news/devlogs",
+        "confidence": "high",
+        "notes": "Official public Steam news and developer posts for launch, systems, updates, and devlogs."
+      }
+    ],
+    "verification_status": "Verified",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Exact character stats and attack details need gameplay verification."
   }
 ]

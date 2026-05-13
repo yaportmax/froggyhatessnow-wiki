@@ -8,11 +8,12 @@ draft: false
 
 Items entries for the unofficial FROGGY HATES SNOW wiki.
 
-Status counts: Verified: 6, Inferred: 5.
+Status counts: Verified: 7, Inferred: 5.
 
 | Name | Status | Summary |
 |---|---|---|
 | [Artifacts](artifacts/) | Verified | Artifacts are mentioned by official Steam copy or public achievements. |
+| [Blue Gems](blue-gems/) | Verified | Blue Gems are mentioned by official Steam copy or public achievements. |
 | [Energy Drink](energy-drink/) | Inferred | Energy Drink is named in a public achievement condition. |
 | [Flashbang](flashbang/) | Inferred | Flashbang is named in a public achievement condition. |
 | [Frost Bomb](frost-bomb/) | Inferred | Frost Bomb is named in a public achievement condition. |

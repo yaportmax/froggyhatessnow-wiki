@@ -8,7 +8,7 @@ draft: false
 
 ![FROGGY HATES SNOW Steam header](https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3232380/4aec6dc45dab3a096faeda88c8036627817f0cfe/header_alt_assets_0.jpg?t=1778580427)
 
-Accessed: **2026-05-13**. Generated: 2026-05-13T10:12:51.063Z.
+Accessed: **2026-05-13**. Generated: 2026-05-13T10:33:31.198Z.
 
 This page is the main sourcing checkpoint for game-populating wiki data. It uses official public Steam pages/APIs first, then marks anything not confirmed by those sources as inferred or needing verification.
 
@@ -55,6 +55,21 @@ Steam appdetails currently lists 14 full-game screenshots. The thumbnails below 
 | Full game | {"num_reviews":10,"review_score":8,"review_score_desc":"Very Positive","total_positive":178,"total_negative":15,"total_reviews":193} |
 | Demo | {"num_reviews":10,"review_score":8,"review_score_desc":"Very Positive","total_positive":139,"total_negative":3,"total_reviews":142} |
 
+## Steam News & Devlogs
+
+Source stream: [Steam community news/devlogs](https://steamcommunity.com/app/3232380/allnews/?l=english).
+
+| Finding | Value |
+|---|---|
+| Playable frogs | 10 |
+| Locations | 16 |
+| Skills/tools/attacks/companions | 60+ |
+| Demo progress carries over | yes |
+| Confirmed named terms | Zippy, Glider, Snowball Roll, Leap Chain, Delivery Bot, Flamethrower Bot, Scanner Drone, Piercing Icicles, Fireworks, Snowball Volley, Energy Wave, Destructive Field, Invincible Roll, Armor, Drill, Salt Sack, Snowblower, Blue Gems, Common artifacts, Uncommon artifacts, Rare artifacts, Legendary artifacts |
+
+- Steam news/devlog text is treated as public first-party source material, but exact numeric balance values still need gameplay or patch-note verification.
+- Counts from news/devlogs establish scope; they do not provide complete names for every frog, location, skill, tool, attack, or companion.
+
 ## Achievements
 
 Public community rows parsed: **42**. Full-game global percentage API ids parsed: **42**. Demo global percentage API status: **403**; ids parsed: **0**.
@@ -97,11 +112,16 @@ Demo achievement endpoint note: https://api.steampowered.com/ISteamUserStats/Get
 | Keys, treasure chests, artifacts, gems, traps, anomaly zones, bosses, and an escape door are public concepts. | `steam-full-store`, `steam-demo-store`, `steam-full-achievements-page` | high | `items`, `bosses`, `glossary`, `guides` | Use as entity scaffolding; do not invent quantities, costs, or drop rates. |
 | Peaceful Mode is public and described as monster-free. | `steam-full-store`, `steam-demo-store` | high | `guides`, `glossary` | Mode-specific rewards, unlocks, and achievement eligibility still need verification. |
 | The full game exposes 42 public Steam achievements. | `steam-full-appdetails`, `steam-full-achievements-page`, `steam-full-global-achievement-percentages` | high | `achievements`, `unlocks` | Achievement percentages are volatile and should be refreshed before percentage-based claims. |
+| Steam news confirms 10 playable frogs, 16 locations, 60+ skills/tools/attacks/companions, and demo progress carryover. | `steam-release-date-news`, `steam-news-devlogs` | high | `frogs`, `maps`, `skills`, `tools`, `companions`, `guides` | Use these as scope counts only; the complete named roster still needs verification. |
+| Steam devlogs confirm specific launch additions including Glider, Snowball Roll, Leap Chain, Delivery Bot, Flamethrower Bot, Scanner Drone, Piercing Icicles, Fireworks, and Snowball Volley. | `steam-launch-devlog`, `steam-news-devlogs` | high | `skills`, `companions`, `guides` | Names and broad categories are public; exact stats, rarity, and unlock requirements need gameplay verification. |
+| Steam devlogs confirm anomalous zones as short challenge areas with rewards including Blue Gems and artifacts in Common, Uncommon, Rare, and Legendary tiers. | `steam-anomalous-zones-devlog`, `steam-news-devlogs` | high | `items`, `glossary`, `guides` | Challenge examples are public; exact layouts, timers, and reward quantities need verification. |
+| Steam snow-system devlog confirms snow as an interactable heightmap-like material with density/layers and named digging or ice tools. | `steam-snow-devlog`, `steam-news-devlogs` | high | `tools`, `glossary`, `guides` | Use for mechanics scaffolding; exact tool stats and upgrade scaling need verification. |
+| The first post-launch Steam update confirms Zippy, Invincible Roll, Energy Wave, Destructive Field, Armor, and early location progression changes. | `steam-post-launch-update`, `steam-news-devlogs` | high | `frogs`, `skills`, `maps`, `guides` | This is a post-launch state source and should be refreshed when later patch notes are added. |
 
 ## Research Gaps
 
-- Exact character/frog roster beyond Froggy and achievement-count thresholds.
-- Named map/location roster, map unlock order, and location-specific boss names.
+- Exact character/frog roster beyond Froggy, Zippy, and the verified 10-playable-frog count.
+- Named map/location roster, map unlock order beyond public thresholds/update notes, and location-specific boss names.
 - Named enemy roster and enemy behavior.
 - Exact stats, costs, cooldowns, drop rates, and upgrade tree order.
 - Whether demo metadata differs from the released full game after SteamCMD/local file extraction works.

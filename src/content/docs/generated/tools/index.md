@@ -8,23 +8,23 @@ draft: false
 
 Tools entries for the unofficial FROGGY HATES SNOW wiki.
 
-Status counts: Inferred: 10, Verified: 6.
+Status counts: Verified: 11, Inferred: 5.
 
 | Name | Status | Summary |
 |---|---|---|
-| [Air Bomb](air-bomb/) | Inferred | Air Bomb is named in a public achievement condition. |
-| [Cart](cart/) | Verified | Cart are mentioned in official Steam copy as part of digging, movement, or resource carrying. |
-| [Dynamite](dynamite/) | Inferred | Dynamite is named in a public achievement condition. |
-| [Explosives](explosives/) | Verified | Explosives are mentioned in official Steam copy as part of digging, movement, or resource carrying. |
-| [Flamethrower](flamethrower/) | Inferred | Flamethrower is named in a public achievement condition. |
-| [Flamethrowers](flamethrowers/) | Verified | Flamethrowers are mentioned in official Steam copy as part of digging, movement, or resource carrying. |
+| [Air Bomb](air-bomb/) | Verified | Air Bomb is mentioned in official Steam copy or Steam devlogs as part of digging, movement, ice handling, or resource carrying. |
+| [Cart](cart/) | Verified | Cart is mentioned in official Steam copy or Steam devlogs as part of digging, movement, ice handling, or resource carrying. |
+| [Drill](drill/) | Verified | Drill is mentioned in official Steam copy or Steam devlogs as part of digging, movement, ice handling, or resource carrying. |
+| [Dynamite](dynamite/) | Verified | Dynamite is mentioned in official Steam copy or Steam devlogs as part of digging, movement, ice handling, or resource carrying. |
+| [Flamethrower](flamethrower/) | Verified | Flamethrower is mentioned in official Steam copy or Steam devlogs as part of digging, movement, ice handling, or resource carrying. |
 | [Gloves](gloves/) | Inferred | Gloves is named in a public achievement condition. |
-| [Hands](hands/) | Verified | Hands are mentioned in official Steam copy as part of digging, movement, or resource carrying. |
+| [Hands](hands/) | Verified | Hands is mentioned in official Steam copy or Steam devlogs as part of digging, movement, ice handling, or resource carrying. |
 | [Heater Sled](heater-sled/) | Inferred | Heater Sled is named in a public achievement condition. |
 | [Locator](locator/) | Inferred | Locator is named in a public achievement condition. |
 | [Map](map/) | Inferred | Map is named in a public achievement condition. |
-| [Pickaxe](pickaxe/) | Inferred | Pickaxe is named in a public achievement condition. |
+| [Pickaxe](pickaxe/) | Verified | Pickaxe is mentioned in official Steam copy or Steam devlogs as part of digging, movement, ice handling, or resource carrying. |
+| [Salt Sack](salt-sack/) | Verified | Salt Sack is mentioned in official Steam copy or Steam devlogs as part of digging, movement, ice handling, or resource carrying. |
 | [Scanner](scanner/) | Inferred | Scanner is named in a public achievement condition. |
-| [Shovel](shovel/) | Inferred | Shovel is named in a public achievement condition. |
-| [Shovels](shovels/) | Verified | Shovels are mentioned in official Steam copy as part of digging, movement, or resource carrying. |
-| [Skis](skis/) | Verified | Skis are mentioned in official Steam copy as part of digging, movement, or resource carrying. |
+| [Shovel](shovel/) | Verified | Shovel is mentioned in official Steam copy or Steam devlogs as part of digging, movement, ice handling, or resource carrying. |
+| [Skis](skis/) | Verified | Skis is mentioned in official Steam copy or Steam devlogs as part of digging, movement, ice handling, or resource carrying. |
+| [Snowblower](snowblower/) | Verified | Snowblower is mentioned in official Steam copy or Steam devlogs as part of digging, movement, ice handling, or resource carrying. |

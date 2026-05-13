@@ -1,28 +1,28 @@
 ---
 title: "Shovel"
-description: "Shovel is named in a public achievement condition."
+description: "Shovel is mentioned in official Steam copy or Steam devlogs as part of digging, movement, ice handling, or resource carrying."
 draft: false
 ---
 
 # Shovel
 
-:::caution[Inferred]
-The name is public, but one or more type/effect details are inferred and need gameplay or metadata confirmation.
+:::tip[Verified]
+This entry is backed by at least one listed public source or safe metadata source.
 :::
 
-Shovel is named in a public achievement condition.
+Shovel is mentioned in official Steam copy or Steam devlogs as part of digging, movement, ice handling, or resource carrying.
 
 | Field | Value |
 |---|---|
-| Status | Inferred |
+| Status | Verified |
 | Category | tools |
 | Aliases | None listed |
-| Effect | Needs verification. |
+| Effect | Bigger digging area, faster digging, and can hit enemies. |
 | Unlock Method | Needs verification. |
 | Cost | Needs verification. |
-| Mode | Needs verification. |
+| Mode | Core game and demo. |
 | Last Verified | Public Steam metadata accessed 2026-05-13 |
-| Notes | Name is public; category/effect details may need gameplay or local metadata verification. |
+| Notes | Specific stats and unlock details need verification from gameplay or safe local metadata. |
 
 ## Related
 
@@ -30,5 +30,6 @@ No related entities listed yet.
 
 ## Sources
 
-- [Steam community achievements page](https://steamcommunity.com/stats/3232380/achievements/?l=english) — public_source, confidence high. Public achievement display names and descriptions.
-- [Achievement condition classification](local inference from public-source wording) — inferred, confidence medium. Classified as tools from public achievement wording; exact in-game type needs verification.
+- [Steam full-game store page](https://store.steampowered.com/app/3232380/FROGGY_HATES_SNOW/) — public_source, confidence high. Official public Steam store listing.
+- [Steam demo store page](https://store.steampowered.com/app/4037600/FROGGY_HATES_SNOW_Demo/) — public_source, confidence high. Official public Steam demo listing.
+- [Steam community news/devlogs](https://steamcommunity.com/app/3232380/allnews/?l=english) — public_source, confidence high. Official public Steam news and developer posts for launch, systems, updates, and devlogs.

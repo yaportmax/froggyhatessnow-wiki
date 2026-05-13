@@ -5,40 +5,8 @@
     "name": "Air Bomb",
     "aliases": [],
     "category": "tools",
-    "short_description": "Air Bomb is named in a public achievement condition.",
-    "effect": "Needs verification.",
-    "unlock_method": "Needs verification.",
-    "cost": "Needs verification.",
-    "mode": "Needs verification.",
-    "related_entities": [],
-    "sources": [
-      {
-        "type": "public_source",
-        "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
-        "label": "Steam community achievements page",
-        "confidence": "high",
-        "notes": "Public achievement display names and descriptions."
-      },
-      {
-        "type": "inferred",
-        "path_or_url": "local inference from public-source wording",
-        "label": "Achievement condition classification",
-        "confidence": "medium",
-        "notes": "Classified as tools from public achievement wording; exact in-game type needs verification."
-      }
-    ],
-    "verification_status": "Inferred",
-    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
-    "notes": "Name is public; category/effect details may need gameplay or local metadata verification."
-  },
-  {
-    "id": "cart",
-    "slug": "cart",
-    "name": "Cart",
-    "aliases": [],
-    "category": "tools",
-    "short_description": "Cart are mentioned in official Steam copy as part of digging, movement, or resource carrying.",
-    "effect": "Needs verification.",
+    "short_description": "Air Bomb is mentioned in official Steam copy or Steam devlogs as part of digging, movement, ice handling, or resource carrying.",
+    "effect": "Clears large areas of soft snow, but not ice.",
     "unlock_method": "Needs verification.",
     "cost": "Needs verification.",
     "mode": "Core game and demo.",
@@ -57,6 +25,91 @@
         "label": "Steam demo store page",
         "confidence": "high",
         "notes": "Official public Steam demo listing."
+      },
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
+        "label": "Steam community news/devlogs",
+        "confidence": "high",
+        "notes": "Official public Steam news and developer posts for launch, systems, updates, and devlogs."
+      }
+    ],
+    "verification_status": "Verified",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Specific stats and unlock details need verification from gameplay or safe local metadata."
+  },
+  {
+    "id": "cart",
+    "slug": "cart",
+    "name": "Cart",
+    "aliases": [],
+    "category": "tools",
+    "short_description": "Cart is mentioned in official Steam copy or Steam devlogs as part of digging, movement, ice handling, or resource carrying.",
+    "effect": "Resource-carrying tool mentioned in public Steam copy and anomalous-zone devlog.",
+    "unlock_method": "Needs verification.",
+    "cost": "Needs verification.",
+    "mode": "Core game and demo.",
+    "related_entities": [],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://store.steampowered.com/app/3232380/FROGGY_HATES_SNOW/",
+        "label": "Steam full-game store page",
+        "confidence": "high",
+        "notes": "Official public Steam store listing."
+      },
+      {
+        "type": "public_source",
+        "path_or_url": "https://store.steampowered.com/app/4037600/FROGGY_HATES_SNOW_Demo/",
+        "label": "Steam demo store page",
+        "confidence": "high",
+        "notes": "Official public Steam demo listing."
+      },
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
+        "label": "Steam community news/devlogs",
+        "confidence": "high",
+        "notes": "Official public Steam news and developer posts for launch, systems, updates, and devlogs."
+      }
+    ],
+    "verification_status": "Verified",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Specific stats and unlock details need verification from gameplay or safe local metadata."
+  },
+  {
+    "id": "drill",
+    "slug": "drill",
+    "name": "Drill",
+    "aliases": [],
+    "category": "tools",
+    "short_description": "Drill is mentioned in official Steam copy or Steam devlogs as part of digging, movement, ice handling, or resource carrying.",
+    "effect": "Fast ice-breaking tool.",
+    "unlock_method": "Needs verification.",
+    "cost": "Needs verification.",
+    "mode": "Core game and demo.",
+    "related_entities": [],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://store.steampowered.com/app/3232380/FROGGY_HATES_SNOW/",
+        "label": "Steam full-game store page",
+        "confidence": "high",
+        "notes": "Official public Steam store listing."
+      },
+      {
+        "type": "public_source",
+        "path_or_url": "https://store.steampowered.com/app/4037600/FROGGY_HATES_SNOW_Demo/",
+        "label": "Steam demo store page",
+        "confidence": "high",
+        "notes": "Official public Steam demo listing."
+      },
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
+        "label": "Steam community news/devlogs",
+        "confidence": "high",
+        "notes": "Official public Steam news and developer posts for launch, systems, updates, and devlogs."
       }
     ],
     "verification_status": "Verified",
@@ -69,40 +122,8 @@
     "name": "Dynamite",
     "aliases": [],
     "category": "tools",
-    "short_description": "Dynamite is named in a public achievement condition.",
-    "effect": "Needs verification.",
-    "unlock_method": "Needs verification.",
-    "cost": "Needs verification.",
-    "mode": "Needs verification.",
-    "related_entities": [],
-    "sources": [
-      {
-        "type": "public_source",
-        "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
-        "label": "Steam community achievements page",
-        "confidence": "high",
-        "notes": "Public achievement display names and descriptions."
-      },
-      {
-        "type": "inferred",
-        "path_or_url": "local inference from public-source wording",
-        "label": "Achievement condition classification",
-        "confidence": "medium",
-        "notes": "Classified as tools from public achievement wording; exact in-game type needs verification."
-      }
-    ],
-    "verification_status": "Inferred",
-    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
-    "notes": "Name is public; category/effect details may need gameplay or local metadata verification."
-  },
-  {
-    "id": "explosives",
-    "slug": "explosives",
-    "name": "Explosives",
-    "aliases": [],
-    "category": "tools",
-    "short_description": "Explosives are mentioned in official Steam copy as part of digging, movement, or resource carrying.",
-    "effect": "Needs verification.",
+    "short_description": "Dynamite is mentioned in official Steam copy or Steam devlogs as part of digging, movement, ice handling, or resource carrying.",
+    "effect": "Removes snow and ice in a limited area.",
     "unlock_method": "Needs verification.",
     "cost": "Needs verification.",
     "mode": "Core game and demo.",
@@ -121,6 +142,13 @@
         "label": "Steam demo store page",
         "confidence": "high",
         "notes": "Official public Steam demo listing."
+      },
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
+        "label": "Steam community news/devlogs",
+        "confidence": "high",
+        "notes": "Official public Steam news and developer posts for launch, systems, updates, and devlogs."
       }
     ],
     "verification_status": "Verified",
@@ -133,40 +161,8 @@
     "name": "Flamethrower",
     "aliases": [],
     "category": "tools",
-    "short_description": "Flamethrower is named in a public achievement condition.",
-    "effect": "Needs verification.",
-    "unlock_method": "Needs verification.",
-    "cost": "Needs verification.",
-    "mode": "Needs verification.",
-    "related_entities": [],
-    "sources": [
-      {
-        "type": "public_source",
-        "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
-        "label": "Steam community achievements page",
-        "confidence": "high",
-        "notes": "Public achievement display names and descriptions."
-      },
-      {
-        "type": "inferred",
-        "path_or_url": "local inference from public-source wording",
-        "label": "Achievement condition classification",
-        "confidence": "medium",
-        "notes": "Classified as tools from public achievement wording; exact in-game type needs verification."
-      }
-    ],
-    "verification_status": "Inferred",
-    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
-    "notes": "Name is public; category/effect details may need gameplay or local metadata verification."
-  },
-  {
-    "id": "flamethrowers",
-    "slug": "flamethrowers",
-    "name": "Flamethrowers",
-    "aliases": [],
-    "category": "tools",
-    "short_description": "Flamethrowers are mentioned in official Steam copy as part of digging, movement, or resource carrying.",
-    "effect": "Needs verification.",
+    "short_description": "Flamethrower is mentioned in official Steam copy or Steam devlogs as part of digging, movement, ice handling, or resource carrying.",
+    "effect": "Continuous snow removal tool that can melt ice and set enemies on fire.",
     "unlock_method": "Needs verification.",
     "cost": "Needs verification.",
     "mode": "Core game and demo.",
@@ -185,6 +181,13 @@
         "label": "Steam demo store page",
         "confidence": "high",
         "notes": "Official public Steam demo listing."
+      },
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
+        "label": "Steam community news/devlogs",
+        "confidence": "high",
+        "notes": "Official public Steam news and developer posts for launch, systems, updates, and devlogs."
       }
     ],
     "verification_status": "Verified",
@@ -229,8 +232,8 @@
     "name": "Hands",
     "aliases": [],
     "category": "tools",
-    "short_description": "Hands are mentioned in official Steam copy as part of digging, movement, or resource carrying.",
-    "effect": "Needs verification.",
+    "short_description": "Hands is mentioned in official Steam copy or Steam devlogs as part of digging, movement, ice handling, or resource carrying.",
+    "effect": "Always available basic snow removal, but slow and limited.",
     "unlock_method": "Needs verification.",
     "cost": "Needs verification.",
     "mode": "Core game and demo.",
@@ -249,6 +252,13 @@
         "label": "Steam demo store page",
         "confidence": "high",
         "notes": "Official public Steam demo listing."
+      },
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
+        "label": "Steam community news/devlogs",
+        "confidence": "high",
+        "notes": "Official public Steam news and developer posts for launch, systems, updates, and devlogs."
       }
     ],
     "verification_status": "Verified",
@@ -357,31 +367,77 @@
     "name": "Pickaxe",
     "aliases": [],
     "category": "tools",
-    "short_description": "Pickaxe is named in a public achievement condition.",
-    "effect": "Needs verification.",
+    "short_description": "Pickaxe is mentioned in official Steam copy or Steam devlogs as part of digging, movement, ice handling, or resource carrying.",
+    "effect": "Basic ice-breaking tool.",
     "unlock_method": "Needs verification.",
     "cost": "Needs verification.",
-    "mode": "Needs verification.",
+    "mode": "Core game and demo.",
     "related_entities": [],
     "sources": [
       {
         "type": "public_source",
-        "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
-        "label": "Steam community achievements page",
+        "path_or_url": "https://store.steampowered.com/app/3232380/FROGGY_HATES_SNOW/",
+        "label": "Steam full-game store page",
         "confidence": "high",
-        "notes": "Public achievement display names and descriptions."
+        "notes": "Official public Steam store listing."
       },
       {
-        "type": "inferred",
-        "path_or_url": "local inference from public-source wording",
-        "label": "Achievement condition classification",
-        "confidence": "medium",
-        "notes": "Classified as tools from public achievement wording; exact in-game type needs verification."
+        "type": "public_source",
+        "path_or_url": "https://store.steampowered.com/app/4037600/FROGGY_HATES_SNOW_Demo/",
+        "label": "Steam demo store page",
+        "confidence": "high",
+        "notes": "Official public Steam demo listing."
+      },
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
+        "label": "Steam community news/devlogs",
+        "confidence": "high",
+        "notes": "Official public Steam news and developer posts for launch, systems, updates, and devlogs."
       }
     ],
-    "verification_status": "Inferred",
+    "verification_status": "Verified",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
-    "notes": "Name is public; category/effect details may need gameplay or local metadata verification."
+    "notes": "Specific stats and unlock details need verification from gameplay or safe local metadata."
+  },
+  {
+    "id": "salt-sack",
+    "slug": "salt-sack",
+    "name": "Salt Sack",
+    "aliases": [],
+    "category": "tools",
+    "short_description": "Salt Sack is mentioned in official Steam copy or Steam devlogs as part of digging, movement, ice handling, or resource carrying.",
+    "effect": "Throwable that turns ice into snow.",
+    "unlock_method": "Needs verification.",
+    "cost": "Needs verification.",
+    "mode": "Core game and demo.",
+    "related_entities": [],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://store.steampowered.com/app/3232380/FROGGY_HATES_SNOW/",
+        "label": "Steam full-game store page",
+        "confidence": "high",
+        "notes": "Official public Steam store listing."
+      },
+      {
+        "type": "public_source",
+        "path_or_url": "https://store.steampowered.com/app/4037600/FROGGY_HATES_SNOW_Demo/",
+        "label": "Steam demo store page",
+        "confidence": "high",
+        "notes": "Official public Steam demo listing."
+      },
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
+        "label": "Steam community news/devlogs",
+        "confidence": "high",
+        "notes": "Official public Steam news and developer posts for launch, systems, updates, and devlogs."
+      }
+    ],
+    "verification_status": "Verified",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Specific stats and unlock details need verification from gameplay or safe local metadata."
   },
   {
     "id": "scanner",
@@ -421,40 +477,8 @@
     "name": "Shovel",
     "aliases": [],
     "category": "tools",
-    "short_description": "Shovel is named in a public achievement condition.",
-    "effect": "Needs verification.",
-    "unlock_method": "Needs verification.",
-    "cost": "Needs verification.",
-    "mode": "Needs verification.",
-    "related_entities": [],
-    "sources": [
-      {
-        "type": "public_source",
-        "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
-        "label": "Steam community achievements page",
-        "confidence": "high",
-        "notes": "Public achievement display names and descriptions."
-      },
-      {
-        "type": "inferred",
-        "path_or_url": "local inference from public-source wording",
-        "label": "Achievement condition classification",
-        "confidence": "medium",
-        "notes": "Classified as tools from public achievement wording; exact in-game type needs verification."
-      }
-    ],
-    "verification_status": "Inferred",
-    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
-    "notes": "Name is public; category/effect details may need gameplay or local metadata verification."
-  },
-  {
-    "id": "shovels",
-    "slug": "shovels",
-    "name": "Shovels",
-    "aliases": [],
-    "category": "tools",
-    "short_description": "Shovels are mentioned in official Steam copy as part of digging, movement, or resource carrying.",
-    "effect": "Needs verification.",
+    "short_description": "Shovel is mentioned in official Steam copy or Steam devlogs as part of digging, movement, ice handling, or resource carrying.",
+    "effect": "Bigger digging area, faster digging, and can hit enemies.",
     "unlock_method": "Needs verification.",
     "cost": "Needs verification.",
     "mode": "Core game and demo.",
@@ -473,6 +497,13 @@
         "label": "Steam demo store page",
         "confidence": "high",
         "notes": "Official public Steam demo listing."
+      },
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
+        "label": "Steam community news/devlogs",
+        "confidence": "high",
+        "notes": "Official public Steam news and developer posts for launch, systems, updates, and devlogs."
       }
     ],
     "verification_status": "Verified",
@@ -485,8 +516,8 @@
     "name": "Skis",
     "aliases": [],
     "category": "tools",
-    "short_description": "Skis are mentioned in official Steam copy as part of digging, movement, or resource carrying.",
-    "effect": "Needs verification.",
+    "short_description": "Skis is mentioned in official Steam copy or Steam devlogs as part of digging, movement, ice handling, or resource carrying.",
+    "effect": "Movement or traversal tool mentioned in public Steam copy.",
     "unlock_method": "Needs verification.",
     "cost": "Needs verification.",
     "mode": "Core game and demo.",
@@ -505,6 +536,52 @@
         "label": "Steam demo store page",
         "confidence": "high",
         "notes": "Official public Steam demo listing."
+      },
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
+        "label": "Steam community news/devlogs",
+        "confidence": "high",
+        "notes": "Official public Steam news and developer posts for launch, systems, updates, and devlogs."
+      }
+    ],
+    "verification_status": "Verified",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Specific stats and unlock details need verification from gameplay or safe local metadata."
+  },
+  {
+    "id": "snowblower",
+    "slug": "snowblower",
+    "name": "Snowblower",
+    "aliases": [],
+    "category": "tools",
+    "short_description": "Snowblower is mentioned in official Steam copy or Steam devlogs as part of digging, movement, ice handling, or resource carrying.",
+    "effect": "Continuous snow removal tool.",
+    "unlock_method": "Needs verification.",
+    "cost": "Needs verification.",
+    "mode": "Core game and demo.",
+    "related_entities": [],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://store.steampowered.com/app/3232380/FROGGY_HATES_SNOW/",
+        "label": "Steam full-game store page",
+        "confidence": "high",
+        "notes": "Official public Steam store listing."
+      },
+      {
+        "type": "public_source",
+        "path_or_url": "https://store.steampowered.com/app/4037600/FROGGY_HATES_SNOW_Demo/",
+        "label": "Steam demo store page",
+        "confidence": "high",
+        "notes": "Official public Steam demo listing."
+      },
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
+        "label": "Steam community news/devlogs",
+        "confidence": "high",
+        "notes": "Official public Steam news and developer posts for launch, systems, updates, and devlogs."
       }
     ],
     "verification_status": "Verified",

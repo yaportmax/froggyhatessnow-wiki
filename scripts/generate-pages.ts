@@ -96,6 +96,15 @@ type SteamSnapshot = {
     wiki_targets: string[];
     notes: string;
   }>;
+  steam_news_findings: {
+    source_url: string;
+    playable_frogs_count: number;
+    locations_count: number;
+    minimum_combined_skills_tools_attacks_companions: number;
+    demo_progress_carries_over: boolean;
+    confirmed_terms: string[];
+    notes: string[];
+  };
   research_gaps: string[];
   refresh_commands: string[];
 };
@@ -269,6 +278,27 @@ function screenshotGrid(snapshot: SteamSnapshot) {
   ].join("\n");
 }
 
+function steamNewsFindings(snapshot: SteamSnapshot) {
+  const findings = snapshot.steam_news_findings;
+  return (
+    "## Steam News & Devlogs\n\n" +
+    `Source stream: [Steam community news/devlogs](${findings.source_url}).\n\n` +
+    "| Finding | Value |\n|---|---|\n" +
+    [
+      ["Playable frogs", String(findings.playable_frogs_count)],
+      ["Locations", String(findings.locations_count)],
+      ["Skills/tools/attacks/companions", `${findings.minimum_combined_skills_tools_attacks_companions}+`],
+      ["Demo progress carries over", findings.demo_progress_carries_over ? "yes" : "no"],
+      ["Confirmed named terms", findings.confirmed_terms.join(", ")]
+    ]
+      .map(([field, value]) => `| ${field} | ${mdEscape(value)} |`)
+      .join("\n") +
+    "\n\n" +
+    findings.notes.map((note) => `- ${mdEscape(note)}`).join("\n") +
+    "\n\n"
+  );
+}
+
 function sourceLedgerPage(publicSources: PublicSource[], allRows: Entity[]) {
   const statusCounts = allRows.reduce<Record<string, number>>((acc, row) => {
     acc[row.verification_status] = (acc[row.verification_status] ?? 0) + 1;
@@ -321,6 +351,7 @@ function steamSnapshotPage(snapshot: SteamSnapshot) {
     screenshotGrid(snapshot) +
     "## Reviews\n\n" +
     reviewSummaryTable(snapshot) +
+    steamNewsFindings(snapshot) +
     "## Achievements\n\n" +
     `Public community rows parsed: **${snapshot.achievements.community_rows_count}**. Full-game global percentage API ids parsed: **${snapshot.achievements.full_game_api_ids_count}**. Demo global percentage API status: **${snapshot.achievements.demo_global_percentages_api_status}**; ids parsed: **${snapshot.achievements.demo_api_ids_count}**.\n\n` +
     (snapshot.achievements.demo_global_percentages_api_error ? `Demo achievement endpoint note: ${snapshot.achievements.demo_global_percentages_api_error}.\n\n` : "") +

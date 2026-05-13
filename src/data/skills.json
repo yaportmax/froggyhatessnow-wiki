@@ -32,6 +32,31 @@
     "notes": "Name is public; category/effect details may need gameplay or local metadata verification."
   },
   {
+    "id": "armor",
+    "slug": "armor",
+    "name": "Armor",
+    "aliases": [],
+    "category": "skills",
+    "short_description": "Armor is named in official Steam news or devlog copy.",
+    "effect": "Post-launch update says this skill is unlocked from the beginning.",
+    "unlock_method": "Needs verification.",
+    "cost": "Needs verification.",
+    "mode": "Needs verification.",
+    "related_entities": [],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
+        "label": "Steam community news/devlogs",
+        "confidence": "high",
+        "notes": "Official public Steam news and developer posts for launch, systems, updates, and devlogs."
+      }
+    ],
+    "verification_status": "Verified",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Exact rarity, cooldown, scaling, and unlock details need gameplay verification."
+  },
+  {
     "id": "chain-lightning",
     "slug": "chain-lightning",
     "name": "Chain Lightning",
@@ -128,6 +153,31 @@
     "notes": "Name is public; category/effect details may need gameplay or local metadata verification."
   },
   {
+    "id": "destructive-field",
+    "slug": "destructive-field",
+    "name": "Destructive Field",
+    "aliases": [],
+    "category": "skills",
+    "short_description": "Destructive Field is named in official Steam news or devlog copy.",
+    "effect": "Post-launch update says it destroys all projectiles within its radius.",
+    "unlock_method": "Needs verification.",
+    "cost": "Needs verification.",
+    "mode": "Needs verification.",
+    "related_entities": [],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
+        "label": "Steam community news/devlogs",
+        "confidence": "high",
+        "notes": "Official public Steam news and developer posts for launch, systems, updates, and devlogs."
+      }
+    ],
+    "verification_status": "Verified",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Exact rarity, cooldown, scaling, and unlock details need gameplay verification."
+  },
+  {
     "id": "electric-infusion",
     "slug": "electric-infusion",
     "name": "Electric Infusion",
@@ -158,6 +208,31 @@
     "verification_status": "Inferred",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
     "notes": "Name is public; category/effect details may need gameplay or local metadata verification."
+  },
+  {
+    "id": "energy-wave",
+    "slug": "energy-wave",
+    "name": "Energy Wave",
+    "aliases": [],
+    "category": "skills",
+    "short_description": "Energy Wave is named in official Steam news or devlog copy.",
+    "effect": "Post-launch update says it destroys all projectiles within its radius.",
+    "unlock_method": "Needs verification.",
+    "cost": "Needs verification.",
+    "mode": "Needs verification.",
+    "related_entities": [],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
+        "label": "Steam community news/devlogs",
+        "confidence": "high",
+        "notes": "Official public Steam news and developer posts for launch, systems, updates, and devlogs."
+      }
+    ],
+    "verification_status": "Verified",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Exact rarity, cooldown, scaling, and unlock details need gameplay verification."
   },
   {
     "id": "fire-infusion",
@@ -192,6 +267,31 @@
     "notes": "Name is public; category/effect details may need gameplay or local metadata verification."
   },
   {
+    "id": "fireworks",
+    "slug": "fireworks",
+    "name": "Fireworks",
+    "aliases": [],
+    "category": "skills",
+    "short_description": "Fireworks is named in official Steam news or devlog copy.",
+    "effect": "Projectile-based snow digging skill added for launch.",
+    "unlock_method": "Needs verification.",
+    "cost": "Needs verification.",
+    "mode": "Needs verification.",
+    "related_entities": [],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
+        "label": "Steam community news/devlogs",
+        "confidence": "high",
+        "notes": "Official public Steam news and developer posts for launch, systems, updates, and devlogs."
+      }
+    ],
+    "verification_status": "Verified",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Exact rarity, cooldown, scaling, and unlock details need gameplay verification."
+  },
+  {
     "id": "frost-infusion",
     "slug": "frost-infusion",
     "name": "Frost Infusion",
@@ -222,6 +322,106 @@
     "verification_status": "Inferred",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
     "notes": "Name is public; category/effect details may need gameplay or local metadata verification."
+  },
+  {
+    "id": "glider",
+    "slug": "glider",
+    "name": "Glider",
+    "aliases": [],
+    "category": "skills",
+    "short_description": "Glider is named in official Steam news or devlog copy.",
+    "effect": "Movement skill added for launch.",
+    "unlock_method": "Needs verification.",
+    "cost": "Needs verification.",
+    "mode": "Needs verification.",
+    "related_entities": [],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
+        "label": "Steam community news/devlogs",
+        "confidence": "high",
+        "notes": "Official public Steam news and developer posts for launch, systems, updates, and devlogs."
+      }
+    ],
+    "verification_status": "Verified",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Exact rarity, cooldown, scaling, and unlock details need gameplay verification."
+  },
+  {
+    "id": "in-run-skill-reordering",
+    "slug": "in-run-skill-reordering",
+    "name": "In-run skill reordering",
+    "aliases": [],
+    "category": "skills",
+    "short_description": "In-run skill reordering is named in official Steam news or devlog copy.",
+    "effect": "Launch devlog describes reordering skills to match preferred hotkeys.",
+    "unlock_method": "Needs verification.",
+    "cost": "Needs verification.",
+    "mode": "Needs verification.",
+    "related_entities": [],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
+        "label": "Steam community news/devlogs",
+        "confidence": "high",
+        "notes": "Official public Steam news and developer posts for launch, systems, updates, and devlogs."
+      }
+    ],
+    "verification_status": "Verified",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Exact rarity, cooldown, scaling, and unlock details need gameplay verification."
+  },
+  {
+    "id": "invincible-roll",
+    "slug": "invincible-roll",
+    "name": "Invincible Roll",
+    "aliases": [],
+    "category": "skills",
+    "short_description": "Invincible Roll is named in official Steam news or devlog copy.",
+    "effect": "Post-launch update says Zippy starts with this as a default skill.",
+    "unlock_method": "Needs verification.",
+    "cost": "Needs verification.",
+    "mode": "Needs verification.",
+    "related_entities": [],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
+        "label": "Steam community news/devlogs",
+        "confidence": "high",
+        "notes": "Official public Steam news and developer posts for launch, systems, updates, and devlogs."
+      }
+    ],
+    "verification_status": "Verified",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Exact rarity, cooldown, scaling, and unlock details need gameplay verification."
+  },
+  {
+    "id": "leap-chain",
+    "slug": "leap-chain",
+    "name": "Leap Chain",
+    "aliases": [],
+    "category": "skills",
+    "short_description": "Leap Chain is named in official Steam news or devlog copy.",
+    "effect": "Movement skill added for launch.",
+    "unlock_method": "Needs verification.",
+    "cost": "Needs verification.",
+    "mode": "Needs verification.",
+    "related_entities": [],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
+        "label": "Steam community news/devlogs",
+        "confidence": "high",
+        "notes": "Official public Steam news and developer posts for launch, systems, updates, and devlogs."
+      }
+    ],
+    "verification_status": "Verified",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Exact rarity, cooldown, scaling, and unlock details need gameplay verification."
   },
   {
     "id": "magnet",
@@ -261,8 +461,8 @@
     "name": "Piercing Icicles",
     "aliases": [],
     "category": "skills",
-    "short_description": "Piercing Icicles is named in a public achievement condition.",
-    "effect": "Needs verification.",
+    "short_description": "Piercing Icicles is named in official Steam news or devlog copy.",
+    "effect": "Projectile-based snow digging skill added for launch.",
     "unlock_method": "Needs verification.",
     "cost": "Needs verification.",
     "mode": "Needs verification.",
@@ -270,22 +470,15 @@
     "sources": [
       {
         "type": "public_source",
-        "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
-        "label": "Steam community achievements page",
+        "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
+        "label": "Steam community news/devlogs",
         "confidence": "high",
-        "notes": "Public achievement display names and descriptions."
-      },
-      {
-        "type": "inferred",
-        "path_or_url": "local inference from public-source wording",
-        "label": "Achievement condition classification",
-        "confidence": "medium",
-        "notes": "Classified as skills from public achievement wording; exact in-game type needs verification."
+        "notes": "Official public Steam news and developer posts for launch, systems, updates, and devlogs."
       }
     ],
-    "verification_status": "Inferred",
+    "verification_status": "Verified",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
-    "notes": "Name is public; category/effect details may need gameplay or local metadata verification."
+    "notes": "Exact rarity, cooldown, scaling, and unlock details need gameplay verification."
   },
   {
     "id": "poison-infusion",
@@ -384,13 +577,13 @@
     "notes": "Name is public; category/effect details may need gameplay or local metadata verification."
   },
   {
-    "id": "snowball-volley",
-    "slug": "snowball-volley",
-    "name": "Snowball Volley",
+    "id": "skill-banishing",
+    "slug": "skill-banishing",
+    "name": "Skill Banishing",
     "aliases": [],
     "category": "skills",
-    "short_description": "Snowball Volley is named in a public achievement condition.",
-    "effect": "Needs verification.",
+    "short_description": "Skill Banishing is named in official Steam news or devlog copy.",
+    "effect": "Launch devlog describes removing skills from the pool so preferred builds appear more often.",
     "unlock_method": "Needs verification.",
     "cost": "Needs verification.",
     "mode": "Needs verification.",
@@ -398,22 +591,65 @@
     "sources": [
       {
         "type": "public_source",
-        "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
-        "label": "Steam community achievements page",
+        "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
+        "label": "Steam community news/devlogs",
         "confidence": "high",
-        "notes": "Public achievement display names and descriptions."
-      },
-      {
-        "type": "inferred",
-        "path_or_url": "local inference from public-source wording",
-        "label": "Achievement condition classification",
-        "confidence": "medium",
-        "notes": "Classified as skills from public achievement wording; exact in-game type needs verification."
+        "notes": "Official public Steam news and developer posts for launch, systems, updates, and devlogs."
       }
     ],
-    "verification_status": "Inferred",
+    "verification_status": "Verified",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
-    "notes": "Name is public; category/effect details may need gameplay or local metadata verification."
+    "notes": "Exact rarity, cooldown, scaling, and unlock details need gameplay verification."
+  },
+  {
+    "id": "snowball-roll",
+    "slug": "snowball-roll",
+    "name": "Snowball Roll",
+    "aliases": [],
+    "category": "skills",
+    "short_description": "Snowball Roll is named in official Steam news or devlog copy.",
+    "effect": "Movement skill that can grow as it collects snow.",
+    "unlock_method": "Needs verification.",
+    "cost": "Needs verification.",
+    "mode": "Needs verification.",
+    "related_entities": [],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
+        "label": "Steam community news/devlogs",
+        "confidence": "high",
+        "notes": "Official public Steam news and developer posts for launch, systems, updates, and devlogs."
+      }
+    ],
+    "verification_status": "Verified",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Exact rarity, cooldown, scaling, and unlock details need gameplay verification."
+  },
+  {
+    "id": "snowball-volley",
+    "slug": "snowball-volley",
+    "name": "Snowball Volley",
+    "aliases": [],
+    "category": "skills",
+    "short_description": "Snowball Volley is named in official Steam news or devlog copy.",
+    "effect": "Projectile-based snow digging skill added for launch.",
+    "unlock_method": "Needs verification.",
+    "cost": "Needs verification.",
+    "mode": "Needs verification.",
+    "related_entities": [],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
+        "label": "Steam community news/devlogs",
+        "confidence": "high",
+        "notes": "Official public Steam news and developer posts for launch, systems, updates, and devlogs."
+      }
+    ],
+    "verification_status": "Verified",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Exact rarity, cooldown, scaling, and unlock details need gameplay verification."
   },
   {
     "id": "spark",

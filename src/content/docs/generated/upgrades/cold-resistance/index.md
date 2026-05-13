@@ -32,4 +32,5 @@ No related entities listed yet.
 
 - [Steam full-game store page](https://store.steampowered.com/app/3232380/FROGGY_HATES_SNOW/) — public_source, confidence high. Official public Steam store listing.
 - [Steam demo store page](https://store.steampowered.com/app/4037600/FROGGY_HATES_SNOW_Demo/) — public_source, confidence high. Official public Steam demo listing.
+- [Steam community news/devlogs](https://steamcommunity.com/app/3232380/allnews/?l=english) — public_source, confidence high. Official public Steam news and developer posts for launch, systems, updates, and devlogs.
 - [Steam community achievements page](https://steamcommunity.com/stats/3232380/achievements/?l=english) — public_source, confidence high. Public achievement names and descriptions.

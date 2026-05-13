@@ -93,6 +93,16 @@ type PublicGameplayClaim = {
   notes: string;
 };
 
+type SteamNewsFindings = {
+  source_url: string;
+  playable_frogs_count: number;
+  locations_count: number;
+  minimum_combined_skills_tools_attacks_companions: number;
+  demo_progress_carries_over: boolean;
+  confirmed_terms: string[];
+  notes: string[];
+};
+
 type SteamSnapshot = {
   accessed_date: string;
   generated_at: string;
@@ -120,6 +130,7 @@ type SteamSnapshot = {
     notes: string[];
   };
   public_gameplay_claims: PublicGameplayClaim[];
+  steam_news_findings: SteamNewsFindings;
   research_gaps: string[];
   refresh_commands: string[];
 };
@@ -134,6 +145,7 @@ const urls = {
   achievementPercentages: `https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=${FULL_APP_ID}&format=json`,
   demoAchievementPercentages: `https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=${DEMO_APP_ID}&format=json`,
   achievementsPage: `https://steamcommunity.com/stats/${FULL_APP_ID}/achievements/?l=english`,
+  news: `https://steamcommunity.com/app/${FULL_APP_ID}/allnews/?l=english`,
   steamDbFull: `https://steamdb.info/app/${FULL_APP_ID}/`,
   steamDbDemo: `https://steamdb.info/app/${DEMO_APP_ID}/`,
   publisherPage: "https://digitalbandidos.com/games/froggy-hates-snow/"
@@ -312,6 +324,59 @@ function parseAchievementRows(html: string): AchievementRow[] {
   return rows;
 }
 
+function extractSteamNewsFindings(html: string): SteamNewsFindings {
+  const text = stripHtml(html);
+  const required: Array<[string, RegExp]> = [
+    ["10 playable frogs", /\b10 playable frogs\b/i],
+    ["16 locations", /\b16 snow-covered\b/i],
+    ["60+ skills/tools/attacks/companions", /\b60\+\s+skills,\s+tools,\s+attacks,\s+and\s+companions\b/i],
+    ["demo progress carries over", /progress (?:will )?carr(?:y|ies) over/i],
+    ["snow digging core mechanic", /snow digging is the core mechanic/i],
+    ["anomalous zones rewards", /Completing an anomalous zone grants you Blue Gems/i],
+    ["post-launch update", /First Post-Launch Update/i]
+  ];
+  const missing = required.filter(([, pattern]) => !pattern.test(text)).map(([label]) => label);
+  if (missing.length > 0) {
+    throw new Error(`Steam news/devlog source is missing expected public markers: ${missing.join(", ")}`);
+  }
+
+  return {
+    source_url: urls.news,
+    playable_frogs_count: 10,
+    locations_count: 16,
+    minimum_combined_skills_tools_attacks_companions: 60,
+    demo_progress_carries_over: true,
+    confirmed_terms: [
+      "Zippy",
+      "Glider",
+      "Snowball Roll",
+      "Leap Chain",
+      "Delivery Bot",
+      "Flamethrower Bot",
+      "Scanner Drone",
+      "Piercing Icicles",
+      "Fireworks",
+      "Snowball Volley",
+      "Energy Wave",
+      "Destructive Field",
+      "Invincible Roll",
+      "Armor",
+      "Drill",
+      "Salt Sack",
+      "Snowblower",
+      "Blue Gems",
+      "Common artifacts",
+      "Uncommon artifacts",
+      "Rare artifacts",
+      "Legendary artifacts"
+    ],
+    notes: [
+      "Steam news/devlog text is treated as public first-party source material, but exact numeric balance values still need gameplay or patch-note verification.",
+      "Counts from news/devlogs establish scope; they do not provide complete names for every frog, location, skill, tool, attack, or companion."
+    ]
+  };
+}
+
 function entity(base: {
   name: string;
   category: string;
@@ -407,6 +472,7 @@ const datasets: Record<(typeof REQUIRED_DATASETS)[number], Map<string, Entity>> 
 function seedCoreEntities() {
   const fullStore = source("Steam full-game store page", urls.fullStore, "Official public Steam store listing.");
   const demoStore = source("Steam demo store page", urls.demoStore, "Official public Steam demo listing.");
+  const steamNews = source("Steam community news/devlogs", urls.news, "Official public Steam news and developer posts for launch, systems, updates, and devlogs.");
   const publisher = source("Digital Bandidos game page", urls.publisherPage, "Publisher page for FROGGY HATES SNOW.", "medium");
 
   addUnique(
@@ -428,12 +494,27 @@ function seedCoreEntities() {
     entity({
       name: "Playable characters",
       category: "frogs",
-      short_description: "Steam achievements refer to unlocking and upgrading characters, but public metadata does not list their names.",
-      effect: "Needs verification.",
+      short_description: "Steam news confirms 10 playable frogs, and public achievements refer to unlocking and upgrading characters.",
+      effect: "The full roster has 10 playable frogs; each name, stat line, and attack still needs verification unless listed separately.",
       unlock_method: "Achievements mention unlocking 1, 3, and 9 characters.",
       verification_status: "Verified",
-      sources: [source("Steam community achievements page", urls.achievementsPage, "Public achievement names and descriptions.")],
-      notes: "Use as a roster placeholder until local metadata or gameplay notes identify character names."
+      sources: [steamNews, source("Steam community achievements page", urls.achievementsPage, "Public achievement names and descriptions.")],
+      notes: "Use as a roster placeholder until local metadata or gameplay notes identify the remaining character names."
+    })
+  );
+
+  addUnique(
+    datasets.frogs,
+    entity({
+      name: "Zippy",
+      category: "frogs",
+      short_description: "The first post-launch Steam update identifies Zippy as a playable character.",
+      effect: "The update says Zippy starts with Invincible Roll as a default skill.",
+      unlock_method: "Needs verification.",
+      related_entities: ["invincible-roll"],
+      verification_status: "Verified",
+      sources: [steamNews],
+      notes: "Exact character stats and attack details need gameplay verification."
     })
   );
 
@@ -442,11 +523,11 @@ function seedCoreEntities() {
     entity({
       name: "Locations",
       category: "maps",
-      short_description: "Achievements refer to unlocking and fully completing locations.",
-      effect: "Locations appear to structure progression.",
+      short_description: "Steam news confirms 16 snow-covered, treasure-filled, anomaly-hiding locations.",
+      effect: "Locations structure progression and completion; exact map names remain unverified.",
       unlock_method: "Achievements mention unlock thresholds at 1, 5, and 15 locations.",
       verification_status: "Verified",
-      sources: [source("Steam community achievements page", urls.achievementsPage, "Public achievement names and descriptions.")],
+      sources: [steamNews, source("Steam community achievements page", urls.achievementsPage, "Public achievement names and descriptions.")],
       notes: "Individual location names need verification."
     })
   );
@@ -460,58 +541,91 @@ function seedCoreEntities() {
       effect: "Primary setting where the player digs, fights, gathers resources, and searches for exits.",
       mode: "Core game and demo.",
       verification_status: "Verified",
-      sources: [fullStore, demoStore],
+      sources: [fullStore, demoStore, steamNews],
       notes: "This is a setting term, not a confirmed map name."
     })
   );
 
-  for (const name of ["Hands", "Shovels", "Flamethrowers", "Explosives", "Skis", "Cart"]) {
+  const snowTools = new Map<string, string>([
+    ["Hands", "Always available basic snow removal, but slow and limited."],
+    ["Shovel", "Bigger digging area, faster digging, and can hit enemies."],
+    ["Pickaxe", "Basic ice-breaking tool."],
+    ["Drill", "Fast ice-breaking tool."],
+    ["Salt Sack", "Throwable that turns ice into snow."],
+    ["Dynamite", "Removes snow and ice in a limited area."],
+    ["Air Bomb", "Clears large areas of soft snow, but not ice."],
+    ["Snowblower", "Continuous snow removal tool."],
+    ["Flamethrower", "Continuous snow removal tool that can melt ice and set enemies on fire."],
+    ["Skis", "Movement or traversal tool mentioned in public Steam copy."],
+    ["Cart", "Resource-carrying tool mentioned in public Steam copy and anomalous-zone devlog."]
+  ]);
+
+  for (const [name, effect] of snowTools) {
     addUnique(
       datasets.tools,
       entity({
         name,
         category: "tools",
-        short_description: `${name} are mentioned in official Steam copy as part of digging, movement, or resource carrying.`,
-        effect: "Needs verification.",
+        short_description: `${name} is mentioned in official Steam copy or Steam devlogs as part of digging, movement, ice handling, or resource carrying.`,
+        effect,
         mode: "Core game and demo.",
         verification_status: "Verified",
-        sources: [fullStore, demoStore],
+        sources: [fullStore, demoStore, steamNews],
         notes: "Specific stats and unlock details need verification from gameplay or safe local metadata."
       })
     );
   }
 
-  for (const name of ["Penguin", "Mole", "Owl"]) {
+  const companions = new Map<string, string>([
+    ["Penguin", "A companion or ally type; exact behavior needs verification."],
+    ["Mole", "A helper that digs tunnels automatically, according to the snow devlog."],
+    ["Owl", "A companion or ally type; exact behavior needs verification."],
+    ["Delivery Bot", "A robotic helper added for launch, according to the launch devlog."],
+    ["Flamethrower Bot", "A robotic helper added for launch, according to the launch devlog."],
+    ["Scanner Drone", "A robotic helper added for launch, according to the launch devlog."]
+  ]);
+
+  for (const [name, effect] of companions) {
     addUnique(
       datasets.companions,
       entity({
         name,
         category: "companions",
         short_description: `${name} is listed publicly as a companion or ally type.`,
-        effect: "Aids the player; exact behavior needs verification.",
+        effect,
         verification_status: "Verified",
-        sources: [fullStore, demoStore, source("Steam community achievements page", urls.achievementsPage, "The Animal Squad achievement mentions Penguin, Mole, and Owl.")],
-        notes: "The official store copy uses plural animal names; achievement text uses singular names."
+        sources: [fullStore, demoStore, steamNews, source("Steam community achievements page", urls.achievementsPage, "The Animal Squad achievement mentions Penguin, Mole, and Owl.")],
+        notes: "Specific behavior, rarity, and unlock details need gameplay verification."
       })
     );
   }
 
-  for (const name of ["Gems", "Keys", "Treasure chests", "Treasures", "Traps", "Artifacts"]) {
+  const publicItems = new Map<string, string>([
+    ["Gems", "General resource mentioned by official Steam copy."],
+    ["Blue Gems", "Meta currency granted by anomalous zones and used to unlock new characters."],
+    ["Keys", "Used for the escape door and treasure chests, according to public Steam copy."],
+    ["Treasure chests", "Reward container mentioned by public Steam copy and anomalous-zone devlog."],
+    ["Treasures", "General hidden reward concept mentioned by official Steam copy."],
+    ["Traps", "Hazard concept mentioned by official Steam copy."],
+    ["Artifacts", "Permanent build-expanding items granted by anomalous zones; devlog lists Common, Uncommon, Rare, and Legendary rarity tiers."]
+  ]);
+
+  for (const [name, effect] of publicItems) {
     addUnique(
       datasets.items,
       entity({
         name,
         category: "items",
         short_description: `${name} are mentioned by official Steam copy or public achievements.`,
-        effect: "Needs verification.",
+        effect,
         verification_status: "Verified",
-        sources: [fullStore, demoStore, source("Steam community achievements page", urls.achievementsPage, "Public achievement names and descriptions.")],
+        sources: [fullStore, demoStore, steamNews, source("Steam community achievements page", urls.achievementsPage, "Public achievement names and descriptions.")],
         notes: "Amounts, drop rules, and exact use cases need verification."
       })
     );
   }
 
-  for (const name of ["Faster digging", "Combat strength", "Cold resistance", "Character upgrades", "Powerful upgrades"]) {
+  for (const name of ["Faster digging", "Combat strength", "Cold resistance", "Character upgrades", "Artifact upgrades", "Roll upgrades", "Powerful upgrades"]) {
     addUnique(
       datasets.upgrades,
       entity({
@@ -521,8 +635,38 @@ function seedCoreEntities() {
         effect: "Needs verification.",
         cost: name === "Powerful upgrades" ? "Keys may be spent on treasure chests for powerful upgrades, per official Steam copy." : "Needs verification.",
         verification_status: "Verified",
-        sources: [fullStore, demoStore, source("Steam community achievements page", urls.achievementsPage, "Public achievement names and descriptions.")],
+        sources: [fullStore, demoStore, steamNews, source("Steam community achievements page", urls.achievementsPage, "Public achievement names and descriptions.")],
         notes: "Specific upgrade tree entries need verification."
+      })
+    );
+  }
+
+  const publicSkills = new Map<string, string>([
+    ["Glider", "Movement skill added for launch."],
+    ["Snowball Roll", "Movement skill that can grow as it collects snow."],
+    ["Leap Chain", "Movement skill added for launch."],
+    ["Piercing Icicles", "Projectile-based snow digging skill added for launch."],
+    ["Fireworks", "Projectile-based snow digging skill added for launch."],
+    ["Snowball Volley", "Projectile-based snow digging skill added for launch."],
+    ["Energy Wave", "Post-launch update says it destroys all projectiles within its radius."],
+    ["Destructive Field", "Post-launch update says it destroys all projectiles within its radius."],
+    ["Invincible Roll", "Post-launch update says Zippy starts with this as a default skill."],
+    ["Armor", "Post-launch update says this skill is unlocked from the beginning."],
+    ["Skill Banishing", "Launch devlog describes removing skills from the pool so preferred builds appear more often."],
+    ["In-run skill reordering", "Launch devlog describes reordering skills to match preferred hotkeys."]
+  ]);
+
+  for (const [name, effect] of publicSkills) {
+    addUnique(
+      datasets.skills,
+      entity({
+        name,
+        category: "skills",
+        short_description: `${name} is named in official Steam news or devlog copy.`,
+        effect,
+        verification_status: "Verified",
+        sources: [steamNews],
+        notes: "Exact rarity, cooldown, scaling, and unlock details need gameplay verification."
       })
     );
   }
@@ -574,10 +718,20 @@ function seedCoreEntities() {
     ["Warmth", "Survival resource concept; Steam copy says warmth means survival."],
     ["Freezing", "Survival threat; Steam copy says staying too long in the cold can freeze the player."],
     ["Snowbank", "Interactive snow tile or obstacle described as hiding treasures, traps, or enemies."],
+    ["Heightmap snow", "The snow devlog describes the world snow as a heightmap texture changed by digging."],
+    ["Snow layers", "The snow devlog says different areas can have different layers and density."],
     ["Escape door", "Victory route requiring enough keys, according to Steam copy."],
     ["Anomaly zones", "Risk/reward areas that offer challenges and rewards, according to Steam copy."],
+    ["Anomalous zone challenges", "Steam devlog examples include timed survival, hidden-object digging, vanishing-item collection, passcode fragments, totems, stone buttons, timed rolls, and throwable-object interactions."],
+    ["Anomalous zone hazards", "Steam devlog examples include lightning strikes, roaming tornadoes, fireballs, rolling obsidian spheres, and laser beams."],
+    ["Artifact rarity tiers", "The anomalous-zone devlog lists Common, Uncommon, Rare, and Legendary artifact tiers."],
+    ["Elemental status effects", "Launch devlog lists Stun, Fire, Frost, Poison, and Lightning status effects."],
+    ["Character leveling", "Launch devlog says characters gain experience by being played and grow stronger over time."],
     ["Peaceful Mode", "Monster-free cozy mode described by Steam copy."],
     ["Survival loop", "Run structure: leave home, dig, fight, collect, return resources, and grow stronger."],
+    ["Demo progress carryover", "Steam news states demo progress carries over to the full game."],
+    ["Night Mode", "Post-launch update calls out Night Mode as an existing comfort option made more visible by attention badges."],
+    ["UI Scale", "Post-launch update says the default UI scale and Steam Deck UI scale were increased."],
     ["Steam demo", `Public demo app ${DEMO_APP_ID}; free Windows demo linked to the full app.`],
     ["Full game", `Public full game app ${FULL_APP_ID}; released on Steam May 7, 2026.`]
   ];
@@ -591,7 +745,7 @@ function seedCoreEntities() {
         short_description: description,
         effect: "Reference term.",
         verification_status: "Verified",
-        sources: [fullStore, demoStore, publisher],
+        sources: [fullStore, demoStore, steamNews, publisher],
         notes: "Glossary summary is paraphrased from public pages."
       })
     );
@@ -626,6 +780,30 @@ async function buildPublicSources(fullDetails: Record<string, unknown>, demoDeta
     {
       id: "steam-full-global-achievement-percentages",
       ...source("Steam global achievement percentages API", urls.achievementPercentages, "Public no-key endpoint for internal achievement ids and volatile global percentages.")
+    },
+    {
+      id: "steam-news-devlogs",
+      ...source("Steam community news/devlogs", urls.news, "Official public Steam news/devlog stream used for launch counts, named mechanics, named skills/tools/companions, update notes, and system descriptions.")
+    },
+    {
+      id: "steam-release-date-news",
+      ...source("Steam release-date news post", urls.news, "All-news page includes the public launch-count post: 10 playable frogs, 16 locations, 60+ skills/tools/attacks/companions, and demo progress carryover.")
+    },
+    {
+      id: "steam-launch-devlog",
+      ...source("Steam launch devlog", urls.news, "All-news page includes launch additions such as movement skills, robotic helpers, projectile skills, character leveling, artifact upgrades, status effects, roll upgrades, and skill banishing.")
+    },
+    {
+      id: "steam-anomalous-zones-devlog",
+      ...source("Steam anomalous zones devlog", urls.news, "All-news page includes anomalous-zone challenge types, hazards, Blue Gems, artifacts, and artifact rarity tiers.")
+    },
+    {
+      id: "steam-snow-devlog",
+      ...source("Steam snow systems devlog", urls.news, "All-news page includes snow heightmap behavior, snow density/layers, and named snow or ice tools.")
+    },
+    {
+      id: "steam-post-launch-update",
+      ...source("Steam first post-launch update", urls.news, "All-news page includes first update changes for readability, boss projectile speed, projectile defense skills, Zippy, early unlocks, location progression, and UI scale.")
     },
     {
       id: "steam-full-review-summary",
@@ -680,6 +858,7 @@ function buildSteamSnapshot(args: {
   achievementPercentages: SteamAchievement[];
   demoAchievementPercentages: SteamAchievement[];
   demoAchievementPercentagesResult: FetchResult<{ achievementpercentages?: { achievements?: SteamAchievement[] } }>;
+  newsFindings: SteamNewsFindings;
 }): SteamSnapshot {
   const fullData = (args.fullDetails[String(FULL_APP_ID)] as { data?: Record<string, unknown> } | undefined)?.data ?? {};
   const demoData = (args.demoDetails[String(DEMO_APP_ID)] as { data?: Record<string, unknown> } | undefined)?.data ?? {};
@@ -704,6 +883,7 @@ function buildSteamSnapshot(args: {
       full_achievements_page: urls.achievementsPage,
       full_global_achievement_percentages: urls.achievementPercentages,
       demo_global_achievement_percentages: urls.demoAchievementPercentages,
+      steam_news_devlogs: urls.news,
       publisher_page: urls.publisherPage,
       steamdb_full: urls.steamDbFull,
       steamdb_demo: urls.steamDbDemo
@@ -775,11 +955,47 @@ function buildSteamSnapshot(args: {
         confidence: "high",
         wiki_targets: ["achievements", "unlocks"],
         notes: "Achievement percentages are volatile and should be refreshed before percentage-based claims."
+      },
+      {
+        claim: "Steam news confirms 10 playable frogs, 16 locations, 60+ skills/tools/attacks/companions, and demo progress carryover.",
+        source_ids: ["steam-release-date-news", "steam-news-devlogs"],
+        confidence: "high",
+        wiki_targets: ["frogs", "maps", "skills", "tools", "companions", "guides"],
+        notes: "Use these as scope counts only; the complete named roster still needs verification."
+      },
+      {
+        claim: "Steam devlogs confirm specific launch additions including Glider, Snowball Roll, Leap Chain, Delivery Bot, Flamethrower Bot, Scanner Drone, Piercing Icicles, Fireworks, and Snowball Volley.",
+        source_ids: ["steam-launch-devlog", "steam-news-devlogs"],
+        confidence: "high",
+        wiki_targets: ["skills", "companions", "guides"],
+        notes: "Names and broad categories are public; exact stats, rarity, and unlock requirements need gameplay verification."
+      },
+      {
+        claim: "Steam devlogs confirm anomalous zones as short challenge areas with rewards including Blue Gems and artifacts in Common, Uncommon, Rare, and Legendary tiers.",
+        source_ids: ["steam-anomalous-zones-devlog", "steam-news-devlogs"],
+        confidence: "high",
+        wiki_targets: ["items", "glossary", "guides"],
+        notes: "Challenge examples are public; exact layouts, timers, and reward quantities need verification."
+      },
+      {
+        claim: "Steam snow-system devlog confirms snow as an interactable heightmap-like material with density/layers and named digging or ice tools.",
+        source_ids: ["steam-snow-devlog", "steam-news-devlogs"],
+        confidence: "high",
+        wiki_targets: ["tools", "glossary", "guides"],
+        notes: "Use for mechanics scaffolding; exact tool stats and upgrade scaling need verification."
+      },
+      {
+        claim: "The first post-launch Steam update confirms Zippy, Invincible Roll, Energy Wave, Destructive Field, Armor, and early location progression changes.",
+        source_ids: ["steam-post-launch-update", "steam-news-devlogs"],
+        confidence: "high",
+        wiki_targets: ["frogs", "skills", "maps", "guides"],
+        notes: "This is a post-launch state source and should be refreshed when later patch notes are added."
       }
     ],
+    steam_news_findings: args.newsFindings,
     research_gaps: [
-      "Exact character/frog roster beyond Froggy and achievement-count thresholds.",
-      "Named map/location roster, map unlock order, and location-specific boss names.",
+      "Exact character/frog roster beyond Froggy, Zippy, and the verified 10-playable-frog count.",
+      "Named map/location roster, map unlock order beyond public thresholds/update notes, and location-specific boss names.",
       "Named enemy roster and enemy behavior.",
       "Exact stats, costs, cooldowns, drop rates, and upgrade tree order.",
       "Whether demo metadata differs from the released full game after SteamCMD/local file extraction works.",
@@ -862,6 +1078,7 @@ function buildPublicResearchMarkdown(args: {
   achievementPercentages: SteamAchievement[];
   demoAchievementPercentages: SteamAchievement[];
   demoAchievementPercentagesResult: FetchResult<{ achievementpercentages?: { achievements?: SteamAchievement[] } }>;
+  newsFindings: SteamNewsFindings;
 }) {
   const fullData = (args.fullDetails[String(FULL_APP_ID)] as { data?: Record<string, unknown> } | undefined)?.data ?? {};
   const demoData = (args.demoDetails[String(DEMO_APP_ID)] as { data?: Record<string, unknown> } | undefined)?.data ?? {};
@@ -889,6 +1106,7 @@ function buildPublicResearchMarkdown(args: {
     `- Steam appdetails API, demo: ${urls.demoAppDetails}`,
     `- Steam community achievements page: ${urls.achievementsPage}`,
     `- Steam global achievement percentages API: ${urls.achievementPercentages}`,
+    `- Steam community news/devlogs: ${urls.news}`,
     "",
     "## Game-Level Facts",
     "",
@@ -909,12 +1127,18 @@ function buildPublicResearchMarkdown(args: {
     `- Demo screenshots listed by appdetails: ${demoScreenshots}`,
     `- Full-game languages: ${fullLanguages}`,
     `- Demo languages: ${demoLanguages}`,
+    `- Playable frogs confirmed by Steam news/devlogs: ${args.newsFindings.playable_frogs_count}`,
+    `- Locations confirmed by Steam news/devlogs: ${args.newsFindings.locations_count}`,
+    `- Minimum combined skills/tools/attacks/companions confirmed by Steam news/devlogs: ${args.newsFindings.minimum_combined_skills_tools_attacks_companions}+`,
+    `- Demo progress carryover confirmed by Steam news/devlogs: ${args.newsFindings.demo_progress_carries_over ? "yes" : "no"}`,
     "",
     "## Public Gameplay Concepts",
     "",
     "- Verified from official Steam copy: digging through snow, warmth/freezing as survival pressure, gems, keys, treasure chests, artifacts, anomaly zones, escape door, bosses, enemies, Peaceful Mode, upgrades, tools, companions, and a snowy-desert setting.",
+    "- Verified from official Steam news/devlogs: 10 playable frogs, 16 locations, 60+ skills/tools/attacks/companions, demo progress carryover, launch movement/projectile skills, robotic helpers, elemental status effects, anomalous-zone rewards, snow heightmap behavior, and first post-launch update changes.",
     "- Verified named companions/tools/items from public copy or achievements include Penguin, Mole, Owl, Map, Shovel, Cart, Scanner, Locator, Pickaxe, Dynamite, Air Bomb, Flamethrower, Heater Sled, Gloves, Hot Tea, Energy Drink, Poison Flask, Frost Bomb, and Flashbang.",
-    "- Exact stats, unlock costs, named map roster, named boss roster, named enemy roster, and individual frog/character roster remain Needs verification unless local metadata or gameplay notes confirm them.",
+    `- Steam news/devlog confirmed terms added to the wiki: ${args.newsFindings.confirmed_terms.join(", ")}.`,
+    "- Exact stats, unlock costs, complete named map roster, named boss roster, named enemy roster, and the remaining frog/character roster remain Needs verification unless local metadata or gameplay notes confirm them.",
     "",
     "## Achievements",
     "",
@@ -952,19 +1176,21 @@ async function main() {
   await mkdir(path.resolve("notes"), { recursive: true });
   seedCoreEntities();
 
-  const [fullDetails, demoDetails, fullReviews, demoReviews, achievementPercentagesRaw, demoAchievementPercentagesResult, achievementsHtml] = await Promise.all([
+  const [fullDetails, demoDetails, fullReviews, demoReviews, achievementPercentagesRaw, demoAchievementPercentagesResult, achievementsHtml, newsHtml] = await Promise.all([
     fetchJson<Record<string, unknown>>(urls.fullAppDetails),
     fetchJson<Record<string, unknown>>(urls.demoAppDetails),
     fetchJson<Record<string, unknown>>(urls.fullReviews),
     fetchJson<Record<string, unknown>>(urls.demoReviews),
     fetchJson<{ achievementpercentages?: { achievements?: SteamAchievement[] } }>(urls.achievementPercentages),
     fetchJsonResult<{ achievementpercentages?: { achievements?: SteamAchievement[] } }>(urls.demoAchievementPercentages),
-    fetchText(urls.achievementsPage)
+    fetchText(urls.achievementsPage),
+    fetchText(urls.news)
   ]);
 
   const achievementRows = parseAchievementRows(achievementsHtml);
   const achievementPercentages = achievementPercentagesRaw.achievementpercentages?.achievements ?? [];
   const demoAchievementPercentages = demoAchievementPercentagesResult.data?.achievementpercentages?.achievements ?? [];
+  const newsFindings = extractSteamNewsFindings(newsHtml);
   addAchievementData(achievementRows, achievementPercentages);
 
   const publicSources = await buildPublicSources(fullDetails, demoDetails, fullReviews, demoReviews);
@@ -979,7 +1205,8 @@ async function main() {
       achievementRows,
       achievementPercentages,
       demoAchievementPercentages,
-      demoAchievementPercentagesResult
+      demoAchievementPercentagesResult,
+      newsFindings
     })
   );
 
@@ -997,12 +1224,13 @@ async function main() {
       achievementRows,
       achievementPercentages,
       demoAchievementPercentages,
-      demoAchievementPercentagesResult
+      demoAchievementPercentagesResult,
+      newsFindings
     })
   );
 
   console.log(
-    `Wrote public Steam research: ${achievementRows.length} achievement rows, ${achievementPercentages.length} full-game API percentage ids, ${demoAchievementPercentages.length} demo API ids.`
+    `Wrote public Steam research: ${achievementRows.length} achievement rows, ${achievementPercentages.length} full-game API percentage ids, ${demoAchievementPercentages.length} demo API ids, ${newsFindings.confirmed_terms.length} Steam news/devlog terms.`
   );
 }
 

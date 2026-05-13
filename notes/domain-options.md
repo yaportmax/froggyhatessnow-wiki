@@ -2,7 +2,7 @@
 
 Checked: 2026-05-13
 
-Porkbun API/domain research indicates all checked candidates are available and non-premium. No registration was completed from this shell.
+Porkbun API/domain research indicates all checked candidates are available and non-premium. No registration was completed from this shell because Porkbun requires account email and phone verification before API registration can complete.
 
 | Domain | Available | First Year | Renewal | Pros | Cons |
 |---|---:|---:|---:|---|---|
@@ -40,14 +40,60 @@ A second registration attempt on 2026-05-13 rechecked `froggyhatessnow.wiki` as 
 
 - Second API request id: `019e20dc-0225-7121-b271-383668a2a5fd`
 
+A third registration attempt through the repo helper command also rechecked `froggyhatessnow.wiki` as available at `$2.06` first-year / `$26.26` renewal, non-premium, then received the same account-verification blocker.
+
+- Command: `npm run domain:register -- --max-cost-usd=2.06`
+- Check request id: `019e20e6-a9ca-761f-8278-7c0dc7034b64`
+- Create request id: `019e20e6-ac46-7d0d-a14d-e794d764be52`
+- Error code: `VERIFICATION_REQUIRED`
+
+The read-only helper check currently succeeds:
+
+```bash
+npm run domain:check
+```
+
+Latest read-only check request id: `019e20e6-7d9f-72de-b65c-877ad75010f3`.
+
 ## DNS / Vercel Plan
 
-1. Build locally with `npm run build`.
-2. Create or link a separate Vercel project for this folder.
-3. Add the selected domain to that Vercel project.
-4. Register the domain via Porkbun.
-5. Configure Porkbun DNS to Vercel's requested records or nameservers.
-6. Re-check the Vercel domain status after DNS propagation.
+The Vercel project already has both target hostnames attached:
+
+- `froggyhatessnow.wiki`
+- `www.froggyhatessnow.wiki`
+
+Vercel currently reports both as third-party domains on the edge network but not configured because the domain is not registered/DNS-configured yet.
+
+After Porkbun account verification:
+
+1. Register the domain:
+
+   ```bash
+   npm run domain:register -- --max-cost-usd=2.06
+   ```
+
+2. Configure Porkbun DNS:
+
+   ```bash
+   npm run domain:dns
+   ```
+
+   The helper creates only missing Vercel A records:
+
+   - `A @ 76.76.21.21`
+   - `A www 76.76.21.21`
+
+3. Re-check Vercel:
+
+   ```bash
+   npx vercel domains inspect froggyhatessnow.wiki
+   npx vercel domains inspect www.froggyhatessnow.wiki
+   ```
+
+Alternative DNS plan: change the domain nameservers to Vercel's intended nameservers:
+
+- `ns1.vercel-dns.com`
+- `ns2.vercel-dns.com`
 
 Sources:
 
