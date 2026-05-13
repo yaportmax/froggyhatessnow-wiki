@@ -54,13 +54,20 @@ A fourth guarded registration attempt on 2026-05-13 again rechecked `froggyhates
 - Create request id: `019e20e6-ac46-7d0d-a14d-e794d764be52`
 - Error code: `VERIFICATION_REQUIRED`
 
+A fifth guarded registration attempt on 2026-05-13 used a fresh idempotency suffix to confirm the blocker was not just a replayed failed request. It again rechecked `froggyhatessnow.wiki` as available at `$2.06` first-year / `$26.26` renewal, non-premium, then received the same account-verification blocker with a new create request id.
+
+- Command: `npm run domain:register -- --max-cost-usd=2.06 --idempotency-suffix=audit-20260513-1`
+- Check request id: `019e2162-8fab-7bb3-a43d-f1d2e4eeb412`
+- Create request id: `019e2162-9228-713d-a94a-88112b03af51`
+- Error code: `VERIFICATION_REQUIRED`
+
 The read-only helper check currently succeeds:
 
 ```bash
 npm run domain:check
 ```
 
-Latest read-only check request id: `019e215f-94ea-795b-a0b0-2e6c7c0742ab`.
+Latest read-only check request id: `019e2161-f193-7a28-8341-409373b969be`.
 
 DNS setup was also attempted through the helper before registration completed:
 
@@ -87,7 +94,7 @@ After Porkbun account verification:
 1. Register the domain:
 
    ```bash
-   npm run domain:register -- --max-cost-usd=2.06
+   npm run domain:register -- --max-cost-usd=2.06 --idempotency-suffix=post-verification
    ```
 
 2. Configure Porkbun DNS:

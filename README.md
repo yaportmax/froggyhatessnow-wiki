@@ -29,6 +29,12 @@ npm run dev
 npm run domain:check
 ```
 
+After Porkbun account verification clears a failed registration blocker, use a fresh registration idempotency suffix so Porkbun does not replay the earlier failed create response:
+
+```bash
+npm run domain:register -- --max-cost-usd=2.06 --idempotency-suffix=post-verification
+```
+
 ## Data Rules
 
 - Do not invent facts.

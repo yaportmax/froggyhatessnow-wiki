@@ -41,7 +41,7 @@ Everything is implemented, validated, pushed, and deployed except the explicit d
 | Live achievement matrix page | `https://froggyhatessnow-wiki.vercel.app/achievement-source-matrix/` returns 200 and contains Milestone Series and Loadout Names sections. | Done |
 | Live game metadata page | `https://froggyhatessnow-wiki.vercel.app/game-metadata/` returns 200. | Done |
 | Domain research | `notes/domain-options.md` lists required candidates, prices, pros/cons, recommendation, backups, and sources. | Done |
-| Domain purchase | `npm run domain:check` confirms `froggyhatessnow.wiki` is available, non-premium, `$2.06` first year / `$26.26` renewal. Latest guarded purchase attempt `npm run domain:register -- --max-cost-usd=2.06` failed with Porkbun `VERIFICATION_REQUIRED`. | Blocked |
+| Domain purchase | `npm run domain:check` confirms `froggyhatessnow.wiki` is available, non-premium, `$2.06` first year / `$26.26` renewal. Latest guarded purchase attempt with a fresh idempotency suffix failed with Porkbun `VERIFICATION_REQUIRED`. | Blocked |
 | Vercel domain setup | Vercel has `froggyhatessnow.wiki` and `www.froggyhatessnow.wiki` attached to the project. It reports DNS not configured and recommends `A froggyhatessnow.wiki 76.76.21.21` and `A www.froggyhatessnow.wiki 76.76.21.21`. | Waiting on purchase/DNS |
 | README and AGENTS | Both exist and document workflow, data rules, deployment, domain blocker, and fail-loud behavior. | Done |
 
@@ -76,8 +76,8 @@ curl -fsS -o /tmp/froggy-game-metadata.html -w '%{http_code}\n' https://froggyha
 - Later `npx vercel deploy --prod`: deployment `dpl_BysoqF8R65bguRBehVoXhJXeRPYW` stuck in `BUILDING`; logs stop after downloading deployment files.
 - `npx vercel build --prod --yes`: local prebuilt output completed successfully in `.vercel/output`.
 - Later `npx vercel deploy --prebuilt --prod`: deployment `dpl_J1kt8Sbkz5hSUBLvGjKMwjtPTm58` stuck in `QUEUED` behind the previous build. Latest successful production alias remains `https://froggyhatessnow-wiki.vercel.app`.
-- `npm run domain:check`: `froggyhatessnow.wiki` available yes, type registration, price `2.06`, regularPrice `26.26`, premium no, request id `019e215f-94ea-795b-a0b0-2e6c7c0742ab`.
-- `npm run domain:register -- --max-cost-usd=2.06`: guarded purchase attempt rechecked availability at `$2.06`, then Porkbun returned `VERIFICATION_REQUIRED`; check request id `019e215f-c9b2-778d-82a0-1b2ed3b5184c`, create request id `019e20e6-ac46-7d0d-a14d-e794d764be52`.
+- `npm run domain:check`: `froggyhatessnow.wiki` available yes, type registration, price `2.06`, regularPrice `26.26`, premium no, request id `019e2161-f193-7a28-8341-409373b969be`.
+- `npm run domain:register -- --max-cost-usd=2.06 --idempotency-suffix=audit-20260513-1`: guarded purchase attempt rechecked availability at `$2.06`, then Porkbun returned `VERIFICATION_REQUIRED`; check request id `019e2162-8fab-7bb3-a43d-f1d2e4eeb412`, create request id `019e2162-9228-713d-a94a-88112b03af51`.
 - `npm run domain:dns`: blocked before registration; Porkbun returned `INVALID_DOMAIN`, request id `019e2160-0873-76b9-8ab8-72820b93f7bf`.
 - Vercel domain inspect: apex and `www` domains found, edge network yes, DNS not configured, intended nameservers `ns1.vercel-dns.com` and `ns2.vercel-dns.com`, recommended records `A froggyhatessnow.wiki 76.76.21.21` and `A www.froggyhatessnow.wiki 76.76.21.21`.
 - Live homepage, Steam source snapshot, achievement source matrix, and game metadata pages returned HTTP 200 on the Vercel alias.
@@ -85,7 +85,7 @@ curl -fsS -o /tmp/froggy-game-metadata.html -w '%{http_code}\n' https://froggyha
 ## Remaining Work
 
 1. Verify Porkbun account phone and email outside this shell.
-2. Run `npm run domain:register -- --max-cost-usd=2.06`.
+2. Run `npm run domain:register -- --max-cost-usd=2.06 --idempotency-suffix=post-verification`.
 3. Run `npm run domain:dns`.
 4. Re-check:
 

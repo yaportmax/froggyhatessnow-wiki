@@ -34,6 +34,7 @@ function usage() {
     "Safety:",
     "  check is read-only.",
     "  register writes only the registration request and uses an Idempotency-Key.",
+    "  Use --idempotency-suffix=<label> after resolving an upstream failed registration blocker.",
     "  dns writes only missing Vercel A records after the domain is in the Porkbun account."
   ].join("\n");
 }
@@ -92,6 +93,16 @@ function maxCostFromArgs(args: string[]) {
   return parsed;
 }
 
+function idempotencySuffixFromArgs(args: string[]) {
+  const arg = args.find((value) => value.startsWith("--idempotency-suffix="));
+  if (!arg) return new Date().toISOString().slice(0, 10);
+  const suffix = arg.split("=")[1] ?? "";
+  if (!/^[A-Za-z0-9._-]{1,64}$/.test(suffix)) {
+    throw new Error(`Invalid --idempotency-suffix value: ${arg}. Use 1-64 letters, numbers, dots, underscores, or hyphens.`);
+  }
+  return suffix;
+}
+
 function printSafe(label: string, value: unknown) {
   console.log(`${label}: ${JSON.stringify(value, null, 2)}`);
 }
@@ -127,7 +138,7 @@ async function registerDomain(auth: Record<string, string>, args: string[]) {
     throw new Error(`Quoted price ${price} exceeds --max-cost-usd=${maxCostUsd}.`);
   }
 
-  const idempotencyKey = `froggyhatessnow-wiki-${DOMAIN}-${new Date().toISOString().slice(0, 10)}`;
+  const idempotencyKey = `froggyhatessnow-wiki-${DOMAIN}-${idempotencySuffixFromArgs(args)}`;
   const result = await post(
     `/domain/create/${DOMAIN}`,
     {
