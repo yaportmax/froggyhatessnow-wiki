@@ -83,6 +83,13 @@ A confirmed `domain:finish` attempt on 2026-05-13 stopped at the same registrati
 - Create request id: `019e217f-e6ac-723c-8134-3613a780f093`
 - Error code: `VERIFICATION_REQUIRED`
 
+A follow-up confirmed `domain:finish` attempt on 2026-05-13, after the Steam-source refresh deployment, again stopped at the same registration gate before DNS, Astro site, build, or deploy steps ran. It reused the post-verification idempotency key, so Porkbun replayed the same create request id.
+
+- Command: `npm run domain:finish -- --confirm-register-and-dns`
+- Check request id: `019e219a-80e4-723c-af60-4191806fc087`
+- Create request id: `019e217f-e6ac-723c-8134-3613a780f093`
+- Error code: `VERIFICATION_REQUIRED`
+
 The read-only helper checks currently succeed:
 
 ```bash
@@ -100,6 +107,11 @@ Latest read-only status request ids:
 
 - `domain:status` check: `019e2197-2689-7e28-b4e2-53c67ff6ded6`
 - `domain:status` DNS retrieve: `019e2197-292b-7210-8e75-63a2a0ddc928`
+
+A later read-only status check still reported `domain_available_not_registered`:
+
+- `domain:status` check: `019e219a-288a-7515-9a3b-6592aed0bd32`
+- `domain:status` DNS retrieve: `019e219a-407f-7f64-bf6c-f12b42afa82d`
 
 The latest direct custom-domain URL check failed before HTTP because DNS does not resolve yet:
 
