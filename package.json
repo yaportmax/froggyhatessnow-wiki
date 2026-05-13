@@ -15,6 +15,7 @@
     "domain:register": "tsx scripts/porkbun-domain.ts register",
     "domain:dns": "tsx scripts/porkbun-domain.ts dns",
     "deploy:status": "tsx scripts/vercel-status.ts",
+    "deploy:publish": "tsx scripts/vercel-publish.ts",
     "generate": "tsx scripts/generate-pages.ts",
     "validate": "tsx scripts/validate-data.ts",
     "test": "vitest run"

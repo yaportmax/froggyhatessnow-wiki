@@ -50,11 +50,12 @@ Non-destructive checks on 2026-05-13 confirmed the same state in `vercel list`, 
 npm run deploy:status
 ```
 
-After explicit approval and manual removal of those stuck deployments, rerun:
+`npm run deploy:publish` is a guarded wrapper around this recovery path. It runs `deploy:status`, refuses to remove any remote deployment by default, and only clears the stuck deployment ids when `--remove-stuck-after-approval` is passed.
+
+After explicit approval to clear the stuck deployments, run:
 
 ```bash
-npx vercel deploy --prebuilt --prod
-npm run deploy:status
+npm run deploy:publish -- --remove-stuck-after-approval
 ```
 
 Live checks after this deploy:

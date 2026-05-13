@@ -27,11 +27,20 @@ type SteamSnapshot = {
   generated_at?: string;
 };
 
-async function runVercel(args: string[]) {
-  const { stdout } = await execFileAsync("npx", ["vercel", ...args], {
-    maxBuffer: 10 * 1024 * 1024
-  });
-  return stdout;
+async function runVercel(args: string[], options: { allowJsonOnFailure?: boolean } = {}) {
+  try {
+    const { stdout } = await execFileAsync("npx", ["vercel", ...args], {
+      maxBuffer: 10 * 1024 * 1024
+    });
+    return stdout;
+  } catch (error) {
+    const failed = error as Error & { stdout?: string; stderr?: string };
+    const stdout = failed.stdout ?? "";
+    if (options.allowJsonOnFailure && stdout.includes("{")) return stdout;
+    const stderr = failed.stderr ? `\n${failed.stderr.trim()}` : "";
+    const output = stdout ? `\n${stdout.trim()}` : "";
+    throw new Error(`${failed.message}${stderr}${output}`);
+  }
 }
 
 async function runGit(args: string[]) {
@@ -56,7 +65,7 @@ async function readSteamSnapshot() {
 }
 
 async function inspectDeployment(url: string) {
-  const raw = await runVercel(["inspect", url, "--format=json"]);
+  const raw = await runVercel(["inspect", url, "--format=json"], { allowJsonOnFailure: true });
   const data = parseJsonOutput<VercelInspect>(raw);
   return {
     id: data.uid ?? data.id ?? "unknown",
@@ -142,7 +151,14 @@ async function main() {
                   id: deployment.id,
                   readyState: deployment.readyState,
                   url: deployment.url
-                }))
+                })),
+                ...(nonReady.length === 0
+                  ? {
+                      command: "npm run deploy:publish"
+                    }
+                  : {
+                      afterApprovalAndRemoval: "npm run deploy:publish -- --remove-stuck-after-approval"
+                    })
               }
             : nonReadyWithAliases.length > 0
             ? {
