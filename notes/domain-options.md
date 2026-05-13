@@ -85,8 +85,8 @@ npm run domain:register -- --max-cost-usd=2.06 --idempotency-suffix=post-verific
 Latest read-only check request ids:
 
 - `domain:check`: `019e2161-f193-7a28-8341-409373b969be`
-- `domain:status` check: `019e2168-9bff-7249-bec7-fe9b59417db0`
-- `domain:status` DNS retrieve: `019e2168-a3e9-7441-a623-19a8277dd727`
+- `domain:status` check: `019e2170-3bb2-7845-8902-e826264902f4`
+- `domain:status` DNS retrieve: `019e2170-3eb3-7b4a-83ce-28e91a4b4a06`
 
 DNS setup was also attempted through the helper before registration completed:
 
