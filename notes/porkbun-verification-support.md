@@ -21,8 +21,8 @@ Latest API availability result before create:
 Latest failed finisher attempt:
 
 - Command: `npm run domain:finish:post-verification`
-- Check request id: `019e21d5-2161-7212-9556-3bf098d88f96`
-- Create request id: `019e21d5-23f8-7df7-b4e0-7d21ca0f9494`
+- Check request id: `019e21e6-e51a-7786-95c9-efe33d7ff01b`
+- Create request id: `019e21e6-e84d-7d71-96bc-2b2f010622da`
 - Error code: `VERIFICATION_REQUIRED`
 - Error message: `Your account phone number and email address must be verified.`
 
@@ -86,8 +86,8 @@ Latest failed attempt:
 - Domain: froggyhatessnow.wiki
 - First-year price returned by API: $2.06
 - Renewal price returned by API: $26.26
-- Check request id: 019e21d5-2161-7212-9556-3bf098d88f96
-- Create request id: 019e21d5-23f8-7df7-b4e0-7d21ca0f9494
+- Check request id: 019e21e6-e51a-7786-95c9-efe33d7ff01b
+- Create request id: 019e21e6-e84d-7d71-96bc-2b2f010622da
 
 Can you confirm what account verification step is still missing, or help clear the email/phone verification requirement so the API registration can complete?
 

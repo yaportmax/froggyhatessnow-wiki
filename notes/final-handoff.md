@@ -27,18 +27,16 @@ VERIFICATION_REQUIRED: Your account phone number and email address must be verif
 Latest confirmed purchase attempt:
 
 - Command: `npm run domain:finish:post-verification`
-- Check request id: `019e21d5-2161-7212-9556-3bf098d88f96`
-- Create request id: `019e21d5-23f8-7df7-b4e0-7d21ca0f9494`
+- Check request id: `019e21e6-e51a-7786-95c9-efe33d7ff01b`
+- Create request id: `019e21e6-e84d-7d71-96bc-2b2f010622da`
 - Result: stopped before DNS, Astro site changes, build, or deploy.
 - Browser fallback status: the Chrome-extension control path is not exposed in this session, and Computer Use currently cannot attach to Chrome (`cgWindowNotFound`). No UI purchase or verification action was completed.
 - Support packet: `notes/porkbun-verification-support.md` contains the current request IDs, manual verification checklist, Gmail search notes, and a support message draft.
 
 Latest read-only domain status:
 
-- Domain check request id: `019e2197-2689-7e28-b4e2-53c67ff6ded6`
-- DNS retrieve request id: `019e2197-292b-7210-8e75-63a2a0ddc928`
-- Latest status check request id: `019e21ab-80ae-7745-b332-2ff15488d479`
-- Latest DNS retrieve request id: `019e21ab-837a-79e8-b69a-70789fcf5b03`
+- Domain check request id: `019e21e6-8c56-7892-b4b4-428ae8bf4597`
+- DNS retrieve request id: `019e21e6-8fb7-7266-b347-a60fc0a695f8`
 - Result: `domain_available_not_registered`; DNS returned `INVALID_DOMAIN`.
 - Direct `https://froggyhatessnow.wiki/` check: cannot resolve host.
 
