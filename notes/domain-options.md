@@ -110,8 +110,8 @@ Latest read-only status request ids:
 
 A later read-only status check still reported `domain_available_not_registered`:
 
-- `domain:status` check: `019e219a-288a-7515-9a3b-6592aed0bd32`
-- `domain:status` DNS retrieve: `019e219a-407f-7f64-bf6c-f12b42afa82d`
+- `domain:status` check: `019e219b-543c-759d-b33f-a63b336e08a5`
+- `domain:status` DNS retrieve: `019e219b-574a-7c84-af41-eac996f649f7`
 
 The latest direct custom-domain URL check failed before HTTP because DNS does not resolve yet:
 
