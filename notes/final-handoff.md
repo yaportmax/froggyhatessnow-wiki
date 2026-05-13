@@ -35,8 +35,8 @@ Latest confirmed purchase attempt:
 
 Latest read-only domain status:
 
-- Domain check request id: `019e221c-7346-7c76-94bb-17504a92292d`
-- DNS retrieve request id: `019e221c-75bb-72b6-81f0-372d0b1fdb72`
+- Domain check request id: `019e2224-4e46-7a8f-b2a8-a5059a23e3b0`
+- DNS retrieve request id: `019e2224-5256-7899-a55a-00f958494e3a`
 - Result: `domain_available_not_registered`; DNS returned `INVALID_DOMAIN`.
 - Direct `https://froggyhatessnow.wiki/` check: cannot resolve host.
 
