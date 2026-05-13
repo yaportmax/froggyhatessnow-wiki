@@ -34,7 +34,7 @@ The wiki/scaffold/data/source/deploy work is complete and verified. The remainin
 | Generated category/detail pages | `npm run generate` creates 153 entity detail pages and 11 category indexes; filesystem currently has 164 generated `index.md` files. | Done |
 | Required static pages | Homepage, beginner guide, warmth guide, best upgrades, unlocks, game modes, FAQ, contribute, verification status, game metadata, source ledger, Steam source snapshot, and achievement source matrix exist under `src/content/docs/`. | Done |
 | SEO targets | Page titles/descriptions and generated routes cover the requested terms for wiki, frogs, maps, tools, items, skills, achievements, unlocks, warmth guide, bosses, and game modes. `astro.config.mjs` currently uses the Vercel alias until the custom domain is actually registered. | Done for deployed alias; custom canonical waits on domain |
-| Package scripts | `dev`, `build`, `preview`, `scan`, `generate`, `validate` exist, plus `fetch:steam`, `test`, `deploy:*`, and `domain:*` helpers. | Done |
+| Package scripts | `dev`, `build`, `preview`, `scan`, `generate`, `validate` exist, plus `fetch:steam`, `test`, `deploy:*`, and `domain:*` helpers including the read-only `domain:health` final audit. | Done |
 | README and AGENTS | Both exist and document workflow, source rules, validation/deploy/domain paths, and fail-loud behavior. | Done |
 | Domain research | `notes/domain-options.md` lists all required candidates, registrar, registration/renewal prices, pros/cons, best recommendation, backups, sources, and attempt history. | Done |
 | Buy domain via Porkbun API and/or Chrome | Porkbun API confirms `froggyhatessnow.wiki` is available, non-premium, `$2.06` first year / `$26.26` renewal, but registration fails with `VERIFICATION_REQUIRED`. Chrome plugin Node browser-control was not exposed; Computer Use could not attach to Chrome (`cgWindowNotFound`) even after opening a window, so UI verification could not proceed safely. | Blocked |
@@ -55,6 +55,7 @@ npx tsc --noEmit
 git diff --check
 npm run deploy:status
 npm run domain:status
+npm run domain:health
 npm run domain:finish -- --confirm-register-and-dns
 curl -I --max-time 20 https://froggyhatessnow.wiki/
 ```
@@ -69,6 +70,7 @@ curl -I --max-time 20 https://froggyhatessnow.wiki/
 - `git diff --check`: passed.
 - `npm run deploy:status`: stable alias live checks passed for homepage, Steam source snapshot, current source timestamp, and achievement matrix.
 - `npm run domain:status`: `domain_available_not_registered`; latest check request id `019e219b-543c-759d-b33f-a63b336e08a5`, DNS retrieve request id `019e219b-574a-7c84-af41-eac996f649f7`.
+- `npm run domain:health`: expected failure while registration/DNS are incomplete. Latest run exited `1`; Vercel apex/`www` attachment checks passed, DNS returned `ENOTFOUND`, custom-domain HTTP checks failed before resolution, and the Porkbun read-only status subcheck hit `RATE_LIMIT_EXCEEDED` after repeated API checks.
 - `npm run domain:finish -- --confirm-register-and-dns`: failed at `domain:register` with Porkbun `VERIFICATION_REQUIRED`; check request id `019e219a-80e4-723c-af60-4191806fc087`, create request id `019e217f-e6ac-723c-8134-3613a780f093`.
 - `curl -I --max-time 20 https://froggyhatessnow.wiki/`: `Could not resolve host`, as expected while the domain is unregistered.
 
@@ -95,6 +97,7 @@ curl -I --max-time 20 https://froggyhatessnow.wiki/
    npx vercel domains inspect www.froggyhatessnow.wiki
    curl -I https://froggyhatessnow.wiki/
    curl -I https://www.froggyhatessnow.wiki/
+   npm run domain:health
    npm run deploy:status
    ```
 

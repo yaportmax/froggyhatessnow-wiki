@@ -31,6 +31,7 @@ npm run deploy:publish
 npm run domain:check
 npm run domain:status
 npm run domain:finish
+npm run domain:health
 ```
 
 After Porkbun account verification clears a failed registration blocker, use a fresh registration idempotency suffix so Porkbun does not replay the earlier failed create response:
@@ -92,9 +93,10 @@ After the Porkbun account is verified:
 
 ```bash
 npm run domain:finish -- --confirm-register-and-dns
+npm run domain:health
 ```
 
-The finisher registers the domain, configures Porkbun DNS, switches the Astro canonical site, rebuilds/deploys, inspects both Vercel domains, and checks live markers on both the apex and `www` custom domains.
+The finisher registers the domain, configures Porkbun DNS, switches the Astro canonical site, rebuilds/deploys, inspects both Vercel domains, and checks live markers on both the apex and `www` custom domains. `npm run domain:health` is read-only and repeats the final Porkbun/Vercel/DNS/custom-domain marker audit; it should fail while Porkbun still reports `domain_available_not_registered`.
 
 See `notes/domain-options.md` for pricing and next steps.
 

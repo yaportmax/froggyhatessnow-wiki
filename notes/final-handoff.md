@@ -44,9 +44,12 @@ Run:
 
 ```bash
 npm run domain:finish -- --confirm-register-and-dns
+npm run domain:health
 ```
 
 This guarded finisher registers `froggyhatessnow.wiki`, creates the Vercel A records in Porkbun DNS, switches `astro.config.mjs` to `https://froggyhatessnow.wiki`, rebuilds, deploys, reruns Vercel domain checks, and then verifies live page markers on both `https://froggyhatessnow.wiki` and `https://www.froggyhatessnow.wiki`.
+
+`npm run domain:health` is read-only. It checks Porkbun registration state, Vercel domain attachment, DNS A records for apex and `www`, and custom-domain page markers against the local Steam snapshot timestamp. It is expected to fail until the Porkbun verification/registration/DNS path is complete.
 
 Expected Porkbun DNS records:
 
@@ -74,5 +77,6 @@ Expected custom-domain live checks after deployment:
 - `froggyhatessnow.wiki` is registered.
 - Porkbun DNS contains the expected Vercel A records.
 - Vercel reports the apex and `www` domains configured.
+- `npm run domain:health` reports `"ok": true`.
 - `astro.config.mjs` uses `site: "https://froggyhatessnow.wiki"`.
 - The rebuilt/deployed site passes live checks on the custom domain.
