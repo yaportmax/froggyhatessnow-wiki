@@ -16,6 +16,7 @@
     "domain:dns": "tsx scripts/porkbun-domain.ts dns",
     "domain:finish": "tsx scripts/domain-finish.ts",
     "domain:health": "tsx scripts/domain-health.ts",
+    "domain:commit-canonical": "tsx scripts/domain-commit-canonical.ts",
     "deploy:status": "tsx scripts/vercel-status.ts",
     "deploy:publish": "tsx scripts/vercel-publish.ts",
     "generate": "tsx scripts/generate-pages.ts",

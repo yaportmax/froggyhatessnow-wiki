@@ -11,6 +11,7 @@ const VERCEL_SITE = "https://froggyhatessnow-wiki.vercel.app";
 const CONFIRM_FLAG = "--confirm-register-and-dns";
 const ALLOW_DIRTY_FLAG = "--allow-dirty";
 const SKIP_SITE_SWITCH_FLAG = "--skip-site-switch";
+const COMMIT_CANONICAL_FLAG = "--commit-canonical-after-success";
 const DEFAULT_MAX_COST = "2.06";
 const CUSTOM_LIVE_CHECK_ATTEMPTS = 12;
 const CUSTOM_LIVE_CHECK_DELAY_MS = 10_000;
@@ -181,7 +182,7 @@ async function main() {
       [
         "Dry run only. This command will register a domain, configure DNS, switch the Astro canonical site, build, and deploy.",
         `After Porkbun account verification, run: npm run domain:finish -- ${CONFIRM_FLAG}`,
-        `Optional: --max-cost-usd=${DEFAULT_MAX_COST} --idempotency-suffix=${defaultIdempotencySuffix} ${SKIP_SITE_SWITCH_FLAG}`
+        `Optional: --max-cost-usd=${DEFAULT_MAX_COST} --idempotency-suffix=${defaultIdempotencySuffix} ${SKIP_SITE_SWITCH_FLAG} ${COMMIT_CANONICAL_FLAG}`
       ].join("\n")
     );
   }
@@ -215,6 +216,11 @@ async function main() {
   await inspectDomains();
   await verifyCustomDomainLive();
   await run("npm", ["run", "domain:health"]);
+  if (argSet.has(COMMIT_CANONICAL_FLAG)) {
+    await run("npm", ["run", "domain:commit-canonical"]);
+  } else if (!argSet.has(SKIP_SITE_SWITCH_FLAG)) {
+    console.error(`Custom-domain health passed. To commit and push the canonical config switch, run: npm run domain:commit-canonical`);
+  }
 }
 
 await main().catch((error) => {

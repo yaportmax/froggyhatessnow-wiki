@@ -20,6 +20,7 @@ const REQUIRED_PATHS = [
   "scripts/validate-data.ts",
   "scripts/completion-audit.ts",
   "scripts/domain-health.ts",
+  "scripts/domain-commit-canonical.ts",
   "notes/public-research.md",
   "notes/extracted-metadata.md",
   "notes/extracted-metadata.json",
@@ -52,6 +53,7 @@ const SUPPORTING_SCRIPTS = [
   "domain:dns",
   "domain:finish",
   "domain:health",
+  "domain:commit-canonical",
   "audit:completion"
 ];
 

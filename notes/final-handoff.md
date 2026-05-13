@@ -45,11 +45,13 @@ Latest read-only domain status:
 Run:
 
 ```bash
-npm run domain:finish -- --confirm-register-and-dns
-npm run domain:health
+npm run domain:finish -- --confirm-register-and-dns --commit-canonical-after-success
+npm run audit:completion
 ```
 
 This guarded finisher registers `froggyhatessnow.wiki`, creates the Vercel A records in Porkbun DNS, switches `astro.config.mjs` to `https://froggyhatessnow.wiki`, rebuilds, deploys, reruns Vercel domain checks, verifies live page markers on both `https://froggyhatessnow.wiki` and `https://www.froggyhatessnow.wiki`, and then runs `npm run domain:health`.
+
+With `--commit-canonical-after-success`, it also runs `npm run domain:commit-canonical`. That helper refuses to commit unless `domain:health` passes, `astro.config.mjs` is the only dirty file, and local `main` matches `origin/main`; then it commits/pushes the canonical-domain config switch and runs `npm run audit:completion`.
 
 The finisher now uses a fresh timestamped registration idempotency suffix by default. If overriding `--idempotency-suffix`, do not reuse `post-verification` or another suffix from a previous failed create request.
 
@@ -83,5 +85,6 @@ Expected custom-domain live checks after deployment:
 - Vercel reports the apex and `www` domains configured.
 - `npm run domain:health` reports `"ok": true`.
 - `npm run audit:completion` reports `"ok": true`.
+- Local `main` and `origin/main` contain the custom-domain canonical config commit.
 - `astro.config.mjs` uses `site: "https://froggyhatessnow.wiki"`.
 - The rebuilt/deployed site passes live checks on the custom domain.
