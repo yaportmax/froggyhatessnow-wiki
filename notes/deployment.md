@@ -31,9 +31,9 @@ The folder was linked to Vercel project `yaportmax-5253s-projects/froggyhatessno
 
 Production deploy completed on 2026-05-13:
 
-- Current production URL: https://froggyhatessnow-wiki-f9lc3ztg3-yaportmax-5253s-projects.vercel.app
+- Current production URL: https://froggyhatessnow-wiki-j6mdliqas-yaportmax-5253s-projects.vercel.app
 - Alias: https://froggyhatessnow-wiki.vercel.app
-- Inspect URL: https://vercel.com/yaportmax-5253s-projects/froggyhatessnow-wiki/AZupxXhrt4RubkWyM5FXFKZZ9trE
+- Inspect URL: https://vercel.com/yaportmax-5253s-projects/froggyhatessnow-wiki/q7MwNNJSJNT7RC72dNVJLUpmxxa5
 
 The current deploy includes the expanded Steam source snapshot, Steam news/devlog findings, generated source ledger, game metadata page, and 177 static HTML pages. The build now clears Astro's local content cache in `prebuild` so restored Vercel caches do not emit stale duplicate-doc warnings.
 Astro's `site` setting points to the Vercel alias until `froggyhatessnow.wiki` is actually registered and connected.
@@ -42,6 +42,7 @@ Live checks after this deploy:
 
 - `https://froggyhatessnow-wiki.vercel.app/steam-source-snapshot/` returns 200 and contains the Direct Steam News Sources and Local Metadata Scan sections.
 - `https://froggyhatessnow-wiki.vercel.app/game-metadata/` returns 200.
+- `https://froggyhatessnow-wiki.vercel.app/generated/frogs/puff/` returns 200 and contains Puff/ranged poison spit source data.
 
 Command used:
 

@@ -36,7 +36,7 @@ Everything is implemented, validated, pushed, and deployed except the explicit d
 | Package scripts | Required scripts are present: `dev`, `build`, `preview`, `scan`, `generate`, `validate`; additional `fetch:steam`, `domain:check`, `domain:register`, `domain:dns`, and `test` scripts are present. | Done |
 | Tests | `npm test` passed 2 files / 7 tests. | Done |
 | Build | `npm run build` passed and generated 177 pages; Pagefind indexed 176 pages. | Done |
-| Vercel deployment | Production deploy is READY at `https://froggyhatessnow-wiki-f9lc3ztg3-yaportmax-5253s-projects.vercel.app`; stable alias `https://froggyhatessnow-wiki.vercel.app` returns 200. | Done |
+| Vercel deployment | Production deploy is READY at `https://froggyhatessnow-wiki-j6mdliqas-yaportmax-5253s-projects.vercel.app`; stable alias `https://froggyhatessnow-wiki.vercel.app` returns 200. | Done |
 | Live source page | `https://froggyhatessnow-wiki.vercel.app/steam-source-snapshot/` returns 200 and contains Direct Steam News Sources and Local Metadata Scan sections. | Done |
 | Live game metadata page | `https://froggyhatessnow-wiki.vercel.app/game-metadata/` returns 200. | Done |
 | Domain research | `notes/domain-options.md` lists required candidates, prices, pros/cons, recommendation, backups, and sources. | Done |
@@ -66,7 +66,7 @@ curl -fsS -o /tmp/froggy-game-metadata.html -w '%{http_code}\n' https://froggyha
 - `npm run validate`: validated 11 entity datasets plus `public-sources.json` and `steam-snapshot.json`.
 - `npm test`: 2 test files / 7 tests passed.
 - `npm run build`: 177 pages built; 176 pages indexed by Pagefind.
-- `npx vercel deploy --prod`: deployment `dpl_AZupxXhrt4RubkWyM5FXFKZZ9trE` READY; inspect URL `https://vercel.com/yaportmax-5253s-projects/froggyhatessnow-wiki/AZupxXhrt4RubkWyM5FXFKZZ9trE`.
+- `npx vercel deploy --prod`: deployment `dpl_q7MwNNJSJNT7RC72dNVJLUpmxxa5` READY; inspect URL `https://vercel.com/yaportmax-5253s-projects/froggyhatessnow-wiki/q7MwNNJSJNT7RC72dNVJLUpmxxa5`.
 - `npm run domain:check`: `froggyhatessnow.wiki` available yes, type registration, price `2.06`, regularPrice `26.26`, premium no, request id `019e20f1-eb98-7952-a792-b855c6f2a08c`.
 - `npm run domain:dns`: blocked before registration; Porkbun returned `INVALID_DOMAIN`, request id `019e20f4-1c03-7a52-ba90-64e1bb4a9fef`.
 - Vercel domain inspect: apex and `www` domains found, edge network yes, DNS not configured, intended nameservers `ns1.vercel-dns.com` and `ns2.vercel-dns.com`, recommended records `A froggyhatessnow.wiki 76.76.21.21` and `A www.froggyhatessnow.wiki 76.76.21.21`.
