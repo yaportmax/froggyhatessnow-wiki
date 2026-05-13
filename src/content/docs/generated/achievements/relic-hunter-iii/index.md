@@ -27,7 +27,7 @@ Collect 10 Artifacts
 | Notes | Global percentage is volatile; refresh before publishing exact percentage-driven claims. |
 | Steam Internal Achievement ID | relic_hunter_3 |
 | Steam Global Percent API | 49.2% |
-| Steam Community Percent | 49.2% |
+| Steam Community Percent | 49.8% |
 
 ## Related
 

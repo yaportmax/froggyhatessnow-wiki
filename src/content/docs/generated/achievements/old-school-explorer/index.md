@@ -27,7 +27,7 @@ Survive a run with Map, Shovel & Cart
 | Notes | Global percentage is volatile; refresh before publishing exact percentage-driven claims. |
 | Steam Internal Achievement ID | old_school_explorer |
 | Steam Global Percent API | 64.5% |
-| Steam Community Percent | 64.5% |
+| Steam Community Percent | 65.1% |
 
 ## Related
 

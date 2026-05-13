@@ -7,9 +7,9 @@
     "category": "glossary",
     "short_description": "Steam devlog examples include timed survival, hidden-object digging, vanishing-item collection, passcode fragments, totems, stone buttons, timed rolls, and throwable-object interactions.",
     "effect": "Reference term.",
-    "unlock_method": "Needs verification.",
-    "cost": "Needs verification.",
-    "mode": "Needs verification.",
+    "unlock_method": "Not applicable.",
+    "cost": "Not applicable.",
+    "mode": "Reference glossary.",
     "related_entities": [],
     "sources": [
       {
@@ -51,13 +51,12 @@
     "verified_fields": [
       "name",
       "category",
-      "effect"
-    ],
-    "unverified_fields": [
+      "effect",
       "unlock_method",
       "cost",
       "mode"
-    ]
+    ],
+    "unverified_fields": []
   },
   {
     "id": "anomalous-zone-hazards",
@@ -67,9 +66,9 @@
     "category": "glossary",
     "short_description": "Steam devlog examples include lightning strikes, roaming tornadoes, fireballs, rolling obsidian spheres, and laser beams.",
     "effect": "Reference term.",
-    "unlock_method": "Needs verification.",
-    "cost": "Needs verification.",
-    "mode": "Needs verification.",
+    "unlock_method": "Not applicable.",
+    "cost": "Not applicable.",
+    "mode": "Reference glossary.",
     "related_entities": [],
     "sources": [
       {
@@ -111,13 +110,12 @@
     "verified_fields": [
       "name",
       "category",
-      "effect"
-    ],
-    "unverified_fields": [
+      "effect",
       "unlock_method",
       "cost",
       "mode"
-    ]
+    ],
+    "unverified_fields": []
   },
   {
     "id": "anomaly-zones",
@@ -127,9 +125,9 @@
     "category": "glossary",
     "short_description": "Risk/reward areas that offer challenges and rewards, according to Steam copy.",
     "effect": "Reference term.",
-    "unlock_method": "Needs verification.",
-    "cost": "Needs verification.",
-    "mode": "Needs verification.",
+    "unlock_method": "Not applicable.",
+    "cost": "Not applicable.",
+    "mode": "Reference glossary.",
     "related_entities": [],
     "sources": [
       {
@@ -171,13 +169,12 @@
     "verified_fields": [
       "name",
       "category",
-      "effect"
-    ],
-    "unverified_fields": [
+      "effect",
       "unlock_method",
       "cost",
       "mode"
-    ]
+    ],
+    "unverified_fields": []
   },
   {
     "id": "artifact-rarity-tiers",
@@ -187,9 +184,9 @@
     "category": "glossary",
     "short_description": "The anomalous-zone devlog lists Common, Uncommon, Rare, and Legendary artifact tiers.",
     "effect": "Reference term.",
-    "unlock_method": "Needs verification.",
-    "cost": "Needs verification.",
-    "mode": "Needs verification.",
+    "unlock_method": "Not applicable.",
+    "cost": "Not applicable.",
+    "mode": "Reference glossary.",
     "related_entities": [],
     "sources": [
       {
@@ -231,13 +228,12 @@
     "verified_fields": [
       "name",
       "category",
-      "effect"
-    ],
-    "unverified_fields": [
+      "effect",
       "unlock_method",
       "cost",
       "mode"
-    ]
+    ],
+    "unverified_fields": []
   },
   {
     "id": "attacks",
@@ -247,9 +243,9 @@
     "category": "glossary",
     "short_description": "The public Steam release-scope wording counts attacks alongside skills, tools, and companions; this wiki currently folds attack-style facts into Skills and Glossary until a standalone attack roster is sourced.",
     "effect": "Reference term.",
-    "unlock_method": "Needs verification.",
-    "cost": "Needs verification.",
-    "mode": "Needs verification.",
+    "unlock_method": "Not applicable.",
+    "cost": "Not applicable.",
+    "mode": "Reference glossary.",
     "related_entities": [],
     "sources": [
       {
@@ -291,13 +287,12 @@
     "verified_fields": [
       "name",
       "category",
-      "effect"
-    ],
-    "unverified_fields": [
+      "effect",
       "unlock_method",
       "cost",
       "mode"
-    ]
+    ],
+    "unverified_fields": []
   },
   {
     "id": "character-leveling",
@@ -307,9 +302,9 @@
     "category": "glossary",
     "short_description": "Launch devlog says characters gain experience by being played and grow stronger over time.",
     "effect": "Reference term.",
-    "unlock_method": "Needs verification.",
-    "cost": "Needs verification.",
-    "mode": "Needs verification.",
+    "unlock_method": "Not applicable.",
+    "cost": "Not applicable.",
+    "mode": "Reference glossary.",
     "related_entities": [],
     "sources": [
       {
@@ -351,13 +346,12 @@
     "verified_fields": [
       "name",
       "category",
-      "effect"
-    ],
-    "unverified_fields": [
+      "effect",
       "unlock_method",
       "cost",
       "mode"
-    ]
+    ],
+    "unverified_fields": []
   },
   {
     "id": "character-main-attacks",
@@ -367,9 +361,9 @@
     "category": "glossary",
     "short_description": "Demo/devlog examples include tongue attacks, spits, snow minigun, electric staff, and hockey stick.",
     "effect": "Reference term.",
-    "unlock_method": "Needs verification.",
-    "cost": "Needs verification.",
-    "mode": "Needs verification.",
+    "unlock_method": "Not applicable.",
+    "cost": "Not applicable.",
+    "mode": "Reference glossary.",
     "related_entities": [],
     "sources": [
       {
@@ -411,13 +405,12 @@
     "verified_fields": [
       "name",
       "category",
-      "effect"
-    ],
-    "unverified_fields": [
+      "effect",
       "unlock_method",
       "cost",
       "mode"
-    ]
+    ],
+    "unverified_fields": []
   },
   {
     "id": "character-specializations",
@@ -427,9 +420,9 @@
     "category": "glossary",
     "short_description": "Demo/devlog posts say the ten playable frogs have unique specializations, main attacks, and starting skillsets.",
     "effect": "Reference term.",
-    "unlock_method": "Needs verification.",
-    "cost": "Needs verification.",
-    "mode": "Needs verification.",
+    "unlock_method": "Not applicable.",
+    "cost": "Not applicable.",
+    "mode": "Reference glossary.",
     "related_entities": [],
     "sources": [
       {
@@ -471,13 +464,12 @@
     "verified_fields": [
       "name",
       "category",
-      "effect"
-    ],
-    "unverified_fields": [
+      "effect",
       "unlock_method",
       "cost",
       "mode"
-    ]
+    ],
+    "unverified_fields": []
   },
   {
     "id": "core-attacks",
@@ -487,9 +479,9 @@
     "category": "glossary",
     "short_description": "Launch devlog examples include tongue, spit, and baseball bat style core attacks, while the updated demo announcement identifies Puff's ranged poison spit.",
     "effect": "Reference term.",
-    "unlock_method": "Needs verification.",
-    "cost": "Needs verification.",
-    "mode": "Needs verification.",
+    "unlock_method": "Not applicable.",
+    "cost": "Not applicable.",
+    "mode": "Reference glossary.",
     "related_entities": [],
     "sources": [
       {
@@ -531,13 +523,12 @@
     "verified_fields": [
       "name",
       "category",
-      "effect"
-    ],
-    "unverified_fields": [
+      "effect",
       "unlock_method",
       "cost",
       "mode"
-    ]
+    ],
+    "unverified_fields": []
   },
   {
     "id": "demo-progress-carryover",
@@ -547,9 +538,9 @@
     "category": "glossary",
     "short_description": "Steam news states demo progress carries over to the full game.",
     "effect": "Reference term.",
-    "unlock_method": "Needs verification.",
-    "cost": "Needs verification.",
-    "mode": "Needs verification.",
+    "unlock_method": "Not applicable.",
+    "cost": "Not applicable.",
+    "mode": "Reference glossary.",
     "related_entities": [],
     "sources": [
       {
@@ -591,13 +582,12 @@
     "verified_fields": [
       "name",
       "category",
-      "effect"
-    ],
-    "unverified_fields": [
+      "effect",
       "unlock_method",
       "cost",
       "mode"
-    ]
+    ],
+    "unverified_fields": []
   },
   {
     "id": "elemental-status-effects",
@@ -607,9 +597,9 @@
     "category": "glossary",
     "short_description": "Launch devlog lists Stun, Fire, Frost, Poison, and Lightning status effects.",
     "effect": "Reference term.",
-    "unlock_method": "Needs verification.",
-    "cost": "Needs verification.",
-    "mode": "Needs verification.",
+    "unlock_method": "Not applicable.",
+    "cost": "Not applicable.",
+    "mode": "Reference glossary.",
     "related_entities": [],
     "sources": [
       {
@@ -651,13 +641,12 @@
     "verified_fields": [
       "name",
       "category",
-      "effect"
-    ],
-    "unverified_fields": [
+      "effect",
       "unlock_method",
       "cost",
       "mode"
-    ]
+    ],
+    "unverified_fields": []
   },
   {
     "id": "escape-door",
@@ -667,9 +656,9 @@
     "category": "glossary",
     "short_description": "Victory route requiring enough keys, according to Steam copy.",
     "effect": "Reference term.",
-    "unlock_method": "Needs verification.",
-    "cost": "Needs verification.",
-    "mode": "Needs verification.",
+    "unlock_method": "Not applicable.",
+    "cost": "Not applicable.",
+    "mode": "Reference glossary.",
     "related_entities": [],
     "sources": [
       {
@@ -711,13 +700,12 @@
     "verified_fields": [
       "name",
       "category",
-      "effect"
-    ],
-    "unverified_fields": [
+      "effect",
       "unlock_method",
       "cost",
       "mode"
-    ]
+    ],
+    "unverified_fields": []
   },
   {
     "id": "freezing",
@@ -727,9 +715,9 @@
     "category": "glossary",
     "short_description": "Survival threat; Steam copy says staying too long in the cold can freeze the player.",
     "effect": "Reference term.",
-    "unlock_method": "Needs verification.",
-    "cost": "Needs verification.",
-    "mode": "Needs verification.",
+    "unlock_method": "Not applicable.",
+    "cost": "Not applicable.",
+    "mode": "Reference glossary.",
     "related_entities": [],
     "sources": [
       {
@@ -771,13 +759,12 @@
     "verified_fields": [
       "name",
       "category",
-      "effect"
-    ],
-    "unverified_fields": [
+      "effect",
       "unlock_method",
       "cost",
       "mode"
-    ]
+    ],
+    "unverified_fields": []
   },
   {
     "id": "full-game",
@@ -787,9 +774,9 @@
     "category": "glossary",
     "short_description": "Public full game app 3232380; released on Steam May 7, 2026.",
     "effect": "Reference term.",
-    "unlock_method": "Needs verification.",
-    "cost": "Needs verification.",
-    "mode": "Needs verification.",
+    "unlock_method": "Not applicable.",
+    "cost": "Not applicable.",
+    "mode": "Reference glossary.",
     "related_entities": [],
     "sources": [
       {
@@ -831,13 +818,12 @@
     "verified_fields": [
       "name",
       "category",
-      "effect"
-    ],
-    "unverified_fields": [
+      "effect",
       "unlock_method",
       "cost",
       "mode"
-    ]
+    ],
+    "unverified_fields": []
   },
   {
     "id": "heightmap-snow",
@@ -847,9 +833,9 @@
     "category": "glossary",
     "short_description": "The snow devlog describes the world snow as a heightmap texture changed by digging.",
     "effect": "Reference term.",
-    "unlock_method": "Needs verification.",
-    "cost": "Needs verification.",
-    "mode": "Needs verification.",
+    "unlock_method": "Not applicable.",
+    "cost": "Not applicable.",
+    "mode": "Reference glossary.",
     "related_entities": [],
     "sources": [
       {
@@ -891,13 +877,12 @@
     "verified_fields": [
       "name",
       "category",
-      "effect"
-    ],
-    "unverified_fields": [
+      "effect",
       "unlock_method",
       "cost",
       "mode"
-    ]
+    ],
+    "unverified_fields": []
   },
   {
     "id": "local-metadata-unavailable",
@@ -907,9 +892,9 @@
     "category": "glossary",
     "short_description": "The local game-files scan currently found zero readable files, so the wiki is populated from public sources until SteamCMD/local extraction succeeds.",
     "effect": "Reference term.",
-    "unlock_method": "Needs verification.",
-    "cost": "Needs verification.",
-    "mode": "Needs verification.",
+    "unlock_method": "Not applicable.",
+    "cost": "Not applicable.",
+    "mode": "Reference glossary.",
     "related_entities": [],
     "sources": [
       {
@@ -951,13 +936,12 @@
     "verified_fields": [
       "name",
       "category",
-      "effect"
-    ],
-    "unverified_fields": [
+      "effect",
       "unlock_method",
       "cost",
       "mode"
-    ]
+    ],
+    "unverified_fields": []
   },
   {
     "id": "night-mode",
@@ -967,9 +951,9 @@
     "category": "glossary",
     "short_description": "Post-launch update calls out Night Mode as an existing comfort option made more visible by attention badges.",
     "effect": "Reference term.",
-    "unlock_method": "Needs verification.",
-    "cost": "Needs verification.",
-    "mode": "Needs verification.",
+    "unlock_method": "Not applicable.",
+    "cost": "Not applicable.",
+    "mode": "Reference glossary.",
     "related_entities": [],
     "sources": [
       {
@@ -1011,13 +995,12 @@
     "verified_fields": [
       "name",
       "category",
-      "effect"
-    ],
-    "unverified_fields": [
+      "effect",
       "unlock_method",
       "cost",
       "mode"
-    ]
+    ],
+    "unverified_fields": []
   },
   {
     "id": "peaceful-mode",
@@ -1027,9 +1010,9 @@
     "category": "glossary",
     "short_description": "Monster-free cozy mode described by Steam copy.",
     "effect": "Reference term.",
-    "unlock_method": "Needs verification.",
-    "cost": "Needs verification.",
-    "mode": "Needs verification.",
+    "unlock_method": "Not applicable.",
+    "cost": "Not applicable.",
+    "mode": "Reference glossary.",
     "related_entities": [],
     "sources": [
       {
@@ -1071,13 +1054,12 @@
     "verified_fields": [
       "name",
       "category",
-      "effect"
-    ],
-    "unverified_fields": [
+      "effect",
       "unlock_method",
       "cost",
       "mode"
-    ]
+    ],
+    "unverified_fields": []
   },
   {
     "id": "quest-based-meta-progression",
@@ -1087,9 +1069,9 @@
     "category": "glossary",
     "short_description": "Demo/devlog posts describe quests and Blue Gems unlocking characters, abilities, and locations.",
     "effect": "Reference term.",
-    "unlock_method": "Needs verification.",
-    "cost": "Needs verification.",
-    "mode": "Needs verification.",
+    "unlock_method": "Not applicable.",
+    "cost": "Not applicable.",
+    "mode": "Reference glossary.",
     "related_entities": [],
     "sources": [
       {
@@ -1131,13 +1113,12 @@
     "verified_fields": [
       "name",
       "category",
-      "effect"
-    ],
-    "unverified_fields": [
+      "effect",
       "unlock_method",
       "cost",
       "mode"
-    ]
+    ],
+    "unverified_fields": []
   },
   {
     "id": "snow-layers",
@@ -1147,9 +1128,9 @@
     "category": "glossary",
     "short_description": "The snow devlog says different areas can have different layers and density.",
     "effect": "Reference term.",
-    "unlock_method": "Needs verification.",
-    "cost": "Needs verification.",
-    "mode": "Needs verification.",
+    "unlock_method": "Not applicable.",
+    "cost": "Not applicable.",
+    "mode": "Reference glossary.",
     "related_entities": [],
     "sources": [
       {
@@ -1191,13 +1172,12 @@
     "verified_fields": [
       "name",
       "category",
-      "effect"
-    ],
-    "unverified_fields": [
+      "effect",
       "unlock_method",
       "cost",
       "mode"
-    ]
+    ],
+    "unverified_fields": []
   },
   {
     "id": "snowbank",
@@ -1207,9 +1187,9 @@
     "category": "glossary",
     "short_description": "Interactive snow tile or obstacle described as hiding treasures, traps, or enemies.",
     "effect": "Reference term.",
-    "unlock_method": "Needs verification.",
-    "cost": "Needs verification.",
-    "mode": "Needs verification.",
+    "unlock_method": "Not applicable.",
+    "cost": "Not applicable.",
+    "mode": "Reference glossary.",
     "related_entities": [],
     "sources": [
       {
@@ -1251,13 +1231,12 @@
     "verified_fields": [
       "name",
       "category",
-      "effect"
-    ],
-    "unverified_fields": [
+      "effect",
       "unlock_method",
       "cost",
       "mode"
-    ]
+    ],
+    "unverified_fields": []
   },
   {
     "id": "steam-demo",
@@ -1267,9 +1246,9 @@
     "category": "glossary",
     "short_description": "Public demo app 4037600; free Windows demo linked to the full app.",
     "effect": "Reference term.",
-    "unlock_method": "Needs verification.",
-    "cost": "Needs verification.",
-    "mode": "Needs verification.",
+    "unlock_method": "Not applicable.",
+    "cost": "Not applicable.",
+    "mode": "Reference glossary.",
     "related_entities": [],
     "sources": [
       {
@@ -1311,13 +1290,12 @@
     "verified_fields": [
       "name",
       "category",
-      "effect"
-    ],
-    "unverified_fields": [
+      "effect",
       "unlock_method",
       "cost",
       "mode"
-    ]
+    ],
+    "unverified_fields": []
   },
   {
     "id": "survival-loop",
@@ -1327,9 +1305,9 @@
     "category": "glossary",
     "short_description": "Run structure: leave home, dig, fight, collect, return resources, and grow stronger.",
     "effect": "Reference term.",
-    "unlock_method": "Needs verification.",
-    "cost": "Needs verification.",
-    "mode": "Needs verification.",
+    "unlock_method": "Not applicable.",
+    "cost": "Not applicable.",
+    "mode": "Reference glossary.",
     "related_entities": [],
     "sources": [
       {
@@ -1371,13 +1349,12 @@
     "verified_fields": [
       "name",
       "category",
-      "effect"
-    ],
-    "unverified_fields": [
+      "effect",
       "unlock_method",
       "cost",
       "mode"
-    ]
+    ],
+    "unverified_fields": []
   },
   {
     "id": "ui-scale",
@@ -1387,9 +1364,9 @@
     "category": "glossary",
     "short_description": "Post-launch update says the default UI scale and Steam Deck UI scale were increased.",
     "effect": "Reference term.",
-    "unlock_method": "Needs verification.",
-    "cost": "Needs verification.",
-    "mode": "Needs verification.",
+    "unlock_method": "Not applicable.",
+    "cost": "Not applicable.",
+    "mode": "Reference glossary.",
     "related_entities": [],
     "sources": [
       {
@@ -1431,13 +1408,12 @@
     "verified_fields": [
       "name",
       "category",
-      "effect"
-    ],
-    "unverified_fields": [
+      "effect",
       "unlock_method",
       "cost",
       "mode"
-    ]
+    ],
+    "unverified_fields": []
   },
   {
     "id": "warmth",
@@ -1447,9 +1423,9 @@
     "category": "glossary",
     "short_description": "Survival resource concept; Steam copy says warmth means survival.",
     "effect": "Reference term.",
-    "unlock_method": "Needs verification.",
-    "cost": "Needs verification.",
-    "mode": "Needs verification.",
+    "unlock_method": "Not applicable.",
+    "cost": "Not applicable.",
+    "mode": "Reference glossary.",
     "related_entities": [],
     "sources": [
       {
@@ -1491,12 +1467,11 @@
     "verified_fields": [
       "name",
       "category",
-      "effect"
-    ],
-    "unverified_fields": [
+      "effect",
       "unlock_method",
       "cost",
       "mode"
-    ]
+    ],
+    "unverified_fields": []
   }
 ]

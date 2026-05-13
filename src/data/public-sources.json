@@ -87,7 +87,7 @@
     "path_or_url": "https://store.steampowered.com/appreviews/4037600?json=1&language=all&filter=summary&purchase_type=all&num_per_page=0",
     "label": "Steam demo review summary API",
     "confidence": "medium",
-    "notes": "Summary fetched only; review text not redistributed. Current summary: {\"num_reviews\":10,\"review_score\":8,\"review_score_desc\":\"Very Positive\",\"total_positive\":139,\"total_negative\":3,\"total_reviews\":142}."
+    "notes": "Summary fetched only; review text not redistributed. Current summary: {\"num_reviews\":10,\"review_score\":8,\"review_score_desc\":\"Very Positive\",\"total_positive\":140,\"total_negative\":3,\"total_reviews\":143}."
   },
   {
     "id": "steamdb-full",

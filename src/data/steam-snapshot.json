@@ -1,6 +1,6 @@
 {
   "accessed_date": "2026-05-13",
-  "generated_at": "2026-05-13T13:06:27.528Z",
+  "generated_at": "2026-05-13T13:41:44.440Z",
   "source_policy": [
     "Prefer official public Steam endpoints and pages for game metadata.",
     "Do not copy raw long descriptions, review text, proprietary assets, binaries, source code, or decompiled content.",
@@ -293,9 +293,9 @@
       "num_reviews": 10,
       "review_score": 8,
       "review_score_desc": "Very Positive",
-      "total_positive": 139,
+      "total_positive": 140,
       "total_negative": 3,
-      "total_reviews": 142
+      "total_reviews": 143
     }
   },
   "achievements": {
@@ -314,7 +314,7 @@
         "description": "Unlock 1 Skill",
         "steam_internal_name": "power_hungry_1",
         "steam_global_percent_api": "85.8",
-        "steam_community_percent": "85.8%",
+        "steam_community_percent": "86.3%",
         "mentioned_entities": [],
         "source_ids": [
           "steam-full-achievements-page",
@@ -328,7 +328,7 @@
         "description": "Collect 1 Artifact",
         "steam_internal_name": "relic_hunter_1",
         "steam_global_percent_api": "84.8",
-        "steam_community_percent": "84.8%",
+        "steam_community_percent": "85.5%",
         "mentioned_entities": [],
         "source_ids": [
           "steam-full-achievements-page",
@@ -342,7 +342,7 @@
         "description": "Unlock 1 Location",
         "steam_internal_name": "pathfinder_1",
         "steam_global_percent_api": "76.1",
-        "steam_community_percent": "76.1%",
+        "steam_community_percent": "76.5%",
         "mentioned_entities": [],
         "source_ids": [
           "steam-full-achievements-page",
@@ -356,7 +356,7 @@
         "description": "Unlock 1 Character",
         "steam_internal_name": "assemble_the_team_1",
         "steam_global_percent_api": "68.5",
-        "steam_community_percent": "68.5%",
+        "steam_community_percent": "69.1%",
         "mentioned_entities": [],
         "source_ids": [
           "steam-full-achievements-page",
@@ -370,7 +370,7 @@
         "description": "Collect 5 Artifacts",
         "steam_internal_name": "relic_hunter_2",
         "steam_global_percent_api": "67.9",
-        "steam_community_percent": "67.9%",
+        "steam_community_percent": "68.4%",
         "mentioned_entities": [],
         "source_ids": [
           "steam-full-achievements-page",
@@ -384,7 +384,7 @@
         "description": "Fully complete 1 Location",
         "steam_internal_name": "snow_master_1",
         "steam_global_percent_api": "67.3",
-        "steam_community_percent": "67.3%",
+        "steam_community_percent": "67.9%",
         "mentioned_entities": [],
         "source_ids": [
           "steam-full-achievements-page",
@@ -398,7 +398,7 @@
         "description": "Survive a run with Map, Shovel & Cart",
         "steam_internal_name": "old_school_explorer",
         "steam_global_percent_api": "64.5",
-        "steam_community_percent": "64.5%",
+        "steam_community_percent": "65.1%",
         "mentioned_entities": [
           {
             "name": "Map",
@@ -434,7 +434,7 @@
         "description": "Unlock 5 Skills",
         "steam_internal_name": "power_hungry_2",
         "steam_global_percent_api": "64.3",
-        "steam_community_percent": "64.3%",
+        "steam_community_percent": "64.7%",
         "mentioned_entities": [],
         "source_ids": [
           "steam-full-achievements-page",
@@ -448,7 +448,7 @@
         "description": "Collect 10 Artifacts",
         "steam_internal_name": "relic_hunter_3",
         "steam_global_percent_api": "49.2",
-        "steam_community_percent": "49.2%",
+        "steam_community_percent": "49.8%",
         "mentioned_entities": [],
         "source_ids": [
           "steam-full-achievements-page",
@@ -462,7 +462,7 @@
         "description": "Unlock 10 Skills",
         "steam_internal_name": "power_hungry_3",
         "steam_global_percent_api": "45.0",
-        "steam_community_percent": "45.0%",
+        "steam_community_percent": "45.4%",
         "mentioned_entities": [],
         "source_ids": [
           "steam-full-achievements-page",
@@ -476,7 +476,7 @@
         "description": "Fully upgrade 1 Character",
         "steam_internal_name": "peak_performance_1",
         "steam_global_percent_api": "22.1",
-        "steam_community_percent": "22.1%",
+        "steam_community_percent": "22.5%",
         "mentioned_entities": [],
         "source_ids": [
           "steam-full-achievements-page",
@@ -490,7 +490,7 @@
         "description": "Collect 20 Artifacts",
         "steam_internal_name": "relic_hunter_4",
         "steam_global_percent_api": "20.3",
-        "steam_community_percent": "20.3%",
+        "steam_community_percent": "20.7%",
         "mentioned_entities": [],
         "source_ids": [
           "steam-full-achievements-page",
@@ -504,7 +504,7 @@
         "description": "Unlock 3 Characters",
         "steam_internal_name": "assemble_the_team_2",
         "steam_global_percent_api": "19.4",
-        "steam_community_percent": "19.4%",
+        "steam_community_percent": "19.6%",
         "mentioned_entities": [],
         "source_ids": [
           "steam-full-achievements-page",
@@ -518,7 +518,7 @@
         "description": "Unlock 20 Skills",
         "steam_internal_name": "power_hungry_4",
         "steam_global_percent_api": "15.9",
-        "steam_community_percent": "15.9%",
+        "steam_community_percent": "16.1%",
         "mentioned_entities": [],
         "source_ids": [
           "steam-full-achievements-page",
@@ -532,7 +532,7 @@
         "description": "Fully complete 5 Locations",
         "steam_internal_name": "snow_master_2",
         "steam_global_percent_api": "14.5",
-        "steam_community_percent": "14.5%",
+        "steam_community_percent": "15.0%",
         "mentioned_entities": [],
         "source_ids": [
           "steam-full-achievements-page",
@@ -546,7 +546,7 @@
         "description": "Unlock 5 Locations",
         "steam_internal_name": "pathfinder_2",
         "steam_global_percent_api": "13.5",
-        "steam_community_percent": "13.5%",
+        "steam_community_percent": "14.0%",
         "mentioned_entities": [],
         "source_ids": [
           "steam-full-achievements-page",
@@ -560,7 +560,7 @@
         "description": "Survive a run with Tongue Attack & Curvy Tongue",
         "steam_internal_name": "master_of_the_tongue",
         "steam_global_percent_api": "9.6",
-        "steam_community_percent": "9.6%",
+        "steam_community_percent": "9.7%",
         "mentioned_entities": [
           {
             "name": "Tongue Attack",
@@ -603,7 +603,7 @@
         "description": "Survive a run with Voodoo Curse & Vampirism",
         "steam_internal_name": "cursed_survival",
         "steam_global_percent_api": "3.9",
-        "steam_community_percent": "3.9%",
+        "steam_community_percent": "4.0%",
         "mentioned_entities": [
           {
             "name": "Voodoo Curse",
@@ -632,7 +632,7 @@
         "description": "Collect 30 Artifacts",
         "steam_internal_name": "relic_hunter_5",
         "steam_global_percent_api": "3.2",
-        "steam_community_percent": "3.2%",
+        "steam_community_percent": "3.3%",
         "mentioned_entities": [],
         "source_ids": [
           "steam-full-achievements-page",
@@ -682,7 +682,7 @@
         "description": "Survive a run with Shield & Revive",
         "steam_internal_name": "still_standing",
         "steam_global_percent_api": "2.2",
-        "steam_community_percent": "2.2%",
+        "steam_community_percent": "2.3%",
         "mentioned_entities": [
           {
             "name": "Shield",

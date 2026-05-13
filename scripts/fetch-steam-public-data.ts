@@ -1406,6 +1406,9 @@ function seedCoreEntities() {
         category: "glossary",
         short_description: description,
         effect: "Reference term.",
+        unlock_method: "Not applicable.",
+        cost: "Not applicable.",
+        mode: "Reference glossary.",
         verification_status: "Verified",
         sources: [fullStore, demoStore, steamNews, publisher],
         notes: "Glossary summary is paraphrased from public pages."

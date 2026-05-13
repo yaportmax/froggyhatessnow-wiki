@@ -54,6 +54,7 @@ type SkippedFile = {
 export type ScanResult = {
   generated_at: string;
   gameFilesPresent: boolean;
+  gameFilesContainFiles: boolean;
   root: string;
   rules: string[];
   filesScanned: number;
@@ -221,6 +222,11 @@ function markdownReport(result: ScanResult) {
     return `${lines.join("\n")}\n`;
   }
 
+  if (!result.gameFilesContainFiles) {
+    lines.push("The game-files directory exists, but it currently contains no files. No local game metadata contributed facts to the wiki.");
+    lines.push("");
+  }
+
   lines.push(`- Files scanned: ${result.filesScanned}`);
   lines.push(`- Directories scanned: ${result.directoriesScanned}`);
   lines.push(`- Readable metadata files summarized: ${result.readable_files.length}`);
@@ -273,6 +279,7 @@ export async function scanGameFiles(options: ScanOptions = {}): Promise<ScanResu
   const result: ScanResult = {
     generated_at: new Date().toISOString(),
     gameFilesPresent: false,
+    gameFilesContainFiles: false,
     root: gameFilesDir,
     rules: [
       "Read only allowlisted text/metadata extensions.",
@@ -300,6 +307,7 @@ export async function scanGameFiles(options: ScanOptions = {}): Promise<ScanResu
 
   result.top_level_entries = (await readdir(gameFilesDir)).sort();
   await walk(gameFilesDir, gameFilesDir, result);
+  result.gameFilesContainFiles = result.filesScanned > 0;
   await writeFile(path.join(notesDir, "extracted-metadata.json"), `${JSON.stringify(result, null, 2)}\n`);
   await writeFile(path.join(notesDir, "extracted-metadata.md"), markdownReport(result));
 

@@ -18,11 +18,11 @@ Launch devlog examples include tongue, spit, and baseball bat style core attacks
 | Category | glossary |
 | Aliases | None listed |
 | Effect | Reference term. |
-| Unlock Method | Needs verification. |
-| Cost | Needs verification. |
-| Mode | Needs verification. |
-| Verified Fields | name, category, effect |
-| Fields Needing Verification | unlock_method, cost, mode |
+| Unlock Method | Not applicable. |
+| Cost | Not applicable. |
+| Mode | Reference glossary. |
+| Verified Fields | name, category, effect, unlock_method, cost, mode |
+| Fields Needing Verification | None listed |
 | Last Verified | Public Steam metadata accessed 2026-05-13 |
 | Notes | Glossary summary is paraphrased from public pages. |
 

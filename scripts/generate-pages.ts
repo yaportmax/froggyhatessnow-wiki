@@ -166,6 +166,7 @@ type SteamSnapshot = {
 type ExtractedMetadataSnapshot = {
   generated_at?: string;
   gameFilesPresent?: boolean;
+  gameFilesContainFiles?: boolean;
   root?: string;
   filesScanned?: number;
   directoriesScanned?: number;
@@ -398,6 +399,7 @@ function localMetadataStatus(snapshot: ExtractedMetadataSnapshot) {
     [
       ["Generated", snapshot.generated_at ?? "not available"],
       ["Game files present", snapshot.gameFilesPresent === true ? "yes" : "no"],
+      ["Game files contain files", snapshot.gameFilesContainFiles === true ? "yes" : "no"],
       ["Scan root", snapshot.root ?? "not available"],
       ["Files scanned", String(filesScanned)],
       ["Readable metadata files", String(readableCount)]

@@ -50,4 +50,18 @@ describe("scanGameFiles", () => {
     expect(json.skipped_files.map((file: { relative_path: string }) => file.relative_path)).toContain("outside-link.txt");
     expect(JSON.stringify(json)).not.toContain("outside should not be followed");
   });
+
+  test("distinguishes an empty game-files directory from usable local metadata", async () => {
+    const root = await makeTempDir();
+    const gameFilesDir = path.join(root, "game-files");
+    const notesDir = path.join(root, "notes");
+    await mkdir(gameFilesDir);
+
+    const result = await scanGameFiles({ gameFilesDir, notesDir });
+    const markdown = await readFile(path.join(notesDir, "extracted-metadata.md"), "utf8");
+
+    expect(result.gameFilesPresent).toBe(true);
+    expect(result.gameFilesContainFiles).toBe(false);
+    expect(markdown).toContain("exists, but it currently contains no files");
+  });
 });

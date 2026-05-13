@@ -8,7 +8,7 @@ draft: false
 
 ![FROGGY HATES SNOW Steam header](https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3232380/4aec6dc45dab3a096faeda88c8036627817f0cfe/header_alt_assets_0.jpg?t=1778580427)
 
-Accessed: **2026-05-13**. Generated: 2026-05-13T13:06:27.528Z.
+Accessed: **2026-05-13**. Generated: 2026-05-13T13:41:44.440Z.
 
 This page is the main sourcing checkpoint for game-populating wiki data. It uses official public Steam pages/APIs first, then marks anything not confirmed by those sources as inferred or needing verification.
 
@@ -53,7 +53,7 @@ Steam appdetails currently lists 14 full-game screenshots. The thumbnails below 
 | App | Review Summary |
 |---|---|
 | Full game | {"num_reviews":10,"review_score":8,"review_score_desc":"Very Positive","total_positive":179,"total_negative":14,"total_reviews":193} |
-| Demo | {"num_reviews":10,"review_score":8,"review_score_desc":"Very Positive","total_positive":139,"total_negative":3,"total_reviews":142} |
+| Demo | {"num_reviews":10,"review_score":8,"review_score_desc":"Very Positive","total_positive":140,"total_negative":3,"total_reviews":143} |
 
 ## Steam News & Devlogs
 
@@ -116,8 +116,9 @@ Every current Steam News API item is recorded below. Items classified as marketi
 
 | Field | Value |
 |---|---|
-| Generated | 2026-05-13T13:06:27.064Z |
+| Generated | 2026-05-13T13:41:43.964Z |
 | Game files present | yes |
+| Game files contain files | no |
 | Scan root | /Users/myaport/Documents/maxyaport-codex-project/froggyhatessnow_wiki/game-files |
 | Files scanned | 0 |
 | Readable metadata files | 0 |

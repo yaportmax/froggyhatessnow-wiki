@@ -16,27 +16,27 @@ These achievement series verify public progression thresholds. They do not verif
 
 | Series | Achievement | Condition | API % | Community % | Source IDs |
 |---|---|---|---:|---:|---|
-| Skill unlock milestones | [Power Hungry I](/generated/achievements/power-hungry-i/) | Unlock 1 Skill | 85.8 | 85.8% | `steam-full-achievements-page`, `steam-full-global-achievement-percentages` |
-| Skill unlock milestones | [Power Hungry II](/generated/achievements/power-hungry-ii/) | Unlock 5 Skills | 64.3 | 64.3% | `steam-full-achievements-page`, `steam-full-global-achievement-percentages` |
-| Skill unlock milestones | [Power Hungry III](/generated/achievements/power-hungry-iii/) | Unlock 10 Skills | 45.0 | 45.0% | `steam-full-achievements-page`, `steam-full-global-achievement-percentages` |
-| Skill unlock milestones | [Power Hungry IV](/generated/achievements/power-hungry-iv/) | Unlock 20 Skills | 15.9 | 15.9% | `steam-full-achievements-page`, `steam-full-global-achievement-percentages` |
+| Skill unlock milestones | [Power Hungry I](/generated/achievements/power-hungry-i/) | Unlock 1 Skill | 85.8 | 86.3% | `steam-full-achievements-page`, `steam-full-global-achievement-percentages` |
+| Skill unlock milestones | [Power Hungry II](/generated/achievements/power-hungry-ii/) | Unlock 5 Skills | 64.3 | 64.7% | `steam-full-achievements-page`, `steam-full-global-achievement-percentages` |
+| Skill unlock milestones | [Power Hungry III](/generated/achievements/power-hungry-iii/) | Unlock 10 Skills | 45.0 | 45.4% | `steam-full-achievements-page`, `steam-full-global-achievement-percentages` |
+| Skill unlock milestones | [Power Hungry IV](/generated/achievements/power-hungry-iv/) | Unlock 20 Skills | 15.9 | 16.1% | `steam-full-achievements-page`, `steam-full-global-achievement-percentages` |
 | Skill unlock milestones | [Power Hungry V](/generated/achievements/power-hungry-v/) | Unlock 30 Skills | 4.0 | 4.0% | `steam-full-achievements-page`, `steam-full-global-achievement-percentages` |
-| Artifact collection milestones | [Relic Hunter I](/generated/achievements/relic-hunter-i/) | Collect 1 Artifact | 84.8 | 84.8% | `steam-full-achievements-page`, `steam-full-global-achievement-percentages` |
-| Artifact collection milestones | [Relic Hunter II](/generated/achievements/relic-hunter-ii/) | Collect 5 Artifacts | 67.9 | 67.9% | `steam-full-achievements-page`, `steam-full-global-achievement-percentages` |
-| Artifact collection milestones | [Relic Hunter III](/generated/achievements/relic-hunter-iii/) | Collect 10 Artifacts | 49.2 | 49.2% | `steam-full-achievements-page`, `steam-full-global-achievement-percentages` |
-| Artifact collection milestones | [Relic Hunter IV](/generated/achievements/relic-hunter-iv/) | Collect 20 Artifacts | 20.3 | 20.3% | `steam-full-achievements-page`, `steam-full-global-achievement-percentages` |
-| Artifact collection milestones | [Relic Hunter V](/generated/achievements/relic-hunter-v/) | Collect 30 Artifacts | 3.2 | 3.2% | `steam-full-achievements-page`, `steam-full-global-achievement-percentages` |
-| Location completion milestones | [Snow Master I](/generated/achievements/snow-master-i/) | Fully complete 1 Location | 67.3 | 67.3% | `steam-full-achievements-page`, `steam-full-global-achievement-percentages` |
-| Location completion milestones | [Snow Master II](/generated/achievements/snow-master-ii/) | Fully complete 5 Locations | 14.5 | 14.5% | `steam-full-achievements-page`, `steam-full-global-achievement-percentages` |
+| Artifact collection milestones | [Relic Hunter I](/generated/achievements/relic-hunter-i/) | Collect 1 Artifact | 84.8 | 85.5% | `steam-full-achievements-page`, `steam-full-global-achievement-percentages` |
+| Artifact collection milestones | [Relic Hunter II](/generated/achievements/relic-hunter-ii/) | Collect 5 Artifacts | 67.9 | 68.4% | `steam-full-achievements-page`, `steam-full-global-achievement-percentages` |
+| Artifact collection milestones | [Relic Hunter III](/generated/achievements/relic-hunter-iii/) | Collect 10 Artifacts | 49.2 | 49.8% | `steam-full-achievements-page`, `steam-full-global-achievement-percentages` |
+| Artifact collection milestones | [Relic Hunter IV](/generated/achievements/relic-hunter-iv/) | Collect 20 Artifacts | 20.3 | 20.7% | `steam-full-achievements-page`, `steam-full-global-achievement-percentages` |
+| Artifact collection milestones | [Relic Hunter V](/generated/achievements/relic-hunter-v/) | Collect 30 Artifacts | 3.2 | 3.3% | `steam-full-achievements-page`, `steam-full-global-achievement-percentages` |
+| Location completion milestones | [Snow Master I](/generated/achievements/snow-master-i/) | Fully complete 1 Location | 67.3 | 67.9% | `steam-full-achievements-page`, `steam-full-global-achievement-percentages` |
+| Location completion milestones | [Snow Master II](/generated/achievements/snow-master-ii/) | Fully complete 5 Locations | 14.5 | 15.0% | `steam-full-achievements-page`, `steam-full-global-achievement-percentages` |
 | Location completion milestones | [Snow Master III](/generated/achievements/snow-master-iii/) | Fully complete 15 Locations | 0.3 | 0.3% | `steam-full-achievements-page`, `steam-full-global-achievement-percentages` |
-| Location unlock milestones | [Pathfinder I](/generated/achievements/pathfinder-i/) | Unlock 1 Location | 76.1 | 76.1% | `steam-full-achievements-page`, `steam-full-global-achievement-percentages` |
-| Location unlock milestones | [Pathfinder II](/generated/achievements/pathfinder-ii/) | Unlock 5 Locations | 13.5 | 13.5% | `steam-full-achievements-page`, `steam-full-global-achievement-percentages` |
+| Location unlock milestones | [Pathfinder I](/generated/achievements/pathfinder-i/) | Unlock 1 Location | 76.1 | 76.5% | `steam-full-achievements-page`, `steam-full-global-achievement-percentages` |
+| Location unlock milestones | [Pathfinder II](/generated/achievements/pathfinder-ii/) | Unlock 5 Locations | 13.5 | 14.0% | `steam-full-achievements-page`, `steam-full-global-achievement-percentages` |
 | Location unlock milestones | [Pathfinder III](/generated/achievements/pathfinder-iii/) | Unlock 15 Locations | 0.4 | 0.4% | `steam-full-achievements-page`, `steam-full-global-achievement-percentages` |
-| Character upgrade milestones | [Peak Performance I](/generated/achievements/peak-performance-i/) | Fully upgrade 1 Character | 22.1 | 22.1% | `steam-full-achievements-page`, `steam-full-global-achievement-percentages` |
+| Character upgrade milestones | [Peak Performance I](/generated/achievements/peak-performance-i/) | Fully upgrade 1 Character | 22.1 | 22.5% | `steam-full-achievements-page`, `steam-full-global-achievement-percentages` |
 | Character upgrade milestones | [Peak Performance II](/generated/achievements/peak-performance-ii/) | Fully upgrade 5 Characters | 0.8 | 0.8% | `steam-full-achievements-page`, `steam-full-global-achievement-percentages` |
 | Character upgrade milestones | [Peak Performance III](/generated/achievements/peak-performance-iii/) | Fully upgrade 10 Characters | 0.0 | 0.1% | `steam-full-achievements-page`, `steam-full-global-achievement-percentages` |
-| Character unlock milestones | [Assemble the Team I](/generated/achievements/assemble-the-team-i/) | Unlock 1 Character | 68.5 | 68.5% | `steam-full-achievements-page`, `steam-full-global-achievement-percentages` |
-| Character unlock milestones | [Assemble the Team II](/generated/achievements/assemble-the-team-ii/) | Unlock 3 Characters | 19.4 | 19.4% | `steam-full-achievements-page`, `steam-full-global-achievement-percentages` |
+| Character unlock milestones | [Assemble the Team I](/generated/achievements/assemble-the-team-i/) | Unlock 1 Character | 68.5 | 69.1% | `steam-full-achievements-page`, `steam-full-global-achievement-percentages` |
+| Character unlock milestones | [Assemble the Team II](/generated/achievements/assemble-the-team-ii/) | Unlock 3 Characters | 19.4 | 19.6% | `steam-full-achievements-page`, `steam-full-global-achievement-percentages` |
 | Character unlock milestones | [Assemble the Team III](/generated/achievements/assemble-the-team-iii/) | Unlock 9 Characters | 0.3 | 0.3% | `steam-full-achievements-page`, `steam-full-global-achievement-percentages` |
 
 ## Loadout Names
@@ -70,28 +70,28 @@ Names in this table are safe wiki candidates because they appear in public Steam
 
 | Achievement | Condition | Steam API ID | API % | Community % | Mentioned Entities |
 |---|---|---|---:|---:|---|
-| [Power Hungry I](/generated/achievements/power-hungry-i/) | Unlock 1 Skill | `power_hungry_1` | 85.8 | 85.8% | None parsed |
-| [Relic Hunter I](/generated/achievements/relic-hunter-i/) | Collect 1 Artifact | `relic_hunter_1` | 84.8 | 84.8% | None parsed |
-| [Pathfinder I](/generated/achievements/pathfinder-i/) | Unlock 1 Location | `pathfinder_1` | 76.1 | 76.1% | None parsed |
-| [Assemble the Team I](/generated/achievements/assemble-the-team-i/) | Unlock 1 Character | `assemble_the_team_1` | 68.5 | 68.5% | None parsed |
-| [Relic Hunter II](/generated/achievements/relic-hunter-ii/) | Collect 5 Artifacts | `relic_hunter_2` | 67.9 | 67.9% | None parsed |
-| [Snow Master I](/generated/achievements/snow-master-i/) | Fully complete 1 Location | `snow_master_1` | 67.3 | 67.3% | None parsed |
-| [Old School Explorer](/generated/achievements/old-school-explorer/) | Survive a run with Map, Shovel & Cart | `old_school_explorer` | 64.5 | 64.5% | Map (tools), Shovel (tools), Cart (tools) |
-| [Power Hungry II](/generated/achievements/power-hungry-ii/) | Unlock 5 Skills | `power_hungry_2` | 64.3 | 64.3% | None parsed |
-| [Relic Hunter III](/generated/achievements/relic-hunter-iii/) | Collect 10 Artifacts | `relic_hunter_3` | 49.2 | 49.2% | None parsed |
-| [Power Hungry III](/generated/achievements/power-hungry-iii/) | Unlock 10 Skills | `power_hungry_3` | 45.0 | 45.0% | None parsed |
-| [Peak Performance I](/generated/achievements/peak-performance-i/) | Fully upgrade 1 Character | `peak_performance_1` | 22.1 | 22.1% | None parsed |
-| [Relic Hunter IV](/generated/achievements/relic-hunter-iv/) | Collect 20 Artifacts | `relic_hunter_4` | 20.3 | 20.3% | None parsed |
-| [Assemble the Team II](/generated/achievements/assemble-the-team-ii/) | Unlock 3 Characters | `assemble_the_team_2` | 19.4 | 19.4% | None parsed |
-| [Power Hungry IV](/generated/achievements/power-hungry-iv/) | Unlock 20 Skills | `power_hungry_4` | 15.9 | 15.9% | None parsed |
-| [Snow Master II](/generated/achievements/snow-master-ii/) | Fully complete 5 Locations | `snow_master_2` | 14.5 | 14.5% | None parsed |
-| [Pathfinder II](/generated/achievements/pathfinder-ii/) | Unlock 5 Locations | `pathfinder_2` | 13.5 | 13.5% | None parsed |
-| [Master of the Tongue](/generated/achievements/master-of-the-tongue/) | Survive a run with Tongue Attack & Curvy Tongue | `master_of_the_tongue` | 9.6 | 9.6% | Tongue Attack (skills), Curvy Tongue (skills) |
+| [Power Hungry I](/generated/achievements/power-hungry-i/) | Unlock 1 Skill | `power_hungry_1` | 85.8 | 86.3% | None parsed |
+| [Relic Hunter I](/generated/achievements/relic-hunter-i/) | Collect 1 Artifact | `relic_hunter_1` | 84.8 | 85.5% | None parsed |
+| [Pathfinder I](/generated/achievements/pathfinder-i/) | Unlock 1 Location | `pathfinder_1` | 76.1 | 76.5% | None parsed |
+| [Assemble the Team I](/generated/achievements/assemble-the-team-i/) | Unlock 1 Character | `assemble_the_team_1` | 68.5 | 69.1% | None parsed |
+| [Relic Hunter II](/generated/achievements/relic-hunter-ii/) | Collect 5 Artifacts | `relic_hunter_2` | 67.9 | 68.4% | None parsed |
+| [Snow Master I](/generated/achievements/snow-master-i/) | Fully complete 1 Location | `snow_master_1` | 67.3 | 67.9% | None parsed |
+| [Old School Explorer](/generated/achievements/old-school-explorer/) | Survive a run with Map, Shovel & Cart | `old_school_explorer` | 64.5 | 65.1% | Map (tools), Shovel (tools), Cart (tools) |
+| [Power Hungry II](/generated/achievements/power-hungry-ii/) | Unlock 5 Skills | `power_hungry_2` | 64.3 | 64.7% | None parsed |
+| [Relic Hunter III](/generated/achievements/relic-hunter-iii/) | Collect 10 Artifacts | `relic_hunter_3` | 49.2 | 49.8% | None parsed |
+| [Power Hungry III](/generated/achievements/power-hungry-iii/) | Unlock 10 Skills | `power_hungry_3` | 45.0 | 45.4% | None parsed |
+| [Peak Performance I](/generated/achievements/peak-performance-i/) | Fully upgrade 1 Character | `peak_performance_1` | 22.1 | 22.5% | None parsed |
+| [Relic Hunter IV](/generated/achievements/relic-hunter-iv/) | Collect 20 Artifacts | `relic_hunter_4` | 20.3 | 20.7% | None parsed |
+| [Assemble the Team II](/generated/achievements/assemble-the-team-ii/) | Unlock 3 Characters | `assemble_the_team_2` | 19.4 | 19.6% | None parsed |
+| [Power Hungry IV](/generated/achievements/power-hungry-iv/) | Unlock 20 Skills | `power_hungry_4` | 15.9 | 16.1% | None parsed |
+| [Snow Master II](/generated/achievements/snow-master-ii/) | Fully complete 5 Locations | `snow_master_2` | 14.5 | 15.0% | None parsed |
+| [Pathfinder II](/generated/achievements/pathfinder-ii/) | Unlock 5 Locations | `pathfinder_2` | 13.5 | 14.0% | None parsed |
+| [Master of the Tongue](/generated/achievements/master-of-the-tongue/) | Survive a run with Tongue Attack & Curvy Tongue | `master_of_the_tongue` | 9.6 | 9.7% | Tongue Attack (skills), Curvy Tongue (skills) |
 | [Power Hungry V](/generated/achievements/power-hungry-v/) | Unlock 30 Skills | `power_hungry_5` | 4.0 | 4.0% | None parsed |
-| [Cursed Survival](/generated/achievements/cursed-survival/) | Survive a run with Voodoo Curse & Vampirism | `cursed_survival` | 3.9 | 3.9% | Voodoo Curse (skills), Vampirism (skills) |
-| [Relic Hunter V](/generated/achievements/relic-hunter-v/) | Collect 30 Artifacts | `relic_hunter_5` | 3.2 | 3.2% | None parsed |
+| [Cursed Survival](/generated/achievements/cursed-survival/) | Survive a run with Voodoo Curse & Vampirism | `cursed_survival` | 3.9 | 4.0% | Voodoo Curse (skills), Vampirism (skills) |
+| [Relic Hunter V](/generated/achievements/relic-hunter-v/) | Collect 30 Artifacts | `relic_hunter_5` | 3.2 | 3.3% | None parsed |
 | [Demolition Run](/generated/achievements/demolition-run/) | Survive a run with Dynamite, Air Bomb & Pickaxe | `demolition_run` | 2.8 | 2.8% | Dynamite (tools), Air Bomb (tools), Pickaxe (tools) |
-| [Still Standing](/generated/achievements/still-standing/) | Survive a run with Shield & Revive | `still_standing` | 2.2 | 2.2% | Shield (skills), Revive (skills) |
+| [Still Standing](/generated/achievements/still-standing/) | Survive a run with Shield & Revive | `still_standing` | 2.2 | 2.3% | Shield (skills), Revive (skills) |
 | [The Animal Squad](/generated/achievements/the-animal-squad/) | Survive a run with Penguin, Mole & Owl | `the_animal_squad` | 2.0 | 2.0% | Penguin (companions), Mole (companions), Owl (companions) |
 | [Thermal Shock](/generated/achievements/thermal-shock/) | Survive a run with Flamethrower & Frost Bomb | `thermal_shock` | 2.0 | 2.0% | Flamethrower (tools), Frost Bomb (items) |
 | [Deadly Dose](/generated/achievements/deadly-dose/) | Survive a run with Poison Flask & Poison Infusion | `deadly_dose` | 1.2 | 1.2% | Poison Flask (items), Poison Infusion (skills) |
