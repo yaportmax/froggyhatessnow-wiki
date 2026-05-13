@@ -36,6 +36,7 @@ npm run deploy:publish
 npm run domain:check
 npm run domain:status
 npm run domain:finish
+npm run domain:finish:vercel-post-purchase
 npm run domain:health
 npm run domain:commit-canonical
 ```
@@ -104,6 +105,14 @@ npm run domain:vercel-buy -- --confirm-financial-purchase --max-purchase-usd=2.9
 ```
 
 `domain:vercel-buy` re-quotes the domain and refuses to buy unless the confirmation flag and price caps pass.
+
+After a Vercel registrar purchase and DNS propagation:
+
+```bash
+npm run domain:finish:vercel-post-purchase
+```
+
+The Vercel post-purchase finisher refuses to run unless the working tree is clean, local `main` matches `origin/main`, Vercel reports both custom-domain hostnames as configured, and DNS resolves to Vercel. It then switches the Astro canonical site, validates/builds, commits and pushes the canonical config through the existing `domain:commit-canonical -- --deploy-after-commit` gate, deploys, and runs the completion audit.
 
 After the Porkbun account is verified:
 

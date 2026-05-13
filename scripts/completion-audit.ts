@@ -55,6 +55,7 @@ const SUPPORTING_SCRIPTS = [
   "domain:finish:post-verification",
   "domain:vercel-price",
   "domain:vercel-buy",
+  "domain:finish:vercel-post-purchase",
   "domain:health",
   "domain:commit-canonical",
   "audit:completion"

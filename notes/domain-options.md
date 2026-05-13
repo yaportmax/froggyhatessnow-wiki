@@ -51,15 +51,13 @@ After a non-Porkbun registration path, verify the Vercel attachment, DNS, and li
 For the Vercel registrar path, the expected post-purchase sequence is:
 
 1. Verify `froggyhatessnow.wiki` and `www.froggyhatessnow.wiki` resolve in Vercel.
-2. Switch `astro.config.mjs` to `site: "https://froggyhatessnow.wiki"`.
-3. Run:
+2. Run:
 
    ```bash
-   npm run domain:commit-canonical -- --deploy-after-commit
-   npm run audit:completion
+   npm run domain:finish:vercel-post-purchase
    ```
 
-`domain:commit-canonical` intentionally runs `domain:health` before committing, so the local `astro.config.mjs` canonical switch must be present first.
+The post-purchase helper refuses to run unless the working tree is clean, local `main` matches `origin/main`, Vercel reports both custom-domain hostnames as properly configured, and DNS A lookups resolve to Vercel. It then switches `astro.config.mjs` to `site: "https://froggyhatessnow.wiki"`, validates, builds, commits/pushes the canonical config through `domain:commit-canonical -- --deploy-after-commit`, and runs the completion audit. `domain:commit-canonical` intentionally runs `domain:health` before committing, so the helper performs the local canonical switch immediately before calling it.
 
 ## Registration Status
 
