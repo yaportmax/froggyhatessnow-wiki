@@ -47,19 +47,26 @@ A third registration attempt through the repo helper command also rechecked `fro
 - Create request id: `019e20e6-ac46-7d0d-a14d-e794d764be52`
 - Error code: `VERIFICATION_REQUIRED`
 
+A fourth guarded registration attempt on 2026-05-13 again rechecked `froggyhatessnow.wiki` as available at `$2.06` first-year / `$26.26` renewal, non-premium, then received the same account-verification blocker. Porkbun returned the same create request id because the helper uses a daily idempotency key.
+
+- Command: `npm run domain:register -- --max-cost-usd=2.06`
+- Check request id: `019e215f-c9b2-778d-82a0-1b2ed3b5184c`
+- Create request id: `019e20e6-ac46-7d0d-a14d-e794d764be52`
+- Error code: `VERIFICATION_REQUIRED`
+
 The read-only helper check currently succeeds:
 
 ```bash
 npm run domain:check
 ```
 
-Latest read-only check request id: `019e20f1-eb98-7952-a792-b855c6f2a08c`.
+Latest read-only check request id: `019e215f-94ea-795b-a0b0-2e6c7c0742ab`.
 
 DNS setup was also attempted through the helper before registration completed:
 
 - Command: `npm run domain:dns`
 - Result: not configured. Porkbun returned `INVALID_DOMAIN` because the domain is not registered in the account yet.
-- DNS retrieve request id: `019e20f4-1c03-7a52-ba90-64e1bb4a9fef`
+- DNS retrieve request ids: `019e20f4-1c03-7a52-ba90-64e1bb4a9fef`, `019e2160-0873-76b9-8ab8-72820b93f7bf`
 
 ## DNS / Vercel Plan
 
