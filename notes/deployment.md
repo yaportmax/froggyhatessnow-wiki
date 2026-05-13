@@ -31,31 +31,29 @@ The folder was linked to Vercel project `yaportmax-5253s-projects/froggyhatessno
 
 Latest successful production deploy completed on 2026-05-13:
 
-- Current production URL: https://froggyhatessnow-wiki-biugqd5z2-yaportmax-5253s-projects.vercel.app
+- Current production URL: https://froggyhatessnow-wiki-6b2rs5abq-yaportmax-5253s-projects.vercel.app
 - Alias: https://froggyhatessnow-wiki.vercel.app
-- Inspect URL: https://vercel.com/yaportmax-5253s-projects/froggyhatessnow-wiki/CtCq5rTqmVrmgzvutbv6vXLNy9fr
+- Deployment id: `dpl_97aAFAYy6K71rgdiDABUQib1cWkJ`
+- Inspect URL: https://vercel.com/yaportmax-5253s-projects/froggyhatessnow-wiki/97aAFAYy6K71rgdiDABUQib1cWkJ
 
-The current deploy includes the expanded Steam source snapshot, all 15 Steam News API items with evidence classifications, Steam news/devlog findings, 42-row achievement source matrix, generated source ledger, game metadata page, and 178 static HTML pages. The build now clears Astro's local content cache in `prebuild` so restored Vercel caches do not emit stale duplicate-doc warnings.
+The current deploy includes the refreshed Steam source snapshot generated at `2026-05-13T13:06:27.528Z`, all 15 Steam News API items with evidence classifications, Steam news/devlog findings, 42-row achievement source matrix, generated source ledger, game metadata page, and 178 static HTML pages. The build now clears Astro's local content cache in `prebuild` so restored Vercel caches do not emit stale duplicate-doc warnings.
 Astro's `site` setting points to the Vercel alias until `froggyhatessnow.wiki` is actually registered and connected.
 
-Later deploy attempts after validator hardening did not become the active production deployment:
+Earlier deploy attempts after validator hardening are no longer blocking the queue:
 
-- `dpl_BysoqF8R65bguRBehVoXhJXeRPYW` / `https://froggyhatessnow-wiki-md282qwlk-yaportmax-5253s-projects.vercel.app` is stuck in `BUILDING`; build logs stop after downloading deployment files.
-- `dpl_J1kt8Sbkz5hSUBLvGjKMwjtPTm58` / `https://froggyhatessnow-wiki-kyvn13zp7-yaportmax-5253s-projects.vercel.app` was created with `vercel build --prod --yes` plus `vercel deploy --prebuilt --prod`, but is still `QUEUED` behind the stuck build.
-- Latest successful production alias remains `https://froggyhatessnow-wiki.vercel.app`. Do not remove queued/building deployments without explicit approval.
+- `dpl_BysoqF8R65bguRBehVoXhJXeRPYW` / `https://froggyhatessnow-wiki-md282qwlk-yaportmax-5253s-projects.vercel.app` resolved to `ERROR`.
+- `dpl_J1kt8Sbkz5hSUBLvGjKMwjtPTm58` / `https://froggyhatessnow-wiki-kyvn13zp7-yaportmax-5253s-projects.vercel.app` resolved to `READY` and was superseded by `dpl_97aAFAYy6K71rgdiDABUQib1cWkJ`.
 
-Non-destructive checks on 2026-05-13 confirmed the same state in `vercel list`, `vercel inspect --logs`, and `npm run deploy:status`. The repo helper now also inspects the stable alias directly; `https://froggyhatessnow-wiki.vercel.app` resolves to READY deployment `dpl_CtCq5rTqmVrmgzvutbv6vXLNy9fr`, and the baseline homepage, Steam source snapshot, and achievement matrix live checks pass. It also compares the live Steam source page to the local `src/data/steam-snapshot.json` `generated_at` value. After the latest Steam source refresh, that freshness check reports `stable_alias_missing_expected_content`, meaning the alias is healthy but stale versus the current pushed source snapshot. Vercel inspect output reports aliases on the queued/building deployments, so the helper does not print an automatic removal command. Review them in the Vercel dashboard or remove them only with explicit human approval.
+Non-destructive checks on 2026-05-13 confirm the stable alias directly; `https://froggyhatessnow-wiki.vercel.app` resolves to READY deployment `dpl_97aAFAYy6K71rgdiDABUQib1cWkJ`, and the homepage, Steam source snapshot, local Steam snapshot timestamp, and achievement matrix live checks pass.
 
 ```bash
 npm run deploy:status
 ```
 
-`npm run deploy:publish` is a guarded wrapper around this recovery path. It runs `deploy:status`, refuses to remove any remote deployment by default, and only clears the stuck deployment ids when `--remove-stuck-after-approval` is passed.
-
-After explicit approval to clear the stuck deployments, run:
+`npm run deploy:publish` is a guarded wrapper around the recovery path. It runs `deploy:status`, refuses to remove any remote deployment by default, and only clears stuck deployment ids when `--remove-stuck-after-approval` is passed. When `deploy:status` reports no blockers, run:
 
 ```bash
-npm run deploy:publish -- --remove-stuck-after-approval
+npm run deploy:publish
 ```
 
 Live checks after this deploy:
@@ -68,7 +66,7 @@ Live checks after this deploy:
 Command used:
 
 ```bash
-npx vercel deploy --prod
+npm run deploy:publish
 ```
 
 GitHub repository connection in Vercel is still blocked by Vercel account setup:
