@@ -35,14 +35,22 @@ Latest confirmed purchase attempt:
 
 Latest read-only domain status:
 
-- Domain check request id: `019e2229-cd8c-7a9c-906a-a08d902b9dac`
-- DNS retrieve request id: `019e2229-d028-799b-93d0-373bec9a16ed`
+- Domain check request id: `019e2233-d920-7616-909e-967a34950523`
+- DNS retrieve request id: `019e2233-dc0c-7053-840f-52545dbcb74e`
 - Result: `domain_available_not_registered`; DNS returned `INVALID_DOMAIN`.
 - Direct `https://froggyhatessnow.wiki/` check: cannot resolve host.
 
 ## After Porkbun Verification
 
 Porkbun documentation points the manual account-contact path at `ACCOUNT` -> `Settings / Billing` -> `Account Owner and Recovery` for email/phone verification. Porkbun also documents that some accounts may need an ID verification flow through Veriff. Fresh read-only API checks confirmed the stored API credentials are valid, but `/account/balance` reports `0` account credit and auto-topup is disabled. Because Porkbun API registration uses account credit, complete the account verification checks and confirm credit/payment/autotopup in Porkbun first; the shell cannot bypass those account prerequisites.
+
+Use the read-only helper below to recheck Porkbun account prerequisites before attempting registration:
+
+```bash
+npm run domain:account
+```
+
+Latest helper output still reported valid credentials, `balance: 0`, and `monthlySpend: 0`; request ids are recorded in `notes/porkbun-verification-support.md`.
 
 If the account verification UI does not clear the block, use `notes/porkbun-verification-support.md` to contact Porkbun support without exposing API keys, passwords, payment details, SMS codes, email verification codes, or ID documents.
 
