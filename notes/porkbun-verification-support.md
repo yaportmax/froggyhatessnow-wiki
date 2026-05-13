@@ -51,6 +51,7 @@ Read-only Gmail searches on 2026-05-13 found:
 - No matching Porkbun phone-verification messages in the last 60 days.
 - One account-creation email verification message from Porkbun on 2026-04-27.
 - A fresh continuation search found no Porkbun messages newer than 2 days, and the broader verification search still only surfaced the 2026-04-27 account-creation verification email.
+- A later continuation search found no Porkbun messages newer than 1 day. A broader one-day verification search returned unrelated marketing/other messages, not Porkbun verification mail.
 
 The email verification code itself is intentionally not recorded here. Search Gmail for subject `porkbun.com | Account Creation Email Verification Code` if Porkbun asks for the original account-creation verification email.
 
@@ -75,7 +76,7 @@ Fresh read-only account checks on 2026-05-13 confirmed the API credentials are v
 
 ## Browser Automation Status
 
-Chrome checks on 2026-05-13 found Google Chrome installed and running, the Codex Chrome Extension installed/enabled in `Profile 1`, and the native host manifest present with the expected extension origin. However, no Chrome browser-control tools are exposed in this session, and a fresh Computer Use attach attempt still returned `cgWindowNotFound`. Treat Porkbun account verification as a manual browser task unless a later session exposes working Chrome controls.
+Chrome checks on 2026-05-13 found Google Chrome installed and running, the Codex Chrome Extension installed/enabled in `Profile 1`, and the native host manifest present with the expected extension origin. In a later continuation, Chrome was still running, but the Chrome skill's required Node REPL execution tool was not exposed after tool discovery, and Computer Use still returned `cgWindowNotFound` when asked for the Chrome app state. Treat Porkbun account verification as a manual browser task unless a later session exposes working Chrome controls.
 
 ## Support Message Draft
 
