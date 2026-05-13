@@ -41,8 +41,10 @@ Read-only Vercel price checks on 2026-05-13:
 If Vercel registration is approved, the command shape is:
 
 ```bash
-npx vercel domains buy froggyhatessnow.wiki --scope yaportmax-5253s-projects
+npm run domain:vercel-buy -- --confirm-financial-purchase --max-purchase-usd=2.99 --max-renewal-usd=23
 ```
+
+The wrapper first re-quotes Vercel pricing, refuses to proceed without the confirmation flag, and refuses if either the purchase or renewal quote exceeds the supplied caps. It then runs `npx vercel domains buy froggyhatessnow.wiki --scope yaportmax-5253s-projects`.
 
 After a non-Porkbun registration path, verify the Vercel attachment, DNS, and live custom-domain markers before switching the Astro canonical site. `npm run domain:health` keeps Porkbun status as informational and accepts any registrar path if Vercel attachment, DNS, canonical config, and custom-domain HTTP checks all pass.
 

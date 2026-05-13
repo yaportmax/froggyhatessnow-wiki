@@ -18,6 +18,8 @@
     "domain:dns": "tsx scripts/porkbun-domain.ts dns",
     "domain:finish": "tsx scripts/domain-finish.ts",
     "domain:finish:post-verification": "tsx scripts/domain-finish.ts --confirm-register-and-dns --commit-canonical-after-success",
+    "domain:vercel-price": "tsx scripts/vercel-domain-buy.ts price",
+    "domain:vercel-buy": "tsx scripts/vercel-domain-buy.ts buy",
     "domain:health": "tsx scripts/domain-health.ts",
     "domain:commit-canonical": "tsx scripts/domain-commit-canonical.ts",
     "deploy:status": "tsx scripts/vercel-status.ts",

@@ -96,6 +96,15 @@ Recommended domain from research: `froggyhatessnow.wiki`.
 
 Domain registration was attempted through the Porkbun API and blocked by account verification: Porkbun requires the account email and phone number to be verified before the API can register the domain. The Vercel project already has `froggyhatessnow.wiki` and `www.froggyhatessnow.wiki` attached, ready for DNS after purchase. See `notes/domain-options.md`.
 
+If Porkbun verification remains blocked and a Vercel purchase is explicitly approved, use:
+
+```bash
+npm run domain:vercel-price
+npm run domain:vercel-buy -- --confirm-financial-purchase --max-purchase-usd=2.99 --max-renewal-usd=23
+```
+
+`domain:vercel-buy` re-quotes the domain and refuses to buy unless the confirmation flag and price caps pass.
+
 After the Porkbun account is verified:
 
 ```bash

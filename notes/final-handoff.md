@@ -48,7 +48,7 @@ Porkbun documentation points the manual account-contact path at `ACCOUNT` -> `Se
 
 If the account verification UI does not clear the block, use `notes/porkbun-verification-support.md` to contact Porkbun support without exposing API keys, passwords, payment details, SMS codes, email verification codes, or ID documents.
 
-Alternative registrar fallback: Vercel CLI quotes `froggyhatessnow.wiki` at `$2.99` purchase / `$23` renewal and exposes `npx vercel domains buy froggyhatessnow.wiki --scope yaportmax-5253s-projects`. This is a financial purchase path; run it only after explicit human approval. See `notes/domain-options.md`.
+Alternative registrar fallback: Vercel CLI quotes `froggyhatessnow.wiki` at `$2.99` purchase / `$23` renewal. `npm run domain:vercel-buy -- --confirm-financial-purchase --max-purchase-usd=2.99 --max-renewal-usd=23` wraps the purchase with a fresh price check and hard caps. This is a financial purchase path; run it only after explicit human approval. See `notes/domain-options.md`.
 
 Run:
 

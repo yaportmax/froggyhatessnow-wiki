@@ -53,6 +53,8 @@ const SUPPORTING_SCRIPTS = [
   "domain:dns",
   "domain:finish",
   "domain:finish:post-verification",
+  "domain:vercel-price",
+  "domain:vercel-buy",
   "domain:health",
   "domain:commit-canonical",
   "audit:completion"
