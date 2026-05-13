@@ -31,11 +31,11 @@ The folder was linked to Vercel project `yaportmax-5253s-projects/froggyhatessno
 
 Production deploy completed on 2026-05-13:
 
-- Current production URL: https://froggyhatessnow-wiki-7pgvb0p45-yaportmax-5253s-projects.vercel.app
+- Current production URL: https://froggyhatessnow-wiki-7a9shlj4d-yaportmax-5253s-projects.vercel.app
 - Alias: https://froggyhatessnow-wiki.vercel.app
-- Inspect URL: https://vercel.com/yaportmax-5253s-projects/froggyhatessnow-wiki/BNu96z3GFXausRkZGDS1tj6jSBem
+- Inspect URL: https://vercel.com/yaportmax-5253s-projects/froggyhatessnow-wiki/3PdrBGULdhdMJtXhLtY4WnHnmcwF
 
-The current deploy includes the Steam source snapshot and source ledger pages. The build now clears Astro's local content cache in `prebuild` so restored Vercel caches do not emit stale duplicate-doc warnings.
+The current deploy includes the expanded Steam source snapshot, Steam news/devlog findings, generated source ledger, and 164 static HTML pages. The build now clears Astro's local content cache in `prebuild` so restored Vercel caches do not emit stale duplicate-doc warnings.
 Astro's `site` setting points to the Vercel alias until `froggyhatessnow.wiki` is actually registered and connected.
 
 Command used:
