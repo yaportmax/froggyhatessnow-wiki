@@ -44,7 +44,7 @@ Later deploy attempts after validator hardening did not become the active produc
 - `dpl_J1kt8Sbkz5hSUBLvGjKMwjtPTm58` / `https://froggyhatessnow-wiki-kyvn13zp7-yaportmax-5253s-projects.vercel.app` was created with `vercel build --prod --yes` plus `vercel deploy --prebuilt --prod`, but is still `QUEUED` behind the stuck build.
 - Latest successful production alias remains `https://froggyhatessnow-wiki.vercel.app`. Do not remove queued/building deployments without explicit approval.
 
-Non-destructive checks on 2026-05-13 confirmed the same state in `vercel list`, `vercel inspect --logs`, and `npm run deploy:status`. Vercel inspect output reports aliases on the queued/building deployments, so the repo helper does not print an automatic removal command. Review them in the Vercel dashboard or remove them only with explicit human approval.
+Non-destructive checks on 2026-05-13 confirmed the same state in `vercel list`, `vercel inspect --logs`, and `npm run deploy:status`. The repo helper now also inspects the stable alias directly; `https://froggyhatessnow-wiki.vercel.app` resolves to READY deployment `dpl_CtCq5rTqmVrmgzvutbv6vXLNy9fr`, and the homepage, Steam source snapshot, and achievement matrix live checks pass. Vercel inspect output reports aliases on the queued/building deployments, so the helper does not print an automatic removal command. Review them in the Vercel dashboard or remove them only with explicit human approval.
 
 ```bash
 npm run deploy:status

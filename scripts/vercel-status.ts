@@ -61,13 +61,17 @@ async function checkPage(pathname: string, requiredText: string) {
 }
 
 async function main() {
-  const listOutput = await runVercel(["list", PROJECT, "--scope", SCOPE]);
-  const deployments = await Promise.all(KNOWN_DEPLOYMENTS.map(inspectDeployment));
+  const [listOutput, activeDeployment, deployments] = await Promise.all([
+    runVercel(["list", PROJECT, "--scope", SCOPE]),
+    inspectDeployment(STABLE_ALIAS),
+    Promise.all(KNOWN_DEPLOYMENTS.map(inspectDeployment))
+  ]);
   const liveChecks = await Promise.all([
     checkPage("/", "FROGGY HATES SNOW Wiki"),
     checkPage("/steam-source-snapshot/", "All Steam News Items"),
     checkPage("/achievement-source-matrix/", "Loadout Names")
   ]);
+  const liveChecksPassed = liveChecks.every((check) => check.ok && check.containsRequiredText);
   const nonReady = deployments.filter((deployment) => !["READY", "CANCELED", "ERROR"].includes(deployment.readyState));
   const nonReadyWithAliases = nonReady.filter((deployment) => deployment.aliases.length > 0);
   const safeToRemove = nonReady.filter((deployment) => deployment.aliases.length === 0);
@@ -76,6 +80,12 @@ async function main() {
     JSON.stringify(
       {
         project: `${SCOPE}/${PROJECT}`,
+        stableAlias: STABLE_ALIAS,
+        activeDeployment,
+        aliasHealth: {
+          activeDeploymentReady: activeDeployment.readyState === "READY",
+          liveChecksPassed
+        },
         deployments,
         nonReadyWithAliases,
         liveChecks,
