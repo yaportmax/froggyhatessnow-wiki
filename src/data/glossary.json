@@ -480,6 +480,66 @@
     ]
   },
   {
+    "id": "core-attacks",
+    "slug": "core-attacks",
+    "name": "Core attacks",
+    "aliases": [],
+    "category": "glossary",
+    "short_description": "Launch devlog examples include tongue, spit, and baseball bat style core attacks, while the updated demo announcement identifies Puff's ranged poison spit.",
+    "effect": "Reference term.",
+    "unlock_method": "Needs verification.",
+    "cost": "Needs verification.",
+    "mode": "Needs verification.",
+    "related_entities": [],
+    "sources": [
+      {
+        "source_id": "steam-full-store",
+        "type": "public_source",
+        "path_or_url": "https://store.steampowered.com/app/3232380/FROGGY_HATES_SNOW/",
+        "label": "Steam full-game store page",
+        "confidence": "high",
+        "notes": "Official public Steam store listing."
+      },
+      {
+        "source_id": "steam-demo-store",
+        "type": "public_source",
+        "path_or_url": "https://store.steampowered.com/app/4037600/FROGGY_HATES_SNOW_Demo/",
+        "label": "Steam demo store page",
+        "confidence": "high",
+        "notes": "Official public Steam demo listing."
+      },
+      {
+        "source_id": "steam-news-devlogs",
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
+        "label": "Steam community news/devlogs",
+        "confidence": "high",
+        "notes": "Official public Steam news and developer posts for launch, systems, updates, and devlogs."
+      },
+      {
+        "source_id": "digital-bandidos-page",
+        "type": "public_source",
+        "path_or_url": "https://digitalbandidos.com/games/froggy-hates-snow/",
+        "label": "Digital Bandidos game page",
+        "confidence": "medium",
+        "notes": "Publisher page for FROGGY HATES SNOW."
+      }
+    ],
+    "verification_status": "Verified",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Glossary summary is paraphrased from public pages.",
+    "verified_fields": [
+      "name",
+      "category",
+      "effect"
+    ],
+    "unverified_fields": [
+      "unlock_method",
+      "cost",
+      "mode"
+    ]
+  },
+  {
     "id": "demo-progress-carryover",
     "slug": "demo-progress-carryover",
     "name": "Demo progress carryover",

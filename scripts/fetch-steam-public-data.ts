@@ -502,10 +502,10 @@ const STEAM_NEWS_SOURCE_RULES: Array<{
     source_id: "steam-demo-overhaul-news",
     titlePattern: /demo is back|major overhaul/i,
     required: false,
-    requiredTerms: ["Blue Gems", "unlock new characters, abilities, and locations"],
-    wiki_targets: ["items", "guides", "glossary"],
-    verified_terms: ["quests", "Blue Gems", "abilities", "locations"],
-    supports: "Updated-demo announcement describing quest-based progress and Blue Gems unlocking characters, abilities, and locations."
+    requiredTerms: ["Puff", "ranged poison spit", "Blue Gems", "unlock new characters, abilities, and locations"],
+    wiki_targets: ["frogs", "items", "guides", "glossary"],
+    verified_terms: ["Puff", "ranged poison spit", "quests", "Blue Gems", "abilities", "locations", "first two arenas"],
+    supports: "Updated-demo announcement describing Puff, ranged poison spit, quest-based progress, Blue Gems, and unlocks for characters, abilities, and locations."
   },
   {
     source_id: "steam-next-demo-devlog",
@@ -611,8 +611,9 @@ function extractSteamNewsFindings(html: string, newsItems: SteamNewsItemSummary[
   }
 
   const confirmedTerms = [
-    "Zippy",
-    "Glider",
+      "Zippy",
+      "Puff",
+      "Glider",
     "Snowball Roll",
     "Leap Chain",
     "Delivery Bot",
@@ -624,8 +625,9 @@ function extractSteamNewsFindings(html: string, newsItems: SteamNewsItemSummary[
     "Energy Wave",
     "Destructive Field",
     "Invincible Roll",
-    "Armor",
-    "Drill",
+      "Armor",
+      "ranged poison spit",
+      "Drill",
     "Salt Sack",
     "Snowblower",
     "Blue Gems",
@@ -803,8 +805,8 @@ function seedCoreEntities() {
     entity({
       name: "Unnamed frog roster slots",
       category: "frogs",
-      short_description: "Steam/Xbox public sources confirm 10 playable frogs, but this source pass has verified only Froggy and Zippy by name.",
-      effect: "Eight playable frog names, stat lines, main attacks, and starting skillsets still need direct verification.",
+      short_description: "Steam/Xbox public sources confirm 10 playable frogs, but this source pass has verified only Froggy, Puff, and Zippy by name.",
+      effect: "Seven playable frog names, stat lines, main attacks, and starting skillsets still need direct verification.",
       unlock_method: "Needs verification.",
       verification_status: "Needs verification",
       sources: [steamNews, xboxWire],
@@ -824,6 +826,22 @@ function seedCoreEntities() {
       verification_status: "Verified",
       sources: [steamNews],
       notes: "Exact character stats and attack details need gameplay verification."
+    })
+  );
+
+  addUnique(
+    datasets.frogs,
+    entity({
+      name: "Puff",
+      category: "frogs",
+      short_description: "The Steam demo overhaul announcement identifies Puff as a playable character added to the updated demo.",
+      effect: "The announcement says Puff has a ranged poison spit attack.",
+      unlock_method: "The announcement says Puff can be unlocked in the updated demo; exact unlock condition needs verification.",
+      mode: "Updated Steam demo; full-game status needs verification.",
+      related_entities: ["poison-infusion"],
+      verification_status: "Verified",
+      sources: [source("The Froggy Hates Snow demo is back – and it’s had a major overhaul", "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1823825466505761", "2026-02-09 updated-demo announcement.", "high", "steam-demo-overhaul-news")],
+      notes: "Exact full-game stats, starting skillset, and full-game unlock cost need gameplay or safe metadata verification."
     })
   );
 
@@ -881,6 +899,21 @@ function seedCoreEntities() {
       verification_status: "Verified",
       sources: [fullStore, demoStore, steamNews],
       notes: "This is a setting term, not a confirmed map name."
+    })
+  );
+
+  addUnique(
+    datasets.maps,
+    entity({
+      name: "Points of interest",
+      category: "maps",
+      short_description: "Steam devlog #3 describes richer location points of interest in the updated demo/full-game direction.",
+      effect: "Examples include a crashed satellite or UFO, a school bus in snow, a phone booth, and theme-specific structures for forest, East Asia-inspired, and desert locations.",
+      unlock_method: "Needs verification.",
+      mode: "Updated demo/full-game direction from public devlog.",
+      verification_status: "Verified",
+      sources: [source("Devlog #3: What to expect from the next demo", "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1823825466494740", "2026-02-04 pre-demo devlog.", "high", "steam-next-demo-devlog")],
+      notes: "These are point-of-interest and theme examples, not confirmed individual map names."
     })
   );
 
@@ -1081,6 +1114,7 @@ function seedCoreEntities() {
     ["Character leveling", "Launch devlog says characters gain experience by being played and grow stronger over time."],
     ["Character specializations", "Demo/devlog posts say the ten playable frogs have unique specializations, main attacks, and starting skillsets."],
     ["Character main attacks", "Demo/devlog examples include tongue attacks, spits, snow minigun, electric staff, and hockey stick."],
+    ["Core attacks", "Launch devlog examples include tongue, spit, and baseball bat style core attacks, while the updated demo announcement identifies Puff's ranged poison spit."],
     ["Attacks", "The public Steam release-scope wording counts attacks alongside skills, tools, and companions; this wiki currently folds attack-style facts into Skills and Glossary until a standalone attack roster is sourced."],
     ["Quest-based meta-progression", "Demo/devlog posts describe quests and Blue Gems unlocking characters, abilities, and locations."],
     ["Local metadata unavailable", "The local game-files scan currently found zero readable files, so the wiki is populated from public sources until SteamCMD/local extraction succeeds."],
@@ -1330,10 +1364,10 @@ function buildSteamSnapshot(args: {
         notes: "Examples are public, but exact character-to-attack mapping still needs gameplay or safe local metadata verification."
       },
       {
-        claim: "Steam demo/devlog posts describe quest-based meta-progression and Blue Gems as unlock resources for characters, abilities, and locations.",
+        claim: "Steam demo/devlog posts describe Puff, quest-based meta-progression, and Blue Gems as unlock resources for characters, abilities, and locations.",
         source_ids: ["steam-demo-overhaul-news", "steam-next-demo-devlog", "steam-anomalous-zones-devlog"],
         confidence: "high",
-        wiki_targets: ["items", "guides", "glossary"],
+        wiki_targets: ["frogs", "items", "guides", "glossary"],
         notes: "Exact quest names, Blue Gem costs, and unlock order still need verification."
       },
       {
@@ -1374,7 +1408,7 @@ function buildSteamSnapshot(args: {
     ],
     steam_news_findings: args.newsFindings,
     research_gaps: [
-      "Exact character/frog roster beyond Froggy, Zippy, and the verified 10-playable-frog count, including which frog uses each public main-attack example.",
+      "Exact character/frog roster beyond Froggy, Puff, Zippy, and the verified 10-playable-frog count, including which frog uses each public main-attack example.",
       "Named map/location roster, map unlock order beyond public thresholds/update notes, and location-specific boss names.",
       "Named enemy roster and enemy behavior.",
       "Exact stats, costs, cooldowns, drop rates, and upgrade tree order.",

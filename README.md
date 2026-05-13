@@ -9,12 +9,12 @@ This project is built with Astro Starlight and seeded from public Steam metadata
 - Full game Steam app ID: `3232380`
 - Demo Steam app ID: `4037600`
 - Parsed public achievements: `42`
-- Generated entity pages: `150`
-- Generated static HTML pages: `174`
+- Generated entity pages: `153`
+- Generated static HTML pages: `177`
 - Verification statuses used: `Verified`, `Inferred`, `Needs verification`
 - First-class source pages: `/game-metadata/`, `/steam-source-snapshot/`, and `/source-ledger/`
 
-The strongest current source is Steam/public metadata. The source snapshot records Steam appdetails, review summaries, public achievement rows, Steam media URLs, direct Steam News API source records, volatile price/review/achievement data, and explicit research gaps. Steam news/devlogs now confirm 10 playable frogs, 16 locations, 60+ skills/tools/attacks/companions, demo progress carryover, Zippy, several launch/update skills, robotic helpers, Blue Gems, artifact rarity tiers, character main-attack concepts, quest-based meta-progression, and snow-system mechanics. Local demo file extraction is blocked in this shell; see `notes/public-research.md` and `notes/extracted-metadata.md`.
+The strongest current source is Steam/public metadata. The source snapshot records Steam appdetails, review summaries, public achievement rows, Steam media URLs, direct Steam News API source records, volatile price/review/achievement data, and explicit research gaps. Steam news/devlogs now confirm 10 playable frogs, 16 locations, 60+ skills/tools/attacks/companions, demo progress carryover, Puff, Zippy, several launch/update skills, robotic helpers, Blue Gems, artifact rarity tiers, character main-attack concepts, quest-based meta-progression, and snow-system mechanics. Local demo file extraction is blocked in this shell; see `notes/public-research.md` and `notes/extracted-metadata.md`.
 
 ## Commands
 

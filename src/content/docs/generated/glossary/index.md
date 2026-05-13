@@ -8,7 +8,7 @@ draft: false
 
 Glossary entries for the unofficial FROGGY HATES SNOW wiki.
 
-Status counts: Verified: 24.
+Status counts: Verified: 25.
 
 | Name | Status | Summary |
 |---|---|---|
@@ -20,6 +20,7 @@ Status counts: Verified: 24.
 | [Character leveling](character-leveling/) | Verified | Launch devlog says characters gain experience by being played and grow stronger over time. |
 | [Character main attacks](character-main-attacks/) | Verified | Demo/devlog examples include tongue attacks, spits, snow minigun, electric staff, and hockey stick. |
 | [Character specializations](character-specializations/) | Verified | Demo/devlog posts say the ten playable frogs have unique specializations, main attacks, and starting skillsets. |
+| [Core attacks](core-attacks/) | Verified | Launch devlog examples include tongue, spit, and baseball bat style core attacks, while the updated demo announcement identifies Puff's ranged poison spit. |
 | [Demo progress carryover](demo-progress-carryover/) | Verified | Steam news states demo progress carries over to the full game. |
 | [Elemental status effects](elemental-status-effects/) | Verified | Launch devlog lists Stun, Fire, Frost, Poison, and Lightning status effects. |
 | [Escape door](escape-door/) | Verified | Victory route requiring enough keys, according to Steam copy. |

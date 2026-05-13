@@ -8,21 +8,23 @@ draft: false
 
 This is the public-source audit trail for the wiki. It separates source availability from gameplay certainty: a public achievement can verify a name without verifying the item's exact effect.
 
-Entity status counts: Verified: 121, Needs verification: 2, Inferred: 27.
+Entity status counts: Verified: 124, Needs verification: 2, Inferred: 27.
 
 ## Source Coverage
 
 | Source Label | Referenced Entities |
 |---|---:|
 | Steam community achievements page | 92 |
-| Steam community news/devlogs | 73 |
-| Steam full-game store page | 62 |
-| Steam demo store page | 62 |
+| Steam community news/devlogs | 74 |
+| Steam full-game store page | 63 |
+| Steam demo store page | 63 |
 | Steam global achievement percentages API | 42 |
 | Achievement condition classification | 27 |
-| Digital Bandidos game page | 24 |
+| Digital Bandidos game page | 25 |
 | Xbox Wire developer interview | 3 |
 | Thank You for an Incredible Launch — First Update and What Comes Next | 2 |
+| The Froggy Hates Snow demo is back – and it’s had a major overhaul | 1 |
+| Devlog #3: What to expect from the next demo | 1 |
 
 ## Public Sources
 
@@ -51,7 +53,7 @@ Entity status counts: Verified: 121, Needs verification: 2, Inferred: 27.
 | `steam-anomalous-zones-devlog` | [Devlog #6: Introduction to Anomalous Zones](https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1831432155565119) | high | 2026-04-29: Anomalous-zone devlog with challenge examples, hazards, Blue Gems, artifacts, and artifact rarity tiers. |
 | `steam-release-date-news` | [Froggy Hates Snow release date revealed](https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1830797770242233) | high | 2026-04-27: Release-date post with launch scope counts and demo progress carryover. |
 | `steam-snow-devlog` | [Devlog #5: How Snow Works in Froggy Hates Snow](https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1827626365766540) | high | 2026-03-24: Snow-system devlog explaining snow interaction, density/layers, and named snow/ice tools. |
-| `steam-demo-overhaul-news` | [The Froggy Hates Snow demo is back – and it’s had a major overhaul](https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1823825466505761) | high | 2026-02-09: Updated-demo announcement describing quest-based progress and Blue Gems unlocking characters, abilities, and locations. |
+| `steam-demo-overhaul-news` | [The Froggy Hates Snow demo is back – and it’s had a major overhaul](https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1823825466505761) | high | 2026-02-09: Updated-demo announcement describing Puff, ranged poison spit, quest-based progress, Blue Gems, and unlocks for characters, abilities, and locations. |
 | `steam-next-demo-devlog` | [Devlog #3: What to expect from the next demo](https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1823825466494740) | high | 2026-02-04: Pre-demo devlog describing ten frogs, unique specializations, main attacks, starting skillsets, and Blue Gem/quest meta-progression. |
 | `steam-demo-update-devlog` | [Devlog #2: A quick update about the Froggy Hates Snow demo](https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1821922921824108) | high | 2026-01-20: Demo update devlog previewing quest-based meta-progression and ten planned characters with unique skins, skills, and main attacks. |
 | `steam-developer-intro-devlog` | [Devlog #1: Meet The Developer](https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1819386365096417) | high | 2025-12-19: Developer introduction describing the game's interactive snow and digging ideas. |

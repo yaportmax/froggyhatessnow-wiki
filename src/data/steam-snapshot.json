@@ -1,6 +1,6 @@
 {
   "accessed_date": "2026-05-13",
-  "generated_at": "2026-05-13T11:27:40.891Z",
+  "generated_at": "2026-05-13T11:35:08.178Z",
   "source_policy": [
     "Prefer official public Steam endpoints and pages for game metadata.",
     "Do not copy raw long descriptions, review text, proprietary assets, binaries, source code, or decompiled content.",
@@ -427,7 +427,7 @@
       "notes": "Examples are public, but exact character-to-attack mapping still needs gameplay or safe local metadata verification."
     },
     {
-      "claim": "Steam demo/devlog posts describe quest-based meta-progression and Blue Gems as unlock resources for characters, abilities, and locations.",
+      "claim": "Steam demo/devlog posts describe Puff, quest-based meta-progression, and Blue Gems as unlock resources for characters, abilities, and locations.",
       "source_ids": [
         "steam-demo-overhaul-news",
         "steam-next-demo-devlog",
@@ -435,6 +435,7 @@
       ],
       "confidence": "high",
       "wiki_targets": [
+        "frogs",
         "items",
         "guides",
         "glossary"
@@ -524,6 +525,7 @@
     "demo_progress_carries_over": true,
     "confirmed_terms": [
       "Zippy",
+      "Puff",
       "Glider",
       "Snowball Roll",
       "Leap Chain",
@@ -537,6 +539,7 @@
       "Destructive Field",
       "Invincible Roll",
       "Armor",
+      "ranged poison spit",
       "Drill",
       "Salt Sack",
       "Snowblower",
@@ -567,6 +570,7 @@
       "quests",
       "abilities",
       "locations",
+      "first two arenas",
       "10 playable frog characters",
       "unique specialization",
       "main attack",
@@ -739,17 +743,21 @@
         "feedname": "steam_community_announcements",
         "author": "BanJamUK",
         "wiki_targets": [
+          "frogs",
           "items",
           "guides",
           "glossary"
         ],
         "verified_terms": [
+          "Puff",
+          "ranged poison spit",
           "quests",
           "Blue Gems",
           "abilities",
-          "locations"
+          "locations",
+          "first two arenas"
         ],
-        "supports": "Updated-demo announcement describing quest-based progress and Blue Gems unlocking characters, abilities, and locations."
+        "supports": "Updated-demo announcement describing Puff, ranged poison spit, quest-based progress, Blue Gems, and unlocks for characters, abilities, and locations."
       },
       {
         "source_id": "steam-next-demo-devlog",
@@ -827,7 +835,7 @@
     ]
   },
   "research_gaps": [
-    "Exact character/frog roster beyond Froggy, Zippy, and the verified 10-playable-frog count, including which frog uses each public main-attack example.",
+    "Exact character/frog roster beyond Froggy, Puff, Zippy, and the verified 10-playable-frog count, including which frog uses each public main-attack example.",
     "Named map/location roster, map unlock order beyond public thresholds/update notes, and location-specific boss names.",
     "Named enemy roster and enemy behavior.",
     "Exact stats, costs, cooldowns, drop rates, and upgrade tree order.",

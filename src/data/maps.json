@@ -80,6 +80,42 @@
     ]
   },
   {
+    "id": "points-of-interest",
+    "slug": "points-of-interest",
+    "name": "Points of interest",
+    "aliases": [],
+    "category": "maps",
+    "short_description": "Steam devlog #3 describes richer location points of interest in the updated demo/full-game direction.",
+    "effect": "Examples include a crashed satellite or UFO, a school bus in snow, a phone booth, and theme-specific structures for forest, East Asia-inspired, and desert locations.",
+    "unlock_method": "Needs verification.",
+    "cost": "Needs verification.",
+    "mode": "Updated demo/full-game direction from public devlog.",
+    "related_entities": [],
+    "sources": [
+      {
+        "source_id": "steam-next-demo-devlog",
+        "type": "public_source",
+        "path_or_url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1823825466494740",
+        "label": "Devlog #3: What to expect from the next demo",
+        "confidence": "high",
+        "notes": "2026-02-04 pre-demo devlog."
+      }
+    ],
+    "verification_status": "Verified",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "These are point-of-interest and theme examples, not confirmed individual map names.",
+    "verified_fields": [
+      "name",
+      "category",
+      "effect",
+      "mode"
+    ],
+    "unverified_fields": [
+      "unlock_method",
+      "cost"
+    ]
+  },
+  {
     "id": "snowy-desert",
     "slug": "snowy-desert",
     "name": "Snowy desert",

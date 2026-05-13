@@ -14,7 +14,7 @@ Unofficial metadata-first fan wiki for **FROGGY HATES SNOW**. The current build 
 This wiki does not redistribute proprietary game files, assets, binaries, source code, or large raw text dumps. Entries marked Inferred or Needs verification should be treated as work-in-progress.
 :::
 
-Current entity coverage: **150 entries** (121 Verified, 27 Inferred, 2 Needs verification).
+Current entity coverage: **153 entries** (124 Verified, 27 Inferred, 2 Needs verification).
 
 Steam source snapshot: full game app 3232380, demo app 4037600, 42 public achievement rows, accessed 2026-05-13.
 

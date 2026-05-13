@@ -1,6 +1,6 @@
 ---
 title: "Unnamed frog roster slots"
-description: "Steam/Xbox public sources confirm 10 playable frogs, but this source pass has verified only Froggy and Zippy by name."
+description: "Steam/Xbox public sources confirm 10 playable frogs, but this source pass has verified only Froggy, Puff, and Zippy by name."
 draft: false
 ---
 
@@ -10,14 +10,14 @@ draft: false
 This entry is a stub and should not be treated as confirmed.
 :::
 
-Steam/Xbox public sources confirm 10 playable frogs, but this source pass has verified only Froggy and Zippy by name.
+Steam/Xbox public sources confirm 10 playable frogs, but this source pass has verified only Froggy, Puff, and Zippy by name.
 
 | Field | Value |
 |---|---|
 | Status | Needs verification |
 | Category | frogs |
 | Aliases | None listed |
-| Effect | Eight playable frog names, stat lines, main attacks, and starting skillsets still need direct verification. |
+| Effect | Seven playable frog names, stat lines, main attacks, and starting skillsets still need direct verification. |
 | Unlock Method | Needs verification. |
 | Cost | Needs verification. |
 | Mode | Needs verification. |

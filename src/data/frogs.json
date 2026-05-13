@@ -96,13 +96,51 @@
     ]
   },
   {
+    "id": "puff",
+    "slug": "puff",
+    "name": "Puff",
+    "aliases": [],
+    "category": "frogs",
+    "short_description": "The Steam demo overhaul announcement identifies Puff as a playable character added to the updated demo.",
+    "effect": "The announcement says Puff has a ranged poison spit attack.",
+    "unlock_method": "The announcement says Puff can be unlocked in the updated demo; exact unlock condition needs verification.",
+    "cost": "Needs verification.",
+    "mode": "Updated Steam demo; full-game status needs verification.",
+    "related_entities": [
+      "poison-infusion"
+    ],
+    "sources": [
+      {
+        "source_id": "steam-demo-overhaul-news",
+        "type": "public_source",
+        "path_or_url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1823825466505761",
+        "label": "The Froggy Hates Snow demo is back – and it’s had a major overhaul",
+        "confidence": "high",
+        "notes": "2026-02-09 updated-demo announcement."
+      }
+    ],
+    "verification_status": "Verified",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Exact full-game stats, starting skillset, and full-game unlock cost need gameplay or safe metadata verification.",
+    "verified_fields": [
+      "name",
+      "category",
+      "effect"
+    ],
+    "unverified_fields": [
+      "unlock_method",
+      "cost",
+      "mode"
+    ]
+  },
+  {
     "id": "unnamed-frog-roster-slots",
     "slug": "unnamed-frog-roster-slots",
     "name": "Unnamed frog roster slots",
     "aliases": [],
     "category": "frogs",
-    "short_description": "Steam/Xbox public sources confirm 10 playable frogs, but this source pass has verified only Froggy and Zippy by name.",
-    "effect": "Eight playable frog names, stat lines, main attacks, and starting skillsets still need direct verification.",
+    "short_description": "Steam/Xbox public sources confirm 10 playable frogs, but this source pass has verified only Froggy, Puff, and Zippy by name.",
+    "effect": "Seven playable frog names, stat lines, main attacks, and starting skillsets still need direct verification.",
     "unlock_method": "Needs verification.",
     "cost": "Needs verification.",
     "mode": "Needs verification.",
