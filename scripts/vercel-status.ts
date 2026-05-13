@@ -108,6 +108,7 @@ async function main() {
       "Current local Steam snapshot generated_at"
     ),
     checkPage("/achievement-source-matrix/", "Loadout Names"),
+    checkPage("/", 'property="og:image"', "homepage Open Graph image"),
     checkPage("/robots.txt", "sitemap-index.xml", "robots sitemap"),
     checkPage("/llms.txt", `Source snapshot generated: ${steamSnapshot.generated_at}`, "llms source snapshot marker")
   ]);
