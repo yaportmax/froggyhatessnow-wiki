@@ -35,7 +35,7 @@ const ENTITY_REQUIRED_FIELDS = [
   "last_verified_game_version",
   "notes"
 ];
-const SOURCE_REQUIRED_FIELDS = ["type", "path_or_url", "label", "confidence", "notes"];
+const SOURCE_REQUIRED_FIELDS = ["source_id", "type", "path_or_url", "label", "confidence", "notes"];
 const PUBLIC_SOURCE_REQUIRED_FIELDS = ["id", ...SOURCE_REQUIRED_FIELDS];
 const ALLOWED_JSON_FILES = [...REQUIRED_DATASETS, "public-sources", "steam-snapshot"];
 
@@ -101,6 +101,9 @@ function validateSources(owner: string, sources: unknown, errors: string[]) {
     if (typeof source.type !== "string" || !VALID_SOURCE_TYPES.has(source.type)) {
       errors.push(`${prefix}: invalid source type ${String(source.type)}`);
     }
+    if (typeof source.source_id !== "string" || source.source_id.length === 0) {
+      errors.push(`${prefix}: source_id must be a non-empty string`);
+    }
   });
 }
 
@@ -156,6 +159,18 @@ function validateSteamSnapshot(snapshot: Record<string, unknown>, errors: string
       if (!(field in app)) errors.push(`steam-snapshot.json: apps.${key} missing required field ${field}`);
     }
   }
+
+  const claims = Array.isArray(snapshot.public_gameplay_claims) ? snapshot.public_gameplay_claims : [];
+  claims.forEach((claim, index) => {
+    const prefix = `steam-snapshot.json: public_gameplay_claims[${index}]`;
+    if (!isRecord(claim)) {
+      errors.push(`${prefix} must be an object`);
+      return;
+    }
+    if (!Array.isArray(claim.source_ids)) {
+      errors.push(`${prefix}.source_ids must be an array`);
+    }
+  });
 }
 
 export async function validateAllData(dataDir = path.resolve("src/data")): Promise<ValidationResult> {
@@ -178,6 +193,7 @@ export async function validateAllData(dataDir = path.resolve("src/data")): Promi
   }
 
   const publicSources = await readJsonArray(path.join(dataDir, "public-sources.json"), errors);
+  const sourceIds = new Set<string>();
   publicSources.forEach((source, index) => {
     const prefix = `public-sources[${index}]`;
     if (!isRecord(source)) {
@@ -189,6 +205,13 @@ export async function validateAllData(dataDir = path.resolve("src/data")): Promi
     }
     if (typeof source.type !== "string" || !VALID_SOURCE_TYPES.has(source.type)) {
       errors.push(`${prefix}: invalid source type ${String(source.type)}`);
+    }
+    if (typeof source.id === "string") {
+      if (sourceIds.has(source.id)) errors.push(`${prefix}: duplicate source id ${source.id}`);
+      sourceIds.add(source.id);
+    }
+    if (typeof source.source_id === "string" && typeof source.id === "string" && source.source_id !== source.id) {
+      errors.push(`${prefix}: source_id must match id`);
     }
   });
 
@@ -207,6 +230,31 @@ export async function validateAllData(dataDir = path.resolve("src/data")): Promi
       if (duplicate) errors.push(`${ref}: duplicate slug ${entity.slug}; first seen at ${duplicate}`);
       else slugs.set(entity.slug, ref);
     }
+  }
+
+  for (const { dataset, index, entity } of allEntities) {
+    if (!Array.isArray(entity.sources)) continue;
+    entity.sources.forEach((source, sourceIndex) => {
+      if (!isRecord(source) || typeof source.source_id !== "string") return;
+      if (!sourceIds.has(source.source_id)) {
+        errors.push(`${dataset}[${index}].sources[${sourceIndex}]: source_id ${source.source_id} is not present in public-sources.json`);
+      }
+    });
+  }
+
+  if (Array.isArray(steamSnapshot.public_gameplay_claims)) {
+    steamSnapshot.public_gameplay_claims.forEach((claim, index) => {
+      if (!isRecord(claim) || !Array.isArray(claim.source_ids)) return;
+      claim.source_ids.forEach((sourceId, sourceIndex) => {
+        if (typeof sourceId !== "string") {
+          errors.push(`steam-snapshot.json: public_gameplay_claims[${index}].source_ids[${sourceIndex}] must be a string`);
+          return;
+        }
+        if (!sourceIds.has(sourceId)) {
+          errors.push(`steam-snapshot.json: public_gameplay_claims[${index}].source_ids[${sourceIndex}] ${sourceId} is not present in public-sources.json`);
+        }
+      });
+    });
   }
 
   for (const { dataset, index, entity } of allEntities) {

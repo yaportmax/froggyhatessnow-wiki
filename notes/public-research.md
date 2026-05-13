@@ -13,6 +13,8 @@ This note summarizes public metadata used to seed the wiki. It intentionally avo
 - Steam community achievements page: https://steamcommunity.com/stats/3232380/achievements/?l=english
 - Steam global achievement percentages API: https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=3232380&format=json
 - Steam community news/devlogs: https://steamcommunity.com/app/3232380/allnews/?l=english
+- Steam News API: https://api.steampowered.com/ISteamNews/GetNewsForApp/v0002/?appid=3232380&count=20&maxlength=50000&format=json
+- Xbox Wire developer interview: https://news.xbox.com/en-us/2026/05/05/froggy-hates-snow-interview/
 
 ## Game-Level Facts
 
@@ -28,7 +30,7 @@ This note summarizes public metadata used to seed the wiki. It intentionally avo
 - Genres from Steam appdetails: [{"id":"1","description":"Action"},{"id":"23","description":"Indie"},{"id":"2","description":"Strategy"}]
 - Categories from Steam appdetails: [{"id":2,"description":"Single-player"},{"id":22,"description":"Steam Achievements"},{"id":28,"description":"Full controller support"},{"id":78,"description":"Adjustable Difficulty"},{"id":74,"description":"Playable without Timed Input"},{"id":23,"description":"Steam Cloud"},{"id":62,"description":"Family Sharing"}]
 - Full game current US price from Steam appdetails: {"currency":"USD","initial":1499,"final":1349,"discount_percent":10,"initial_formatted":"$14.99","final_formatted":"$13.49"}
-- Full game Steam recommendations total from appdetails: 174
+- Full game Steam recommendations total from appdetails: 175
 - Full game screenshots listed by appdetails: 14
 - Demo screenshots listed by appdetails: 13
 - Full-game languages: English * , French * , German * , Spanish - Spain * , Japanese * , Korean * , Polish * , Portuguese - Brazil * , Simplified Chinese * , Ukrainian * , Turkish * , Traditional Chinese * * languages with full audio support
@@ -41,10 +43,25 @@ This note summarizes public metadata used to seed the wiki. It intentionally avo
 ## Public Gameplay Concepts
 
 - Verified from official Steam copy: digging through snow, warmth/freezing as survival pressure, gems, keys, treasure chests, artifacts, anomaly zones, escape door, bosses, enemies, Peaceful Mode, upgrades, tools, companions, and a snowy-desert setting.
-- Verified from official Steam news/devlogs: 10 playable frogs, 16 locations, 60+ skills/tools/attacks/companions, demo progress carryover, launch movement/projectile skills, robotic helpers, elemental status effects, anomalous-zone rewards, snow heightmap behavior, and first post-launch update changes.
+- Verified from official Steam news/devlogs: 10 playable frogs, 16 locations, 60+ skills/tools/attacks/companions, demo progress carryover, launch movement/projectile skills, robotic helpers, elemental status effects, anomalous-zone rewards, snow heightmap behavior, character main-attack examples, quest-based meta-progression, Blue Gem unlock scope, and first post-launch update changes.
+- Corroborated by Xbox Wire developer interview: 10 frogs, 16 maps, 60+ tools/skills/companions, snow heightmap-style technology, companion roles, and Peaceful Mode purpose.
 - Verified named companions/tools/items from public copy or achievements include Penguin, Mole, Owl, Map, Shovel, Cart, Scanner, Locator, Pickaxe, Dynamite, Air Bomb, Flamethrower, Heater Sled, Gloves, Hot Tea, Energy Drink, Poison Flask, Frost Bomb, and Flashbang.
-- Steam news/devlog confirmed terms added to the wiki: Zippy, Glider, Snowball Roll, Leap Chain, Delivery Bot, Flamethrower Bot, Scanner Drone, Piercing Icicles, Fireworks, Snowball Volley, Energy Wave, Destructive Field, Invincible Roll, Armor, Drill, Salt Sack, Snowblower, Blue Gems, Common artifacts, Uncommon artifacts, Rare artifacts, Legendary artifacts.
+- Steam news/devlog confirmed terms added to the wiki: Zippy, Glider, Snowball Roll, Leap Chain, Delivery Bot, Flamethrower Bot, Scanner Drone, Piercing Icicles, Fireworks, Snowball Volley, Energy Wave, Destructive Field, Invincible Roll, Armor, Drill, Salt Sack, Snowblower, Blue Gems, Common artifacts, Uncommon artifacts, Rare artifacts, Legendary artifacts, Night Mode, UI Scale, full game launch, Skill Banishing, Stun, Fire, Frost, Poison, Lightning, Anomalous Zones, 10 playable frogs, 16 locations, 60+ skills/tools/attacks/companions, demo progress carryover, heightmap snow, snow layers, Dynamite, Air Bomb, Flamethrower, quests, abilities, locations, 10 playable frog characters, unique specialization, main attack, starting skillset, tongue attacks, spits, snow minigun, electric staff, hockey stick, quest-based meta-progression, 10 playable characters, unique skin, interactive snow, digging.
 - Exact stats, unlock costs, complete named map roster, named boss roster, named enemy roster, and the remaining frog/character roster remain Needs verification unless local metadata or gameplay notes confirm them.
+
+## Steam News / Devlog Source Items
+
+- Direct news/devlog records parsed from Steam News API: 10
+- 2026-05-12 - Thank You for an Incredible Launch — First Update and What Comes Next: https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1832065502824701 (First post-launch update with Zippy, projectile-defense skills, early unlock/progression adjustments, Night Mode visibility, and UI scale changes.)
+- 2026-05-07 - Froggy Hates Snow is out now!: https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1832065502812843 (Launch announcement for the released full game.)
+- 2026-05-04 - Devlog #7: What's New For Launch?: https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1831432155577514 (Launch devlog naming movement skills, projectile skills, robotic helpers, status effects, and skill-management systems.)
+- 2026-04-29 - Devlog #6: Introduction to Anomalous Zones: https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1831432155565119 (Anomalous-zone devlog with challenge examples, hazards, Blue Gems, artifacts, and artifact rarity tiers.)
+- 2026-04-27 - Froggy Hates Snow release date revealed: https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1830797770242233 (Release-date post with launch scope counts and demo progress carryover.)
+- 2026-03-24 - Devlog #5: How Snow Works in Froggy Hates Snow: https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1827626365766540 (Snow-system devlog explaining snow interaction, density/layers, and named snow/ice tools.)
+- 2026-02-09 - The Froggy Hates Snow demo is back – and it’s had a major overhaul: https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1823825466505761 (Updated-demo announcement describing quest-based progress and Blue Gems unlocking characters, abilities, and locations.)
+- 2026-02-04 - Devlog #3: What to expect from the next demo: https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1823825466494740 (Pre-demo devlog describing ten frogs, unique specializations, main attacks, starting skillsets, and Blue Gem/quest meta-progression.)
+- 2026-01-20 - Devlog #2: A quick update about the Froggy Hates Snow demo: https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1821922921824108 (Demo update devlog previewing quest-based meta-progression and ten planned characters with unique skins, skills, and main attacks.)
+- 2025-12-19 - Devlog #1: Meet The Developer: https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1819386365096417 (Developer introduction describing the game's interactive snow and digging ideas.)
 
 ## Achievements
 

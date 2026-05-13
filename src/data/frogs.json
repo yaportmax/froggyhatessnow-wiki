@@ -13,6 +13,7 @@
     "related_entities": [],
     "sources": [
       {
+        "source_id": "steam-full-store",
         "type": "public_source",
         "path_or_url": "https://store.steampowered.com/app/3232380/FROGGY_HATES_SNOW/",
         "label": "Steam full-game store page",
@@ -20,6 +21,7 @@
         "notes": "Official public Steam store listing."
       },
       {
+        "source_id": "steam-demo-store",
         "type": "public_source",
         "path_or_url": "https://store.steampowered.com/app/4037600/FROGGY_HATES_SNOW_Demo/",
         "label": "Steam demo store page",
@@ -29,7 +31,17 @@
     ],
     "verification_status": "Verified",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
-    "notes": "No public roster of named frog variants was found in the safe metadata pass."
+    "notes": "No public roster of named frog variants was found in the safe metadata pass.",
+    "verified_fields": [
+      "name",
+      "category",
+      "effect",
+      "mode"
+    ],
+    "unverified_fields": [
+      "unlock_method",
+      "cost"
+    ]
   },
   {
     "id": "playable-characters",
@@ -37,14 +49,15 @@
     "name": "Playable characters",
     "aliases": [],
     "category": "frogs",
-    "short_description": "Steam news confirms 10 playable frogs, and public achievements refer to unlocking and upgrading characters.",
-    "effect": "The full roster has 10 playable frogs; each name, stat line, and attack still needs verification unless listed separately.",
+    "short_description": "Steam news confirms 10 playable frogs; devlogs say each frog has its own specialization, main attack, and starting skillset.",
+    "effect": "The full roster has 10 playable frogs with distinct public loadout concepts; each name, stat line, and exact attack behavior still needs verification unless listed separately.",
     "unlock_method": "Achievements mention unlocking 1, 3, and 9 characters.",
     "cost": "Needs verification.",
     "mode": "Needs verification.",
     "related_entities": [],
     "sources": [
       {
+        "source_id": "steam-news-devlogs",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
         "label": "Steam community news/devlogs",
@@ -52,16 +65,79 @@
         "notes": "Official public Steam news and developer posts for launch, systems, updates, and devlogs."
       },
       {
+        "source_id": "steam-full-achievements-page",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
         "label": "Steam community achievements page",
         "confidence": "high",
         "notes": "Public achievement names and descriptions."
+      },
+      {
+        "source_id": "xbox-wire-interview",
+        "type": "public_source",
+        "path_or_url": "https://news.xbox.com/en-us/2026/05/05/froggy-hates-snow-interview/",
+        "label": "Xbox Wire developer interview",
+        "confidence": "medium",
+        "notes": "Developer interview corroborating launch counts, snow tech, skill/tool variety, companions, and Peaceful Mode."
       }
     ],
     "verification_status": "Verified",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
-    "notes": "Use as a roster placeholder until local metadata or gameplay notes identify the remaining character names."
+    "notes": "Public devlogs mention examples such as tongue attacks, spits, snow minigun, electric staff, and hockey stick, but do not map them to named frogs in the available source pass.",
+    "verified_fields": [
+      "name",
+      "category",
+      "unlock_method"
+    ],
+    "unverified_fields": [
+      "effect",
+      "cost",
+      "mode"
+    ]
+  },
+  {
+    "id": "unnamed-frog-roster-slots",
+    "slug": "unnamed-frog-roster-slots",
+    "name": "Unnamed frog roster slots",
+    "aliases": [],
+    "category": "frogs",
+    "short_description": "Steam/Xbox public sources confirm 10 playable frogs, but this source pass has verified only Froggy and Zippy by name.",
+    "effect": "Eight playable frog names, stat lines, main attacks, and starting skillsets still need direct verification.",
+    "unlock_method": "Needs verification.",
+    "cost": "Needs verification.",
+    "mode": "Needs verification.",
+    "related_entities": [],
+    "sources": [
+      {
+        "source_id": "steam-news-devlogs",
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
+        "label": "Steam community news/devlogs",
+        "confidence": "high",
+        "notes": "Official public Steam news and developer posts for launch, systems, updates, and devlogs."
+      },
+      {
+        "source_id": "xbox-wire-interview",
+        "type": "public_source",
+        "path_or_url": "https://news.xbox.com/en-us/2026/05/05/froggy-hates-snow-interview/",
+        "label": "Xbox Wire developer interview",
+        "confidence": "medium",
+        "notes": "Developer interview corroborating launch counts, snow tech, skill/tool variety, companions, and Peaceful Mode."
+      }
+    ],
+    "verification_status": "Needs verification",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Tracker entry for missing roster coverage; do not convert the remaining slots into named pages until a source names them.",
+    "verified_fields": [
+      "name",
+      "category",
+      "effect"
+    ],
+    "unverified_fields": [
+      "unlock_method",
+      "cost",
+      "mode"
+    ]
   },
   {
     "id": "zippy",
@@ -79,6 +155,7 @@
     ],
     "sources": [
       {
+        "source_id": "steam-news-devlogs",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
         "label": "Steam community news/devlogs",
@@ -88,6 +165,16 @@
     ],
     "verification_status": "Verified",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
-    "notes": "Exact character stats and attack details need gameplay verification."
+    "notes": "Exact character stats and attack details need gameplay verification.",
+    "verified_fields": [
+      "name",
+      "category",
+      "effect"
+    ],
+    "unverified_fields": [
+      "unlock_method",
+      "cost",
+      "mode"
+    ]
   }
 ]

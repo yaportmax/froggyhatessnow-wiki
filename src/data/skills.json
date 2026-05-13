@@ -13,6 +13,7 @@
     "related_entities": [],
     "sources": [
       {
+        "source_id": "steam-full-achievements-page",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
         "label": "Steam community achievements page",
@@ -20,6 +21,7 @@
         "notes": "Public achievement display names and descriptions."
       },
       {
+        "source_id": "achievement-condition-classification",
         "type": "inferred",
         "path_or_url": "local inference from public-source wording",
         "label": "Achievement condition classification",
@@ -29,7 +31,17 @@
     ],
     "verification_status": "Inferred",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
-    "notes": "Name is public; category/effect details may need gameplay or local metadata verification."
+    "notes": "Name is public; category/effect details may need gameplay or local metadata verification.",
+    "verified_fields": [
+      "name",
+      "category"
+    ],
+    "unverified_fields": [
+      "effect",
+      "unlock_method",
+      "cost",
+      "mode"
+    ]
   },
   {
     "id": "armor",
@@ -45,6 +57,7 @@
     "related_entities": [],
     "sources": [
       {
+        "source_id": "steam-news-devlogs",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
         "label": "Steam community news/devlogs",
@@ -54,7 +67,17 @@
     ],
     "verification_status": "Verified",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
-    "notes": "Exact rarity, cooldown, scaling, and unlock details need gameplay verification."
+    "notes": "Exact rarity, cooldown, scaling, and unlock details need gameplay verification.",
+    "verified_fields": [
+      "name",
+      "category",
+      "effect"
+    ],
+    "unverified_fields": [
+      "unlock_method",
+      "cost",
+      "mode"
+    ]
   },
   {
     "id": "chain-lightning",
@@ -70,6 +93,7 @@
     "related_entities": [],
     "sources": [
       {
+        "source_id": "steam-full-achievements-page",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
         "label": "Steam community achievements page",
@@ -77,6 +101,7 @@
         "notes": "Public achievement display names and descriptions."
       },
       {
+        "source_id": "achievement-condition-classification",
         "type": "inferred",
         "path_or_url": "local inference from public-source wording",
         "label": "Achievement condition classification",
@@ -86,7 +111,17 @@
     ],
     "verification_status": "Inferred",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
-    "notes": "Name is public; category/effect details may need gameplay or local metadata verification."
+    "notes": "Name is public; category/effect details may need gameplay or local metadata verification.",
+    "verified_fields": [
+      "name",
+      "category"
+    ],
+    "unverified_fields": [
+      "effect",
+      "unlock_method",
+      "cost",
+      "mode"
+    ]
   },
   {
     "id": "curvy-tongue",
@@ -102,6 +137,7 @@
     "related_entities": [],
     "sources": [
       {
+        "source_id": "steam-full-achievements-page",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
         "label": "Steam community achievements page",
@@ -109,6 +145,7 @@
         "notes": "Public achievement display names and descriptions."
       },
       {
+        "source_id": "achievement-condition-classification",
         "type": "inferred",
         "path_or_url": "local inference from public-source wording",
         "label": "Achievement condition classification",
@@ -118,7 +155,17 @@
     ],
     "verification_status": "Inferred",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
-    "notes": "Name is public; category/effect details may need gameplay or local metadata verification."
+    "notes": "Name is public; category/effect details may need gameplay or local metadata verification.",
+    "verified_fields": [
+      "name",
+      "category"
+    ],
+    "unverified_fields": [
+      "effect",
+      "unlock_method",
+      "cost",
+      "mode"
+    ]
   },
   {
     "id": "death-field",
@@ -134,6 +181,7 @@
     "related_entities": [],
     "sources": [
       {
+        "source_id": "steam-full-achievements-page",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
         "label": "Steam community achievements page",
@@ -141,6 +189,7 @@
         "notes": "Public achievement display names and descriptions."
       },
       {
+        "source_id": "achievement-condition-classification",
         "type": "inferred",
         "path_or_url": "local inference from public-source wording",
         "label": "Achievement condition classification",
@@ -150,7 +199,17 @@
     ],
     "verification_status": "Inferred",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
-    "notes": "Name is public; category/effect details may need gameplay or local metadata verification."
+    "notes": "Name is public; category/effect details may need gameplay or local metadata verification.",
+    "verified_fields": [
+      "name",
+      "category"
+    ],
+    "unverified_fields": [
+      "effect",
+      "unlock_method",
+      "cost",
+      "mode"
+    ]
   },
   {
     "id": "destructive-field",
@@ -166,6 +225,7 @@
     "related_entities": [],
     "sources": [
       {
+        "source_id": "steam-news-devlogs",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
         "label": "Steam community news/devlogs",
@@ -175,7 +235,17 @@
     ],
     "verification_status": "Verified",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
-    "notes": "Exact rarity, cooldown, scaling, and unlock details need gameplay verification."
+    "notes": "Exact rarity, cooldown, scaling, and unlock details need gameplay verification.",
+    "verified_fields": [
+      "name",
+      "category",
+      "effect"
+    ],
+    "unverified_fields": [
+      "unlock_method",
+      "cost",
+      "mode"
+    ]
   },
   {
     "id": "electric-infusion",
@@ -191,6 +261,7 @@
     "related_entities": [],
     "sources": [
       {
+        "source_id": "steam-full-achievements-page",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
         "label": "Steam community achievements page",
@@ -198,6 +269,7 @@
         "notes": "Public achievement display names and descriptions."
       },
       {
+        "source_id": "achievement-condition-classification",
         "type": "inferred",
         "path_or_url": "local inference from public-source wording",
         "label": "Achievement condition classification",
@@ -207,7 +279,17 @@
     ],
     "verification_status": "Inferred",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
-    "notes": "Name is public; category/effect details may need gameplay or local metadata verification."
+    "notes": "Name is public; category/effect details may need gameplay or local metadata verification.",
+    "verified_fields": [
+      "name",
+      "category"
+    ],
+    "unverified_fields": [
+      "effect",
+      "unlock_method",
+      "cost",
+      "mode"
+    ]
   },
   {
     "id": "energy-wave",
@@ -223,6 +305,7 @@
     "related_entities": [],
     "sources": [
       {
+        "source_id": "steam-news-devlogs",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
         "label": "Steam community news/devlogs",
@@ -232,7 +315,17 @@
     ],
     "verification_status": "Verified",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
-    "notes": "Exact rarity, cooldown, scaling, and unlock details need gameplay verification."
+    "notes": "Exact rarity, cooldown, scaling, and unlock details need gameplay verification.",
+    "verified_fields": [
+      "name",
+      "category",
+      "effect"
+    ],
+    "unverified_fields": [
+      "unlock_method",
+      "cost",
+      "mode"
+    ]
   },
   {
     "id": "fire-infusion",
@@ -248,6 +341,7 @@
     "related_entities": [],
     "sources": [
       {
+        "source_id": "steam-full-achievements-page",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
         "label": "Steam community achievements page",
@@ -255,6 +349,7 @@
         "notes": "Public achievement display names and descriptions."
       },
       {
+        "source_id": "achievement-condition-classification",
         "type": "inferred",
         "path_or_url": "local inference from public-source wording",
         "label": "Achievement condition classification",
@@ -264,7 +359,17 @@
     ],
     "verification_status": "Inferred",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
-    "notes": "Name is public; category/effect details may need gameplay or local metadata verification."
+    "notes": "Name is public; category/effect details may need gameplay or local metadata verification.",
+    "verified_fields": [
+      "name",
+      "category"
+    ],
+    "unverified_fields": [
+      "effect",
+      "unlock_method",
+      "cost",
+      "mode"
+    ]
   },
   {
     "id": "fireworks",
@@ -280,6 +385,7 @@
     "related_entities": [],
     "sources": [
       {
+        "source_id": "steam-news-devlogs",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
         "label": "Steam community news/devlogs",
@@ -289,7 +395,17 @@
     ],
     "verification_status": "Verified",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
-    "notes": "Exact rarity, cooldown, scaling, and unlock details need gameplay verification."
+    "notes": "Exact rarity, cooldown, scaling, and unlock details need gameplay verification.",
+    "verified_fields": [
+      "name",
+      "category",
+      "effect"
+    ],
+    "unverified_fields": [
+      "unlock_method",
+      "cost",
+      "mode"
+    ]
   },
   {
     "id": "frost-infusion",
@@ -305,6 +421,7 @@
     "related_entities": [],
     "sources": [
       {
+        "source_id": "steam-full-achievements-page",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
         "label": "Steam community achievements page",
@@ -312,6 +429,7 @@
         "notes": "Public achievement display names and descriptions."
       },
       {
+        "source_id": "achievement-condition-classification",
         "type": "inferred",
         "path_or_url": "local inference from public-source wording",
         "label": "Achievement condition classification",
@@ -321,7 +439,17 @@
     ],
     "verification_status": "Inferred",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
-    "notes": "Name is public; category/effect details may need gameplay or local metadata verification."
+    "notes": "Name is public; category/effect details may need gameplay or local metadata verification.",
+    "verified_fields": [
+      "name",
+      "category"
+    ],
+    "unverified_fields": [
+      "effect",
+      "unlock_method",
+      "cost",
+      "mode"
+    ]
   },
   {
     "id": "glider",
@@ -337,6 +465,7 @@
     "related_entities": [],
     "sources": [
       {
+        "source_id": "steam-news-devlogs",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
         "label": "Steam community news/devlogs",
@@ -346,7 +475,17 @@
     ],
     "verification_status": "Verified",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
-    "notes": "Exact rarity, cooldown, scaling, and unlock details need gameplay verification."
+    "notes": "Exact rarity, cooldown, scaling, and unlock details need gameplay verification.",
+    "verified_fields": [
+      "name",
+      "category",
+      "effect"
+    ],
+    "unverified_fields": [
+      "unlock_method",
+      "cost",
+      "mode"
+    ]
   },
   {
     "id": "in-run-skill-reordering",
@@ -362,6 +501,7 @@
     "related_entities": [],
     "sources": [
       {
+        "source_id": "steam-news-devlogs",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
         "label": "Steam community news/devlogs",
@@ -371,7 +511,17 @@
     ],
     "verification_status": "Verified",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
-    "notes": "Exact rarity, cooldown, scaling, and unlock details need gameplay verification."
+    "notes": "Exact rarity, cooldown, scaling, and unlock details need gameplay verification.",
+    "verified_fields": [
+      "name",
+      "category",
+      "effect"
+    ],
+    "unverified_fields": [
+      "unlock_method",
+      "cost",
+      "mode"
+    ]
   },
   {
     "id": "invincible-roll",
@@ -387,6 +537,7 @@
     "related_entities": [],
     "sources": [
       {
+        "source_id": "steam-news-devlogs",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
         "label": "Steam community news/devlogs",
@@ -396,7 +547,17 @@
     ],
     "verification_status": "Verified",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
-    "notes": "Exact rarity, cooldown, scaling, and unlock details need gameplay verification."
+    "notes": "Exact rarity, cooldown, scaling, and unlock details need gameplay verification.",
+    "verified_fields": [
+      "name",
+      "category",
+      "effect"
+    ],
+    "unverified_fields": [
+      "unlock_method",
+      "cost",
+      "mode"
+    ]
   },
   {
     "id": "leap-chain",
@@ -412,6 +573,7 @@
     "related_entities": [],
     "sources": [
       {
+        "source_id": "steam-news-devlogs",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
         "label": "Steam community news/devlogs",
@@ -421,7 +583,17 @@
     ],
     "verification_status": "Verified",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
-    "notes": "Exact rarity, cooldown, scaling, and unlock details need gameplay verification."
+    "notes": "Exact rarity, cooldown, scaling, and unlock details need gameplay verification.",
+    "verified_fields": [
+      "name",
+      "category",
+      "effect"
+    ],
+    "unverified_fields": [
+      "unlock_method",
+      "cost",
+      "mode"
+    ]
   },
   {
     "id": "magnet",
@@ -437,6 +609,7 @@
     "related_entities": [],
     "sources": [
       {
+        "source_id": "steam-full-achievements-page",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
         "label": "Steam community achievements page",
@@ -444,6 +617,7 @@
         "notes": "Public achievement display names and descriptions."
       },
       {
+        "source_id": "achievement-condition-classification",
         "type": "inferred",
         "path_or_url": "local inference from public-source wording",
         "label": "Achievement condition classification",
@@ -453,7 +627,17 @@
     ],
     "verification_status": "Inferred",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
-    "notes": "Name is public; category/effect details may need gameplay or local metadata verification."
+    "notes": "Name is public; category/effect details may need gameplay or local metadata verification.",
+    "verified_fields": [
+      "name",
+      "category"
+    ],
+    "unverified_fields": [
+      "effect",
+      "unlock_method",
+      "cost",
+      "mode"
+    ]
   },
   {
     "id": "piercing-icicles",
@@ -469,6 +653,7 @@
     "related_entities": [],
     "sources": [
       {
+        "source_id": "steam-news-devlogs",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
         "label": "Steam community news/devlogs",
@@ -478,7 +663,17 @@
     ],
     "verification_status": "Verified",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
-    "notes": "Exact rarity, cooldown, scaling, and unlock details need gameplay verification."
+    "notes": "Exact rarity, cooldown, scaling, and unlock details need gameplay verification.",
+    "verified_fields": [
+      "name",
+      "category",
+      "effect"
+    ],
+    "unverified_fields": [
+      "unlock_method",
+      "cost",
+      "mode"
+    ]
   },
   {
     "id": "poison-infusion",
@@ -494,6 +689,7 @@
     "related_entities": [],
     "sources": [
       {
+        "source_id": "steam-full-achievements-page",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
         "label": "Steam community achievements page",
@@ -501,6 +697,7 @@
         "notes": "Public achievement display names and descriptions."
       },
       {
+        "source_id": "achievement-condition-classification",
         "type": "inferred",
         "path_or_url": "local inference from public-source wording",
         "label": "Achievement condition classification",
@@ -510,7 +707,17 @@
     ],
     "verification_status": "Inferred",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
-    "notes": "Name is public; category/effect details may need gameplay or local metadata verification."
+    "notes": "Name is public; category/effect details may need gameplay or local metadata verification.",
+    "verified_fields": [
+      "name",
+      "category"
+    ],
+    "unverified_fields": [
+      "effect",
+      "unlock_method",
+      "cost",
+      "mode"
+    ]
   },
   {
     "id": "revive",
@@ -526,6 +733,7 @@
     "related_entities": [],
     "sources": [
       {
+        "source_id": "steam-full-achievements-page",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
         "label": "Steam community achievements page",
@@ -533,6 +741,7 @@
         "notes": "Public achievement display names and descriptions."
       },
       {
+        "source_id": "achievement-condition-classification",
         "type": "inferred",
         "path_or_url": "local inference from public-source wording",
         "label": "Achievement condition classification",
@@ -542,7 +751,17 @@
     ],
     "verification_status": "Inferred",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
-    "notes": "Name is public; category/effect details may need gameplay or local metadata verification."
+    "notes": "Name is public; category/effect details may need gameplay or local metadata verification.",
+    "verified_fields": [
+      "name",
+      "category"
+    ],
+    "unverified_fields": [
+      "effect",
+      "unlock_method",
+      "cost",
+      "mode"
+    ]
   },
   {
     "id": "shield",
@@ -558,6 +777,7 @@
     "related_entities": [],
     "sources": [
       {
+        "source_id": "steam-full-achievements-page",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
         "label": "Steam community achievements page",
@@ -565,6 +785,7 @@
         "notes": "Public achievement display names and descriptions."
       },
       {
+        "source_id": "achievement-condition-classification",
         "type": "inferred",
         "path_or_url": "local inference from public-source wording",
         "label": "Achievement condition classification",
@@ -574,7 +795,17 @@
     ],
     "verification_status": "Inferred",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
-    "notes": "Name is public; category/effect details may need gameplay or local metadata verification."
+    "notes": "Name is public; category/effect details may need gameplay or local metadata verification.",
+    "verified_fields": [
+      "name",
+      "category"
+    ],
+    "unverified_fields": [
+      "effect",
+      "unlock_method",
+      "cost",
+      "mode"
+    ]
   },
   {
     "id": "skill-banishing",
@@ -590,6 +821,7 @@
     "related_entities": [],
     "sources": [
       {
+        "source_id": "steam-news-devlogs",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
         "label": "Steam community news/devlogs",
@@ -599,7 +831,17 @@
     ],
     "verification_status": "Verified",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
-    "notes": "Exact rarity, cooldown, scaling, and unlock details need gameplay verification."
+    "notes": "Exact rarity, cooldown, scaling, and unlock details need gameplay verification.",
+    "verified_fields": [
+      "name",
+      "category",
+      "effect"
+    ],
+    "unverified_fields": [
+      "unlock_method",
+      "cost",
+      "mode"
+    ]
   },
   {
     "id": "snowball-roll",
@@ -615,6 +857,7 @@
     "related_entities": [],
     "sources": [
       {
+        "source_id": "steam-news-devlogs",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
         "label": "Steam community news/devlogs",
@@ -624,7 +867,17 @@
     ],
     "verification_status": "Verified",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
-    "notes": "Exact rarity, cooldown, scaling, and unlock details need gameplay verification."
+    "notes": "Exact rarity, cooldown, scaling, and unlock details need gameplay verification.",
+    "verified_fields": [
+      "name",
+      "category",
+      "effect"
+    ],
+    "unverified_fields": [
+      "unlock_method",
+      "cost",
+      "mode"
+    ]
   },
   {
     "id": "snowball-volley",
@@ -640,6 +893,7 @@
     "related_entities": [],
     "sources": [
       {
+        "source_id": "steam-news-devlogs",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
         "label": "Steam community news/devlogs",
@@ -649,7 +903,17 @@
     ],
     "verification_status": "Verified",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
-    "notes": "Exact rarity, cooldown, scaling, and unlock details need gameplay verification."
+    "notes": "Exact rarity, cooldown, scaling, and unlock details need gameplay verification.",
+    "verified_fields": [
+      "name",
+      "category",
+      "effect"
+    ],
+    "unverified_fields": [
+      "unlock_method",
+      "cost",
+      "mode"
+    ]
   },
   {
     "id": "spark",
@@ -665,6 +929,7 @@
     "related_entities": [],
     "sources": [
       {
+        "source_id": "steam-full-achievements-page",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
         "label": "Steam community achievements page",
@@ -672,6 +937,7 @@
         "notes": "Public achievement display names and descriptions."
       },
       {
+        "source_id": "achievement-condition-classification",
         "type": "inferred",
         "path_or_url": "local inference from public-source wording",
         "label": "Achievement condition classification",
@@ -681,7 +947,17 @@
     ],
     "verification_status": "Inferred",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
-    "notes": "Name is public; category/effect details may need gameplay or local metadata verification."
+    "notes": "Name is public; category/effect details may need gameplay or local metadata verification.",
+    "verified_fields": [
+      "name",
+      "category"
+    ],
+    "unverified_fields": [
+      "effect",
+      "unlock_method",
+      "cost",
+      "mode"
+    ]
   },
   {
     "id": "stun-infusion",
@@ -697,6 +973,7 @@
     "related_entities": [],
     "sources": [
       {
+        "source_id": "steam-full-achievements-page",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
         "label": "Steam community achievements page",
@@ -704,6 +981,7 @@
         "notes": "Public achievement display names and descriptions."
       },
       {
+        "source_id": "achievement-condition-classification",
         "type": "inferred",
         "path_or_url": "local inference from public-source wording",
         "label": "Achievement condition classification",
@@ -713,7 +991,17 @@
     ],
     "verification_status": "Inferred",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
-    "notes": "Name is public; category/effect details may need gameplay or local metadata verification."
+    "notes": "Name is public; category/effect details may need gameplay or local metadata verification.",
+    "verified_fields": [
+      "name",
+      "category"
+    ],
+    "unverified_fields": [
+      "effect",
+      "unlock_method",
+      "cost",
+      "mode"
+    ]
   },
   {
     "id": "teleport",
@@ -729,6 +1017,7 @@
     "related_entities": [],
     "sources": [
       {
+        "source_id": "steam-full-achievements-page",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
         "label": "Steam community achievements page",
@@ -736,6 +1025,7 @@
         "notes": "Public achievement display names and descriptions."
       },
       {
+        "source_id": "achievement-condition-classification",
         "type": "inferred",
         "path_or_url": "local inference from public-source wording",
         "label": "Achievement condition classification",
@@ -745,7 +1035,17 @@
     ],
     "verification_status": "Inferred",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
-    "notes": "Name is public; category/effect details may need gameplay or local metadata verification."
+    "notes": "Name is public; category/effect details may need gameplay or local metadata verification.",
+    "verified_fields": [
+      "name",
+      "category"
+    ],
+    "unverified_fields": [
+      "effect",
+      "unlock_method",
+      "cost",
+      "mode"
+    ]
   },
   {
     "id": "tongue-attack",
@@ -761,6 +1061,7 @@
     "related_entities": [],
     "sources": [
       {
+        "source_id": "steam-full-achievements-page",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
         "label": "Steam community achievements page",
@@ -768,6 +1069,7 @@
         "notes": "Public achievement display names and descriptions."
       },
       {
+        "source_id": "achievement-condition-classification",
         "type": "inferred",
         "path_or_url": "local inference from public-source wording",
         "label": "Achievement condition classification",
@@ -777,7 +1079,17 @@
     ],
     "verification_status": "Inferred",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
-    "notes": "Name is public; category/effect details may need gameplay or local metadata verification."
+    "notes": "Name is public; category/effect details may need gameplay or local metadata verification.",
+    "verified_fields": [
+      "name",
+      "category"
+    ],
+    "unverified_fields": [
+      "effect",
+      "unlock_method",
+      "cost",
+      "mode"
+    ]
   },
   {
     "id": "vampirism",
@@ -793,6 +1105,7 @@
     "related_entities": [],
     "sources": [
       {
+        "source_id": "steam-full-achievements-page",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
         "label": "Steam community achievements page",
@@ -800,6 +1113,7 @@
         "notes": "Public achievement display names and descriptions."
       },
       {
+        "source_id": "achievement-condition-classification",
         "type": "inferred",
         "path_or_url": "local inference from public-source wording",
         "label": "Achievement condition classification",
@@ -809,7 +1123,17 @@
     ],
     "verification_status": "Inferred",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
-    "notes": "Name is public; category/effect details may need gameplay or local metadata verification."
+    "notes": "Name is public; category/effect details may need gameplay or local metadata verification.",
+    "verified_fields": [
+      "name",
+      "category"
+    ],
+    "unverified_fields": [
+      "effect",
+      "unlock_method",
+      "cost",
+      "mode"
+    ]
   },
   {
     "id": "voodoo-curse",
@@ -825,6 +1149,7 @@
     "related_entities": [],
     "sources": [
       {
+        "source_id": "steam-full-achievements-page",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
         "label": "Steam community achievements page",
@@ -832,6 +1157,7 @@
         "notes": "Public achievement display names and descriptions."
       },
       {
+        "source_id": "achievement-condition-classification",
         "type": "inferred",
         "path_or_url": "local inference from public-source wording",
         "label": "Achievement condition classification",
@@ -841,6 +1167,16 @@
     ],
     "verification_status": "Inferred",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
-    "notes": "Name is public; category/effect details may need gameplay or local metadata verification."
+    "notes": "Name is public; category/effect details may need gameplay or local metadata verification.",
+    "verified_fields": [
+      "name",
+      "category"
+    ],
+    "unverified_fields": [
+      "effect",
+      "unlock_method",
+      "cost",
+      "mode"
+    ]
   }
 ]

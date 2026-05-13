@@ -21,6 +21,8 @@ Official Steam copy says a run can be survived by finding the escape door or def
 | Unlock Method | Needs verification. |
 | Cost | Needs verification. |
 | Mode | Core game and demo. |
+| Verified Fields | name, category, effect, mode |
+| Fields Needing Verification | unlock_method, cost |
 | Last Verified | Public Steam metadata accessed 2026-05-13 |
 | Notes | Boss names and encounter details need verification. |
 
@@ -30,5 +32,5 @@ No related entities listed yet.
 
 ## Sources
 
-- [Steam full-game store page](https://store.steampowered.com/app/3232380/FROGGY_HATES_SNOW/) — public_source, confidence high. Official public Steam store listing.
-- [Steam demo store page](https://store.steampowered.com/app/4037600/FROGGY_HATES_SNOW_Demo/) — public_source, confidence high. Official public Steam demo listing.
+- [Steam full-game store page](https://store.steampowered.com/app/3232380/FROGGY_HATES_SNOW/) — public_source, confidence high, source `steam-full-store`. Official public Steam store listing.
+- [Steam demo store page](https://store.steampowered.com/app/4037600/FROGGY_HATES_SNOW_Demo/) — public_source, confidence high, source `steam-demo-store`. Official public Steam demo listing.

@@ -13,6 +13,7 @@
     "related_entities": [],
     "sources": [
       {
+        "source_id": "steam-full-store",
         "type": "public_source",
         "path_or_url": "https://store.steampowered.com/app/3232380/FROGGY_HATES_SNOW/",
         "label": "Steam full-game store page",
@@ -20,6 +21,7 @@
         "notes": "Official public Steam store listing."
       },
       {
+        "source_id": "steam-demo-store",
         "type": "public_source",
         "path_or_url": "https://store.steampowered.com/app/4037600/FROGGY_HATES_SNOW_Demo/",
         "label": "Steam demo store page",
@@ -27,6 +29,7 @@
         "notes": "Official public Steam demo listing."
       },
       {
+        "source_id": "steam-news-devlogs",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
         "label": "Steam community news/devlogs",
@@ -36,7 +39,17 @@
     ],
     "verification_status": "Verified",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
-    "notes": "Specific stats and unlock details need verification from gameplay or safe local metadata."
+    "notes": "Specific stats and unlock details need verification from gameplay or safe local metadata.",
+    "verified_fields": [
+      "name",
+      "category",
+      "effect",
+      "mode"
+    ],
+    "unverified_fields": [
+      "unlock_method",
+      "cost"
+    ]
   },
   {
     "id": "cart",
@@ -52,6 +65,7 @@
     "related_entities": [],
     "sources": [
       {
+        "source_id": "steam-full-store",
         "type": "public_source",
         "path_or_url": "https://store.steampowered.com/app/3232380/FROGGY_HATES_SNOW/",
         "label": "Steam full-game store page",
@@ -59,6 +73,7 @@
         "notes": "Official public Steam store listing."
       },
       {
+        "source_id": "steam-demo-store",
         "type": "public_source",
         "path_or_url": "https://store.steampowered.com/app/4037600/FROGGY_HATES_SNOW_Demo/",
         "label": "Steam demo store page",
@@ -66,6 +81,7 @@
         "notes": "Official public Steam demo listing."
       },
       {
+        "source_id": "steam-news-devlogs",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
         "label": "Steam community news/devlogs",
@@ -75,7 +91,17 @@
     ],
     "verification_status": "Verified",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
-    "notes": "Specific stats and unlock details need verification from gameplay or safe local metadata."
+    "notes": "Specific stats and unlock details need verification from gameplay or safe local metadata.",
+    "verified_fields": [
+      "name",
+      "category",
+      "effect",
+      "mode"
+    ],
+    "unverified_fields": [
+      "unlock_method",
+      "cost"
+    ]
   },
   {
     "id": "drill",
@@ -91,6 +117,7 @@
     "related_entities": [],
     "sources": [
       {
+        "source_id": "steam-full-store",
         "type": "public_source",
         "path_or_url": "https://store.steampowered.com/app/3232380/FROGGY_HATES_SNOW/",
         "label": "Steam full-game store page",
@@ -98,6 +125,7 @@
         "notes": "Official public Steam store listing."
       },
       {
+        "source_id": "steam-demo-store",
         "type": "public_source",
         "path_or_url": "https://store.steampowered.com/app/4037600/FROGGY_HATES_SNOW_Demo/",
         "label": "Steam demo store page",
@@ -105,6 +133,7 @@
         "notes": "Official public Steam demo listing."
       },
       {
+        "source_id": "steam-news-devlogs",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
         "label": "Steam community news/devlogs",
@@ -114,7 +143,17 @@
     ],
     "verification_status": "Verified",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
-    "notes": "Specific stats and unlock details need verification from gameplay or safe local metadata."
+    "notes": "Specific stats and unlock details need verification from gameplay or safe local metadata.",
+    "verified_fields": [
+      "name",
+      "category",
+      "effect",
+      "mode"
+    ],
+    "unverified_fields": [
+      "unlock_method",
+      "cost"
+    ]
   },
   {
     "id": "dynamite",
@@ -130,6 +169,7 @@
     "related_entities": [],
     "sources": [
       {
+        "source_id": "steam-full-store",
         "type": "public_source",
         "path_or_url": "https://store.steampowered.com/app/3232380/FROGGY_HATES_SNOW/",
         "label": "Steam full-game store page",
@@ -137,6 +177,7 @@
         "notes": "Official public Steam store listing."
       },
       {
+        "source_id": "steam-demo-store",
         "type": "public_source",
         "path_or_url": "https://store.steampowered.com/app/4037600/FROGGY_HATES_SNOW_Demo/",
         "label": "Steam demo store page",
@@ -144,6 +185,7 @@
         "notes": "Official public Steam demo listing."
       },
       {
+        "source_id": "steam-news-devlogs",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
         "label": "Steam community news/devlogs",
@@ -153,7 +195,17 @@
     ],
     "verification_status": "Verified",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
-    "notes": "Specific stats and unlock details need verification from gameplay or safe local metadata."
+    "notes": "Specific stats and unlock details need verification from gameplay or safe local metadata.",
+    "verified_fields": [
+      "name",
+      "category",
+      "effect",
+      "mode"
+    ],
+    "unverified_fields": [
+      "unlock_method",
+      "cost"
+    ]
   },
   {
     "id": "flamethrower",
@@ -169,6 +221,7 @@
     "related_entities": [],
     "sources": [
       {
+        "source_id": "steam-full-store",
         "type": "public_source",
         "path_or_url": "https://store.steampowered.com/app/3232380/FROGGY_HATES_SNOW/",
         "label": "Steam full-game store page",
@@ -176,6 +229,7 @@
         "notes": "Official public Steam store listing."
       },
       {
+        "source_id": "steam-demo-store",
         "type": "public_source",
         "path_or_url": "https://store.steampowered.com/app/4037600/FROGGY_HATES_SNOW_Demo/",
         "label": "Steam demo store page",
@@ -183,6 +237,7 @@
         "notes": "Official public Steam demo listing."
       },
       {
+        "source_id": "steam-news-devlogs",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
         "label": "Steam community news/devlogs",
@@ -192,7 +247,17 @@
     ],
     "verification_status": "Verified",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
-    "notes": "Specific stats and unlock details need verification from gameplay or safe local metadata."
+    "notes": "Specific stats and unlock details need verification from gameplay or safe local metadata.",
+    "verified_fields": [
+      "name",
+      "category",
+      "effect",
+      "mode"
+    ],
+    "unverified_fields": [
+      "unlock_method",
+      "cost"
+    ]
   },
   {
     "id": "gloves",
@@ -208,6 +273,7 @@
     "related_entities": [],
     "sources": [
       {
+        "source_id": "steam-full-achievements-page",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
         "label": "Steam community achievements page",
@@ -215,6 +281,7 @@
         "notes": "Public achievement display names and descriptions."
       },
       {
+        "source_id": "achievement-condition-classification",
         "type": "inferred",
         "path_or_url": "local inference from public-source wording",
         "label": "Achievement condition classification",
@@ -224,7 +291,17 @@
     ],
     "verification_status": "Inferred",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
-    "notes": "Name is public; category/effect details may need gameplay or local metadata verification."
+    "notes": "Name is public; category/effect details may need gameplay or local metadata verification.",
+    "verified_fields": [
+      "name",
+      "category"
+    ],
+    "unverified_fields": [
+      "effect",
+      "unlock_method",
+      "cost",
+      "mode"
+    ]
   },
   {
     "id": "hands",
@@ -240,6 +317,7 @@
     "related_entities": [],
     "sources": [
       {
+        "source_id": "steam-full-store",
         "type": "public_source",
         "path_or_url": "https://store.steampowered.com/app/3232380/FROGGY_HATES_SNOW/",
         "label": "Steam full-game store page",
@@ -247,6 +325,7 @@
         "notes": "Official public Steam store listing."
       },
       {
+        "source_id": "steam-demo-store",
         "type": "public_source",
         "path_or_url": "https://store.steampowered.com/app/4037600/FROGGY_HATES_SNOW_Demo/",
         "label": "Steam demo store page",
@@ -254,6 +333,7 @@
         "notes": "Official public Steam demo listing."
       },
       {
+        "source_id": "steam-news-devlogs",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
         "label": "Steam community news/devlogs",
@@ -263,7 +343,17 @@
     ],
     "verification_status": "Verified",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
-    "notes": "Specific stats and unlock details need verification from gameplay or safe local metadata."
+    "notes": "Specific stats and unlock details need verification from gameplay or safe local metadata.",
+    "verified_fields": [
+      "name",
+      "category",
+      "effect",
+      "mode"
+    ],
+    "unverified_fields": [
+      "unlock_method",
+      "cost"
+    ]
   },
   {
     "id": "heater-sled",
@@ -279,6 +369,7 @@
     "related_entities": [],
     "sources": [
       {
+        "source_id": "steam-full-achievements-page",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
         "label": "Steam community achievements page",
@@ -286,6 +377,7 @@
         "notes": "Public achievement display names and descriptions."
       },
       {
+        "source_id": "achievement-condition-classification",
         "type": "inferred",
         "path_or_url": "local inference from public-source wording",
         "label": "Achievement condition classification",
@@ -295,7 +387,17 @@
     ],
     "verification_status": "Inferred",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
-    "notes": "Name is public; category/effect details may need gameplay or local metadata verification."
+    "notes": "Name is public; category/effect details may need gameplay or local metadata verification.",
+    "verified_fields": [
+      "name",
+      "category"
+    ],
+    "unverified_fields": [
+      "effect",
+      "unlock_method",
+      "cost",
+      "mode"
+    ]
   },
   {
     "id": "locator",
@@ -311,6 +413,7 @@
     "related_entities": [],
     "sources": [
       {
+        "source_id": "steam-full-achievements-page",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
         "label": "Steam community achievements page",
@@ -318,6 +421,7 @@
         "notes": "Public achievement display names and descriptions."
       },
       {
+        "source_id": "achievement-condition-classification",
         "type": "inferred",
         "path_or_url": "local inference from public-source wording",
         "label": "Achievement condition classification",
@@ -327,7 +431,17 @@
     ],
     "verification_status": "Inferred",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
-    "notes": "Name is public; category/effect details may need gameplay or local metadata verification."
+    "notes": "Name is public; category/effect details may need gameplay or local metadata verification.",
+    "verified_fields": [
+      "name",
+      "category"
+    ],
+    "unverified_fields": [
+      "effect",
+      "unlock_method",
+      "cost",
+      "mode"
+    ]
   },
   {
     "id": "map",
@@ -343,6 +457,7 @@
     "related_entities": [],
     "sources": [
       {
+        "source_id": "steam-full-achievements-page",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
         "label": "Steam community achievements page",
@@ -350,6 +465,7 @@
         "notes": "Public achievement display names and descriptions."
       },
       {
+        "source_id": "achievement-condition-classification",
         "type": "inferred",
         "path_or_url": "local inference from public-source wording",
         "label": "Achievement condition classification",
@@ -359,7 +475,17 @@
     ],
     "verification_status": "Inferred",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
-    "notes": "Name is public; category/effect details may need gameplay or local metadata verification."
+    "notes": "Name is public; category/effect details may need gameplay or local metadata verification.",
+    "verified_fields": [
+      "name",
+      "category"
+    ],
+    "unverified_fields": [
+      "effect",
+      "unlock_method",
+      "cost",
+      "mode"
+    ]
   },
   {
     "id": "pickaxe",
@@ -375,6 +501,7 @@
     "related_entities": [],
     "sources": [
       {
+        "source_id": "steam-full-store",
         "type": "public_source",
         "path_or_url": "https://store.steampowered.com/app/3232380/FROGGY_HATES_SNOW/",
         "label": "Steam full-game store page",
@@ -382,6 +509,7 @@
         "notes": "Official public Steam store listing."
       },
       {
+        "source_id": "steam-demo-store",
         "type": "public_source",
         "path_or_url": "https://store.steampowered.com/app/4037600/FROGGY_HATES_SNOW_Demo/",
         "label": "Steam demo store page",
@@ -389,6 +517,7 @@
         "notes": "Official public Steam demo listing."
       },
       {
+        "source_id": "steam-news-devlogs",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
         "label": "Steam community news/devlogs",
@@ -398,7 +527,17 @@
     ],
     "verification_status": "Verified",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
-    "notes": "Specific stats and unlock details need verification from gameplay or safe local metadata."
+    "notes": "Specific stats and unlock details need verification from gameplay or safe local metadata.",
+    "verified_fields": [
+      "name",
+      "category",
+      "effect",
+      "mode"
+    ],
+    "unverified_fields": [
+      "unlock_method",
+      "cost"
+    ]
   },
   {
     "id": "salt-sack",
@@ -414,6 +553,7 @@
     "related_entities": [],
     "sources": [
       {
+        "source_id": "steam-full-store",
         "type": "public_source",
         "path_or_url": "https://store.steampowered.com/app/3232380/FROGGY_HATES_SNOW/",
         "label": "Steam full-game store page",
@@ -421,6 +561,7 @@
         "notes": "Official public Steam store listing."
       },
       {
+        "source_id": "steam-demo-store",
         "type": "public_source",
         "path_or_url": "https://store.steampowered.com/app/4037600/FROGGY_HATES_SNOW_Demo/",
         "label": "Steam demo store page",
@@ -428,6 +569,7 @@
         "notes": "Official public Steam demo listing."
       },
       {
+        "source_id": "steam-news-devlogs",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
         "label": "Steam community news/devlogs",
@@ -437,7 +579,17 @@
     ],
     "verification_status": "Verified",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
-    "notes": "Specific stats and unlock details need verification from gameplay or safe local metadata."
+    "notes": "Specific stats and unlock details need verification from gameplay or safe local metadata.",
+    "verified_fields": [
+      "name",
+      "category",
+      "effect",
+      "mode"
+    ],
+    "unverified_fields": [
+      "unlock_method",
+      "cost"
+    ]
   },
   {
     "id": "scanner",
@@ -453,6 +605,7 @@
     "related_entities": [],
     "sources": [
       {
+        "source_id": "steam-full-achievements-page",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
         "label": "Steam community achievements page",
@@ -460,6 +613,7 @@
         "notes": "Public achievement display names and descriptions."
       },
       {
+        "source_id": "achievement-condition-classification",
         "type": "inferred",
         "path_or_url": "local inference from public-source wording",
         "label": "Achievement condition classification",
@@ -469,7 +623,17 @@
     ],
     "verification_status": "Inferred",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
-    "notes": "Name is public; category/effect details may need gameplay or local metadata verification."
+    "notes": "Name is public; category/effect details may need gameplay or local metadata verification.",
+    "verified_fields": [
+      "name",
+      "category"
+    ],
+    "unverified_fields": [
+      "effect",
+      "unlock_method",
+      "cost",
+      "mode"
+    ]
   },
   {
     "id": "shovel",
@@ -485,6 +649,7 @@
     "related_entities": [],
     "sources": [
       {
+        "source_id": "steam-full-store",
         "type": "public_source",
         "path_or_url": "https://store.steampowered.com/app/3232380/FROGGY_HATES_SNOW/",
         "label": "Steam full-game store page",
@@ -492,6 +657,7 @@
         "notes": "Official public Steam store listing."
       },
       {
+        "source_id": "steam-demo-store",
         "type": "public_source",
         "path_or_url": "https://store.steampowered.com/app/4037600/FROGGY_HATES_SNOW_Demo/",
         "label": "Steam demo store page",
@@ -499,6 +665,7 @@
         "notes": "Official public Steam demo listing."
       },
       {
+        "source_id": "steam-news-devlogs",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
         "label": "Steam community news/devlogs",
@@ -508,7 +675,17 @@
     ],
     "verification_status": "Verified",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
-    "notes": "Specific stats and unlock details need verification from gameplay or safe local metadata."
+    "notes": "Specific stats and unlock details need verification from gameplay or safe local metadata.",
+    "verified_fields": [
+      "name",
+      "category",
+      "effect",
+      "mode"
+    ],
+    "unverified_fields": [
+      "unlock_method",
+      "cost"
+    ]
   },
   {
     "id": "skis",
@@ -524,6 +701,7 @@
     "related_entities": [],
     "sources": [
       {
+        "source_id": "steam-full-store",
         "type": "public_source",
         "path_or_url": "https://store.steampowered.com/app/3232380/FROGGY_HATES_SNOW/",
         "label": "Steam full-game store page",
@@ -531,6 +709,7 @@
         "notes": "Official public Steam store listing."
       },
       {
+        "source_id": "steam-demo-store",
         "type": "public_source",
         "path_or_url": "https://store.steampowered.com/app/4037600/FROGGY_HATES_SNOW_Demo/",
         "label": "Steam demo store page",
@@ -538,6 +717,7 @@
         "notes": "Official public Steam demo listing."
       },
       {
+        "source_id": "steam-news-devlogs",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
         "label": "Steam community news/devlogs",
@@ -547,7 +727,17 @@
     ],
     "verification_status": "Verified",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
-    "notes": "Specific stats and unlock details need verification from gameplay or safe local metadata."
+    "notes": "Specific stats and unlock details need verification from gameplay or safe local metadata.",
+    "verified_fields": [
+      "name",
+      "category",
+      "effect",
+      "mode"
+    ],
+    "unverified_fields": [
+      "unlock_method",
+      "cost"
+    ]
   },
   {
     "id": "snowblower",
@@ -563,6 +753,7 @@
     "related_entities": [],
     "sources": [
       {
+        "source_id": "steam-full-store",
         "type": "public_source",
         "path_or_url": "https://store.steampowered.com/app/3232380/FROGGY_HATES_SNOW/",
         "label": "Steam full-game store page",
@@ -570,6 +761,7 @@
         "notes": "Official public Steam store listing."
       },
       {
+        "source_id": "steam-demo-store",
         "type": "public_source",
         "path_or_url": "https://store.steampowered.com/app/4037600/FROGGY_HATES_SNOW_Demo/",
         "label": "Steam demo store page",
@@ -577,6 +769,7 @@
         "notes": "Official public Steam demo listing."
       },
       {
+        "source_id": "steam-news-devlogs",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
         "label": "Steam community news/devlogs",
@@ -586,6 +779,16 @@
     ],
     "verification_status": "Verified",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
-    "notes": "Specific stats and unlock details need verification from gameplay or safe local metadata."
+    "notes": "Specific stats and unlock details need verification from gameplay or safe local metadata.",
+    "verified_fields": [
+      "name",
+      "category",
+      "effect",
+      "mode"
+    ],
+    "unverified_fields": [
+      "unlock_method",
+      "cost"
+    ]
   }
 ]

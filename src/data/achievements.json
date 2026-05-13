@@ -17,6 +17,7 @@
     ],
     "sources": [
       {
+        "source_id": "steam-full-achievements-page",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
         "label": "Steam community achievements page",
@@ -24,6 +25,7 @@
         "notes": "Public achievement display names and descriptions."
       },
       {
+        "source_id": "steam-full-global-achievement-percentages",
         "type": "public_source",
         "path_or_url": "https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=3232380&format=json",
         "label": "Steam global achievement percentages API",
@@ -34,6 +36,16 @@
     "verification_status": "Verified",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
     "notes": "Global percentage is volatile; refresh before publishing exact percentage-driven claims.",
+    "verified_fields": [
+      "name",
+      "category",
+      "effect",
+      "unlock_method",
+      "mode"
+    ],
+    "unverified_fields": [
+      "cost"
+    ],
     "steam_internal_name": "all_eyes_open",
     "steam_global_percent_api": "0.3",
     "steam_community_percent": "0.3%",
@@ -53,6 +65,7 @@
     "related_entities": [],
     "sources": [
       {
+        "source_id": "steam-full-achievements-page",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
         "label": "Steam community achievements page",
@@ -60,6 +73,7 @@
         "notes": "Public achievement display names and descriptions."
       },
       {
+        "source_id": "steam-full-global-achievement-percentages",
         "type": "public_source",
         "path_or_url": "https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=3232380&format=json",
         "label": "Steam global achievement percentages API",
@@ -70,6 +84,16 @@
     "verification_status": "Verified",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
     "notes": "Global percentage is volatile; refresh before publishing exact percentage-driven claims.",
+    "verified_fields": [
+      "name",
+      "category",
+      "effect",
+      "unlock_method",
+      "mode"
+    ],
+    "unverified_fields": [
+      "cost"
+    ],
     "steam_internal_name": "assemble_the_team_1",
     "steam_global_percent_api": "68.7",
     "steam_community_percent": "68.5%",
@@ -89,6 +113,7 @@
     "related_entities": [],
     "sources": [
       {
+        "source_id": "steam-full-achievements-page",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
         "label": "Steam community achievements page",
@@ -96,6 +121,7 @@
         "notes": "Public achievement display names and descriptions."
       },
       {
+        "source_id": "steam-full-global-achievement-percentages",
         "type": "public_source",
         "path_or_url": "https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=3232380&format=json",
         "label": "Steam global achievement percentages API",
@@ -106,6 +132,16 @@
     "verification_status": "Verified",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
     "notes": "Global percentage is volatile; refresh before publishing exact percentage-driven claims.",
+    "verified_fields": [
+      "name",
+      "category",
+      "effect",
+      "unlock_method",
+      "mode"
+    ],
+    "unverified_fields": [
+      "cost"
+    ],
     "steam_internal_name": "assemble_the_team_2",
     "steam_global_percent_api": "19.3",
     "steam_community_percent": "19.4%",
@@ -125,6 +161,7 @@
     "related_entities": [],
     "sources": [
       {
+        "source_id": "steam-full-achievements-page",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
         "label": "Steam community achievements page",
@@ -132,6 +169,7 @@
         "notes": "Public achievement display names and descriptions."
       },
       {
+        "source_id": "steam-full-global-achievement-percentages",
         "type": "public_source",
         "path_or_url": "https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=3232380&format=json",
         "label": "Steam global achievement percentages API",
@@ -142,6 +180,16 @@
     "verification_status": "Verified",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
     "notes": "Global percentage is volatile; refresh before publishing exact percentage-driven claims.",
+    "verified_fields": [
+      "name",
+      "category",
+      "effect",
+      "unlock_method",
+      "mode"
+    ],
+    "unverified_fields": [
+      "cost"
+    ],
     "steam_internal_name": "assemble_the_team_3",
     "steam_global_percent_api": "0.3",
     "steam_community_percent": "0.3%",
@@ -164,6 +212,7 @@
     ],
     "sources": [
       {
+        "source_id": "steam-full-achievements-page",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
         "label": "Steam community achievements page",
@@ -171,6 +220,7 @@
         "notes": "Public achievement display names and descriptions."
       },
       {
+        "source_id": "steam-full-global-achievement-percentages",
         "type": "public_source",
         "path_or_url": "https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=3232380&format=json",
         "label": "Steam global achievement percentages API",
@@ -181,6 +231,16 @@
     "verification_status": "Verified",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
     "notes": "Global percentage is volatile; refresh before publishing exact percentage-driven claims.",
+    "verified_fields": [
+      "name",
+      "category",
+      "effect",
+      "unlock_method",
+      "mode"
+    ],
+    "unverified_fields": [
+      "cost"
+    ],
     "steam_internal_name": "bending_reality",
     "steam_global_percent_api": "0.7",
     "steam_community_percent": "0.7%",
@@ -203,6 +263,7 @@
     ],
     "sources": [
       {
+        "source_id": "steam-full-achievements-page",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
         "label": "Steam community achievements page",
@@ -210,6 +271,7 @@
         "notes": "Public achievement display names and descriptions."
       },
       {
+        "source_id": "steam-full-global-achievement-percentages",
         "type": "public_source",
         "path_or_url": "https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=3232380&format=json",
         "label": "Steam global achievement percentages API",
@@ -220,6 +282,16 @@
     "verification_status": "Verified",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
     "notes": "Global percentage is volatile; refresh before publishing exact percentage-driven claims.",
+    "verified_fields": [
+      "name",
+      "category",
+      "effect",
+      "unlock_method",
+      "mode"
+    ],
+    "unverified_fields": [
+      "cost"
+    ],
     "steam_internal_name": "burning_through",
     "steam_global_percent_api": "0.2",
     "steam_community_percent": "0.2%",
@@ -242,6 +314,7 @@
     ],
     "sources": [
       {
+        "source_id": "steam-full-achievements-page",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
         "label": "Steam community achievements page",
@@ -249,6 +322,7 @@
         "notes": "Public achievement display names and descriptions."
       },
       {
+        "source_id": "steam-full-global-achievement-percentages",
         "type": "public_source",
         "path_or_url": "https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=3232380&format=json",
         "label": "Steam global achievement percentages API",
@@ -259,6 +333,16 @@
     "verification_status": "Verified",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
     "notes": "Global percentage is volatile; refresh before publishing exact percentage-driven claims.",
+    "verified_fields": [
+      "name",
+      "category",
+      "effect",
+      "unlock_method",
+      "mode"
+    ],
+    "unverified_fields": [
+      "cost"
+    ],
     "steam_internal_name": "caffeinated_chaos",
     "steam_global_percent_api": "0.4",
     "steam_community_percent": "0.4%",
@@ -281,6 +365,7 @@
     ],
     "sources": [
       {
+        "source_id": "steam-full-achievements-page",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
         "label": "Steam community achievements page",
@@ -288,6 +373,7 @@
         "notes": "Public achievement display names and descriptions."
       },
       {
+        "source_id": "steam-full-global-achievement-percentages",
         "type": "public_source",
         "path_or_url": "https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=3232380&format=json",
         "label": "Steam global achievement percentages API",
@@ -298,6 +384,16 @@
     "verification_status": "Verified",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
     "notes": "Global percentage is volatile; refresh before publishing exact percentage-driven claims.",
+    "verified_fields": [
+      "name",
+      "category",
+      "effect",
+      "unlock_method",
+      "mode"
+    ],
+    "unverified_fields": [
+      "cost"
+    ],
     "steam_internal_name": "close_call_energy",
     "steam_global_percent_api": "0.7",
     "steam_community_percent": "0.7%",
@@ -321,6 +417,7 @@
     ],
     "sources": [
       {
+        "source_id": "steam-full-achievements-page",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
         "label": "Steam community achievements page",
@@ -328,6 +425,7 @@
         "notes": "Public achievement display names and descriptions."
       },
       {
+        "source_id": "steam-full-global-achievement-percentages",
         "type": "public_source",
         "path_or_url": "https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=3232380&format=json",
         "label": "Steam global achievement percentages API",
@@ -338,6 +436,16 @@
     "verification_status": "Verified",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
     "notes": "Global percentage is volatile; refresh before publishing exact percentage-driven claims.",
+    "verified_fields": [
+      "name",
+      "category",
+      "effect",
+      "unlock_method",
+      "mode"
+    ],
+    "unverified_fields": [
+      "cost"
+    ],
     "steam_internal_name": "cozy_on_the_go",
     "steam_global_percent_api": "0.1",
     "steam_community_percent": "0.1%",
@@ -360,6 +468,7 @@
     ],
     "sources": [
       {
+        "source_id": "steam-full-achievements-page",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
         "label": "Steam community achievements page",
@@ -367,6 +476,7 @@
         "notes": "Public achievement display names and descriptions."
       },
       {
+        "source_id": "steam-full-global-achievement-percentages",
         "type": "public_source",
         "path_or_url": "https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=3232380&format=json",
         "label": "Steam global achievement percentages API",
@@ -377,6 +487,16 @@
     "verification_status": "Verified",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
     "notes": "Global percentage is volatile; refresh before publishing exact percentage-driven claims.",
+    "verified_fields": [
+      "name",
+      "category",
+      "effect",
+      "unlock_method",
+      "mode"
+    ],
+    "unverified_fields": [
+      "cost"
+    ],
     "steam_internal_name": "cursed_survival",
     "steam_global_percent_api": "3.9",
     "steam_community_percent": "3.9%",
@@ -399,6 +519,7 @@
     ],
     "sources": [
       {
+        "source_id": "steam-full-achievements-page",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
         "label": "Steam community achievements page",
@@ -406,6 +527,7 @@
         "notes": "Public achievement display names and descriptions."
       },
       {
+        "source_id": "steam-full-global-achievement-percentages",
         "type": "public_source",
         "path_or_url": "https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=3232380&format=json",
         "label": "Steam global achievement percentages API",
@@ -416,6 +538,16 @@
     "verification_status": "Verified",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
     "notes": "Global percentage is volatile; refresh before publishing exact percentage-driven claims.",
+    "verified_fields": [
+      "name",
+      "category",
+      "effect",
+      "unlock_method",
+      "mode"
+    ],
+    "unverified_fields": [
+      "cost"
+    ],
     "steam_internal_name": "deadly_dose",
     "steam_global_percent_api": "1.1",
     "steam_community_percent": "1.2%",
@@ -438,6 +570,7 @@
     ],
     "sources": [
       {
+        "source_id": "steam-full-achievements-page",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
         "label": "Steam community achievements page",
@@ -445,6 +578,7 @@
         "notes": "Public achievement display names and descriptions."
       },
       {
+        "source_id": "steam-full-global-achievement-percentages",
         "type": "public_source",
         "path_or_url": "https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=3232380&format=json",
         "label": "Steam global achievement percentages API",
@@ -455,6 +589,16 @@
     "verification_status": "Verified",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
     "notes": "Global percentage is volatile; refresh before publishing exact percentage-driven claims.",
+    "verified_fields": [
+      "name",
+      "category",
+      "effect",
+      "unlock_method",
+      "mode"
+    ],
+    "unverified_fields": [
+      "cost"
+    ],
     "steam_internal_name": "deep_freeze",
     "steam_global_percent_api": "0.1",
     "steam_community_percent": "0.1%",
@@ -478,6 +622,7 @@
     ],
     "sources": [
       {
+        "source_id": "steam-full-achievements-page",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
         "label": "Steam community achievements page",
@@ -485,6 +630,7 @@
         "notes": "Public achievement display names and descriptions."
       },
       {
+        "source_id": "steam-full-global-achievement-percentages",
         "type": "public_source",
         "path_or_url": "https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=3232380&format=json",
         "label": "Steam global achievement percentages API",
@@ -495,6 +641,16 @@
     "verification_status": "Verified",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
     "notes": "Global percentage is volatile; refresh before publishing exact percentage-driven claims.",
+    "verified_fields": [
+      "name",
+      "category",
+      "effect",
+      "unlock_method",
+      "mode"
+    ],
+    "unverified_fields": [
+      "cost"
+    ],
     "steam_internal_name": "demolition_run",
     "steam_global_percent_api": "2.8",
     "steam_community_percent": "2.8%",
@@ -518,6 +674,7 @@
     ],
     "sources": [
       {
+        "source_id": "steam-full-achievements-page",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
         "label": "Steam community achievements page",
@@ -525,6 +682,7 @@
         "notes": "Public achievement display names and descriptions."
       },
       {
+        "source_id": "steam-full-global-achievement-percentages",
         "type": "public_source",
         "path_or_url": "https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=3232380&format=json",
         "label": "Steam global achievement percentages API",
@@ -535,6 +693,16 @@
     "verification_status": "Verified",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
     "notes": "Global percentage is volatile; refresh before publishing exact percentage-driven claims.",
+    "verified_fields": [
+      "name",
+      "category",
+      "effect",
+      "unlock_method",
+      "mode"
+    ],
+    "unverified_fields": [
+      "cost"
+    ],
     "steam_internal_name": "elemental_mayhem",
     "steam_global_percent_api": "0.0",
     "steam_community_percent": "0.1%",
@@ -557,6 +725,7 @@
     ],
     "sources": [
       {
+        "source_id": "steam-full-achievements-page",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
         "label": "Steam community achievements page",
@@ -564,6 +733,7 @@
         "notes": "Public achievement display names and descriptions."
       },
       {
+        "source_id": "steam-full-global-achievement-percentages",
         "type": "public_source",
         "path_or_url": "https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=3232380&format=json",
         "label": "Steam global achievement percentages API",
@@ -574,6 +744,16 @@
     "verification_status": "Verified",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
     "notes": "Global percentage is volatile; refresh before publishing exact percentage-driven claims.",
+    "verified_fields": [
+      "name",
+      "category",
+      "effect",
+      "unlock_method",
+      "mode"
+    ],
+    "unverified_fields": [
+      "cost"
+    ],
     "steam_internal_name": "master_of_the_tongue",
     "steam_global_percent_api": "9.6",
     "steam_community_percent": "9.6%",
@@ -597,6 +777,7 @@
     ],
     "sources": [
       {
+        "source_id": "steam-full-achievements-page",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
         "label": "Steam community achievements page",
@@ -604,6 +785,7 @@
         "notes": "Public achievement display names and descriptions."
       },
       {
+        "source_id": "steam-full-global-achievement-percentages",
         "type": "public_source",
         "path_or_url": "https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=3232380&format=json",
         "label": "Steam global achievement percentages API",
@@ -614,9 +796,19 @@
     "verification_status": "Verified",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
     "notes": "Global percentage is volatile; refresh before publishing exact percentage-driven claims.",
+    "verified_fields": [
+      "name",
+      "category",
+      "effect",
+      "unlock_method",
+      "mode"
+    ],
+    "unverified_fields": [
+      "cost"
+    ],
     "steam_internal_name": "old_school_explorer",
     "steam_global_percent_api": "64.8",
-    "steam_community_percent": "64.7%",
+    "steam_community_percent": "64.5%",
     "icon_url": "https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/3232380/bde329e39e9e27b133ff5d81c290e393e03e78d0.jpg"
   },
   {
@@ -633,6 +825,7 @@
     "related_entities": [],
     "sources": [
       {
+        "source_id": "steam-full-achievements-page",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
         "label": "Steam community achievements page",
@@ -640,6 +833,7 @@
         "notes": "Public achievement display names and descriptions."
       },
       {
+        "source_id": "steam-full-global-achievement-percentages",
         "type": "public_source",
         "path_or_url": "https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=3232380&format=json",
         "label": "Steam global achievement percentages API",
@@ -650,9 +844,19 @@
     "verification_status": "Verified",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
     "notes": "Global percentage is volatile; refresh before publishing exact percentage-driven claims.",
+    "verified_fields": [
+      "name",
+      "category",
+      "effect",
+      "unlock_method",
+      "mode"
+    ],
+    "unverified_fields": [
+      "cost"
+    ],
     "steam_internal_name": "pathfinder_1",
     "steam_global_percent_api": "76.5",
-    "steam_community_percent": "76.3%",
+    "steam_community_percent": "76.1%",
     "icon_url": "https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/3232380/31af8b6e05d7297508a48e6e4150d2f17b53e00e.jpg"
   },
   {
@@ -669,6 +873,7 @@
     "related_entities": [],
     "sources": [
       {
+        "source_id": "steam-full-achievements-page",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
         "label": "Steam community achievements page",
@@ -676,6 +881,7 @@
         "notes": "Public achievement display names and descriptions."
       },
       {
+        "source_id": "steam-full-global-achievement-percentages",
         "type": "public_source",
         "path_or_url": "https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=3232380&format=json",
         "label": "Steam global achievement percentages API",
@@ -686,9 +892,19 @@
     "verification_status": "Verified",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
     "notes": "Global percentage is volatile; refresh before publishing exact percentage-driven claims.",
+    "verified_fields": [
+      "name",
+      "category",
+      "effect",
+      "unlock_method",
+      "mode"
+    ],
+    "unverified_fields": [
+      "cost"
+    ],
     "steam_internal_name": "pathfinder_2",
     "steam_global_percent_api": "13.1",
-    "steam_community_percent": "13.3%",
+    "steam_community_percent": "13.5%",
     "icon_url": "https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/3232380/6df446f0d745aee517a763c851184c518aa63408.jpg"
   },
   {
@@ -705,6 +921,7 @@
     "related_entities": [],
     "sources": [
       {
+        "source_id": "steam-full-achievements-page",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
         "label": "Steam community achievements page",
@@ -712,6 +929,7 @@
         "notes": "Public achievement display names and descriptions."
       },
       {
+        "source_id": "steam-full-global-achievement-percentages",
         "type": "public_source",
         "path_or_url": "https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=3232380&format=json",
         "label": "Steam global achievement percentages API",
@@ -722,6 +940,16 @@
     "verification_status": "Verified",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
     "notes": "Global percentage is volatile; refresh before publishing exact percentage-driven claims.",
+    "verified_fields": [
+      "name",
+      "category",
+      "effect",
+      "unlock_method",
+      "mode"
+    ],
+    "unverified_fields": [
+      "cost"
+    ],
     "steam_internal_name": "pathfinder_3",
     "steam_global_percent_api": "0.4",
     "steam_community_percent": "0.4%",
@@ -741,6 +969,7 @@
     "related_entities": [],
     "sources": [
       {
+        "source_id": "steam-full-achievements-page",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
         "label": "Steam community achievements page",
@@ -748,6 +977,7 @@
         "notes": "Public achievement display names and descriptions."
       },
       {
+        "source_id": "steam-full-global-achievement-percentages",
         "type": "public_source",
         "path_or_url": "https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=3232380&format=json",
         "label": "Steam global achievement percentages API",
@@ -758,9 +988,19 @@
     "verification_status": "Verified",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
     "notes": "Global percentage is volatile; refresh before publishing exact percentage-driven claims.",
+    "verified_fields": [
+      "name",
+      "category",
+      "effect",
+      "unlock_method",
+      "mode"
+    ],
+    "unverified_fields": [
+      "cost"
+    ],
     "steam_internal_name": "peak_performance_1",
     "steam_global_percent_api": "22.0",
-    "steam_community_percent": "22.0%",
+    "steam_community_percent": "22.1%",
     "icon_url": "https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/3232380/b3f991fc4e86534db8723a2d25ad66dd9ac13583.jpg"
   },
   {
@@ -777,6 +1017,7 @@
     "related_entities": [],
     "sources": [
       {
+        "source_id": "steam-full-achievements-page",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
         "label": "Steam community achievements page",
@@ -784,6 +1025,7 @@
         "notes": "Public achievement display names and descriptions."
       },
       {
+        "source_id": "steam-full-global-achievement-percentages",
         "type": "public_source",
         "path_or_url": "https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=3232380&format=json",
         "label": "Steam global achievement percentages API",
@@ -794,6 +1036,16 @@
     "verification_status": "Verified",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
     "notes": "Global percentage is volatile; refresh before publishing exact percentage-driven claims.",
+    "verified_fields": [
+      "name",
+      "category",
+      "effect",
+      "unlock_method",
+      "mode"
+    ],
+    "unverified_fields": [
+      "cost"
+    ],
     "steam_internal_name": "peak_performance_2",
     "steam_global_percent_api": "0.8",
     "steam_community_percent": "0.8%",
@@ -813,6 +1065,7 @@
     "related_entities": [],
     "sources": [
       {
+        "source_id": "steam-full-achievements-page",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
         "label": "Steam community achievements page",
@@ -820,6 +1073,7 @@
         "notes": "Public achievement display names and descriptions."
       },
       {
+        "source_id": "steam-full-global-achievement-percentages",
         "type": "public_source",
         "path_or_url": "https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=3232380&format=json",
         "label": "Steam global achievement percentages API",
@@ -830,6 +1084,16 @@
     "verification_status": "Verified",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
     "notes": "Global percentage is volatile; refresh before publishing exact percentage-driven claims.",
+    "verified_fields": [
+      "name",
+      "category",
+      "effect",
+      "unlock_method",
+      "mode"
+    ],
+    "unverified_fields": [
+      "cost"
+    ],
     "steam_internal_name": "peak_performance_3",
     "steam_global_percent_api": "0.0",
     "steam_community_percent": "0.1%",
@@ -849,6 +1113,7 @@
     "related_entities": [],
     "sources": [
       {
+        "source_id": "steam-full-achievements-page",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
         "label": "Steam community achievements page",
@@ -856,6 +1121,7 @@
         "notes": "Public achievement display names and descriptions."
       },
       {
+        "source_id": "steam-full-global-achievement-percentages",
         "type": "public_source",
         "path_or_url": "https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=3232380&format=json",
         "label": "Steam global achievement percentages API",
@@ -866,9 +1132,19 @@
     "verification_status": "Verified",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
     "notes": "Global percentage is volatile; refresh before publishing exact percentage-driven claims.",
+    "verified_fields": [
+      "name",
+      "category",
+      "effect",
+      "unlock_method",
+      "mode"
+    ],
+    "unverified_fields": [
+      "cost"
+    ],
     "steam_internal_name": "power_hungry_1",
     "steam_global_percent_api": "86.4",
-    "steam_community_percent": "86.1%",
+    "steam_community_percent": "85.8%",
     "icon_url": "https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/3232380/96da977920e03d5fbd67c8bc03773312cc532365.jpg"
   },
   {
@@ -885,6 +1161,7 @@
     "related_entities": [],
     "sources": [
       {
+        "source_id": "steam-full-achievements-page",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
         "label": "Steam community achievements page",
@@ -892,6 +1169,7 @@
         "notes": "Public achievement display names and descriptions."
       },
       {
+        "source_id": "steam-full-global-achievement-percentages",
         "type": "public_source",
         "path_or_url": "https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=3232380&format=json",
         "label": "Steam global achievement percentages API",
@@ -902,9 +1180,19 @@
     "verification_status": "Verified",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
     "notes": "Global percentage is volatile; refresh before publishing exact percentage-driven claims.",
+    "verified_fields": [
+      "name",
+      "category",
+      "effect",
+      "unlock_method",
+      "mode"
+    ],
+    "unverified_fields": [
+      "cost"
+    ],
     "steam_internal_name": "power_hungry_2",
     "steam_global_percent_api": "64.6",
-    "steam_community_percent": "64.4%",
+    "steam_community_percent": "64.3%",
     "icon_url": "https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/3232380/72db0c5f030a54daa0e77598fa24e82fedc6f20d.jpg"
   },
   {
@@ -921,6 +1209,7 @@
     "related_entities": [],
     "sources": [
       {
+        "source_id": "steam-full-achievements-page",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
         "label": "Steam community achievements page",
@@ -928,6 +1217,7 @@
         "notes": "Public achievement display names and descriptions."
       },
       {
+        "source_id": "steam-full-global-achievement-percentages",
         "type": "public_source",
         "path_or_url": "https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=3232380&format=json",
         "label": "Steam global achievement percentages API",
@@ -938,9 +1228,19 @@
     "verification_status": "Verified",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
     "notes": "Global percentage is volatile; refresh before publishing exact percentage-driven claims.",
+    "verified_fields": [
+      "name",
+      "category",
+      "effect",
+      "unlock_method",
+      "mode"
+    ],
+    "unverified_fields": [
+      "cost"
+    ],
     "steam_internal_name": "power_hungry_3",
     "steam_global_percent_api": "45.4",
-    "steam_community_percent": "45.2%",
+    "steam_community_percent": "45.0%",
     "icon_url": "https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/3232380/958b2564a92ff6fa29076c35c9163a5df9a94e8b.jpg"
   },
   {
@@ -957,6 +1257,7 @@
     "related_entities": [],
     "sources": [
       {
+        "source_id": "steam-full-achievements-page",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
         "label": "Steam community achievements page",
@@ -964,6 +1265,7 @@
         "notes": "Public achievement display names and descriptions."
       },
       {
+        "source_id": "steam-full-global-achievement-percentages",
         "type": "public_source",
         "path_or_url": "https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=3232380&format=json",
         "label": "Steam global achievement percentages API",
@@ -974,9 +1276,19 @@
     "verification_status": "Verified",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
     "notes": "Global percentage is volatile; refresh before publishing exact percentage-driven claims.",
+    "verified_fields": [
+      "name",
+      "category",
+      "effect",
+      "unlock_method",
+      "mode"
+    ],
+    "unverified_fields": [
+      "cost"
+    ],
     "steam_internal_name": "power_hungry_4",
     "steam_global_percent_api": "16.0",
-    "steam_community_percent": "16.0%",
+    "steam_community_percent": "15.9%",
     "icon_url": "https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/3232380/42099f9e33e311a52976bbe3dcee92b85dba6d5c.jpg"
   },
   {
@@ -993,6 +1305,7 @@
     "related_entities": [],
     "sources": [
       {
+        "source_id": "steam-full-achievements-page",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
         "label": "Steam community achievements page",
@@ -1000,6 +1313,7 @@
         "notes": "Public achievement display names and descriptions."
       },
       {
+        "source_id": "steam-full-global-achievement-percentages",
         "type": "public_source",
         "path_or_url": "https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=3232380&format=json",
         "label": "Steam global achievement percentages API",
@@ -1010,6 +1324,16 @@
     "verification_status": "Verified",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
     "notes": "Global percentage is volatile; refresh before publishing exact percentage-driven claims.",
+    "verified_fields": [
+      "name",
+      "category",
+      "effect",
+      "unlock_method",
+      "mode"
+    ],
+    "unverified_fields": [
+      "cost"
+    ],
     "steam_internal_name": "power_hungry_5",
     "steam_global_percent_api": "3.9",
     "steam_community_percent": "4.0%",
@@ -1029,6 +1353,7 @@
     "related_entities": [],
     "sources": [
       {
+        "source_id": "steam-full-achievements-page",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
         "label": "Steam community achievements page",
@@ -1036,6 +1361,7 @@
         "notes": "Public achievement display names and descriptions."
       },
       {
+        "source_id": "steam-full-global-achievement-percentages",
         "type": "public_source",
         "path_or_url": "https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=3232380&format=json",
         "label": "Steam global achievement percentages API",
@@ -1046,9 +1372,19 @@
     "verification_status": "Verified",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
     "notes": "Global percentage is volatile; refresh before publishing exact percentage-driven claims.",
+    "verified_fields": [
+      "name",
+      "category",
+      "effect",
+      "unlock_method",
+      "mode"
+    ],
+    "unverified_fields": [
+      "cost"
+    ],
     "steam_internal_name": "relic_hunter_1",
     "steam_global_percent_api": "85.4",
-    "steam_community_percent": "85.1%",
+    "steam_community_percent": "84.8%",
     "icon_url": "https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/3232380/3f175040ca91ea04fcde8eb34bb14b2733e9d46c.jpg"
   },
   {
@@ -1065,6 +1401,7 @@
     "related_entities": [],
     "sources": [
       {
+        "source_id": "steam-full-achievements-page",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
         "label": "Steam community achievements page",
@@ -1072,6 +1409,7 @@
         "notes": "Public achievement display names and descriptions."
       },
       {
+        "source_id": "steam-full-global-achievement-percentages",
         "type": "public_source",
         "path_or_url": "https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=3232380&format=json",
         "label": "Steam global achievement percentages API",
@@ -1082,9 +1420,19 @@
     "verification_status": "Verified",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
     "notes": "Global percentage is volatile; refresh before publishing exact percentage-driven claims.",
+    "verified_fields": [
+      "name",
+      "category",
+      "effect",
+      "unlock_method",
+      "mode"
+    ],
+    "unverified_fields": [
+      "cost"
+    ],
     "steam_internal_name": "relic_hunter_2",
     "steam_global_percent_api": "68.1",
-    "steam_community_percent": "68.0%",
+    "steam_community_percent": "67.9%",
     "icon_url": "https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/3232380/b204cfb2d1e5a4a6b3b417beeb4d2759df4dbd07.jpg"
   },
   {
@@ -1101,6 +1449,7 @@
     "related_entities": [],
     "sources": [
       {
+        "source_id": "steam-full-achievements-page",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
         "label": "Steam community achievements page",
@@ -1108,6 +1457,7 @@
         "notes": "Public achievement display names and descriptions."
       },
       {
+        "source_id": "steam-full-global-achievement-percentages",
         "type": "public_source",
         "path_or_url": "https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=3232380&format=json",
         "label": "Steam global achievement percentages API",
@@ -1118,9 +1468,19 @@
     "verification_status": "Verified",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
     "notes": "Global percentage is volatile; refresh before publishing exact percentage-driven claims.",
+    "verified_fields": [
+      "name",
+      "category",
+      "effect",
+      "unlock_method",
+      "mode"
+    ],
+    "unverified_fields": [
+      "cost"
+    ],
     "steam_internal_name": "relic_hunter_3",
     "steam_global_percent_api": "49.3",
-    "steam_community_percent": "49.3%",
+    "steam_community_percent": "49.2%",
     "icon_url": "https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/3232380/3345ad2a1fa71647051e1a10929b06e6cf883e43.jpg"
   },
   {
@@ -1137,6 +1497,7 @@
     "related_entities": [],
     "sources": [
       {
+        "source_id": "steam-full-achievements-page",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
         "label": "Steam community achievements page",
@@ -1144,6 +1505,7 @@
         "notes": "Public achievement display names and descriptions."
       },
       {
+        "source_id": "steam-full-global-achievement-percentages",
         "type": "public_source",
         "path_or_url": "https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=3232380&format=json",
         "label": "Steam global achievement percentages API",
@@ -1154,6 +1516,16 @@
     "verification_status": "Verified",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
     "notes": "Global percentage is volatile; refresh before publishing exact percentage-driven claims.",
+    "verified_fields": [
+      "name",
+      "category",
+      "effect",
+      "unlock_method",
+      "mode"
+    ],
+    "unverified_fields": [
+      "cost"
+    ],
     "steam_internal_name": "relic_hunter_4",
     "steam_global_percent_api": "20.3",
     "steam_community_percent": "20.3%",
@@ -1173,6 +1545,7 @@
     "related_entities": [],
     "sources": [
       {
+        "source_id": "steam-full-achievements-page",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
         "label": "Steam community achievements page",
@@ -1180,6 +1553,7 @@
         "notes": "Public achievement display names and descriptions."
       },
       {
+        "source_id": "steam-full-global-achievement-percentages",
         "type": "public_source",
         "path_or_url": "https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=3232380&format=json",
         "label": "Steam global achievement percentages API",
@@ -1190,9 +1564,19 @@
     "verification_status": "Verified",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
     "notes": "Global percentage is volatile; refresh before publishing exact percentage-driven claims.",
+    "verified_fields": [
+      "name",
+      "category",
+      "effect",
+      "unlock_method",
+      "mode"
+    ],
+    "unverified_fields": [
+      "cost"
+    ],
     "steam_internal_name": "relic_hunter_5",
     "steam_global_percent_api": "3.2",
-    "steam_community_percent": "3.3%",
+    "steam_community_percent": "3.2%",
     "icon_url": "https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/3232380/fe90f6eba47d52644159a134195466547a6e71e1.jpg"
   },
   {
@@ -1212,6 +1596,7 @@
     ],
     "sources": [
       {
+        "source_id": "steam-full-achievements-page",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
         "label": "Steam community achievements page",
@@ -1219,6 +1604,7 @@
         "notes": "Public achievement display names and descriptions."
       },
       {
+        "source_id": "steam-full-global-achievement-percentages",
         "type": "public_source",
         "path_or_url": "https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=3232380&format=json",
         "label": "Steam global achievement percentages API",
@@ -1229,6 +1615,16 @@
     "verification_status": "Verified",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
     "notes": "Global percentage is volatile; refresh before publishing exact percentage-driven claims.",
+    "verified_fields": [
+      "name",
+      "category",
+      "effect",
+      "unlock_method",
+      "mode"
+    ],
+    "unverified_fields": [
+      "cost"
+    ],
     "steam_internal_name": "seeing_stars",
     "steam_global_percent_api": "0.1",
     "steam_community_percent": "0.1%",
@@ -1251,6 +1647,7 @@
     ],
     "sources": [
       {
+        "source_id": "steam-full-achievements-page",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
         "label": "Steam community achievements page",
@@ -1258,6 +1655,7 @@
         "notes": "Public achievement display names and descriptions."
       },
       {
+        "source_id": "steam-full-global-achievement-percentages",
         "type": "public_source",
         "path_or_url": "https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=3232380&format=json",
         "label": "Steam global achievement percentages API",
@@ -1268,6 +1666,16 @@
     "verification_status": "Verified",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
     "notes": "Global percentage is volatile; refresh before publishing exact percentage-driven claims.",
+    "verified_fields": [
+      "name",
+      "category",
+      "effect",
+      "unlock_method",
+      "mode"
+    ],
+    "unverified_fields": [
+      "cost"
+    ],
     "steam_internal_name": "shock_therapy",
     "steam_global_percent_api": "0.0",
     "steam_community_percent": "0.1%",
@@ -1291,6 +1699,7 @@
     ],
     "sources": [
       {
+        "source_id": "steam-full-achievements-page",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
         "label": "Steam community achievements page",
@@ -1298,6 +1707,7 @@
         "notes": "Public achievement display names and descriptions."
       },
       {
+        "source_id": "steam-full-global-achievement-percentages",
         "type": "public_source",
         "path_or_url": "https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=3232380&format=json",
         "label": "Steam global achievement percentages API",
@@ -1308,6 +1718,16 @@
     "verification_status": "Verified",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
     "notes": "Global percentage is volatile; refresh before publishing exact percentage-driven claims.",
+    "verified_fields": [
+      "name",
+      "category",
+      "effect",
+      "unlock_method",
+      "mode"
+    ],
+    "unverified_fields": [
+      "cost"
+    ],
     "steam_internal_name": "snow_day_arsenal",
     "steam_global_percent_api": "0.0",
     "steam_community_percent": "0.1%",
@@ -1327,6 +1747,7 @@
     "related_entities": [],
     "sources": [
       {
+        "source_id": "steam-full-achievements-page",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
         "label": "Steam community achievements page",
@@ -1334,6 +1755,7 @@
         "notes": "Public achievement display names and descriptions."
       },
       {
+        "source_id": "steam-full-global-achievement-percentages",
         "type": "public_source",
         "path_or_url": "https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=3232380&format=json",
         "label": "Steam global achievement percentages API",
@@ -1344,9 +1766,19 @@
     "verification_status": "Verified",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
     "notes": "Global percentage is volatile; refresh before publishing exact percentage-driven claims.",
+    "verified_fields": [
+      "name",
+      "category",
+      "effect",
+      "unlock_method",
+      "mode"
+    ],
+    "unverified_fields": [
+      "cost"
+    ],
     "steam_internal_name": "snow_master_1",
     "steam_global_percent_api": "67.3",
-    "steam_community_percent": "67.2%",
+    "steam_community_percent": "67.3%",
     "icon_url": "https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/3232380/89a9a76e8bd8eaf084e968b40dd935fa7dd4a81d.jpg"
   },
   {
@@ -1363,6 +1795,7 @@
     "related_entities": [],
     "sources": [
       {
+        "source_id": "steam-full-achievements-page",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
         "label": "Steam community achievements page",
@@ -1370,6 +1803,7 @@
         "notes": "Public achievement display names and descriptions."
       },
       {
+        "source_id": "steam-full-global-achievement-percentages",
         "type": "public_source",
         "path_or_url": "https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=3232380&format=json",
         "label": "Steam global achievement percentages API",
@@ -1380,9 +1814,19 @@
     "verification_status": "Verified",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
     "notes": "Global percentage is volatile; refresh before publishing exact percentage-driven claims.",
+    "verified_fields": [
+      "name",
+      "category",
+      "effect",
+      "unlock_method",
+      "mode"
+    ],
+    "unverified_fields": [
+      "cost"
+    ],
     "steam_internal_name": "snow_master_2",
     "steam_global_percent_api": "14.3",
-    "steam_community_percent": "14.4%",
+    "steam_community_percent": "14.5%",
     "icon_url": "https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/3232380/067fe6301f3c88d490d13b3c170ed2b8f45d49de.jpg"
   },
   {
@@ -1399,6 +1843,7 @@
     "related_entities": [],
     "sources": [
       {
+        "source_id": "steam-full-achievements-page",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
         "label": "Steam community achievements page",
@@ -1406,6 +1851,7 @@
         "notes": "Public achievement display names and descriptions."
       },
       {
+        "source_id": "steam-full-global-achievement-percentages",
         "type": "public_source",
         "path_or_url": "https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=3232380&format=json",
         "label": "Steam global achievement percentages API",
@@ -1416,6 +1862,16 @@
     "verification_status": "Verified",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
     "notes": "Global percentage is volatile; refresh before publishing exact percentage-driven claims.",
+    "verified_fields": [
+      "name",
+      "category",
+      "effect",
+      "unlock_method",
+      "mode"
+    ],
+    "unverified_fields": [
+      "cost"
+    ],
     "steam_internal_name": "snow_master_3",
     "steam_global_percent_api": "0.3",
     "steam_community_percent": "0.3%",
@@ -1438,6 +1894,7 @@
     ],
     "sources": [
       {
+        "source_id": "steam-full-achievements-page",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
         "label": "Steam community achievements page",
@@ -1445,6 +1902,7 @@
         "notes": "Public achievement display names and descriptions."
       },
       {
+        "source_id": "steam-full-global-achievement-percentages",
         "type": "public_source",
         "path_or_url": "https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=3232380&format=json",
         "label": "Steam global achievement percentages API",
@@ -1455,6 +1913,16 @@
     "verification_status": "Verified",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
     "notes": "Global percentage is volatile; refresh before publishing exact percentage-driven claims.",
+    "verified_fields": [
+      "name",
+      "category",
+      "effect",
+      "unlock_method",
+      "mode"
+    ],
+    "unverified_fields": [
+      "cost"
+    ],
     "steam_internal_name": "still_standing",
     "steam_global_percent_api": "2.2",
     "steam_community_percent": "2.2%",
@@ -1478,6 +1946,7 @@
     ],
     "sources": [
       {
+        "source_id": "steam-full-achievements-page",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
         "label": "Steam community achievements page",
@@ -1485,6 +1954,7 @@
         "notes": "Public achievement display names and descriptions."
       },
       {
+        "source_id": "steam-full-global-achievement-percentages",
         "type": "public_source",
         "path_or_url": "https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=3232380&format=json",
         "label": "Steam global achievement percentages API",
@@ -1495,6 +1965,16 @@
     "verification_status": "Verified",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
     "notes": "Global percentage is volatile; refresh before publishing exact percentage-driven claims.",
+    "verified_fields": [
+      "name",
+      "category",
+      "effect",
+      "unlock_method",
+      "mode"
+    ],
+    "unverified_fields": [
+      "cost"
+    ],
     "steam_internal_name": "the_animal_squad",
     "steam_global_percent_api": "2.0",
     "steam_community_percent": "2.0%",
@@ -1517,6 +1997,7 @@
     ],
     "sources": [
       {
+        "source_id": "steam-full-achievements-page",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
         "label": "Steam community achievements page",
@@ -1524,6 +2005,7 @@
         "notes": "Public achievement display names and descriptions."
       },
       {
+        "source_id": "steam-full-global-achievement-percentages",
         "type": "public_source",
         "path_or_url": "https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=3232380&format=json",
         "label": "Steam global achievement percentages API",
@@ -1534,6 +2016,16 @@
     "verification_status": "Verified",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
     "notes": "Global percentage is volatile; refresh before publishing exact percentage-driven claims.",
+    "verified_fields": [
+      "name",
+      "category",
+      "effect",
+      "unlock_method",
+      "mode"
+    ],
+    "unverified_fields": [
+      "cost"
+    ],
     "steam_internal_name": "thermal_shock",
     "steam_global_percent_api": "2.0",
     "steam_community_percent": "2.0%",
@@ -1556,6 +2048,7 @@
     ],
     "sources": [
       {
+        "source_id": "steam-full-achievements-page",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
         "label": "Steam community achievements page",
@@ -1563,6 +2056,7 @@
         "notes": "Public achievement display names and descriptions."
       },
       {
+        "source_id": "steam-full-global-achievement-percentages",
         "type": "public_source",
         "path_or_url": "https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=3232380&format=json",
         "label": "Steam global achievement percentages API",
@@ -1573,6 +2067,16 @@
     "verification_status": "Verified",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
     "notes": "Global percentage is volatile; refresh before publishing exact percentage-driven claims.",
+    "verified_fields": [
+      "name",
+      "category",
+      "effect",
+      "unlock_method",
+      "mode"
+    ],
+    "unverified_fields": [
+      "cost"
+    ],
     "steam_internal_name": "walking_through_hell",
     "steam_global_percent_api": "0.1",
     "steam_community_percent": "0.1%",

@@ -1,6 +1,7 @@
 [
   {
     "id": "steam-full-store",
+    "source_id": "steam-full-store",
     "type": "public_source",
     "path_or_url": "https://store.steampowered.com/app/3232380/FROGGY_HATES_SNOW/",
     "label": "Steam full-game store page",
@@ -9,6 +10,7 @@
   },
   {
     "id": "steam-demo-store",
+    "source_id": "steam-demo-store",
     "type": "public_source",
     "path_or_url": "https://store.steampowered.com/app/4037600/FROGGY_HATES_SNOW_Demo/",
     "label": "Steam demo store page",
@@ -17,6 +19,7 @@
   },
   {
     "id": "steam-full-appdetails",
+    "source_id": "steam-full-appdetails",
     "type": "public_source",
     "path_or_url": "https://store.steampowered.com/api/appdetails?appids=3232380&cc=us&l=english",
     "label": "Steam full-game appdetails API",
@@ -25,6 +28,7 @@
   },
   {
     "id": "steam-demo-appdetails",
+    "source_id": "steam-demo-appdetails",
     "type": "public_source",
     "path_or_url": "https://store.steampowered.com/api/appdetails?appids=4037600&cc=us&l=english",
     "label": "Steam demo appdetails API",
@@ -33,6 +37,7 @@
   },
   {
     "id": "steam-full-achievements-page",
+    "source_id": "steam-full-achievements-page",
     "type": "public_source",
     "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
     "label": "Steam community achievements page",
@@ -41,6 +46,7 @@
   },
   {
     "id": "steam-full-global-achievement-percentages",
+    "source_id": "steam-full-global-achievement-percentages",
     "type": "public_source",
     "path_or_url": "https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=3232380&format=json",
     "label": "Steam global achievement percentages API",
@@ -49,6 +55,7 @@
   },
   {
     "id": "steam-news-devlogs",
+    "source_id": "steam-news-devlogs",
     "type": "public_source",
     "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
     "label": "Steam community news/devlogs",
@@ -56,47 +63,17 @@
     "notes": "Official public Steam news/devlog stream used for launch counts, named mechanics, named skills/tools/companions, update notes, and system descriptions."
   },
   {
-    "id": "steam-release-date-news",
+    "id": "steam-news-api",
+    "source_id": "steam-news-api",
     "type": "public_source",
-    "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
-    "label": "Steam release-date news post",
+    "path_or_url": "https://api.steampowered.com/ISteamNews/GetNewsForApp/v0002/?appid=3232380&count=20&maxlength=50000&format=json",
+    "label": "Steam News API",
     "confidence": "high",
-    "notes": "All-news page includes the public launch-count post: 10 playable frogs, 16 locations, 60+ skills/tools/attacks/companions, and demo progress carryover."
-  },
-  {
-    "id": "steam-launch-devlog",
-    "type": "public_source",
-    "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
-    "label": "Steam launch devlog",
-    "confidence": "high",
-    "notes": "All-news page includes launch additions such as movement skills, robotic helpers, projectile skills, character leveling, artifact upgrades, status effects, roll upgrades, and skill banishing."
-  },
-  {
-    "id": "steam-anomalous-zones-devlog",
-    "type": "public_source",
-    "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
-    "label": "Steam anomalous zones devlog",
-    "confidence": "high",
-    "notes": "All-news page includes anomalous-zone challenge types, hazards, Blue Gems, artifacts, and artifact rarity tiers."
-  },
-  {
-    "id": "steam-snow-devlog",
-    "type": "public_source",
-    "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
-    "label": "Steam snow systems devlog",
-    "confidence": "high",
-    "notes": "All-news page includes snow heightmap behavior, snow density/layers, and named snow or ice tools."
-  },
-  {
-    "id": "steam-post-launch-update",
-    "type": "public_source",
-    "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
-    "label": "Steam first post-launch update",
-    "confidence": "high",
-    "notes": "All-news page includes first update changes for readability, boss projectile speed, projectile defense skills, Zippy, early unlocks, location progression, and UI scale."
+    "notes": "Public Steam News API used to map individual news/devlog posts to direct source records."
   },
   {
     "id": "steam-full-review-summary",
+    "source_id": "steam-full-review-summary",
     "type": "public_source",
     "path_or_url": "https://store.steampowered.com/appreviews/3232380?json=1&language=all&filter=summary&purchase_type=all&num_per_page=0",
     "label": "Steam full-game review summary API",
@@ -105,6 +82,7 @@
   },
   {
     "id": "steam-demo-review-summary",
+    "source_id": "steam-demo-review-summary",
     "type": "public_source",
     "path_or_url": "https://store.steampowered.com/appreviews/4037600?json=1&language=all&filter=summary&purchase_type=all&num_per_page=0",
     "label": "Steam demo review summary API",
@@ -113,6 +91,7 @@
   },
   {
     "id": "steamdb-full",
+    "source_id": "steamdb-full",
     "type": "public_source",
     "path_or_url": "https://steamdb.info/app/3232380/",
     "label": "SteamDB full-game page",
@@ -121,6 +100,7 @@
   },
   {
     "id": "steamdb-demo",
+    "source_id": "steamdb-demo",
     "type": "public_source",
     "path_or_url": "https://steamdb.info/app/4037600/",
     "label": "SteamDB demo page",
@@ -129,6 +109,7 @@
   },
   {
     "id": "digital-bandidos-page",
+    "source_id": "digital-bandidos-page",
     "type": "public_source",
     "path_or_url": "https://digitalbandidos.com/games/froggy-hates-snow/",
     "label": "Digital Bandidos game page",
@@ -136,7 +117,26 @@
     "notes": "Publisher page for platforms, price, genre, and one-player listing."
   },
   {
+    "id": "xbox-wire-interview",
+    "source_id": "xbox-wire-interview",
+    "type": "public_source",
+    "path_or_url": "https://news.xbox.com/en-us/2026/05/05/froggy-hates-snow-interview/",
+    "label": "Xbox Wire developer interview",
+    "confidence": "medium",
+    "notes": "Public developer interview covering solo developer context, launch scope counts, snow technology, skill/tool variety, companions, and Peaceful Mode."
+  },
+  {
+    "id": "achievement-condition-classification",
+    "source_id": "achievement-condition-classification",
+    "type": "inferred",
+    "path_or_url": "local inference from public-source wording",
+    "label": "Achievement condition classification",
+    "confidence": "medium",
+    "notes": "Local classification of public achievement loadout names into wiki categories; exact in-game type and effect still need gameplay or safe metadata verification."
+  },
+  {
     "id": "steam-full-appdetails-summary",
+    "source_id": "steam-full-appdetails-summary",
     "type": "public_source",
     "path_or_url": "https://store.steampowered.com/api/appdetails?appids=3232380&cc=us&l=english",
     "label": "Steam full-game appdetails summary",
@@ -145,10 +145,101 @@
   },
   {
     "id": "steam-demo-appdetails-summary",
+    "source_id": "steam-demo-appdetails-summary",
     "type": "public_source",
     "path_or_url": "https://store.steampowered.com/api/appdetails?appids=4037600&cc=us&l=english",
     "label": "Steam demo appdetails summary",
     "confidence": "high",
     "notes": "Summarized facts: type=demo, name=FROGGY HATES SNOW Demo, fullgame={\"appid\":\"3232380\",\"name\":\"FROGGY HATES SNOW\"}, release={\"coming_soon\":false,\"date\":\"Sep 24, 2025\"}, platforms={\"windows\":true,\"mac\":false,\"linux\":false}."
+  },
+  {
+    "id": "steam-post-launch-update",
+    "source_id": "steam-post-launch-update",
+    "type": "public_source",
+    "path_or_url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1832065502824701",
+    "label": "Thank You for an Incredible Launch — First Update and What Comes Next",
+    "confidence": "high",
+    "notes": "2026-05-12: First post-launch update with Zippy, projectile-defense skills, early unlock/progression adjustments, Night Mode visibility, and UI scale changes."
+  },
+  {
+    "id": "steam-launch-news",
+    "source_id": "steam-launch-news",
+    "type": "public_source",
+    "path_or_url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1832065502812843",
+    "label": "Froggy Hates Snow is out now!",
+    "confidence": "high",
+    "notes": "2026-05-07: Launch announcement for the released full game."
+  },
+  {
+    "id": "steam-launch-devlog",
+    "source_id": "steam-launch-devlog",
+    "type": "public_source",
+    "path_or_url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1831432155577514",
+    "label": "Devlog #7: What's New For Launch?",
+    "confidence": "high",
+    "notes": "2026-05-04: Launch devlog naming movement skills, projectile skills, robotic helpers, status effects, and skill-management systems."
+  },
+  {
+    "id": "steam-anomalous-zones-devlog",
+    "source_id": "steam-anomalous-zones-devlog",
+    "type": "public_source",
+    "path_or_url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1831432155565119",
+    "label": "Devlog #6: Introduction to Anomalous Zones",
+    "confidence": "high",
+    "notes": "2026-04-29: Anomalous-zone devlog with challenge examples, hazards, Blue Gems, artifacts, and artifact rarity tiers."
+  },
+  {
+    "id": "steam-release-date-news",
+    "source_id": "steam-release-date-news",
+    "type": "public_source",
+    "path_or_url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1830797770242233",
+    "label": "Froggy Hates Snow release date revealed",
+    "confidence": "high",
+    "notes": "2026-04-27: Release-date post with launch scope counts and demo progress carryover."
+  },
+  {
+    "id": "steam-snow-devlog",
+    "source_id": "steam-snow-devlog",
+    "type": "public_source",
+    "path_or_url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1827626365766540",
+    "label": "Devlog #5: How Snow Works in Froggy Hates Snow",
+    "confidence": "high",
+    "notes": "2026-03-24: Snow-system devlog explaining snow interaction, density/layers, and named snow/ice tools."
+  },
+  {
+    "id": "steam-demo-overhaul-news",
+    "source_id": "steam-demo-overhaul-news",
+    "type": "public_source",
+    "path_or_url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1823825466505761",
+    "label": "The Froggy Hates Snow demo is back – and it’s had a major overhaul",
+    "confidence": "high",
+    "notes": "2026-02-09: Updated-demo announcement describing quest-based progress and Blue Gems unlocking characters, abilities, and locations."
+  },
+  {
+    "id": "steam-next-demo-devlog",
+    "source_id": "steam-next-demo-devlog",
+    "type": "public_source",
+    "path_or_url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1823825466494740",
+    "label": "Devlog #3: What to expect from the next demo",
+    "confidence": "high",
+    "notes": "2026-02-04: Pre-demo devlog describing ten frogs, unique specializations, main attacks, starting skillsets, and Blue Gem/quest meta-progression."
+  },
+  {
+    "id": "steam-demo-update-devlog",
+    "source_id": "steam-demo-update-devlog",
+    "type": "public_source",
+    "path_or_url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1821922921824108",
+    "label": "Devlog #2: A quick update about the Froggy Hates Snow demo",
+    "confidence": "high",
+    "notes": "2026-01-20: Demo update devlog previewing quest-based meta-progression and ten planned characters with unique skins, skills, and main attacks."
+  },
+  {
+    "id": "steam-developer-intro-devlog",
+    "source_id": "steam-developer-intro-devlog",
+    "type": "public_source",
+    "path_or_url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1819386365096417",
+    "label": "Devlog #1: Meet The Developer",
+    "confidence": "high",
+    "notes": "2025-12-19: Developer introduction describing the game's interactive snow and digging ideas."
   }
 ]

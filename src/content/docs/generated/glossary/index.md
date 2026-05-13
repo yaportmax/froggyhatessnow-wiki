@@ -8,7 +8,7 @@ draft: false
 
 Glossary entries for the unofficial FROGGY HATES SNOW wiki.
 
-Status counts: Verified: 19.
+Status counts: Verified: 24.
 
 | Name | Status | Summary |
 |---|---|---|
@@ -16,15 +16,20 @@ Status counts: Verified: 19.
 | [Anomalous zone hazards](anomalous-zone-hazards/) | Verified | Steam devlog examples include lightning strikes, roaming tornadoes, fireballs, rolling obsidian spheres, and laser beams. |
 | [Anomaly zones](anomaly-zones/) | Verified | Risk/reward areas that offer challenges and rewards, according to Steam copy. |
 | [Artifact rarity tiers](artifact-rarity-tiers/) | Verified | The anomalous-zone devlog lists Common, Uncommon, Rare, and Legendary artifact tiers. |
+| [Attacks](attacks/) | Verified | The public Steam release-scope wording counts attacks alongside skills, tools, and companions; this wiki currently folds attack-style facts into Skills and Glossary until a standalone attack roster is sourced. |
 | [Character leveling](character-leveling/) | Verified | Launch devlog says characters gain experience by being played and grow stronger over time. |
+| [Character main attacks](character-main-attacks/) | Verified | Demo/devlog examples include tongue attacks, spits, snow minigun, electric staff, and hockey stick. |
+| [Character specializations](character-specializations/) | Verified | Demo/devlog posts say the ten playable frogs have unique specializations, main attacks, and starting skillsets. |
 | [Demo progress carryover](demo-progress-carryover/) | Verified | Steam news states demo progress carries over to the full game. |
 | [Elemental status effects](elemental-status-effects/) | Verified | Launch devlog lists Stun, Fire, Frost, Poison, and Lightning status effects. |
 | [Escape door](escape-door/) | Verified | Victory route requiring enough keys, according to Steam copy. |
 | [Freezing](freezing/) | Verified | Survival threat; Steam copy says staying too long in the cold can freeze the player. |
 | [Full game](full-game/) | Verified | Public full game app 3232380; released on Steam May 7, 2026. |
 | [Heightmap snow](heightmap-snow/) | Verified | The snow devlog describes the world snow as a heightmap texture changed by digging. |
+| [Local metadata unavailable](local-metadata-unavailable/) | Verified | The local game-files scan currently found zero readable files, so the wiki is populated from public sources until SteamCMD/local extraction succeeds. |
 | [Night Mode](night-mode/) | Verified | Post-launch update calls out Night Mode as an existing comfort option made more visible by attention badges. |
 | [Peaceful Mode](peaceful-mode/) | Verified | Monster-free cozy mode described by Steam copy. |
+| [Quest-based meta-progression](quest-based-meta-progression/) | Verified | Demo/devlog posts describe quests and Blue Gems unlocking characters, abilities, and locations. |
 | [Snow layers](snow-layers/) | Verified | The snow devlog says different areas can have different layers and density. |
 | [Snowbank](snowbank/) | Verified | Interactive snow tile or obstacle described as hiding treasures, traps, or enemies. |
 | [Steam demo](steam-demo/) | Verified | Public demo app 4037600; free Windows demo linked to the full app. |

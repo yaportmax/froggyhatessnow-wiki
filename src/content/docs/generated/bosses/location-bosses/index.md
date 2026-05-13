@@ -21,6 +21,8 @@ Official Steam copy says each new map hides its own boss.
 | Unlock Method | Needs verification. |
 | Cost | Needs verification. |
 | Mode | Needs verification. |
+| Verified Fields | name, category |
+| Fields Needing Verification | effect, unlock_method, cost, mode |
 | Last Verified | Public Steam metadata accessed 2026-05-13 |
 | Notes | Treat as a generic boss category until location-specific boss names are verified. |
 
@@ -30,5 +32,5 @@ No related entities listed yet.
 
 ## Sources
 
-- [Steam full-game store page](https://store.steampowered.com/app/3232380/FROGGY_HATES_SNOW/) — public_source, confidence high. Official public Steam store listing.
-- [Steam demo store page](https://store.steampowered.com/app/4037600/FROGGY_HATES_SNOW_Demo/) — public_source, confidence high. Official public Steam demo listing.
+- [Steam full-game store page](https://store.steampowered.com/app/3232380/FROGGY_HATES_SNOW/) — public_source, confidence high, source `steam-full-store`. Official public Steam store listing.
+- [Steam demo store page](https://store.steampowered.com/app/4037600/FROGGY_HATES_SNOW_Demo/) — public_source, confidence high, source `steam-demo-store`. Official public Steam demo listing.

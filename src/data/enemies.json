@@ -13,6 +13,7 @@
     "related_entities": [],
     "sources": [
       {
+        "source_id": "steam-full-store",
         "type": "public_source",
         "path_or_url": "https://store.steampowered.com/app/3232380/FROGGY_HATES_SNOW/",
         "label": "Steam full-game store page",
@@ -20,6 +21,7 @@
         "notes": "Official public Steam store listing."
       },
       {
+        "source_id": "steam-demo-store",
         "type": "public_source",
         "path_or_url": "https://store.steampowered.com/app/4037600/FROGGY_HATES_SNOW_Demo/",
         "label": "Steam demo store page",
@@ -29,7 +31,17 @@
     ],
     "verification_status": "Verified",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
-    "notes": "Specific enemy names and behaviors need verification."
+    "notes": "Specific enemy names and behaviors need verification.",
+    "verified_fields": [
+      "name",
+      "category",
+      "mode"
+    ],
+    "unverified_fields": [
+      "effect",
+      "unlock_method",
+      "cost"
+    ]
   },
   {
     "id": "mystical-creatures",
@@ -45,6 +57,7 @@
     "related_entities": [],
     "sources": [
       {
+        "source_id": "steam-full-store",
         "type": "public_source",
         "path_or_url": "https://store.steampowered.com/app/3232380/FROGGY_HATES_SNOW/",
         "label": "Steam full-game store page",
@@ -52,6 +65,7 @@
         "notes": "Official public Steam store listing."
       },
       {
+        "source_id": "steam-demo-store",
         "type": "public_source",
         "path_or_url": "https://store.steampowered.com/app/4037600/FROGGY_HATES_SNOW_Demo/",
         "label": "Steam demo store page",
@@ -61,7 +75,17 @@
     ],
     "verification_status": "Verified",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
-    "notes": "Specific enemy names and behaviors need verification."
+    "notes": "Specific enemy names and behaviors need verification.",
+    "verified_fields": [
+      "name",
+      "category",
+      "mode"
+    ],
+    "unverified_fields": [
+      "effect",
+      "unlock_method",
+      "cost"
+    ]
   },
   {
     "id": "obsidian-creatures",
@@ -77,6 +101,7 @@
     "related_entities": [],
     "sources": [
       {
+        "source_id": "steam-full-store",
         "type": "public_source",
         "path_or_url": "https://store.steampowered.com/app/3232380/FROGGY_HATES_SNOW/",
         "label": "Steam full-game store page",
@@ -84,6 +109,7 @@
         "notes": "Official public Steam store listing."
       },
       {
+        "source_id": "steam-demo-store",
         "type": "public_source",
         "path_or_url": "https://store.steampowered.com/app/4037600/FROGGY_HATES_SNOW_Demo/",
         "label": "Steam demo store page",
@@ -93,6 +119,16 @@
     ],
     "verification_status": "Verified",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
-    "notes": "Specific enemy names and behaviors need verification."
+    "notes": "Specific enemy names and behaviors need verification.",
+    "verified_fields": [
+      "name",
+      "category",
+      "mode"
+    ],
+    "unverified_fields": [
+      "effect",
+      "unlock_method",
+      "cost"
+    ]
   }
 ]

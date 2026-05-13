@@ -35,7 +35,7 @@ Production deploy completed on 2026-05-13:
 - Alias: https://froggyhatessnow-wiki.vercel.app
 - Inspect URL: https://vercel.com/yaportmax-5253s-projects/froggyhatessnow-wiki/3PdrBGULdhdMJtXhLtY4WnHnmcwF
 
-The current deploy includes the expanded Steam source snapshot, Steam news/devlog findings, generated source ledger, and 164 static HTML pages. The build now clears Astro's local content cache in `prebuild` so restored Vercel caches do not emit stale duplicate-doc warnings.
+The current deploy includes the expanded Steam source snapshot, Steam news/devlog findings, generated source ledger, game metadata page, and 174 static HTML pages. The build now clears Astro's local content cache in `prebuild` so restored Vercel caches do not emit stale duplicate-doc warnings.
 Astro's `site` setting points to the Vercel alias until `froggyhatessnow.wiki` is actually registered and connected.
 
 Command used:

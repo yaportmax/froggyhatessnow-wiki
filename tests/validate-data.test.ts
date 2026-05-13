@@ -21,6 +21,7 @@ async function makeDataDir(overrides: Record<string, unknown[]> = {}) {
       [
         {
           id: "steam-demo-store",
+          source_id: "steam-demo-store",
           type: "public_source",
           path_or_url: "https://store.steampowered.com/app/4037600/",
           label: "Steam demo store page",
@@ -87,6 +88,7 @@ function entity(id: string, extra: Record<string, unknown> = {}) {
     related_entities: [],
     sources: [
       {
+        source_id: "steam-demo-store",
         type: "public_source",
         path_or_url: "https://store.steampowered.com/app/4037600/",
         label: "Steam demo store page",

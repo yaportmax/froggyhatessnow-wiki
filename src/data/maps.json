@@ -1,5 +1,41 @@
 [
   {
+    "id": "location-unlock-pacing",
+    "slug": "location-unlock-pacing",
+    "name": "Location unlock pacing",
+    "aliases": [],
+    "category": "maps",
+    "short_description": "The first post-launch Steam update describes changed location unlock pacing for early and later locations.",
+    "effect": "The update says the first five locations unlock after one successful run, while Location 7 onward requires two completed runs by boss defeat or escape.",
+    "unlock_method": "Progress by completing runs.",
+    "cost": "Needs verification.",
+    "mode": "Full game post-launch state.",
+    "related_entities": [],
+    "sources": [
+      {
+        "source_id": "steam-post-launch-update",
+        "type": "public_source",
+        "path_or_url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1832065502824701",
+        "label": "Thank You for an Incredible Launch — First Update and What Comes Next",
+        "confidence": "high",
+        "notes": "2026-05-12 first post-launch update."
+      }
+    ],
+    "verification_status": "Verified",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "This is progression metadata, not an individual map name.",
+    "verified_fields": [
+      "name",
+      "category",
+      "effect",
+      "unlock_method",
+      "mode"
+    ],
+    "unverified_fields": [
+      "cost"
+    ]
+  },
+  {
     "id": "locations",
     "slug": "locations",
     "name": "Locations",
@@ -13,6 +49,7 @@
     "related_entities": [],
     "sources": [
       {
+        "source_id": "steam-news-devlogs",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
         "label": "Steam community news/devlogs",
@@ -20,6 +57,7 @@
         "notes": "Official public Steam news and developer posts for launch, systems, updates, and devlogs."
       },
       {
+        "source_id": "steam-full-achievements-page",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
         "label": "Steam community achievements page",
@@ -29,7 +67,17 @@
     ],
     "verification_status": "Verified",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
-    "notes": "Individual location names need verification."
+    "notes": "Individual location names need verification.",
+    "verified_fields": [
+      "name",
+      "category",
+      "effect",
+      "unlock_method"
+    ],
+    "unverified_fields": [
+      "cost",
+      "mode"
+    ]
   },
   {
     "id": "snowy-desert",
@@ -45,6 +93,7 @@
     "related_entities": [],
     "sources": [
       {
+        "source_id": "steam-full-store",
         "type": "public_source",
         "path_or_url": "https://store.steampowered.com/app/3232380/FROGGY_HATES_SNOW/",
         "label": "Steam full-game store page",
@@ -52,6 +101,7 @@
         "notes": "Official public Steam store listing."
       },
       {
+        "source_id": "steam-demo-store",
         "type": "public_source",
         "path_or_url": "https://store.steampowered.com/app/4037600/FROGGY_HATES_SNOW_Demo/",
         "label": "Steam demo store page",
@@ -59,6 +109,7 @@
         "notes": "Official public Steam demo listing."
       },
       {
+        "source_id": "steam-news-devlogs",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
         "label": "Steam community news/devlogs",
@@ -68,6 +119,68 @@
     ],
     "verification_status": "Verified",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
-    "notes": "This is a setting term, not a confirmed map name."
+    "notes": "This is a setting term, not a confirmed map name.",
+    "verified_fields": [
+      "name",
+      "category",
+      "effect",
+      "mode"
+    ],
+    "unverified_fields": [
+      "unlock_method",
+      "cost"
+    ]
+  },
+  {
+    "id": "unnamed-location-roster-slots",
+    "slug": "unnamed-location-roster-slots",
+    "name": "Unnamed location roster slots",
+    "aliases": [],
+    "category": "maps",
+    "short_description": "Steam/Xbox public sources confirm 16 locations/maps, but the current safe source pass has not verified individual location names.",
+    "effect": "Location names, location order, completion requirements, and boss links still need direct verification.",
+    "unlock_method": "Achievements mention unlock thresholds at 1, 5, and 15 locations.",
+    "cost": "Needs verification.",
+    "mode": "Needs verification.",
+    "related_entities": [],
+    "sources": [
+      {
+        "source_id": "steam-news-devlogs",
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
+        "label": "Steam community news/devlogs",
+        "confidence": "high",
+        "notes": "Official public Steam news and developer posts for launch, systems, updates, and devlogs."
+      },
+      {
+        "source_id": "steam-full-achievements-page",
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
+        "label": "Steam community achievements page",
+        "confidence": "high",
+        "notes": "Public location unlock/completion achievement names and descriptions."
+      },
+      {
+        "source_id": "xbox-wire-interview",
+        "type": "public_source",
+        "path_or_url": "https://news.xbox.com/en-us/2026/05/05/froggy-hates-snow-interview/",
+        "label": "Xbox Wire developer interview",
+        "confidence": "medium",
+        "notes": "Developer interview corroborating launch counts, snow tech, skill/tool variety, companions, and Peaceful Mode."
+      }
+    ],
+    "verification_status": "Needs verification",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Tracker entry for missing map roster coverage; individual location pages should be added only after names are sourced.",
+    "verified_fields": [
+      "name",
+      "category",
+      "effect",
+      "unlock_method"
+    ],
+    "unverified_fields": [
+      "cost",
+      "mode"
+    ]
   }
 ]

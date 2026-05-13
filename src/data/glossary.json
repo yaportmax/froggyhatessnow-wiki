@@ -13,6 +13,7 @@
     "related_entities": [],
     "sources": [
       {
+        "source_id": "steam-full-store",
         "type": "public_source",
         "path_or_url": "https://store.steampowered.com/app/3232380/FROGGY_HATES_SNOW/",
         "label": "Steam full-game store page",
@@ -20,6 +21,7 @@
         "notes": "Official public Steam store listing."
       },
       {
+        "source_id": "steam-demo-store",
         "type": "public_source",
         "path_or_url": "https://store.steampowered.com/app/4037600/FROGGY_HATES_SNOW_Demo/",
         "label": "Steam demo store page",
@@ -27,6 +29,7 @@
         "notes": "Official public Steam demo listing."
       },
       {
+        "source_id": "steam-news-devlogs",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
         "label": "Steam community news/devlogs",
@@ -34,6 +37,7 @@
         "notes": "Official public Steam news and developer posts for launch, systems, updates, and devlogs."
       },
       {
+        "source_id": "digital-bandidos-page",
         "type": "public_source",
         "path_or_url": "https://digitalbandidos.com/games/froggy-hates-snow/",
         "label": "Digital Bandidos game page",
@@ -43,7 +47,17 @@
     ],
     "verification_status": "Verified",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
-    "notes": "Glossary summary is paraphrased from public pages."
+    "notes": "Glossary summary is paraphrased from public pages.",
+    "verified_fields": [
+      "name",
+      "category",
+      "effect"
+    ],
+    "unverified_fields": [
+      "unlock_method",
+      "cost",
+      "mode"
+    ]
   },
   {
     "id": "anomalous-zone-hazards",
@@ -59,6 +73,7 @@
     "related_entities": [],
     "sources": [
       {
+        "source_id": "steam-full-store",
         "type": "public_source",
         "path_or_url": "https://store.steampowered.com/app/3232380/FROGGY_HATES_SNOW/",
         "label": "Steam full-game store page",
@@ -66,6 +81,7 @@
         "notes": "Official public Steam store listing."
       },
       {
+        "source_id": "steam-demo-store",
         "type": "public_source",
         "path_or_url": "https://store.steampowered.com/app/4037600/FROGGY_HATES_SNOW_Demo/",
         "label": "Steam demo store page",
@@ -73,6 +89,7 @@
         "notes": "Official public Steam demo listing."
       },
       {
+        "source_id": "steam-news-devlogs",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
         "label": "Steam community news/devlogs",
@@ -80,6 +97,7 @@
         "notes": "Official public Steam news and developer posts for launch, systems, updates, and devlogs."
       },
       {
+        "source_id": "digital-bandidos-page",
         "type": "public_source",
         "path_or_url": "https://digitalbandidos.com/games/froggy-hates-snow/",
         "label": "Digital Bandidos game page",
@@ -89,7 +107,17 @@
     ],
     "verification_status": "Verified",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
-    "notes": "Glossary summary is paraphrased from public pages."
+    "notes": "Glossary summary is paraphrased from public pages.",
+    "verified_fields": [
+      "name",
+      "category",
+      "effect"
+    ],
+    "unverified_fields": [
+      "unlock_method",
+      "cost",
+      "mode"
+    ]
   },
   {
     "id": "anomaly-zones",
@@ -105,6 +133,7 @@
     "related_entities": [],
     "sources": [
       {
+        "source_id": "steam-full-store",
         "type": "public_source",
         "path_or_url": "https://store.steampowered.com/app/3232380/FROGGY_HATES_SNOW/",
         "label": "Steam full-game store page",
@@ -112,6 +141,7 @@
         "notes": "Official public Steam store listing."
       },
       {
+        "source_id": "steam-demo-store",
         "type": "public_source",
         "path_or_url": "https://store.steampowered.com/app/4037600/FROGGY_HATES_SNOW_Demo/",
         "label": "Steam demo store page",
@@ -119,6 +149,7 @@
         "notes": "Official public Steam demo listing."
       },
       {
+        "source_id": "steam-news-devlogs",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
         "label": "Steam community news/devlogs",
@@ -126,6 +157,7 @@
         "notes": "Official public Steam news and developer posts for launch, systems, updates, and devlogs."
       },
       {
+        "source_id": "digital-bandidos-page",
         "type": "public_source",
         "path_or_url": "https://digitalbandidos.com/games/froggy-hates-snow/",
         "label": "Digital Bandidos game page",
@@ -135,7 +167,17 @@
     ],
     "verification_status": "Verified",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
-    "notes": "Glossary summary is paraphrased from public pages."
+    "notes": "Glossary summary is paraphrased from public pages.",
+    "verified_fields": [
+      "name",
+      "category",
+      "effect"
+    ],
+    "unverified_fields": [
+      "unlock_method",
+      "cost",
+      "mode"
+    ]
   },
   {
     "id": "artifact-rarity-tiers",
@@ -151,6 +193,7 @@
     "related_entities": [],
     "sources": [
       {
+        "source_id": "steam-full-store",
         "type": "public_source",
         "path_or_url": "https://store.steampowered.com/app/3232380/FROGGY_HATES_SNOW/",
         "label": "Steam full-game store page",
@@ -158,6 +201,7 @@
         "notes": "Official public Steam store listing."
       },
       {
+        "source_id": "steam-demo-store",
         "type": "public_source",
         "path_or_url": "https://store.steampowered.com/app/4037600/FROGGY_HATES_SNOW_Demo/",
         "label": "Steam demo store page",
@@ -165,6 +209,7 @@
         "notes": "Official public Steam demo listing."
       },
       {
+        "source_id": "steam-news-devlogs",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
         "label": "Steam community news/devlogs",
@@ -172,6 +217,7 @@
         "notes": "Official public Steam news and developer posts for launch, systems, updates, and devlogs."
       },
       {
+        "source_id": "digital-bandidos-page",
         "type": "public_source",
         "path_or_url": "https://digitalbandidos.com/games/froggy-hates-snow/",
         "label": "Digital Bandidos game page",
@@ -181,7 +227,77 @@
     ],
     "verification_status": "Verified",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
-    "notes": "Glossary summary is paraphrased from public pages."
+    "notes": "Glossary summary is paraphrased from public pages.",
+    "verified_fields": [
+      "name",
+      "category",
+      "effect"
+    ],
+    "unverified_fields": [
+      "unlock_method",
+      "cost",
+      "mode"
+    ]
+  },
+  {
+    "id": "attacks",
+    "slug": "attacks",
+    "name": "Attacks",
+    "aliases": [],
+    "category": "glossary",
+    "short_description": "The public Steam release-scope wording counts attacks alongside skills, tools, and companions; this wiki currently folds attack-style facts into Skills and Glossary until a standalone attack roster is sourced.",
+    "effect": "Reference term.",
+    "unlock_method": "Needs verification.",
+    "cost": "Needs verification.",
+    "mode": "Needs verification.",
+    "related_entities": [],
+    "sources": [
+      {
+        "source_id": "steam-full-store",
+        "type": "public_source",
+        "path_or_url": "https://store.steampowered.com/app/3232380/FROGGY_HATES_SNOW/",
+        "label": "Steam full-game store page",
+        "confidence": "high",
+        "notes": "Official public Steam store listing."
+      },
+      {
+        "source_id": "steam-demo-store",
+        "type": "public_source",
+        "path_or_url": "https://store.steampowered.com/app/4037600/FROGGY_HATES_SNOW_Demo/",
+        "label": "Steam demo store page",
+        "confidence": "high",
+        "notes": "Official public Steam demo listing."
+      },
+      {
+        "source_id": "steam-news-devlogs",
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
+        "label": "Steam community news/devlogs",
+        "confidence": "high",
+        "notes": "Official public Steam news and developer posts for launch, systems, updates, and devlogs."
+      },
+      {
+        "source_id": "digital-bandidos-page",
+        "type": "public_source",
+        "path_or_url": "https://digitalbandidos.com/games/froggy-hates-snow/",
+        "label": "Digital Bandidos game page",
+        "confidence": "medium",
+        "notes": "Publisher page for FROGGY HATES SNOW."
+      }
+    ],
+    "verification_status": "Verified",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Glossary summary is paraphrased from public pages.",
+    "verified_fields": [
+      "name",
+      "category",
+      "effect"
+    ],
+    "unverified_fields": [
+      "unlock_method",
+      "cost",
+      "mode"
+    ]
   },
   {
     "id": "character-leveling",
@@ -197,6 +313,7 @@
     "related_entities": [],
     "sources": [
       {
+        "source_id": "steam-full-store",
         "type": "public_source",
         "path_or_url": "https://store.steampowered.com/app/3232380/FROGGY_HATES_SNOW/",
         "label": "Steam full-game store page",
@@ -204,6 +321,7 @@
         "notes": "Official public Steam store listing."
       },
       {
+        "source_id": "steam-demo-store",
         "type": "public_source",
         "path_or_url": "https://store.steampowered.com/app/4037600/FROGGY_HATES_SNOW_Demo/",
         "label": "Steam demo store page",
@@ -211,6 +329,7 @@
         "notes": "Official public Steam demo listing."
       },
       {
+        "source_id": "steam-news-devlogs",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
         "label": "Steam community news/devlogs",
@@ -218,6 +337,7 @@
         "notes": "Official public Steam news and developer posts for launch, systems, updates, and devlogs."
       },
       {
+        "source_id": "digital-bandidos-page",
         "type": "public_source",
         "path_or_url": "https://digitalbandidos.com/games/froggy-hates-snow/",
         "label": "Digital Bandidos game page",
@@ -227,7 +347,137 @@
     ],
     "verification_status": "Verified",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
-    "notes": "Glossary summary is paraphrased from public pages."
+    "notes": "Glossary summary is paraphrased from public pages.",
+    "verified_fields": [
+      "name",
+      "category",
+      "effect"
+    ],
+    "unverified_fields": [
+      "unlock_method",
+      "cost",
+      "mode"
+    ]
+  },
+  {
+    "id": "character-main-attacks",
+    "slug": "character-main-attacks",
+    "name": "Character main attacks",
+    "aliases": [],
+    "category": "glossary",
+    "short_description": "Demo/devlog examples include tongue attacks, spits, snow minigun, electric staff, and hockey stick.",
+    "effect": "Reference term.",
+    "unlock_method": "Needs verification.",
+    "cost": "Needs verification.",
+    "mode": "Needs verification.",
+    "related_entities": [],
+    "sources": [
+      {
+        "source_id": "steam-full-store",
+        "type": "public_source",
+        "path_or_url": "https://store.steampowered.com/app/3232380/FROGGY_HATES_SNOW/",
+        "label": "Steam full-game store page",
+        "confidence": "high",
+        "notes": "Official public Steam store listing."
+      },
+      {
+        "source_id": "steam-demo-store",
+        "type": "public_source",
+        "path_or_url": "https://store.steampowered.com/app/4037600/FROGGY_HATES_SNOW_Demo/",
+        "label": "Steam demo store page",
+        "confidence": "high",
+        "notes": "Official public Steam demo listing."
+      },
+      {
+        "source_id": "steam-news-devlogs",
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
+        "label": "Steam community news/devlogs",
+        "confidence": "high",
+        "notes": "Official public Steam news and developer posts for launch, systems, updates, and devlogs."
+      },
+      {
+        "source_id": "digital-bandidos-page",
+        "type": "public_source",
+        "path_or_url": "https://digitalbandidos.com/games/froggy-hates-snow/",
+        "label": "Digital Bandidos game page",
+        "confidence": "medium",
+        "notes": "Publisher page for FROGGY HATES SNOW."
+      }
+    ],
+    "verification_status": "Verified",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Glossary summary is paraphrased from public pages.",
+    "verified_fields": [
+      "name",
+      "category",
+      "effect"
+    ],
+    "unverified_fields": [
+      "unlock_method",
+      "cost",
+      "mode"
+    ]
+  },
+  {
+    "id": "character-specializations",
+    "slug": "character-specializations",
+    "name": "Character specializations",
+    "aliases": [],
+    "category": "glossary",
+    "short_description": "Demo/devlog posts say the ten playable frogs have unique specializations, main attacks, and starting skillsets.",
+    "effect": "Reference term.",
+    "unlock_method": "Needs verification.",
+    "cost": "Needs verification.",
+    "mode": "Needs verification.",
+    "related_entities": [],
+    "sources": [
+      {
+        "source_id": "steam-full-store",
+        "type": "public_source",
+        "path_or_url": "https://store.steampowered.com/app/3232380/FROGGY_HATES_SNOW/",
+        "label": "Steam full-game store page",
+        "confidence": "high",
+        "notes": "Official public Steam store listing."
+      },
+      {
+        "source_id": "steam-demo-store",
+        "type": "public_source",
+        "path_or_url": "https://store.steampowered.com/app/4037600/FROGGY_HATES_SNOW_Demo/",
+        "label": "Steam demo store page",
+        "confidence": "high",
+        "notes": "Official public Steam demo listing."
+      },
+      {
+        "source_id": "steam-news-devlogs",
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
+        "label": "Steam community news/devlogs",
+        "confidence": "high",
+        "notes": "Official public Steam news and developer posts for launch, systems, updates, and devlogs."
+      },
+      {
+        "source_id": "digital-bandidos-page",
+        "type": "public_source",
+        "path_or_url": "https://digitalbandidos.com/games/froggy-hates-snow/",
+        "label": "Digital Bandidos game page",
+        "confidence": "medium",
+        "notes": "Publisher page for FROGGY HATES SNOW."
+      }
+    ],
+    "verification_status": "Verified",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Glossary summary is paraphrased from public pages.",
+    "verified_fields": [
+      "name",
+      "category",
+      "effect"
+    ],
+    "unverified_fields": [
+      "unlock_method",
+      "cost",
+      "mode"
+    ]
   },
   {
     "id": "demo-progress-carryover",
@@ -243,6 +493,7 @@
     "related_entities": [],
     "sources": [
       {
+        "source_id": "steam-full-store",
         "type": "public_source",
         "path_or_url": "https://store.steampowered.com/app/3232380/FROGGY_HATES_SNOW/",
         "label": "Steam full-game store page",
@@ -250,6 +501,7 @@
         "notes": "Official public Steam store listing."
       },
       {
+        "source_id": "steam-demo-store",
         "type": "public_source",
         "path_or_url": "https://store.steampowered.com/app/4037600/FROGGY_HATES_SNOW_Demo/",
         "label": "Steam demo store page",
@@ -257,6 +509,7 @@
         "notes": "Official public Steam demo listing."
       },
       {
+        "source_id": "steam-news-devlogs",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
         "label": "Steam community news/devlogs",
@@ -264,6 +517,7 @@
         "notes": "Official public Steam news and developer posts for launch, systems, updates, and devlogs."
       },
       {
+        "source_id": "digital-bandidos-page",
         "type": "public_source",
         "path_or_url": "https://digitalbandidos.com/games/froggy-hates-snow/",
         "label": "Digital Bandidos game page",
@@ -273,7 +527,17 @@
     ],
     "verification_status": "Verified",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
-    "notes": "Glossary summary is paraphrased from public pages."
+    "notes": "Glossary summary is paraphrased from public pages.",
+    "verified_fields": [
+      "name",
+      "category",
+      "effect"
+    ],
+    "unverified_fields": [
+      "unlock_method",
+      "cost",
+      "mode"
+    ]
   },
   {
     "id": "elemental-status-effects",
@@ -289,6 +553,7 @@
     "related_entities": [],
     "sources": [
       {
+        "source_id": "steam-full-store",
         "type": "public_source",
         "path_or_url": "https://store.steampowered.com/app/3232380/FROGGY_HATES_SNOW/",
         "label": "Steam full-game store page",
@@ -296,6 +561,7 @@
         "notes": "Official public Steam store listing."
       },
       {
+        "source_id": "steam-demo-store",
         "type": "public_source",
         "path_or_url": "https://store.steampowered.com/app/4037600/FROGGY_HATES_SNOW_Demo/",
         "label": "Steam demo store page",
@@ -303,6 +569,7 @@
         "notes": "Official public Steam demo listing."
       },
       {
+        "source_id": "steam-news-devlogs",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
         "label": "Steam community news/devlogs",
@@ -310,6 +577,7 @@
         "notes": "Official public Steam news and developer posts for launch, systems, updates, and devlogs."
       },
       {
+        "source_id": "digital-bandidos-page",
         "type": "public_source",
         "path_or_url": "https://digitalbandidos.com/games/froggy-hates-snow/",
         "label": "Digital Bandidos game page",
@@ -319,7 +587,17 @@
     ],
     "verification_status": "Verified",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
-    "notes": "Glossary summary is paraphrased from public pages."
+    "notes": "Glossary summary is paraphrased from public pages.",
+    "verified_fields": [
+      "name",
+      "category",
+      "effect"
+    ],
+    "unverified_fields": [
+      "unlock_method",
+      "cost",
+      "mode"
+    ]
   },
   {
     "id": "escape-door",
@@ -335,6 +613,7 @@
     "related_entities": [],
     "sources": [
       {
+        "source_id": "steam-full-store",
         "type": "public_source",
         "path_or_url": "https://store.steampowered.com/app/3232380/FROGGY_HATES_SNOW/",
         "label": "Steam full-game store page",
@@ -342,6 +621,7 @@
         "notes": "Official public Steam store listing."
       },
       {
+        "source_id": "steam-demo-store",
         "type": "public_source",
         "path_or_url": "https://store.steampowered.com/app/4037600/FROGGY_HATES_SNOW_Demo/",
         "label": "Steam demo store page",
@@ -349,6 +629,7 @@
         "notes": "Official public Steam demo listing."
       },
       {
+        "source_id": "steam-news-devlogs",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
         "label": "Steam community news/devlogs",
@@ -356,6 +637,7 @@
         "notes": "Official public Steam news and developer posts for launch, systems, updates, and devlogs."
       },
       {
+        "source_id": "digital-bandidos-page",
         "type": "public_source",
         "path_or_url": "https://digitalbandidos.com/games/froggy-hates-snow/",
         "label": "Digital Bandidos game page",
@@ -365,7 +647,17 @@
     ],
     "verification_status": "Verified",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
-    "notes": "Glossary summary is paraphrased from public pages."
+    "notes": "Glossary summary is paraphrased from public pages.",
+    "verified_fields": [
+      "name",
+      "category",
+      "effect"
+    ],
+    "unverified_fields": [
+      "unlock_method",
+      "cost",
+      "mode"
+    ]
   },
   {
     "id": "freezing",
@@ -381,6 +673,7 @@
     "related_entities": [],
     "sources": [
       {
+        "source_id": "steam-full-store",
         "type": "public_source",
         "path_or_url": "https://store.steampowered.com/app/3232380/FROGGY_HATES_SNOW/",
         "label": "Steam full-game store page",
@@ -388,6 +681,7 @@
         "notes": "Official public Steam store listing."
       },
       {
+        "source_id": "steam-demo-store",
         "type": "public_source",
         "path_or_url": "https://store.steampowered.com/app/4037600/FROGGY_HATES_SNOW_Demo/",
         "label": "Steam demo store page",
@@ -395,6 +689,7 @@
         "notes": "Official public Steam demo listing."
       },
       {
+        "source_id": "steam-news-devlogs",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
         "label": "Steam community news/devlogs",
@@ -402,6 +697,7 @@
         "notes": "Official public Steam news and developer posts for launch, systems, updates, and devlogs."
       },
       {
+        "source_id": "digital-bandidos-page",
         "type": "public_source",
         "path_or_url": "https://digitalbandidos.com/games/froggy-hates-snow/",
         "label": "Digital Bandidos game page",
@@ -411,7 +707,17 @@
     ],
     "verification_status": "Verified",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
-    "notes": "Glossary summary is paraphrased from public pages."
+    "notes": "Glossary summary is paraphrased from public pages.",
+    "verified_fields": [
+      "name",
+      "category",
+      "effect"
+    ],
+    "unverified_fields": [
+      "unlock_method",
+      "cost",
+      "mode"
+    ]
   },
   {
     "id": "full-game",
@@ -427,6 +733,7 @@
     "related_entities": [],
     "sources": [
       {
+        "source_id": "steam-full-store",
         "type": "public_source",
         "path_or_url": "https://store.steampowered.com/app/3232380/FROGGY_HATES_SNOW/",
         "label": "Steam full-game store page",
@@ -434,6 +741,7 @@
         "notes": "Official public Steam store listing."
       },
       {
+        "source_id": "steam-demo-store",
         "type": "public_source",
         "path_or_url": "https://store.steampowered.com/app/4037600/FROGGY_HATES_SNOW_Demo/",
         "label": "Steam demo store page",
@@ -441,6 +749,7 @@
         "notes": "Official public Steam demo listing."
       },
       {
+        "source_id": "steam-news-devlogs",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
         "label": "Steam community news/devlogs",
@@ -448,6 +757,7 @@
         "notes": "Official public Steam news and developer posts for launch, systems, updates, and devlogs."
       },
       {
+        "source_id": "digital-bandidos-page",
         "type": "public_source",
         "path_or_url": "https://digitalbandidos.com/games/froggy-hates-snow/",
         "label": "Digital Bandidos game page",
@@ -457,7 +767,17 @@
     ],
     "verification_status": "Verified",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
-    "notes": "Glossary summary is paraphrased from public pages."
+    "notes": "Glossary summary is paraphrased from public pages.",
+    "verified_fields": [
+      "name",
+      "category",
+      "effect"
+    ],
+    "unverified_fields": [
+      "unlock_method",
+      "cost",
+      "mode"
+    ]
   },
   {
     "id": "heightmap-snow",
@@ -473,6 +793,7 @@
     "related_entities": [],
     "sources": [
       {
+        "source_id": "steam-full-store",
         "type": "public_source",
         "path_or_url": "https://store.steampowered.com/app/3232380/FROGGY_HATES_SNOW/",
         "label": "Steam full-game store page",
@@ -480,6 +801,7 @@
         "notes": "Official public Steam store listing."
       },
       {
+        "source_id": "steam-demo-store",
         "type": "public_source",
         "path_or_url": "https://store.steampowered.com/app/4037600/FROGGY_HATES_SNOW_Demo/",
         "label": "Steam demo store page",
@@ -487,6 +809,7 @@
         "notes": "Official public Steam demo listing."
       },
       {
+        "source_id": "steam-news-devlogs",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
         "label": "Steam community news/devlogs",
@@ -494,6 +817,7 @@
         "notes": "Official public Steam news and developer posts for launch, systems, updates, and devlogs."
       },
       {
+        "source_id": "digital-bandidos-page",
         "type": "public_source",
         "path_or_url": "https://digitalbandidos.com/games/froggy-hates-snow/",
         "label": "Digital Bandidos game page",
@@ -503,7 +827,77 @@
     ],
     "verification_status": "Verified",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
-    "notes": "Glossary summary is paraphrased from public pages."
+    "notes": "Glossary summary is paraphrased from public pages.",
+    "verified_fields": [
+      "name",
+      "category",
+      "effect"
+    ],
+    "unverified_fields": [
+      "unlock_method",
+      "cost",
+      "mode"
+    ]
+  },
+  {
+    "id": "local-metadata-unavailable",
+    "slug": "local-metadata-unavailable",
+    "name": "Local metadata unavailable",
+    "aliases": [],
+    "category": "glossary",
+    "short_description": "The local game-files scan currently found zero readable files, so the wiki is populated from public sources until SteamCMD/local extraction succeeds.",
+    "effect": "Reference term.",
+    "unlock_method": "Needs verification.",
+    "cost": "Needs verification.",
+    "mode": "Needs verification.",
+    "related_entities": [],
+    "sources": [
+      {
+        "source_id": "steam-full-store",
+        "type": "public_source",
+        "path_or_url": "https://store.steampowered.com/app/3232380/FROGGY_HATES_SNOW/",
+        "label": "Steam full-game store page",
+        "confidence": "high",
+        "notes": "Official public Steam store listing."
+      },
+      {
+        "source_id": "steam-demo-store",
+        "type": "public_source",
+        "path_or_url": "https://store.steampowered.com/app/4037600/FROGGY_HATES_SNOW_Demo/",
+        "label": "Steam demo store page",
+        "confidence": "high",
+        "notes": "Official public Steam demo listing."
+      },
+      {
+        "source_id": "steam-news-devlogs",
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
+        "label": "Steam community news/devlogs",
+        "confidence": "high",
+        "notes": "Official public Steam news and developer posts for launch, systems, updates, and devlogs."
+      },
+      {
+        "source_id": "digital-bandidos-page",
+        "type": "public_source",
+        "path_or_url": "https://digitalbandidos.com/games/froggy-hates-snow/",
+        "label": "Digital Bandidos game page",
+        "confidence": "medium",
+        "notes": "Publisher page for FROGGY HATES SNOW."
+      }
+    ],
+    "verification_status": "Verified",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Glossary summary is paraphrased from public pages.",
+    "verified_fields": [
+      "name",
+      "category",
+      "effect"
+    ],
+    "unverified_fields": [
+      "unlock_method",
+      "cost",
+      "mode"
+    ]
   },
   {
     "id": "night-mode",
@@ -519,6 +913,7 @@
     "related_entities": [],
     "sources": [
       {
+        "source_id": "steam-full-store",
         "type": "public_source",
         "path_or_url": "https://store.steampowered.com/app/3232380/FROGGY_HATES_SNOW/",
         "label": "Steam full-game store page",
@@ -526,6 +921,7 @@
         "notes": "Official public Steam store listing."
       },
       {
+        "source_id": "steam-demo-store",
         "type": "public_source",
         "path_or_url": "https://store.steampowered.com/app/4037600/FROGGY_HATES_SNOW_Demo/",
         "label": "Steam demo store page",
@@ -533,6 +929,7 @@
         "notes": "Official public Steam demo listing."
       },
       {
+        "source_id": "steam-news-devlogs",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
         "label": "Steam community news/devlogs",
@@ -540,6 +937,7 @@
         "notes": "Official public Steam news and developer posts for launch, systems, updates, and devlogs."
       },
       {
+        "source_id": "digital-bandidos-page",
         "type": "public_source",
         "path_or_url": "https://digitalbandidos.com/games/froggy-hates-snow/",
         "label": "Digital Bandidos game page",
@@ -549,7 +947,17 @@
     ],
     "verification_status": "Verified",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
-    "notes": "Glossary summary is paraphrased from public pages."
+    "notes": "Glossary summary is paraphrased from public pages.",
+    "verified_fields": [
+      "name",
+      "category",
+      "effect"
+    ],
+    "unverified_fields": [
+      "unlock_method",
+      "cost",
+      "mode"
+    ]
   },
   {
     "id": "peaceful-mode",
@@ -565,6 +973,7 @@
     "related_entities": [],
     "sources": [
       {
+        "source_id": "steam-full-store",
         "type": "public_source",
         "path_or_url": "https://store.steampowered.com/app/3232380/FROGGY_HATES_SNOW/",
         "label": "Steam full-game store page",
@@ -572,6 +981,7 @@
         "notes": "Official public Steam store listing."
       },
       {
+        "source_id": "steam-demo-store",
         "type": "public_source",
         "path_or_url": "https://store.steampowered.com/app/4037600/FROGGY_HATES_SNOW_Demo/",
         "label": "Steam demo store page",
@@ -579,6 +989,7 @@
         "notes": "Official public Steam demo listing."
       },
       {
+        "source_id": "steam-news-devlogs",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
         "label": "Steam community news/devlogs",
@@ -586,6 +997,7 @@
         "notes": "Official public Steam news and developer posts for launch, systems, updates, and devlogs."
       },
       {
+        "source_id": "digital-bandidos-page",
         "type": "public_source",
         "path_or_url": "https://digitalbandidos.com/games/froggy-hates-snow/",
         "label": "Digital Bandidos game page",
@@ -595,7 +1007,77 @@
     ],
     "verification_status": "Verified",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
-    "notes": "Glossary summary is paraphrased from public pages."
+    "notes": "Glossary summary is paraphrased from public pages.",
+    "verified_fields": [
+      "name",
+      "category",
+      "effect"
+    ],
+    "unverified_fields": [
+      "unlock_method",
+      "cost",
+      "mode"
+    ]
+  },
+  {
+    "id": "quest-based-meta-progression",
+    "slug": "quest-based-meta-progression",
+    "name": "Quest-based meta-progression",
+    "aliases": [],
+    "category": "glossary",
+    "short_description": "Demo/devlog posts describe quests and Blue Gems unlocking characters, abilities, and locations.",
+    "effect": "Reference term.",
+    "unlock_method": "Needs verification.",
+    "cost": "Needs verification.",
+    "mode": "Needs verification.",
+    "related_entities": [],
+    "sources": [
+      {
+        "source_id": "steam-full-store",
+        "type": "public_source",
+        "path_or_url": "https://store.steampowered.com/app/3232380/FROGGY_HATES_SNOW/",
+        "label": "Steam full-game store page",
+        "confidence": "high",
+        "notes": "Official public Steam store listing."
+      },
+      {
+        "source_id": "steam-demo-store",
+        "type": "public_source",
+        "path_or_url": "https://store.steampowered.com/app/4037600/FROGGY_HATES_SNOW_Demo/",
+        "label": "Steam demo store page",
+        "confidence": "high",
+        "notes": "Official public Steam demo listing."
+      },
+      {
+        "source_id": "steam-news-devlogs",
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
+        "label": "Steam community news/devlogs",
+        "confidence": "high",
+        "notes": "Official public Steam news and developer posts for launch, systems, updates, and devlogs."
+      },
+      {
+        "source_id": "digital-bandidos-page",
+        "type": "public_source",
+        "path_or_url": "https://digitalbandidos.com/games/froggy-hates-snow/",
+        "label": "Digital Bandidos game page",
+        "confidence": "medium",
+        "notes": "Publisher page for FROGGY HATES SNOW."
+      }
+    ],
+    "verification_status": "Verified",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Glossary summary is paraphrased from public pages.",
+    "verified_fields": [
+      "name",
+      "category",
+      "effect"
+    ],
+    "unverified_fields": [
+      "unlock_method",
+      "cost",
+      "mode"
+    ]
   },
   {
     "id": "snow-layers",
@@ -611,6 +1093,7 @@
     "related_entities": [],
     "sources": [
       {
+        "source_id": "steam-full-store",
         "type": "public_source",
         "path_or_url": "https://store.steampowered.com/app/3232380/FROGGY_HATES_SNOW/",
         "label": "Steam full-game store page",
@@ -618,6 +1101,7 @@
         "notes": "Official public Steam store listing."
       },
       {
+        "source_id": "steam-demo-store",
         "type": "public_source",
         "path_or_url": "https://store.steampowered.com/app/4037600/FROGGY_HATES_SNOW_Demo/",
         "label": "Steam demo store page",
@@ -625,6 +1109,7 @@
         "notes": "Official public Steam demo listing."
       },
       {
+        "source_id": "steam-news-devlogs",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
         "label": "Steam community news/devlogs",
@@ -632,6 +1117,7 @@
         "notes": "Official public Steam news and developer posts for launch, systems, updates, and devlogs."
       },
       {
+        "source_id": "digital-bandidos-page",
         "type": "public_source",
         "path_or_url": "https://digitalbandidos.com/games/froggy-hates-snow/",
         "label": "Digital Bandidos game page",
@@ -641,7 +1127,17 @@
     ],
     "verification_status": "Verified",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
-    "notes": "Glossary summary is paraphrased from public pages."
+    "notes": "Glossary summary is paraphrased from public pages.",
+    "verified_fields": [
+      "name",
+      "category",
+      "effect"
+    ],
+    "unverified_fields": [
+      "unlock_method",
+      "cost",
+      "mode"
+    ]
   },
   {
     "id": "snowbank",
@@ -657,6 +1153,7 @@
     "related_entities": [],
     "sources": [
       {
+        "source_id": "steam-full-store",
         "type": "public_source",
         "path_or_url": "https://store.steampowered.com/app/3232380/FROGGY_HATES_SNOW/",
         "label": "Steam full-game store page",
@@ -664,6 +1161,7 @@
         "notes": "Official public Steam store listing."
       },
       {
+        "source_id": "steam-demo-store",
         "type": "public_source",
         "path_or_url": "https://store.steampowered.com/app/4037600/FROGGY_HATES_SNOW_Demo/",
         "label": "Steam demo store page",
@@ -671,6 +1169,7 @@
         "notes": "Official public Steam demo listing."
       },
       {
+        "source_id": "steam-news-devlogs",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
         "label": "Steam community news/devlogs",
@@ -678,6 +1177,7 @@
         "notes": "Official public Steam news and developer posts for launch, systems, updates, and devlogs."
       },
       {
+        "source_id": "digital-bandidos-page",
         "type": "public_source",
         "path_or_url": "https://digitalbandidos.com/games/froggy-hates-snow/",
         "label": "Digital Bandidos game page",
@@ -687,7 +1187,17 @@
     ],
     "verification_status": "Verified",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
-    "notes": "Glossary summary is paraphrased from public pages."
+    "notes": "Glossary summary is paraphrased from public pages.",
+    "verified_fields": [
+      "name",
+      "category",
+      "effect"
+    ],
+    "unverified_fields": [
+      "unlock_method",
+      "cost",
+      "mode"
+    ]
   },
   {
     "id": "steam-demo",
@@ -703,6 +1213,7 @@
     "related_entities": [],
     "sources": [
       {
+        "source_id": "steam-full-store",
         "type": "public_source",
         "path_or_url": "https://store.steampowered.com/app/3232380/FROGGY_HATES_SNOW/",
         "label": "Steam full-game store page",
@@ -710,6 +1221,7 @@
         "notes": "Official public Steam store listing."
       },
       {
+        "source_id": "steam-demo-store",
         "type": "public_source",
         "path_or_url": "https://store.steampowered.com/app/4037600/FROGGY_HATES_SNOW_Demo/",
         "label": "Steam demo store page",
@@ -717,6 +1229,7 @@
         "notes": "Official public Steam demo listing."
       },
       {
+        "source_id": "steam-news-devlogs",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
         "label": "Steam community news/devlogs",
@@ -724,6 +1237,7 @@
         "notes": "Official public Steam news and developer posts for launch, systems, updates, and devlogs."
       },
       {
+        "source_id": "digital-bandidos-page",
         "type": "public_source",
         "path_or_url": "https://digitalbandidos.com/games/froggy-hates-snow/",
         "label": "Digital Bandidos game page",
@@ -733,7 +1247,17 @@
     ],
     "verification_status": "Verified",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
-    "notes": "Glossary summary is paraphrased from public pages."
+    "notes": "Glossary summary is paraphrased from public pages.",
+    "verified_fields": [
+      "name",
+      "category",
+      "effect"
+    ],
+    "unverified_fields": [
+      "unlock_method",
+      "cost",
+      "mode"
+    ]
   },
   {
     "id": "survival-loop",
@@ -749,6 +1273,7 @@
     "related_entities": [],
     "sources": [
       {
+        "source_id": "steam-full-store",
         "type": "public_source",
         "path_or_url": "https://store.steampowered.com/app/3232380/FROGGY_HATES_SNOW/",
         "label": "Steam full-game store page",
@@ -756,6 +1281,7 @@
         "notes": "Official public Steam store listing."
       },
       {
+        "source_id": "steam-demo-store",
         "type": "public_source",
         "path_or_url": "https://store.steampowered.com/app/4037600/FROGGY_HATES_SNOW_Demo/",
         "label": "Steam demo store page",
@@ -763,6 +1289,7 @@
         "notes": "Official public Steam demo listing."
       },
       {
+        "source_id": "steam-news-devlogs",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
         "label": "Steam community news/devlogs",
@@ -770,6 +1297,7 @@
         "notes": "Official public Steam news and developer posts for launch, systems, updates, and devlogs."
       },
       {
+        "source_id": "digital-bandidos-page",
         "type": "public_source",
         "path_or_url": "https://digitalbandidos.com/games/froggy-hates-snow/",
         "label": "Digital Bandidos game page",
@@ -779,7 +1307,17 @@
     ],
     "verification_status": "Verified",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
-    "notes": "Glossary summary is paraphrased from public pages."
+    "notes": "Glossary summary is paraphrased from public pages.",
+    "verified_fields": [
+      "name",
+      "category",
+      "effect"
+    ],
+    "unverified_fields": [
+      "unlock_method",
+      "cost",
+      "mode"
+    ]
   },
   {
     "id": "ui-scale",
@@ -795,6 +1333,7 @@
     "related_entities": [],
     "sources": [
       {
+        "source_id": "steam-full-store",
         "type": "public_source",
         "path_or_url": "https://store.steampowered.com/app/3232380/FROGGY_HATES_SNOW/",
         "label": "Steam full-game store page",
@@ -802,6 +1341,7 @@
         "notes": "Official public Steam store listing."
       },
       {
+        "source_id": "steam-demo-store",
         "type": "public_source",
         "path_or_url": "https://store.steampowered.com/app/4037600/FROGGY_HATES_SNOW_Demo/",
         "label": "Steam demo store page",
@@ -809,6 +1349,7 @@
         "notes": "Official public Steam demo listing."
       },
       {
+        "source_id": "steam-news-devlogs",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
         "label": "Steam community news/devlogs",
@@ -816,6 +1357,7 @@
         "notes": "Official public Steam news and developer posts for launch, systems, updates, and devlogs."
       },
       {
+        "source_id": "digital-bandidos-page",
         "type": "public_source",
         "path_or_url": "https://digitalbandidos.com/games/froggy-hates-snow/",
         "label": "Digital Bandidos game page",
@@ -825,7 +1367,17 @@
     ],
     "verification_status": "Verified",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
-    "notes": "Glossary summary is paraphrased from public pages."
+    "notes": "Glossary summary is paraphrased from public pages.",
+    "verified_fields": [
+      "name",
+      "category",
+      "effect"
+    ],
+    "unverified_fields": [
+      "unlock_method",
+      "cost",
+      "mode"
+    ]
   },
   {
     "id": "warmth",
@@ -841,6 +1393,7 @@
     "related_entities": [],
     "sources": [
       {
+        "source_id": "steam-full-store",
         "type": "public_source",
         "path_or_url": "https://store.steampowered.com/app/3232380/FROGGY_HATES_SNOW/",
         "label": "Steam full-game store page",
@@ -848,6 +1401,7 @@
         "notes": "Official public Steam store listing."
       },
       {
+        "source_id": "steam-demo-store",
         "type": "public_source",
         "path_or_url": "https://store.steampowered.com/app/4037600/FROGGY_HATES_SNOW_Demo/",
         "label": "Steam demo store page",
@@ -855,6 +1409,7 @@
         "notes": "Official public Steam demo listing."
       },
       {
+        "source_id": "steam-news-devlogs",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/app/3232380/allnews/?l=english",
         "label": "Steam community news/devlogs",
@@ -862,6 +1417,7 @@
         "notes": "Official public Steam news and developer posts for launch, systems, updates, and devlogs."
       },
       {
+        "source_id": "digital-bandidos-page",
         "type": "public_source",
         "path_or_url": "https://digitalbandidos.com/games/froggy-hates-snow/",
         "label": "Digital Bandidos game page",
@@ -871,6 +1427,16 @@
     ],
     "verification_status": "Verified",
     "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
-    "notes": "Glossary summary is paraphrased from public pages."
+    "notes": "Glossary summary is paraphrased from public pages.",
+    "verified_fields": [
+      "name",
+      "category",
+      "effect"
+    ],
+    "unverified_fields": [
+      "unlock_method",
+      "cost",
+      "mode"
+    ]
   }
 ]

@@ -4,6 +4,7 @@ import { pathToFileURL } from "node:url";
 import { REQUIRED_DATASETS } from "./validate-data";
 
 type Source = {
+  source_id?: string;
   type: string;
   path_or_url: string;
   label: string;
@@ -27,6 +28,8 @@ type Entity = {
   verification_status: string;
   last_verified_game_version: string;
   notes: string;
+  verified_fields?: string[];
+  unverified_fields?: string[];
   steam_internal_name?: string | null;
   steam_global_percent_api?: string | null;
   steam_community_percent?: string | null;
@@ -103,10 +106,31 @@ type SteamSnapshot = {
     minimum_combined_skills_tools_attacks_companions: number;
     demo_progress_carries_over: boolean;
     confirmed_terms: string[];
+    news_items?: Array<{
+      source_id: string;
+      gid: string;
+      title: string;
+      date: string;
+      url: string;
+      feedname: string;
+      author: string;
+      wiki_targets: string[];
+      verified_terms: string[];
+      supports: string;
+    }>;
     notes: string[];
   };
   research_gaps: string[];
   refresh_commands: string[];
+};
+
+type ExtractedMetadataSnapshot = {
+  generated_at?: string;
+  gameFilesPresent?: boolean;
+  root?: string;
+  filesScanned?: number;
+  directoriesScanned?: number;
+  readable_files?: unknown[];
 };
 
 const CATEGORY_LABELS: Record<string, string> = {
@@ -187,6 +211,8 @@ function entityTable(entity: Entity) {
     ["Unlock Method", entity.unlock_method],
     ["Cost", entity.cost],
     ["Mode", entity.mode],
+    ["Verified Fields", entity.verified_fields && entity.verified_fields.length > 0 ? entity.verified_fields.join(", ") : "Name/source only"],
+    ["Fields Needing Verification", entity.unverified_fields && entity.unverified_fields.length > 0 ? entity.unverified_fields.join(", ") : "None listed"],
     ["Last Verified", entity.last_verified_game_version],
     ["Notes", entity.notes || "None"]
   ];
@@ -201,7 +227,7 @@ function entityTable(entity: Entity) {
 function sourcesList(entity: Entity) {
   if (entity.sources.length === 0) return "No sources listed yet.\n";
   return entity.sources
-    .map((source) => `- [${mdEscape(source.label)}](${source.path_or_url}) — ${source.type}, confidence ${source.confidence}. ${mdEscape(source.notes)}`)
+    .map((source) => `- [${mdEscape(source.label)}](${source.path_or_url}) — ${source.type}, confidence ${source.confidence}${source.source_id ? `, source ${inlineCode(source.source_id)}` : ""}. ${mdEscape(source.notes)}`)
     .join("\n")
     .concat("\n");
 }
@@ -280,6 +306,7 @@ function screenshotGrid(snapshot: SteamSnapshot) {
 
 function steamNewsFindings(snapshot: SteamSnapshot) {
   const findings = snapshot.steam_news_findings;
+  const newsItems = findings.news_items ?? [];
   return (
     "## Steam News & Devlogs\n\n" +
     `Source stream: [Steam community news/devlogs](${findings.source_url}).\n\n` +
@@ -295,7 +322,38 @@ function steamNewsFindings(snapshot: SteamSnapshot) {
       .join("\n") +
     "\n\n" +
     findings.notes.map((note) => `- ${mdEscape(note)}`).join("\n") +
+    "\n\n" +
+    (newsItems.length > 0
+      ? "### Direct Steam News Sources\n\n" +
+        "| Date | Source ID | Title | Supports |\n|---|---|---|---|\n" +
+        newsItems
+          .map((item) => `| ${mdEscape(item.date)} | ${inlineCode(item.source_id)} | [${mdEscape(item.title)}](${item.url}) | ${mdEscape(item.supports)} |`)
+          .join("\n") +
+        "\n\n"
+      : "") +
     "\n\n"
+  );
+}
+
+function localMetadataStatus(snapshot: ExtractedMetadataSnapshot) {
+  const filesScanned = typeof snapshot.filesScanned === "number" ? snapshot.filesScanned : 0;
+  const readableCount = Array.isArray(snapshot.readable_files) ? snapshot.readable_files.length : 0;
+  return (
+    "## Local Metadata Scan\n\n" +
+    "| Field | Value |\n|---|---|\n" +
+    [
+      ["Generated", snapshot.generated_at ?? "not available"],
+      ["Game files present", snapshot.gameFilesPresent === true ? "yes" : "no"],
+      ["Scan root", snapshot.root ?? "not available"],
+      ["Files scanned", String(filesScanned)],
+      ["Readable metadata files", String(readableCount)]
+    ]
+      .map(([field, value]) => `| ${field} | ${mdEscape(value)} |`)
+      .join("\n") +
+    "\n\n" +
+    (filesScanned === 0 || readableCount === 0
+      ? "The local metadata pass currently contributes no game facts. Public Steam and public web sources are the only populated game-data sources until SteamCMD/local extraction succeeds.\n\n"
+      : "Readable local metadata is summarized in `notes/extracted-metadata.md` and `notes/extracted-metadata.json` without redistributing game assets or long raw excerpts.\n\n")
   );
 }
 
@@ -331,7 +389,7 @@ function sourceLedgerPage(publicSources: PublicSource[], allRows: Entity[]) {
   );
 }
 
-function steamSnapshotPage(snapshot: SteamSnapshot) {
+function steamSnapshotPage(snapshot: SteamSnapshot, extractedMetadata: ExtractedMetadataSnapshot) {
   const full = snapshot.apps.full_game;
   const highest = snapshot.achievements.highest_global_percentages;
   const lowest = snapshot.achievements.lowest_global_percentages;
@@ -352,6 +410,7 @@ function steamSnapshotPage(snapshot: SteamSnapshot) {
     "## Reviews\n\n" +
     reviewSummaryTable(snapshot) +
     steamNewsFindings(snapshot) +
+    localMetadataStatus(extractedMetadata) +
     "## Achievements\n\n" +
     `Public community rows parsed: **${snapshot.achievements.community_rows_count}**. Full-game global percentage API ids parsed: **${snapshot.achievements.full_game_api_ids_count}**. Demo global percentage API status: **${snapshot.achievements.demo_global_percentages_api_status}**; ids parsed: **${snapshot.achievements.demo_api_ids_count}**.\n\n` +
     (snapshot.achievements.demo_global_percentages_api_error ? `Demo achievement endpoint note: ${snapshot.achievements.demo_global_percentages_api_error}.\n\n` : "") +
@@ -375,6 +434,46 @@ function steamSnapshotPage(snapshot: SteamSnapshot) {
     "```bash\n" +
     snapshot.refresh_commands.join("\n") +
     "\n```\n"
+  );
+}
+
+function gameMetadataPage(snapshot: SteamSnapshot) {
+  const full = appSnapshotRows(snapshot.apps.full_game);
+  const demo = appSnapshotRows(snapshot.apps.demo);
+  return (
+    frontmatter("Game Metadata", "Steam metadata summary for FROGGY HATES SNOW and its demo.") +
+    "# Game Metadata\n\n" +
+    "This page keeps volatile store metadata separate from gameplay guidance. Refresh it with `npm run fetch:steam` before relying on prices, review counts, or achievement percentages.\n\n" +
+    "## Steam Apps\n\n" +
+    steamAppComparison(snapshot) +
+    "## Source Links\n\n" +
+    `- [Full game Steam page](${snapshot.apps.full_game.source_url})\n` +
+    `- [Demo Steam page](${snapshot.apps.demo.source_url})\n` +
+    `- [Full game appdetails API](${snapshot.apps.full_game.api_url})\n` +
+    `- [Demo appdetails API](${snapshot.apps.demo.api_url})\n` +
+    `- [Steam achievement page](${snapshot.achievements.community_page_url})\n` +
+    `- [Steam News API](${snapshot.sources.steam_news_api ?? snapshot.sources.steam_news_devlogs})\n\n` +
+    "## Current Snapshot\n\n" +
+    "| Field | Full Game | Demo |\n|---|---|---|\n" +
+    [
+      ["App ID", String(full.app_id), String(demo.app_id)],
+      ["Title", full.title, demo.title],
+      ["Type", full.type, demo.type],
+      ["Release", full.release_date, demo.release_date],
+      ["Developer", full.developer, demo.developer],
+      ["Publisher", full.publisher, demo.publisher],
+      ["Platforms", full.platforms, demo.platforms],
+      ["Steam categories", full.categories, demo.categories],
+      ["Languages", snapshot.apps.full_game.supported_languages_text, snapshot.apps.demo.supported_languages_text],
+      ["Achievements", full.achievements, demo.achievements],
+      ["Screenshots", full.screenshots, demo.screenshots],
+      ["Review summary", fieldValue(snapshot.reviews.full_game), fieldValue(snapshot.reviews.demo)]
+    ]
+      .map(([field, fullValue, demoValue]) => `| ${field} | ${mdEscape(fullValue)} | ${mdEscape(demoValue)} |`)
+      .join("\n") +
+    "\n\n" +
+    "## Demo Relationship\n\n" +
+    `The demo app metadata links back to full app ${snapshot.apps.full_game.app_id}. The public source pass keeps demo facts separate because demo metadata and availability can drift independently from the released full game.\n`
   );
 }
 
@@ -440,7 +539,7 @@ function homepage(allRows: Entity[], snapshot: SteamSnapshot) {
     `Steam source snapshot: full game app ${snapshot.apps.full_game.app_id}, demo app ${snapshot.apps.demo.app_id}, ${snapshot.achievements.community_rows_count} public achievement rows, accessed ${snapshot.accessed_date}.\n\n` +
     "## Browse\n\n" +
     REQUIRED_DATASETS.map((dataset) => `- [${CATEGORY_LABELS[dataset]}](/generated/${dataset}/)`).join("\n") +
-    "\n- [Steam Source Snapshot](/steam-source-snapshot/)\n- [Source Ledger](/source-ledger/)\n- [Verification Status](/verification-status/)" +
+    "\n- [Game Metadata](/game-metadata/)\n- [Steam Source Snapshot](/steam-source-snapshot/)\n- [Source Ledger](/source-ledger/)\n- [Verification Status](/verification-status/)" +
     "\n\n## Priority Research Gaps\n\n" +
     "- Local Steam demo acquisition is blocked in this macOS shell; see `notes/public-research.md`.\n" +
     "- Individual frog/character names, map names, boss names, enemy names, exact upgrade stats, costs, and unlock conditions need gameplay or safe metadata verification.\n" +
@@ -541,6 +640,7 @@ export async function generatePages() {
   const datasetEntries = await Promise.all(REQUIRED_DATASETS.map(async (dataset) => [dataset, await readDataset(dataset)] as const));
   const publicSources = await readJson<PublicSource[]>(path.resolve("src/data/public-sources.json"));
   const steamSnapshot = await readJson<SteamSnapshot>(path.resolve("src/data/steam-snapshot.json"));
+  const extractedMetadata = await readJson<ExtractedMetadataSnapshot>(path.resolve("notes/extracted-metadata.json"));
   const allRows = datasetEntries.flatMap(([, rows]) => rows);
   const lookup = new Map<string, Entity>();
   for (const row of allRows) {
@@ -550,7 +650,8 @@ export async function generatePages() {
 
   await writeFile(path.join(outputRoot, "index.md"), homepage(allRows, steamSnapshot));
   await writeFile(path.join(outputRoot, "source-ledger.md"), sourceLedgerPage(publicSources, allRows));
-  await writeFile(path.join(outputRoot, "steam-source-snapshot.md"), steamSnapshotPage(steamSnapshot));
+  await writeFile(path.join(outputRoot, "steam-source-snapshot.md"), steamSnapshotPage(steamSnapshot, extractedMetadata));
+  await writeFile(path.join(outputRoot, "game-metadata.md"), gameMetadataPage(steamSnapshot));
 
   for (const [dataset, rows] of datasetEntries) {
     const categoryDir = path.join(generatedRoot, dataset);

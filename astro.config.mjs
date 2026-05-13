@@ -17,6 +17,7 @@ export default defineConfig({
       ],
       sidebar: [
         { label: "Start Here", link: "/" },
+        { label: "Game Metadata", link: "/game-metadata/" },
         { label: "Steam Source Snapshot", link: "/steam-source-snapshot/" },
         { label: "Source Ledger", link: "/source-ledger/" },
         {

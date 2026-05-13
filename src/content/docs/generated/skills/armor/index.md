@@ -21,6 +21,8 @@ Armor is named in official Steam news or devlog copy.
 | Unlock Method | Needs verification. |
 | Cost | Needs verification. |
 | Mode | Needs verification. |
+| Verified Fields | name, category, effect |
+| Fields Needing Verification | unlock_method, cost, mode |
 | Last Verified | Public Steam metadata accessed 2026-05-13 |
 | Notes | Exact rarity, cooldown, scaling, and unlock details need gameplay verification. |
 
@@ -30,4 +32,4 @@ No related entities listed yet.
 
 ## Sources
 
-- [Steam community news/devlogs](https://steamcommunity.com/app/3232380/allnews/?l=english) — public_source, confidence high. Official public Steam news and developer posts for launch, systems, updates, and devlogs.
+- [Steam community news/devlogs](https://steamcommunity.com/app/3232380/allnews/?l=english) — public_source, confidence high, source `steam-news-devlogs`. Official public Steam news and developer posts for launch, systems, updates, and devlogs.
