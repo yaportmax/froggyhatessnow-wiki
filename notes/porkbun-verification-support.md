@@ -42,6 +42,16 @@ The command stopped before DNS, Astro config changes, build, or deploy changes.
 
 Do not send Porkbun API keys, secret keys, passwords, payment card details, SMS codes, email verification codes, or ID documents through this repo or support draft. Share request IDs and the visible error message only.
 
+## Gmail Search Notes
+
+Read-only Gmail searches on 2026-05-13 found:
+
+- No Porkbun messages after 2026-05-12.
+- No matching Porkbun phone-verification messages in the last 60 days.
+- One account-creation email verification message from Porkbun on 2026-04-27.
+
+The email verification code itself is intentionally not recorded here. Search Gmail for subject `porkbun.com | Account Creation Email Verification Code` if Porkbun asks for the original account-creation verification email.
+
 ## Support Message Draft
 
 Subject:

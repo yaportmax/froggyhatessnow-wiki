@@ -31,7 +31,7 @@ Latest confirmed purchase attempt:
 - Create request id: `019e21d5-23f8-7df7-b4e0-7d21ca0f9494`
 - Result: stopped before DNS, Astro site changes, build, or deploy.
 - Browser fallback status: the Chrome-extension control path is not exposed in this session, and Computer Use currently cannot attach to Chrome (`cgWindowNotFound`). No UI purchase or verification action was completed.
-- Support packet: `notes/porkbun-verification-support.md` contains the current request IDs, manual verification checklist, and a support message draft.
+- Support packet: `notes/porkbun-verification-support.md` contains the current request IDs, manual verification checklist, Gmail search notes, and a support message draft.
 
 Latest read-only domain status:
 
