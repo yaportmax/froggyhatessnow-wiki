@@ -9,14 +9,14 @@ This project is built with Astro Starlight and seeded from public Steam metadata
 - Full game Steam app ID: `3232380`
 - Demo Steam app ID: `4037600`
 - Parsed public achievements: `42`
-- Generated entity pages: `159`
-- Generated static HTML pages: `184`
+- Generated entity pages: `165`
+- Generated static HTML pages: `190`
 - Verification statuses used: `Verified`, `Inferred`, `Needs verification`
 - First-class source pages: `/game-metadata/`, `/steam-source-snapshot/`, `/achievement-source-matrix/`, and `/source-ledger/`
 - Crawler/source manifests: `/robots.txt` and `/llms.txt`
 - Social preview metadata: Open Graph and Twitter image tags use the public Steam header image URL.
 
-The strongest current source is Steam/public metadata. The source snapshot records Steam appdetails, review summaries, all public Steam screenshots currently exposed by appdetails, a 42-row achievement fact matrix, all 15 current Steam News API items with evidence classifications, volatile price/review/achievement data, and explicit research gaps. Steam news/devlogs now confirm 10 playable frogs, 16 locations, 60+ skills/tools/attacks/companions, demo progress carryover, Puff, Zippy, several launch/update skills, robotic helpers, Blue Gems, artifact rarity tiers, character main-attack concepts, quest-based meta-progression, snow-system mechanics, and Devlog #4's broad enemy/boss attack-pattern/projectile/companion preview. Local demo file extraction is blocked in this shell; see `notes/public-research.md` and `notes/extracted-metadata.md`.
+The strongest current source is Steam/public metadata. The source snapshot records Steam appdetails, review summaries, all public Steam screenshots currently exposed by appdetails, a 42-row achievement fact matrix, all 15 current Steam News API items with evidence classifications, volatile price/review/achievement data, and explicit research gaps. Steam news/devlogs now confirm 10 playable frogs, 16 locations, 60+ skills/tools/attacks/companions, demo progress carryover, Puff, Zippy, several launch/update skills, robotic helpers, Blue Gems, artifact rarity tiers, character main-attack concepts, quest-based meta-progression, snow-system mechanics, and Devlog #4's broad enemy/boss attack-pattern/projectile/companion preview. Official Steam store copy also supports the home-base/resource-deposit loop, snow-as-cover combat use, Peaceful Mode puzzle pacing, and broad enemy/boss behavior variety. Local demo file extraction is blocked in this shell; see `notes/public-research.md` and `notes/extracted-metadata.md`.
 
 The Steam refresh fails loudly when expected source structure drifts: it requests up to 100 Steam News items and errors if the feed may be truncated, derives the achievement count from Steam appdetails, checks non-Steam corroborating pages for marker text, and records the currently blocked demo achievement API as its own source.
 

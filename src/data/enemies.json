@@ -88,6 +88,50 @@
     ]
   },
   {
+    "id": "enemy-behaviors",
+    "slug": "enemy-behaviors",
+    "name": "Enemy behaviors",
+    "aliases": [],
+    "category": "enemies",
+    "short_description": "Official Steam copy says enemies have unique behaviours and weaknesses to learn.",
+    "effect": "Broad enemy-behavior variety is public; exact enemy names, attacks, and weaknesses need gameplay or safe local metadata verification.",
+    "unlock_method": "Needs verification.",
+    "cost": "Needs verification.",
+    "mode": "Core game and demo, except Peaceful Mode is described as monster-free.",
+    "related_entities": [],
+    "sources": [
+      {
+        "source_id": "steam-full-store",
+        "type": "public_source",
+        "path_or_url": "https://store.steampowered.com/app/3232380/FROGGY_HATES_SNOW/",
+        "label": "Steam full-game store page",
+        "confidence": "high",
+        "notes": "Official public Steam store listing."
+      },
+      {
+        "source_id": "steam-demo-store",
+        "type": "public_source",
+        "path_or_url": "https://store.steampowered.com/app/4037600/FROGGY_HATES_SNOW_Demo/",
+        "label": "Steam demo store page",
+        "confidence": "high",
+        "notes": "Official public Steam demo listing."
+      }
+    ],
+    "verification_status": "Verified",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Use as a sourcing page for enemy behavior scope, not as a named enemy.",
+    "verified_fields": [
+      "name",
+      "category",
+      "effect",
+      "mode"
+    ],
+    "unverified_fields": [
+      "unlock_method",
+      "cost"
+    ]
+  },
+  {
     "id": "mystical-creatures",
     "slug": "mystical-creatures",
     "name": "Mystical creatures",

@@ -8,16 +8,16 @@ draft: false
 
 This is the public-source audit trail for the wiki. It separates source availability from gameplay certainty: a public achievement can verify a name without verifying the item's exact effect.
 
-Entity status counts: Verified: 130, Needs verification: 2, Inferred: 27.
+Entity status counts: Verified: 136, Needs verification: 2, Inferred: 27.
 
 ## Source Coverage
 
 | Source Label | Referenced Entities |
 |---|---:|
 | Steam community achievements page | 86 |
+| Steam full-game store page | 45 |
+| Steam demo store page | 45 |
 | Steam global achievement percentages API | 42 |
-| Steam full-game store page | 39 |
-| Steam demo store page | 39 |
 | Achievement condition classification | 27 |
 | Devlog #7: What's New For Launch? | 18 |
 | Xbox Wire developer interview | 13 |

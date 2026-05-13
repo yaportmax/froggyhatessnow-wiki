@@ -1,6 +1,6 @@
 {
   "accessed_date": "2026-05-13",
-  "generated_at": "2026-05-13T15:39:50.593Z",
+  "generated_at": "2026-05-13T15:47:17.883Z",
   "source_policy": [
     "Prefer official public Steam endpoints and pages for game metadata.",
     "Do not copy raw long descriptions, review text, proprietary assets, binaries, source code, or decompiled content.",
@@ -1438,6 +1438,21 @@
         "upgrades"
       ],
       "notes": "Use as high-level loop wording only; exact stats and route optimization need gameplay verification."
+    },
+    {
+      "claim": "Official Steam store copy supports home-base/resource-deposit structure, snow-as-cover combat use, Peaceful Mode puzzle pacing, and broad enemy/boss behavior variety.",
+      "source_ids": [
+        "steam-full-store",
+        "steam-demo-store"
+      ],
+      "confidence": "high",
+      "wiki_targets": [
+        "guides",
+        "glossary",
+        "enemies",
+        "bosses"
+      ],
+      "notes": "Use as broad structure and behavior-scope evidence only; exact layouts, puzzle solutions, weaknesses, and attack timing need gameplay verification."
     },
     {
       "claim": "Warmth/freezing is a survival pressure.",

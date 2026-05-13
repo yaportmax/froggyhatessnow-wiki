@@ -43,6 +43,7 @@ This note summarizes public metadata used to seed the wiki. It intentionally avo
 ## Public Gameplay Concepts
 
 - Verified from official Steam copy: digging through snow, warmth/freezing as survival pressure, gems, keys, treasure chests, artifacts, anomaly zones, escape door, bosses, enemies, Peaceful Mode, upgrades, tools, companions, and a snowy-desert setting.
+- Additional official Steam copy concepts now tracked as pages: home-base/resource deposit structure, snow-as-cover combat use, Peaceful Mode puzzle pacing, and broad enemy/boss behavior variety.
 - Verified from official Steam news/devlogs: 10 playable frogs, 16 locations, 60+ skills/tools/attacks/companions, demo progress carryover, launch movement/projectile skills, robotic helpers, elemental status effects, anomalous-zone rewards, snow heightmap behavior, character main-attack examples, quest-based meta-progression, Blue Gem unlock scope, Devlog #4 broad enemy/boss/attack-pattern/projectile/companion previews, and first post-launch update changes.
 - Corroborated by Xbox Wire developer interview: 10 frogs, 16 maps, 60+ tools/skills/companions, snow heightmap-style technology, companion roles, and Peaceful Mode purpose.
 - Verified named companions/tools/items from public copy or achievements include Penguin, Mole, Owl, Map, Shovel, Cart, Scanner, Locator, Pickaxe, Dynamite, Air Bomb, Flamethrower, Heater Sled, Gloves, Hot Tea, Energy Drink, Poison Flask, Frost Bomb, and Flashbang.

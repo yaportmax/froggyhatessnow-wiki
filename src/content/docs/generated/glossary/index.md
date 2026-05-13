@@ -8,7 +8,7 @@ draft: false
 
 Glossary entries for the unofficial FROGGY HATES SNOW wiki.
 
-Status counts: Verified: 29.
+Status counts: Verified: 33.
 
 | Name | Status | Summary |
 |---|---|---|
@@ -28,12 +28,16 @@ Status counts: Verified: 29.
 | [Freezing](freezing/) | Verified | Survival threat; Steam copy says staying too long in the cold can freeze the player. |
 | [Full game](full-game/) | Verified | Public full game app 3232380; released on Steam May 7, 2026. |
 | [Heightmap snow](heightmap-snow/) | Verified | The snow devlog describes the world snow as a heightmap texture changed by digging. |
+| [Home base](home-base/) | Verified | Official Steam copy says each run begins at the warm safety of home. |
 | [Local metadata unavailable](local-metadata-unavailable/) | Verified | The local game-files scan currently found zero readable files, so the wiki is populated from public sources until SteamCMD/local extraction succeeds. |
 | [Movement abilities](movement-abilities/) | Verified | Steam Devlog #4 previews new frog movement abilities; later launch devlog posts name examples such as Glider, Snowball Roll, and Leap Chain. |
 | [Night Mode](night-mode/) | Verified | Post-launch update calls out Night Mode as an existing comfort option made more visible by attention badges. |
 | [Peaceful Mode](peaceful-mode/) | Verified | Monster-free cozy mode described by Steam copy. |
+| [Peaceful Mode puzzles](peaceful-mode-puzzles/) | Verified | Official Steam copy says Peaceful Mode lets players search for hidden treasures, solve puzzles, and escape at their own pace. |
 | [Projectile types](projectile-types/) | Verified | Steam Devlog #4 previews new enemy and boss projectile types, but does not name or quantify them. |
 | [Quest-based meta-progression](quest-based-meta-progression/) | Verified | Demo/devlog posts describe quests and Blue Gems unlocking characters, abilities, and locations. |
+| [Resource deposit](resource-deposit/) | Verified | Official Steam copy says resources can be carried back home to deposit and grow stronger. |
+| [Snow cover](snow-cover/) | Verified | Official Steam copy says interactive snow can be used as cover in combat. |
 | [Snow digging abilities](snow-digging-abilities/) | Verified | Steam Devlog #4 previews more powerful snow digging abilities; exact stats and scaling need gameplay verification. |
 | [Snow layers](snow-layers/) | Verified | The snow devlog says different areas can have different layers and density. |
 | [Snowbank](snowbank/) | Verified | Interactive snow tile or obstacle described as hiding treasures, traps, or enemies. |

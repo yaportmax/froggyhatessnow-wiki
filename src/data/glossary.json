@@ -704,6 +704,49 @@
     "unverified_fields": []
   },
   {
+    "id": "home-base",
+    "slug": "home-base",
+    "name": "Home base",
+    "aliases": [],
+    "category": "glossary",
+    "short_description": "Official Steam copy says each run begins at the warm safety of home.",
+    "effect": "Reference term.",
+    "unlock_method": "Not applicable.",
+    "cost": "Not applicable.",
+    "mode": "Reference glossary.",
+    "related_entities": [],
+    "sources": [
+      {
+        "source_id": "steam-full-store",
+        "type": "public_source",
+        "path_or_url": "https://store.steampowered.com/app/3232380/FROGGY_HATES_SNOW/",
+        "label": "Steam full-game store page",
+        "confidence": "high",
+        "notes": "Official public Steam store listing."
+      },
+      {
+        "source_id": "steam-demo-store",
+        "type": "public_source",
+        "path_or_url": "https://store.steampowered.com/app/4037600/FROGGY_HATES_SNOW_Demo/",
+        "label": "Steam demo store page",
+        "confidence": "high",
+        "notes": "Official public Steam demo listing."
+      }
+    ],
+    "verification_status": "Verified",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Glossary summary is paraphrased from public pages.",
+    "verified_fields": [
+      "name",
+      "category",
+      "effect",
+      "unlock_method",
+      "cost",
+      "mode"
+    ],
+    "unverified_fields": []
+  },
+  {
     "id": "local-metadata-unavailable",
     "slug": "local-metadata-unavailable",
     "name": "Local metadata unavailable",
@@ -884,6 +927,49 @@
     "unverified_fields": []
   },
   {
+    "id": "peaceful-mode-puzzles",
+    "slug": "peaceful-mode-puzzles",
+    "name": "Peaceful Mode puzzles",
+    "aliases": [],
+    "category": "glossary",
+    "short_description": "Official Steam copy says Peaceful Mode lets players search for hidden treasures, solve puzzles, and escape at their own pace.",
+    "effect": "Reference term.",
+    "unlock_method": "Not applicable.",
+    "cost": "Not applicable.",
+    "mode": "Reference glossary.",
+    "related_entities": [],
+    "sources": [
+      {
+        "source_id": "steam-full-store",
+        "type": "public_source",
+        "path_or_url": "https://store.steampowered.com/app/3232380/FROGGY_HATES_SNOW/",
+        "label": "Steam full-game store page",
+        "confidence": "high",
+        "notes": "Official public Steam store listing."
+      },
+      {
+        "source_id": "steam-demo-store",
+        "type": "public_source",
+        "path_or_url": "https://store.steampowered.com/app/4037600/FROGGY_HATES_SNOW_Demo/",
+        "label": "Steam demo store page",
+        "confidence": "high",
+        "notes": "Official public Steam demo listing."
+      }
+    ],
+    "verification_status": "Verified",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Glossary summary is paraphrased from public pages.",
+    "verified_fields": [
+      "name",
+      "category",
+      "effect",
+      "unlock_method",
+      "cost",
+      "mode"
+    ],
+    "unverified_fields": []
+  },
+  {
     "id": "projectile-types",
     "slug": "projectile-types",
     "name": "Projectile types",
@@ -954,6 +1040,92 @@
         "label": "Devlog #2: A quick update about the Froggy Hates Snow demo",
         "confidence": "high",
         "notes": "2026-01-20 demo update devlog."
+      }
+    ],
+    "verification_status": "Verified",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Glossary summary is paraphrased from public pages.",
+    "verified_fields": [
+      "name",
+      "category",
+      "effect",
+      "unlock_method",
+      "cost",
+      "mode"
+    ],
+    "unverified_fields": []
+  },
+  {
+    "id": "resource-deposit",
+    "slug": "resource-deposit",
+    "name": "Resource deposit",
+    "aliases": [],
+    "category": "glossary",
+    "short_description": "Official Steam copy says resources can be carried back home to deposit and grow stronger.",
+    "effect": "Reference term.",
+    "unlock_method": "Not applicable.",
+    "cost": "Not applicable.",
+    "mode": "Reference glossary.",
+    "related_entities": [],
+    "sources": [
+      {
+        "source_id": "steam-full-store",
+        "type": "public_source",
+        "path_or_url": "https://store.steampowered.com/app/3232380/FROGGY_HATES_SNOW/",
+        "label": "Steam full-game store page",
+        "confidence": "high",
+        "notes": "Official public Steam store listing."
+      },
+      {
+        "source_id": "steam-demo-store",
+        "type": "public_source",
+        "path_or_url": "https://store.steampowered.com/app/4037600/FROGGY_HATES_SNOW_Demo/",
+        "label": "Steam demo store page",
+        "confidence": "high",
+        "notes": "Official public Steam demo listing."
+      }
+    ],
+    "verification_status": "Verified",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Glossary summary is paraphrased from public pages.",
+    "verified_fields": [
+      "name",
+      "category",
+      "effect",
+      "unlock_method",
+      "cost",
+      "mode"
+    ],
+    "unverified_fields": []
+  },
+  {
+    "id": "snow-cover",
+    "slug": "snow-cover",
+    "name": "Snow cover",
+    "aliases": [],
+    "category": "glossary",
+    "short_description": "Official Steam copy says interactive snow can be used as cover in combat.",
+    "effect": "Reference term.",
+    "unlock_method": "Not applicable.",
+    "cost": "Not applicable.",
+    "mode": "Reference glossary.",
+    "related_entities": [],
+    "sources": [
+      {
+        "source_id": "steam-full-store",
+        "type": "public_source",
+        "path_or_url": "https://store.steampowered.com/app/3232380/FROGGY_HATES_SNOW/",
+        "label": "Steam full-game store page",
+        "confidence": "high",
+        "notes": "Official public Steam store listing."
+      },
+      {
+        "source_id": "steam-demo-store",
+        "type": "public_source",
+        "path_or_url": "https://store.steampowered.com/app/4037600/FROGGY_HATES_SNOW_Demo/",
+        "label": "Steam demo store page",
+        "confidence": "high",
+        "notes": "Official public Steam demo listing."
       }
     ],
     "verification_status": "Verified",

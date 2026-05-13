@@ -1545,6 +1545,20 @@ function seedCoreEntities() {
     })
   );
 
+  addUnique(
+    datasets.bosses,
+    entity({
+      name: "Boss behaviors",
+      category: "bosses",
+      short_description: "Official Steam copy says the game has epic bosses with unique behaviours to master.",
+      effect: "Broad boss-behavior variety is public; exact boss names, attacks, and weaknesses need gameplay or safe local metadata verification.",
+      mode: "Core game and demo.",
+      verification_status: "Verified",
+      sources: [fullStore, demoStore],
+      notes: "Use as a sourcing page for boss behavior scope, not as a named boss."
+    })
+  );
+
   for (const name of ["Mystical creatures", "Eerie creatures", "Obsidian creatures"]) {
     addUnique(
       datasets.enemies,
@@ -1575,10 +1589,27 @@ function seedCoreEntities() {
     })
   );
 
+  addUnique(
+    datasets.enemies,
+    entity({
+      name: "Enemy behaviors",
+      category: "enemies",
+      short_description: "Official Steam copy says enemies have unique behaviours and weaknesses to learn.",
+      effect: "Broad enemy-behavior variety is public; exact enemy names, attacks, and weaknesses need gameplay or safe local metadata verification.",
+      mode: "Core game and demo, except Peaceful Mode is described as monster-free.",
+      verification_status: "Verified",
+      sources: [fullStore, demoStore],
+      notes: "Use as a sourcing page for enemy behavior scope, not as a named enemy."
+    })
+  );
+
   const glossaryTerms = [
     ["Warmth", "Survival resource concept; Steam copy says warmth means survival."],
+    ["Home base", "Official Steam copy says each run begins at the warm safety of home."],
+    ["Resource deposit", "Official Steam copy says resources can be carried back home to deposit and grow stronger."],
     ["Freezing", "Survival threat; Steam copy says staying too long in the cold can freeze the player."],
     ["Snowbank", "Interactive snow tile or obstacle described as hiding treasures, traps, or enemies."],
+    ["Snow cover", "Official Steam copy says interactive snow can be used as cover in combat."],
     ["Heightmap snow", "The snow devlog describes the world snow as a heightmap texture changed by digging."],
     ["Snow layers", "The snow devlog says different areas can have different layers and density."],
     ["Escape door", "Victory route requiring enough keys, according to Steam copy."],
@@ -1599,6 +1630,7 @@ function seedCoreEntities() {
     ["Quest-based meta-progression", "Demo/devlog posts describe quests and Blue Gems unlocking characters, abilities, and locations."],
     ["Local metadata unavailable", "The local game-files scan currently found zero readable files, so the wiki is populated from public sources until SteamCMD/local extraction succeeds."],
     ["Peaceful Mode", "Monster-free cozy mode described by Steam copy."],
+    ["Peaceful Mode puzzles", "Official Steam copy says Peaceful Mode lets players search for hidden treasures, solve puzzles, and escape at their own pace."],
     ["Survival loop", "Run structure: leave home, dig, fight, collect, return resources, and grow stronger."],
     ["Demo progress carryover", "Steam news states demo progress carries over to the full game."],
     ["Night Mode", "Post-launch update calls out Night Mode as an existing comfort option made more visible by attention badges."],
@@ -1607,6 +1639,9 @@ function seedCoreEntities() {
     ["Full game", `Public full game app ${FULL_APP_ID}; released on Steam May 7, 2026.`]
   ];
   const glossarySources = new Map<string, Source[]>([
+    ["Home base", [fullStore, demoStore]],
+    ["Resource deposit", [fullStore, demoStore]],
+    ["Snow cover", [fullStore, demoStore]],
     ["Heightmap snow", [snowDevlog, xboxWire]],
     ["Snow layers", [snowDevlog]],
     ["Anomaly zones", [fullStore, demoStore, anomalousZonesDevlog]],
@@ -1625,6 +1660,7 @@ function seedCoreEntities() {
     ["Companion roster", [prelaunchContentDevlog, releaseDateNews, launchDevlog, xboxWire]],
     ["Quest-based meta-progression", [demoOverhaulNews, nextDemoDevlog, demoUpdateDevlog]],
     ["Peaceful Mode", [fullStore, demoStore, xboxWire]],
+    ["Peaceful Mode puzzles", [fullStore, demoStore]],
     ["Demo progress carryover", [releaseDateNews]],
     ["Night Mode", [postLaunchUpdate]],
     ["UI Scale", [postLaunchUpdate]],
@@ -1856,6 +1892,13 @@ function buildSteamSnapshot(args: {
         confidence: "high",
         wiki_targets: ["guides", "tools", "items", "upgrades"],
         notes: "Use as high-level loop wording only; exact stats and route optimization need gameplay verification."
+      },
+      {
+        claim: "Official Steam store copy supports home-base/resource-deposit structure, snow-as-cover combat use, Peaceful Mode puzzle pacing, and broad enemy/boss behavior variety.",
+        source_ids: ["steam-full-store", "steam-demo-store"],
+        confidence: "high",
+        wiki_targets: ["guides", "glossary", "enemies", "bosses"],
+        notes: "Use as broad structure and behavior-scope evidence only; exact layouts, puzzle solutions, weaknesses, and attack timing need gameplay verification."
       },
       {
         claim: "Warmth/freezing is a survival pressure.",
@@ -2103,6 +2146,7 @@ function buildPublicResearchMarkdown(args: {
     "## Public Gameplay Concepts",
     "",
     "- Verified from official Steam copy: digging through snow, warmth/freezing as survival pressure, gems, keys, treasure chests, artifacts, anomaly zones, escape door, bosses, enemies, Peaceful Mode, upgrades, tools, companions, and a snowy-desert setting.",
+    "- Additional official Steam copy concepts now tracked as pages: home-base/resource deposit structure, snow-as-cover combat use, Peaceful Mode puzzle pacing, and broad enemy/boss behavior variety.",
     "- Verified from official Steam news/devlogs: 10 playable frogs, 16 locations, 60+ skills/tools/attacks/companions, demo progress carryover, launch movement/projectile skills, robotic helpers, elemental status effects, anomalous-zone rewards, snow heightmap behavior, character main-attack examples, quest-based meta-progression, Blue Gem unlock scope, Devlog #4 broad enemy/boss/attack-pattern/projectile/companion previews, and first post-launch update changes.",
     "- Corroborated by Xbox Wire developer interview: 10 frogs, 16 maps, 60+ tools/skills/companions, snow heightmap-style technology, companion roles, and Peaceful Mode purpose.",
     "- Verified named companions/tools/items from public copy or achievements include Penguin, Mole, Owl, Map, Shovel, Cart, Scanner, Locator, Pickaxe, Dynamite, Air Bomb, Flamethrower, Heater Sled, Gloves, Hot Tea, Energy Drink, Poison Flask, Frost Bomb, and Flashbang.",

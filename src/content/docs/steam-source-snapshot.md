@@ -8,7 +8,7 @@ draft: false
 
 ![FROGGY HATES SNOW Steam header](https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3232380/4aec6dc45dab3a096faeda88c8036627817f0cfe/header_alt_assets_0.jpg?t=1778580427)
 
-Accessed: **2026-05-13**. Generated: 2026-05-13T15:39:50.593Z.
+Accessed: **2026-05-13**. Generated: 2026-05-13T15:47:17.883Z.
 
 This page is the main sourcing checkpoint for game-populating wiki data. It uses official public Steam pages/APIs first, then marks anything not confirmed by those sources as inferred or needing verification.
 
@@ -176,6 +176,7 @@ Demo achievement endpoint note: https://api.steampowered.com/ISteamUserStats/Get
 |---|---|---|---|---|
 | The player controls Froggy in a snowy desert survival loop. | `steam-full-store`, `steam-demo-store` | high | `frogs`, `maps`, `glossary` | Public store copy supports the protagonist and setting; exact character roster remains unverified. |
 | Runs involve digging through snow, collecting resources, returning value home, and growing stronger. | `steam-full-store`, `steam-demo-store` | high | `guides`, `tools`, `items`, `upgrades` | Use as high-level loop wording only; exact stats and route optimization need gameplay verification. |
+| Official Steam store copy supports home-base/resource-deposit structure, snow-as-cover combat use, Peaceful Mode puzzle pacing, and broad enemy/boss behavior variety. | `steam-full-store`, `steam-demo-store` | high | `guides`, `glossary`, `enemies`, `bosses` | Use as broad structure and behavior-scope evidence only; exact layouts, puzzle solutions, weaknesses, and attack timing need gameplay verification. |
 | Warmth/freezing is a survival pressure. | `steam-full-store`, `steam-demo-store` | high | `guides`, `glossary`, `upgrades` | Exact meter thresholds and upgrade effects remain unverified. |
 | Keys, treasure chests, artifacts, gems, traps, anomaly zones, bosses, and an escape door are public concepts. | `steam-full-store`, `steam-demo-store`, `steam-full-achievements-page` | high | `items`, `bosses`, `glossary`, `guides` | Use as entity scaffolding; do not invent quantities, costs, or drop rates. |
 | Peaceful Mode is public and described as monster-free. | `steam-full-store`, `steam-demo-store` | high | `guides`, `glossary` | Mode-specific rewards, unlocks, and achievement eligibility still need verification. |
