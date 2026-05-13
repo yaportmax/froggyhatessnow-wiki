@@ -10,7 +10,7 @@ Build an unofficial, metadata-first SEO wiki for FROGGY HATES SNOW in this folde
 
 Blocked, not complete.
 
-The wiki/scaffold/data/source/deploy work is complete and verified. The remaining explicit objective is the custom-domain purchase/DNS path: Porkbun still blocks registration with `VERIFICATION_REQUIRED` because the account phone number and email address must be verified. The guarded finisher stops before DNS, Astro config, build, or deploy changes.
+The wiki/scaffold/data/source/deploy work is complete and verified. The remaining explicit objective is the custom-domain purchase/DNS path: Porkbun still blocks registration with `VERIFICATION_REQUIRED` because the account phone number and email address must be verified. Fresh read-only account checks also show `0` Porkbun account credit and auto-topup disabled, while Porkbun's API registration endpoint uses account credit. The guarded finisher stops before DNS, Astro config, build, or deploy changes.
 
 ## Prompt-to-Artifact Checklist
 
@@ -37,7 +37,7 @@ The wiki/scaffold/data/source/deploy work is complete and verified. The remainin
 | Package scripts | `dev`, `build`, `preview`, `scan`, `fetch:steam`, `refresh:data`, `generate`, `validate`, and `build:verified` exist, plus `test`, `deploy:*`, and `domain:*` helpers including `domain:finish:post-verification`, guarded Vercel registrar fallback scripts, `domain:finish:vercel-post-purchase`, the read-only `domain:health` final audit, and guarded `domain:commit-canonical` commit helper. | Done |
 | README and AGENTS | Both exist and document workflow, source rules, validation/deploy/domain paths, and fail-loud behavior. | Done |
 | Domain research | `notes/domain-options.md` lists all required candidates, registrar, registration/renewal prices, pros/cons, best recommendation, backups, Porkbun attempt history, and Vercel registrar fallback prices. `notes/porkbun-verification-support.md` contains the current support-ready blocker packet. | Done |
-| Buy domain via Porkbun API and/or Chrome | Porkbun API confirms `froggyhatessnow.wiki` is available, non-premium, `$2.06` first year / `$26.26` renewal, but registration fails with `VERIFICATION_REQUIRED`. Chrome plugin Node browser-control was not exposed; Computer Use could not attach to Chrome (`cgWindowNotFound`) even after opening a window, so UI verification could not proceed safely. | Blocked |
+| Buy domain via Porkbun API and/or Chrome | Porkbun API confirms `froggyhatessnow.wiki` is available, non-premium, `$2.06` first year / `$26.26` renewal, but registration fails with `VERIFICATION_REQUIRED`. Read-only account checks confirm valid API credentials, `0` account credit, and auto-topup disabled, so credit/payment setup may also be needed after verification. Chrome plugin Node browser-control was not exposed; Computer Use could not attach to Chrome (`cgWindowNotFound`) even after opening a window, so UI verification could not proceed safely. | Blocked |
 | Vercel deployment | Vercel project `yaportmax-5253s-projects/froggyhatessnow-wiki`; active deployment `dpl_FQR7LnA2gPZ4NHhodyEAmQZ6fo9P`; stable alias `https://froggyhatessnow-wiki.vercel.app` passes live checks including source marker `2026-05-13T15:47:17.883Z`. | Done |
 | Custom domain DNS if registered | Vercel has `froggyhatessnow.wiki` and `www.froggyhatessnow.wiki` attached, but DNS is not configured because the domain is not registered. Porkbun DNS returns `INVALID_DOMAIN`. | Waiting on registration |
 | Completion criteria | All criteria are met except “Buy the domain” and resulting DNS/custom-domain canonical verification. | Not complete |
@@ -71,6 +71,7 @@ curl -I --max-time 20 https://froggyhatessnow.wiki/
 - `git diff --check`: passed.
 - `npm run deploy:status`: stable alias live checks passed for homepage, Steam source snapshot, current source timestamp, achievement matrix, homepage Open Graph image metadata, `/robots.txt`, and `/llms.txt`.
 - `npm run domain:status`: `domain_available_not_registered`; latest check request id `019e220c-0e0a-7365-b1e6-33177486f862`, DNS retrieve request id `019e220c-111c-7ffa-945f-fc505d889e4d`.
+- Read-only Porkbun account checks: `/ping` credentials valid; `/account/balance` reports `0` account credit; `/account/apiSettings` reports auto-topup disabled. Request ids: `019e2211-5316-7f37-be69-b58aa4a50816`, `019e2211-807a-7806-882d-e3a08507cf80`, `019e2211-ab74-724a-bbef-1efc02cc18d0`.
 - `npm run domain:health`: expected failure while registration/DNS/canonical switch are incomplete. It now includes an `astro-canonical-site` check for `astro.config.mjs` in addition to Porkbun registration state, Vercel attachment, DNS A records, and custom-domain page markers.
 - `npm run domain:finish:post-verification`: guarded post-verification wrapper exists; after registration/DNS it commits/pushes the canonical config before deployment and then deploys from the clean committed canonical state.
 - `npm run domain:finish:vercel-post-purchase`: guarded non-financial fallback helper exists for after an approved Vercel registrar purchase. It refuses to run unless Vercel attachment and DNS are healthy, switches the Astro canonical site, validates/builds, and then delegates to `domain:commit-canonical -- --deploy-after-commit`.
@@ -83,20 +84,21 @@ curl -I --max-time 20 https://froggyhatessnow.wiki/
 ## Remaining Work
 
 1. Verify the Porkbun account phone number and email address outside this shell.
-2. Run:
+2. Confirm the Porkbun account has enough account credit or payment/autotopup enabled for the `$2.06` API registration.
+3. Run:
 
    ```bash
    npm run domain:finish:post-verification
    ```
 
-3. Confirm Porkbun DNS has:
+4. Confirm Porkbun DNS has:
 
    ```text
    A @ 76.76.21.21
    A www 76.76.21.21
    ```
 
-4. Verify Vercel and live custom-domain behavior. The guarded finisher now checks homepage/source/matrix markers on both the apex and `www` custom domains and then runs `domain:health`; these manual commands are fallback evidence if needed:
+5. Verify Vercel and live custom-domain behavior. The guarded finisher now checks homepage/source/matrix markers on both the apex and `www` custom domains and then runs `domain:health`; these manual commands are fallback evidence if needed:
 
    ```bash
    npx vercel domains inspect froggyhatessnow.wiki
@@ -109,4 +111,4 @@ curl -I --max-time 20 https://froggyhatessnow.wiki/
    npm run deploy:status
    ```
 
-5. Only mark the goal complete after `froggyhatessnow.wiki` is registered, DNS resolves, `astro.config.mjs` uses `site: "https://froggyhatessnow.wiki"`, and live custom-domain checks pass.
+6. Only mark the goal complete after `froggyhatessnow.wiki` is registered, DNS resolves, `astro.config.mjs` uses `site: "https://froggyhatessnow.wiki"`, and live custom-domain checks pass.

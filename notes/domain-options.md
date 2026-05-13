@@ -73,6 +73,12 @@ Manual verification path from Porkbun's own account-contact documentation:
 
 Porkbun's subaccount documentation also identifies the same `Account Owner and Recovery` section as the place to verify the parent account email address and phone number. Porkbun separately documents that some new accounts may be prompted for photo ID verification through Veriff.
 
+Fresh read-only API/account checks on 2026-05-13 confirmed the stored Porkbun API credentials are valid, but `/account/balance` reports `0` account credit and `/account/apiSettings` reports auto-topup disabled. Porkbun's current API spec says `POST /domain/create/{domain}` registers by using account credit and requires sufficient credit, so the Porkbun account may need manual credit/payment setup in addition to email/phone verification before API registration can succeed.
+
+- `ping` request id: `019e2211-5316-7f37-be69-b58aa4a50816`
+- `account/balance` request id: `019e2211-807a-7806-882d-e3a08507cf80`
+- `account/apiSettings` request id: `019e2211-ab74-724a-bbef-1efc02cc18d0`
+
 Registration request details:
 
 - Domain: `froggyhatessnow.wiki`
@@ -212,7 +218,7 @@ Current Vercel recommended records:
 - `A froggyhatessnow.wiki 76.76.21.21`
 - `A www.froggyhatessnow.wiki 76.76.21.21`
 
-After Porkbun account verification:
+After Porkbun account verification and credit/payment setup:
 
 1. Run the guarded finisher:
 

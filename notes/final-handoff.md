@@ -42,7 +42,7 @@ Latest read-only domain status:
 
 ## After Porkbun Verification
 
-Porkbun documentation points the manual account-contact path at `ACCOUNT` -> `Settings / Billing` -> `Account Owner and Recovery` for email/phone verification. Porkbun also documents that some accounts may need an ID verification flow through Veriff. Complete those account checks in Porkbun first; the shell cannot bypass them.
+Porkbun documentation points the manual account-contact path at `ACCOUNT` -> `Settings / Billing` -> `Account Owner and Recovery` for email/phone verification. Porkbun also documents that some accounts may need an ID verification flow through Veriff. Fresh read-only API checks confirmed the stored API credentials are valid, but `/account/balance` reports `0` account credit and auto-topup is disabled. Because Porkbun API registration uses account credit, complete the account verification checks and confirm credit/payment/autotopup in Porkbun first; the shell cannot bypass those account prerequisites.
 
 If the account verification UI does not clear the block, use `notes/porkbun-verification-support.md` to contact Porkbun support without exposing API keys, passwords, payment details, SMS codes, email verification codes, or ID documents.
 

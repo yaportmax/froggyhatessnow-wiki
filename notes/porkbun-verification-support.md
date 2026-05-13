@@ -34,7 +34,8 @@ The command stopped before DNS, Astro config changes, build, or deploy changes.
 2. Open `ACCOUNT` -> `Settings / Billing`.
 3. In `Account Owner and Recovery`, verify the primary account email address and phone number.
 4. If Porkbun requires photo ID verification through Veriff, complete that personally in the Porkbun UI.
-5. After verification clears, return to this repo and run:
+5. Confirm the Porkbun account has enough account credit or enabled payment/autotopup to cover the API registration price.
+6. After verification and funding clear, return to this repo and run:
 
    ```bash
    npm run domain:finish:post-verification
@@ -64,6 +65,12 @@ The current Porkbun OpenAPI spec explicitly lists domain registration requiremen
 - Premium domains cannot be registered via API.
 
 Spec search on 2026-05-13 found account/API-key paths for spend settings, balance, account invites, API-key authorization, and email-hosting password management, but no endpoint to verify or resend verification for the existing account email or phone number. Treat email/phone verification as a manual Porkbun account UI or support action.
+
+Fresh read-only account checks on 2026-05-13 confirmed the API credentials are valid, but the account balance endpoint reports `0` available account credit and auto-topup is disabled. Because Porkbun's API registration endpoint uses account credit, the Porkbun UI may also need account credit or payment/autotopup setup after email/phone verification clears.
+
+- `ping` request id: `019e2211-5316-7f37-be69-b58aa4a50816`
+- `account/balance` request id: `019e2211-807a-7806-882d-e3a08507cf80`
+- `account/apiSettings` request id: `019e2211-ab74-724a-bbef-1efc02cc18d0`
 
 ## Browser Automation Status
 
