@@ -14,6 +14,8 @@ The wiki is built, validated, pushed, and live on Vercel.
 
 `npm run deploy:status` verifies the live alias, homepage, Steam source snapshot, source timestamp marker, and achievement matrix.
 
+`npm run audit:completion` runs the consolidated goal-level audit. It is expected to fail until the custom-domain registration/DNS/canonical checks pass.
+
 ## Remaining Blocker
 
 The custom domain is not registered yet. Porkbun still blocks API registration with:
@@ -80,5 +82,6 @@ Expected custom-domain live checks after deployment:
 - Porkbun DNS contains the expected Vercel A records.
 - Vercel reports the apex and `www` domains configured.
 - `npm run domain:health` reports `"ok": true`.
+- `npm run audit:completion` reports `"ok": true`.
 - `astro.config.mjs` uses `site: "https://froggyhatessnow.wiki"`.
 - The rebuilt/deployed site passes live checks on the custom domain.

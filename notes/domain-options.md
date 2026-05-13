@@ -151,9 +151,10 @@ After Porkbun account verification:
    ```bash
    npm run domain:finish -- --confirm-register-and-dns
    npm run domain:health
+   npm run audit:completion
    ```
 
-   The finisher registers the domain, configures Porkbun DNS, updates the Astro `site` value to `https://froggyhatessnow.wiki`, rebuilds, deploys, reruns Vercel domain checks, verifies live homepage/source/matrix markers on both the apex and `www` custom domains, and then runs `domain:health`. `domain:health` is a read-only repeatable audit for the Astro canonical site value, Porkbun registration state, Vercel attachment, DNS A records, and custom-domain page markers.
+   The finisher registers the domain, configures Porkbun DNS, updates the Astro `site` value to `https://froggyhatessnow.wiki`, rebuilds, deploys, reruns Vercel domain checks, verifies live homepage/source/matrix markers on both the apex and `www` custom domains, and then runs `domain:health`. `domain:health` is a read-only repeatable audit for the Astro canonical site value, Porkbun registration state, Vercel attachment, DNS A records, and custom-domain page markers. `audit:completion` is the final goal-level verifier.
 
 Manual fallback:
 
@@ -189,6 +190,7 @@ Manual fallback:
    curl -I https://froggyhatessnow.wiki/
    curl -I https://www.froggyhatessnow.wiki/
    npm run domain:health
+   npm run audit:completion
    ```
 
 Alternative DNS plan: change the domain nameservers to Vercel's intended nameservers:

@@ -23,6 +23,7 @@ npm install
 npm run fetch:steam
 npm run scan
 npm run validate
+npm run audit:completion
 npm run generate
 npm run build
 npm run dev
@@ -103,6 +104,8 @@ The finisher registers the domain, configures Porkbun DNS, switches the Astro ca
 See `notes/domain-options.md` for pricing and next steps.
 
 The concise remaining-blocker handoff is in `notes/final-handoff.md`.
+
+`npm run audit:completion` is read-only except for normal build output. It verifies the goal-level artifact checklist, required scripts, data coverage, generated pages, git state, validator, tests, build, deployed Vercel alias, and custom-domain health. It is expected to fail until the custom domain is registered, DNS resolves, and the Astro canonical site is switched.
 
 `npm run deploy:status` is read-only. It checks which deployment the stable Vercel alias is actively serving, verifies key live wiki pages, compares the live Steam source page against the local `steam-snapshot.json` timestamp, and reports any queued/building deployments without removing them.
 

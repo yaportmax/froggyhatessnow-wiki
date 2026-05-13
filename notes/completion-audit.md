@@ -49,6 +49,7 @@ git status --short
 git rev-parse HEAD
 git ls-remote origin refs/heads/main
 npm run validate
+npm run audit:completion
 npm test
 npm run build
 npx tsc --noEmit
@@ -64,6 +65,7 @@ curl -I --max-time 20 https://froggyhatessnow.wiki/
 
 - `git status --short`: clean before the latest script/doc edits; re-check after committing any audit or helper changes.
 - `npm run validate`: validated 11 entity datasets plus `public-sources.json` and `steam-snapshot.json`.
+- `npm run audit:completion`: consolidated goal-level audit exists and is expected to fail until the custom-domain registration/DNS/canonical gate passes.
 - `npm test`: 2 test files, 10 tests passed.
 - `npm run build`: 178 pages built; Pagefind indexed 177 pages.
 - `npx tsc --noEmit`: passed when run after build-generated Astro types were present.
@@ -99,6 +101,7 @@ curl -I --max-time 20 https://froggyhatessnow.wiki/
    curl -I https://froggyhatessnow.wiki/
    curl -I https://www.froggyhatessnow.wiki/
    npm run domain:health
+   npm run audit:completion
    npm run deploy:status
    ```
 
