@@ -62,15 +62,15 @@ curl -I --max-time 20 https://froggyhatessnow.wiki/
 
 ## Latest Results
 
-- `git status --short`: clean at commit `9853003e9af763a5e28ec2fca74489c5135944d6` before this continuation note refresh.
+- `git status --short`: clean at commit `87896cd5d812091ae051deb482883a84613fea10` before this continuation note refresh.
 - `npm run validate`: validated 11 entity datasets plus `public-sources.json` and `steam-snapshot.json`.
-- `npm run audit:completion`: exit 1 as expected; all source/content/build/deploy checks passed, while `astro-canonical-custom-domain` and `command:domain-health` failed because `froggyhatessnow.wiki` DNS still returns `ENOTFOUND` and `astro.config.mjs` still points at the Vercel alias.
+- `npm run audit:completion`: exit 1 as expected; all source/content/build/deploy checks passed, while `astro-canonical-custom-domain` and `command:domain-health` failed because `froggyhatessnow.wiki` DNS still returns `ENOTFOUND` and `astro.config.mjs` still points at the Vercel alias. Latest run at 2026-05-13 09:25 PDT confirmed local/remote `main` are clean at `87896cd5d812091ae051deb482883a84613fea10`.
 - `npm test`: 2 test files, 10 tests passed.
 - `npm run build`: 190 pages built; Pagefind indexed 189 pages.
 - `npx tsc --noEmit`: currently fails in Starlight generated utility types (`astro:content` has no exported `RenderResult`); `npm run build`, `npm test`, and `npm run validate` pass.
 - `git diff --check`: passed.
 - `npm run deploy:status`: stable alias live checks passed for homepage, Steam source snapshot, current source timestamp `2026-05-13T16:07:29.110Z`, achievement matrix, homepage Open Graph image metadata, `/robots.txt`, and `/llms.txt`.
-- `npm run domain:status`: `domain_available_not_registered`; latest check request id `019e2224-4e46-7a8f-b2a8-a5059a23e3b0`, DNS retrieve request id `019e2224-5256-7899-a55a-00f958494e3a`.
+- `npm run domain:status`: `domain_available_not_registered`; latest check request id `019e2227-b0a7-77ca-af72-9130711e9644`, DNS retrieve request id `019e2227-b442-78a0-a57d-79ddef290644`.
 - Read-only Porkbun account checks: `/ping` credentials valid; `/account/balance` reports `0` account credit; `/account/apiSettings` reports auto-topup disabled. Request ids: `019e2211-5316-7f37-be69-b58aa4a50816`, `019e2211-807a-7806-882d-e3a08507cf80`, `019e2211-ab74-724a-bbef-1efc02cc18d0`.
 - `npm run domain:health`: expected failure while registration/DNS/canonical switch are incomplete. It now includes an `astro-canonical-site` check for `astro.config.mjs` in addition to Porkbun registration state, Vercel attachment, DNS A records, and custom-domain page markers.
 - `npm run domain:finish:post-verification`: guarded post-verification wrapper exists; after registration/DNS it commits/pushes the canonical config before deployment and then deploys from the clean committed canonical state.

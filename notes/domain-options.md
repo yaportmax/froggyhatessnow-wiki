@@ -202,6 +202,11 @@ A final read-only continuation check still reported `domain_available_not_regist
 - `domain:status` check: `019e2224-4e46-7a8f-b2a8-a5059a23e3b0`
 - `domain:status` DNS retrieve: `019e2224-5256-7899-a55a-00f958494e3a`
 
+A fresh read-only continuation check at 2026-05-13 09:25 PDT still reported `domain_available_not_registered`:
+
+- `domain:status` check: `019e2227-b0a7-77ca-af72-9130711e9644`
+- `domain:status` DNS retrieve: `019e2227-b442-78a0-a57d-79ddef290644`
+
 The latest direct custom-domain URL check failed before HTTP because DNS does not resolve yet:
 
 ```text
