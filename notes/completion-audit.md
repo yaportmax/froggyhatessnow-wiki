@@ -27,17 +27,18 @@ Everything is implemented, validated, pushed, and deployed except the explicit d
 | Safe metadata scanner | `scripts/scan-game-files.ts`; `npm run scan` completed and wrote empty safe metadata reports because no demo files were acquired. | Done |
 | Extracted metadata notes | `notes/extracted-metadata.md` and `notes/extracted-metadata.json`; latest scan reports 0 files and 0 readable metadata files. | Done |
 | Public metadata/source gathering | `scripts/fetch-steam-public-data.ts`, `src/data/steam-snapshot.json`, `src/data/public-sources.json`, `notes/public-research.md`. | Done |
-| Steam game sourcing prioritized | Steam store/API, Steam achievements/API, review summaries, screenshots, direct Steam News API records, and Steam news/devlogs are recorded; source snapshot confirms 10 frogs, 16 locations, 60+ skills/tools/attacks/companions, demo progress carryover, Puff, Zippy, launch/update skills, helpers, Blue Gems, artifact tiers, character main-attack concepts, quest-based meta-progression, and snow mechanics. | Done |
+| Steam game sourcing prioritized | Steam store/API, Steam achievements/API, review summaries, screenshots, direct Steam News API records, and Steam news/devlogs are recorded; source snapshot confirms 10 frogs, 16 locations, 60+ skills/tools/attacks/companions, demo progress carryover, Puff, Zippy, launch/update skills, helpers, Blue Gems, artifact tiers, character main-attack concepts, quest-based meta-progression, and snow mechanics. Current snapshot stores a 42-row achievement fact matrix, 20 parsed loadout-name rows, and all 14 full-game / 13 demo Steam screenshots currently exposed by appdetails. | Done |
 | Structured datasets | 11 datasets exist with 153 total entities: frogs 5, maps 5, tools 16, items 12, skills 29, companions 6, upgrades 7, bosses 3, enemies 3, achievements 42, glossary 25. | Done |
 | Entity source/status rules | `npm run validate` checks required fields, duplicate ids/slugs, verification statuses, source types, source IDs against `public-sources.json`, snapshot claim source IDs, related links, and Verified-without-source cases. | Done |
 | Generated category/detail pages | `npm run generate` creates generated docs; current build includes 153 entity detail pages and 11 category indexes. | Done |
-| Static pages | Homepage, beginner guide, warmth guide, best upgrades, unlocks, game modes, FAQ, contribution page, verification status, game metadata, source ledger, and Steam source snapshot exist under `src/content/docs/`. | Done |
+| Static pages | Homepage, beginner guide, warmth guide, best upgrades, unlocks, game modes, FAQ, contribution page, verification status, game metadata, source ledger, Steam source snapshot, and achievement source matrix exist under `src/content/docs/`. | Done |
 | SEO basics | `astro.config.mjs` has canonical `site`; pages use descriptive titles/descriptions and generated category/detail routes. | Done |
 | Package scripts | Required scripts are present: `dev`, `build`, `preview`, `scan`, `generate`, `validate`; additional `fetch:steam`, `domain:check`, `domain:register`, `domain:dns`, and `test` scripts are present. | Done |
 | Tests | `npm test` passed 2 files / 7 tests. | Done |
-| Build | `npm run build` passed and generated 177 pages; Pagefind indexed 176 pages. | Done |
-| Vercel deployment | Production deploy is READY at `https://froggyhatessnow-wiki-j6mdliqas-yaportmax-5253s-projects.vercel.app`; stable alias `https://froggyhatessnow-wiki.vercel.app` returns 200. | Done |
-| Live source page | `https://froggyhatessnow-wiki.vercel.app/steam-source-snapshot/` returns 200 and contains Direct Steam News Sources and Local Metadata Scan sections. | Done |
+| Build | `npm run build` passed and generated 178 pages; Pagefind indexed 177 pages. | Done |
+| Vercel deployment | Production deploy is READY at `https://froggyhatessnow-wiki-2w4p63co5-yaportmax-5253s-projects.vercel.app`; stable alias `https://froggyhatessnow-wiki.vercel.app` returns 200. | Done |
+| Live source page | `https://froggyhatessnow-wiki.vercel.app/steam-source-snapshot/` returns 200 and contains Direct Steam News Sources, Local Metadata Scan, 14 full-game screenshot count, and Achievement Source Matrix link. | Done |
+| Live achievement matrix page | `https://froggyhatessnow-wiki.vercel.app/achievement-source-matrix/` returns 200 and contains Milestone Series and Loadout Names sections. | Done |
 | Live game metadata page | `https://froggyhatessnow-wiki.vercel.app/game-metadata/` returns 200. | Done |
 | Domain research | `notes/domain-options.md` lists required candidates, prices, pros/cons, recommendation, backups, and sources. | Done |
 | Domain purchase | `npm run domain:check` confirms `froggyhatessnow.wiki` is available, non-premium, `$2.06` first year / `$26.26` renewal. Purchase attempts fail with Porkbun `VERIFICATION_REQUIRED`. | Blocked |
@@ -48,6 +49,8 @@ Everything is implemented, validated, pushed, and deployed except the explicit d
 
 ```bash
 npm run scan
+npm run fetch:steam
+npm run generate
 npm run validate
 npm test
 npm run build
@@ -57,20 +60,23 @@ npx vercel domains inspect froggyhatessnow.wiki
 npx vercel domains inspect www.froggyhatessnow.wiki
 curl -fsS -o /tmp/froggy-live-home.html -w '%{http_code}\n' https://froggyhatessnow-wiki.vercel.app/
 curl -fsS -o /tmp/froggy-live-steam.html -w '%{http_code}\n' https://froggyhatessnow-wiki.vercel.app/steam-source-snapshot/
+curl -fsS -o /tmp/froggy-achievement-matrix.html -w '%{http_code}\n' https://froggyhatessnow-wiki.vercel.app/achievement-source-matrix/
 curl -fsS -o /tmp/froggy-game-metadata.html -w '%{http_code}\n' https://froggyhatessnow-wiki.vercel.app/game-metadata/
 ```
 
 ## Latest Command Results
 
 - `npm run scan`: scanned 0 files; summarized 0 readable metadata files.
+- `npm run fetch:steam`: wrote 42 achievement rows, 42 full-game API percentage ids, 0 demo API ids, and 61 Steam news/devlog terms across 10 direct news items.
+- `npm run generate`: generated 153 entity detail pages and 11 category indexes, including `/achievement-source-matrix/`.
 - `npm run validate`: validated 11 entity datasets plus `public-sources.json` and `steam-snapshot.json`.
 - `npm test`: 2 test files / 7 tests passed.
-- `npm run build`: 177 pages built; 176 pages indexed by Pagefind.
-- `npx vercel deploy --prod`: deployment `dpl_q7MwNNJSJNT7RC72dNVJLUpmxxa5` READY; inspect URL `https://vercel.com/yaportmax-5253s-projects/froggyhatessnow-wiki/q7MwNNJSJNT7RC72dNVJLUpmxxa5`.
+- `npm run build`: 178 pages built; 177 pages indexed by Pagefind.
+- `npx vercel deploy --prod`: deployment `dpl_3XnAZe8aBePhHR6K483smUq9wjPJ` READY; inspect URL `https://vercel.com/yaportmax-5253s-projects/froggyhatessnow-wiki/3XnAZe8aBePhHR6K483smUq9wjPJ`.
 - `npm run domain:check`: `froggyhatessnow.wiki` available yes, type registration, price `2.06`, regularPrice `26.26`, premium no, request id `019e20f1-eb98-7952-a792-b855c6f2a08c`.
 - `npm run domain:dns`: blocked before registration; Porkbun returned `INVALID_DOMAIN`, request id `019e20f4-1c03-7a52-ba90-64e1bb4a9fef`.
 - Vercel domain inspect: apex and `www` domains found, edge network yes, DNS not configured, intended nameservers `ns1.vercel-dns.com` and `ns2.vercel-dns.com`, recommended records `A froggyhatessnow.wiki 76.76.21.21` and `A www.froggyhatessnow.wiki 76.76.21.21`.
-- Live homepage, Steam source snapshot, and game metadata pages returned HTTP 200 on the Vercel alias.
+- Live homepage, Steam source snapshot, achievement source matrix, and game metadata pages returned HTTP 200 on the Vercel alias.
 
 ## Remaining Work
 

@@ -48,7 +48,11 @@ async function makeDataDir(overrides: Record<string, unknown[]> = {}) {
             type: "game",
             source_url: "https://store.steampowered.com/app/3232380/",
             api_url: "https://store.steampowered.com/api/appdetails?appids=3232380",
-            screenshots_count: 0
+            genres: [],
+            categories: [],
+            screenshots_count: 0,
+            screenshots: [],
+            movies: []
           },
           demo: {
             app_id: 4037600,
@@ -56,12 +60,32 @@ async function makeDataDir(overrides: Record<string, unknown[]> = {}) {
             type: "demo",
             source_url: "https://store.steampowered.com/app/4037600/",
             api_url: "https://store.steampowered.com/api/appdetails?appids=4037600",
-            screenshots_count: 0
+            genres: [],
+            categories: [],
+            screenshots_count: 0,
+            screenshots: [],
+            movies: []
           }
         },
-        reviews: {},
-        achievements: {},
+        reviews: {
+          full_game: {},
+          demo: {}
+        },
+        achievements: {
+          community_page_url: "https://steamcommunity.com/stats/3232380/achievements/?l=english",
+          global_percentages_api_url: "https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=3232380&format=json",
+          demo_global_percentages_api_url: "https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=4037600&format=json",
+          demo_global_percentages_api_status: 403,
+          community_rows_count: 0,
+          full_game_api_ids_count: 0,
+          demo_api_ids_count: 0,
+          facts: [],
+          highest_global_percentages: [],
+          lowest_global_percentages: [],
+          notes: []
+        },
         public_gameplay_claims: [],
+        steam_news_findings: {},
         research_gaps: [],
         refresh_commands: []
       },

@@ -1,6 +1,6 @@
 {
   "accessed_date": "2026-05-13",
-  "generated_at": "2026-05-13T11:35:08.178Z",
+  "generated_at": "2026-05-13T11:53:54.447Z",
   "source_policy": [
     "Prefer official public Steam endpoints and pages for game metadata.",
     "Do not copy raw long descriptions, review text, proprietary assets, binaries, source code, or decompiled content.",
@@ -104,6 +104,46 @@
           "id": 5,
           "thumbnail_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3232380/e8a1af46b0b68937ea11583feff6b28a17bb9fbb/ss_e8a1af46b0b68937ea11583feff6b28a17bb9fbb.600x338.jpg?t=1778580427",
           "full_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3232380/e8a1af46b0b68937ea11583feff6b28a17bb9fbb/ss_e8a1af46b0b68937ea11583feff6b28a17bb9fbb.1920x1080.jpg?t=1778580427"
+        },
+        {
+          "id": 6,
+          "thumbnail_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3232380/bb761e7483b5844abf3f09182e944cdbae764efe/ss_bb761e7483b5844abf3f09182e944cdbae764efe.600x338.jpg?t=1778580427",
+          "full_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3232380/bb761e7483b5844abf3f09182e944cdbae764efe/ss_bb761e7483b5844abf3f09182e944cdbae764efe.1920x1080.jpg?t=1778580427"
+        },
+        {
+          "id": 7,
+          "thumbnail_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3232380/497c373b1cb13555a159c569f6253141bea27122/ss_497c373b1cb13555a159c569f6253141bea27122.600x338.jpg?t=1778580427",
+          "full_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3232380/497c373b1cb13555a159c569f6253141bea27122/ss_497c373b1cb13555a159c569f6253141bea27122.1920x1080.jpg?t=1778580427"
+        },
+        {
+          "id": 8,
+          "thumbnail_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3232380/167f5a01926f5458cbf8acdf6e5f57c0cf09230f/ss_167f5a01926f5458cbf8acdf6e5f57c0cf09230f.600x338.jpg?t=1778580427",
+          "full_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3232380/167f5a01926f5458cbf8acdf6e5f57c0cf09230f/ss_167f5a01926f5458cbf8acdf6e5f57c0cf09230f.1920x1080.jpg?t=1778580427"
+        },
+        {
+          "id": 9,
+          "thumbnail_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3232380/f5fdcb7fcef1dbe323bb2db47c769234156778bf/ss_f5fdcb7fcef1dbe323bb2db47c769234156778bf.600x338.jpg?t=1778580427",
+          "full_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3232380/f5fdcb7fcef1dbe323bb2db47c769234156778bf/ss_f5fdcb7fcef1dbe323bb2db47c769234156778bf.1920x1080.jpg?t=1778580427"
+        },
+        {
+          "id": 10,
+          "thumbnail_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3232380/69ace4199b27dd298b4c269ca3d282ee9e8019da/ss_69ace4199b27dd298b4c269ca3d282ee9e8019da.600x338.jpg?t=1778580427",
+          "full_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3232380/69ace4199b27dd298b4c269ca3d282ee9e8019da/ss_69ace4199b27dd298b4c269ca3d282ee9e8019da.1920x1080.jpg?t=1778580427"
+        },
+        {
+          "id": 11,
+          "thumbnail_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3232380/ded12669b5aed452dcc9c15645cfd7c8db9d197e/ss_ded12669b5aed452dcc9c15645cfd7c8db9d197e.600x338.jpg?t=1778580427",
+          "full_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3232380/ded12669b5aed452dcc9c15645cfd7c8db9d197e/ss_ded12669b5aed452dcc9c15645cfd7c8db9d197e.1920x1080.jpg?t=1778580427"
+        },
+        {
+          "id": 12,
+          "thumbnail_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3232380/a4155c1532f95214f153374543b9142ce320fec4/ss_a4155c1532f95214f153374543b9142ce320fec4.600x338.jpg?t=1778580427",
+          "full_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3232380/a4155c1532f95214f153374543b9142ce320fec4/ss_a4155c1532f95214f153374543b9142ce320fec4.1920x1080.jpg?t=1778580427"
+        },
+        {
+          "id": 13,
+          "thumbnail_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3232380/cae523ea28339ffd8f691c7370b96643fe5b5b5c/ss_cae523ea28339ffd8f691c7370b96643fe5b5b5c.600x338.jpg?t=1778580427",
+          "full_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3232380/cae523ea28339ffd8f691c7370b96643fe5b5b5c/ss_cae523ea28339ffd8f691c7370b96643fe5b5b5c.1920x1080.jpg?t=1778580427"
         }
       ],
       "movies": [
@@ -187,6 +227,41 @@
           "id": 5,
           "thumbnail_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4037600/bb761e7483b5844abf3f09182e944cdbae764efe/ss_bb761e7483b5844abf3f09182e944cdbae764efe.600x338.jpg?t=1777394247",
           "full_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4037600/bb761e7483b5844abf3f09182e944cdbae764efe/ss_bb761e7483b5844abf3f09182e944cdbae764efe.1920x1080.jpg?t=1777394247"
+        },
+        {
+          "id": 6,
+          "thumbnail_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4037600/2ab1c66d384491ead4a955290de1d96da2feed57/ss_2ab1c66d384491ead4a955290de1d96da2feed57.600x338.jpg?t=1777394247",
+          "full_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4037600/2ab1c66d384491ead4a955290de1d96da2feed57/ss_2ab1c66d384491ead4a955290de1d96da2feed57.1920x1080.jpg?t=1777394247"
+        },
+        {
+          "id": 7,
+          "thumbnail_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4037600/e8a1af46b0b68937ea11583feff6b28a17bb9fbb/ss_e8a1af46b0b68937ea11583feff6b28a17bb9fbb.600x338.jpg?t=1777394247",
+          "full_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4037600/e8a1af46b0b68937ea11583feff6b28a17bb9fbb/ss_e8a1af46b0b68937ea11583feff6b28a17bb9fbb.1920x1080.jpg?t=1777394247"
+        },
+        {
+          "id": 8,
+          "thumbnail_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4037600/497c373b1cb13555a159c569f6253141bea27122/ss_497c373b1cb13555a159c569f6253141bea27122.600x338.jpg?t=1777394247",
+          "full_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4037600/497c373b1cb13555a159c569f6253141bea27122/ss_497c373b1cb13555a159c569f6253141bea27122.1920x1080.jpg?t=1777394247"
+        },
+        {
+          "id": 9,
+          "thumbnail_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4037600/167f5a01926f5458cbf8acdf6e5f57c0cf09230f/ss_167f5a01926f5458cbf8acdf6e5f57c0cf09230f.600x338.jpg?t=1777394247",
+          "full_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4037600/167f5a01926f5458cbf8acdf6e5f57c0cf09230f/ss_167f5a01926f5458cbf8acdf6e5f57c0cf09230f.1920x1080.jpg?t=1777394247"
+        },
+        {
+          "id": 10,
+          "thumbnail_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4037600/a4155c1532f95214f153374543b9142ce320fec4/ss_a4155c1532f95214f153374543b9142ce320fec4.600x338.jpg?t=1777394247",
+          "full_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4037600/a4155c1532f95214f153374543b9142ce320fec4/ss_a4155c1532f95214f153374543b9142ce320fec4.1920x1080.jpg?t=1777394247"
+        },
+        {
+          "id": 11,
+          "thumbnail_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4037600/69ace4199b27dd298b4c269ca3d282ee9e8019da/ss_69ace4199b27dd298b4c269ca3d282ee9e8019da.600x338.jpg?t=1777394247",
+          "full_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4037600/69ace4199b27dd298b4c269ca3d282ee9e8019da/ss_69ace4199b27dd298b4c269ca3d282ee9e8019da.1920x1080.jpg?t=1777394247"
+        },
+        {
+          "id": 12,
+          "thumbnail_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4037600/f5fdcb7fcef1dbe323bb2db47c769234156778bf/ss_f5fdcb7fcef1dbe323bb2db47c769234156778bf.600x338.jpg?t=1777394247",
+          "full_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4037600/f5fdcb7fcef1dbe323bb2db47c769234156778bf/ss_f5fdcb7fcef1dbe323bb2db47c769234156778bf.1920x1080.jpg?t=1777394247"
         }
       ],
       "movies": [
@@ -232,6 +307,945 @@
     "community_rows_count": 42,
     "full_game_api_ids_count": 42,
     "demo_api_ids_count": 0,
+    "facts": [
+      {
+        "title": "Power Hungry I",
+        "slug": "power-hungry-i",
+        "description": "Unlock 1 Skill",
+        "steam_internal_name": "power_hungry_1",
+        "steam_global_percent_api": "86.4",
+        "steam_community_percent": "85.8%",
+        "mentioned_entities": [],
+        "source_ids": [
+          "steam-full-achievements-page",
+          "steam-full-global-achievement-percentages"
+        ],
+        "notes": "Achievement row verifies this progression/milestone condition; no named loadout entities were parsed from it."
+      },
+      {
+        "title": "Relic Hunter I",
+        "slug": "relic-hunter-i",
+        "description": "Collect 1 Artifact",
+        "steam_internal_name": "relic_hunter_1",
+        "steam_global_percent_api": "85.4",
+        "steam_community_percent": "84.8%",
+        "mentioned_entities": [],
+        "source_ids": [
+          "steam-full-achievements-page",
+          "steam-full-global-achievement-percentages"
+        ],
+        "notes": "Achievement row verifies this progression/milestone condition; no named loadout entities were parsed from it."
+      },
+      {
+        "title": "Pathfinder I",
+        "slug": "pathfinder-i",
+        "description": "Unlock 1 Location",
+        "steam_internal_name": "pathfinder_1",
+        "steam_global_percent_api": "76.5",
+        "steam_community_percent": "76.1%",
+        "mentioned_entities": [],
+        "source_ids": [
+          "steam-full-achievements-page",
+          "steam-full-global-achievement-percentages"
+        ],
+        "notes": "Achievement row verifies this progression/milestone condition; no named loadout entities were parsed from it."
+      },
+      {
+        "title": "Assemble the Team I",
+        "slug": "assemble-the-team-i",
+        "description": "Unlock 1 Character",
+        "steam_internal_name": "assemble_the_team_1",
+        "steam_global_percent_api": "68.7",
+        "steam_community_percent": "68.5%",
+        "mentioned_entities": [],
+        "source_ids": [
+          "steam-full-achievements-page",
+          "steam-full-global-achievement-percentages"
+        ],
+        "notes": "Achievement row verifies this progression/milestone condition; no named loadout entities were parsed from it."
+      },
+      {
+        "title": "Relic Hunter II",
+        "slug": "relic-hunter-ii",
+        "description": "Collect 5 Artifacts",
+        "steam_internal_name": "relic_hunter_2",
+        "steam_global_percent_api": "68.1",
+        "steam_community_percent": "67.9%",
+        "mentioned_entities": [],
+        "source_ids": [
+          "steam-full-achievements-page",
+          "steam-full-global-achievement-percentages"
+        ],
+        "notes": "Achievement row verifies this progression/milestone condition; no named loadout entities were parsed from it."
+      },
+      {
+        "title": "Snow Master I",
+        "slug": "snow-master-i",
+        "description": "Fully complete 1 Location",
+        "steam_internal_name": "snow_master_1",
+        "steam_global_percent_api": "67.3",
+        "steam_community_percent": "67.3%",
+        "mentioned_entities": [],
+        "source_ids": [
+          "steam-full-achievements-page",
+          "steam-full-global-achievement-percentages"
+        ],
+        "notes": "Achievement row verifies this progression/milestone condition; no named loadout entities were parsed from it."
+      },
+      {
+        "title": "Old School Explorer",
+        "slug": "old-school-explorer",
+        "description": "Survive a run with Map, Shovel & Cart",
+        "steam_internal_name": "old_school_explorer",
+        "steam_global_percent_api": "64.8",
+        "steam_community_percent": "64.5%",
+        "mentioned_entities": [
+          {
+            "name": "Map",
+            "id": "map",
+            "category": "tools",
+            "certainty": "name_verified_category_inferred",
+            "notes": "Achievement wording verifies the name appears in a condition; gameplay type/effect still needs confirmation."
+          },
+          {
+            "name": "Shovel",
+            "id": "shovel",
+            "category": "tools",
+            "certainty": "name_verified_category_inferred",
+            "notes": "Achievement wording verifies the name appears in a condition; gameplay type/effect still needs confirmation."
+          },
+          {
+            "name": "Cart",
+            "id": "cart",
+            "category": "tools",
+            "certainty": "name_verified_category_inferred",
+            "notes": "Achievement wording verifies the name appears in a condition; gameplay type/effect still needs confirmation."
+          }
+        ],
+        "source_ids": [
+          "steam-full-achievements-page",
+          "steam-full-global-achievement-percentages"
+        ],
+        "notes": "Use mentioned entities as source-backed names only unless another source verifies behavior."
+      },
+      {
+        "title": "Power Hungry II",
+        "slug": "power-hungry-ii",
+        "description": "Unlock 5 Skills",
+        "steam_internal_name": "power_hungry_2",
+        "steam_global_percent_api": "64.6",
+        "steam_community_percent": "64.3%",
+        "mentioned_entities": [],
+        "source_ids": [
+          "steam-full-achievements-page",
+          "steam-full-global-achievement-percentages"
+        ],
+        "notes": "Achievement row verifies this progression/milestone condition; no named loadout entities were parsed from it."
+      },
+      {
+        "title": "Relic Hunter III",
+        "slug": "relic-hunter-iii",
+        "description": "Collect 10 Artifacts",
+        "steam_internal_name": "relic_hunter_3",
+        "steam_global_percent_api": "49.3",
+        "steam_community_percent": "49.2%",
+        "mentioned_entities": [],
+        "source_ids": [
+          "steam-full-achievements-page",
+          "steam-full-global-achievement-percentages"
+        ],
+        "notes": "Achievement row verifies this progression/milestone condition; no named loadout entities were parsed from it."
+      },
+      {
+        "title": "Power Hungry III",
+        "slug": "power-hungry-iii",
+        "description": "Unlock 10 Skills",
+        "steam_internal_name": "power_hungry_3",
+        "steam_global_percent_api": "45.4",
+        "steam_community_percent": "45.0%",
+        "mentioned_entities": [],
+        "source_ids": [
+          "steam-full-achievements-page",
+          "steam-full-global-achievement-percentages"
+        ],
+        "notes": "Achievement row verifies this progression/milestone condition; no named loadout entities were parsed from it."
+      },
+      {
+        "title": "Peak Performance I",
+        "slug": "peak-performance-i",
+        "description": "Fully upgrade 1 Character",
+        "steam_internal_name": "peak_performance_1",
+        "steam_global_percent_api": "22.0",
+        "steam_community_percent": "22.1%",
+        "mentioned_entities": [],
+        "source_ids": [
+          "steam-full-achievements-page",
+          "steam-full-global-achievement-percentages"
+        ],
+        "notes": "Achievement row verifies this progression/milestone condition; no named loadout entities were parsed from it."
+      },
+      {
+        "title": "Relic Hunter IV",
+        "slug": "relic-hunter-iv",
+        "description": "Collect 20 Artifacts",
+        "steam_internal_name": "relic_hunter_4",
+        "steam_global_percent_api": "20.3",
+        "steam_community_percent": "20.3%",
+        "mentioned_entities": [],
+        "source_ids": [
+          "steam-full-achievements-page",
+          "steam-full-global-achievement-percentages"
+        ],
+        "notes": "Achievement row verifies this progression/milestone condition; no named loadout entities were parsed from it."
+      },
+      {
+        "title": "Assemble the Team II",
+        "slug": "assemble-the-team-ii",
+        "description": "Unlock 3 Characters",
+        "steam_internal_name": "assemble_the_team_2",
+        "steam_global_percent_api": "19.3",
+        "steam_community_percent": "19.4%",
+        "mentioned_entities": [],
+        "source_ids": [
+          "steam-full-achievements-page",
+          "steam-full-global-achievement-percentages"
+        ],
+        "notes": "Achievement row verifies this progression/milestone condition; no named loadout entities were parsed from it."
+      },
+      {
+        "title": "Power Hungry IV",
+        "slug": "power-hungry-iv",
+        "description": "Unlock 20 Skills",
+        "steam_internal_name": "power_hungry_4",
+        "steam_global_percent_api": "16.0",
+        "steam_community_percent": "15.9%",
+        "mentioned_entities": [],
+        "source_ids": [
+          "steam-full-achievements-page",
+          "steam-full-global-achievement-percentages"
+        ],
+        "notes": "Achievement row verifies this progression/milestone condition; no named loadout entities were parsed from it."
+      },
+      {
+        "title": "Snow Master II",
+        "slug": "snow-master-ii",
+        "description": "Fully complete 5 Locations",
+        "steam_internal_name": "snow_master_2",
+        "steam_global_percent_api": "14.3",
+        "steam_community_percent": "14.5%",
+        "mentioned_entities": [],
+        "source_ids": [
+          "steam-full-achievements-page",
+          "steam-full-global-achievement-percentages"
+        ],
+        "notes": "Achievement row verifies this progression/milestone condition; no named loadout entities were parsed from it."
+      },
+      {
+        "title": "Pathfinder II",
+        "slug": "pathfinder-ii",
+        "description": "Unlock 5 Locations",
+        "steam_internal_name": "pathfinder_2",
+        "steam_global_percent_api": "13.1",
+        "steam_community_percent": "13.5%",
+        "mentioned_entities": [],
+        "source_ids": [
+          "steam-full-achievements-page",
+          "steam-full-global-achievement-percentages"
+        ],
+        "notes": "Achievement row verifies this progression/milestone condition; no named loadout entities were parsed from it."
+      },
+      {
+        "title": "Master of the Tongue",
+        "slug": "master-of-the-tongue",
+        "description": "Survive a run with Tongue Attack & Curvy Tongue",
+        "steam_internal_name": "master_of_the_tongue",
+        "steam_global_percent_api": "9.6",
+        "steam_community_percent": "9.6%",
+        "mentioned_entities": [
+          {
+            "name": "Tongue Attack",
+            "id": "tongue-attack",
+            "category": "skills",
+            "certainty": "name_verified_category_inferred",
+            "notes": "Achievement wording verifies the name appears in a condition; gameplay type/effect still needs confirmation."
+          },
+          {
+            "name": "Curvy Tongue",
+            "id": "curvy-tongue",
+            "category": "skills",
+            "certainty": "name_verified_category_inferred",
+            "notes": "Achievement wording verifies the name appears in a condition; gameplay type/effect still needs confirmation."
+          }
+        ],
+        "source_ids": [
+          "steam-full-achievements-page",
+          "steam-full-global-achievement-percentages"
+        ],
+        "notes": "Use mentioned entities as source-backed names only unless another source verifies behavior."
+      },
+      {
+        "title": "Power Hungry V",
+        "slug": "power-hungry-v",
+        "description": "Unlock 30 Skills",
+        "steam_internal_name": "power_hungry_5",
+        "steam_global_percent_api": "3.9",
+        "steam_community_percent": "4.0%",
+        "mentioned_entities": [],
+        "source_ids": [
+          "steam-full-achievements-page",
+          "steam-full-global-achievement-percentages"
+        ],
+        "notes": "Achievement row verifies this progression/milestone condition; no named loadout entities were parsed from it."
+      },
+      {
+        "title": "Cursed Survival",
+        "slug": "cursed-survival",
+        "description": "Survive a run with Voodoo Curse & Vampirism",
+        "steam_internal_name": "cursed_survival",
+        "steam_global_percent_api": "3.9",
+        "steam_community_percent": "3.9%",
+        "mentioned_entities": [
+          {
+            "name": "Voodoo Curse",
+            "id": "voodoo-curse",
+            "category": "skills",
+            "certainty": "name_verified_category_inferred",
+            "notes": "Achievement wording verifies the name appears in a condition; gameplay type/effect still needs confirmation."
+          },
+          {
+            "name": "Vampirism",
+            "id": "vampirism",
+            "category": "skills",
+            "certainty": "name_verified_category_inferred",
+            "notes": "Achievement wording verifies the name appears in a condition; gameplay type/effect still needs confirmation."
+          }
+        ],
+        "source_ids": [
+          "steam-full-achievements-page",
+          "steam-full-global-achievement-percentages"
+        ],
+        "notes": "Use mentioned entities as source-backed names only unless another source verifies behavior."
+      },
+      {
+        "title": "Relic Hunter V",
+        "slug": "relic-hunter-v",
+        "description": "Collect 30 Artifacts",
+        "steam_internal_name": "relic_hunter_5",
+        "steam_global_percent_api": "3.2",
+        "steam_community_percent": "3.2%",
+        "mentioned_entities": [],
+        "source_ids": [
+          "steam-full-achievements-page",
+          "steam-full-global-achievement-percentages"
+        ],
+        "notes": "Achievement row verifies this progression/milestone condition; no named loadout entities were parsed from it."
+      },
+      {
+        "title": "Demolition Run",
+        "slug": "demolition-run",
+        "description": "Survive a run with Dynamite, Air Bomb & Pickaxe",
+        "steam_internal_name": "demolition_run",
+        "steam_global_percent_api": "2.8",
+        "steam_community_percent": "2.8%",
+        "mentioned_entities": [
+          {
+            "name": "Dynamite",
+            "id": "dynamite",
+            "category": "tools",
+            "certainty": "name_verified_category_inferred",
+            "notes": "Achievement wording verifies the name appears in a condition; gameplay type/effect still needs confirmation."
+          },
+          {
+            "name": "Air Bomb",
+            "id": "air-bomb",
+            "category": "tools",
+            "certainty": "name_verified_category_inferred",
+            "notes": "Achievement wording verifies the name appears in a condition; gameplay type/effect still needs confirmation."
+          },
+          {
+            "name": "Pickaxe",
+            "id": "pickaxe",
+            "category": "tools",
+            "certainty": "name_verified_category_inferred",
+            "notes": "Achievement wording verifies the name appears in a condition; gameplay type/effect still needs confirmation."
+          }
+        ],
+        "source_ids": [
+          "steam-full-achievements-page",
+          "steam-full-global-achievement-percentages"
+        ],
+        "notes": "Use mentioned entities as source-backed names only unless another source verifies behavior."
+      },
+      {
+        "title": "Still Standing",
+        "slug": "still-standing",
+        "description": "Survive a run with Shield & Revive",
+        "steam_internal_name": "still_standing",
+        "steam_global_percent_api": "2.2",
+        "steam_community_percent": "2.2%",
+        "mentioned_entities": [
+          {
+            "name": "Shield",
+            "id": "shield",
+            "category": "skills",
+            "certainty": "name_verified_category_inferred",
+            "notes": "Achievement wording verifies the name appears in a condition; gameplay type/effect still needs confirmation."
+          },
+          {
+            "name": "Revive",
+            "id": "revive",
+            "category": "skills",
+            "certainty": "name_verified_category_inferred",
+            "notes": "Achievement wording verifies the name appears in a condition; gameplay type/effect still needs confirmation."
+          }
+        ],
+        "source_ids": [
+          "steam-full-achievements-page",
+          "steam-full-global-achievement-percentages"
+        ],
+        "notes": "Use mentioned entities as source-backed names only unless another source verifies behavior."
+      },
+      {
+        "title": "The Animal Squad",
+        "slug": "the-animal-squad",
+        "description": "Survive a run with Penguin, Mole & Owl",
+        "steam_internal_name": "the_animal_squad",
+        "steam_global_percent_api": "2.0",
+        "steam_community_percent": "2.0%",
+        "mentioned_entities": [
+          {
+            "name": "Penguin",
+            "id": "penguin",
+            "category": "companions",
+            "certainty": "name_verified_category_verified",
+            "notes": "Achievement wording names this as part of a companion loadout condition."
+          },
+          {
+            "name": "Mole",
+            "id": "mole",
+            "category": "companions",
+            "certainty": "name_verified_category_verified",
+            "notes": "Achievement wording names this as part of a companion loadout condition."
+          },
+          {
+            "name": "Owl",
+            "id": "owl",
+            "category": "companions",
+            "certainty": "name_verified_category_verified",
+            "notes": "Achievement wording names this as part of a companion loadout condition."
+          }
+        ],
+        "source_ids": [
+          "steam-full-achievements-page",
+          "steam-full-global-achievement-percentages"
+        ],
+        "notes": "Use mentioned entities as source-backed names only unless another source verifies behavior."
+      },
+      {
+        "title": "Thermal Shock",
+        "slug": "thermal-shock",
+        "description": "Survive a run with Flamethrower & Frost Bomb",
+        "steam_internal_name": "thermal_shock",
+        "steam_global_percent_api": "2.0",
+        "steam_community_percent": "2.0%",
+        "mentioned_entities": [
+          {
+            "name": "Flamethrower",
+            "id": "flamethrower",
+            "category": "tools",
+            "certainty": "name_verified_category_inferred",
+            "notes": "Achievement wording verifies the name appears in a condition; gameplay type/effect still needs confirmation."
+          },
+          {
+            "name": "Frost Bomb",
+            "id": "frost-bomb",
+            "category": "items",
+            "certainty": "name_verified_category_inferred",
+            "notes": "Achievement wording verifies the name appears in a condition; gameplay type/effect still needs confirmation."
+          }
+        ],
+        "source_ids": [
+          "steam-full-achievements-page",
+          "steam-full-global-achievement-percentages"
+        ],
+        "notes": "Use mentioned entities as source-backed names only unless another source verifies behavior."
+      },
+      {
+        "title": "Deadly Dose",
+        "slug": "deadly-dose",
+        "description": "Survive a run with Poison Flask & Poison Infusion",
+        "steam_internal_name": "deadly_dose",
+        "steam_global_percent_api": "1.1",
+        "steam_community_percent": "1.2%",
+        "mentioned_entities": [
+          {
+            "name": "Poison Flask",
+            "id": "poison-flask",
+            "category": "items",
+            "certainty": "name_verified_category_inferred",
+            "notes": "Achievement wording verifies the name appears in a condition; gameplay type/effect still needs confirmation."
+          },
+          {
+            "name": "Poison Infusion",
+            "id": "poison-infusion",
+            "category": "skills",
+            "certainty": "name_verified_category_inferred",
+            "notes": "Achievement wording verifies the name appears in a condition; gameplay type/effect still needs confirmation."
+          }
+        ],
+        "source_ids": [
+          "steam-full-achievements-page",
+          "steam-full-global-achievement-percentages"
+        ],
+        "notes": "Use mentioned entities as source-backed names only unless another source verifies behavior."
+      },
+      {
+        "title": "Peak Performance II",
+        "slug": "peak-performance-ii",
+        "description": "Fully upgrade 5 Characters",
+        "steam_internal_name": "peak_performance_2",
+        "steam_global_percent_api": "0.8",
+        "steam_community_percent": "0.8%",
+        "mentioned_entities": [],
+        "source_ids": [
+          "steam-full-achievements-page",
+          "steam-full-global-achievement-percentages"
+        ],
+        "notes": "Achievement row verifies this progression/milestone condition; no named loadout entities were parsed from it."
+      },
+      {
+        "title": "Bending Reality",
+        "slug": "bending-reality",
+        "description": "Survive a run with Teleport & Magnet",
+        "steam_internal_name": "bending_reality",
+        "steam_global_percent_api": "0.7",
+        "steam_community_percent": "0.7%",
+        "mentioned_entities": [
+          {
+            "name": "Teleport",
+            "id": "teleport",
+            "category": "skills",
+            "certainty": "name_verified_category_inferred",
+            "notes": "Achievement wording verifies the name appears in a condition; gameplay type/effect still needs confirmation."
+          },
+          {
+            "name": "Magnet",
+            "id": "magnet",
+            "category": "skills",
+            "certainty": "name_verified_category_inferred",
+            "notes": "Achievement wording verifies the name appears in a condition; gameplay type/effect still needs confirmation."
+          }
+        ],
+        "source_ids": [
+          "steam-full-achievements-page",
+          "steam-full-global-achievement-percentages"
+        ],
+        "notes": "Use mentioned entities as source-backed names only unless another source verifies behavior."
+      },
+      {
+        "title": "Close Call Energy",
+        "slug": "close-call-energy",
+        "description": "Survive a run with Adrenaline & Spark",
+        "steam_internal_name": "close_call_energy",
+        "steam_global_percent_api": "0.7",
+        "steam_community_percent": "0.7%",
+        "mentioned_entities": [
+          {
+            "name": "Adrenaline",
+            "id": "adrenaline",
+            "category": "skills",
+            "certainty": "name_verified_category_inferred",
+            "notes": "Achievement wording verifies the name appears in a condition; gameplay type/effect still needs confirmation."
+          },
+          {
+            "name": "Spark",
+            "id": "spark",
+            "category": "skills",
+            "certainty": "name_verified_category_inferred",
+            "notes": "Achievement wording verifies the name appears in a condition; gameplay type/effect still needs confirmation."
+          }
+        ],
+        "source_ids": [
+          "steam-full-achievements-page",
+          "steam-full-global-achievement-percentages"
+        ],
+        "notes": "Use mentioned entities as source-backed names only unless another source verifies behavior."
+      },
+      {
+        "title": "Pathfinder III",
+        "slug": "pathfinder-iii",
+        "description": "Unlock 15 Locations",
+        "steam_internal_name": "pathfinder_3",
+        "steam_global_percent_api": "0.4",
+        "steam_community_percent": "0.4%",
+        "mentioned_entities": [],
+        "source_ids": [
+          "steam-full-achievements-page",
+          "steam-full-global-achievement-percentages"
+        ],
+        "notes": "Achievement row verifies this progression/milestone condition; no named loadout entities were parsed from it."
+      },
+      {
+        "title": "Caffeinated Chaos",
+        "slug": "caffeinated-chaos",
+        "description": "Survive a run with Hot Tea & Energy Drink",
+        "steam_internal_name": "caffeinated_chaos",
+        "steam_global_percent_api": "0.4",
+        "steam_community_percent": "0.4%",
+        "mentioned_entities": [
+          {
+            "name": "Hot Tea",
+            "id": "hot-tea",
+            "category": "items",
+            "certainty": "name_verified_category_inferred",
+            "notes": "Achievement wording verifies the name appears in a condition; gameplay type/effect still needs confirmation."
+          },
+          {
+            "name": "Energy Drink",
+            "id": "energy-drink",
+            "category": "items",
+            "certainty": "name_verified_category_inferred",
+            "notes": "Achievement wording verifies the name appears in a condition; gameplay type/effect still needs confirmation."
+          }
+        ],
+        "source_ids": [
+          "steam-full-achievements-page",
+          "steam-full-global-achievement-percentages"
+        ],
+        "notes": "Use mentioned entities as source-backed names only unless another source verifies behavior."
+      },
+      {
+        "title": "Snow Master III",
+        "slug": "snow-master-iii",
+        "description": "Fully complete 15 Locations",
+        "steam_internal_name": "snow_master_3",
+        "steam_global_percent_api": "0.3",
+        "steam_community_percent": "0.3%",
+        "mentioned_entities": [],
+        "source_ids": [
+          "steam-full-achievements-page",
+          "steam-full-global-achievement-percentages"
+        ],
+        "notes": "Achievement row verifies this progression/milestone condition; no named loadout entities were parsed from it."
+      },
+      {
+        "title": "Assemble the Team III",
+        "slug": "assemble-the-team-iii",
+        "description": "Unlock 9 Characters",
+        "steam_internal_name": "assemble_the_team_3",
+        "steam_global_percent_api": "0.3",
+        "steam_community_percent": "0.3%",
+        "mentioned_entities": [],
+        "source_ids": [
+          "steam-full-achievements-page",
+          "steam-full-global-achievement-percentages"
+        ],
+        "notes": "Achievement row verifies this progression/milestone condition; no named loadout entities were parsed from it."
+      },
+      {
+        "title": "All Eyes Open",
+        "slug": "all-eyes-open",
+        "description": "Survive a run with Map, Scanner & Locator",
+        "steam_internal_name": "all_eyes_open",
+        "steam_global_percent_api": "0.3",
+        "steam_community_percent": "0.3%",
+        "mentioned_entities": [
+          {
+            "name": "Map",
+            "id": "map",
+            "category": "tools",
+            "certainty": "name_verified_category_inferred",
+            "notes": "Achievement wording verifies the name appears in a condition; gameplay type/effect still needs confirmation."
+          },
+          {
+            "name": "Scanner",
+            "id": "scanner",
+            "category": "tools",
+            "certainty": "name_verified_category_inferred",
+            "notes": "Achievement wording verifies the name appears in a condition; gameplay type/effect still needs confirmation."
+          },
+          {
+            "name": "Locator",
+            "id": "locator",
+            "category": "tools",
+            "certainty": "name_verified_category_inferred",
+            "notes": "Achievement wording verifies the name appears in a condition; gameplay type/effect still needs confirmation."
+          }
+        ],
+        "source_ids": [
+          "steam-full-achievements-page",
+          "steam-full-global-achievement-percentages"
+        ],
+        "notes": "Use mentioned entities as source-backed names only unless another source verifies behavior."
+      },
+      {
+        "title": "Burning Through",
+        "slug": "burning-through",
+        "description": "Survive a run with Flamethrower & Fire Infusion",
+        "steam_internal_name": "burning_through",
+        "steam_global_percent_api": "0.2",
+        "steam_community_percent": "0.2%",
+        "mentioned_entities": [
+          {
+            "name": "Flamethrower",
+            "id": "flamethrower",
+            "category": "tools",
+            "certainty": "name_verified_category_inferred",
+            "notes": "Achievement wording verifies the name appears in a condition; gameplay type/effect still needs confirmation."
+          },
+          {
+            "name": "Fire Infusion",
+            "id": "fire-infusion",
+            "category": "skills",
+            "certainty": "name_verified_category_inferred",
+            "notes": "Achievement wording verifies the name appears in a condition; gameplay type/effect still needs confirmation."
+          }
+        ],
+        "source_ids": [
+          "steam-full-achievements-page",
+          "steam-full-global-achievement-percentages"
+        ],
+        "notes": "Use mentioned entities as source-backed names only unless another source verifies behavior."
+      },
+      {
+        "title": "Peak Performance III",
+        "slug": "peak-performance-iii",
+        "description": "Fully upgrade 10 Characters",
+        "steam_internal_name": "peak_performance_3",
+        "steam_global_percent_api": "0.0",
+        "steam_community_percent": "0.1%",
+        "mentioned_entities": [],
+        "source_ids": [
+          "steam-full-achievements-page",
+          "steam-full-global-achievement-percentages"
+        ],
+        "notes": "Achievement row verifies this progression/milestone condition; no named loadout entities were parsed from it."
+      },
+      {
+        "title": "Shock Therapy",
+        "slug": "shock-therapy",
+        "description": "Survive a run with Chain Lightning & Electric Infusion",
+        "steam_internal_name": "shock_therapy",
+        "steam_global_percent_api": "0.0",
+        "steam_community_percent": "0.1%",
+        "mentioned_entities": [
+          {
+            "name": "Chain Lightning",
+            "id": "chain-lightning",
+            "category": "skills",
+            "certainty": "name_verified_category_inferred",
+            "notes": "Achievement wording verifies the name appears in a condition; gameplay type/effect still needs confirmation."
+          },
+          {
+            "name": "Electric Infusion",
+            "id": "electric-infusion",
+            "category": "skills",
+            "certainty": "name_verified_category_inferred",
+            "notes": "Achievement wording verifies the name appears in a condition; gameplay type/effect still needs confirmation."
+          }
+        ],
+        "source_ids": [
+          "steam-full-achievements-page",
+          "steam-full-global-achievement-percentages"
+        ],
+        "notes": "Use mentioned entities as source-backed names only unless another source verifies behavior."
+      },
+      {
+        "title": "Seeing Stars",
+        "slug": "seeing-stars",
+        "description": "Survive a run with Flashbang & Stun Infusion",
+        "steam_internal_name": "seeing_stars",
+        "steam_global_percent_api": "0.1",
+        "steam_community_percent": "0.1%",
+        "mentioned_entities": [
+          {
+            "name": "Flashbang",
+            "id": "flashbang",
+            "category": "items",
+            "certainty": "name_verified_category_inferred",
+            "notes": "Achievement wording verifies the name appears in a condition; gameplay type/effect still needs confirmation."
+          },
+          {
+            "name": "Stun Infusion",
+            "id": "stun-infusion",
+            "category": "skills",
+            "certainty": "name_verified_category_inferred",
+            "notes": "Achievement wording verifies the name appears in a condition; gameplay type/effect still needs confirmation."
+          }
+        ],
+        "source_ids": [
+          "steam-full-achievements-page",
+          "steam-full-global-achievement-percentages"
+        ],
+        "notes": "Use mentioned entities as source-backed names only unless another source verifies behavior."
+      },
+      {
+        "title": "Deep Freeze",
+        "slug": "deep-freeze",
+        "description": "Survive a run with Frost Bomb & Frost Infusion",
+        "steam_internal_name": "deep_freeze",
+        "steam_global_percent_api": "0.1",
+        "steam_community_percent": "0.1%",
+        "mentioned_entities": [
+          {
+            "name": "Frost Bomb",
+            "id": "frost-bomb",
+            "category": "items",
+            "certainty": "name_verified_category_inferred",
+            "notes": "Achievement wording verifies the name appears in a condition; gameplay type/effect still needs confirmation."
+          },
+          {
+            "name": "Frost Infusion",
+            "id": "frost-infusion",
+            "category": "skills",
+            "certainty": "name_verified_category_inferred",
+            "notes": "Achievement wording verifies the name appears in a condition; gameplay type/effect still needs confirmation."
+          }
+        ],
+        "source_ids": [
+          "steam-full-achievements-page",
+          "steam-full-global-achievement-percentages"
+        ],
+        "notes": "Use mentioned entities as source-backed names only unless another source verifies behavior."
+      },
+      {
+        "title": "Snow Day Arsenal",
+        "slug": "snow-day-arsenal",
+        "description": "Survive a run with Gloves, Snowball Volley & Piercing Icicles",
+        "steam_internal_name": "snow_day_arsenal",
+        "steam_global_percent_api": "0.0",
+        "steam_community_percent": "0.1%",
+        "mentioned_entities": [
+          {
+            "name": "Gloves",
+            "id": "gloves",
+            "category": "tools",
+            "certainty": "name_verified_category_inferred",
+            "notes": "Achievement wording verifies the name appears in a condition; gameplay type/effect still needs confirmation."
+          },
+          {
+            "name": "Snowball Volley",
+            "id": "snowball-volley",
+            "category": "skills",
+            "certainty": "name_verified_category_inferred",
+            "notes": "Achievement wording verifies the name appears in a condition; gameplay type/effect still needs confirmation."
+          },
+          {
+            "name": "Piercing Icicles",
+            "id": "piercing-icicles",
+            "category": "skills",
+            "certainty": "name_verified_category_inferred",
+            "notes": "Achievement wording verifies the name appears in a condition; gameplay type/effect still needs confirmation."
+          }
+        ],
+        "source_ids": [
+          "steam-full-achievements-page",
+          "steam-full-global-achievement-percentages"
+        ],
+        "notes": "Use mentioned entities as source-backed names only unless another source verifies behavior."
+      },
+      {
+        "title": "Cozy on the Go",
+        "slug": "cozy-on-the-go",
+        "description": "Survive a run with Heater Sled, Hot Tea & Gloves",
+        "steam_internal_name": "cozy_on_the_go",
+        "steam_global_percent_api": "0.1",
+        "steam_community_percent": "0.1%",
+        "mentioned_entities": [
+          {
+            "name": "Heater Sled",
+            "id": "heater-sled",
+            "category": "tools",
+            "certainty": "name_verified_category_inferred",
+            "notes": "Achievement wording verifies the name appears in a condition; gameplay type/effect still needs confirmation."
+          },
+          {
+            "name": "Hot Tea",
+            "id": "hot-tea",
+            "category": "items",
+            "certainty": "name_verified_category_inferred",
+            "notes": "Achievement wording verifies the name appears in a condition; gameplay type/effect still needs confirmation."
+          },
+          {
+            "name": "Gloves",
+            "id": "gloves",
+            "category": "tools",
+            "certainty": "name_verified_category_inferred",
+            "notes": "Achievement wording verifies the name appears in a condition; gameplay type/effect still needs confirmation."
+          }
+        ],
+        "source_ids": [
+          "steam-full-achievements-page",
+          "steam-full-global-achievement-percentages"
+        ],
+        "notes": "Use mentioned entities as source-backed names only unless another source verifies behavior."
+      },
+      {
+        "title": "Elemental Mayhem",
+        "slug": "elemental-mayhem",
+        "description": "Survive a run with Chain Lightning, Frost Bomb & Poison Flask",
+        "steam_internal_name": "elemental_mayhem",
+        "steam_global_percent_api": "0.0",
+        "steam_community_percent": "0.1%",
+        "mentioned_entities": [
+          {
+            "name": "Chain Lightning",
+            "id": "chain-lightning",
+            "category": "skills",
+            "certainty": "name_verified_category_inferred",
+            "notes": "Achievement wording verifies the name appears in a condition; gameplay type/effect still needs confirmation."
+          },
+          {
+            "name": "Frost Bomb",
+            "id": "frost-bomb",
+            "category": "items",
+            "certainty": "name_verified_category_inferred",
+            "notes": "Achievement wording verifies the name appears in a condition; gameplay type/effect still needs confirmation."
+          },
+          {
+            "name": "Poison Flask",
+            "id": "poison-flask",
+            "category": "items",
+            "certainty": "name_verified_category_inferred",
+            "notes": "Achievement wording verifies the name appears in a condition; gameplay type/effect still needs confirmation."
+          }
+        ],
+        "source_ids": [
+          "steam-full-achievements-page",
+          "steam-full-global-achievement-percentages"
+        ],
+        "notes": "Use mentioned entities as source-backed names only unless another source verifies behavior."
+      },
+      {
+        "title": "Walking Through Hell",
+        "slug": "walking-through-hell",
+        "description": "Survive a run with Death Field & Shield",
+        "steam_internal_name": "walking_through_hell",
+        "steam_global_percent_api": "0.1",
+        "steam_community_percent": "0.1%",
+        "mentioned_entities": [
+          {
+            "name": "Death Field",
+            "id": "death-field",
+            "category": "skills",
+            "certainty": "name_verified_category_inferred",
+            "notes": "Achievement wording verifies the name appears in a condition; gameplay type/effect still needs confirmation."
+          },
+          {
+            "name": "Shield",
+            "id": "shield",
+            "category": "skills",
+            "certainty": "name_verified_category_inferred",
+            "notes": "Achievement wording verifies the name appears in a condition; gameplay type/effect still needs confirmation."
+          }
+        ],
+        "source_ids": [
+          "steam-full-achievements-page",
+          "steam-full-global-achievement-percentages"
+        ],
+        "notes": "Use mentioned entities as source-backed names only unless another source verifies behavior."
+      }
+    ],
     "highest_global_percentages": [
       {
         "name": "power_hungry_1",

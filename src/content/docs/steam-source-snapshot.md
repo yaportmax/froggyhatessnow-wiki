@@ -8,7 +8,7 @@ draft: false
 
 ![FROGGY HATES SNOW Steam header](https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3232380/4aec6dc45dab3a096faeda88c8036627817f0cfe/header_alt_assets_0.jpg?t=1778580427)
 
-Accessed: **2026-05-13**. Generated: 2026-05-13T11:35:08.178Z.
+Accessed: **2026-05-13**. Generated: 2026-05-13T11:53:54.447Z.
 
 This page is the main sourcing checkpoint for game-populating wiki data. It uses official public Steam pages/APIs first, then marks anything not confirmed by those sources as inferred or needing verification.
 
@@ -102,6 +102,8 @@ The local metadata pass currently contributes no game facts. Public Steam and pu
 ## Achievements
 
 Public community rows parsed: **42**. Full-game global percentage API ids parsed: **42**. Demo global percentage API status: **403**; ids parsed: **0**.
+
+The [Achievement Source Matrix](/achievement-source-matrix/) maps each public achievement row to its Steam API id, percentage fields, source ids, and any parsed loadout names.
 
 Demo achievement endpoint note: https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=4037600&format=json returned 403.
 

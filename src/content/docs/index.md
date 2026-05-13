@@ -33,6 +33,7 @@ Steam source snapshot: full game app 3232380, demo app 4037600, 42 public achiev
 - [Glossary](/generated/glossary/)
 - [Game Metadata](/game-metadata/)
 - [Steam Source Snapshot](/steam-source-snapshot/)
+- [Achievement Source Matrix](/achievement-source-matrix/)
 - [Source Ledger](/source-ledger/)
 - [Verification Status](/verification-status/)
 

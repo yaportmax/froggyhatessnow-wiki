@@ -137,7 +137,19 @@ function validateEntityShape(dataset: string, entity: Entity, index: number, err
 }
 
 function validateSteamSnapshot(snapshot: Record<string, unknown>, errors: string[]) {
-  for (const field of ["accessed_date", "generated_at", "source_policy", "sources", "apps", "reviews", "achievements", "public_gameplay_claims", "research_gaps", "refresh_commands"]) {
+  for (const field of [
+    "accessed_date",
+    "generated_at",
+    "source_policy",
+    "sources",
+    "apps",
+    "reviews",
+    "achievements",
+    "public_gameplay_claims",
+    "steam_news_findings",
+    "research_gaps",
+    "refresh_commands"
+  ]) {
     if (!(field in snapshot)) errors.push(`steam-snapshot.json: missing required field ${field}`);
   }
 
@@ -145,7 +157,10 @@ function validateSteamSnapshot(snapshot: Record<string, unknown>, errors: string
   if (!Array.isArray(snapshot.source_policy)) errors.push("steam-snapshot.json: source_policy must be an array");
   if (!isRecord(snapshot.sources)) errors.push("steam-snapshot.json: sources must be an object");
   if (!isRecord(snapshot.apps)) errors.push("steam-snapshot.json: apps must be an object");
+  if (!isRecord(snapshot.reviews)) errors.push("steam-snapshot.json: reviews must be an object");
+  if (!isRecord(snapshot.achievements)) errors.push("steam-snapshot.json: achievements must be an object");
   if (!Array.isArray(snapshot.public_gameplay_claims)) errors.push("steam-snapshot.json: public_gameplay_claims must be an array");
+  if (!isRecord(snapshot.steam_news_findings)) errors.push("steam-snapshot.json: steam_news_findings must be an object");
   if (!Array.isArray(snapshot.research_gaps)) errors.push("steam-snapshot.json: research_gaps must be an array");
 
   const apps = isRecord(snapshot.apps) ? snapshot.apps : {};
@@ -155,8 +170,15 @@ function validateSteamSnapshot(snapshot: Record<string, unknown>, errors: string
       errors.push(`steam-snapshot.json: apps.${key} must be an object`);
       continue;
     }
-    for (const field of ["app_id", "title", "type", "source_url", "api_url", "screenshots_count"]) {
+    for (const field of ["app_id", "title", "type", "source_url", "api_url", "genres", "categories", "screenshots_count", "screenshots", "movies"]) {
       if (!(field in app)) errors.push(`steam-snapshot.json: apps.${key} missing required field ${field}`);
+    }
+    if (!Array.isArray(app.genres)) errors.push(`steam-snapshot.json: apps.${key}.genres must be an array`);
+    if (!Array.isArray(app.categories)) errors.push(`steam-snapshot.json: apps.${key}.categories must be an array`);
+    if (!Array.isArray(app.screenshots)) errors.push(`steam-snapshot.json: apps.${key}.screenshots must be an array`);
+    if (!Array.isArray(app.movies)) errors.push(`steam-snapshot.json: apps.${key}.movies must be an array`);
+    if (typeof app.screenshots_count === "number" && Array.isArray(app.screenshots) && app.screenshots_count !== app.screenshots.length) {
+      errors.push(`steam-snapshot.json: apps.${key}.screenshots_count does not match screenshots length`);
     }
   }
 
@@ -171,6 +193,77 @@ function validateSteamSnapshot(snapshot: Record<string, unknown>, errors: string
       errors.push(`${prefix}.source_ids must be an array`);
     }
   });
+
+  const reviews = isRecord(snapshot.reviews) ? snapshot.reviews : {};
+  for (const key of ["full_game", "demo"]) {
+    if (!(key in reviews)) errors.push(`steam-snapshot.json: reviews.${key} missing`);
+  }
+
+  const achievements = isRecord(snapshot.achievements) ? snapshot.achievements : {};
+  for (const field of [
+    "community_page_url",
+    "global_percentages_api_url",
+    "demo_global_percentages_api_url",
+    "demo_global_percentages_api_status",
+    "community_rows_count",
+    "full_game_api_ids_count",
+    "demo_api_ids_count",
+    "facts",
+    "highest_global_percentages",
+    "lowest_global_percentages",
+    "notes"
+  ]) {
+    if (!(field in achievements)) errors.push(`steam-snapshot.json: achievements missing required field ${field}`);
+  }
+  for (const field of ["community_rows_count", "full_game_api_ids_count", "demo_api_ids_count"]) {
+    if (field in achievements && typeof achievements[field] !== "number") {
+      errors.push(`steam-snapshot.json: achievements.${field} must be a number`);
+    }
+  }
+  if (!Array.isArray(achievements.facts)) {
+    errors.push("steam-snapshot.json: achievements.facts must be an array");
+  } else {
+    if (typeof achievements.community_rows_count === "number" && achievements.facts.length !== achievements.community_rows_count) {
+      errors.push("steam-snapshot.json: achievements.facts length must match community_rows_count");
+    }
+    const factSlugs = new Set<string>();
+    achievements.facts.forEach((fact, index) => {
+      const prefix = `steam-snapshot.json: achievements.facts[${index}]`;
+      if (!isRecord(fact)) {
+        errors.push(`${prefix} must be an object`);
+        return;
+      }
+      for (const field of ["title", "slug", "description", "steam_community_percent", "source_ids", "mentioned_entities", "notes"]) {
+        if (!(field in fact)) errors.push(`${prefix}: missing required field ${field}`);
+      }
+      if (typeof fact.slug === "string") {
+        if (factSlugs.has(fact.slug)) errors.push(`${prefix}: duplicate slug ${fact.slug}`);
+        factSlugs.add(fact.slug);
+      }
+      if (typeof fact.steam_internal_name !== "string") {
+        errors.push(`${prefix}: steam_internal_name must be a string`);
+      }
+      if (typeof fact.steam_global_percent_api !== "string") {
+        errors.push(`${prefix}: steam_global_percent_api must be a string`);
+      }
+      if (!Array.isArray(fact.source_ids)) errors.push(`${prefix}.source_ids must be an array`);
+      if (!Array.isArray(fact.mentioned_entities)) {
+        errors.push(`${prefix}.mentioned_entities must be an array`);
+      } else {
+        fact.mentioned_entities.forEach((mentionedEntity, mentionedIndex) => {
+          if (!isRecord(mentionedEntity)) {
+            errors.push(`${prefix}.mentioned_entities[${mentionedIndex}] must be an object`);
+            return;
+          }
+          for (const field of ["name", "id", "category", "certainty", "notes"]) {
+            if (typeof mentionedEntity[field] !== "string") {
+              errors.push(`${prefix}.mentioned_entities[${mentionedIndex}].${field} must be a string`);
+            }
+          }
+        });
+      }
+    });
+  }
 }
 
 export async function validateAllData(dataDir = path.resolve("src/data")): Promise<ValidationResult> {
@@ -252,6 +345,22 @@ export async function validateAllData(dataDir = path.resolve("src/data")): Promi
         }
         if (!sourceIds.has(sourceId)) {
           errors.push(`steam-snapshot.json: public_gameplay_claims[${index}].source_ids[${sourceIndex}] ${sourceId} is not present in public-sources.json`);
+        }
+      });
+    });
+  }
+
+  const achievements = isRecord(steamSnapshot.achievements) ? steamSnapshot.achievements : {};
+  if (Array.isArray(achievements.facts)) {
+    achievements.facts.forEach((fact, index) => {
+      if (!isRecord(fact) || !Array.isArray(fact.source_ids)) return;
+      fact.source_ids.forEach((sourceId, sourceIndex) => {
+        if (typeof sourceId !== "string") {
+          errors.push(`steam-snapshot.json: achievements.facts[${index}].source_ids[${sourceIndex}] must be a string`);
+          return;
+        }
+        if (!sourceIds.has(sourceId)) {
+          errors.push(`steam-snapshot.json: achievements.facts[${index}].source_ids[${sourceIndex}] ${sourceId} is not present in public-sources.json`);
         }
       });
     });

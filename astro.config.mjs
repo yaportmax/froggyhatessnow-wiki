@@ -19,6 +19,7 @@ export default defineConfig({
         { label: "Start Here", link: "/" },
         { label: "Game Metadata", link: "/game-metadata/" },
         { label: "Steam Source Snapshot", link: "/steam-source-snapshot/" },
+        { label: "Achievement Source Matrix", link: "/achievement-source-matrix/" },
         { label: "Source Ledger", link: "/source-ledger/" },
         {
           label: "Guides",

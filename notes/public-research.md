@@ -67,6 +67,9 @@ This note summarizes public metadata used to seed the wiki. It intentionally avo
 
 - Public community page rows parsed: 42
 - Public global achievement API ids parsed: 42
+- Achievement fact matrix rows stored in `src/data/steam-snapshot.json`: 42
+- Achievement rows with parsed public loadout names: 20
+- Generated source page: `/achievement-source-matrix/`, covering milestone series, loadout-name evidence, Steam API ids, API percentages, community percentages, and source ids.
 - Demo global achievement API status: 403 (https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=4037600&format=json returned 403)
 - Demo global achievement API ids parsed: 0
 - Achievement percentages are volatile and may differ slightly by endpoint/cache. Use them as as-of metadata only.

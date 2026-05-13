@@ -9,6 +9,7 @@ const ACCESSED_DATE = new Date().toISOString().slice(0, 10);
 
 type SourceType = "game_file" | "public_source" | "gameplay_note" | "inferred" | "unknown";
 type VerificationStatus = "Verified" | "Inferred" | "Needs verification";
+type Dataset = (typeof REQUIRED_DATASETS)[number];
 
 type Source = {
   source_id: string;
@@ -50,6 +51,26 @@ type AchievementRow = {
   description: string;
   percent: string;
   icon_url: string;
+};
+
+type AchievementMentionedEntity = {
+  name: string;
+  id: string;
+  category: Dataset;
+  certainty: "name_verified_category_verified" | "name_verified_category_inferred";
+  notes: string;
+};
+
+type AchievementFact = {
+  title: string;
+  slug: string;
+  description: string;
+  steam_internal_name: string | null;
+  steam_global_percent_api: string | null;
+  steam_community_percent: string;
+  mentioned_entities: AchievementMentionedEntity[];
+  source_ids: string[];
+  notes: string;
 };
 
 type FetchResult<T> = {
@@ -160,6 +181,7 @@ type SteamSnapshot = {
     community_rows_count: number;
     full_game_api_ids_count: number;
     demo_api_ids_count: number;
+    facts: AchievementFact[];
     highest_global_percentages: SteamAchievement[];
     lowest_global_percentages: SteamAchievement[];
     notes: string[];
@@ -378,7 +400,7 @@ function summarizeSteamApp(kind: SnapshotAppKind, appId: number, sourceUrl: stri
     recommendations_total: numberOrNull(recommendations.total),
     achievements_total: numberOrNull(achievements.total),
     screenshots_count: screenshots.length,
-    screenshots: screenshots.slice(0, 6).map((screenshot) => {
+    screenshots: screenshots.map((screenshot) => {
       const row = asRecord(screenshot);
       return {
         id: (typeof row.id === "number" || typeof row.id === "string") ? row.id : null,
@@ -715,7 +737,7 @@ function addUnique(map: Map<string, Entity>, item: Entity) {
   if (!map.has(item.id)) map.set(item.id, item);
 }
 
-function classifyName(name: string): keyof typeof datasets {
+function classifyName(name: string): Dataset {
   const lower = name.toLowerCase();
   if (["penguin", "mole", "owl"].includes(lower)) return "companions";
   if (["map", "scanner", "locator", "shovel", "cart", "pickaxe", "dynamite", "air bomb", "flamethrower", "heater sled", "gloves", "skis", "explosives"].includes(lower)) {
@@ -749,6 +771,50 @@ function comparableAchievementName(value: string) {
     .split("-")
     .map((part, index, parts) => (index === parts.length - 1 && roman[part] ? roman[part] : part))
     .join("-");
+}
+
+function achievementPercentageByComparableName(percentages: SteamAchievement[]) {
+  return new Map(percentages.map((achievement) => [comparableAchievementName(achievement.name), achievement]));
+}
+
+function buildAchievementFacts(rows: AchievementRow[], percentages: SteamAchievement[]): AchievementFact[] {
+  const percentageByComparableName = achievementPercentageByComparableName(percentages);
+
+  return rows.map((row) => {
+    const mentioned_entities = extractNamesFromAchievement(row.description).map((name) => {
+      const category = classifyName(name);
+      const id = slugify(name);
+      const certainty: AchievementMentionedEntity["certainty"] =
+        category === "companions" ? "name_verified_category_verified" : "name_verified_category_inferred";
+
+      return {
+        name,
+        id,
+        category,
+        certainty,
+        notes:
+          certainty === "name_verified_category_verified"
+            ? "Achievement wording names this as part of a companion loadout condition."
+            : "Achievement wording verifies the name appears in a condition; gameplay type/effect still needs confirmation."
+      };
+    });
+    const internal = percentageByComparableName.get(comparableAchievementName(row.title));
+
+    return {
+      title: row.title,
+      slug: slugify(row.title),
+      description: row.description,
+      steam_internal_name: internal?.name ?? null,
+      steam_global_percent_api: internal?.percent ?? null,
+      steam_community_percent: row.percent,
+      mentioned_entities,
+      source_ids: ["steam-full-achievements-page", "steam-full-global-achievement-percentages"],
+      notes:
+        mentioned_entities.length > 0
+          ? "Use mentioned entities as source-backed names only unless another source verifies behavior."
+          : "Achievement row verifies this progression/milestone condition; no named loadout entities were parsed from it."
+    };
+  });
 }
 
 const datasets: Record<(typeof REQUIRED_DATASETS)[number], Map<string, Entity>> = {
@@ -1246,6 +1312,7 @@ function buildSteamSnapshot(args: {
   demoReviews: Record<string, unknown>;
   achievementRows: AchievementRow[];
   achievementPercentages: SteamAchievement[];
+  achievementFacts: AchievementFact[];
   demoAchievementPercentages: SteamAchievement[];
   demoAchievementPercentagesResult: FetchResult<{ achievementpercentages?: { achievements?: SteamAchievement[] } }>;
   newsFindings: SteamNewsFindings;
@@ -1298,6 +1365,7 @@ function buildSteamSnapshot(args: {
       community_rows_count: args.achievementRows.length,
       full_game_api_ids_count: args.achievementPercentages.length,
       demo_api_ids_count: args.demoAchievementPercentages.length,
+      facts: args.achievementFacts,
       highest_global_percentages: sortedPercentages.slice(0, 8),
       lowest_global_percentages: sortedPercentages.slice(-8).reverse(),
       notes: [
@@ -1420,7 +1488,7 @@ function buildSteamSnapshot(args: {
 }
 
 function addAchievementData(rows: AchievementRow[], percentages: SteamAchievement[]) {
-  const percentageByComparableName = new Map(percentages.map((achievement) => [comparableAchievementName(achievement.name), achievement]));
+  const percentageByComparableName = achievementPercentageByComparableName(percentages);
   const achievementsSource = source("Steam community achievements page", urls.achievementsPage, "Public achievement display names and descriptions.");
   const percentSource = source("Steam global achievement percentages API", urls.achievementPercentages, "Public no-key endpoint with volatile global percentages.", "medium");
   const generatedEntities = new Map<string, string>();
@@ -1623,6 +1691,17 @@ async function main() {
   if (achievementPercentages.length !== 42) {
     throw new Error(`Steam global achievement percentages API: expected 42 ids, got ${achievementPercentages.length}`);
   }
+  const achievementFacts = buildAchievementFacts(achievementRows, achievementPercentages);
+  const unmatchedAchievements = achievementFacts.filter((fact) => !fact.steam_internal_name);
+  if (unmatchedAchievements.length > 0) {
+    throw new Error(`Steam achievement fact matrix could not map community rows to API ids: ${unmatchedAchievements.map((fact) => fact.title).join(", ")}`);
+  }
+  const duplicateAchievementSlugs = achievementFacts
+    .map((fact) => fact.slug)
+    .filter((slug, index, slugs) => slugs.indexOf(slug) !== index);
+  if (duplicateAchievementSlugs.length > 0) {
+    throw new Error(`Steam achievement fact matrix has duplicate slugs: ${[...new Set(duplicateAchievementSlugs)].join(", ")}`);
+  }
   const newsItems = buildSteamNewsItems(newsApiRaw);
   const newsFindings = extractSteamNewsFindings(newsHtml, newsItems);
   addAchievementData(achievementRows, achievementPercentages);
@@ -1638,6 +1717,7 @@ async function main() {
       demoReviews,
       achievementRows,
       achievementPercentages,
+      achievementFacts,
       demoAchievementPercentages,
       demoAchievementPercentagesResult,
       newsFindings,

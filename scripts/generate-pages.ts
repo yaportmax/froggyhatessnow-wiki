@@ -39,6 +39,24 @@ type PublicSource = Source & {
   id: string;
 };
 
+type AchievementFact = {
+  title: string;
+  slug: string;
+  description: string;
+  steam_internal_name: string | null;
+  steam_global_percent_api: string | null;
+  steam_community_percent: string;
+  mentioned_entities: Array<{
+    name: string;
+    id: string;
+    category: string;
+    certainty: string;
+    notes: string;
+  }>;
+  source_ids: string[];
+  notes: string;
+};
+
 type SnapshotApp = {
   app_id: number;
   kind: string;
@@ -88,6 +106,7 @@ type SteamSnapshot = {
     community_rows_count: number;
     full_game_api_ids_count: number;
     demo_api_ids_count: number;
+    facts?: AchievementFact[];
     highest_global_percentages: Array<{ name: string; percent: string }>;
     lowest_global_percentages: Array<{ name: string; percent: string }>;
     notes: string[];
@@ -413,6 +432,7 @@ function steamSnapshotPage(snapshot: SteamSnapshot, extractedMetadata: Extracted
     localMetadataStatus(extractedMetadata) +
     "## Achievements\n\n" +
     `Public community rows parsed: **${snapshot.achievements.community_rows_count}**. Full-game global percentage API ids parsed: **${snapshot.achievements.full_game_api_ids_count}**. Demo global percentage API status: **${snapshot.achievements.demo_global_percentages_api_status}**; ids parsed: **${snapshot.achievements.demo_api_ids_count}**.\n\n` +
+    `The [Achievement Source Matrix](/achievement-source-matrix/) maps each public achievement row to its Steam API id, percentage fields, source ids, and any parsed loadout names.\n\n` +
     (snapshot.achievements.demo_global_percentages_api_error ? `Demo achievement endpoint note: ${snapshot.achievements.demo_global_percentages_api_error}.\n\n` : "") +
     "| Highest Public API Percentages | Percent |\n|---|---:|\n" +
     highest.map((row) => `| ${inlineCode(row.name)} | ${row.percent}% |`).join("\n") +
@@ -434,6 +454,63 @@ function steamSnapshotPage(snapshot: SteamSnapshot, extractedMetadata: Extracted
     "```bash\n" +
     snapshot.refresh_commands.join("\n") +
     "\n```\n"
+  );
+}
+
+function achievementSourceMatrixPage(snapshot: SteamSnapshot) {
+  const facts = snapshot.achievements.facts ?? [];
+  const loadoutFacts = facts.filter((fact) => fact.mentioned_entities.length > 0);
+  const milestoneSeries = [
+    ["Skill unlock milestones", /^Power Hungry /],
+    ["Artifact collection milestones", /^Relic Hunter /],
+    ["Location completion milestones", /^Snow Master /],
+    ["Location unlock milestones", /^Pathfinder /],
+    ["Character upgrade milestones", /^Peak Performance /],
+    ["Character unlock milestones", /^Assemble the Team /]
+  ] as const;
+  const milestoneRows = milestoneSeries.flatMap(([label, pattern]) =>
+    facts
+      .filter((fact) => pattern.test(fact.title))
+      .map((fact) => ({ label, fact }))
+  );
+  return (
+    frontmatter("Achievement Source Matrix", "Steam achievement fact matrix for FROGGY HATES SNOW wiki sourcing.") +
+    "# Achievement Source Matrix\n\n" +
+    "This page keeps the official Steam achievement evidence in one place. Achievement wording can verify names and progression thresholds, but it does not by itself verify exact item type, effect, stats, unlock cost, or balance.\n\n" +
+    `Rows: **${facts.length}** public Steam achievements. Rows with parsed loadout names: **${loadoutFacts.length}**.\n\n` +
+    "## Milestone Series\n\n" +
+    "These achievement series verify public progression thresholds. They do not verify exact unlock costs, reward values, or whether the threshold applies identically across every mode.\n\n" +
+    "| Series | Achievement | Condition | API % | Community % | Source IDs |\n|---|---|---|---:|---:|---|\n" +
+    milestoneRows
+      .map(
+        ({ label, fact }) =>
+          `| ${mdEscape(label)} | [${mdEscape(fact.title)}](/generated/achievements/${fact.slug}/) | ${mdEscape(fact.description)} | ${mdEscape(fact.steam_global_percent_api ?? "Missing")} | ${mdEscape(fact.steam_community_percent)} | ${fact.source_ids.map(inlineCode).join(", ")} |`
+      )
+      .join("\n") +
+    "\n\n" +
+    "## Loadout Names\n\n" +
+    "Names in this table are safe wiki candidates because they appear in public Steam achievement conditions. Certainty describes only whether the parser can confidently classify the category from wording.\n\n" +
+    "| Achievement | Mentioned Names | Source IDs | Notes |\n|---|---|---|---|\n" +
+    loadoutFacts
+      .map((fact) => {
+        const names = fact.mentioned_entities
+          .map((entity) => `${entity.name} (${entity.category}, ${entity.certainty.replace(/_/g, " ")})`)
+          .join(", ");
+        return `| [${mdEscape(fact.title)}](/generated/achievements/${fact.slug}/) | ${mdEscape(names)} | ${fact.source_ids.map(inlineCode).join(", ")} | ${mdEscape(fact.notes)} |`;
+      })
+      .join("\n") +
+    "\n\n## Full Matrix\n\n" +
+    "| Achievement | Condition | Steam API ID | API % | Community % | Mentioned Entities |\n|---|---|---|---:|---:|---|\n" +
+    facts
+      .map((fact) => {
+        const entities =
+          fact.mentioned_entities.length > 0
+            ? fact.mentioned_entities.map((entity) => `${entity.name} (${entity.category})`).join(", ")
+            : "None parsed";
+        return `| [${mdEscape(fact.title)}](/generated/achievements/${fact.slug}/) | ${mdEscape(fact.description)} | ${fact.steam_internal_name ? inlineCode(fact.steam_internal_name) : "Missing"} | ${mdEscape(fact.steam_global_percent_api ?? "Missing")} | ${mdEscape(fact.steam_community_percent)} | ${mdEscape(entities)} |`;
+      })
+      .join("\n") +
+    "\n"
   );
 }
 
@@ -539,7 +616,7 @@ function homepage(allRows: Entity[], snapshot: SteamSnapshot) {
     `Steam source snapshot: full game app ${snapshot.apps.full_game.app_id}, demo app ${snapshot.apps.demo.app_id}, ${snapshot.achievements.community_rows_count} public achievement rows, accessed ${snapshot.accessed_date}.\n\n` +
     "## Browse\n\n" +
     REQUIRED_DATASETS.map((dataset) => `- [${CATEGORY_LABELS[dataset]}](/generated/${dataset}/)`).join("\n") +
-    "\n- [Game Metadata](/game-metadata/)\n- [Steam Source Snapshot](/steam-source-snapshot/)\n- [Source Ledger](/source-ledger/)\n- [Verification Status](/verification-status/)" +
+    "\n- [Game Metadata](/game-metadata/)\n- [Steam Source Snapshot](/steam-source-snapshot/)\n- [Achievement Source Matrix](/achievement-source-matrix/)\n- [Source Ledger](/source-ledger/)\n- [Verification Status](/verification-status/)" +
     "\n\n## Priority Research Gaps\n\n" +
     "- Local Steam demo acquisition is blocked in this macOS shell; see `notes/public-research.md`.\n" +
     "- Individual frog/character names, map names, boss names, enemy names, exact upgrade stats, costs, and unlock conditions need gameplay or safe metadata verification.\n" +
@@ -651,6 +728,7 @@ export async function generatePages() {
   await writeFile(path.join(outputRoot, "index.md"), homepage(allRows, steamSnapshot));
   await writeFile(path.join(outputRoot, "source-ledger.md"), sourceLedgerPage(publicSources, allRows));
   await writeFile(path.join(outputRoot, "steam-source-snapshot.md"), steamSnapshotPage(steamSnapshot, extractedMetadata));
+  await writeFile(path.join(outputRoot, "achievement-source-matrix.md"), achievementSourceMatrixPage(steamSnapshot));
   await writeFile(path.join(outputRoot, "game-metadata.md"), gameMetadataPage(steamSnapshot));
 
   for (const [dataset, rows] of datasetEntries) {
