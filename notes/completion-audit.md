@@ -34,7 +34,7 @@ The wiki/scaffold/data/source/deploy work is complete and verified. The remainin
 | Generated category/detail pages | `npm run generate` creates 153 entity detail pages and 11 category indexes; filesystem currently has 164 generated `index.md` files. | Done |
 | Required static pages | Homepage, beginner guide, warmth guide, best upgrades, unlocks, game modes, FAQ, contribute, verification status, game metadata, source ledger, Steam source snapshot, and achievement source matrix exist under `src/content/docs/`. | Done |
 | SEO targets | Page titles/descriptions and generated routes cover the requested terms for wiki, frogs, maps, tools, items, skills, achievements, unlocks, warmth guide, bosses, and game modes. `astro.config.mjs` currently uses the Vercel alias until the custom domain is actually registered. | Done for deployed alias; custom canonical waits on domain |
-| Package scripts | `dev`, `build`, `preview`, `scan`, `fetch:steam`, `refresh:data`, `generate`, `validate`, and `build:verified` exist, plus `test`, `deploy:*`, and `domain:*` helpers including the read-only `domain:health` final audit and guarded `domain:commit-canonical` commit helper. | Done |
+| Package scripts | `dev`, `build`, `preview`, `scan`, `fetch:steam`, `refresh:data`, `generate`, `validate`, and `build:verified` exist, plus `test`, `deploy:*`, and `domain:*` helpers including `domain:finish:post-verification`, the read-only `domain:health` final audit, and guarded `domain:commit-canonical` commit helper. | Done |
 | README and AGENTS | Both exist and document workflow, source rules, validation/deploy/domain paths, and fail-loud behavior. | Done |
 | Domain research | `notes/domain-options.md` lists all required candidates, registrar, registration/renewal prices, pros/cons, best recommendation, backups, sources, and attempt history. | Done |
 | Buy domain via Porkbun API and/or Chrome | Porkbun API confirms `froggyhatessnow.wiki` is available, non-premium, `$2.06` first year / `$26.26` renewal, but registration fails with `VERIFICATION_REQUIRED`. Chrome plugin Node browser-control was not exposed; Computer Use could not attach to Chrome (`cgWindowNotFound`) even after opening a window, so UI verification could not proceed safely. | Blocked |
@@ -72,7 +72,8 @@ curl -I --max-time 20 https://froggyhatessnow.wiki/
 - `npm run deploy:status`: stable alias live checks passed for homepage, Steam source snapshot, current source timestamp, and achievement matrix.
 - `npm run domain:status`: `domain_available_not_registered`; latest check request id `019e21ab-80ae-7745-b332-2ff15488d479`, DNS retrieve request id `019e21ab-837a-79e8-b69a-70789fcf5b03`.
 - `npm run domain:health`: expected failure while registration/DNS/canonical switch are incomplete. It now includes an `astro-canonical-site` check for `astro.config.mjs` in addition to Porkbun registration state, Vercel attachment, DNS A records, and custom-domain page markers.
-- `npm run domain:commit-canonical`: guarded post-domain helper exists; it commits/pushes the canonical config switch only after `domain:health` passes and only if `astro.config.mjs` is the sole dirty file.
+- `npm run domain:finish:post-verification`: guarded post-verification wrapper exists; after registration/DNS it commits/pushes the canonical config before deployment and then deploys from the clean committed canonical state.
+- `npm run domain:commit-canonical`: guarded manual recovery helper exists; it commits/pushes the canonical config switch only after `domain:health` passes and only if `astro.config.mjs` is the sole dirty file. When run with `--deploy-after-commit`, it redeploys from the clean committed canonical state before the completion audit.
 - `domain:register` and `domain:finish` now generate a fresh timestamped idempotency suffix by default so a post-verification attempt does not reuse the earlier failed `post-verification` create request.
 - `npm run domain:finish -- --confirm-register-and-dns`: failed at `domain:register` with Porkbun `VERIFICATION_REQUIRED`; check request id `019e219a-80e4-723c-af60-4191806fc087`, create request id `019e217f-e6ac-723c-8134-3613a780f093`.
 - `curl -I --max-time 20 https://froggyhatessnow.wiki/`: `Could not resolve host`, as expected while the domain is unregistered.
@@ -83,7 +84,7 @@ curl -I --max-time 20 https://froggyhatessnow.wiki/
 2. Run:
 
    ```bash
-   npm run domain:finish -- --confirm-register-and-dns --commit-canonical-after-success
+   npm run domain:finish:post-verification
    ```
 
 3. Confirm Porkbun DNS has:

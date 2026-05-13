@@ -43,6 +43,23 @@ async function gitStatus() {
   return stdout.trim();
 }
 
+async function gitStatusLines() {
+  const status = await gitStatus();
+  return status.split(/\r?\n/).filter(Boolean);
+}
+
+async function assertRemoteMatchesLocal() {
+  const [headResult, remoteResult] = await Promise.all([
+    execFileAsync("git", ["rev-parse", "HEAD"], { maxBuffer: 1024 * 1024 }),
+    execFileAsync("git", ["ls-remote", "origin", "refs/heads/main"], { maxBuffer: 1024 * 1024 })
+  ]);
+  const localHead = headResult.stdout.trim();
+  const remoteHead = remoteResult.stdout.split(/\s+/)[0] ?? "";
+  if (!localHead || localHead !== remoteHead) {
+    throw new Error(`Refusing to commit canonical switch: local HEAD ${localHead || "unknown"} does not match origin/main ${remoteHead || "unknown"}.`);
+  }
+}
+
 function optionValue(name: string, fallback: string) {
   const prefix = `${name}=`;
   return args.find((arg) => arg.startsWith(prefix))?.slice(prefix.length) ?? fallback;
@@ -71,6 +88,32 @@ async function switchAstroSite() {
   }
   await writeFile(configPath, source.replace(`site: "${VERCEL_SITE}"`, `site: "${CUSTOM_SITE}"`));
   console.error(`Updated ${configPath} site to ${CUSTOM_SITE}`);
+}
+
+async function assertAstroCanonical() {
+  const source = await readFile("astro.config.mjs", "utf8");
+  if (!source.includes(`site: "${CUSTOM_SITE}"`)) {
+    throw new Error(`astro.config.mjs does not contain site: "${CUSTOM_SITE}".`);
+  }
+}
+
+async function commitCanonicalSwitchIfNeeded() {
+  await assertAstroCanonical();
+  await assertRemoteMatchesLocal();
+  const status = await gitStatusLines();
+  if (status.length === 0) {
+    console.error("No canonical commit needed; working tree is already clean.");
+    return;
+  }
+
+  const expected = [" M astro.config.mjs"];
+  if (status.length !== expected.length || status.some((line, index) => line !== expected[index])) {
+    throw new Error(`Refusing to commit canonical switch with unexpected working tree changes:\n${status.join("\n")}`);
+  }
+
+  await run("git", ["add", "astro.config.mjs"]);
+  await run("git", ["commit", "-m", "Switch canonical site to custom domain"]);
+  await run("git", ["push", "origin", "main"]);
 }
 
 async function inspectDomains() {
@@ -181,7 +224,7 @@ async function main() {
     throw new Error(
       [
         "Dry run only. This command will register a domain, configure DNS, switch the Astro canonical site, build, and deploy.",
-        `After Porkbun account verification, run: npm run domain:finish -- ${CONFIRM_FLAG}`,
+        "After Porkbun account verification, run: npm run domain:finish:post-verification",
         `Optional: --max-cost-usd=${DEFAULT_MAX_COST} --idempotency-suffix=${defaultIdempotencySuffix} ${SKIP_SITE_SWITCH_FLAG} ${COMMIT_CANONICAL_FLAG}`
       ].join("\n")
     );
@@ -210,16 +253,25 @@ async function main() {
   await inspectDomains();
   await run("npm", ["run", "validate"]);
   await run("npm", ["run", "build"]);
+
+  if (argSet.has(COMMIT_CANONICAL_FLAG) && !argSet.has(SKIP_SITE_SWITCH_FLAG)) {
+    await commitCanonicalSwitchIfNeeded();
+    await run("npm", ["run", "deploy:publish"]);
+    await inspectDomains();
+    await verifyCustomDomainLive();
+    await run("npm", ["run", "domain:health"]);
+    await run("npm", ["run", "audit:completion"]);
+    return;
+  }
+
   await run("npx", ["vercel", "build", "--prod", "--yes"]);
   await run("npx", ["vercel", "deploy", "--prebuilt", "--prod"]);
   await run("npm", ["run", "deploy:status"]);
   await inspectDomains();
   await verifyCustomDomainLive();
   await run("npm", ["run", "domain:health"]);
-  if (argSet.has(COMMIT_CANONICAL_FLAG)) {
-    await run("npm", ["run", "domain:commit-canonical"]);
-  } else if (!argSet.has(SKIP_SITE_SWITCH_FLAG)) {
-    console.error(`Custom-domain health passed. To commit and push the canonical config switch, run: npm run domain:commit-canonical`);
+  if (!argSet.has(SKIP_SITE_SWITCH_FLAG)) {
+    console.error(`Custom-domain health passed. To commit, push, and redeploy the canonical config switch, run: npm run domain:commit-canonical -- --deploy-after-commit`);
   }
 }
 

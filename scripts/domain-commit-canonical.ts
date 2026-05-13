@@ -6,6 +6,9 @@ const execFileAsync = promisify(execFile);
 
 const DOMAIN = "froggyhatessnow.wiki";
 const CUSTOM_SITE = `https://${DOMAIN}`;
+const DEPLOY_AFTER_COMMIT_FLAG = "--deploy-after-commit";
+
+const argSet = new Set(process.argv.slice(2));
 
 async function run(command: string, args: string[]) {
   console.error(`$ ${[command, ...args].join(" ")}`);
@@ -55,6 +58,10 @@ async function main() {
   await assertAstroCanonical();
   const status = await gitStatus();
   if (status.length === 0) {
+    await assertRemoteMatchesLocal();
+    if (argSet.has(DEPLOY_AFTER_COMMIT_FLAG)) {
+      await run("npm", ["run", "deploy:publish"]);
+    }
     await run("npm", ["run", "audit:completion"]);
     console.error("No canonical commit needed; working tree is already clean.");
     return;
@@ -69,6 +76,9 @@ async function main() {
   await run("git", ["add", "astro.config.mjs"]);
   await run("git", ["commit", "-m", "Switch canonical site to custom domain"]);
   await run("git", ["push", "origin", "main"]);
+  if (argSet.has(DEPLOY_AFTER_COMMIT_FLAG)) {
+    await run("npm", ["run", "deploy:publish"]);
+  }
   await run("npm", ["run", "audit:completion"]);
 }
 

@@ -45,13 +45,13 @@ Latest read-only domain status:
 Run:
 
 ```bash
-npm run domain:finish -- --confirm-register-and-dns --commit-canonical-after-success
+npm run domain:finish:post-verification
 npm run audit:completion
 ```
 
-This guarded finisher registers `froggyhatessnow.wiki`, creates the Vercel A records in Porkbun DNS, switches `astro.config.mjs` to `https://froggyhatessnow.wiki`, rebuilds, deploys, reruns Vercel domain checks, verifies live page markers on both `https://froggyhatessnow.wiki` and `https://www.froggyhatessnow.wiki`, and then runs `npm run domain:health`.
+This guarded finisher registers `froggyhatessnow.wiki`, creates the Vercel A records in Porkbun DNS, switches `astro.config.mjs` to `https://froggyhatessnow.wiki`, validates/builds, commits and pushes the canonical config switch only if `astro.config.mjs` is the sole dirty file, deploys from that clean committed state, reruns Vercel domain checks, verifies live page markers on both `https://froggyhatessnow.wiki` and `https://www.froggyhatessnow.wiki`, and then runs `npm run domain:health` plus `npm run audit:completion`.
 
-With `--commit-canonical-after-success`, it also runs `npm run domain:commit-canonical`. That helper refuses to commit unless `domain:health` passes, `astro.config.mjs` is the only dirty file, and local `main` matches `origin/main`; then it commits/pushes the canonical-domain config switch and runs `npm run audit:completion`.
+The standalone helper `npm run domain:commit-canonical -- --deploy-after-commit` remains available for manual recovery after custom-domain health passes. It refuses to commit unless `domain:health` passes, `astro.config.mjs` is the only dirty file, and local `main` matches `origin/main`; then it commits/pushes the canonical-domain config switch, redeploys from the clean committed canonical state, and runs `npm run audit:completion`.
 
 The finisher now uses a fresh timestamped registration idempotency suffix by default. If overriding `--idempotency-suffix`, do not reuse `post-verification` or another suffix from a previous failed create request.
 

@@ -52,7 +52,7 @@ The register helper generates a fresh timestamped idempotency suffix by default.
 Or run the guarded finisher after verification:
 
 ```bash
-npm run domain:finish -- --confirm-register-and-dns --commit-canonical-after-success
+npm run domain:finish:post-verification
 npm run audit:completion
 ```
 
@@ -99,11 +99,11 @@ Domain registration was attempted through the Porkbun API and blocked by account
 After the Porkbun account is verified:
 
 ```bash
-npm run domain:finish -- --confirm-register-and-dns
+npm run domain:finish:post-verification
 npm run domain:health
 ```
 
-The finisher registers the domain, configures Porkbun DNS, switches the Astro canonical site, rebuilds/deploys, inspects both Vercel domains, checks live markers on both the apex and `www` custom domains, and then runs `npm run domain:health`. With `--commit-canonical-after-success`, it also runs `npm run domain:commit-canonical`, which refuses to commit unless `domain:health` passes and the only local change is `astro.config.mjs`. `npm run domain:health` is read-only and repeats the final Astro-canonical/Porkbun/Vercel/DNS/custom-domain marker audit; it should fail while Porkbun still reports `domain_available_not_registered` or while `astro.config.mjs` still points at the Vercel alias.
+The post-verification finisher registers the domain, configures Porkbun DNS, switches the Astro canonical site, validates/builds, commits and pushes the canonical `astro.config.mjs` change only if it is the sole dirty file, redeploys from the clean committed canonical state, inspects both Vercel domains, checks live markers on both the apex and `www` custom domains, and then runs `npm run domain:health` and `npm run audit:completion`. `npm run domain:health` is read-only and repeats the final Astro-canonical/Porkbun/Vercel/DNS/custom-domain marker audit; it should fail while Porkbun still reports `domain_available_not_registered` or while `astro.config.mjs` still points at the Vercel alias.
 
 See `notes/domain-options.md` for pricing and next steps.
 

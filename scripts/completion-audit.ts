@@ -51,6 +51,7 @@ const SUPPORTING_SCRIPTS = [
   "domain:register",
   "domain:dns",
   "domain:finish",
+  "domain:finish:post-verification",
   "domain:health",
   "domain:commit-canonical",
   "audit:completion"
