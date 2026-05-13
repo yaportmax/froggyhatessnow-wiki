@@ -38,7 +38,7 @@ The wiki/scaffold/data/source/deploy work is complete and verified. The remainin
 | README and AGENTS | Both exist and document workflow, source rules, validation/deploy/domain paths, and fail-loud behavior. | Done |
 | Domain research | `notes/domain-options.md` lists all required candidates, registrar, registration/renewal prices, pros/cons, best recommendation, backups, sources, and attempt history. | Done |
 | Buy domain via Porkbun API and/or Chrome | Porkbun API confirms `froggyhatessnow.wiki` is available, non-premium, `$2.06` first year / `$26.26` renewal, but registration fails with `VERIFICATION_REQUIRED`. Chrome plugin Node browser-control was not exposed; Computer Use could not attach to Chrome (`cgWindowNotFound`) even after opening a window, so UI verification could not proceed safely. | Blocked |
-| Vercel deployment | Vercel project `yaportmax-5253s-projects/froggyhatessnow-wiki`; active deployment `dpl_9sfAECn7mGysePvw3ms3cFpjGaSD`; stable alias `https://froggyhatessnow-wiki.vercel.app` passes live checks. | Done |
+| Vercel deployment | Vercel project `yaportmax-5253s-projects/froggyhatessnow-wiki`; active deployment `dpl_GSpKH5VNt3rtwN1qbAQ6dVuhjiPZ`; stable alias `https://froggyhatessnow-wiki.vercel.app` passes live checks including source marker `2026-05-13T14:41:46.504Z`. | Done |
 | Custom domain DNS if registered | Vercel has `froggyhatessnow.wiki` and `www.froggyhatessnow.wiki` attached, but DNS is not configured because the domain is not registered. Porkbun DNS returns `INVALID_DOMAIN`. | Waiting on registration |
 | Completion criteria | All criteria are met except “Buy the domain” and resulting DNS/custom-domain canonical verification. | Not complete |
 
