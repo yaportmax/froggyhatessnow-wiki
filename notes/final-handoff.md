@@ -8,11 +8,11 @@ The wiki is built, validated, pushed, and live on Vercel.
 
 - GitHub: https://github.com/yaportmax/froggyhatessnow-wiki
 - Live alias: https://froggyhatessnow-wiki.vercel.app
-- Active deployment: `dpl_GSpKH5VNt3rtwN1qbAQ6dVuhjiPZ`
-- Active deployment URL: https://froggyhatessnow-wiki-mkh2govyh-yaportmax-5253s-projects.vercel.app
-- Current source snapshot marker: `2026-05-13T14:41:46.504Z`
+- Active deployment: `dpl_8UYsVqC8BEkCweYPqWM6JEVQWd2p`
+- Active deployment URL: https://froggyhatessnow-wiki-b3biql6p7-yaportmax-5253s-projects.vercel.app
+- Current source snapshot marker: `2026-05-13T15:39:50.593Z`
 
-`npm run deploy:status` verifies the live alias, homepage, Steam source snapshot, source timestamp marker, and achievement matrix.
+`npm run deploy:status` verifies the live alias, homepage, Steam source snapshot, source timestamp marker, achievement matrix, Open Graph image metadata, `/robots.txt`, and `/llms.txt`.
 
 `npm run audit:completion` runs the consolidated goal-level audit. It is expected to fail until the custom-domain registration/DNS/canonical checks pass.
 

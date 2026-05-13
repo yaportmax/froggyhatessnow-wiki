@@ -31,21 +31,22 @@ The folder was linked to Vercel project `yaportmax-5253s-projects/froggyhatessno
 
 Latest successful production deploy completed on 2026-05-13:
 
-- Current production URL: https://froggyhatessnow-wiki-77tyugqy7-yaportmax-5253s-projects.vercel.app
+- Current production URL: https://froggyhatessnow-wiki-b3biql6p7-yaportmax-5253s-projects.vercel.app
 - Alias: https://froggyhatessnow-wiki.vercel.app
-- Deployment id: `dpl_9sfAECn7mGysePvw3ms3cFpjGaSD`
-- Inspect URL: https://vercel.com/yaportmax-5253s-projects/froggyhatessnow-wiki/9sfAECn7mGysePvw3ms3cFpjGaSD
+- Deployment id: `dpl_8UYsVqC8BEkCweYPqWM6JEVQWd2p`
+- Inspect URL: https://vercel.com/yaportmax-5253s-projects/froggyhatessnow-wiki/8UYsVqC8BEkCweYPqWM6JEVQWd2p
 
-The current deploy includes the refreshed Steam source snapshot generated at `2026-05-13T13:41:44.440Z`, all 15 Steam News API items with evidence classifications, Steam news/devlog findings, 42-row achievement source matrix, generated source ledger, game metadata page, explicit empty-local-metadata status, and 178 static HTML pages. The build now clears Astro's local content cache in `prebuild` so restored Vercel caches do not emit stale duplicate-doc warnings.
+The current deploy includes the refreshed Steam source snapshot generated at `2026-05-13T15:39:50.593Z`, all 15 Steam News API items with evidence classifications, 11 direct Steam news/devlog source mappings, 70 confirmed Steam news/devlog terms, 42-row achievement source matrix, generated source ledger, game metadata page, explicit empty-local-metadata status, and 184 static HTML pages. The build now clears Astro's local content cache in `prebuild` so restored Vercel caches do not emit stale duplicate-doc warnings.
 Astro's `site` setting points to the Vercel alias until `froggyhatessnow.wiki` is actually registered and connected.
 
 Earlier deploy attempts after validator hardening are no longer blocking the queue:
 
 - `dpl_BysoqF8R65bguRBehVoXhJXeRPYW` / `https://froggyhatessnow-wiki-md282qwlk-yaportmax-5253s-projects.vercel.app` resolved to `ERROR`.
 - `dpl_J1kt8Sbkz5hSUBLvGjKMwjtPTm58` / `https://froggyhatessnow-wiki-kyvn13zp7-yaportmax-5253s-projects.vercel.app` resolved to `READY` and was superseded.
-- `dpl_97aAFAYy6K71rgdiDABUQib1cWkJ` / `https://froggyhatessnow-wiki-6b2rs5abq-yaportmax-5253s-projects.vercel.app` resolved to `READY` and was superseded by `dpl_9sfAECn7mGysePvw3ms3cFpjGaSD`.
+- `dpl_97aAFAYy6K71rgdiDABUQib1cWkJ` / `https://froggyhatessnow-wiki-6b2rs5abq-yaportmax-5253s-projects.vercel.app` resolved to `READY` and was superseded.
+- `dpl_GzwdMMpkJi9My8f4SYEX9pSzPvAk` / `https://froggyhatessnow-wiki-lsdwxrtq5-yaportmax-5253s-projects.vercel.app` resolved to `READY` and was superseded by `dpl_8UYsVqC8BEkCweYPqWM6JEVQWd2p`.
 
-Non-destructive checks on 2026-05-13 confirm the stable alias directly; `https://froggyhatessnow-wiki.vercel.app` resolves to READY deployment `dpl_9sfAECn7mGysePvw3ms3cFpjGaSD`, and the homepage, Steam source snapshot, local Steam snapshot timestamp, and achievement matrix live checks pass.
+Non-destructive checks on 2026-05-13 confirm the stable alias directly; `https://froggyhatessnow-wiki.vercel.app` resolves to READY deployment `dpl_8UYsVqC8BEkCweYPqWM6JEVQWd2p`, and the homepage, Steam source snapshot, local Steam snapshot timestamp, achievement matrix, Open Graph image metadata, `/robots.txt`, and `/llms.txt` live checks pass.
 
 ```bash
 npm run deploy:status
@@ -59,7 +60,7 @@ npm run deploy:publish
 
 Live checks after this deploy:
 
-- `https://froggyhatessnow-wiki.vercel.app/steam-source-snapshot/` returns 200 and contains Steam News API items classified, All Steam News Items, Direct Steam News Sources, Local Metadata Scan, 14 full-game screenshot count, and Achievement Source Matrix link.
+- `https://froggyhatessnow-wiki.vercel.app/steam-source-snapshot/` returns 200 and contains Steam News API items classified, All Steam News Items, Direct Steam News Sources, Devlog #4's `steam-prelaunch-content-devlog` mapping, Local Metadata Scan, 14 full-game screenshot count, and Achievement Source Matrix link.
 - `https://froggyhatessnow-wiki.vercel.app/achievement-source-matrix/` returns 200 and contains Milestone Series and Loadout Names sections.
 - `https://froggyhatessnow-wiki.vercel.app/game-metadata/` returns 200.
 - `https://froggyhatessnow-wiki.vercel.app/generated/frogs/puff/` returns 200 and contains Puff/ranged poison spit source data.
