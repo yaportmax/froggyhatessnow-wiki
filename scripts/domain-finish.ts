@@ -18,12 +18,19 @@ const argSet = new Set(args);
 
 async function run(command: string, commandArgs: string[]) {
   console.error(`$ ${[command, ...commandArgs].join(" ")}`);
-  const { stdout, stderr } = await execFileAsync(command, commandArgs, {
-    maxBuffer: 30 * 1024 * 1024
-  });
-  if (stdout.trim()) console.log(stdout.trim());
-  if (stderr.trim()) console.error(stderr.trim());
-  return stdout;
+  try {
+    const { stdout, stderr } = await execFileAsync(command, commandArgs, {
+      maxBuffer: 30 * 1024 * 1024
+    });
+    if (stdout.trim()) console.log(stdout.trim());
+    if (stderr.trim()) console.error(stderr.trim());
+    return stdout;
+  } catch (error) {
+    const failed = error as Error & { stdout?: string; stderr?: string };
+    if (failed.stdout?.trim()) console.log(failed.stdout.trim());
+    if (failed.stderr?.trim()) console.error(failed.stderr.trim());
+    throw new Error(`Command failed: ${command} ${commandArgs.join(" ")}\n${failed.message}`);
+  }
 }
 
 async function gitStatus() {

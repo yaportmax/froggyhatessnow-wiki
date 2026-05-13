@@ -76,6 +76,13 @@ A sixth guarded registration attempt on 2026-05-13 used the documented post-veri
 - Create request id: `019e217f-e6ac-723c-8134-3613a780f093`
 - Error code: `VERIFICATION_REQUIRED`
 
+A confirmed `domain:finish` attempt on 2026-05-13 stopped at the same registration gate before DNS, Astro site, build, or deploy steps ran. It reused the post-verification idempotency key, so Porkbun replayed the same create request id.
+
+- Command: `npm run domain:finish -- --confirm-register-and-dns --allow-dirty`
+- Check request id: `019e2185-6426-7dd0-9f64-3a0a05e2e891`
+- Create request id: `019e217f-e6ac-723c-8134-3613a780f093`
+- Error code: `VERIFICATION_REQUIRED`
+
 The read-only helper checks currently succeed:
 
 ```bash
