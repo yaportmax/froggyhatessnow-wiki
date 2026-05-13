@@ -30,8 +30,8 @@ Unlock 3 Characters
 | Last Verified | Public Steam metadata accessed 2026-05-13 |
 | Notes | Global percentage is volatile; refresh before publishing exact percentage-driven claims. |
 | Steam Internal Achievement ID | assemble_the_team_2 |
-| Steam Global Percent API | 19.4% |
-| Steam Community Percent | 19.6% |
+| Steam Global Percent API | 19.7% |
+| Steam Community Percent | 19.7% |
 
 ## Related
 

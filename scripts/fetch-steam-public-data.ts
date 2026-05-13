@@ -273,6 +273,7 @@ const FIXED_SOURCE_IDS = new Map<string, string>([
   ["SteamDB demo page", "steamdb-demo"],
   ["Digital Bandidos game page", "digital-bandidos-page"],
   ["Xbox Wire developer interview", "xbox-wire-interview"],
+  ["Devlog #4: 20,000 Wishlists! Thank You (Plus, a hint at what's next...)", "steam-prelaunch-content-devlog"],
   ["Steam full-game appdetails summary", "steam-full-appdetails-summary"],
   ["Steam demo appdetails summary", "steam-demo-appdetails-summary"]
 ]);
@@ -589,6 +590,25 @@ const STEAM_NEWS_SOURCE_RULES: Array<{
     supports: "Snow-system devlog explaining snow interaction, density/layers, and named snow/ice tools."
   },
   {
+    source_id: "steam-prelaunch-content-devlog",
+    titlePattern: /devlog #4|20,000 Wishlists/i,
+    required: true,
+    requiredTerms: ["New enemies and bosses", "new attack patterns", "new projectile types", "New skills for the frogs", "New companions"],
+    wiki_targets: ["enemies", "bosses", "skills", "companions", "glossary"],
+    verified_terms: [
+      "new enemies and bosses",
+      "new attack patterns",
+      "new projectile types",
+      "new frog skills",
+      "movement abilities",
+      "snow digging abilities",
+      "new companions",
+      "animals",
+      "robots"
+    ],
+    supports: "Pre-launch content devlog previewing new enemies and bosses, new attack patterns/projectile types, new frog skills, movement and snow-digging abilities, and companions including animals and robots."
+  },
+  {
     source_id: "steam-demo-overhaul-news",
     titlePattern: /demo is back|major overhaul/i,
     required: false,
@@ -716,6 +736,14 @@ function mappedSteamNewsClassification(sourceId: string): {
         evidence_strength: "strong",
         fact_scope: ["demo_update", "entity_names", "progression"],
         claim_limits: sharedLimits,
+        needs_gameplay_verification: true
+      };
+    case "steam-prelaunch-content-devlog":
+      return {
+        classification: "gameplay_devlog",
+        evidence_strength: "moderate",
+        fact_scope: ["content_preview", "enemies", "bosses", "skills", "companions"],
+        claim_limits: "Use for broad pre-launch content categories only; do not infer names, stats, or final behavior.",
         needs_gameplay_verification: true
       };
     case "steam-next-demo-devlog":
@@ -861,7 +889,15 @@ function extractSteamNewsFindings(html: string, newsItems: SteamNewsItemSummary[
     throw new Error(`Steam news/devlog source is missing expected public markers: ${missing.join(", ")}`);
   }
 
-  const requiredNewsSources = ["steam-post-launch-update", "steam-launch-devlog", "steam-anomalous-zones-devlog", "steam-release-date-news", "steam-snow-devlog", "steam-next-demo-devlog"];
+  const requiredNewsSources = [
+    "steam-post-launch-update",
+    "steam-launch-devlog",
+    "steam-anomalous-zones-devlog",
+    "steam-release-date-news",
+    "steam-snow-devlog",
+    "steam-prelaunch-content-devlog",
+    "steam-next-demo-devlog"
+  ];
   const newsSourceIds = new Set(newsItems.map((item) => item.source_id));
   const missingNewsSources = requiredNewsSources.filter((sourceId) => !newsSourceIds.has(sourceId));
   if (missingNewsSources.length > 0) {
@@ -869,9 +905,9 @@ function extractSteamNewsFindings(html: string, newsItems: SteamNewsItemSummary[
   }
 
   const confirmedTerms = [
-      "Zippy",
-      "Puff",
-      "Glider",
+    "Zippy",
+    "Puff",
+    "Glider",
     "Snowball Roll",
     "Leap Chain",
     "Delivery Bot",
@@ -883,9 +919,18 @@ function extractSteamNewsFindings(html: string, newsItems: SteamNewsItemSummary[
     "Energy Wave",
     "Destructive Field",
     "Invincible Roll",
-      "Armor",
-      "ranged poison spit",
-      "Drill",
+    "Armor",
+    "new enemies and bosses",
+    "new attack patterns",
+    "new projectile types",
+    "new frog skills",
+    "movement abilities",
+    "snow digging abilities",
+    "new companions",
+    "animals",
+    "robots",
+    "ranged poison spit",
+    "Drill",
     "Salt Sack",
     "Snowblower",
     "Blue Gems",
@@ -1111,6 +1156,13 @@ function seedCoreEntities() {
     "high",
     "steam-snow-devlog"
   );
+  const prelaunchContentDevlog = source(
+    "Devlog #4: 20,000 Wishlists! Thank You (Plus, a hint at what's next...)",
+    "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1826992588596358",
+    "2026-03-13 pre-launch content preview devlog.",
+    "medium",
+    "steam-prelaunch-content-devlog"
+  );
   const demoOverhaulNews = source(
     "The Froggy Hates Snow demo is back – and it’s had a major overhaul",
     "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1823825466505761",
@@ -1158,7 +1210,7 @@ function seedCoreEntities() {
       effect: "The full roster has 10 playable frogs with distinct public loadout concepts; each name, stat line, and exact attack behavior still needs verification unless listed separately.",
       unlock_method: "Achievements mention unlocking 1, 3, and 9 characters.",
       verification_status: "Verified",
-      sources: [releaseDateNews, nextDemoDevlog, demoUpdateDevlog, achievementsSource, xboxWire],
+      sources: [releaseDateNews, nextDemoDevlog, demoUpdateDevlog, prelaunchContentDevlog, achievementsSource, xboxWire],
       notes: "Public devlogs mention examples such as tongue attacks, spits, snow minigun, electric staff, and hockey stick, but do not map them to named frogs in the available source pass."
     })
   );
@@ -1471,11 +1523,25 @@ function seedCoreEntities() {
     entity({
       name: "Location bosses",
       category: "bosses",
-      short_description: "Official Steam copy says each new map hides its own boss.",
-      effect: "Needs verification.",
+      short_description: "Official Steam copy says each new map hides its own boss; Devlog #4 also previews new bosses.",
+      effect: "Devlog #4 says new enemies and bosses were being added with new attack patterns and projectile types.",
       verification_status: "Verified",
-      sources: [fullStore, demoStore],
+      sources: [fullStore, demoStore, prelaunchContentDevlog],
       notes: "Treat as a generic boss category until location-specific boss names are verified."
+    })
+  );
+
+  addUnique(
+    datasets.bosses,
+    entity({
+      name: "Boss attack patterns",
+      category: "bosses",
+      short_description: "Steam Devlog #4 previews new boss content with new attack patterns and projectile types.",
+      effect: "Public source verifies the existence of new attack-pattern and projectile-type design work, but not exact boss names or behaviors.",
+      mode: "Pre-launch devlog/source coverage; exact released-state behavior needs gameplay verification.",
+      verification_status: "Verified",
+      sources: [prelaunchContentDevlog],
+      notes: "Use as a sourcing page for boss-behavior categories, not as a named boss."
     })
   );
 
@@ -1486,14 +1552,28 @@ function seedCoreEntities() {
         name,
         category: "enemies",
         short_description: `${name} are public enemy descriptors from official Steam copy.`,
-        effect: "Hostile enemy category; exact behavior needs verification.",
+        effect: "Hostile enemy category; exact behavior needs verification. Devlog #4 broadly confirms new enemies with new attack patterns and projectile types.",
         mode: "Core game and demo, except Peaceful Mode is described as monster-free.",
         verification_status: "Verified",
-        sources: [fullStore, demoStore],
+        sources: [fullStore, demoStore, prelaunchContentDevlog],
         notes: "Specific enemy names and behaviors need verification."
       })
     );
   }
+
+  addUnique(
+    datasets.enemies,
+    entity({
+      name: "Enemy attack patterns",
+      category: "enemies",
+      short_description: "Steam Devlog #4 previews new enemies with new attack patterns and new projectile types.",
+      effect: "Public source verifies attack-pattern/projectile-type variety at a broad level; exact enemy roster and behavior still need gameplay or safe local metadata verification.",
+      mode: "Pre-launch devlog/source coverage; exact released-state behavior needs gameplay verification.",
+      verification_status: "Verified",
+      sources: [prelaunchContentDevlog],
+      notes: "Use as a sourcing page for enemy-behavior categories, not as a named enemy."
+    })
+  );
 
   const glossaryTerms = [
     ["Warmth", "Survival resource concept; Steam copy says warmth means survival."],
@@ -1512,6 +1592,10 @@ function seedCoreEntities() {
     ["Character main attacks", "Demo/devlog examples include tongue attacks, spits, snow minigun, electric staff, and hockey stick."],
     ["Core attacks", "Launch devlog examples include tongue, spit, and baseball bat style core attacks, while the updated demo announcement identifies Puff's ranged poison spit."],
     ["Attacks", "The public Steam release-scope wording counts attacks alongside skills, tools, and companions; this wiki currently folds attack-style facts into Skills and Glossary until a standalone attack roster is sourced."],
+    ["Projectile types", "Steam Devlog #4 previews new enemy and boss projectile types, but does not name or quantify them."],
+    ["Movement abilities", "Steam Devlog #4 previews new frog movement abilities; later launch devlog posts name examples such as Glider, Snowball Roll, and Leap Chain."],
+    ["Snow digging abilities", "Steam Devlog #4 previews more powerful snow digging abilities; exact stats and scaling need gameplay verification."],
+    ["Companion roster", "Steam Devlog #4 previews new companions, including animals and robots; later public sources name several examples."],
     ["Quest-based meta-progression", "Demo/devlog posts describe quests and Blue Gems unlocking characters, abilities, and locations."],
     ["Local metadata unavailable", "The local game-files scan currently found zero readable files, so the wiki is populated from public sources until SteamCMD/local extraction succeeds."],
     ["Peaceful Mode", "Monster-free cozy mode described by Steam copy."],
@@ -1534,7 +1618,11 @@ function seedCoreEntities() {
     ["Character specializations", [nextDemoDevlog, demoUpdateDevlog, xboxWire]],
     ["Character main attacks", [nextDemoDevlog, demoUpdateDevlog, launchDevlog]],
     ["Core attacks", [launchDevlog, demoOverhaulNews, nextDemoDevlog]],
-    ["Attacks", [releaseDateNews, launchDevlog]],
+    ["Attacks", [releaseDateNews, launchDevlog, prelaunchContentDevlog]],
+    ["Projectile types", [prelaunchContentDevlog]],
+    ["Movement abilities", [prelaunchContentDevlog, launchDevlog]],
+    ["Snow digging abilities", [prelaunchContentDevlog, snowDevlog]],
+    ["Companion roster", [prelaunchContentDevlog, releaseDateNews, launchDevlog, xboxWire]],
     ["Quest-based meta-progression", [demoOverhaulNews, nextDemoDevlog, demoUpdateDevlog]],
     ["Peaceful Mode", [fullStore, demoStore, xboxWire]],
     ["Demo progress carryover", [releaseDateNews]],
@@ -1812,6 +1900,13 @@ function buildSteamSnapshot(args: {
         notes: "Examples are public, but exact character-to-attack mapping still needs gameplay or safe local metadata verification."
       },
       {
+        claim: "Steam Devlog #4 previews new enemies and bosses, new attack patterns/projectile types, new frog movement and snow-digging skills, and new companions including animals and robots.",
+        source_ids: ["steam-prelaunch-content-devlog", "steam-news-api"],
+        confidence: "medium",
+        wiki_targets: ["enemies", "bosses", "skills", "companions", "glossary"],
+        notes: "Use as broad content-category evidence only; the post does not name specific enemies, bosses, patterns, or projectile types."
+      },
+      {
         claim: "Steam demo/devlog posts describe Puff, quest-based meta-progression, and Blue Gems as unlock resources for characters, abilities, and locations.",
         source_ids: ["steam-demo-overhaul-news", "steam-next-demo-devlog", "steam-anomalous-zones-devlog"],
         confidence: "high",
@@ -1858,7 +1953,7 @@ function buildSteamSnapshot(args: {
     research_gaps: [
       "Exact character/frog roster beyond Froggy, Puff, Zippy, and the verified 10-playable-frog count, including which frog uses each public main-attack example.",
       "Named map/location roster, map unlock order beyond public thresholds/update notes, and location-specific boss names.",
-      "Named enemy roster and enemy behavior.",
+      "Named enemy roster, named boss roster, and exact attack-pattern/projectile behavior beyond Devlog #4's broad preview.",
       "Exact stats, costs, cooldowns, drop rates, and upgrade tree order.",
       "Whether demo metadata differs from the released full game after SteamCMD/local file extraction works.",
       "Gameplay screenshots or short notes that can confirm inferred achievement-derived categories."
@@ -2008,7 +2103,7 @@ function buildPublicResearchMarkdown(args: {
     "## Public Gameplay Concepts",
     "",
     "- Verified from official Steam copy: digging through snow, warmth/freezing as survival pressure, gems, keys, treasure chests, artifacts, anomaly zones, escape door, bosses, enemies, Peaceful Mode, upgrades, tools, companions, and a snowy-desert setting.",
-    "- Verified from official Steam news/devlogs: 10 playable frogs, 16 locations, 60+ skills/tools/attacks/companions, demo progress carryover, launch movement/projectile skills, robotic helpers, elemental status effects, anomalous-zone rewards, snow heightmap behavior, character main-attack examples, quest-based meta-progression, Blue Gem unlock scope, and first post-launch update changes.",
+    "- Verified from official Steam news/devlogs: 10 playable frogs, 16 locations, 60+ skills/tools/attacks/companions, demo progress carryover, launch movement/projectile skills, robotic helpers, elemental status effects, anomalous-zone rewards, snow heightmap behavior, character main-attack examples, quest-based meta-progression, Blue Gem unlock scope, Devlog #4 broad enemy/boss/attack-pattern/projectile/companion previews, and first post-launch update changes.",
     "- Corroborated by Xbox Wire developer interview: 10 frogs, 16 maps, 60+ tools/skills/companions, snow heightmap-style technology, companion roles, and Peaceful Mode purpose.",
     "- Verified named companions/tools/items from public copy or achievements include Penguin, Mole, Owl, Map, Shovel, Cart, Scanner, Locator, Pickaxe, Dynamite, Air Bomb, Flamethrower, Heater Sled, Gloves, Hot Tea, Energy Drink, Poison Flask, Frost Bomb, and Flashbang.",
     `- Steam news/devlog confirmed terms added to the wiki: ${args.newsFindings.confirmed_terms.join(", ")}.`,

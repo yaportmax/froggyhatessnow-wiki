@@ -225,13 +225,13 @@
     "notes": "2026-03-24: classification=gameplay_devlog; evidence=strong; Snow-system devlog explaining snow interaction, density/layers, and named snow/ice tools."
   },
   {
-    "id": "steam-news-1826992588596358",
-    "source_id": "steam-news-1826992588596358",
+    "id": "steam-prelaunch-content-devlog",
+    "source_id": "steam-prelaunch-content-devlog",
     "type": "public_source",
     "path_or_url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1826992588596358",
     "label": "Devlog #4: 20,000 Wishlists! Thank You ❤️(Plus, a hint at what's next...)",
     "confidence": "medium",
-    "notes": "2026-03-13: classification=marketing_or_event; evidence=metadata_only; Recorded for complete Steam News coverage; treated as marketing/event context, not gameplay evidence."
+    "notes": "2026-03-13: classification=gameplay_devlog; evidence=moderate; Pre-launch content devlog previewing new enemies and bosses, new attack patterns/projectile types, new frog skills, movement and snow-digging abilities, and companions including animals and robots."
   },
   {
     "id": "steam-news-1826362059919554",

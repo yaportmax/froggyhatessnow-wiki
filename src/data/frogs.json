@@ -81,6 +81,14 @@
         "notes": "2026-01-20 demo update devlog."
       },
       {
+        "source_id": "steam-prelaunch-content-devlog",
+        "type": "public_source",
+        "path_or_url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1826992588596358",
+        "label": "Devlog #4: 20,000 Wishlists! Thank You (Plus, a hint at what's next...)",
+        "confidence": "medium",
+        "notes": "2026-03-13 pre-launch content preview devlog."
+      },
+      {
         "source_id": "steam-full-achievements-page",
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",

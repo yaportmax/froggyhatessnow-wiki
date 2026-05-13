@@ -30,7 +30,7 @@ Survive a run with Tongue Attack & Curvy Tongue
 | Last Verified | Public Steam metadata accessed 2026-05-13 |
 | Notes | Global percentage is volatile; refresh before publishing exact percentage-driven claims. |
 | Steam Internal Achievement ID | master_of_the_tongue |
-| Steam Global Percent API | 9.6% |
+| Steam Global Percent API | 9.7% |
 | Steam Community Percent | 9.7% |
 
 ## Related

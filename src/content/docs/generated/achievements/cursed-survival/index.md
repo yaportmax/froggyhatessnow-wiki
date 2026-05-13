@@ -30,7 +30,7 @@ Survive a run with Voodoo Curse & Vampirism
 | Last Verified | Public Steam metadata accessed 2026-05-13 |
 | Notes | Global percentage is volatile; refresh before publishing exact percentage-driven claims. |
 | Steam Internal Achievement ID | cursed_survival |
-| Steam Global Percent API | 3.9% |
+| Steam Global Percent API | 4.0% |
 | Steam Community Percent | 4.0% |
 
 ## Related

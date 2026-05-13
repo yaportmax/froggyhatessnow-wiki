@@ -8,7 +8,7 @@ draft: false
 
 This is the public-source audit trail for the wiki. It separates source availability from gameplay certainty: a public achievement can verify a name without verifying the item's exact effect.
 
-Entity status counts: Verified: 124, Needs verification: 2, Inferred: 27.
+Entity status counts: Verified: 130, Needs verification: 2, Inferred: 27.
 
 ## Source Coverage
 
@@ -19,13 +19,14 @@ Entity status counts: Verified: 124, Needs verification: 2, Inferred: 27.
 | Steam full-game store page | 39 |
 | Steam demo store page | 39 |
 | Achievement condition classification | 27 |
-| Devlog #7: What's New For Launch? | 16 |
-| Xbox Wire developer interview | 12 |
-| Devlog #5: How Snow Works in Froggy Hates Snow | 12 |
+| Devlog #7: What's New For Launch? | 18 |
+| Xbox Wire developer interview | 13 |
+| Devlog #5: How Snow Works in Froggy Hates Snow | 13 |
+| Devlog #4: 20,000 Wishlists! Thank You (Plus, a hint at what's next...) | 12 |
 | Thank You for an Incredible Launch — First Update and What Comes Next | 9 |
 | Devlog #3: What to expect from the next demo | 8 |
+| Froggy Hates Snow release date revealed | 7 |
 | Devlog #6: Introduction to Anomalous Zones | 7 |
-| Froggy Hates Snow release date revealed | 6 |
 | Digital Bandidos game page | 6 |
 | Devlog #2: A quick update about the Froggy Hates Snow demo | 4 |
 | The Froggy Hates Snow demo is back – and it’s had a major overhaul | 4 |
@@ -59,7 +60,7 @@ Entity status counts: Verified: 124, Needs verification: 2, Inferred: 27.
 | `steam-anomalous-zones-devlog` | [Devlog #6: Introduction to Anomalous Zones](https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1831432155565119) | high | 2026-04-29: classification=gameplay_devlog; evidence=strong; Anomalous-zone devlog with challenge examples, hazards, Blue Gems, artifacts, and artifact rarity tiers. |
 | `steam-release-date-news` | [Froggy Hates Snow release date revealed](https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1830797770242233) | high | 2026-04-27: classification=scope_marketing; evidence=strong; Release-date post with launch scope counts and demo progress carryover. |
 | `steam-snow-devlog` | [Devlog #5: How Snow Works in Froggy Hates Snow](https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1827626365766540) | high | 2026-03-24: classification=gameplay_devlog; evidence=strong; Snow-system devlog explaining snow interaction, density/layers, and named snow/ice tools. |
-| `steam-news-1826992588596358` | [Devlog #4: 20,000 Wishlists! Thank You ❤️(Plus, a hint at what's next...)](https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1826992588596358) | medium | 2026-03-13: classification=marketing_or_event; evidence=metadata_only; Recorded for complete Steam News coverage; treated as marketing/event context, not gameplay evidence. |
+| `steam-prelaunch-content-devlog` | [Devlog #4: 20,000 Wishlists! Thank You ❤️(Plus, a hint at what's next...)](https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1826992588596358) | medium | 2026-03-13: classification=gameplay_devlog; evidence=moderate; Pre-launch content devlog previewing new enemies and bosses, new attack patterns/projectile types, new frog skills, movement and snow-digging abilities, and companions including animals and robots. |
 | `steam-news-1826362059919554` | [You Have Froggy's Wishlists Flying! 🐸❄️](https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1826362059919554) | medium | 2026-03-04: classification=marketing_or_event; evidence=metadata_only; Recorded for complete Steam News coverage; treated as marketing/event context, not gameplay evidence. |
 | `steam-news-1825093633186467` | [Zephyora Plays Froggy Hates Snow](https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1825093633186467) | medium | 2026-02-19: classification=marketing_or_event; evidence=metadata_only; Recorded for complete Steam News coverage; treated as marketing/event context, not gameplay evidence. |
 | `steam-news-1825093633185930` | [Froggy just hopped into the spotlight at Indie Fan Fest](https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1825093633185930) | medium | 2026-02-19: classification=marketing_or_event; evidence=metadata_only; Recorded for complete Steam News coverage; treated as marketing/event context, not gameplay evidence. |

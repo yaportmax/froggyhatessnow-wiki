@@ -30,7 +30,7 @@ Survive a run with Shield & Revive
 | Last Verified | Public Steam metadata accessed 2026-05-13 |
 | Notes | Global percentage is volatile; refresh before publishing exact percentage-driven claims. |
 | Steam Internal Achievement ID | still_standing |
-| Steam Global Percent API | 2.2% |
+| Steam Global Percent API | 2.3% |
 | Steam Community Percent | 2.3% |
 
 ## Related

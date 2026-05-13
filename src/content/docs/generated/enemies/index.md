@@ -8,10 +8,11 @@ draft: false
 
 Enemies entries for the unofficial FROGGY HATES SNOW wiki.
 
-Status counts: Verified: 3.
+Status counts: Verified: 4.
 
 | Name | Status | Summary |
 |---|---|---|
 | [Eerie creatures](eerie-creatures/) | Verified | Eerie creatures are public enemy descriptors from official Steam copy. |
+| [Enemy attack patterns](enemy-attack-patterns/) | Verified | Steam Devlog #4 previews new enemies with new attack patterns and new projectile types. |
 | [Mystical creatures](mystical-creatures/) | Verified | Mystical creatures are public enemy descriptors from official Steam copy. |
 | [Obsidian creatures](obsidian-creatures/) | Verified | Obsidian creatures are public enemy descriptors from official Steam copy. |

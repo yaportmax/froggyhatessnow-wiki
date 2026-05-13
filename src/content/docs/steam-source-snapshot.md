@@ -8,7 +8,7 @@ draft: false
 
 ![FROGGY HATES SNOW Steam header](https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3232380/4aec6dc45dab3a096faeda88c8036627817f0cfe/header_alt_assets_0.jpg?t=1778580427)
 
-Accessed: **2026-05-13**. Generated: 2026-05-13T14:41:46.504Z.
+Accessed: **2026-05-13**. Generated: 2026-05-13T15:39:50.593Z.
 
 This page is the main sourcing checkpoint for game-populating wiki data. It uses official public Steam pages/APIs first, then marks anything not confirmed by those sources as inferred or needing verification.
 
@@ -76,8 +76,8 @@ Source stream: [Steam community news/devlogs](https://steamcommunity.com/app/323
 | Skills/tools/attacks/companions | 60+ |
 | Demo progress carries over | yes |
 | Steam News API items classified | 15 |
-| Direct gameplay/update sources mapped | 10 |
-| Confirmed named terms | Zippy, Puff, Glider, Snowball Roll, Leap Chain, Delivery Bot, Flamethrower Bot, Scanner Drone, Piercing Icicles, Fireworks, Snowball Volley, Energy Wave, Destructive Field, Invincible Roll, Armor, ranged poison spit, Drill, Salt Sack, Snowblower, Blue Gems, Common artifacts, Uncommon artifacts, Rare artifacts, Legendary artifacts, Night Mode, UI Scale, full game launch, Skill Banishing, Stun, Fire, Frost, Poison, Lightning, Anomalous Zones, 10 playable frogs, 16 locations, 60+ skills/tools/attacks/companions, demo progress carryover, heightmap snow, snow layers, Dynamite, Air Bomb, Flamethrower, quests, abilities, locations, first two arenas, 10 playable frog characters, unique specialization, main attack, starting skillset, tongue attacks, spits, snow minigun, electric staff, hockey stick, quest-based meta-progression, 10 playable characters, unique skin, interactive snow, digging |
+| Direct gameplay/update sources mapped | 11 |
+| Confirmed named terms | Zippy, Puff, Glider, Snowball Roll, Leap Chain, Delivery Bot, Flamethrower Bot, Scanner Drone, Piercing Icicles, Fireworks, Snowball Volley, Energy Wave, Destructive Field, Invincible Roll, Armor, new enemies and bosses, new attack patterns, new projectile types, new frog skills, movement abilities, snow digging abilities, new companions, animals, robots, ranged poison spit, Drill, Salt Sack, Snowblower, Blue Gems, Common artifacts, Uncommon artifacts, Rare artifacts, Legendary artifacts, Night Mode, UI Scale, full game launch, Skill Banishing, Stun, Fire, Frost, Poison, Lightning, Anomalous Zones, 10 playable frogs, 16 locations, 60+ skills/tools/attacks/companions, demo progress carryover, heightmap snow, snow layers, Dynamite, Air Bomb, Flamethrower, quests, abilities, locations, first two arenas, 10 playable frog characters, unique specialization, main attack, starting skillset, tongue attacks, spits, snow minigun, electric staff, hockey stick, quest-based meta-progression, 10 playable characters, unique skin, interactive snow, digging |
 
 - Steam news/devlog text is treated as public first-party source material, but exact numeric balance values still need gameplay or patch-note verification.
 - Counts from news/devlogs establish scope; they do not provide complete names for every frog, location, skill, tool, attack, or companion.
@@ -93,6 +93,7 @@ Source stream: [Steam community news/devlogs](https://steamcommunity.com/app/323
 | 2026-04-29 | `steam-anomalous-zones-devlog` | [Devlog #6: Introduction to Anomalous Zones](https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1831432155565119) | Anomalous-zone devlog with challenge examples, hazards, Blue Gems, artifacts, and artifact rarity tiers. |
 | 2026-04-27 | `steam-release-date-news` | [Froggy Hates Snow release date revealed](https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1830797770242233) | Release-date post with launch scope counts and demo progress carryover. |
 | 2026-03-24 | `steam-snow-devlog` | [Devlog #5: How Snow Works in Froggy Hates Snow](https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1827626365766540) | Snow-system devlog explaining snow interaction, density/layers, and named snow/ice tools. |
+| 2026-03-13 | `steam-prelaunch-content-devlog` | [Devlog #4: 20,000 Wishlists! Thank You ❤️(Plus, a hint at what's next...)](https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1826992588596358) | Pre-launch content devlog previewing new enemies and bosses, new attack patterns/projectile types, new frog skills, movement and snow-digging abilities, and companions including animals and robots. |
 | 2026-02-09 | `steam-demo-overhaul-news` | [The Froggy Hates Snow demo is back – and it’s had a major overhaul](https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1823825466505761) | Updated-demo announcement describing Puff, ranged poison spit, quest-based progress, Blue Gems, and unlocks for characters, abilities, and locations. |
 | 2026-02-04 | `steam-next-demo-devlog` | [Devlog #3: What to expect from the next demo](https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1823825466494740) | Pre-demo devlog describing ten frogs, unique specializations, main attacks, starting skillsets, and Blue Gem/quest meta-progression. |
 | 2026-01-20 | `steam-demo-update-devlog` | [Devlog #2: A quick update about the Froggy Hates Snow demo](https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1821922921824108) | Demo update devlog previewing quest-based meta-progression and ten planned characters with unique skins, skills, and main attacks. |
@@ -111,7 +112,7 @@ Every current Steam News API item is recorded below. Items classified as marketi
 | 2026-04-29 | `steam-anomalous-zones-devlog` | [Devlog #6: Introduction to Anomalous Zones](https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1831432155565119) | gameplay_devlog | strong | mechanics, entity_names | Do not infer exact balance values, unlock costs, complete rosters, or unstated entity behavior. |
 | 2026-04-27 | `steam-release-date-news` | [Froggy Hates Snow release date revealed](https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1830797770242233) | scope_marketing | strong | scope_counts, release_status, demo_carryover | Use for public scope counts only; do not infer individual roster names, map names, or exact mechanics. |
 | 2026-03-24 | `steam-snow-devlog` | [Devlog #5: How Snow Works in Froggy Hates Snow](https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1827626365766540) | gameplay_devlog | strong | mechanics, entity_names | Do not infer exact balance values, unlock costs, complete rosters, or unstated entity behavior. |
-| 2026-03-13 | `steam-news-1826992588596358` | [Devlog #4: 20,000 Wishlists! Thank You ❤️(Plus, a hint at what's next...)](https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1826992588596358) | marketing_or_event | metadata_only | marketing, event | Do not use as gameplay evidence. |
+| 2026-03-13 | `steam-prelaunch-content-devlog` | [Devlog #4: 20,000 Wishlists! Thank You ❤️(Plus, a hint at what's next...)](https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1826992588596358) | gameplay_devlog | moderate | content_preview, enemies, bosses, skills, companions | Use for broad pre-launch content categories only; do not infer names, stats, or final behavior. |
 | 2026-03-04 | `steam-news-1826362059919554` | [You Have Froggy's Wishlists Flying! 🐸❄️](https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1826362059919554) | marketing_or_event | metadata_only | marketing, event | Do not use as gameplay evidence. |
 | 2026-02-19 | `steam-news-1825093633186467` | [Zephyora Plays Froggy Hates Snow](https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1825093633186467) | marketing_or_event | metadata_only | marketing, event | Do not use as gameplay evidence. |
 | 2026-02-19 | `steam-news-1825093633185930` | [Froggy just hopped into the spotlight at Indie Fan Fest](https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1825093633185930) | marketing_or_event | metadata_only | marketing, event | Do not use as gameplay evidence. |
@@ -145,21 +146,21 @@ Demo achievement endpoint note: https://api.steampowered.com/ISteamUserStats/Get
 
 | Highest Public API Percentages | Percent |
 |---|---:|
-| `power_hungry_1` | 85.8% |
-| `relic_hunter_1` | 84.8% |
+| `power_hungry_1` | 85.9% |
+| `relic_hunter_1` | 85.2% |
 | `pathfinder_1` | 76.1% |
-| `assemble_the_team_1` | 68.5% |
-| `relic_hunter_2` | 67.9% |
-| `snow_master_1` | 67.3% |
-| `old_school_explorer` | 64.5% |
+| `assemble_the_team_1` | 68.9% |
+| `relic_hunter_2` | 68.2% |
+| `snow_master_1` | 67.6% |
+| `old_school_explorer` | 64.8% |
 | `power_hungry_2` | 64.3% |
 
 | Lowest Public API Percentages | Percent |
 |---|---:|
 | `peak_performance_3` | 0.0% |
-| `shock_therapy` | 0.0% |
 | `snow_day_arsenal` | 0.0% |
 | `elemental_mayhem` | 0.0% |
+| `shock_therapy` | 0.1% |
 | `seeing_stars` | 0.1% |
 | `deep_freeze` | 0.1% |
 | `cozy_on_the_go` | 0.1% |
@@ -181,6 +182,7 @@ Demo achievement endpoint note: https://api.steampowered.com/ISteamUserStats/Get
 | The full game exposes 42 public Steam achievements. | `steam-full-appdetails`, `steam-full-achievements-page`, `steam-full-global-achievement-percentages` | high | `achievements`, `unlocks` | Achievement percentages are volatile and should be refreshed before percentage-based claims. |
 | Steam news confirms 10 playable frogs, 16 locations, 60+ skills/tools/attacks/companions, and demo progress carryover. | `steam-release-date-news`, `steam-news-devlogs`, `steam-news-api` | high | `frogs`, `maps`, `skills`, `tools`, `companions`, `guides` | Use these as scope counts only; the complete named roster still needs verification. |
 | Steam devlogs say the ten playable frogs have unique specializations, main attacks, and starting skillsets, with public examples including tongue attacks, spits, snow minigun, electric staff, and hockey stick. | `steam-next-demo-devlog`, `steam-demo-update-devlog`, `xbox-wire-interview` | high | `frogs`, `skills`, `glossary` | Examples are public, but exact character-to-attack mapping still needs gameplay or safe local metadata verification. |
+| Steam Devlog #4 previews new enemies and bosses, new attack patterns/projectile types, new frog movement and snow-digging skills, and new companions including animals and robots. | `steam-prelaunch-content-devlog`, `steam-news-api` | medium | `enemies`, `bosses`, `skills`, `companions`, `glossary` | Use as broad content-category evidence only; the post does not name specific enemies, bosses, patterns, or projectile types. |
 | Steam demo/devlog posts describe Puff, quest-based meta-progression, and Blue Gems as unlock resources for characters, abilities, and locations. | `steam-demo-overhaul-news`, `steam-next-demo-devlog`, `steam-anomalous-zones-devlog` | high | `frogs`, `items`, `guides`, `glossary` | Exact quest names, Blue Gem costs, and unlock order still need verification. |
 | An Xbox Wire developer interview corroborates 16 maps, ten frogs, more than 60 tools/skills/companions, and companion roles including digging, gem collection, and environment scanning. | `xbox-wire-interview` | medium | `frogs`, `maps`, `tools`, `companions`, `guides` | Use as an official interview cross-check behind primary Steam sources. |
 | Steam devlogs confirm specific launch additions including Glider, Snowball Roll, Leap Chain, Delivery Bot, Flamethrower Bot, Scanner Drone, Piercing Icicles, Fireworks, and Snowball Volley. | `steam-launch-devlog`, `steam-news-devlogs` | high | `skills`, `companions`, `guides` | Names and broad categories are public; exact stats, rarity, and unlock requirements need gameplay verification. |
@@ -192,7 +194,7 @@ Demo achievement endpoint note: https://api.steampowered.com/ISteamUserStats/Get
 
 - Exact character/frog roster beyond Froggy, Puff, Zippy, and the verified 10-playable-frog count, including which frog uses each public main-attack example.
 - Named map/location roster, map unlock order beyond public thresholds/update notes, and location-specific boss names.
-- Named enemy roster and enemy behavior.
+- Named enemy roster, named boss roster, and exact attack-pattern/projectile behavior beyond Devlog #4's broad preview.
 - Exact stats, costs, cooldowns, drop rates, and upgrade tree order.
 - Whether demo metadata differs from the released full game after SteamCMD/local file extraction works.
 - Gameplay screenshots or short notes that can confirm inferred achievement-derived categories.

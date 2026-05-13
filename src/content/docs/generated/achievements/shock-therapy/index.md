@@ -30,7 +30,7 @@ Survive a run with Chain Lightning & Electric Infusion
 | Last Verified | Public Steam metadata accessed 2026-05-13 |
 | Notes | Global percentage is volatile; refresh before publishing exact percentage-driven claims. |
 | Steam Internal Achievement ID | shock_therapy |
-| Steam Global Percent API | 0.0% |
+| Steam Global Percent API | 0.1% |
 | Steam Community Percent | 0.1% |
 
 ## Related

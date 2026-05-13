@@ -1,5 +1,41 @@
 [
   {
+    "id": "boss-attack-patterns",
+    "slug": "boss-attack-patterns",
+    "name": "Boss attack patterns",
+    "aliases": [],
+    "category": "bosses",
+    "short_description": "Steam Devlog #4 previews new boss content with new attack patterns and projectile types.",
+    "effect": "Public source verifies the existence of new attack-pattern and projectile-type design work, but not exact boss names or behaviors.",
+    "unlock_method": "Needs verification.",
+    "cost": "Needs verification.",
+    "mode": "Pre-launch devlog/source coverage; exact released-state behavior needs gameplay verification.",
+    "related_entities": [],
+    "sources": [
+      {
+        "source_id": "steam-prelaunch-content-devlog",
+        "type": "public_source",
+        "path_or_url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1826992588596358",
+        "label": "Devlog #4: 20,000 Wishlists! Thank You (Plus, a hint at what's next...)",
+        "confidence": "medium",
+        "notes": "2026-03-13 pre-launch content preview devlog."
+      }
+    ],
+    "verification_status": "Verified",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Use as a sourcing page for boss-behavior categories, not as a named boss.",
+    "verified_fields": [
+      "name",
+      "category",
+      "effect",
+      "mode"
+    ],
+    "unverified_fields": [
+      "unlock_method",
+      "cost"
+    ]
+  },
+  {
     "id": "boss-projectile-speed-tuning",
     "slug": "boss-projectile-speed-tuning",
     "name": "Boss projectile speed tuning",
@@ -85,8 +121,8 @@
     "name": "Location bosses",
     "aliases": [],
     "category": "bosses",
-    "short_description": "Official Steam copy says each new map hides its own boss.",
-    "effect": "Needs verification.",
+    "short_description": "Official Steam copy says each new map hides its own boss; Devlog #4 also previews new bosses.",
+    "effect": "Devlog #4 says new enemies and bosses were being added with new attack patterns and projectile types.",
     "unlock_method": "Needs verification.",
     "cost": "Needs verification.",
     "mode": "Needs verification.",
@@ -107,6 +143,14 @@
         "label": "Steam demo store page",
         "confidence": "high",
         "notes": "Official public Steam demo listing."
+      },
+      {
+        "source_id": "steam-prelaunch-content-devlog",
+        "type": "public_source",
+        "path_or_url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1826992588596358",
+        "label": "Devlog #4: 20,000 Wishlists! Thank You (Plus, a hint at what's next...)",
+        "confidence": "medium",
+        "notes": "2026-03-13 pre-launch content preview devlog."
       }
     ],
     "verification_status": "Verified",
@@ -114,10 +158,10 @@
     "notes": "Treat as a generic boss category until location-specific boss names are verified.",
     "verified_fields": [
       "name",
-      "category"
+      "category",
+      "effect"
     ],
     "unverified_fields": [
-      "effect",
       "unlock_method",
       "cost",
       "mode"

@@ -183,6 +183,14 @@
         "label": "Devlog #7: What's New For Launch?",
         "confidence": "high",
         "notes": "2026-05-04 launch devlog."
+      },
+      {
+        "source_id": "steam-prelaunch-content-devlog",
+        "type": "public_source",
+        "path_or_url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1826992588596358",
+        "label": "Devlog #4: 20,000 Wishlists! Thank You (Plus, a hint at what's next...)",
+        "confidence": "medium",
+        "notes": "2026-03-13 pre-launch content preview devlog."
       }
     ],
     "verification_status": "Verified",
@@ -312,6 +320,65 @@
         "label": "Devlog #2: A quick update about the Froggy Hates Snow demo",
         "confidence": "high",
         "notes": "2026-01-20 demo update devlog."
+      },
+      {
+        "source_id": "xbox-wire-interview",
+        "type": "public_source",
+        "path_or_url": "https://news.xbox.com/en-us/2026/05/05/froggy-hates-snow-interview/",
+        "label": "Xbox Wire developer interview",
+        "confidence": "medium",
+        "notes": "Developer interview corroborating launch counts, snow tech, skill/tool variety, companions, and Peaceful Mode."
+      }
+    ],
+    "verification_status": "Verified",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Glossary summary is paraphrased from public pages.",
+    "verified_fields": [
+      "name",
+      "category",
+      "effect",
+      "unlock_method",
+      "cost",
+      "mode"
+    ],
+    "unverified_fields": []
+  },
+  {
+    "id": "companion-roster",
+    "slug": "companion-roster",
+    "name": "Companion roster",
+    "aliases": [],
+    "category": "glossary",
+    "short_description": "Steam Devlog #4 previews new companions, including animals and robots; later public sources name several examples.",
+    "effect": "Reference term.",
+    "unlock_method": "Not applicable.",
+    "cost": "Not applicable.",
+    "mode": "Reference glossary.",
+    "related_entities": [],
+    "sources": [
+      {
+        "source_id": "steam-prelaunch-content-devlog",
+        "type": "public_source",
+        "path_or_url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1826992588596358",
+        "label": "Devlog #4: 20,000 Wishlists! Thank You (Plus, a hint at what's next...)",
+        "confidence": "medium",
+        "notes": "2026-03-13 pre-launch content preview devlog."
+      },
+      {
+        "source_id": "steam-release-date-news",
+        "type": "public_source",
+        "path_or_url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1830797770242233",
+        "label": "Froggy Hates Snow release date revealed",
+        "confidence": "high",
+        "notes": "2026-04-27 release-date and scope post."
+      },
+      {
+        "source_id": "steam-launch-devlog",
+        "type": "public_source",
+        "path_or_url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1831432155577514",
+        "label": "Devlog #7: What's New For Launch?",
+        "confidence": "high",
+        "notes": "2026-05-04 launch devlog."
       },
       {
         "source_id": "xbox-wire-interview",
@@ -688,6 +755,49 @@
     "unverified_fields": []
   },
   {
+    "id": "movement-abilities",
+    "slug": "movement-abilities",
+    "name": "Movement abilities",
+    "aliases": [],
+    "category": "glossary",
+    "short_description": "Steam Devlog #4 previews new frog movement abilities; later launch devlog posts name examples such as Glider, Snowball Roll, and Leap Chain.",
+    "effect": "Reference term.",
+    "unlock_method": "Not applicable.",
+    "cost": "Not applicable.",
+    "mode": "Reference glossary.",
+    "related_entities": [],
+    "sources": [
+      {
+        "source_id": "steam-prelaunch-content-devlog",
+        "type": "public_source",
+        "path_or_url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1826992588596358",
+        "label": "Devlog #4: 20,000 Wishlists! Thank You (Plus, a hint at what's next...)",
+        "confidence": "medium",
+        "notes": "2026-03-13 pre-launch content preview devlog."
+      },
+      {
+        "source_id": "steam-launch-devlog",
+        "type": "public_source",
+        "path_or_url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1831432155577514",
+        "label": "Devlog #7: What's New For Launch?",
+        "confidence": "high",
+        "notes": "2026-05-04 launch devlog."
+      }
+    ],
+    "verification_status": "Verified",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Glossary summary is paraphrased from public pages.",
+    "verified_fields": [
+      "name",
+      "category",
+      "effect",
+      "unlock_method",
+      "cost",
+      "mode"
+    ],
+    "unverified_fields": []
+  },
+  {
     "id": "night-mode",
     "slug": "night-mode",
     "name": "Night Mode",
@@ -774,6 +884,41 @@
     "unverified_fields": []
   },
   {
+    "id": "projectile-types",
+    "slug": "projectile-types",
+    "name": "Projectile types",
+    "aliases": [],
+    "category": "glossary",
+    "short_description": "Steam Devlog #4 previews new enemy and boss projectile types, but does not name or quantify them.",
+    "effect": "Reference term.",
+    "unlock_method": "Not applicable.",
+    "cost": "Not applicable.",
+    "mode": "Reference glossary.",
+    "related_entities": [],
+    "sources": [
+      {
+        "source_id": "steam-prelaunch-content-devlog",
+        "type": "public_source",
+        "path_or_url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1826992588596358",
+        "label": "Devlog #4: 20,000 Wishlists! Thank You (Plus, a hint at what's next...)",
+        "confidence": "medium",
+        "notes": "2026-03-13 pre-launch content preview devlog."
+      }
+    ],
+    "verification_status": "Verified",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Glossary summary is paraphrased from public pages.",
+    "verified_fields": [
+      "name",
+      "category",
+      "effect",
+      "unlock_method",
+      "cost",
+      "mode"
+    ],
+    "unverified_fields": []
+  },
+  {
     "id": "quest-based-meta-progression",
     "slug": "quest-based-meta-progression",
     "name": "Quest-based meta-progression",
@@ -809,6 +954,49 @@
         "label": "Devlog #2: A quick update about the Froggy Hates Snow demo",
         "confidence": "high",
         "notes": "2026-01-20 demo update devlog."
+      }
+    ],
+    "verification_status": "Verified",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Glossary summary is paraphrased from public pages.",
+    "verified_fields": [
+      "name",
+      "category",
+      "effect",
+      "unlock_method",
+      "cost",
+      "mode"
+    ],
+    "unverified_fields": []
+  },
+  {
+    "id": "snow-digging-abilities",
+    "slug": "snow-digging-abilities",
+    "name": "Snow digging abilities",
+    "aliases": [],
+    "category": "glossary",
+    "short_description": "Steam Devlog #4 previews more powerful snow digging abilities; exact stats and scaling need gameplay verification.",
+    "effect": "Reference term.",
+    "unlock_method": "Not applicable.",
+    "cost": "Not applicable.",
+    "mode": "Reference glossary.",
+    "related_entities": [],
+    "sources": [
+      {
+        "source_id": "steam-prelaunch-content-devlog",
+        "type": "public_source",
+        "path_or_url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1826992588596358",
+        "label": "Devlog #4: 20,000 Wishlists! Thank You (Plus, a hint at what's next...)",
+        "confidence": "medium",
+        "notes": "2026-03-13 pre-launch content preview devlog."
+      },
+      {
+        "source_id": "steam-snow-devlog",
+        "type": "public_source",
+        "path_or_url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1827626365766540",
+        "label": "Devlog #5: How Snow Works in Froggy Hates Snow",
+        "confidence": "high",
+        "notes": "2026-03-24 snow-system devlog."
       }
     ],
     "verification_status": "Verified",

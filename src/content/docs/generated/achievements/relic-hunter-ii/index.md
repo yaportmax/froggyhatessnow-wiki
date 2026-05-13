@@ -30,8 +30,8 @@ Collect 5 Artifacts
 | Last Verified | Public Steam metadata accessed 2026-05-13 |
 | Notes | Global percentage is volatile; refresh before publishing exact percentage-driven claims. |
 | Steam Internal Achievement ID | relic_hunter_2 |
-| Steam Global Percent API | 67.9% |
-| Steam Community Percent | 68.4% |
+| Steam Global Percent API | 68.2% |
+| Steam Community Percent | 68.2% |
 
 ## Related
 

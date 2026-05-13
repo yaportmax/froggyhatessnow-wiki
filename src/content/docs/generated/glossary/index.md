@@ -8,7 +8,7 @@ draft: false
 
 Glossary entries for the unofficial FROGGY HATES SNOW wiki.
 
-Status counts: Verified: 25.
+Status counts: Verified: 29.
 
 | Name | Status | Summary |
 |---|---|---|
@@ -20,6 +20,7 @@ Status counts: Verified: 25.
 | [Character leveling](character-leveling/) | Verified | Launch devlog says characters gain experience by being played and grow stronger over time. |
 | [Character main attacks](character-main-attacks/) | Verified | Demo/devlog examples include tongue attacks, spits, snow minigun, electric staff, and hockey stick. |
 | [Character specializations](character-specializations/) | Verified | Demo/devlog posts say the ten playable frogs have unique specializations, main attacks, and starting skillsets. |
+| [Companion roster](companion-roster/) | Verified | Steam Devlog #4 previews new companions, including animals and robots; later public sources name several examples. |
 | [Core attacks](core-attacks/) | Verified | Launch devlog examples include tongue, spit, and baseball bat style core attacks, while the updated demo announcement identifies Puff's ranged poison spit. |
 | [Demo progress carryover](demo-progress-carryover/) | Verified | Steam news states demo progress carries over to the full game. |
 | [Elemental status effects](elemental-status-effects/) | Verified | Launch devlog lists Stun, Fire, Frost, Poison, and Lightning status effects. |
@@ -28,9 +29,12 @@ Status counts: Verified: 25.
 | [Full game](full-game/) | Verified | Public full game app 3232380; released on Steam May 7, 2026. |
 | [Heightmap snow](heightmap-snow/) | Verified | The snow devlog describes the world snow as a heightmap texture changed by digging. |
 | [Local metadata unavailable](local-metadata-unavailable/) | Verified | The local game-files scan currently found zero readable files, so the wiki is populated from public sources until SteamCMD/local extraction succeeds. |
+| [Movement abilities](movement-abilities/) | Verified | Steam Devlog #4 previews new frog movement abilities; later launch devlog posts name examples such as Glider, Snowball Roll, and Leap Chain. |
 | [Night Mode](night-mode/) | Verified | Post-launch update calls out Night Mode as an existing comfort option made more visible by attention badges. |
 | [Peaceful Mode](peaceful-mode/) | Verified | Monster-free cozy mode described by Steam copy. |
+| [Projectile types](projectile-types/) | Verified | Steam Devlog #4 previews new enemy and boss projectile types, but does not name or quantify them. |
 | [Quest-based meta-progression](quest-based-meta-progression/) | Verified | Demo/devlog posts describe quests and Blue Gems unlocking characters, abilities, and locations. |
+| [Snow digging abilities](snow-digging-abilities/) | Verified | Steam Devlog #4 previews more powerful snow digging abilities; exact stats and scaling need gameplay verification. |
 | [Snow layers](snow-layers/) | Verified | The snow devlog says different areas can have different layers and density. |
 | [Snowbank](snowbank/) | Verified | Interactive snow tile or obstacle described as hiding treasures, traps, or enemies. |
 | [Steam demo](steam-demo/) | Verified | Public demo app 4037600; free Windows demo linked to the full app. |

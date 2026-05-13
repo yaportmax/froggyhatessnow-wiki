@@ -6,7 +6,7 @@
     "aliases": [],
     "category": "enemies",
     "short_description": "Eerie creatures are public enemy descriptors from official Steam copy.",
-    "effect": "Hostile enemy category; exact behavior needs verification.",
+    "effect": "Hostile enemy category; exact behavior needs verification. Devlog #4 broadly confirms new enemies with new attack patterns and projectile types.",
     "unlock_method": "Needs verification.",
     "cost": "Needs verification.",
     "mode": "Core game and demo, except Peaceful Mode is described as monster-free.",
@@ -27,6 +27,14 @@
         "label": "Steam demo store page",
         "confidence": "high",
         "notes": "Official public Steam demo listing."
+      },
+      {
+        "source_id": "steam-prelaunch-content-devlog",
+        "type": "public_source",
+        "path_or_url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1826992588596358",
+        "label": "Devlog #4: 20,000 Wishlists! Thank You (Plus, a hint at what's next...)",
+        "confidence": "medium",
+        "notes": "2026-03-13 pre-launch content preview devlog."
       }
     ],
     "verification_status": "Verified",
@@ -44,13 +52,49 @@
     ]
   },
   {
+    "id": "enemy-attack-patterns",
+    "slug": "enemy-attack-patterns",
+    "name": "Enemy attack patterns",
+    "aliases": [],
+    "category": "enemies",
+    "short_description": "Steam Devlog #4 previews new enemies with new attack patterns and new projectile types.",
+    "effect": "Public source verifies attack-pattern/projectile-type variety at a broad level; exact enemy roster and behavior still need gameplay or safe local metadata verification.",
+    "unlock_method": "Needs verification.",
+    "cost": "Needs verification.",
+    "mode": "Pre-launch devlog/source coverage; exact released-state behavior needs gameplay verification.",
+    "related_entities": [],
+    "sources": [
+      {
+        "source_id": "steam-prelaunch-content-devlog",
+        "type": "public_source",
+        "path_or_url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1826992588596358",
+        "label": "Devlog #4: 20,000 Wishlists! Thank You (Plus, a hint at what's next...)",
+        "confidence": "medium",
+        "notes": "2026-03-13 pre-launch content preview devlog."
+      }
+    ],
+    "verification_status": "Verified",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Use as a sourcing page for enemy-behavior categories, not as a named enemy.",
+    "verified_fields": [
+      "name",
+      "category",
+      "effect",
+      "mode"
+    ],
+    "unverified_fields": [
+      "unlock_method",
+      "cost"
+    ]
+  },
+  {
     "id": "mystical-creatures",
     "slug": "mystical-creatures",
     "name": "Mystical creatures",
     "aliases": [],
     "category": "enemies",
     "short_description": "Mystical creatures are public enemy descriptors from official Steam copy.",
-    "effect": "Hostile enemy category; exact behavior needs verification.",
+    "effect": "Hostile enemy category; exact behavior needs verification. Devlog #4 broadly confirms new enemies with new attack patterns and projectile types.",
     "unlock_method": "Needs verification.",
     "cost": "Needs verification.",
     "mode": "Core game and demo, except Peaceful Mode is described as monster-free.",
@@ -71,6 +115,14 @@
         "label": "Steam demo store page",
         "confidence": "high",
         "notes": "Official public Steam demo listing."
+      },
+      {
+        "source_id": "steam-prelaunch-content-devlog",
+        "type": "public_source",
+        "path_or_url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1826992588596358",
+        "label": "Devlog #4: 20,000 Wishlists! Thank You (Plus, a hint at what's next...)",
+        "confidence": "medium",
+        "notes": "2026-03-13 pre-launch content preview devlog."
       }
     ],
     "verification_status": "Verified",
@@ -94,7 +146,7 @@
     "aliases": [],
     "category": "enemies",
     "short_description": "Obsidian creatures are public enemy descriptors from official Steam copy.",
-    "effect": "Hostile enemy category; exact behavior needs verification.",
+    "effect": "Hostile enemy category; exact behavior needs verification. Devlog #4 broadly confirms new enemies with new attack patterns and projectile types.",
     "unlock_method": "Needs verification.",
     "cost": "Needs verification.",
     "mode": "Core game and demo, except Peaceful Mode is described as monster-free.",
@@ -115,6 +167,14 @@
         "label": "Steam demo store page",
         "confidence": "high",
         "notes": "Official public Steam demo listing."
+      },
+      {
+        "source_id": "steam-prelaunch-content-devlog",
+        "type": "public_source",
+        "path_or_url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1826992588596358",
+        "label": "Devlog #4: 20,000 Wishlists! Thank You (Plus, a hint at what's next...)",
+        "confidence": "medium",
+        "notes": "2026-03-13 pre-launch content preview devlog."
       }
     ],
     "verification_status": "Verified",
