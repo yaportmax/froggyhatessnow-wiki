@@ -33,7 +33,7 @@ Everything is implemented, validated, pushed, and deployed to Vercel. The remain
 | Generated category/detail pages | `npm run generate` creates generated docs; current build includes 153 entity detail pages and 11 category indexes. | Done |
 | Static pages | Homepage, beginner guide, warmth guide, best upgrades, unlocks, game modes, FAQ, contribution page, verification status, game metadata, source ledger, Steam source snapshot, and achievement source matrix exist under `src/content/docs/`. | Done |
 | SEO basics | `astro.config.mjs` has canonical `site`; pages use descriptive titles/descriptions and generated category/detail routes. | Done |
-| Package scripts | Required scripts are present: `dev`, `build`, `preview`, `scan`, `generate`, `validate`; additional `fetch:steam`, `deploy:status`, `deploy:publish`, `domain:check`, `domain:status`, `domain:register`, `domain:dns`, and `test` scripts are present. | Done |
+| Package scripts | Required scripts are present: `dev`, `build`, `preview`, `scan`, `generate`, `validate`; additional `fetch:steam`, `deploy:status`, `deploy:publish`, `domain:check`, `domain:status`, `domain:register`, `domain:dns`, `domain:finish`, and `test` scripts are present. | Done |
 | Tests | `npm test` passed 2 files / 9 tests. | Done |
 | Build | `npm run build` passed and generated 178 pages; Pagefind indexed 177 pages. | Done |
 | Vercel deployment | Stable alias inspection confirms `https://froggyhatessnow-wiki.vercel.app` is actively serving READY deployment `dpl_97aAFAYy6K71rgdiDABUQib1cWkJ` / `https://froggyhatessnow-wiki-6b2rs5abq-yaportmax-5253s-projects.vercel.app`. `npm run deploy:status` passes the homepage, Steam source snapshot, local Steam snapshot timestamp, and achievement matrix live checks. | Done |
@@ -58,6 +58,7 @@ npm run deploy:status
 npm run deploy:publish
 npm run domain:check
 npm run domain:status
+npm run domain:finish
 npm run domain:dns
 npx vercel domains inspect froggyhatessnow.wiki
 npx vercel domains inspect www.froggyhatessnow.wiki
@@ -81,7 +82,8 @@ curl -fsS -o /tmp/froggy-game-metadata.html -w '%{http_code}\n' https://froggyha
 - `npm run deploy:publish`: built 178 pages, deployed production deployment `dpl_97aAFAYy6K71rgdiDABUQib1cWkJ`, and Vercel aliased it to `https://froggyhatessnow-wiki.vercel.app`, `froggyhatessnow.wiki`, and `www.froggyhatessnow.wiki`.
 - `npm run deploy:status`: confirms stable alias `https://froggyhatessnow-wiki.vercel.app` resolves to READY deployment `dpl_97aAFAYy6K71rgdiDABUQib1cWkJ`, verifies baseline live pages, and passes the local-source freshness marker for `steam-snapshot.json` generated timestamp `2026-05-13T13:06:27.528Z`.
 - `npm run domain:check`: `froggyhatessnow.wiki` available yes, type registration, price `2.06`, regularPrice `26.26`, premium no, request id `019e2161-f193-7a28-8341-409373b969be`.
-- `npm run domain:status`: read-only check reports `domain_available_not_registered`, DNS retrieve returns `INVALID_DOMAIN`, and the helper prints the exact post-verification registration command; check request id `019e217f-a69b-75d8-ada4-01dbaa7efb7b`, DNS retrieve request id `019e217f-a9fa-7f2b-aee3-1ad6410985b6`.
+- `npm run domain:status`: read-only check reports `domain_available_not_registered`, DNS retrieve returns `INVALID_DOMAIN`, and the helper prints the exact post-verification registration command; check request id `019e2182-df4d-7cc7-94b9-5ae9d6b41dc3`, DNS retrieve request id `019e2182-e2a2-7e9e-b743-42f2ebf60735`.
+- `npm run domain:finish`: dry run completed `domain:status` and `deploy:status`, then refused to register/DNS/update/deploy without `--confirm-register-and-dns`.
 - `npm run domain:register -- --max-cost-usd=2.06 --idempotency-suffix=post-verification`: guarded purchase attempt rechecked availability at `$2.06`, then Porkbun returned `VERIFICATION_REQUIRED`; check request id `019e217f-e3bf-705f-a270-7f817191c0e0`, create request id `019e217f-e6ac-723c-8134-3613a780f093`.
 - `npm run domain:dns`: blocked before registration; Porkbun returned `INVALID_DOMAIN`, request id `019e2160-0873-76b9-8ab8-72820b93f7bf`.
 - Vercel domain inspect: apex and `www` domains found, edge network yes, DNS not configured, intended nameservers `ns1.vercel-dns.com` and `ns2.vercel-dns.com`, recommended records `A froggyhatessnow.wiki 76.76.21.21` and `A www.froggyhatessnow.wiki 76.76.21.21`.
@@ -90,13 +92,12 @@ curl -fsS -o /tmp/froggy-game-metadata.html -w '%{http_code}\n' https://froggyha
 ## Remaining Work
 
 1. Verify Porkbun account phone and email outside this shell.
-2. Run `npm run domain:register -- --max-cost-usd=2.06 --idempotency-suffix=post-verification`.
-3. Run `npm run domain:dns`.
-4. Re-check:
+2. Run `npm run domain:finish -- --confirm-register-and-dns`.
+3. Re-check:
 
    ```bash
    npx vercel domains inspect froggyhatessnow.wiki
    npx vercel domains inspect www.froggyhatessnow.wiki
    ```
 
-5. After DNS is configured, update `astro.config.mjs` `site` to `https://froggyhatessnow.wiki`, rebuild, deploy, and verify canonical URLs.
+4. If the finisher was run with `--skip-site-switch`, update `astro.config.mjs` `site` to `https://froggyhatessnow.wiki`, rebuild, deploy, and verify canonical URLs.

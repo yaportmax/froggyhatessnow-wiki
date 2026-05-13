@@ -30,6 +30,7 @@ npm run deploy:status
 npm run deploy:publish
 npm run domain:check
 npm run domain:status
+npm run domain:finish
 ```
 
 After Porkbun account verification clears a failed registration blocker, use a fresh registration idempotency suffix so Porkbun does not replay the earlier failed create response:
@@ -37,6 +38,12 @@ After Porkbun account verification clears a failed registration blocker, use a f
 ```bash
 npm run domain:register -- --max-cost-usd=2.06 --idempotency-suffix=post-verification
 npm run domain:dns
+```
+
+Or run the guarded finisher after verification:
+
+```bash
+npm run domain:finish -- --confirm-register-and-dns
 ```
 
 ## Data Rules

@@ -92,8 +92,8 @@ npm run domain:register -- --max-cost-usd=2.06 --idempotency-suffix=post-verific
 Latest read-only check request ids:
 
 - `domain:check`: `019e2161-f193-7a28-8341-409373b969be`
-- `domain:status` check: `019e217f-a69b-75d8-ada4-01dbaa7efb7b`
-- `domain:status` DNS retrieve: `019e217f-a9fa-7f2b-aee3-1ad6410985b6`
+- `domain:status` check: `019e2182-df4d-7cc7-94b9-5ae9d6b41dc3`
+- `domain:status` DNS retrieve: `019e2182-e2a2-7e9e-b743-42f2ebf60735`
 
 DNS setup was also attempted through the helper before registration completed:
 
@@ -116,6 +116,16 @@ Current Vercel recommended records:
 - `A www.froggyhatessnow.wiki 76.76.21.21`
 
 After Porkbun account verification:
+
+1. Run the guarded finisher:
+
+   ```bash
+   npm run domain:finish -- --confirm-register-and-dns
+   ```
+
+   The finisher registers the domain, configures Porkbun DNS, updates the Astro `site` value to `https://froggyhatessnow.wiki`, rebuilds, deploys, and reruns Vercel domain checks.
+
+Manual fallback:
 
 1. Register the domain:
 
