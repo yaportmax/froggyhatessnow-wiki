@@ -113,6 +113,11 @@ A later read-only status check still reported `domain_available_not_registered`:
 - `domain:status` check: `019e219b-543c-759d-b33f-a63b336e08a5`
 - `domain:status` DNS retrieve: `019e219b-574a-7c84-af41-eac996f649f7`
 
+A fresh continuation check still reported `domain_available_not_registered`:
+
+- `domain:status` check: `019e21ab-80ae-7745-b332-2ff15488d479`
+- `domain:status` DNS retrieve: `019e21ab-837a-79e8-b69a-70789fcf5b03`
+
 The latest direct custom-domain URL check failed before HTTP because DNS does not resolve yet:
 
 ```text

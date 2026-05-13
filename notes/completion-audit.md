@@ -69,8 +69,8 @@ curl -I --max-time 20 https://froggyhatessnow.wiki/
 - `npx tsc --noEmit`: passed when run after build-generated Astro types were present.
 - `git diff --check`: passed.
 - `npm run deploy:status`: stable alias live checks passed for homepage, Steam source snapshot, current source timestamp, and achievement matrix.
-- `npm run domain:status`: `domain_available_not_registered`; latest check request id `019e219b-543c-759d-b33f-a63b336e08a5`, DNS retrieve request id `019e219b-574a-7c84-af41-eac996f649f7`.
-- `npm run domain:health`: expected failure while registration/DNS are incomplete. Latest run exited `1`; Vercel apex/`www` attachment checks passed, DNS returned `ENOTFOUND`, custom-domain HTTP checks failed before resolution, and the Porkbun read-only status subcheck hit `RATE_LIMIT_EXCEEDED` after repeated API checks.
+- `npm run domain:status`: `domain_available_not_registered`; latest check request id `019e21ab-80ae-7745-b332-2ff15488d479`, DNS retrieve request id `019e21ab-837a-79e8-b69a-70789fcf5b03`.
+- `npm run domain:health`: expected failure while registration/DNS are incomplete. Latest run exited `1`; Vercel apex/`www` attachment checks passed, DNS returned `ENOTFOUND`, custom-domain HTTP checks failed before resolution, and the Porkbun read-only status subcheck hit `RATE_LIMIT_EXCEEDED` when run concurrently with another `domain:status` check.
 - `npm run domain:finish -- --confirm-register-and-dns`: failed at `domain:register` with Porkbun `VERIFICATION_REQUIRED`; check request id `019e219a-80e4-723c-af60-4191806fc087`, create request id `019e217f-e6ac-723c-8134-3613a780f093`.
 - `curl -I --max-time 20 https://froggyhatessnow.wiki/`: `Could not resolve host`, as expected while the domain is unregistered.
 
