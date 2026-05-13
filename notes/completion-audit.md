@@ -10,7 +10,7 @@ Build an unofficial, metadata-first FROGGY HATES SNOW wiki in its own repo/domai
 
 Blocked, not complete.
 
-Everything is implemented, validated, pushed, and deployed except the explicit domain purchase requirement. Porkbun API registration is blocked by account verification: the account phone number and email address must be verified before the domain can be registered.
+Everything is implemented, validated, pushed, and deployment-ready, but two external gates remain. Porkbun API registration is blocked by account verification: the account phone number and email address must be verified before the domain can be registered. The Vercel alias is live, but the latest pushed Steam source refresh is not on the live alias because later Vercel deployments remain stuck in the queue.
 
 ## Prompt-to-Artifact Checklist
 
@@ -36,7 +36,7 @@ Everything is implemented, validated, pushed, and deployed except the explicit d
 | Package scripts | Required scripts are present: `dev`, `build`, `preview`, `scan`, `generate`, `validate`; additional `fetch:steam`, `deploy:status`, `domain:check`, `domain:status`, `domain:register`, `domain:dns`, and `test` scripts are present. | Done |
 | Tests | `npm test` passed 2 files / 9 tests. | Done |
 | Build | `npm run build` passed and generated 178 pages; Pagefind indexed 177 pages. | Done |
-| Vercel deployment | Stable alias inspection confirms `https://froggyhatessnow-wiki.vercel.app` is actively serving READY deployment `dpl_CtCq5rTqmVrmgzvutbv6vXLNy9fr` / `https://froggyhatessnow-wiki-biugqd5z2-yaportmax-5253s-projects.vercel.app`. Later deploy attempts `dpl_BysoqF8R65bguRBehVoXhJXeRPYW` and `dpl_J1kt8Sbkz5hSUBLvGjKMwjtPTm58` are stuck in `BUILDING` / `QUEUED`, so the successful alias remains the source of truth. | Done, with deploy queue caveat |
+| Vercel deployment | Stable alias inspection confirms `https://froggyhatessnow-wiki.vercel.app` is actively serving READY deployment `dpl_CtCq5rTqmVrmgzvutbv6vXLNy9fr` / `https://froggyhatessnow-wiki-biugqd5z2-yaportmax-5253s-projects.vercel.app`. Later deploy attempts `dpl_BysoqF8R65bguRBehVoXhJXeRPYW` and `dpl_J1kt8Sbkz5hSUBLvGjKMwjtPTm58` are stuck in `BUILDING` / `QUEUED`. `npm run deploy:status` now also checks the live Steam source page against the local `steam-snapshot.json` timestamp and currently reports the live alias as stale versus the latest pushed source refresh. | Done, with deploy queue caveat |
 | Live source page | `https://froggyhatessnow-wiki.vercel.app/steam-source-snapshot/` returns 200 and contains Steam News API items classified, All Steam News Items, Direct Steam News Sources, Local Metadata Scan, 14 full-game screenshot count, and Achievement Source Matrix link. | Done |
 | Live achievement matrix page | `https://froggyhatessnow-wiki.vercel.app/achievement-source-matrix/` returns 200 and contains Milestone Series and Loadout Names sections. | Done |
 | Live game metadata page | `https://froggyhatessnow-wiki.vercel.app/game-metadata/` returns 200. | Done |
@@ -78,7 +78,7 @@ curl -fsS -o /tmp/froggy-game-metadata.html -w '%{http_code}\n' https://froggyha
 - Later `npx vercel deploy --prod`: deployment `dpl_BysoqF8R65bguRBehVoXhJXeRPYW` stuck in `BUILDING`; logs stop after downloading deployment files.
 - `npx vercel build --prod --yes`: local prebuilt output completed successfully in `.vercel/output`.
 - Later `npx vercel deploy --prebuilt --prod`: deployment `dpl_J1kt8Sbkz5hSUBLvGjKMwjtPTm58` stuck in `QUEUED` behind the previous build. Latest successful production alias remains `https://froggyhatessnow-wiki.vercel.app`.
-- `npm run deploy:status`: confirms stable alias `https://froggyhatessnow-wiki.vercel.app` resolves to READY deployment `dpl_CtCq5rTqmVrmgzvutbv6vXLNy9fr`, verifies the homepage, Steam source snapshot, and achievement matrix live checks, and marks the two non-ready deployment ids for manual Vercel review because Vercel reports aliases on them.
+- `npm run deploy:status`: confirms stable alias `https://froggyhatessnow-wiki.vercel.app` resolves to READY deployment `dpl_CtCq5rTqmVrmgzvutbv6vXLNy9fr`, verifies baseline live pages, and fails the local-source freshness marker because the live Steam snapshot page does not yet contain local `steam-snapshot.json` generated timestamp `2026-05-13T13:06:27.528Z`. It also marks the two non-ready deployment ids as queue blockers.
 - `npm run domain:check`: `froggyhatessnow.wiki` available yes, type registration, price `2.06`, regularPrice `26.26`, premium no, request id `019e2161-f193-7a28-8341-409373b969be`.
 - `npm run domain:status`: read-only check reports `domain_available_not_registered`, DNS retrieve returns `INVALID_DOMAIN`, and the helper prints the exact post-verification registration command; check request id `019e2171-928f-77c7-a288-17ee7236dd1f`, DNS retrieve request id `019e2171-956c-7db4-acad-72299afb0b50`.
 - `npm run domain:register -- --max-cost-usd=2.06 --idempotency-suffix=audit-20260513-1`: guarded purchase attempt rechecked availability at `$2.06`, then Porkbun returned `VERIFICATION_REQUIRED`; check request id `019e2162-8fab-7bb3-a43d-f1d2e4eeb412`, create request id `019e2162-9228-713d-a94a-88112b03af51`.
@@ -98,4 +98,5 @@ curl -fsS -o /tmp/froggy-game-metadata.html -w '%{http_code}\n' https://froggyha
    npx vercel domains inspect www.froggyhatessnow.wiki
    ```
 
-5. After DNS is configured, update `astro.config.mjs` `site` to `https://froggyhatessnow.wiki`, rebuild, deploy, and verify canonical URLs.
+5. After explicit approval, clear or manually resolve the stuck Vercel deployments `dpl_BysoqF8R65bguRBehVoXhJXeRPYW` and `dpl_J1kt8Sbkz5hSUBLvGjKMwjtPTm58`, then deploy the current build and rerun `npm run deploy:status`.
+6. After DNS is configured, update `astro.config.mjs` `site` to `https://froggyhatessnow.wiki`, rebuild, deploy, and verify canonical URLs.
