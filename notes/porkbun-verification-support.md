@@ -52,6 +52,19 @@ Read-only Gmail searches on 2026-05-13 found:
 
 The email verification code itself is intentionally not recorded here. Search Gmail for subject `porkbun.com | Account Creation Email Verification Code` if Porkbun asks for the original account-creation verification email.
 
+## API Surface Check
+
+The current Porkbun OpenAPI spec explicitly lists domain registration requirements for `POST /domain/create/{domain}`:
+
+- Account email and phone must be verified.
+- Account must have sufficient credit.
+- `agreeToTerms` must be `yes` or `1`.
+- `cost` must equal the current price in pennies.
+- Account must have placed at least one previous domain registration.
+- Premium domains cannot be registered via API.
+
+Spec search on 2026-05-13 found account/API-key paths for spend settings, balance, account invites, API-key authorization, and email-hosting password management, but no endpoint to verify or resend verification for the existing account email or phone number. Treat email/phone verification as a manual Porkbun account UI or support action.
+
 ## Support Message Draft
 
 Subject:
