@@ -30,7 +30,7 @@ Latest confirmed purchase attempt:
 - Check request id: `019e21e6-e51a-7786-95c9-efe33d7ff01b`
 - Create request id: `019e21e6-e84d-7d71-96bc-2b2f010622da`
 - Result: stopped before DNS, Astro site changes, build, or deploy.
-- Browser fallback status: the Chrome-extension control path is not exposed in this session, and Computer Use currently cannot attach to Chrome (`cgWindowNotFound`). No UI purchase or verification action was completed.
+- Browser fallback status: Chrome is installed and running, the Codex Chrome Extension is installed/enabled in `Profile 1`, and the native host manifest is correct. However, no Chrome browser-control tools are exposed in this session, and Computer Use currently cannot attach to Chrome (`cgWindowNotFound`). No UI purchase or verification action was completed.
 - Support packet: `notes/porkbun-verification-support.md` contains the current request IDs, manual verification checklist, Gmail search notes, and a support message draft.
 
 Latest read-only domain status:
@@ -46,7 +46,7 @@ Porkbun documentation points the manual account-contact path at `ACCOUNT` -> `Se
 
 If the account verification UI does not clear the block, use `notes/porkbun-verification-support.md` to contact Porkbun support without exposing API keys, passwords, payment details, SMS codes, email verification codes, or ID documents.
 
-Alternative registrar fallback: Vercel CLI quotes `froggyhatessnow.wiki` at `$2.99` purchase / `$23` renewal. `npm run domain:vercel-buy -- --confirm-financial-purchase --max-purchase-usd=2.99 --max-renewal-usd=23` wraps the purchase with a fresh price check and hard caps. This is a financial purchase path; run it only after explicit human approval. See `notes/domain-options.md`.
+Alternative registrar fallback: Vercel CLI quotes `froggyhatessnow.wiki` at `$2.99` purchase / `$23` renewal. `npm run domain:vercel-buy -- --confirm-financial-purchase --max-purchase-usd=2.99 --max-renewal-usd=23` wraps the purchase with a fresh price check and hard caps. This is a financial purchase path; run it only after explicit human approval. After a Vercel purchase, verify the apex and `www` domains resolve in Vercel, switch `astro.config.mjs` to `site: "https://froggyhatessnow.wiki"`, then run `npm run domain:commit-canonical -- --deploy-after-commit` and `npm run audit:completion`. See `notes/domain-options.md`.
 
 Run:
 

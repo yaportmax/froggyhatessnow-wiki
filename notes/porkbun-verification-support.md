@@ -65,6 +65,10 @@ The current Porkbun OpenAPI spec explicitly lists domain registration requiremen
 
 Spec search on 2026-05-13 found account/API-key paths for spend settings, balance, account invites, API-key authorization, and email-hosting password management, but no endpoint to verify or resend verification for the existing account email or phone number. Treat email/phone verification as a manual Porkbun account UI or support action.
 
+## Browser Automation Status
+
+Chrome checks on 2026-05-13 found Google Chrome installed and running, the Codex Chrome Extension installed/enabled in `Profile 1`, and the native host manifest present with the expected extension origin. However, no Chrome browser-control tools are exposed in this session, and Computer Use cannot attach to the Chrome window (`cgWindowNotFound`). Treat Porkbun account verification as a manual browser task unless a later session exposes working Chrome controls.
+
 ## Support Message Draft
 
 Subject:

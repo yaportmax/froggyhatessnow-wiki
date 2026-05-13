@@ -48,6 +48,19 @@ The wrapper first re-quotes Vercel pricing, refuses to proceed without the confi
 
 After a non-Porkbun registration path, verify the Vercel attachment, DNS, and live custom-domain markers before switching the Astro canonical site. `npm run domain:health` keeps Porkbun status as informational and accepts any registrar path if Vercel attachment, DNS, canonical config, and custom-domain HTTP checks all pass.
 
+For the Vercel registrar path, the expected post-purchase sequence is:
+
+1. Verify `froggyhatessnow.wiki` and `www.froggyhatessnow.wiki` resolve in Vercel.
+2. Switch `astro.config.mjs` to `site: "https://froggyhatessnow.wiki"`.
+3. Run:
+
+   ```bash
+   npm run domain:commit-canonical -- --deploy-after-commit
+   npm run audit:completion
+   ```
+
+`domain:commit-canonical` intentionally runs `domain:health` before committing, so the local `astro.config.mjs` canonical switch must be present first.
+
 ## Registration Status
 
 Attempted registration for `froggyhatessnow.wiki` on 2026-05-13 through the Porkbun API.

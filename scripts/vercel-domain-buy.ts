@@ -129,7 +129,8 @@ async function main() {
   console.error(
     [
       "Domain purchase command completed. Next steps:",
-      "  npm run domain:health",
+      `  Verify ${domain} and www.${domain} resolve in Vercel.`,
+      `  Switch astro.config.mjs site to https://${domain}.`,
       "  npm run domain:commit-canonical -- --deploy-after-commit",
       "  npm run audit:completion"
     ].join("\n")
