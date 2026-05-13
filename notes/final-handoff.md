@@ -48,6 +48,8 @@ Porkbun documentation points the manual account-contact path at `ACCOUNT` -> `Se
 
 If the account verification UI does not clear the block, use `notes/porkbun-verification-support.md` to contact Porkbun support without exposing API keys, passwords, payment details, SMS codes, email verification codes, or ID documents.
 
+Alternative registrar fallback: Vercel CLI quotes `froggyhatessnow.wiki` at `$2.99` purchase / `$23` renewal and exposes `npx vercel domains buy froggyhatessnow.wiki --scope yaportmax-5253s-projects`. This is a financial purchase path; run it only after explicit human approval. See `notes/domain-options.md`.
+
 Run:
 
 ```bash
@@ -61,7 +63,7 @@ The standalone helper `npm run domain:commit-canonical -- --deploy-after-commit`
 
 The finisher now uses a fresh timestamped registration idempotency suffix by default. If overriding `--idempotency-suffix`, do not reuse `post-verification` or another suffix from a previous failed create request.
 
-`npm run domain:health` is read-only. It checks the local Astro canonical site value, Porkbun registration state, Vercel domain attachment, DNS A records for apex and `www`, and custom-domain page markers against the local Steam snapshot timestamp. It is expected to fail until the Porkbun verification/registration/DNS path is complete and `astro.config.mjs` points at the custom domain.
+`npm run domain:health` is read-only. It checks the local Astro canonical site value, Vercel domain attachment, DNS A records for apex and `www`, and custom-domain page markers against the local Steam snapshot timestamp. Porkbun registration state is retained as an informational check so an alternate registrar path can still pass once DNS and live custom-domain checks are correct. It is expected to fail until registration/DNS/canonical setup is complete and `astro.config.mjs` points at the custom domain.
 
 Expected Porkbun DNS records:
 

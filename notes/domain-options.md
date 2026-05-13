@@ -22,6 +22,30 @@ Backup: `froggywiki.com`.
 
 Avoid `froggyhatessnow.gg` unless the game-community branding is worth the much higher renewal.
 
+## Vercel Registrar Fallback
+
+Vercel CLI can quote and buy domains directly with `npx vercel domains price` and `npx vercel domains buy`. This is a financial purchase path and should not be run automatically without explicit human approval.
+
+Read-only Vercel price checks on 2026-05-13:
+
+| Domain | Vercel Purchase | Vercel Renewal | Notes |
+|---|---:|---:|---|
+| `froggyhatessnow.wiki` | $2.99 | $23 | Direct fallback for the preferred custom domain if Porkbun verification remains blocked. |
+| `froggy-hates-snow.wiki` | $2.99 | $23 | Hyphenated fallback. |
+| `froggyhatessnowwiki.com` | $11.25 | $11.25 | `.com` exact-ish fallback. |
+| `froggywiki.com` | $11.25 | $11.25 | Short `.com` fallback. |
+| `fhswiki.com` | $11.25 | $11.25 | Short but ambiguous. |
+| `froggyhatessnow.net` | $13.50 | $13.50 | Exact title, less wiki-specific. |
+| `froggyhatessnow.gg` | n/a | n/a | Vercel CLI reported the TLD is not supported for price lookup. |
+
+If Vercel registration is approved, the command shape is:
+
+```bash
+npx vercel domains buy froggyhatessnow.wiki --scope yaportmax-5253s-projects
+```
+
+After a non-Porkbun registration path, verify the Vercel attachment, DNS, and live custom-domain markers before switching the Astro canonical site. `npm run domain:health` keeps Porkbun status as informational and accepts any registrar path if Vercel attachment, DNS, canonical config, and custom-domain HTTP checks all pass.
+
 ## Registration Status
 
 Attempted registration for `froggyhatessnow.wiki` on 2026-05-13 through the Porkbun API.

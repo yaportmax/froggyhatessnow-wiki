@@ -20,6 +20,7 @@ type CommandResult = {
 type HealthCheck = {
   name: string;
   ok: boolean;
+  required?: boolean;
   details: Record<string, unknown>;
 };
 
@@ -163,9 +164,11 @@ async function main() {
     {
       name: "porkbun-domain-status",
       ok: porkbunStatus.exitCode === 0 && parseDomainStatus(porkbunStatus.stdout).registeredInPorkbunAccount,
+      required: false,
       details: {
         command: porkbunStatus.command,
         exitCode: porkbunStatus.exitCode,
+        note: "Informational. A domain registered through Vercel or another registrar is acceptable if Vercel attachment, DNS, canonical config, and custom-domain HTTP checks all pass.",
         parsed: parseDomainStatus(porkbunStatus.stdout),
         stderr: porkbunStatus.stderr
       }
@@ -191,7 +194,7 @@ async function main() {
   ];
 
   const checks = [canonical, ...commandChecks, apexDns, wwwDns, ...httpChecks];
-  const ok = checks.every((check) => check.ok);
+  const ok = checks.filter((check) => check.required !== false).every((check) => check.ok);
   const report = {
     ok,
     domain: DOMAIN,
