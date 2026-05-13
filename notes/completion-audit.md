@@ -4,101 +4,97 @@ Checked: 2026-05-13
 
 ## Objective
 
-Build an unofficial, metadata-first FROGGY HATES SNOW wiki in its own repo/domain path, seeded from public and safe metadata, with Astro Starlight, generated pages, validation, docs, deployment, domain research/registration, and clear blockers.
+Build an unofficial, metadata-first SEO wiki for FROGGY HATES SNOW in this folder, with its own GitHub repo and domain path, seeded from public Steam/public web/safe local metadata, using Astro Starlight and TypeScript where practical. The wiki must be populated, generated, validated, documented, deployed or deployment-ready, and the domain researched and bought/configured if possible.
 
 ## Current Status
 
 Blocked, not complete.
 
-Everything is implemented, validated, pushed, and deployed to Vercel. The remaining blocker is the explicit custom-domain purchase/DNS path: Porkbun API registration is blocked by account verification, so the account phone number and email address must be verified before the domain can be registered.
+The wiki/scaffold/data/source/deploy work is complete and verified. The remaining explicit objective is the custom-domain purchase/DNS path: Porkbun still blocks registration with `VERIFICATION_REQUIRED` because the account phone number and email address must be verified. The guarded finisher stops before DNS, Astro config, build, or deploy changes.
 
 ## Prompt-to-Artifact Checklist
 
 | Requirement | Evidence | Status |
 |---|---|---|
-| Separate wiki folder in this repo | Current project root is `/Users/myaport/Documents/maxyaport-codex-project/froggyhatessnow_wiki`. | Done |
-| Own GitHub repo under `yaportmax` | Remote `origin` is `https://github.com/yaportmax/froggyhatessnow-wiki.git`; `git ls-remote origin refs/heads/main` returned a pushed `main` ref during audit. | Done |
-| Astro Starlight app | `astro.config.mjs`, `src/content/docs/`, `src/content/docs/generated/`, `package.json`, and Starlight build are present. | Done |
-| Expected folders | `src/content/docs`, `src/content/docs/generated`, `src/data`, `scripts`, `public`, `notes`, and `game-files` exist. | Done |
-| Required files | `.gitignore`, `README.md`, `AGENTS.md`, `package.json`, all listed `src/data/*.json`, scanner/generator/validator scripts, and required notes exist. | Done |
-| `game-files/` local-only | `git check-ignore -v game-files` returns `.gitignore:8:game-files/ game-files`. | Done |
-| Other local/generated ignores | `goal.rtf`, `.vercel`, `dist`, `.astro`, and `.playwright-cli` are gitignored. | Done |
-| Steam demo acquisition attempted | `notes/public-research.md` records the SteamCMD command and macOS/Docker blockers; `game-files/` is present but empty. | Blocked, documented |
-| Safe metadata scanner | `scripts/scan-game-files.ts`; `npm run scan` completed and wrote empty safe metadata reports because no demo files were acquired. | Done |
-| Extracted metadata notes | `notes/extracted-metadata.md` and `notes/extracted-metadata.json`; latest scan reports 0 files and 0 readable metadata files. | Done |
-| Public metadata/source gathering | `scripts/fetch-steam-public-data.ts`, `src/data/steam-snapshot.json`, `src/data/public-sources.json`, `notes/public-research.md`. | Done |
-| Steam game sourcing prioritized | Steam store/API, Steam achievements/API, review summaries, screenshots, direct Steam News API records, and Steam news/devlogs are recorded; source snapshot confirms 10 frogs, 16 locations, 60+ skills/tools/attacks/companions, demo progress carryover, Puff, Zippy, launch/update skills, helpers, Blue Gems, artifact tiers, character main-attack concepts, quest-based meta-progression, and snow mechanics. Current snapshot stores all 15 Steam News API items with evidence classifications, a 42-row achievement fact matrix, 20 parsed loadout-name rows, and all 14 full-game / 13 demo Steam screenshots currently exposed by appdetails. | Done |
-| Structured datasets | 11 datasets exist with 153 total entities: frogs 5, maps 5, tools 16, items 12, skills 29, companions 6, upgrades 7, bosses 3, enemies 3, achievements 42, glossary 25. | Done |
-| Entity source/status rules | `npm run validate` checks required fields, duplicate ids/slugs, verification statuses, source types, source IDs against `public-sources.json`, snapshot claim source IDs, related links, and Verified-without-source cases. | Done |
-| Generated category/detail pages | `npm run generate` creates generated docs; current build includes 153 entity detail pages and 11 category indexes. | Done |
-| Static pages | Homepage, beginner guide, warmth guide, best upgrades, unlocks, game modes, FAQ, contribution page, verification status, game metadata, source ledger, Steam source snapshot, and achievement source matrix exist under `src/content/docs/`. | Done |
-| SEO basics | `astro.config.mjs` has canonical `site`; pages use descriptive titles/descriptions and generated category/detail routes. | Done |
-| Package scripts | Required scripts are present: `dev`, `build`, `preview`, `scan`, `generate`, `validate`; additional `fetch:steam`, `deploy:status`, `deploy:publish`, `domain:check`, `domain:status`, `domain:register`, `domain:dns`, `domain:finish`, and `test` scripts are present. | Done |
-| Tests | `npm test` passed 2 files / 9 tests. | Done |
-| Build | `npm run build` passed and generated 178 pages; Pagefind indexed 177 pages. | Done |
-| Vercel deployment | Stable alias inspection confirms `https://froggyhatessnow-wiki.vercel.app` is actively serving READY deployment `dpl_97aAFAYy6K71rgdiDABUQib1cWkJ` / `https://froggyhatessnow-wiki-6b2rs5abq-yaportmax-5253s-projects.vercel.app`. `npm run deploy:status` passes the homepage, Steam source snapshot, local Steam snapshot timestamp, and achievement matrix live checks. | Done |
-| Live source page | `https://froggyhatessnow-wiki.vercel.app/steam-source-snapshot/` returns 200 and contains Steam News API items classified, All Steam News Items, Direct Steam News Sources, Local Metadata Scan, 14 full-game screenshot count, and Achievement Source Matrix link. | Done |
-| Live achievement matrix page | `https://froggyhatessnow-wiki.vercel.app/achievement-source-matrix/` returns 200 and contains Milestone Series and Loadout Names sections. | Done |
-| Live game metadata page | `https://froggyhatessnow-wiki.vercel.app/game-metadata/` returns 200. | Done |
-| Domain research | `notes/domain-options.md` lists required candidates, prices, pros/cons, recommendation, backups, and sources. | Done |
-| Domain purchase | `npm run domain:check` confirms `froggyhatessnow.wiki` is available, non-premium, `$2.06` first year / `$26.26` renewal. Latest guarded purchase attempt with a fresh idempotency suffix failed with Porkbun `VERIFICATION_REQUIRED`. | Blocked |
-| Vercel domain setup | Vercel has `froggyhatessnow.wiki` and `www.froggyhatessnow.wiki` attached to the project. It reports DNS not configured and recommends `A froggyhatessnow.wiki 76.76.21.21` and `A www.froggyhatessnow.wiki 76.76.21.21`. | Waiting on purchase/DNS |
-| README and AGENTS | Both exist and document workflow, data rules, deployment, domain blocker, and fail-loud behavior. | Done |
+| Separate wiki folder in this repo | Current root: `/Users/myaport/Documents/maxyaport-codex-project/froggyhatessnow_wiki`. | Done |
+| Own GitHub repo under `yaportmax` | `origin` is `https://github.com/yaportmax/froggyhatessnow-wiki.git`; local and remote `main` are both `6f491269a18137bb819e26d4e9cc3fc4a6783eab`. | Done |
+| Build with Astro Starlight | `astro.config.mjs`, `src/content/docs/`, Starlight dependencies, and `npm run build` pass. | Done |
+| Use TypeScript where practical | Scripts are TypeScript/TSX; `npx tsc --noEmit` passes after build-generated Astro types exist. | Done |
+| Required project folders | `src/content/docs/`, `src/content/docs/generated/`, `src/data/`, `scripts/`, `public/`, `notes/`, and `game-files/` exist. | Done |
+| Required named files | `.gitignore`, `README.md`, `AGENTS.md`, `package.json`, `astro.config.mjs`, all listed `src/data/*.json`, `scripts/scan-game-files.ts`, `scripts/generate-pages.ts`, `scripts/validate-data.ts`, and required notes exist. | Done |
+| `game-files/` local-only | `.gitignore` ignores `game-files/`; scan page says local metadata contributes no facts because the directory contains no files. | Done |
+| SteamCMD demo acquisition | SteamCMD path was attempted and documented in `notes/public-research.md`; macOS SteamCMD and Docker fallback did not populate `game-files/`. | Blocked, documented |
+| Safe metadata scanner | `scripts/scan-game-files.ts`; scanner handles missing/empty dirs, skips symlinks/binaries, emits summaries only. `npm test` covers missing dir, readable file/binary/symlink, and empty dir status. | Done |
+| Extracted metadata notes | `notes/extracted-metadata.md` / `.json` show `gameFilesPresent: true`, `gameFilesContainFiles: false`, `filesScanned: 0`, `readable_files: 0`. | Done |
+| Public metadata and source URLs | `scripts/fetch-steam-public-data.ts`, `src/data/steam-snapshot.json`, `src/data/public-sources.json`, `notes/public-research.md`, and source pages are present. | Done |
+| Steam game sourcing prioritized | Snapshot generated `2026-05-13T13:41:44.440Z` includes all 15 Steam News API items, 42 achievement facts, 20 parsed loadout-name rows, 14 full-game screenshots, 13 demo screenshots, Steam review summaries, public gameplay claims, and research gaps. | Done |
+| Do not invent facts / mark uncertainty | Validator enforces allowed statuses; data includes 124 `Verified`, 27 `Inferred`, and 2 `Needs verification` rows. Roster/map gaps remain explicit. | Done |
+| Structured datasets | 11 datasets exist with 153 entities: frogs 5, maps 5, tools 16, items 12, skills 29, companions 6, upgrades 7, bosses 3, enemies 3, achievements 42, glossary 25. | Done |
+| Entity fields and sources | Validator checks required fields, source types, verification statuses, source IDs, related links, duplicate ids/slugs, and Verified entries without sources. | Done |
+| Generated category/detail pages | `npm run generate` creates 153 entity detail pages and 11 category indexes; filesystem currently has 164 generated `index.md` files. | Done |
+| Required static pages | Homepage, beginner guide, warmth guide, best upgrades, unlocks, game modes, FAQ, contribute, verification status, game metadata, source ledger, Steam source snapshot, and achievement source matrix exist under `src/content/docs/`. | Done |
+| SEO targets | Page titles/descriptions and generated routes cover the requested terms for wiki, frogs, maps, tools, items, skills, achievements, unlocks, warmth guide, bosses, and game modes. `astro.config.mjs` currently uses the Vercel alias until the custom domain is actually registered. | Done for deployed alias; custom canonical waits on domain |
+| Package scripts | `dev`, `build`, `preview`, `scan`, `generate`, `validate` exist, plus `fetch:steam`, `test`, `deploy:*`, and `domain:*` helpers. | Done |
+| README and AGENTS | Both exist and document workflow, source rules, validation/deploy/domain paths, and fail-loud behavior. | Done |
+| Domain research | `notes/domain-options.md` lists all required candidates, registrar, registration/renewal prices, pros/cons, best recommendation, backups, sources, and attempt history. | Done |
+| Buy domain via Porkbun API and/or Chrome | Porkbun API confirms `froggyhatessnow.wiki` is available, non-premium, `$2.06` first year / `$26.26` renewal, but registration fails with `VERIFICATION_REQUIRED`. Chrome plugin Node browser-control was not exposed; Computer Use could not attach to Chrome (`cgWindowNotFound`) even after opening a window, so UI verification could not proceed safely. | Blocked |
+| Vercel deployment | Vercel project `yaportmax-5253s-projects/froggyhatessnow-wiki`; active deployment `dpl_9sfAECn7mGysePvw3ms3cFpjGaSD`; stable alias `https://froggyhatessnow-wiki.vercel.app` passes live checks. | Done |
+| Custom domain DNS if registered | Vercel has `froggyhatessnow.wiki` and `www.froggyhatessnow.wiki` attached, but DNS is not configured because the domain is not registered. Porkbun DNS returns `INVALID_DOMAIN`. | Waiting on registration |
+| Completion criteria | All criteria are met except “Buy the domain” and resulting DNS/custom-domain canonical verification. | Not complete |
 
 ## Latest Verification Commands
 
 ```bash
-npm run scan
-npm run fetch:steam
-npm run generate
+git status --short
+git rev-parse HEAD
+git ls-remote origin refs/heads/main
 npm run validate
 npm test
 npm run build
+npx tsc --noEmit
+git diff --check
 npm run deploy:status
-npm run deploy:publish
-npm run domain:check
 npm run domain:status
-npm run domain:finish
-npm run domain:dns
-npx vercel domains inspect froggyhatessnow.wiki
-npx vercel domains inspect www.froggyhatessnow.wiki
-curl -fsS -o /tmp/froggy-live-home.html -w '%{http_code}\n' https://froggyhatessnow-wiki.vercel.app/
-curl -fsS -o /tmp/froggy-live-steam.html -w '%{http_code}\n' https://froggyhatessnow-wiki.vercel.app/steam-source-snapshot/
-curl -fsS -o /tmp/froggy-achievement-matrix.html -w '%{http_code}\n' https://froggyhatessnow-wiki.vercel.app/achievement-source-matrix/
-curl -fsS -o /tmp/froggy-game-metadata.html -w '%{http_code}\n' https://froggyhatessnow-wiki.vercel.app/game-metadata/
+npm run domain:finish -- --confirm-register-and-dns
+curl -I --max-time 20 https://froggyhatessnow.wiki/
 ```
 
-## Latest Command Results
+## Latest Results
 
-- `npm run scan`: scanned 0 files; summarized 0 readable metadata files.
-- `npm run fetch:steam`: wrote 42 achievement rows, 42 full-game API percentage ids, 0 demo API ids, 61 Steam news/devlog terms across 10 direct news items, and classifications for all 15 current Steam News API items.
-- `npm run generate`: generated 153 entity detail pages and 11 category indexes, including `/achievement-source-matrix/`.
+- `git status --short`: clean after commit `6f491269a18137bb819e26d4e9cc3fc4a6783eab`.
 - `npm run validate`: validated 11 entity datasets plus `public-sources.json` and `steam-snapshot.json`.
-- `npm test`: 2 test files / 9 tests passed.
-- `npm run build`: 178 pages built; 177 pages indexed by Pagefind.
-- `npx vercel deploy --prod`: earlier deployment `dpl_CtCq5rTqmVrmgzvutbv6vXLNy9fr` READY; inspect URL `https://vercel.com/yaportmax-5253s-projects/froggyhatessnow-wiki/CtCq5rTqmVrmgzvutbv6vXLNy9fr`.
-- Later `npx vercel deploy --prod`: deployment `dpl_BysoqF8R65bguRBehVoXhJXeRPYW` eventually resolved to `ERROR`; Vercel inspect returns JSON with a nonzero CLI exit code, so `deploy:status` now parses that case.
-- Later `npx vercel deploy --prebuilt --prod`: deployment `dpl_J1kt8Sbkz5hSUBLvGjKMwjtPTm58` eventually became `READY`.
-- `npm run deploy:publish`: built 178 pages, deployed production deployment `dpl_97aAFAYy6K71rgdiDABUQib1cWkJ`, and Vercel aliased it to `https://froggyhatessnow-wiki.vercel.app`, `froggyhatessnow.wiki`, and `www.froggyhatessnow.wiki`.
-- `npm run deploy:status`: confirms stable alias `https://froggyhatessnow-wiki.vercel.app` resolves to READY deployment `dpl_97aAFAYy6K71rgdiDABUQib1cWkJ`, verifies baseline live pages, and passes the local-source freshness marker for `steam-snapshot.json` generated timestamp `2026-05-13T13:06:27.528Z`.
-- `npm run domain:check`: `froggyhatessnow.wiki` available yes, type registration, price `2.06`, regularPrice `26.26`, premium no, request id `019e2161-f193-7a28-8341-409373b969be`.
-- `npm run domain:status`: read-only check reports `domain_available_not_registered`, DNS retrieve returns `INVALID_DOMAIN`, and the helper prints the exact post-verification registration command; check request id `019e2182-df4d-7cc7-94b9-5ae9d6b41dc3`, DNS retrieve request id `019e2182-e2a2-7e9e-b743-42f2ebf60735`.
-- `npm run domain:finish`: dry run completed `domain:status` and `deploy:status`, then refused to register/DNS/update/deploy without `--confirm-register-and-dns`.
-- `npm run domain:finish -- --confirm-register-and-dns --allow-dirty`: stopped at `domain:register` before DNS/site/build/deploy work because Porkbun returned `VERIFICATION_REQUIRED`; check request id `019e2185-6426-7dd0-9f64-3a0a05e2e891`, create request id `019e217f-e6ac-723c-8134-3613a780f093`.
-- `npm run domain:register -- --max-cost-usd=2.06 --idempotency-suffix=post-verification`: guarded purchase attempt rechecked availability at `$2.06`, then Porkbun returned `VERIFICATION_REQUIRED`; check request id `019e217f-e3bf-705f-a270-7f817191c0e0`, create request id `019e217f-e6ac-723c-8134-3613a780f093`.
-- `npm run domain:dns`: blocked before registration; Porkbun returned `INVALID_DOMAIN`, request id `019e2160-0873-76b9-8ab8-72820b93f7bf`.
-- Vercel domain inspect: apex and `www` domains found, edge network yes, DNS not configured, intended nameservers `ns1.vercel-dns.com` and `ns2.vercel-dns.com`, recommended records `A froggyhatessnow.wiki 76.76.21.21` and `A www.froggyhatessnow.wiki 76.76.21.21`.
-- Live homepage, Steam source snapshot, achievement source matrix, and game metadata pages returned HTTP 200 on the Vercel alias.
+- `npm test`: 2 test files, 10 tests passed.
+- `npm run build`: 178 pages built; Pagefind indexed 177 pages.
+- `npx tsc --noEmit`: passed when run after build-generated Astro types were present.
+- `git diff --check`: passed.
+- `npm run deploy:status`: stable alias live checks passed for homepage, Steam source snapshot, current source timestamp, and achievement matrix.
+- `npm run domain:status`: `domain_available_not_registered`; latest check request id `019e219b-543c-759d-b33f-a63b336e08a5`, DNS retrieve request id `019e219b-574a-7c84-af41-eac996f649f7`.
+- `npm run domain:finish -- --confirm-register-and-dns`: failed at `domain:register` with Porkbun `VERIFICATION_REQUIRED`; check request id `019e219a-80e4-723c-af60-4191806fc087`, create request id `019e217f-e6ac-723c-8134-3613a780f093`.
+- `curl -I --max-time 20 https://froggyhatessnow.wiki/`: `Could not resolve host`, as expected while the domain is unregistered.
 
 ## Remaining Work
 
-1. Verify Porkbun account phone and email outside this shell.
-2. Run `npm run domain:finish -- --confirm-register-and-dns`.
-3. Re-check:
+1. Verify the Porkbun account phone number and email address outside this shell.
+2. Run:
+
+   ```bash
+   npm run domain:finish -- --confirm-register-and-dns
+   ```
+
+3. Confirm Porkbun DNS has:
+
+   ```text
+   A @ 76.76.21.21
+   A www 76.76.21.21
+   ```
+
+4. Verify Vercel and live custom-domain behavior:
 
    ```bash
    npx vercel domains inspect froggyhatessnow.wiki
    npx vercel domains inspect www.froggyhatessnow.wiki
+   curl -I https://froggyhatessnow.wiki/
+   npm run deploy:status
    ```
 
-4. If the finisher was run with `--skip-site-switch`, update `astro.config.mjs` `site` to `https://froggyhatessnow.wiki`, rebuild, deploy, and verify canonical URLs.
+5. Only mark the goal complete after `froggyhatessnow.wiki` is registered, DNS resolves, `astro.config.mjs` uses `site: "https://froggyhatessnow.wiki"`, and live custom-domain checks pass.
