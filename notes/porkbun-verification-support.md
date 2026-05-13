@@ -59,6 +59,7 @@ Read-only Gmail searches on 2026-05-13 found:
 - One account-creation email verification message from Porkbun on 2026-04-27.
 - A fresh continuation search found no Porkbun messages newer than 2 days, and the broader verification search still only surfaced the 2026-04-27 account-creation verification email.
 - A later continuation search found no Porkbun messages newer than 1 day. A broader one-day verification search returned unrelated marketing/other messages, not Porkbun verification mail.
+- A fresh one-day search after the account helper update again found no Porkbun messages. A broader one-day verification/support search returned unrelated Path Projects, Render, and Presidio Residences messages, not Porkbun verification mail.
 
 The email verification code itself is intentionally not recorded here. Search Gmail for subject `porkbun.com | Account Creation Email Verification Code` if Porkbun asks for the original account-creation verification email.
 
