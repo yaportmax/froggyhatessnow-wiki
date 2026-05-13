@@ -96,11 +96,16 @@ Latest `domain:status` output reports `domain_available_not_registered` and prin
 npm run domain:register -- --max-cost-usd=2.06 --idempotency-suffix=post-verification
 ```
 
-Latest read-only check request ids:
+Latest read-only status request ids:
 
-- `domain:check`: `019e2161-f193-7a28-8341-409373b969be`
-- `domain:status` check: `019e2182-df4d-7cc7-94b9-5ae9d6b41dc3`
-- `domain:status` DNS retrieve: `019e2182-e2a2-7e9e-b743-42f2ebf60735`
+- `domain:status` check: `019e2197-2689-7e28-b4e2-53c67ff6ded6`
+- `domain:status` DNS retrieve: `019e2197-292b-7210-8e75-63a2a0ddc928`
+
+The latest direct custom-domain URL check failed before HTTP because DNS does not resolve yet:
+
+```text
+curl: (6) Could not resolve host: froggyhatessnow.wiki
+```
 
 DNS setup was also attempted through the helper before registration completed:
 

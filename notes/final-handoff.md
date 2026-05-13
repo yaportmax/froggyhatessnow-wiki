@@ -8,9 +8,9 @@ The wiki is built, validated, pushed, and live on Vercel.
 
 - GitHub: https://github.com/yaportmax/froggyhatessnow-wiki
 - Live alias: https://froggyhatessnow-wiki.vercel.app
-- Active deployment: `dpl_97aAFAYy6K71rgdiDABUQib1cWkJ`
-- Active deployment URL: https://froggyhatessnow-wiki-6b2rs5abq-yaportmax-5253s-projects.vercel.app
-- Current source snapshot marker: `2026-05-13T13:06:27.528Z`
+- Active deployment: `dpl_9sfAECn7mGysePvw3ms3cFpjGaSD`
+- Active deployment URL: https://froggyhatessnow-wiki-77tyugqy7-yaportmax-5253s-projects.vercel.app
+- Current source snapshot marker: `2026-05-13T13:41:44.440Z`
 
 `npm run deploy:status` verifies the live alias, homepage, Steam source snapshot, source timestamp marker, and achievement matrix.
 
@@ -28,6 +28,13 @@ Latest confirmed purchase attempt:
 - Check request id: `019e2185-6426-7dd0-9f64-3a0a05e2e891`
 - Create request id: `019e217f-e6ac-723c-8134-3613a780f093`
 - Result: stopped before DNS, Astro site changes, build, or deploy.
+
+Latest read-only domain status:
+
+- Domain check request id: `019e2197-2689-7e28-b4e2-53c67ff6ded6`
+- DNS retrieve request id: `019e2197-292b-7210-8e75-63a2a0ddc928`
+- Result: `domain_available_not_registered`; DNS returned `INVALID_DOMAIN`.
+- Direct `https://froggyhatessnow.wiki/` check: cannot resolve host.
 
 ## After Porkbun Verification
 
