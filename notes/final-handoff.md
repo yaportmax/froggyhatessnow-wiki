@@ -30,6 +30,7 @@ Latest confirmed purchase attempt:
 - Check request id: `019e21d5-2161-7212-9556-3bf098d88f96`
 - Create request id: `019e21d5-23f8-7df7-b4e0-7d21ca0f9494`
 - Result: stopped before DNS, Astro site changes, build, or deploy.
+- Browser fallback status: the Chrome-extension control path is not exposed in this session, and Computer Use currently cannot attach to Chrome (`cgWindowNotFound`). No UI purchase or verification action was completed.
 
 Latest read-only domain status:
 
@@ -41,6 +42,8 @@ Latest read-only domain status:
 - Direct `https://froggyhatessnow.wiki/` check: cannot resolve host.
 
 ## After Porkbun Verification
+
+Porkbun documentation points the manual account-contact path at `ACCOUNT` -> `Settings / Billing` -> `Account Owner and Recovery` for email/phone verification. Porkbun also documents that some accounts may need an ID verification flow through Veriff. Complete those account checks in Porkbun first; the shell cannot bypass them.
 
 Run:
 
