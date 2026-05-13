@@ -28,6 +28,14 @@ Attempted registration for `froggyhatessnow.wiki` on 2026-05-13 through the Pork
 
 Result: not registered. Porkbun returned `VERIFICATION_REQUIRED`: the account phone number and email address must be verified before API registration can complete.
 
+Manual verification path from Porkbun's own account-contact documentation:
+
+1. Log in to Porkbun.
+2. Open `ACCOUNT` -> `Settings / Billing`.
+3. Use the `Account Owner and Recovery` section to verify/update the primary account email, backup email, and other account contact details.
+
+Porkbun's subaccount documentation also identifies the same `Account Owner and Recovery` section as the place to verify the parent account email address and phone number. Porkbun separately documents that some new accounts may be prompted for photo ID verification through Veriff.
+
 Registration request details:
 
 - Domain: `froggyhatessnow.wiki`
@@ -122,6 +130,9 @@ Alternative DNS plan: change the domain nameservers to Vercel's intended nameser
 
 Sources:
 
+- Porkbun account contact settings: https://kb.porkbun.com/article/57-how-to-change-contact-information
+- Porkbun account email/phone verification location: https://kb.porkbun.com/article/182-subaccounts-guide
+- Porkbun ID verification explanation: https://kb.porkbun.com/article/225-why-porkbun-id-verification
 - Porkbun API docs: https://porkbun.com/api/json/v3/documentation
 - Porkbun pricing: https://porkbun.com/products/domains
 - Vercel Astro docs: https://vercel.com/docs/frameworks/frontend/astro
