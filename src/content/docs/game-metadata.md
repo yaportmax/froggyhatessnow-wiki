@@ -51,7 +51,7 @@ This page keeps volatile store metadata separate from gameplay guidance. Refresh
 | Languages | English * , French * , German * , Spanish - Spain * , Japanese * , Korean * , Polish * , Portuguese - Brazil * , Simplified Chinese * , Ukrainian * , Turkish * , Traditional Chinese * * languages with full audio support | English * , French * , Italian * , German * , Spanish - Spain * , Ukrainian * * languages with full audio support |
 | Achievements | 42 | None listed |
 | Screenshots | 14 | 13 |
-| Review summary | {"num_reviews":10,"review_score":8,"review_score_desc":"Very Positive","total_positive":178,"total_negative":15,"total_reviews":193} | {"num_reviews":10,"review_score":8,"review_score_desc":"Very Positive","total_positive":139,"total_negative":3,"total_reviews":142} |
+| Review summary | {"num_reviews":10,"review_score":8,"review_score_desc":"Very Positive","total_positive":179,"total_negative":14,"total_reviews":193} | {"num_reviews":10,"review_score":8,"review_score_desc":"Very Positive","total_positive":139,"total_negative":3,"total_reviews":142} |
 
 ## Demo Relationship
 

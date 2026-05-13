@@ -1,6 +1,6 @@
 # Extracted Metadata
 
-Generated: 2026-05-13T12:46:12.280Z
+Generated: 2026-05-13T13:06:27.064Z
 
 This report summarizes safe, readable metadata only. It does not redistribute game assets, binaries, source code, or large raw text dumps.
 
