@@ -13,6 +13,7 @@ This project is built with Astro Starlight and seeded from public Steam metadata
 - Generated static HTML pages: `178`
 - Verification statuses used: `Verified`, `Inferred`, `Needs verification`
 - First-class source pages: `/game-metadata/`, `/steam-source-snapshot/`, `/achievement-source-matrix/`, and `/source-ledger/`
+- Crawler/source manifests: `/robots.txt` and `/llms.txt`
 
 The strongest current source is Steam/public metadata. The source snapshot records Steam appdetails, review summaries, all public Steam screenshots currently exposed by appdetails, a 42-row achievement fact matrix, all 15 current Steam News API items with evidence classifications, volatile price/review/achievement data, and explicit research gaps. Steam news/devlogs now confirm 10 playable frogs, 16 locations, 60+ skills/tools/attacks/companions, demo progress carryover, Puff, Zippy, several launch/update skills, robotic helpers, Blue Gems, artifact rarity tiers, character main-attack concepts, quest-based meta-progression, and snow-system mechanics. Local demo file extraction is blocked in this shell; see `notes/public-research.md` and `notes/extracted-metadata.md`.
 
@@ -129,7 +130,7 @@ The concise remaining-blocker handoff is in `notes/final-handoff.md`.
 
 `npm run audit:completion` is read-only except for normal build output. It verifies the goal-level artifact checklist, required scripts, data coverage, generated pages, git state, validator, tests, build, deployed Vercel alias, and custom-domain health. It is expected to fail until the custom domain is registered, DNS resolves, and the Astro canonical site is switched.
 
-`npm run deploy:status` is read-only. It checks which deployment the stable Vercel alias is actively serving, verifies key live wiki pages, compares the live Steam source page against the local `steam-snapshot.json` timestamp, and reports any queued/building deployments without removing them.
+`npm run deploy:status` is read-only. It checks which deployment the stable Vercel alias is actively serving, verifies key live wiki pages, compares the live Steam source page and `/llms.txt` against the local `steam-snapshot.json` timestamp, verifies `/robots.txt`, and reports any queued/building deployments without removing them.
 
 `npm run deploy:publish` is guarded. By default it refuses to remove stuck remote deployments. After explicit approval to clear the Vercel queue, run:
 

@@ -21,6 +21,8 @@ const REQUIRED_PATHS = [
   "scripts/completion-audit.ts",
   "scripts/domain-health.ts",
   "scripts/domain-commit-canonical.ts",
+  "src/pages/robots.txt.ts",
+  "src/pages/llms.txt.ts",
   "notes/public-research.md",
   "notes/extracted-metadata.md",
   "notes/extracted-metadata.json",

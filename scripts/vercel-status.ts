@@ -107,7 +107,9 @@ async function main() {
       `Generated: ${steamSnapshot.generated_at}`,
       "Current local Steam snapshot generated_at"
     ),
-    checkPage("/achievement-source-matrix/", "Loadout Names")
+    checkPage("/achievement-source-matrix/", "Loadout Names"),
+    checkPage("/robots.txt", "sitemap-index.xml", "robots sitemap"),
+    checkPage("/llms.txt", `Source snapshot generated: ${steamSnapshot.generated_at}`, "llms source snapshot marker")
   ]);
   const liveChecksPassed = liveChecks.every((check) => check.ok && check.containsRequiredText);
   const failedLiveChecks = liveChecks.filter((check) => !check.ok || !check.containsRequiredText);
