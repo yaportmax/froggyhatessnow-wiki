@@ -70,7 +70,7 @@ curl -I --max-time 20 https://froggyhatessnow.wiki/
 - `npx tsc --noEmit`: currently fails in Starlight generated utility types (`astro:content` has no exported `RenderResult`); `npm run build`, `npm test`, and `npm run validate` pass.
 - `git diff --check`: passed.
 - `npm run deploy:status`: stable alias live checks passed for homepage, Steam source snapshot, current source timestamp `2026-05-13T16:07:29.110Z`, achievement matrix, homepage Open Graph image metadata, `/robots.txt`, and `/llms.txt`.
-- `npm run domain:status`: `domain_available_not_registered`; latest check request id `019e2227-b0a7-77ca-af72-9130711e9644`, DNS retrieve request id `019e2227-b442-78a0-a57d-79ddef290644`.
+- `npm run domain:status`: `domain_available_not_registered`; latest check request id `019e2229-cd8c-7a9c-906a-a08d902b9dac`, DNS retrieve request id `019e2229-d028-799b-93d0-373bec9a16ed`.
 - Read-only Porkbun account checks: `/ping` credentials valid; `/account/balance` reports `0` account credit; `/account/apiSettings` reports auto-topup disabled. Request ids: `019e2211-5316-7f37-be69-b58aa4a50816`, `019e2211-807a-7806-882d-e3a08507cf80`, `019e2211-ab74-724a-bbef-1efc02cc18d0`.
 - `npm run domain:health`: expected failure while registration/DNS/canonical switch are incomplete. It now includes an `astro-canonical-site` check for `astro.config.mjs` in addition to Porkbun registration state, Vercel attachment, DNS A records, and custom-domain page markers.
 - `npm run domain:finish:post-verification`: guarded post-verification wrapper exists; after registration/DNS it commits/pushes the canonical config before deployment and then deploys from the clean committed canonical state.

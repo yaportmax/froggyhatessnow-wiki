@@ -18,6 +18,13 @@ Latest API availability result before create:
 - First-year price: `$2.06`
 - Renewal price: `$26.26`
 
+Latest read-only domain status after the last documentation push:
+
+- Domain check request id: `019e2229-cd8c-7a9c-906a-a08d902b9dac`
+- DNS retrieve request id: `019e2229-d028-799b-93d0-373bec9a16ed`
+- Result: `domain_available_not_registered`
+- DNS result: `INVALID_DOMAIN`
+
 Latest failed finisher attempt:
 
 - Command: `npm run domain:finish:post-verification`
