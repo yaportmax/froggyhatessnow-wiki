@@ -10,9 +10,11 @@ This project is built with Astro Starlight and seeded from public Steam metadata
 - Demo Steam app ID: `4037600`
 - Parsed public achievements: `42`
 - Generated entity pages: `114`
+- Generated static HTML pages: `137`
 - Verification statuses used: `Verified`, `Inferred`, `Needs verification`
+- First-class source pages: `/steam-source-snapshot/` and `/source-ledger/`
 
-The strongest current source is Steam/public metadata. Local demo file extraction is blocked in this shell; see `notes/public-research.md` and `notes/extracted-metadata.md`.
+The strongest current source is Steam/public metadata. The source snapshot records Steam appdetails, review summaries, public achievement rows, Steam media URLs, volatile price/review/achievement data, and explicit research gaps. Local demo file extraction is blocked in this shell; see `notes/public-research.md` and `notes/extracted-metadata.md`.
 
 ## Commands
 
@@ -58,7 +60,11 @@ npm run build
 
 ## Deployment
 
-The site is deployment-ready for any static Astro host once `npm run build` succeeds. Vercel is the intended host, but the Vercel CLI/token is not configured in this shell.
+The site builds as a static Astro/Starlight site.
+
+- GitHub: https://github.com/yaportmax/froggyhatessnow-wiki
+- Vercel production alias: https://froggyhatessnow-wiki.vercel.app
+- Current custom-domain target: `froggyhatessnow.wiki`
 
 Recommended domain from research: `froggyhatessnow.wiki`.
 

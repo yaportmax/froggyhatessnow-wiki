@@ -32,6 +32,74 @@ type Entity = {
   steam_community_percent?: string | null;
 };
 
+type PublicSource = Source & {
+  id: string;
+};
+
+type SnapshotApp = {
+  app_id: number;
+  kind: string;
+  title: string;
+  type: string;
+  source_url: string;
+  api_url: string;
+  is_free: boolean | null;
+  release_date: unknown;
+  developer: string[];
+  publisher: string[];
+  platforms: unknown;
+  genres: string[];
+  categories: string[];
+  supported_languages_text: string;
+  price_overview: unknown;
+  recommendations_total: number | null;
+  achievements_total: number | null;
+  screenshots_count: number;
+  screenshots: Array<{ id: number | string | null; thumbnail_url: string; full_url: string }>;
+  movies: Array<{ id: number | string | null; name: string; thumbnail_url: string }>;
+  header_image: string | null;
+  capsule_image: string | null;
+  website: string | null;
+  fullgame?: unknown;
+};
+
+type SteamSnapshot = {
+  accessed_date: string;
+  generated_at: string;
+  source_policy: string[];
+  sources: Record<string, string>;
+  apps: {
+    full_game: SnapshotApp;
+    demo: SnapshotApp;
+  };
+  reviews: {
+    full_game: Record<string, unknown> | null;
+    demo: Record<string, unknown> | null;
+  };
+  achievements: {
+    community_page_url: string;
+    global_percentages_api_url: string;
+    demo_global_percentages_api_url: string;
+    demo_global_percentages_api_status: number;
+    demo_global_percentages_api_error: string | null;
+    community_rows_count: number;
+    full_game_api_ids_count: number;
+    demo_api_ids_count: number;
+    highest_global_percentages: Array<{ name: string; percent: string }>;
+    lowest_global_percentages: Array<{ name: string; percent: string }>;
+    notes: string[];
+  };
+  public_gameplay_claims: Array<{
+    claim: string;
+    source_ids: string[];
+    confidence: string;
+    wiki_targets: string[];
+    notes: string;
+  }>;
+  research_gaps: string[];
+  refresh_commands: string[];
+};
+
 const CATEGORY_LABELS: Record<string, string> = {
   frogs: "Frogs",
   maps: "Maps",
@@ -57,12 +125,42 @@ function mdEscape(value: unknown) {
     .trim();
 }
 
+function inlineCode(value: string) {
+  return `\`${value.replace(/`/g, "")}\``;
+}
+
+function plainList(values: unknown) {
+  if (!Array.isArray(values) || values.length === 0) return "None listed";
+  return values.map((value) => String(value)).join(", ");
+}
+
+function compactJson(value: unknown) {
+  if (value === null || value === undefined) return "None listed";
+  if (typeof value === "string" || typeof value === "number" || typeof value === "boolean") return String(value);
+  return JSON.stringify(value);
+}
+
+function fieldValue(value: unknown) {
+  return mdEscape(compactJson(value));
+}
+
 function linkForEntity(entity: Entity) {
   return `/generated/${entity.category}/${entity.slug}/`;
 }
 
 async function readDataset(dataset: string): Promise<Entity[]> {
   return JSON.parse(await readFile(path.resolve("src/data", `${dataset}.json`), "utf8")) as Entity[];
+}
+
+async function readJson<T>(filePath: string): Promise<T> {
+  return JSON.parse(await readFile(filePath, "utf8")) as T;
+}
+
+async function clearAstroContentCache() {
+  await Promise.all([
+    rm(path.resolve(".astro"), { recursive: true, force: true }),
+    rm(path.resolve("node_modules/.astro"), { recursive: true, force: true })
+  ]);
 }
 
 function statusCallout(status: string) {
@@ -97,6 +195,156 @@ function sourcesList(entity: Entity) {
     .map((source) => `- [${mdEscape(source.label)}](${source.path_or_url}) — ${source.type}, confidence ${source.confidence}. ${mdEscape(source.notes)}`)
     .join("\n")
     .concat("\n");
+}
+
+function reviewSummaryTable(snapshot: SteamSnapshot) {
+  const rows = [
+    ["Full game", snapshot.reviews.full_game],
+    ["Demo", snapshot.reviews.demo]
+  ];
+  return (
+    "| App | Review Summary |\n|---|---|\n" +
+    rows.map(([label, value]) => `| ${label} | ${fieldValue(value)} |`).join("\n") +
+    "\n\n"
+  );
+}
+
+function appSnapshotRows(app: SnapshotApp) {
+  return {
+    app_id: app.app_id,
+    title: app.title,
+    type: app.type,
+    release_date: fieldValue(app.release_date),
+    developer: plainList(app.developer),
+    publisher: plainList(app.publisher),
+    platforms: fieldValue(app.platforms),
+    genres: plainList(app.genres),
+    categories: plainList(app.categories),
+    price: fieldValue(app.price_overview),
+    recommendations: app.recommendations_total === null ? "None listed" : String(app.recommendations_total),
+    achievements: app.achievements_total === null ? "None listed" : String(app.achievements_total),
+    screenshots: String(app.screenshots_count),
+    movies: app.movies.length === 0 ? "None listed" : app.movies.map((movie) => movie.name || String(movie.id)).join(", ")
+  };
+}
+
+function steamAppComparison(snapshot: SteamSnapshot) {
+  const full = appSnapshotRows(snapshot.apps.full_game);
+  const demo = appSnapshotRows(snapshot.apps.demo);
+  const rows: Array<[string, string, string]> = [
+    ["App ID", String(full.app_id), String(demo.app_id)],
+    ["Title", full.title, demo.title],
+    ["Type", full.type, demo.type],
+    ["Release", full.release_date, demo.release_date],
+    ["Developer", full.developer, demo.developer],
+    ["Publisher", full.publisher, demo.publisher],
+    ["Platforms", full.platforms, demo.platforms],
+    ["Genres", full.genres, demo.genres],
+    ["Categories", full.categories, demo.categories],
+    ["Current US Price", full.price, demo.price],
+    ["Recommendations", full.recommendations, demo.recommendations],
+    ["Achievements", full.achievements, demo.achievements],
+    ["Screenshots", full.screenshots, demo.screenshots],
+    ["Movies", full.movies, demo.movies]
+  ];
+
+  return (
+    "| Field | Full Game | Demo |\n|---|---|---|\n" +
+    rows.map(([field, fullValue, demoValue]) => `| ${field} | ${mdEscape(fullValue)} | ${mdEscape(demoValue)} |`).join("\n") +
+    "\n\n"
+  );
+}
+
+function screenshotGrid(snapshot: SteamSnapshot) {
+  const shots = snapshot.apps.full_game.screenshots.slice(0, 4);
+  if (shots.length === 0) return "";
+  return [
+    '<div class="steam-media-grid">',
+    ...shots.map(
+      (shot) =>
+        `<a href="${shot.full_url}" rel="noopener"><img src="${shot.thumbnail_url}" alt="Public Steam screenshot for FROGGY HATES SNOW" loading="lazy" /></a>`
+    ),
+    "</div>",
+    ""
+  ].join("\n");
+}
+
+function sourceLedgerPage(publicSources: PublicSource[], allRows: Entity[]) {
+  const statusCounts = allRows.reduce<Record<string, number>>((acc, row) => {
+    acc[row.verification_status] = (acc[row.verification_status] ?? 0) + 1;
+    return acc;
+  }, {});
+  const sourceCounts = new Map<string, number>();
+  for (const row of allRows) {
+    for (const source of row.sources) {
+      sourceCounts.set(source.label, (sourceCounts.get(source.label) ?? 0) + 1);
+    }
+  }
+  const topSources = [...sourceCounts.entries()].sort((a, b) => b[1] - a[1]);
+
+  return (
+    frontmatter("Source Ledger", "Public source ledger for the FROGGY HATES SNOW wiki.") +
+    "# Source Ledger\n\n" +
+    "This is the public-source audit trail for the wiki. It separates source availability from gameplay certainty: a public achievement can verify a name without verifying the item's exact effect.\n\n" +
+    `Entity status counts: ${Object.entries(statusCounts)
+      .map(([status, count]) => `${status}: ${count}`)
+      .join(", ")}.\n\n` +
+    "## Source Coverage\n\n" +
+    "| Source Label | Referenced Entities |\n|---|---:|\n" +
+    topSources.map(([label, count]) => `| ${mdEscape(label)} | ${count} |`).join("\n") +
+    "\n\n## Public Sources\n\n" +
+    "| ID | Source | Confidence | Notes |\n|---|---|---|---|\n" +
+    publicSources
+      .map((source) => `| ${inlineCode(source.id)} | [${mdEscape(source.label)}](${source.path_or_url}) | ${source.confidence} | ${mdEscape(source.notes)} |`)
+      .join("\n") +
+    "\n"
+  );
+}
+
+function steamSnapshotPage(snapshot: SteamSnapshot) {
+  const full = snapshot.apps.full_game;
+  const highest = snapshot.achievements.highest_global_percentages;
+  const lowest = snapshot.achievements.lowest_global_percentages;
+
+  return (
+    frontmatter("Steam Source Snapshot", "Current public Steam metadata snapshot for FROGGY HATES SNOW.") +
+    "# Steam Source Snapshot\n\n" +
+    (full.header_image ? `![FROGGY HATES SNOW Steam header](${full.header_image})\n\n` : "") +
+    `Accessed: **${snapshot.accessed_date}**. Generated: ${snapshot.generated_at}.\n\n` +
+    "This page is the main sourcing checkpoint for game-populating wiki data. It uses official public Steam pages/APIs first, then marks anything not confirmed by those sources as inferred or needing verification.\n\n" +
+    "## Source Policy\n\n" +
+    snapshot.source_policy.map((item) => `- ${mdEscape(item)}`).join("\n") +
+    "\n\n## App Metadata\n\n" +
+    steamAppComparison(snapshot) +
+    "## Steam Media\n\n" +
+    `Steam appdetails currently lists ${full.screenshots_count} full-game screenshots. The thumbnails below are public Steam CDN URLs and link to the public full-size Steam images.\n\n` +
+    screenshotGrid(snapshot) +
+    "## Reviews\n\n" +
+    reviewSummaryTable(snapshot) +
+    "## Achievements\n\n" +
+    `Public community rows parsed: **${snapshot.achievements.community_rows_count}**. Full-game global percentage API ids parsed: **${snapshot.achievements.full_game_api_ids_count}**. Demo global percentage API status: **${snapshot.achievements.demo_global_percentages_api_status}**; ids parsed: **${snapshot.achievements.demo_api_ids_count}**.\n\n` +
+    (snapshot.achievements.demo_global_percentages_api_error ? `Demo achievement endpoint note: ${snapshot.achievements.demo_global_percentages_api_error}.\n\n` : "") +
+    "| Highest Public API Percentages | Percent |\n|---|---:|\n" +
+    highest.map((row) => `| ${inlineCode(row.name)} | ${row.percent}% |`).join("\n") +
+    "\n\n| Lowest Public API Percentages | Percent |\n|---|---:|\n" +
+    lowest.map((row) => `| ${inlineCode(row.name)} | ${row.percent}% |`).join("\n") +
+    "\n\n" +
+    snapshot.achievements.notes.map((item) => `- ${mdEscape(item)}`).join("\n") +
+    "\n\n## Public Gameplay Claims\n\n" +
+    "| Claim | Source IDs | Confidence | Wiki Targets | Notes |\n|---|---|---|---|---|\n" +
+    snapshot.public_gameplay_claims
+      .map(
+        (claim) =>
+          `| ${mdEscape(claim.claim)} | ${claim.source_ids.map(inlineCode).join(", ")} | ${claim.confidence} | ${claim.wiki_targets.map(inlineCode).join(", ")} | ${mdEscape(claim.notes)} |`
+      )
+      .join("\n") +
+    "\n\n## Research Gaps\n\n" +
+    snapshot.research_gaps.map((gap) => `- ${mdEscape(gap)}`).join("\n") +
+    "\n\n## Refresh\n\n" +
+    "```bash\n" +
+    snapshot.refresh_commands.join("\n") +
+    "\n```\n"
+  );
 }
 
 function relatedList(entity: Entity, lookup: Map<string, Entity>) {
@@ -146,18 +394,22 @@ function entityPage(entity: Entity, lookup: Map<string, Entity>) {
   );
 }
 
-function homepage(allRows: Entity[]) {
+function homepage(allRows: Entity[], snapshot: SteamSnapshot) {
   const verified = allRows.filter((row) => row.verification_status === "Verified").length;
   const inferred = allRows.filter((row) => row.verification_status === "Inferred").length;
   const needs = allRows.filter((row) => row.verification_status === "Needs verification").length;
+  const headerImage = snapshot.apps.full_game.header_image;
   return (
     frontmatter("FROGGY HATES SNOW Wiki", "Unofficial metadata-first fan wiki for FROGGY HATES SNOW.") +
     "# FROGGY HATES SNOW Wiki\n\n" +
+    (headerImage ? `![FROGGY HATES SNOW Steam header](${headerImage})\n\n` : "") +
     "Unofficial metadata-first fan wiki for **FROGGY HATES SNOW**. The current build starts from public Steam metadata, the public Steam achievements page, public review summaries, publisher metadata, and safe local metadata scanning.\n\n" +
     ":::caution[Scope]\nThis wiki does not redistribute proprietary game files, assets, binaries, source code, or large raw text dumps. Entries marked Inferred or Needs verification should be treated as work-in-progress.\n:::\n\n" +
     `Current entity coverage: **${allRows.length} entries** (${verified} Verified, ${inferred} Inferred, ${needs} Needs verification).\n\n` +
+    `Steam source snapshot: full game app ${snapshot.apps.full_game.app_id}, demo app ${snapshot.apps.demo.app_id}, ${snapshot.achievements.community_rows_count} public achievement rows, accessed ${snapshot.accessed_date}.\n\n` +
     "## Browse\n\n" +
     REQUIRED_DATASETS.map((dataset) => `- [${CATEGORY_LABELS[dataset]}](/generated/${dataset}/)`).join("\n") +
+    "\n- [Steam Source Snapshot](/steam-source-snapshot/)\n- [Source Ledger](/source-ledger/)\n- [Verification Status](/verification-status/)" +
     "\n\n## Priority Research Gaps\n\n" +
     "- Local Steam demo acquisition is blocked in this macOS shell; see `notes/public-research.md`.\n" +
     "- Individual frog/character names, map names, boss names, enemy names, exact upgrade stats, costs, and unlock conditions need gameplay or safe metadata verification.\n" +
@@ -256,6 +508,8 @@ export async function generatePages() {
   await mkdir(generatedRoot, { recursive: true });
 
   const datasetEntries = await Promise.all(REQUIRED_DATASETS.map(async (dataset) => [dataset, await readDataset(dataset)] as const));
+  const publicSources = await readJson<PublicSource[]>(path.resolve("src/data/public-sources.json"));
+  const steamSnapshot = await readJson<SteamSnapshot>(path.resolve("src/data/steam-snapshot.json"));
   const allRows = datasetEntries.flatMap(([, rows]) => rows);
   const lookup = new Map<string, Entity>();
   for (const row of allRows) {
@@ -263,7 +517,9 @@ export async function generatePages() {
     lookup.set(row.slug, row);
   }
 
-  await writeFile(path.join(outputRoot, "index.md"), homepage(allRows));
+  await writeFile(path.join(outputRoot, "index.md"), homepage(allRows, steamSnapshot));
+  await writeFile(path.join(outputRoot, "source-ledger.md"), sourceLedgerPage(publicSources, allRows));
+  await writeFile(path.join(outputRoot, "steam-source-snapshot.md"), steamSnapshotPage(steamSnapshot));
 
   for (const [dataset, rows] of datasetEntries) {
     const categoryDir = path.join(generatedRoot, dataset);
@@ -281,6 +537,7 @@ export async function generatePages() {
     await writeFile(filePath, contents);
   }
 
+  await clearAstroContentCache();
   console.log(`Generated ${allRows.length} entity detail pages and ${REQUIRED_DATASETS.length} category indexes.`);
 }
 

@@ -1,0 +1,409 @@
+{
+  "accessed_date": "2026-05-13",
+  "generated_at": "2026-05-13T10:12:51.063Z",
+  "source_policy": [
+    "Prefer official public Steam endpoints and pages for game metadata.",
+    "Do not copy raw long descriptions, review text, proprietary assets, binaries, source code, or decompiled content.",
+    "Treat prices, review counts, recommendations, player counts, and achievement percentages as volatile as-of metadata.",
+    "Treat achievement names as public names; classify gameplay effects only when another source or safe local metadata confirms them."
+  ],
+  "sources": {
+    "full_store": "https://store.steampowered.com/app/3232380/FROGGY_HATES_SNOW/",
+    "demo_store": "https://store.steampowered.com/app/4037600/FROGGY_HATES_SNOW_Demo/",
+    "full_appdetails": "https://store.steampowered.com/api/appdetails?appids=3232380&cc=us&l=english",
+    "demo_appdetails": "https://store.steampowered.com/api/appdetails?appids=4037600&cc=us&l=english",
+    "full_reviews": "https://store.steampowered.com/appreviews/3232380?json=1&language=all&filter=summary&purchase_type=all&num_per_page=0",
+    "demo_reviews": "https://store.steampowered.com/appreviews/4037600?json=1&language=all&filter=summary&purchase_type=all&num_per_page=0",
+    "full_achievements_page": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
+    "full_global_achievement_percentages": "https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=3232380&format=json",
+    "demo_global_achievement_percentages": "https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=4037600&format=json",
+    "publisher_page": "https://digitalbandidos.com/games/froggy-hates-snow/",
+    "steamdb_full": "https://steamdb.info/app/3232380/",
+    "steamdb_demo": "https://steamdb.info/app/4037600/"
+  },
+  "apps": {
+    "full_game": {
+      "app_id": 3232380,
+      "kind": "full_game",
+      "title": "FROGGY HATES SNOW",
+      "type": "game",
+      "source_url": "https://store.steampowered.com/app/3232380/FROGGY_HATES_SNOW/",
+      "api_url": "https://store.steampowered.com/api/appdetails?appids=3232380&cc=us&l=english",
+      "is_free": false,
+      "release_date": {
+        "coming_soon": false,
+        "date": "May 7, 2026"
+      },
+      "developer": [
+        "CRYING BRICK"
+      ],
+      "publisher": [
+        "Digital Bandidos"
+      ],
+      "platforms": {
+        "windows": true,
+        "mac": false,
+        "linux": false
+      },
+      "genres": [
+        "Action",
+        "Indie",
+        "Strategy"
+      ],
+      "categories": [
+        "Single-player",
+        "Steam Achievements",
+        "Full controller support",
+        "Adjustable Difficulty",
+        "Playable without Timed Input",
+        "Steam Cloud",
+        "Family Sharing"
+      ],
+      "supported_languages_text": "English * , French * , German * , Spanish - Spain * , Japanese * , Korean * , Polish * , Portuguese - Brazil * , Simplified Chinese * , Ukrainian * , Turkish * , Traditional Chinese * * languages with full audio support",
+      "price_overview": {
+        "currency": "USD",
+        "initial": 1499,
+        "final": 1349,
+        "discount_percent": 10,
+        "initial_formatted": "$14.99",
+        "final_formatted": "$13.49"
+      },
+      "recommendations_total": 174,
+      "achievements_total": 42,
+      "screenshots_count": 14,
+      "screenshots": [
+        {
+          "id": 0,
+          "thumbnail_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3232380/56938ae4d7d96120e416377cda93131fa5ef415c/ss_56938ae4d7d96120e416377cda93131fa5ef415c.600x338.jpg?t=1778580427",
+          "full_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3232380/56938ae4d7d96120e416377cda93131fa5ef415c/ss_56938ae4d7d96120e416377cda93131fa5ef415c.1920x1080.jpg?t=1778580427"
+        },
+        {
+          "id": 1,
+          "thumbnail_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3232380/f8c9d55547cdfea778613fec7c541906c5ea2e40/ss_f8c9d55547cdfea778613fec7c541906c5ea2e40.600x338.jpg?t=1778580427",
+          "full_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3232380/f8c9d55547cdfea778613fec7c541906c5ea2e40/ss_f8c9d55547cdfea778613fec7c541906c5ea2e40.1920x1080.jpg?t=1778580427"
+        },
+        {
+          "id": 2,
+          "thumbnail_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3232380/4802806329bda2cc1cd1a9233b33b99788513534/ss_4802806329bda2cc1cd1a9233b33b99788513534.600x338.jpg?t=1778580427",
+          "full_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3232380/4802806329bda2cc1cd1a9233b33b99788513534/ss_4802806329bda2cc1cd1a9233b33b99788513534.1920x1080.jpg?t=1778580427"
+        },
+        {
+          "id": 3,
+          "thumbnail_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3232380/d7e6f2e17759d89948a7200ca8e126b75b7c2496/ss_d7e6f2e17759d89948a7200ca8e126b75b7c2496.600x338.jpg?t=1778580427",
+          "full_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3232380/d7e6f2e17759d89948a7200ca8e126b75b7c2496/ss_d7e6f2e17759d89948a7200ca8e126b75b7c2496.1920x1080.jpg?t=1778580427"
+        },
+        {
+          "id": 4,
+          "thumbnail_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3232380/2ab1c66d384491ead4a955290de1d96da2feed57/ss_2ab1c66d384491ead4a955290de1d96da2feed57.600x338.jpg?t=1778580427",
+          "full_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3232380/2ab1c66d384491ead4a955290de1d96da2feed57/ss_2ab1c66d384491ead4a955290de1d96da2feed57.1920x1080.jpg?t=1778580427"
+        },
+        {
+          "id": 5,
+          "thumbnail_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3232380/e8a1af46b0b68937ea11583feff6b28a17bb9fbb/ss_e8a1af46b0b68937ea11583feff6b28a17bb9fbb.600x338.jpg?t=1778580427",
+          "full_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3232380/e8a1af46b0b68937ea11583feff6b28a17bb9fbb/ss_e8a1af46b0b68937ea11583feff6b28a17bb9fbb.1920x1080.jpg?t=1778580427"
+        }
+      ],
+      "movies": [
+        {
+          "id": 257290396,
+          "name": "Indie Fan Fest Trailer",
+          "thumbnail_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/257290396/cae523ea28339ffd8f691c7370b96643fe5b5b5c/movie_600x337.jpg?t=1778446021"
+        }
+      ],
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3232380/4aec6dc45dab3a096faeda88c8036627817f0cfe/header_alt_assets_0.jpg?t=1778580427",
+      "capsule_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3232380/5110001800d38a417cc5b8ee47c8825d0d08df98/capsule_231x87_alt_assets_0.jpg?t=1778580427",
+      "website": "https://digitalbandidos.com/games/froggy-hates-snow/"
+    },
+    "demo": {
+      "app_id": 4037600,
+      "kind": "demo",
+      "title": "FROGGY HATES SNOW Demo",
+      "type": "demo",
+      "source_url": "https://store.steampowered.com/app/4037600/FROGGY_HATES_SNOW_Demo/",
+      "api_url": "https://store.steampowered.com/api/appdetails?appids=4037600&cc=us&l=english",
+      "is_free": true,
+      "release_date": {
+        "coming_soon": false,
+        "date": "Sep 24, 2025"
+      },
+      "developer": [
+        "CRYING BRICK"
+      ],
+      "publisher": [
+        "Digital Bandidos"
+      ],
+      "platforms": {
+        "windows": true,
+        "mac": false,
+        "linux": false
+      },
+      "genres": [
+        "Action",
+        "Indie",
+        "Strategy"
+      ],
+      "categories": [
+        "Single-player",
+        "Game demo",
+        "Full controller support",
+        "Adjustable Difficulty",
+        "Steam Cloud"
+      ],
+      "supported_languages_text": "English * , French * , Italian * , German * , Spanish - Spain * , Ukrainian * * languages with full audio support",
+      "price_overview": null,
+      "recommendations_total": null,
+      "achievements_total": null,
+      "screenshots_count": 13,
+      "screenshots": [
+        {
+          "id": 0,
+          "thumbnail_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4037600/56938ae4d7d96120e416377cda93131fa5ef415c/ss_56938ae4d7d96120e416377cda93131fa5ef415c.600x338.jpg?t=1777394247",
+          "full_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4037600/56938ae4d7d96120e416377cda93131fa5ef415c/ss_56938ae4d7d96120e416377cda93131fa5ef415c.1920x1080.jpg?t=1777394247"
+        },
+        {
+          "id": 1,
+          "thumbnail_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4037600/4802806329bda2cc1cd1a9233b33b99788513534/ss_4802806329bda2cc1cd1a9233b33b99788513534.600x338.jpg?t=1777394247",
+          "full_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4037600/4802806329bda2cc1cd1a9233b33b99788513534/ss_4802806329bda2cc1cd1a9233b33b99788513534.1920x1080.jpg?t=1777394247"
+        },
+        {
+          "id": 2,
+          "thumbnail_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4037600/d7e6f2e17759d89948a7200ca8e126b75b7c2496/ss_d7e6f2e17759d89948a7200ca8e126b75b7c2496.600x338.jpg?t=1777394247",
+          "full_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4037600/d7e6f2e17759d89948a7200ca8e126b75b7c2496/ss_d7e6f2e17759d89948a7200ca8e126b75b7c2496.1920x1080.jpg?t=1777394247"
+        },
+        {
+          "id": 3,
+          "thumbnail_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4037600/f8c9d55547cdfea778613fec7c541906c5ea2e40/ss_f8c9d55547cdfea778613fec7c541906c5ea2e40.600x338.jpg?t=1777394247",
+          "full_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4037600/f8c9d55547cdfea778613fec7c541906c5ea2e40/ss_f8c9d55547cdfea778613fec7c541906c5ea2e40.1920x1080.jpg?t=1777394247"
+        },
+        {
+          "id": 4,
+          "thumbnail_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4037600/ded12669b5aed452dcc9c15645cfd7c8db9d197e/ss_ded12669b5aed452dcc9c15645cfd7c8db9d197e.600x338.jpg?t=1777394247",
+          "full_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4037600/ded12669b5aed452dcc9c15645cfd7c8db9d197e/ss_ded12669b5aed452dcc9c15645cfd7c8db9d197e.1920x1080.jpg?t=1777394247"
+        },
+        {
+          "id": 5,
+          "thumbnail_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4037600/bb761e7483b5844abf3f09182e944cdbae764efe/ss_bb761e7483b5844abf3f09182e944cdbae764efe.600x338.jpg?t=1777394247",
+          "full_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4037600/bb761e7483b5844abf3f09182e944cdbae764efe/ss_bb761e7483b5844abf3f09182e944cdbae764efe.1920x1080.jpg?t=1777394247"
+        }
+      ],
+      "movies": [
+        {
+          "id": 257290423,
+          "name": "Indie Fan Fest Trailer",
+          "thumbnail_url": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/257290423/bfe4d706b49f73e6a2162894b7e038918cebd390/movie_600x337.jpg?t=1772811681"
+        }
+      ],
+      "header_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4037600/a60e7c79e5aff43a41c0f57251bf7964b7741702/header.jpg?t=1777394247",
+      "capsule_image": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/4037600/746e2178951c04e50d37947697aa408e6fffeb9f/capsule_231x87.jpg?t=1777394247",
+      "website": null,
+      "fullgame": {
+        "appid": "3232380",
+        "name": "FROGGY HATES SNOW"
+      }
+    }
+  },
+  "reviews": {
+    "full_game": {
+      "num_reviews": 10,
+      "review_score": 8,
+      "review_score_desc": "Very Positive",
+      "total_positive": 178,
+      "total_negative": 15,
+      "total_reviews": 193
+    },
+    "demo": {
+      "num_reviews": 10,
+      "review_score": 8,
+      "review_score_desc": "Very Positive",
+      "total_positive": 139,
+      "total_negative": 3,
+      "total_reviews": 142
+    }
+  },
+  "achievements": {
+    "community_page_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
+    "global_percentages_api_url": "https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=3232380&format=json",
+    "demo_global_percentages_api_url": "https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=4037600&format=json",
+    "demo_global_percentages_api_status": 403,
+    "demo_global_percentages_api_error": "https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=4037600&format=json returned 403",
+    "community_rows_count": 42,
+    "full_game_api_ids_count": 42,
+    "demo_api_ids_count": 0,
+    "highest_global_percentages": [
+      {
+        "name": "power_hungry_1",
+        "percent": "86.4"
+      },
+      {
+        "name": "relic_hunter_1",
+        "percent": "85.4"
+      },
+      {
+        "name": "pathfinder_1",
+        "percent": "76.5"
+      },
+      {
+        "name": "assemble_the_team_1",
+        "percent": "68.7"
+      },
+      {
+        "name": "relic_hunter_2",
+        "percent": "68.1"
+      },
+      {
+        "name": "snow_master_1",
+        "percent": "67.3"
+      },
+      {
+        "name": "old_school_explorer",
+        "percent": "64.8"
+      },
+      {
+        "name": "power_hungry_2",
+        "percent": "64.6"
+      }
+    ],
+    "lowest_global_percentages": [
+      {
+        "name": "peak_performance_3",
+        "percent": "0.0"
+      },
+      {
+        "name": "shock_therapy",
+        "percent": "0.0"
+      },
+      {
+        "name": "snow_day_arsenal",
+        "percent": "0.0"
+      },
+      {
+        "name": "elemental_mayhem",
+        "percent": "0.0"
+      },
+      {
+        "name": "seeing_stars",
+        "percent": "0.1"
+      },
+      {
+        "name": "deep_freeze",
+        "percent": "0.1"
+      },
+      {
+        "name": "cozy_on_the_go",
+        "percent": "0.1"
+      },
+      {
+        "name": "walking_through_hell",
+        "percent": "0.1"
+      }
+    ],
+    "notes": [
+      "The full game has public achievement display rows and no-key global percentage data.",
+      "The demo global percentage endpoint is recorded with its current HTTP status and currently contributes no achievement ids.",
+      "Community-page percentages and API percentages can differ slightly due to cache timing or rounding."
+    ]
+  },
+  "public_gameplay_claims": [
+    {
+      "claim": "The player controls Froggy in a snowy desert survival loop.",
+      "source_ids": [
+        "steam-full-store",
+        "steam-demo-store"
+      ],
+      "confidence": "high",
+      "wiki_targets": [
+        "frogs",
+        "maps",
+        "glossary"
+      ],
+      "notes": "Public store copy supports the protagonist and setting; exact character roster remains unverified."
+    },
+    {
+      "claim": "Runs involve digging through snow, collecting resources, returning value home, and growing stronger.",
+      "source_ids": [
+        "steam-full-store",
+        "steam-demo-store"
+      ],
+      "confidence": "high",
+      "wiki_targets": [
+        "guides",
+        "tools",
+        "items",
+        "upgrades"
+      ],
+      "notes": "Use as high-level loop wording only; exact stats and route optimization need gameplay verification."
+    },
+    {
+      "claim": "Warmth/freezing is a survival pressure.",
+      "source_ids": [
+        "steam-full-store",
+        "steam-demo-store"
+      ],
+      "confidence": "high",
+      "wiki_targets": [
+        "guides",
+        "glossary",
+        "upgrades"
+      ],
+      "notes": "Exact meter thresholds and upgrade effects remain unverified."
+    },
+    {
+      "claim": "Keys, treasure chests, artifacts, gems, traps, anomaly zones, bosses, and an escape door are public concepts.",
+      "source_ids": [
+        "steam-full-store",
+        "steam-demo-store",
+        "steam-full-achievements-page"
+      ],
+      "confidence": "high",
+      "wiki_targets": [
+        "items",
+        "bosses",
+        "glossary",
+        "guides"
+      ],
+      "notes": "Use as entity scaffolding; do not invent quantities, costs, or drop rates."
+    },
+    {
+      "claim": "Peaceful Mode is public and described as monster-free.",
+      "source_ids": [
+        "steam-full-store",
+        "steam-demo-store"
+      ],
+      "confidence": "high",
+      "wiki_targets": [
+        "guides",
+        "glossary"
+      ],
+      "notes": "Mode-specific rewards, unlocks, and achievement eligibility still need verification."
+    },
+    {
+      "claim": "The full game exposes 42 public Steam achievements.",
+      "source_ids": [
+        "steam-full-appdetails",
+        "steam-full-achievements-page",
+        "steam-full-global-achievement-percentages"
+      ],
+      "confidence": "high",
+      "wiki_targets": [
+        "achievements",
+        "unlocks"
+      ],
+      "notes": "Achievement percentages are volatile and should be refreshed before percentage-based claims."
+    }
+  ],
+  "research_gaps": [
+    "Exact character/frog roster beyond Froggy and achievement-count thresholds.",
+    "Named map/location roster, map unlock order, and location-specific boss names.",
+    "Named enemy roster and enemy behavior.",
+    "Exact stats, costs, cooldowns, drop rates, and upgrade tree order.",
+    "Whether demo metadata differs from the released full game after SteamCMD/local file extraction works.",
+    "Gameplay screenshots or short notes that can confirm inferred achievement-derived categories."
+  ],
+  "refresh_commands": [
+    "npm run fetch:steam",
+    "npm run scan",
+    "npm run validate",
+    "npm run generate",
+    "npm run build"
+  ]
+}

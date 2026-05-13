@@ -6,6 +6,8 @@ draft: false
 
 # FROGGY HATES SNOW Wiki
 
+![FROGGY HATES SNOW Steam header](https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3232380/4aec6dc45dab3a096faeda88c8036627817f0cfe/header_alt_assets_0.jpg?t=1778580427)
+
 Unofficial metadata-first fan wiki for **FROGGY HATES SNOW**. The current build starts from public Steam metadata, the public Steam achievements page, public review summaries, publisher metadata, and safe local metadata scanning.
 
 :::caution[Scope]
@@ -13,6 +15,8 @@ This wiki does not redistribute proprietary game files, assets, binaries, source
 :::
 
 Current entity coverage: **114 entries** (80 Verified, 34 Inferred, 0 Needs verification).
+
+Steam source snapshot: full game app 3232380, demo app 4037600, 42 public achievement rows, accessed 2026-05-13.
 
 ## Browse
 
@@ -27,6 +31,9 @@ Current entity coverage: **114 entries** (80 Verified, 34 Inferred, 0 Needs veri
 - [Enemies](/generated/enemies/)
 - [Achievements](/generated/achievements/)
 - [Glossary](/generated/glossary/)
+- [Steam Source Snapshot](/steam-source-snapshot/)
+- [Source Ledger](/source-ledger/)
+- [Verification Status](/verification-status/)
 
 ## Priority Research Gaps
 

@@ -26,6 +26,8 @@ This note summarizes public metadata used to seed the wiki. It intentionally avo
 - Platforms from Steam appdetails: full={"windows":true,"mac":false,"linux":false}; demo={"windows":true,"mac":false,"linux":false}
 - Genres from Steam appdetails: [{"id":"1","description":"Action"},{"id":"23","description":"Indie"},{"id":"2","description":"Strategy"}]
 - Categories from Steam appdetails: [{"id":2,"description":"Single-player"},{"id":22,"description":"Steam Achievements"},{"id":28,"description":"Full controller support"},{"id":78,"description":"Adjustable Difficulty"},{"id":74,"description":"Playable without Timed Input"},{"id":23,"description":"Steam Cloud"},{"id":62,"description":"Family Sharing"}]
+- Full game current US price from Steam appdetails: {"currency":"USD","initial":1499,"final":1349,"discount_percent":10,"initial_formatted":"$14.99","final_formatted":"$13.49"}
+- Full game Steam recommendations total from appdetails: 174
 - Full game screenshots listed by appdetails: 14
 - Demo screenshots listed by appdetails: 13
 - Full-game languages: English * , French * , German * , Spanish - Spain * , Japanese * , Korean * , Polish * , Portuguese - Brazil * , Simplified Chinese * , Ukrainian * , Turkish * , Traditional Chinese * * languages with full audio support
@@ -41,11 +43,13 @@ This note summarizes public metadata used to seed the wiki. It intentionally avo
 
 - Public community page rows parsed: 42
 - Public global achievement API ids parsed: 42
+- Demo global achievement API status: 403 (https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=4037600&format=json returned 403)
+- Demo global achievement API ids parsed: 0
 - Achievement percentages are volatile and may differ slightly by endpoint/cache. Use them as as-of metadata only.
 
 ## Review Summaries
 
-- Full game review summary: {"num_reviews":10,"review_score":8,"review_score_desc":"Very Positive","total_positive":176,"total_negative":15,"total_reviews":191}
+- Full game review summary: {"num_reviews":10,"review_score":8,"review_score_desc":"Very Positive","total_positive":178,"total_negative":15,"total_reviews":193}
 - Demo review summary: {"num_reviews":10,"review_score":8,"review_score_desc":"Very Positive","total_positive":139,"total_negative":3,"total_reviews":142}
 
 ## SteamCMD / Local Demo Acquisition Status

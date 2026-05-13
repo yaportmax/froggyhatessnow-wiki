@@ -15,7 +15,7 @@
       {
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
-        "label": "Steam community achievement page",
+        "label": "Steam community achievements page",
         "confidence": "high",
         "notes": "Public achievement names and descriptions."
       }

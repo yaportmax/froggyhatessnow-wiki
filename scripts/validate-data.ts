@@ -37,6 +37,7 @@ const ENTITY_REQUIRED_FIELDS = [
 ];
 const SOURCE_REQUIRED_FIELDS = ["type", "path_or_url", "label", "confidence", "notes"];
 const PUBLIC_SOURCE_REQUIRED_FIELDS = ["id", ...SOURCE_REQUIRED_FIELDS];
+const ALLOWED_JSON_FILES = [...REQUIRED_DATASETS, "public-sources", "steam-snapshot"];
 
 export type ValidationResult = {
   ok: boolean;
@@ -58,6 +59,21 @@ async function readJsonArray(filePath: string, errors: string[]): Promise<unknow
   } catch (error) {
     errors.push(`${filePath}: ${(error as Error).message}`);
     return [];
+  }
+}
+
+async function readJsonRecord(filePath: string, errors: string[]): Promise<Record<string, unknown>> {
+  try {
+    const raw = await readFile(filePath, "utf8");
+    const parsed = JSON.parse(raw);
+    if (!isRecord(parsed)) {
+      errors.push(`${filePath}: expected a JSON object`);
+      return {};
+    }
+    return parsed;
+  } catch (error) {
+    errors.push(`${filePath}: ${(error as Error).message}`);
+    return {};
   }
 }
 
@@ -117,6 +133,31 @@ function validateEntityShape(dataset: string, entity: Entity, index: number, err
   }
 }
 
+function validateSteamSnapshot(snapshot: Record<string, unknown>, errors: string[]) {
+  for (const field of ["accessed_date", "generated_at", "source_policy", "sources", "apps", "reviews", "achievements", "public_gameplay_claims", "research_gaps", "refresh_commands"]) {
+    if (!(field in snapshot)) errors.push(`steam-snapshot.json: missing required field ${field}`);
+  }
+
+  if (typeof snapshot.accessed_date !== "string") errors.push("steam-snapshot.json: accessed_date must be a string");
+  if (!Array.isArray(snapshot.source_policy)) errors.push("steam-snapshot.json: source_policy must be an array");
+  if (!isRecord(snapshot.sources)) errors.push("steam-snapshot.json: sources must be an object");
+  if (!isRecord(snapshot.apps)) errors.push("steam-snapshot.json: apps must be an object");
+  if (!Array.isArray(snapshot.public_gameplay_claims)) errors.push("steam-snapshot.json: public_gameplay_claims must be an array");
+  if (!Array.isArray(snapshot.research_gaps)) errors.push("steam-snapshot.json: research_gaps must be an array");
+
+  const apps = isRecord(snapshot.apps) ? snapshot.apps : {};
+  for (const key of ["full_game", "demo"]) {
+    const app = apps[key];
+    if (!isRecord(app)) {
+      errors.push(`steam-snapshot.json: apps.${key} must be an object`);
+      continue;
+    }
+    for (const field of ["app_id", "title", "type", "source_url", "api_url", "screenshots_count"]) {
+      if (!(field in app)) errors.push(`steam-snapshot.json: apps.${key} missing required field ${field}`);
+    }
+  }
+}
+
 export async function validateAllData(dataDir = path.resolve("src/data")): Promise<ValidationResult> {
   const errors: string[] = [];
   const warnings: string[] = [];
@@ -151,6 +192,9 @@ export async function validateAllData(dataDir = path.resolve("src/data")): Promi
     }
   });
 
+  const steamSnapshot = await readJsonRecord(path.join(dataDir, "steam-snapshot.json"), errors);
+  validateSteamSnapshot(steamSnapshot, errors);
+
   for (const { dataset, index, entity } of allEntities) {
     const ref = `${dataset}[${index}]`;
     if (typeof entity.id === "string") {
@@ -183,7 +227,7 @@ export async function validateAllData(dataDir = path.resolve("src/data")): Promi
     for (const file of files) {
       if (!file.endsWith(".json")) continue;
       const base = file.replace(/\.json$/, "");
-      if (![...REQUIRED_DATASETS, "public-sources"].includes(base as (typeof REQUIRED_DATASETS)[number] | "public-sources")) {
+      if (!ALLOWED_JSON_FILES.includes(base as (typeof ALLOWED_JSON_FILES)[number])) {
         warnings.push(`${file}: not part of the required data manifest`);
       }
     }
@@ -205,7 +249,7 @@ async function main() {
     return;
   }
 
-  console.log(`Validated ${REQUIRED_DATASETS.length} entity datasets plus public-sources.json`);
+  console.log(`Validated ${REQUIRED_DATASETS.length} entity datasets plus public-sources.json and steam-snapshot.json`);
 }
 
 if (import.meta.url === pathToFileURL(process.argv[1] ?? "").href) {

@@ -2,7 +2,7 @@ import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
 
 export default defineConfig({
-  site: "https://froggyhatessnow.wiki",
+  site: "https://froggyhatessnow-wiki.vercel.app",
   integrations: [
     starlight({
       title: "FROGGY HATES SNOW Wiki",
@@ -17,6 +17,8 @@ export default defineConfig({
       ],
       sidebar: [
         { label: "Start Here", link: "/" },
+        { label: "Steam Source Snapshot", link: "/steam-source-snapshot/" },
+        { label: "Source Ledger", link: "/source-ledger/" },
         {
           label: "Guides",
           autogenerate: { directory: "guides" }

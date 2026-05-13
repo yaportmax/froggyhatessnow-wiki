@@ -32,6 +32,42 @@ async function makeDataDir(overrides: Record<string, unknown[]> = {}) {
       2
     )
   );
+  await writeFile(
+    path.join(dir, "steam-snapshot.json"),
+    JSON.stringify(
+      {
+        accessed_date: "2026-05-13",
+        generated_at: "2026-05-13T00:00:00.000Z",
+        source_policy: ["Test policy"],
+        sources: {},
+        apps: {
+          full_game: {
+            app_id: 3232380,
+            title: "FROGGY HATES SNOW",
+            type: "game",
+            source_url: "https://store.steampowered.com/app/3232380/",
+            api_url: "https://store.steampowered.com/api/appdetails?appids=3232380",
+            screenshots_count: 0
+          },
+          demo: {
+            app_id: 4037600,
+            title: "FROGGY HATES SNOW Demo",
+            type: "demo",
+            source_url: "https://store.steampowered.com/app/4037600/",
+            api_url: "https://store.steampowered.com/api/appdetails?appids=4037600",
+            screenshots_count: 0
+          }
+        },
+        reviews: {},
+        achievements: {},
+        public_gameplay_claims: [],
+        research_gaps: [],
+        refresh_commands: []
+      },
+      null,
+      2
+    )
+  );
 
   return dir;
 }

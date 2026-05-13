@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "astro dev",
+    "prebuild": "node -e \"const fs=require('node:fs'); for (const p of ['.astro','node_modules/.astro']) fs.rmSync(p,{recursive:true,force:true});\"",
     "build": "astro build",
     "preview": "astro preview",
     "scan": "tsx scripts/scan-game-files.ts",

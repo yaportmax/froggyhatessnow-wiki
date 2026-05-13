@@ -29,7 +29,7 @@
       {
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
-        "label": "Steam community achievement page",
+        "label": "Steam community achievements page",
         "confidence": "high",
         "notes": "The Animal Squad achievement mentions Penguin, Mole, and Owl."
       }
@@ -68,7 +68,7 @@
       {
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
-        "label": "Steam community achievement page",
+        "label": "Steam community achievements page",
         "confidence": "high",
         "notes": "The Animal Squad achievement mentions Penguin, Mole, and Owl."
       }
@@ -107,7 +107,7 @@
       {
         "type": "public_source",
         "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
-        "label": "Steam community achievement page",
+        "label": "Steam community achievements page",
         "confidence": "high",
         "notes": "The Animal Squad achievement mentions Penguin, Mole, and Owl."
       }

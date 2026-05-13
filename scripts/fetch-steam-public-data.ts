@@ -49,6 +49,81 @@ type AchievementRow = {
   icon_url: string;
 };
 
+type FetchResult<T> = {
+  ok: boolean;
+  status: number;
+  data: T | null;
+  error: string | null;
+};
+
+type SnapshotAppKind = "full_game" | "demo";
+
+type SnapshotApp = {
+  app_id: number;
+  kind: SnapshotAppKind;
+  title: string;
+  type: string;
+  source_url: string;
+  api_url: string;
+  is_free: boolean | null;
+  release_date: unknown;
+  developer: string[];
+  publisher: string[];
+  platforms: unknown;
+  genres: string[];
+  categories: string[];
+  supported_languages_text: string;
+  price_overview: unknown;
+  recommendations_total: number | null;
+  achievements_total: number | null;
+  screenshots_count: number;
+  screenshots: Array<{ id: number | string | null; thumbnail_url: string; full_url: string }>;
+  movies: Array<{ id: number | string | null; name: string; thumbnail_url: string }>;
+  header_image: string | null;
+  capsule_image: string | null;
+  website: string | null;
+  fullgame?: unknown;
+};
+
+type PublicGameplayClaim = {
+  claim: string;
+  source_ids: string[];
+  confidence: Source["confidence"];
+  wiki_targets: string[];
+  notes: string;
+};
+
+type SteamSnapshot = {
+  accessed_date: string;
+  generated_at: string;
+  source_policy: string[];
+  sources: Record<string, string>;
+  apps: {
+    full_game: SnapshotApp;
+    demo: SnapshotApp;
+  };
+  reviews: {
+    full_game: unknown;
+    demo: unknown;
+  };
+  achievements: {
+    community_page_url: string;
+    global_percentages_api_url: string;
+    demo_global_percentages_api_url: string;
+    demo_global_percentages_api_status: number;
+    demo_global_percentages_api_error: string | null;
+    community_rows_count: number;
+    full_game_api_ids_count: number;
+    demo_api_ids_count: number;
+    highest_global_percentages: SteamAchievement[];
+    lowest_global_percentages: SteamAchievement[];
+    notes: string[];
+  };
+  public_gameplay_claims: PublicGameplayClaim[];
+  research_gaps: string[];
+  refresh_commands: string[];
+};
+
 const urls = {
   fullStore: `https://store.steampowered.com/app/${FULL_APP_ID}/FROGGY_HATES_SNOW/`,
   demoStore: `https://store.steampowered.com/app/${DEMO_APP_ID}/FROGGY_HATES_SNOW_Demo/`,
@@ -111,6 +186,30 @@ function stripHtml(value: string) {
     .trim();
 }
 
+function asRecord(value: unknown): Record<string, unknown> {
+  return typeof value === "object" && value !== null && !Array.isArray(value) ? (value as Record<string, unknown>) : {};
+}
+
+function asArray(value: unknown): unknown[] {
+  return Array.isArray(value) ? value : [];
+}
+
+function stringArray(value: unknown): string[] {
+  return asArray(value)
+    .map((item) => String(item))
+    .filter(Boolean);
+}
+
+function descriptionArray(value: unknown): string[] {
+  return asArray(value)
+    .map((item) => asRecord(item).description)
+    .filter((description): description is string => typeof description === "string" && description.length > 0);
+}
+
+function numberOrNull(value: unknown): number | null {
+  return typeof value === "number" && Number.isFinite(value) ? value : null;
+}
+
 async function fetchJson<T>(url: string): Promise<T> {
   const response = await fetch(url, {
     headers: {
@@ -121,6 +220,22 @@ async function fetchJson<T>(url: string): Promise<T> {
   return (await response.json()) as T;
 }
 
+async function fetchJsonResult<T>(url: string): Promise<FetchResult<T>> {
+  try {
+    const response = await fetch(url, {
+      headers: {
+        "User-Agent": "froggyhatessnow-wiki-metadata/0.1"
+      }
+    });
+    if (!response.ok) {
+      return { ok: false, status: response.status, data: null, error: `${url} returned ${response.status}` };
+    }
+    return { ok: true, status: response.status, data: (await response.json()) as T, error: null };
+  } catch (error) {
+    return { ok: false, status: 0, data: null, error: (error as Error).message };
+  }
+}
+
 async function fetchText(url: string): Promise<string> {
   const response = await fetch(url, {
     headers: {
@@ -129,6 +244,56 @@ async function fetchText(url: string): Promise<string> {
   });
   if (!response.ok) throw new Error(`${url} returned ${response.status}`);
   return response.text();
+}
+
+function summarizeSteamApp(kind: SnapshotAppKind, appId: number, sourceUrl: string, apiUrl: string, data: Record<string, unknown>): SnapshotApp {
+  const screenshots = asArray(data.screenshots);
+  const movies = asArray(data.movies);
+  const recommendations = asRecord(data.recommendations);
+  const achievements = asRecord(data.achievements);
+
+  const app: SnapshotApp = {
+    app_id: appId,
+    kind,
+    title: String(data.name ?? ""),
+    type: String(data.type ?? ""),
+    source_url: sourceUrl,
+    api_url: apiUrl,
+    is_free: typeof data.is_free === "boolean" ? data.is_free : null,
+    release_date: data.release_date ?? null,
+    developer: stringArray(data.developers),
+    publisher: stringArray(data.publishers),
+    platforms: data.platforms ?? null,
+    genres: descriptionArray(data.genres),
+    categories: descriptionArray(data.categories),
+    supported_languages_text: stripHtml(String(data.supported_languages ?? "")),
+    price_overview: Object.keys(asRecord(data.price_overview)).length > 0 ? data.price_overview : null,
+    recommendations_total: numberOrNull(recommendations.total),
+    achievements_total: numberOrNull(achievements.total),
+    screenshots_count: screenshots.length,
+    screenshots: screenshots.slice(0, 6).map((screenshot) => {
+      const row = asRecord(screenshot);
+      return {
+        id: (typeof row.id === "number" || typeof row.id === "string") ? row.id : null,
+        thumbnail_url: String(row.path_thumbnail ?? ""),
+        full_url: String(row.path_full ?? "")
+      };
+    }),
+    movies: movies.map((movie) => {
+      const row = asRecord(movie);
+      return {
+        id: (typeof row.id === "number" || typeof row.id === "string") ? row.id : null,
+        name: String(row.name ?? ""),
+        thumbnail_url: String(row.thumbnail ?? "")
+      };
+    }),
+    header_image: typeof data.header_image === "string" ? data.header_image : null,
+    capsule_image: typeof data.capsule_image === "string" ? data.capsule_image : null,
+    website: typeof data.website === "string" ? data.website : null
+  };
+
+  if (kind === "demo") app.fullgame = data.fullgame ?? null;
+  return app;
 }
 
 function parseAchievementRows(html: string): AchievementRow[] {
@@ -267,7 +432,7 @@ function seedCoreEntities() {
       effect: "Needs verification.",
       unlock_method: "Achievements mention unlocking 1, 3, and 9 characters.",
       verification_status: "Verified",
-      sources: [source("Steam community achievement page", urls.achievementsPage, "Public achievement names and descriptions.")],
+      sources: [source("Steam community achievements page", urls.achievementsPage, "Public achievement names and descriptions.")],
       notes: "Use as a roster placeholder until local metadata or gameplay notes identify character names."
     })
   );
@@ -281,7 +446,7 @@ function seedCoreEntities() {
       effect: "Locations appear to structure progression.",
       unlock_method: "Achievements mention unlock thresholds at 1, 5, and 15 locations.",
       verification_status: "Verified",
-      sources: [source("Steam community achievement page", urls.achievementsPage, "Public achievement names and descriptions.")],
+      sources: [source("Steam community achievements page", urls.achievementsPage, "Public achievement names and descriptions.")],
       notes: "Individual location names need verification."
     })
   );
@@ -325,7 +490,7 @@ function seedCoreEntities() {
         short_description: `${name} is listed publicly as a companion or ally type.`,
         effect: "Aids the player; exact behavior needs verification.",
         verification_status: "Verified",
-        sources: [fullStore, demoStore, source("Steam community achievement page", urls.achievementsPage, "The Animal Squad achievement mentions Penguin, Mole, and Owl.")],
+        sources: [fullStore, demoStore, source("Steam community achievements page", urls.achievementsPage, "The Animal Squad achievement mentions Penguin, Mole, and Owl.")],
         notes: "The official store copy uses plural animal names; achievement text uses singular names."
       })
     );
@@ -340,7 +505,7 @@ function seedCoreEntities() {
         short_description: `${name} are mentioned by official Steam copy or public achievements.`,
         effect: "Needs verification.",
         verification_status: "Verified",
-        sources: [fullStore, demoStore, source("Steam community achievement page", urls.achievementsPage, "Public achievement names and descriptions.")],
+        sources: [fullStore, demoStore, source("Steam community achievements page", urls.achievementsPage, "Public achievement names and descriptions.")],
         notes: "Amounts, drop rules, and exact use cases need verification."
       })
     );
@@ -356,7 +521,7 @@ function seedCoreEntities() {
         effect: "Needs verification.",
         cost: name === "Powerful upgrades" ? "Keys may be spent on treasure chests for powerful upgrades, per official Steam copy." : "Needs verification.",
         verification_status: "Verified",
-        sources: [fullStore, demoStore, source("Steam community achievement page", urls.achievementsPage, "Public achievement names and descriptions.")],
+        sources: [fullStore, demoStore, source("Steam community achievements page", urls.achievementsPage, "Public achievement names and descriptions.")],
         notes: "Specific upgrade tree entries need verification."
       })
     );
@@ -436,6 +601,7 @@ function seedCoreEntities() {
 async function buildPublicSources(fullDetails: Record<string, unknown>, demoDetails: Record<string, unknown>, fullReviews: Record<string, unknown>, demoReviews: Record<string, unknown>) {
   const fullData = (fullDetails[String(FULL_APP_ID)] as { data?: Record<string, unknown> } | undefined)?.data ?? {};
   const demoData = (demoDetails[String(DEMO_APP_ID)] as { data?: Record<string, unknown> } | undefined)?.data ?? {};
+  const fullAchievements = asRecord(fullData.achievements);
   const rows = [
     {
       id: "steam-full-store",
@@ -488,7 +654,7 @@ async function buildPublicSources(fullDetails: Record<string, unknown>, demoDeta
     ...source(
       "Steam full-game appdetails summary",
       urls.fullAppDetails,
-      `Summarized facts: type=${String(fullData.type)}, name=${String(fullData.name)}, release=${JSON.stringify(fullData.release_date)}, achievements=${JSON.stringify(fullData.achievements)}, platforms=${JSON.stringify(fullData.platforms)}.`,
+      `Summarized facts: type=${String(fullData.type)}, name=${String(fullData.name)}, release=${JSON.stringify(fullData.release_date)}, achievements_total=${String(fullAchievements.total ?? "not listed")}, screenshots=${asArray(fullData.screenshots).length}, platforms=${JSON.stringify(fullData.platforms)}.`,
       "high"
     )
   });
@@ -503,6 +669,124 @@ async function buildPublicSources(fullDetails: Record<string, unknown>, demoDeta
   });
 
   return rows;
+}
+
+function buildSteamSnapshot(args: {
+  fullDetails: Record<string, unknown>;
+  demoDetails: Record<string, unknown>;
+  fullReviews: Record<string, unknown>;
+  demoReviews: Record<string, unknown>;
+  achievementRows: AchievementRow[];
+  achievementPercentages: SteamAchievement[];
+  demoAchievementPercentages: SteamAchievement[];
+  demoAchievementPercentagesResult: FetchResult<{ achievementpercentages?: { achievements?: SteamAchievement[] } }>;
+}): SteamSnapshot {
+  const fullData = (args.fullDetails[String(FULL_APP_ID)] as { data?: Record<string, unknown> } | undefined)?.data ?? {};
+  const demoData = (args.demoDetails[String(DEMO_APP_ID)] as { data?: Record<string, unknown> } | undefined)?.data ?? {};
+  const sortedPercentages = [...args.achievementPercentages].sort((a, b) => Number.parseFloat(b.percent) - Number.parseFloat(a.percent));
+
+  return {
+    accessed_date: ACCESSED_DATE,
+    generated_at: new Date().toISOString(),
+    source_policy: [
+      "Prefer official public Steam endpoints and pages for game metadata.",
+      "Do not copy raw long descriptions, review text, proprietary assets, binaries, source code, or decompiled content.",
+      "Treat prices, review counts, recommendations, player counts, and achievement percentages as volatile as-of metadata.",
+      "Treat achievement names as public names; classify gameplay effects only when another source or safe local metadata confirms them."
+    ],
+    sources: {
+      full_store: urls.fullStore,
+      demo_store: urls.demoStore,
+      full_appdetails: urls.fullAppDetails,
+      demo_appdetails: urls.demoAppDetails,
+      full_reviews: urls.fullReviews,
+      demo_reviews: urls.demoReviews,
+      full_achievements_page: urls.achievementsPage,
+      full_global_achievement_percentages: urls.achievementPercentages,
+      demo_global_achievement_percentages: urls.demoAchievementPercentages,
+      publisher_page: urls.publisherPage,
+      steamdb_full: urls.steamDbFull,
+      steamdb_demo: urls.steamDbDemo
+    },
+    apps: {
+      full_game: summarizeSteamApp("full_game", FULL_APP_ID, urls.fullStore, urls.fullAppDetails, fullData),
+      demo: summarizeSteamApp("demo", DEMO_APP_ID, urls.demoStore, urls.demoAppDetails, demoData)
+    },
+    reviews: {
+      full_game: (args.fullReviews as { query_summary?: unknown }).query_summary ?? null,
+      demo: (args.demoReviews as { query_summary?: unknown }).query_summary ?? null
+    },
+    achievements: {
+      community_page_url: urls.achievementsPage,
+      global_percentages_api_url: urls.achievementPercentages,
+      demo_global_percentages_api_url: urls.demoAchievementPercentages,
+      demo_global_percentages_api_status: args.demoAchievementPercentagesResult.status,
+      demo_global_percentages_api_error: args.demoAchievementPercentagesResult.error,
+      community_rows_count: args.achievementRows.length,
+      full_game_api_ids_count: args.achievementPercentages.length,
+      demo_api_ids_count: args.demoAchievementPercentages.length,
+      highest_global_percentages: sortedPercentages.slice(0, 8),
+      lowest_global_percentages: sortedPercentages.slice(-8).reverse(),
+      notes: [
+        "The full game has public achievement display rows and no-key global percentage data.",
+        "The demo global percentage endpoint is recorded with its current HTTP status and currently contributes no achievement ids.",
+        "Community-page percentages and API percentages can differ slightly due to cache timing or rounding."
+      ]
+    },
+    public_gameplay_claims: [
+      {
+        claim: "The player controls Froggy in a snowy desert survival loop.",
+        source_ids: ["steam-full-store", "steam-demo-store"],
+        confidence: "high",
+        wiki_targets: ["frogs", "maps", "glossary"],
+        notes: "Public store copy supports the protagonist and setting; exact character roster remains unverified."
+      },
+      {
+        claim: "Runs involve digging through snow, collecting resources, returning value home, and growing stronger.",
+        source_ids: ["steam-full-store", "steam-demo-store"],
+        confidence: "high",
+        wiki_targets: ["guides", "tools", "items", "upgrades"],
+        notes: "Use as high-level loop wording only; exact stats and route optimization need gameplay verification."
+      },
+      {
+        claim: "Warmth/freezing is a survival pressure.",
+        source_ids: ["steam-full-store", "steam-demo-store"],
+        confidence: "high",
+        wiki_targets: ["guides", "glossary", "upgrades"],
+        notes: "Exact meter thresholds and upgrade effects remain unverified."
+      },
+      {
+        claim: "Keys, treasure chests, artifacts, gems, traps, anomaly zones, bosses, and an escape door are public concepts.",
+        source_ids: ["steam-full-store", "steam-demo-store", "steam-full-achievements-page"],
+        confidence: "high",
+        wiki_targets: ["items", "bosses", "glossary", "guides"],
+        notes: "Use as entity scaffolding; do not invent quantities, costs, or drop rates."
+      },
+      {
+        claim: "Peaceful Mode is public and described as monster-free.",
+        source_ids: ["steam-full-store", "steam-demo-store"],
+        confidence: "high",
+        wiki_targets: ["guides", "glossary"],
+        notes: "Mode-specific rewards, unlocks, and achievement eligibility still need verification."
+      },
+      {
+        claim: "The full game exposes 42 public Steam achievements.",
+        source_ids: ["steam-full-appdetails", "steam-full-achievements-page", "steam-full-global-achievement-percentages"],
+        confidence: "high",
+        wiki_targets: ["achievements", "unlocks"],
+        notes: "Achievement percentages are volatile and should be refreshed before percentage-based claims."
+      }
+    ],
+    research_gaps: [
+      "Exact character/frog roster beyond Froggy and achievement-count thresholds.",
+      "Named map/location roster, map unlock order, and location-specific boss names.",
+      "Named enemy roster and enemy behavior.",
+      "Exact stats, costs, cooldowns, drop rates, and upgrade tree order.",
+      "Whether demo metadata differs from the released full game after SteamCMD/local file extraction works.",
+      "Gameplay screenshots or short notes that can confirm inferred achievement-derived categories."
+    ],
+    refresh_commands: ["npm run fetch:steam", "npm run scan", "npm run validate", "npm run generate", "npm run build"]
+  };
 }
 
 function addAchievementData(rows: AchievementRow[], percentages: SteamAchievement[]) {
@@ -576,6 +860,8 @@ function buildPublicResearchMarkdown(args: {
   demoReviews: Record<string, unknown>;
   achievementRows: AchievementRow[];
   achievementPercentages: SteamAchievement[];
+  demoAchievementPercentages: SteamAchievement[];
+  demoAchievementPercentagesResult: FetchResult<{ achievementpercentages?: { achievements?: SteamAchievement[] } }>;
 }) {
   const fullData = (args.fullDetails[String(FULL_APP_ID)] as { data?: Record<string, unknown> } | undefined)?.data ?? {};
   const demoData = (args.demoDetails[String(DEMO_APP_ID)] as { data?: Record<string, unknown> } | undefined)?.data ?? {};
@@ -585,6 +871,8 @@ function buildPublicResearchMarkdown(args: {
   const demoScreenshots = Array.isArray(demoData.screenshots) ? demoData.screenshots.length : 0;
   const fullLanguages = stripHtml(String(fullData.supported_languages ?? ""));
   const demoLanguages = stripHtml(String(demoData.supported_languages ?? ""));
+  const fullPrice = asRecord(fullData.price_overview);
+  const fullRecommendations = asRecord(fullData.recommendations);
 
   const lines = [
     "# Public Research",
@@ -615,6 +903,8 @@ function buildPublicResearchMarkdown(args: {
     `- Platforms from Steam appdetails: full=${JSON.stringify(fullData.platforms ?? {})}; demo=${JSON.stringify(demoData.platforms ?? {})}`,
     `- Genres from Steam appdetails: ${JSON.stringify(fullData.genres ?? [])}`,
     `- Categories from Steam appdetails: ${JSON.stringify(fullData.categories ?? [])}`,
+    `- Full game current US price from Steam appdetails: ${Object.keys(fullPrice).length > 0 ? JSON.stringify(fullPrice) : "not listed"}`,
+    `- Full game Steam recommendations total from appdetails: ${String(fullRecommendations.total ?? "not listed")}`,
     `- Full game screenshots listed by appdetails: ${fullScreenshots}`,
     `- Demo screenshots listed by appdetails: ${demoScreenshots}`,
     `- Full-game languages: ${fullLanguages}`,
@@ -630,6 +920,8 @@ function buildPublicResearchMarkdown(args: {
     "",
     `- Public community page rows parsed: ${args.achievementRows.length}`,
     `- Public global achievement API ids parsed: ${args.achievementPercentages.length}`,
+    `- Demo global achievement API status: ${args.demoAchievementPercentagesResult.status}${args.demoAchievementPercentagesResult.error ? ` (${args.demoAchievementPercentagesResult.error})` : ""}`,
+    `- Demo global achievement API ids parsed: ${args.demoAchievementPercentages.length}`,
     "- Achievement percentages are volatile and may differ slightly by endpoint/cache. Use them as as-of metadata only.",
     "",
     "## Review Summaries",
@@ -660,21 +952,36 @@ async function main() {
   await mkdir(path.resolve("notes"), { recursive: true });
   seedCoreEntities();
 
-  const [fullDetails, demoDetails, fullReviews, demoReviews, achievementPercentagesRaw, achievementsHtml] = await Promise.all([
+  const [fullDetails, demoDetails, fullReviews, demoReviews, achievementPercentagesRaw, demoAchievementPercentagesResult, achievementsHtml] = await Promise.all([
     fetchJson<Record<string, unknown>>(urls.fullAppDetails),
     fetchJson<Record<string, unknown>>(urls.demoAppDetails),
     fetchJson<Record<string, unknown>>(urls.fullReviews),
     fetchJson<Record<string, unknown>>(urls.demoReviews),
     fetchJson<{ achievementpercentages?: { achievements?: SteamAchievement[] } }>(urls.achievementPercentages),
+    fetchJsonResult<{ achievementpercentages?: { achievements?: SteamAchievement[] } }>(urls.demoAchievementPercentages),
     fetchText(urls.achievementsPage)
   ]);
 
   const achievementRows = parseAchievementRows(achievementsHtml);
   const achievementPercentages = achievementPercentagesRaw.achievementpercentages?.achievements ?? [];
+  const demoAchievementPercentages = demoAchievementPercentagesResult.data?.achievementpercentages?.achievements ?? [];
   addAchievementData(achievementRows, achievementPercentages);
 
   const publicSources = await buildPublicSources(fullDetails, demoDetails, fullReviews, demoReviews);
   await writeJson(path.resolve("src/data/public-sources.json"), publicSources);
+  await writeJson(
+    path.resolve("src/data/steam-snapshot.json"),
+    buildSteamSnapshot({
+      fullDetails,
+      demoDetails,
+      fullReviews,
+      demoReviews,
+      achievementRows,
+      achievementPercentages,
+      demoAchievementPercentages,
+      demoAchievementPercentagesResult
+    })
+  );
 
   for (const dataset of REQUIRED_DATASETS) {
     await writeJson(path.resolve("src/data", `${dataset}.json`), [...datasets[dataset].values()].sort((a, b) => a.name.localeCompare(b.name)));
@@ -688,11 +995,15 @@ async function main() {
       fullReviews,
       demoReviews,
       achievementRows,
-      achievementPercentages
+      achievementPercentages,
+      demoAchievementPercentages,
+      demoAchievementPercentagesResult
     })
   );
 
-  console.log(`Wrote public Steam research: ${achievementRows.length} achievement rows, ${achievementPercentages.length} API percentage ids.`);
+  console.log(
+    `Wrote public Steam research: ${achievementRows.length} achievement rows, ${achievementPercentages.length} full-game API percentage ids, ${demoAchievementPercentages.length} demo API ids.`
+  );
 }
 
 if (import.meta.url === pathToFileURL(process.argv[1] ?? "").href) {

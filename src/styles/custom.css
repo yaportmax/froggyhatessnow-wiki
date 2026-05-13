@@ -13,3 +13,25 @@
 .sl-markdown-content table {
   font-size: 0.9rem;
 }
+
+.steam-media-grid {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  margin: 1rem 0 1.5rem;
+}
+
+.steam-media-grid a {
+  border: 1px solid var(--sl-color-gray-5);
+  border-radius: 6px;
+  display: block;
+  overflow: hidden;
+}
+
+.steam-media-grid img {
+  aspect-ratio: 16 / 9;
+  display: block;
+  height: auto;
+  object-fit: cover;
+  width: 100%;
+}

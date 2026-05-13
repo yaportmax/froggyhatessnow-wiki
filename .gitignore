@@ -8,3 +8,4 @@ game-files/
 goal.rtf
 npm-debug.log*
 .DS_Store
+.vercel

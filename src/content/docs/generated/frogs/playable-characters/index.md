@@ -30,4 +30,4 @@ No related entities listed yet.
 
 ## Sources
 
-- [Steam community achievement page](https://steamcommunity.com/stats/3232380/achievements/?l=english) — public_source, confidence high. Public achievement names and descriptions.
+- [Steam community achievements page](https://steamcommunity.com/stats/3232380/achievements/?l=english) — public_source, confidence high. Public achievement names and descriptions.
