@@ -83,7 +83,7 @@ Fresh read-only account checks on 2026-05-13 confirmed the API credentials are v
 
 ## Browser Automation Status
 
-Chrome checks on 2026-05-13 found Google Chrome installed and running, the Codex Chrome Extension installed/enabled in `Profile 1`, and the native host manifest present with the expected extension origin. In a later continuation, Chrome was still running, but the Chrome skill's required Node REPL execution tool was not exposed after tool discovery, and Computer Use still returned `cgWindowNotFound` when asked for the Chrome app state. Treat Porkbun account verification as a manual browser task unless a later session exposes working Chrome controls.
+Chrome checks on 2026-05-13 found Google Chrome installed and running, the Codex Chrome Extension installed/enabled in `Profile 1`, and the native host manifest present with the expected extension origin. In later continuations, Chrome was still running, but the Chrome skill's required Node REPL execution tool was not exposed after tool discovery. A fresh Computer Use fallback check against both `Google Chrome` and `com.google.Chrome` still returned `cgWindowNotFound` when asked for the Chrome app state. Treat Porkbun account verification as a manual browser task unless a later session exposes working Chrome controls.
 
 ## Support Message Draft
 
