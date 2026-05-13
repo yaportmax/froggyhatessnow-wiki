@@ -31,7 +31,7 @@ Latest confirmed purchase attempt:
 - Create request id: `019e220c-6355-7ff9-bfc3-b7586cddb14e`
 - Result: stopped before DNS, Astro site changes, build, or deploy.
 - Browser fallback status: Chrome is installed and running, the Codex Chrome Extension is installed/enabled in `Profile 1`, and the native host manifest is correct. However, no Chrome browser-control tools are exposed in this session, and a fresh Computer Use attach attempt still returned `cgWindowNotFound`. No UI purchase or verification action was completed.
-- Support packet: `notes/porkbun-verification-support.md` contains the current request IDs, manual verification checklist, Gmail search notes, and a support message draft.
+- Support packet: `notes/porkbun-verification-support.md` contains the current request IDs, manual verification checklist, fresh Gmail search notes, account-credit finding, and a support message draft.
 
 Latest read-only domain status:
 

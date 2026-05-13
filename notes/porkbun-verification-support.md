@@ -50,6 +50,7 @@ Read-only Gmail searches on 2026-05-13 found:
 - No Porkbun messages after 2026-05-12.
 - No matching Porkbun phone-verification messages in the last 60 days.
 - One account-creation email verification message from Porkbun on 2026-04-27.
+- A fresh continuation search found no Porkbun messages newer than 2 days, and the broader verification search still only surfaced the 2026-04-27 account-creation verification email.
 
 The email verification code itself is intentionally not recorded here. Search Gmail for subject `porkbun.com | Account Creation Email Verification Code` if Porkbun asks for the original account-creation verification email.
 
@@ -100,7 +101,7 @@ Latest failed attempt:
 - Check request id: 019e220c-60f0-74ba-8e06-3f80a7ec134d
 - Create request id: 019e220c-6355-7ff9-bfc3-b7586cddb14e
 
-Can you confirm what account verification step is still missing, or help clear the email/phone verification requirement so the API registration can complete?
+Read-only API account checks also show valid API credentials, but account balance is currently $0 and auto-topup is disabled. Can you confirm what account verification step is still missing, and whether adding account credit/payment setup after verification is enough for API registration to complete?
 
 Thanks.
 ```
