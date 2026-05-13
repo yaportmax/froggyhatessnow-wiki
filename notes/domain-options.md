@@ -34,7 +34,11 @@ Registration request details:
 - Cost submitted: 206 pennies (`$2.06`)
 - First-year price confirmed by API immediately before registration: `$2.06`
 - Renewal price confirmed by API: `$26.26`
-- API request id: `019e20c7-c838-7a7c-ae42-9b9c7324c750`
+- First API request id: `019e20c7-c838-7a7c-ae42-9b9c7324c750`
+
+A second registration attempt on 2026-05-13 rechecked `froggyhatessnow.wiki` as available at `$2.06` first-year / `$26.26` renewal, then received the same Porkbun account-verification blocker.
+
+- Second API request id: `019e20dc-0225-7121-b271-383668a2a5fd`
 
 ## DNS / Vercel Plan
 
