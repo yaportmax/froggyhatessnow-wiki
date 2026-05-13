@@ -18,12 +18,13 @@ type PorkbunResponse = {
   [key: string]: unknown;
 };
 
-type Command = "check" | "register" | "dns";
+type Command = "check" | "status" | "register" | "dns";
 
 function usage() {
   return [
     "Usage:",
     "  npm run domain:check",
+    "  npm run domain:status",
     "  npm run domain:register -- --max-cost-usd=2.06",
     "  npm run domain:dns",
     "",
@@ -32,7 +33,7 @@ function usage() {
     "  If they are not set, this script will also look in ../.env.local and .env.local.",
     "",
     "Safety:",
-    "  check is read-only.",
+    "  check and status are read-only.",
     "  register writes only the registration request and uses an Idempotency-Key.",
     "  Use --idempotency-suffix=<label> after resolving an upstream failed registration blocker.",
     "  dns writes only missing Vercel A records after the domain is in the Porkbun account."
@@ -227,19 +228,82 @@ async function configureDns(auth: Record<string, string>) {
   }
 }
 
+async function printDomainStatus(auth: Record<string, string>) {
+  const domainResponse = await checkDomain(auth);
+  const dnsResult = await post(`/dns/retrieve/${DOMAIN}`, auth);
+  const records = Array.isArray(dnsResult.data.records) ? dnsResult.data.records : [];
+  const desired = [
+    { name: "", type: "A", content: VERCEL_IP },
+    { name: "www", type: "A", content: VERCEL_IP }
+  ];
+  const dnsSummary = {
+    httpStatus: dnsResult.httpStatus,
+    status: dnsResult.data.status,
+    code: dnsResult.data.code,
+    message: dnsResult.data.message,
+    requestId: dnsResult.data.requestId,
+    domain: DOMAIN,
+    registeredInPorkbunAccount: dnsResult.data.status === "SUCCESS",
+    records: records.length,
+    vercelARecordsPresent: desired.map((record) => ({
+      name: record.name || "@",
+      type: record.type,
+      content: record.content,
+      present: hasRecord(records, record.name, record.type, record.content)
+    }))
+  };
+  printSafe("dnsStatus", dnsSummary);
+
+  if (domainResponse.avail === "yes") {
+    printSafe("nextStep", {
+      status: "domain_available_not_registered",
+      command: "npm run domain:register -- --max-cost-usd=2.06 --idempotency-suffix=post-verification",
+      note: "Run this after Porkbun account email and phone verification clears."
+    });
+    return;
+  }
+
+  if (dnsResult.data.status !== "SUCCESS") {
+    printSafe("nextStep", {
+      status: "domain_unavailable_but_not_accessible_in_porkbun_account",
+      note: "If you registered the domain elsewhere, configure Vercel DNS at that registrar. If Porkbun owns it, verify account access/API permissions."
+    });
+    return;
+  }
+
+  const missingDns = desired.filter((record) => !hasRecord(records, record.name, record.type, record.content));
+  if (missingDns.length > 0) {
+    printSafe("nextStep", {
+      status: "domain_registered_dns_incomplete",
+      command: "npm run domain:dns",
+      missing: missingDns.map((record) => `${record.type} ${record.name || "@"} ${record.content}`)
+    });
+    return;
+  }
+
+  printSafe("nextStep", {
+    status: "porkbun_dns_ready",
+    commands: [
+      "npx vercel domains inspect froggyhatessnow.wiki",
+      "npx vercel domains inspect www.froggyhatessnow.wiki"
+    ]
+  });
+}
+
 async function main() {
   const [commandArg = "check", ...args] = process.argv.slice(2);
   if (commandArg === "--help" || commandArg === "-h") {
     console.log(usage());
     return;
   }
-  if (!["check", "register", "dns"].includes(commandArg)) {
+  if (!["check", "status", "register", "dns"].includes(commandArg)) {
     throw new Error(`Unknown command: ${commandArg}\n${usage()}`);
   }
 
   const command = commandArg as Command;
   const auth = await loadCredentials();
   if (command === "check") await checkDomain(auth);
+  if (command === "status") await printDomainStatus(auth);
   if (command === "register") await registerDomain(auth, args);
   if (command === "dns") await configureDns(auth);
 }

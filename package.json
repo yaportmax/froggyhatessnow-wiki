@@ -11,6 +11,7 @@
     "scan": "tsx scripts/scan-game-files.ts",
     "fetch:steam": "tsx scripts/fetch-steam-public-data.ts",
     "domain:check": "tsx scripts/porkbun-domain.ts check",
+    "domain:status": "tsx scripts/porkbun-domain.ts status",
     "domain:register": "tsx scripts/porkbun-domain.ts register",
     "domain:dns": "tsx scripts/porkbun-domain.ts dns",
     "generate": "tsx scripts/generate-pages.ts",

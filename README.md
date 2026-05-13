@@ -27,12 +27,14 @@ npm run generate
 npm run build
 npm run dev
 npm run domain:check
+npm run domain:status
 ```
 
 After Porkbun account verification clears a failed registration blocker, use a fresh registration idempotency suffix so Porkbun does not replay the earlier failed create response:
 
 ```bash
 npm run domain:register -- --max-cost-usd=2.06 --idempotency-suffix=post-verification
+npm run domain:dns
 ```
 
 ## Data Rules
@@ -80,7 +82,8 @@ Domain registration was attempted through the Porkbun API and blocked by account
 After the Porkbun account is verified:
 
 ```bash
-npm run domain:register -- --max-cost-usd=2.06
+npm run domain:status
+npm run domain:register -- --max-cost-usd=2.06 --idempotency-suffix=post-verification
 npm run domain:dns
 ```
 

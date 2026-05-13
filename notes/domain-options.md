@@ -69,13 +69,24 @@ A fifth guarded registration attempt on 2026-05-13 used a fresh idempotency suff
 - Create request id: `019e2162-9228-713d-a94a-88112b03af51`
 - Error code: `VERIFICATION_REQUIRED`
 
-The read-only helper check currently succeeds:
+The read-only helper checks currently succeed:
 
 ```bash
 npm run domain:check
+npm run domain:status
 ```
 
-Latest read-only check request id: `019e2161-f193-7a28-8341-409373b969be`.
+Latest `domain:status` output reports `domain_available_not_registered` and prints the post-verification registration command:
+
+```bash
+npm run domain:register -- --max-cost-usd=2.06 --idempotency-suffix=post-verification
+```
+
+Latest read-only check request ids:
+
+- `domain:check`: `019e2161-f193-7a28-8341-409373b969be`
+- `domain:status` check: `019e2168-9bff-7249-bec7-fe9b59417db0`
+- `domain:status` DNS retrieve: `019e2168-a3e9-7441-a623-19a8277dd727`
 
 DNS setup was also attempted through the helper before registration completed:
 

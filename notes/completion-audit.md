@@ -33,7 +33,7 @@ Everything is implemented, validated, pushed, and deployed except the explicit d
 | Generated category/detail pages | `npm run generate` creates generated docs; current build includes 153 entity detail pages and 11 category indexes. | Done |
 | Static pages | Homepage, beginner guide, warmth guide, best upgrades, unlocks, game modes, FAQ, contribution page, verification status, game metadata, source ledger, Steam source snapshot, and achievement source matrix exist under `src/content/docs/`. | Done |
 | SEO basics | `astro.config.mjs` has canonical `site`; pages use descriptive titles/descriptions and generated category/detail routes. | Done |
-| Package scripts | Required scripts are present: `dev`, `build`, `preview`, `scan`, `generate`, `validate`; additional `fetch:steam`, `domain:check`, `domain:register`, `domain:dns`, and `test` scripts are present. | Done |
+| Package scripts | Required scripts are present: `dev`, `build`, `preview`, `scan`, `generate`, `validate`; additional `fetch:steam`, `domain:check`, `domain:status`, `domain:register`, `domain:dns`, and `test` scripts are present. | Done |
 | Tests | `npm test` passed 2 files / 9 tests. | Done |
 | Build | `npm run build` passed and generated 178 pages; Pagefind indexed 177 pages. | Done |
 | Vercel deployment | Latest successful production deploy is READY at `https://froggyhatessnow-wiki-biugqd5z2-yaportmax-5253s-projects.vercel.app`; stable alias `https://froggyhatessnow-wiki.vercel.app` returns 200. Later deploy attempts `dpl_BysoqF8R65bguRBehVoXhJXeRPYW` and `dpl_J1kt8Sbkz5hSUBLvGjKMwjtPTm58` are stuck in `BUILDING` / `QUEUED`, so the successful alias remains the source of truth. | Done, with deploy queue caveat |
@@ -55,6 +55,7 @@ npm run validate
 npm test
 npm run build
 npm run domain:check
+npm run domain:status
 npm run domain:dns
 npx vercel domains inspect froggyhatessnow.wiki
 npx vercel domains inspect www.froggyhatessnow.wiki
@@ -78,6 +79,7 @@ curl -fsS -o /tmp/froggy-game-metadata.html -w '%{http_code}\n' https://froggyha
 - Later `npx vercel deploy --prebuilt --prod`: deployment `dpl_J1kt8Sbkz5hSUBLvGjKMwjtPTm58` stuck in `QUEUED` behind the previous build. Latest successful production alias remains `https://froggyhatessnow-wiki.vercel.app`.
 - `npx vercel list froggyhatessnow-wiki --scope yaportmax-5253s-projects`: confirms the same two non-ready production deployments ahead of the latest successful ready deployment. Candidate remediation, pending explicit approval: `npx vercel remove --safe dpl_BysoqF8R65bguRBehVoXhJXeRPYW dpl_J1kt8Sbkz5hSUBLvGjKMwjtPTm58`, then redeploy prebuilt output.
 - `npm run domain:check`: `froggyhatessnow.wiki` available yes, type registration, price `2.06`, regularPrice `26.26`, premium no, request id `019e2161-f193-7a28-8341-409373b969be`.
+- `npm run domain:status`: read-only check reports `domain_available_not_registered`, DNS retrieve returns `INVALID_DOMAIN`, and the helper prints the exact post-verification registration command; check request id `019e2168-9bff-7249-bec7-fe9b59417db0`, DNS retrieve request id `019e2168-a3e9-7441-a623-19a8277dd727`.
 - `npm run domain:register -- --max-cost-usd=2.06 --idempotency-suffix=audit-20260513-1`: guarded purchase attempt rechecked availability at `$2.06`, then Porkbun returned `VERIFICATION_REQUIRED`; check request id `019e2162-8fab-7bb3-a43d-f1d2e4eeb412`, create request id `019e2162-9228-713d-a94a-88112b03af51`.
 - `npm run domain:dns`: blocked before registration; Porkbun returned `INVALID_DOMAIN`, request id `019e2160-0873-76b9-8ab8-72820b93f7bf`.
 - Vercel domain inspect: apex and `www` domains found, edge network yes, DNS not configured, intended nameservers `ns1.vercel-dns.com` and `ns2.vercel-dns.com`, recommended records `A froggyhatessnow.wiki 76.76.21.21` and `A www.froggyhatessnow.wiki 76.76.21.21`.
