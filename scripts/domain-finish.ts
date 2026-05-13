@@ -214,6 +214,7 @@ async function main() {
   await run("npm", ["run", "deploy:status"]);
   await inspectDomains();
   await verifyCustomDomainLive();
+  await run("npm", ["run", "domain:health"]);
 }
 
 await main().catch((error) => {

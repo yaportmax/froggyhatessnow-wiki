@@ -70,7 +70,7 @@ curl -I --max-time 20 https://froggyhatessnow.wiki/
 - `git diff --check`: passed.
 - `npm run deploy:status`: stable alias live checks passed for homepage, Steam source snapshot, current source timestamp, and achievement matrix.
 - `npm run domain:status`: `domain_available_not_registered`; latest check request id `019e21ab-80ae-7745-b332-2ff15488d479`, DNS retrieve request id `019e21ab-837a-79e8-b69a-70789fcf5b03`.
-- `npm run domain:health`: expected failure while registration/DNS are incomplete. Latest run exited `1`; Vercel apex/`www` attachment checks passed, DNS returned `ENOTFOUND`, custom-domain HTTP checks failed before resolution, and the Porkbun read-only status subcheck hit `RATE_LIMIT_EXCEEDED` when run concurrently with another `domain:status` check.
+- `npm run domain:health`: expected failure while registration/DNS/canonical switch are incomplete. It now includes an `astro-canonical-site` check for `astro.config.mjs` in addition to Porkbun registration state, Vercel attachment, DNS A records, and custom-domain page markers.
 - `domain:register` and `domain:finish` now generate a fresh timestamped idempotency suffix by default so a post-verification attempt does not reuse the earlier failed `post-verification` create request.
 - `npm run domain:finish -- --confirm-register-and-dns`: failed at `domain:register` with Porkbun `VERIFICATION_REQUIRED`; check request id `019e219a-80e4-723c-af60-4191806fc087`, create request id `019e217f-e6ac-723c-8134-3613a780f093`.
 - `curl -I --max-time 20 https://froggyhatessnow.wiki/`: `Could not resolve host`, as expected while the domain is unregistered.
@@ -91,7 +91,7 @@ curl -I --max-time 20 https://froggyhatessnow.wiki/
    A www 76.76.21.21
    ```
 
-4. Verify Vercel and live custom-domain behavior. The guarded finisher now checks homepage/source/matrix markers on both the apex and `www` custom domains; these manual commands are fallback evidence if needed:
+4. Verify Vercel and live custom-domain behavior. The guarded finisher now checks homepage/source/matrix markers on both the apex and `www` custom domains and then runs `domain:health`; these manual commands are fallback evidence if needed:
 
    ```bash
    npx vercel domains inspect froggyhatessnow.wiki

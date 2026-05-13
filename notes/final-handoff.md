@@ -47,11 +47,11 @@ npm run domain:finish -- --confirm-register-and-dns
 npm run domain:health
 ```
 
-This guarded finisher registers `froggyhatessnow.wiki`, creates the Vercel A records in Porkbun DNS, switches `astro.config.mjs` to `https://froggyhatessnow.wiki`, rebuilds, deploys, reruns Vercel domain checks, and then verifies live page markers on both `https://froggyhatessnow.wiki` and `https://www.froggyhatessnow.wiki`.
+This guarded finisher registers `froggyhatessnow.wiki`, creates the Vercel A records in Porkbun DNS, switches `astro.config.mjs` to `https://froggyhatessnow.wiki`, rebuilds, deploys, reruns Vercel domain checks, verifies live page markers on both `https://froggyhatessnow.wiki` and `https://www.froggyhatessnow.wiki`, and then runs `npm run domain:health`.
 
 The finisher now uses a fresh timestamped registration idempotency suffix by default. If overriding `--idempotency-suffix`, do not reuse `post-verification` or another suffix from a previous failed create request.
 
-`npm run domain:health` is read-only. It checks Porkbun registration state, Vercel domain attachment, DNS A records for apex and `www`, and custom-domain page markers against the local Steam snapshot timestamp. It is expected to fail until the Porkbun verification/registration/DNS path is complete.
+`npm run domain:health` is read-only. It checks the local Astro canonical site value, Porkbun registration state, Vercel domain attachment, DNS A records for apex and `www`, and custom-domain page markers against the local Steam snapshot timestamp. It is expected to fail until the Porkbun verification/registration/DNS path is complete and `astro.config.mjs` points at the custom domain.
 
 Expected Porkbun DNS records:
 

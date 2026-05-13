@@ -6,6 +6,7 @@ import { promisify } from "node:util";
 const execFileAsync = promisify(execFile);
 
 const DOMAIN = "froggyhatessnow.wiki";
+const CUSTOM_SITE = `https://${DOMAIN}`;
 const VERCEL_IP = "76.76.21.21";
 const FETCH_TIMEOUT_MS = 10_000;
 
@@ -59,6 +60,20 @@ async function readSteamSnapshotGeneratedAt() {
   const snapshot = JSON.parse(raw) as { generated_at?: string };
   if (!snapshot.generated_at) throw new Error("src/data/steam-snapshot.json is missing generated_at.");
   return snapshot.generated_at;
+}
+
+async function astroCanonicalCheck(): Promise<HealthCheck> {
+  const configPath = "astro.config.mjs";
+  const source = await readFile(configPath, "utf8");
+  return {
+    name: "astro-canonical-site",
+    ok: source.includes(`site: "${CUSTOM_SITE}"`),
+    details: {
+      path: configPath,
+      expectedSite: CUSTOM_SITE,
+      containsExpectedSite: source.includes(`site: "${CUSTOM_SITE}"`)
+    }
+  };
 }
 
 async function dnsCheck(hostname: string): Promise<HealthCheck> {
@@ -126,7 +141,8 @@ async function fetchCheck(baseUrl: string, pathname: string, requiredText: strin
 
 async function main() {
   const generatedAt = await readSteamSnapshotGeneratedAt();
-  const [porkbunStatus, vercelApex, vercelWww, apexDns, wwwDns] = await Promise.all([
+  const [canonical, porkbunStatus, vercelApex, vercelWww, apexDns, wwwDns] = await Promise.all([
+    astroCanonicalCheck(),
     run("npm", ["run", "domain:status"]),
     run("npx", ["vercel", "domains", "inspect", DOMAIN]),
     run("npx", ["vercel", "domains", "inspect", `www.${DOMAIN}`]),
@@ -174,7 +190,7 @@ async function main() {
     }
   ];
 
-  const checks = [...commandChecks, apexDns, wwwDns, ...httpChecks];
+  const checks = [canonical, ...commandChecks, apexDns, wwwDns, ...httpChecks];
   const ok = checks.every((check) => check.ok);
   const report = {
     ok,

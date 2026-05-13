@@ -98,7 +98,7 @@ npm run domain:finish -- --confirm-register-and-dns
 npm run domain:health
 ```
 
-The finisher registers the domain, configures Porkbun DNS, switches the Astro canonical site, rebuilds/deploys, inspects both Vercel domains, and checks live markers on both the apex and `www` custom domains. `npm run domain:health` is read-only and repeats the final Porkbun/Vercel/DNS/custom-domain marker audit; it should fail while Porkbun still reports `domain_available_not_registered`.
+The finisher registers the domain, configures Porkbun DNS, switches the Astro canonical site, rebuilds/deploys, inspects both Vercel domains, checks live markers on both the apex and `www` custom domains, and then runs `npm run domain:health`. `npm run domain:health` is read-only and repeats the final Astro-canonical/Porkbun/Vercel/DNS/custom-domain marker audit; it should fail while Porkbun still reports `domain_available_not_registered` or while `astro.config.mjs` still points at the Vercel alias.
 
 See `notes/domain-options.md` for pricing and next steps.
 

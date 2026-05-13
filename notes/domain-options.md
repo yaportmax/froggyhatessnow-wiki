@@ -153,7 +153,7 @@ After Porkbun account verification:
    npm run domain:health
    ```
 
-   The finisher registers the domain, configures Porkbun DNS, updates the Astro `site` value to `https://froggyhatessnow.wiki`, rebuilds, deploys, reruns Vercel domain checks, and verifies live homepage/source/matrix markers on both the apex and `www` custom domains. `domain:health` is a read-only repeatable audit for Porkbun registration state, Vercel attachment, DNS A records, and custom-domain page markers.
+   The finisher registers the domain, configures Porkbun DNS, updates the Astro `site` value to `https://froggyhatessnow.wiki`, rebuilds, deploys, reruns Vercel domain checks, verifies live homepage/source/matrix markers on both the apex and `www` custom domains, and then runs `domain:health`. `domain:health` is a read-only repeatable audit for the Astro canonical site value, Porkbun registration state, Vercel attachment, DNS A records, and custom-domain page markers.
 
 Manual fallback:
 
