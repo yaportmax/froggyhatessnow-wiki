@@ -98,6 +98,8 @@ npm run domain:dns
 
 See `notes/domain-options.md` for pricing and next steps.
 
+The concise remaining-blocker handoff is in `notes/final-handoff.md`.
+
 `npm run deploy:status` is read-only. It checks which deployment the stable Vercel alias is actively serving, verifies key live wiki pages, compares the live Steam source page against the local `steam-snapshot.json` timestamp, and reports any queued/building deployments without removing them.
 
 `npm run deploy:publish` is guarded. By default it refuses to remove stuck remote deployments. After explicit approval to clear the Vercel queue, run:
