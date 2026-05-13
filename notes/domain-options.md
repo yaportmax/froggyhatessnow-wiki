@@ -69,6 +69,13 @@ A fifth guarded registration attempt on 2026-05-13 used a fresh idempotency suff
 - Create request id: `019e2162-9228-713d-a94a-88112b03af51`
 - Error code: `VERIFICATION_REQUIRED`
 
+A sixth guarded registration attempt on 2026-05-13 used the documented post-verification idempotency suffix. It again rechecked `froggyhatessnow.wiki` as available at `$2.06` first-year / `$26.26` renewal, non-premium, then received the same account-verification blocker with a new create request id.
+
+- Command: `npm run domain:register -- --max-cost-usd=2.06 --idempotency-suffix=post-verification`
+- Check request id: `019e217f-e3bf-705f-a270-7f817191c0e0`
+- Create request id: `019e217f-e6ac-723c-8134-3613a780f093`
+- Error code: `VERIFICATION_REQUIRED`
+
 The read-only helper checks currently succeed:
 
 ```bash
@@ -85,8 +92,8 @@ npm run domain:register -- --max-cost-usd=2.06 --idempotency-suffix=post-verific
 Latest read-only check request ids:
 
 - `domain:check`: `019e2161-f193-7a28-8341-409373b969be`
-- `domain:status` check: `019e217e-6e81-73fb-988e-8ad4fa5fcd59`
-- `domain:status` DNS retrieve: `019e217e-7149-7740-b27e-66fb10a6cc5a`
+- `domain:status` check: `019e217f-a69b-75d8-ada4-01dbaa7efb7b`
+- `domain:status` DNS retrieve: `019e217f-a9fa-7f2b-aee3-1ad6410985b6`
 
 DNS setup was also attempted through the helper before registration completed:
 
