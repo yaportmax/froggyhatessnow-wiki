@@ -37,9 +37,11 @@ npm run domain:health
 After Porkbun account verification clears a failed registration blocker, use a fresh registration idempotency suffix so Porkbun does not replay the earlier failed create response:
 
 ```bash
-npm run domain:register -- --max-cost-usd=2.06 --idempotency-suffix=post-verification
+npm run domain:register -- --max-cost-usd=2.06
 npm run domain:dns
 ```
+
+The register helper generates a fresh timestamped idempotency suffix by default. If you pass `--idempotency-suffix` manually after a failed upstream create request, use a new value.
 
 Or run the guarded finisher after verification:
 

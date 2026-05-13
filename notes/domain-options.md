@@ -97,10 +97,10 @@ npm run domain:check
 npm run domain:status
 ```
 
-Latest `domain:status` output reports `domain_available_not_registered` and prints the post-verification registration command:
+Latest `domain:status` output reports `domain_available_not_registered` and now prints a timestamped registration command. Use a fresh suffix after account verification so Porkbun does not replay a prior failed create response.
 
 ```bash
-npm run domain:register -- --max-cost-usd=2.06 --idempotency-suffix=post-verification
+npm run domain:register -- --max-cost-usd=2.06
 ```
 
 Latest read-only status request ids:
@@ -160,8 +160,10 @@ Manual fallback:
 1. Register the domain:
 
    ```bash
-   npm run domain:register -- --max-cost-usd=2.06 --idempotency-suffix=post-verification
+   npm run domain:register -- --max-cost-usd=2.06
    ```
+
+   The helper generates a fresh timestamped idempotency suffix by default. If passing `--idempotency-suffix` manually, use a value that has not been used in a previous failed create request.
 
 2. Configure Porkbun DNS:
 

@@ -12,7 +12,6 @@ const CONFIRM_FLAG = "--confirm-register-and-dns";
 const ALLOW_DIRTY_FLAG = "--allow-dirty";
 const SKIP_SITE_SWITCH_FLAG = "--skip-site-switch";
 const DEFAULT_MAX_COST = "2.06";
-const DEFAULT_IDEMPOTENCY_SUFFIX = "post-verification";
 const CUSTOM_LIVE_CHECK_ATTEMPTS = 12;
 const CUSTOM_LIVE_CHECK_DELAY_MS = 10_000;
 
@@ -46,6 +45,10 @@ async function gitStatus() {
 function optionValue(name: string, fallback: string) {
   const prefix = `${name}=`;
   return args.find((arg) => arg.startsWith(prefix))?.slice(prefix.length) ?? fallback;
+}
+
+function freshIdempotencySuffix() {
+  return `post-verification-${new Date().toISOString().replace(/[-:.]/g, "").slice(0, 15)}Z`;
 }
 
 async function readSteamSnapshotGeneratedAt() {
@@ -169,6 +172,7 @@ async function verifyCustomDomainLive() {
 }
 
 async function main() {
+  const defaultIdempotencySuffix = freshIdempotencySuffix();
   const confirmed = argSet.has(CONFIRM_FLAG);
   if (!confirmed) {
     await run("npm", ["run", "domain:status"]);
@@ -177,7 +181,7 @@ async function main() {
       [
         "Dry run only. This command will register a domain, configure DNS, switch the Astro canonical site, build, and deploy.",
         `After Porkbun account verification, run: npm run domain:finish -- ${CONFIRM_FLAG}`,
-        `Optional: --max-cost-usd=${DEFAULT_MAX_COST} --idempotency-suffix=${DEFAULT_IDEMPOTENCY_SUFFIX} ${SKIP_SITE_SWITCH_FLAG}`
+        `Optional: --max-cost-usd=${DEFAULT_MAX_COST} --idempotency-suffix=${defaultIdempotencySuffix} ${SKIP_SITE_SWITCH_FLAG}`
       ].join("\n")
     );
   }
@@ -188,7 +192,7 @@ async function main() {
   }
 
   const maxCost = optionValue("--max-cost-usd", DEFAULT_MAX_COST);
-  const idempotencySuffix = optionValue("--idempotency-suffix", DEFAULT_IDEMPOTENCY_SUFFIX);
+  const idempotencySuffix = optionValue("--idempotency-suffix", defaultIdempotencySuffix);
   await run("npm", [
     "run",
     "domain:register",

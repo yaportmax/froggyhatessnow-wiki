@@ -34,7 +34,7 @@ function usage() {
     "",
     "Safety:",
     "  check and status are read-only.",
-    "  register writes only the registration request and uses an Idempotency-Key.",
+    "  register writes only the registration request and uses a fresh timestamped Idempotency-Key by default.",
     "  Use --idempotency-suffix=<label> after resolving an upstream failed registration blocker.",
     "  dns writes only missing Vercel A records after the domain is in the Porkbun account."
   ].join("\n");
@@ -96,12 +96,16 @@ function maxCostFromArgs(args: string[]) {
 
 function idempotencySuffixFromArgs(args: string[]) {
   const arg = args.find((value) => value.startsWith("--idempotency-suffix="));
-  if (!arg) return new Date().toISOString().slice(0, 10);
+  if (!arg) return freshIdempotencySuffix("manual");
   const suffix = arg.split("=")[1] ?? "";
   if (!/^[A-Za-z0-9._-]{1,64}$/.test(suffix)) {
     throw new Error(`Invalid --idempotency-suffix value: ${arg}. Use 1-64 letters, numbers, dots, underscores, or hyphens.`);
   }
   return suffix;
+}
+
+function freshIdempotencySuffix(prefix = "post-verification") {
+  return `${prefix}-${new Date().toISOString().replace(/[-:.]/g, "").slice(0, 15)}Z`;
 }
 
 function printSafe(label: string, value: unknown) {
@@ -255,10 +259,11 @@ async function printDomainStatus(auth: Record<string, string>) {
   printSafe("dnsStatus", dnsSummary);
 
   if (domainResponse.avail === "yes") {
+    const suffix = freshIdempotencySuffix();
     printSafe("nextStep", {
       status: "domain_available_not_registered",
-      command: "npm run domain:register -- --max-cost-usd=2.06 --idempotency-suffix=post-verification",
-      note: "Run this after Porkbun account email and phone verification clears."
+      command: `npm run domain:register -- --max-cost-usd=2.06 --idempotency-suffix=${suffix}`,
+      note: "Run this after Porkbun account email and phone verification clears. Use a fresh idempotency suffix if a prior create request hit an upstream blocker."
     });
     return;
   }
