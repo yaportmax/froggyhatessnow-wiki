@@ -31,12 +31,12 @@ The folder was linked to Vercel project `yaportmax-5253s-projects/froggyhatessno
 
 Latest successful production deploy completed on 2026-05-13:
 
-- Current production URL: https://froggyhatessnow-wiki-7980rz2cq-yaportmax-5253s-projects.vercel.app
 - Alias: https://froggyhatessnow-wiki.vercel.app
-- Deployment id: `dpl_FQR7LnA2gPZ4NHhodyEAmQZ6fo9P`
-- Inspect URL: https://vercel.com/yaportmax-5253s-projects/froggyhatessnow-wiki/FQR7LnA2gPZ4NHhodyEAmQZ6fo9P
+- Current production URL: https://froggyhatessnow-wiki-a40k9ddau-yaportmax-5253s-projects.vercel.app
+- Deployment id: `dpl_6Ey7Ab2CJZHqCYanUFiPKgKfpmDu`
+- Inspect URL: https://vercel.com/yaportmax-5253s-projects/froggyhatessnow-wiki/6Ey7Ab2CJZHqCYanUFiPKgKfpmDu
 
-The current deploy includes the refreshed Steam source snapshot generated at `2026-05-13T15:47:17.883Z`, all 15 Steam News API items with evidence classifications, 11 direct Steam news/devlog source mappings, 70 confirmed Steam news/devlog terms, 42-row achievement source matrix, generated source ledger, game metadata page, explicit empty-local-metadata status, 16 public gameplay claims, and 190 static HTML pages. The build now clears Astro's local content cache in `prebuild` so restored Vercel caches do not emit stale duplicate-doc warnings.
+The current deploy includes the refreshed Steam source snapshot generated at `2026-05-13T16:07:29.110Z`, all 15 Steam News API items with evidence classifications, 11 direct Steam news/devlog source mappings, 70 confirmed Steam news/devlog terms, 42-row achievement source matrix, generated source ledger, game metadata page, explicit empty-local-metadata status, 16 public gameplay claims, and 190 static HTML pages. The build now clears Astro's local content cache in `prebuild` so restored Vercel caches do not emit stale duplicate-doc warnings.
 Astro's `site` setting points to the Vercel alias until `froggyhatessnow.wiki` is actually registered and connected.
 
 Earlier deploy attempts after validator hardening are no longer blocking the queue:
@@ -46,8 +46,9 @@ Earlier deploy attempts after validator hardening are no longer blocking the que
 - `dpl_97aAFAYy6K71rgdiDABUQib1cWkJ` / `https://froggyhatessnow-wiki-6b2rs5abq-yaportmax-5253s-projects.vercel.app` resolved to `READY` and was superseded.
 - `dpl_GzwdMMpkJi9My8f4SYEX9pSzPvAk` / `https://froggyhatessnow-wiki-lsdwxrtq5-yaportmax-5253s-projects.vercel.app` resolved to `READY` and was superseded.
 - `dpl_8UYsVqC8BEkCweYPqWM6JEVQWd2p` / `https://froggyhatessnow-wiki-b3biql6p7-yaportmax-5253s-projects.vercel.app` resolved to `READY` and was superseded by `dpl_FQR7LnA2gPZ4NHhodyEAmQZ6fo9P`.
+- `dpl_FQR7LnA2gPZ4NHhodyEAmQZ6fo9P` / `https://froggyhatessnow-wiki-7980rz2cq-yaportmax-5253s-projects.vercel.app` resolved to `READY` and was superseded by `dpl_6Ey7Ab2CJZHqCYanUFiPKgKfpmDu`.
 
-Non-destructive checks on 2026-05-13 confirm the stable alias directly; `https://froggyhatessnow-wiki.vercel.app` resolves to READY deployment `dpl_FQR7LnA2gPZ4NHhodyEAmQZ6fo9P`, and the homepage, Steam source snapshot, local Steam snapshot timestamp, achievement matrix, Open Graph image metadata, `/robots.txt`, and `/llms.txt` live checks pass.
+Non-destructive checks on 2026-05-13 confirm the stable alias directly; `https://froggyhatessnow-wiki.vercel.app` resolves to READY deployment `dpl_6Ey7Ab2CJZHqCYanUFiPKgKfpmDu`, and the homepage, Steam source snapshot, local Steam snapshot timestamp, achievement matrix, Open Graph image metadata, `/robots.txt`, and `/llms.txt` live checks pass.
 
 ```bash
 npm run deploy:status

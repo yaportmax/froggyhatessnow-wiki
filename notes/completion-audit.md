@@ -27,7 +27,7 @@ The wiki/scaffold/data/source/deploy work is complete and verified. The remainin
 | Safe metadata scanner | `scripts/scan-game-files.ts`; scanner handles missing/empty dirs, skips symlinks/binaries, emits summaries only. `npm test` covers missing dir, readable file/binary/symlink, and empty dir status. | Done |
 | Extracted metadata notes | `notes/extracted-metadata.md` / `.json` show `gameFilesPresent: true`, `gameFilesContainFiles: false`, `filesScanned: 0`, `readable_files: 0`. | Done |
 | Public metadata and source URLs | `scripts/fetch-steam-public-data.ts`, `src/data/steam-snapshot.json`, `src/data/public-sources.json`, `notes/public-research.md`, and source pages are present. | Done |
-| Steam game sourcing prioritized | Snapshot generated `2026-05-13T15:47:17.883Z` includes all 15 Steam News API items from a 100-item request window, 11 direct Steam news/devlog sources, 70 confirmed Steam news/devlog terms, 42 achievement facts with public icon URLs, 20 parsed loadout-name rows, 14 full-game screenshots, 13 demo screenshots, Steam review summaries, external-source marker checks, 16 public gameplay claims, and research gaps. | Done |
+| Steam game sourcing prioritized | Snapshot generated `2026-05-13T16:07:29.110Z` includes all 15 Steam News API items from a 100-item request window, 11 direct Steam news/devlog sources, 70 confirmed Steam news/devlog terms, 42 achievement facts with public icon URLs, 20 parsed loadout-name rows, 14 full-game screenshots, 13 demo screenshots, Steam review summaries, external-source marker checks, 16 public gameplay claims, and research gaps. | Done |
 | Do not invent facts / mark uncertainty | Validator enforces allowed statuses; data includes 136 `Verified`, 27 `Inferred`, and 2 `Needs verification` rows. Named roster/map/enemy/boss behavior gaps remain explicit. | Done |
 | Structured datasets | 11 datasets exist with 165 entities: frogs 5, maps 5, tools 16, items 12, skills 29, companions 6, upgrades 7, bosses 5, enemies 5, achievements 42, glossary 33. | Done |
 | Entity fields and sources | Validator checks required fields, source types, verification statuses, source IDs, related links, duplicate ids/slugs, and Verified entries without sources. | Done |
@@ -38,7 +38,7 @@ The wiki/scaffold/data/source/deploy work is complete and verified. The remainin
 | README and AGENTS | Both exist and document workflow, source rules, validation/deploy/domain paths, and fail-loud behavior. | Done |
 | Domain research | `notes/domain-options.md` lists all required candidates, registrar, registration/renewal prices, pros/cons, best recommendation, backups, Porkbun attempt history, and Vercel registrar fallback prices. `notes/porkbun-verification-support.md` contains the current support-ready blocker packet. | Done |
 | Buy domain via Porkbun API and/or Chrome | Porkbun API confirms `froggyhatessnow.wiki` is available, non-premium, `$2.06` first year / `$26.26` renewal, but registration fails with `VERIFICATION_REQUIRED`. Read-only account checks confirm valid API credentials, `0` account credit, and auto-topup disabled, so credit/payment setup may also be needed after verification. Chrome plugin Node browser-control was not exposed; Computer Use could not attach to Chrome (`cgWindowNotFound`) even after opening a window, so UI verification could not proceed safely. | Blocked |
-| Vercel deployment | Vercel project `yaportmax-5253s-projects/froggyhatessnow-wiki`; active deployment `dpl_FQR7LnA2gPZ4NHhodyEAmQZ6fo9P`; stable alias `https://froggyhatessnow-wiki.vercel.app` passes live checks including source marker `2026-05-13T15:47:17.883Z`. | Done |
+| Vercel deployment | Vercel project `yaportmax-5253s-projects/froggyhatessnow-wiki`; active deployment `dpl_6Ey7Ab2CJZHqCYanUFiPKgKfpmDu`; stable alias `https://froggyhatessnow-wiki.vercel.app` passes live checks including source marker `2026-05-13T16:07:29.110Z`. | Done |
 | Custom domain DNS if registered | Vercel has `froggyhatessnow.wiki` and `www.froggyhatessnow.wiki` attached, but DNS is not configured because the domain is not registered. Porkbun DNS returns `INVALID_DOMAIN`. | Waiting on registration |
 | Completion criteria | All criteria are met except “Buy the domain” and resulting DNS/custom-domain canonical verification. | Not complete |
 
@@ -62,14 +62,14 @@ curl -I --max-time 20 https://froggyhatessnow.wiki/
 
 ## Latest Results
 
-- `git status --short`: clean before the latest script/doc edits; re-check after committing any audit or helper changes.
+- `git status --short`: clean at commit `c072c11cee6659ee42fed487b2e0a3aea850deb2` before this handoff-note refresh.
 - `npm run validate`: validated 11 entity datasets plus `public-sources.json` and `steam-snapshot.json`.
-- `npm run audit:completion`: consolidated goal-level audit exists and is expected to fail until the custom-domain registration/DNS/canonical gate passes.
+- `npm run audit:completion`: exit 1 as expected; all source/content/build/deploy checks passed, while `astro-canonical-custom-domain` and `command:domain-health` failed because `froggyhatessnow.wiki` DNS still returns `ENOTFOUND` and `astro.config.mjs` still points at the Vercel alias.
 - `npm test`: 2 test files, 10 tests passed.
 - `npm run build`: 190 pages built; Pagefind indexed 189 pages.
 - `npx tsc --noEmit`: currently fails in Starlight generated utility types (`astro:content` has no exported `RenderResult`); `npm run build`, `npm test`, and `npm run validate` pass.
 - `git diff --check`: passed.
-- `npm run deploy:status`: stable alias live checks passed for homepage, Steam source snapshot, current source timestamp, achievement matrix, homepage Open Graph image metadata, `/robots.txt`, and `/llms.txt`.
+- `npm run deploy:status`: stable alias live checks passed for homepage, Steam source snapshot, current source timestamp `2026-05-13T16:07:29.110Z`, achievement matrix, homepage Open Graph image metadata, `/robots.txt`, and `/llms.txt`.
 - `npm run domain:status`: `domain_available_not_registered`; latest check request id `019e220c-0e0a-7365-b1e6-33177486f862`, DNS retrieve request id `019e220c-111c-7ffa-945f-fc505d889e4d`.
 - Read-only Porkbun account checks: `/ping` credentials valid; `/account/balance` reports `0` account credit; `/account/apiSettings` reports auto-topup disabled. Request ids: `019e2211-5316-7f37-be69-b58aa4a50816`, `019e2211-807a-7806-882d-e3a08507cf80`, `019e2211-ab74-724a-bbef-1efc02cc18d0`.
 - `npm run domain:health`: expected failure while registration/DNS/canonical switch are incomplete. It now includes an `astro-canonical-site` check for `astro.config.mjs` in addition to Porkbun registration state, Vercel attachment, DNS A records, and custom-domain page markers.
