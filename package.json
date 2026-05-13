@@ -14,6 +14,7 @@
     "build:verified": "npm run refresh:data && npm run build",
     "domain:check": "tsx scripts/porkbun-domain.ts check",
     "domain:status": "tsx scripts/porkbun-domain.ts status",
+    "domain:account": "tsx scripts/porkbun-domain.ts account",
     "domain:register": "tsx scripts/porkbun-domain.ts register",
     "domain:dns": "tsx scripts/porkbun-domain.ts dns",
     "domain:finish": "tsx scripts/domain-finish.ts",

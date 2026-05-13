@@ -18,13 +18,14 @@ type PorkbunResponse = {
   [key: string]: unknown;
 };
 
-type Command = "check" | "status" | "register" | "dns";
+type Command = "check" | "status" | "account" | "register" | "dns";
 
 function usage() {
   return [
     "Usage:",
     "  npm run domain:check",
     "  npm run domain:status",
+    "  npm run domain:account",
     "  npm run domain:register -- --max-cost-usd=2.06",
     "  npm run domain:dns",
     "",
@@ -33,7 +34,7 @@ function usage() {
     "  If they are not set, this script will also look in ../.env.local and .env.local.",
     "",
     "Safety:",
-    "  check and status are read-only.",
+    "  check, status, and account are read-only.",
     "  register writes only the registration request and uses a fresh timestamped Idempotency-Key by default.",
     "  Use --idempotency-suffix=<label> after resolving an upstream failed registration blocker.",
     "  dns writes only missing Vercel A records after the domain is in the Porkbun account."
@@ -112,6 +113,18 @@ function printSafe(label: string, value: unknown) {
   console.log(`${label}: ${JSON.stringify(value, null, 2)}`);
 }
 
+function safeAccountFields(data: PorkbunResponse) {
+  const merged = { ...(data.response ?? {}), ...data };
+  const fields: Record<string, unknown> = {};
+  const allowed = /(balance|credit|currency|amount|auto|topup|spend|limit|enabled)/i;
+  const sensitive = /(api.*key|secret|token|password|card|cvv|email|phone|address|name)/i;
+  for (const [key, value] of Object.entries(merged)) {
+    if (!allowed.test(key) || sensitive.test(key)) continue;
+    fields[key] = value;
+  }
+  return fields;
+}
+
 async function checkDomain(auth: Record<string, string>) {
   const result = await post(`/domain/checkDomain/${DOMAIN}`, auth);
   const response = result.data.response ?? {};
@@ -131,6 +144,29 @@ async function checkDomain(auth: Record<string, string>) {
   printSafe("domainCheck", summary);
   if (result.data.status !== "SUCCESS") throw new Error(`Porkbun checkDomain failed: ${result.data.code ?? result.data.message ?? result.httpStatus}`);
   return response;
+}
+
+async function printAccountStatus(auth: Record<string, string>) {
+  const checks = [
+    { label: "porkbunPing", pathname: "/ping" },
+    { label: "accountBalance", pathname: "/account/balance" },
+    { label: "accountApiSettings", pathname: "/account/apiSettings" }
+  ];
+
+  for (const check of checks) {
+    const result = await post(check.pathname, auth);
+    printSafe(check.label, {
+      httpStatus: result.httpStatus,
+      status: result.data.status,
+      code: result.data.code,
+      message: result.data.message,
+      requestId: result.data.requestId,
+      fields: safeAccountFields(result.data)
+    });
+    if (result.data.status !== "SUCCESS") {
+      throw new Error(`Porkbun ${check.pathname} failed: ${result.data.code ?? result.data.message ?? result.httpStatus}`);
+    }
+  }
 }
 
 async function registerDomain(auth: Record<string, string>, args: string[]) {
@@ -301,7 +337,7 @@ async function main() {
     console.log(usage());
     return;
   }
-  if (!["check", "status", "register", "dns"].includes(commandArg)) {
+  if (!["check", "status", "account", "register", "dns"].includes(commandArg)) {
     throw new Error(`Unknown command: ${commandArg}\n${usage()}`);
   }
 
@@ -309,6 +345,7 @@ async function main() {
   const auth = await loadCredentials();
   if (command === "check") await checkDomain(auth);
   if (command === "status") await printDomainStatus(auth);
+  if (command === "account") await printAccountStatus(auth);
   if (command === "register") await registerDomain(auth, args);
   if (command === "dns") await configureDns(auth);
 }

@@ -51,6 +51,7 @@ const SUPPORTING_SCRIPTS = [
   "deploy:publish",
   "domain:check",
   "domain:status",
+  "domain:account",
   "domain:register",
   "domain:dns",
   "domain:finish",

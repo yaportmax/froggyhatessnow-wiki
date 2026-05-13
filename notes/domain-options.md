@@ -81,6 +81,13 @@ Fresh read-only API/account checks on 2026-05-13 confirmed the stored Porkbun AP
 - `account/balance` request id: `019e2211-807a-7806-882d-e3a08507cf80`
 - `account/apiSettings` request id: `019e2211-ab74-724a-bbef-1efc02cc18d0`
 
+A later read-only account helper check at 2026-05-13 09:40 PDT still confirmed credentials are valid, `balance: 0`, and `monthlySpend: 0`.
+
+- Command: `npm run domain:account`
+- `ping` request id: `019e2235-5708-7f33-9956-0ba5f8e4ac98`
+- `account/balance` request id: `019e2235-594a-7bfa-927c-a9f0323ca725`
+- `account/apiSettings` request id: `019e2235-5b2e-75d6-b4e2-30a9a040f6fa`
+
 Registration request details:
 
 - Domain: `froggyhatessnow.wiki`
@@ -213,6 +220,11 @@ A later read-only continuation check at 2026-05-13 09:27 PDT still reported `dom
 
 - `domain:status` check: `019e2229-cd8c-7a9c-906a-a08d902b9dac`
 - `domain:status` DNS retrieve: `019e2229-d028-799b-93d0-373bec9a16ed`
+
+A later read-only continuation check at 2026-05-13 09:38 PDT still reported `domain_available_not_registered`:
+
+- `domain:status` check: `019e2233-d920-7616-909e-967a34950523`
+- `domain:status` DNS retrieve: `019e2233-dc0c-7053-840f-52545dbcb74e`
 
 The latest direct custom-domain URL check failed before HTTP because DNS does not resolve yet:
 
