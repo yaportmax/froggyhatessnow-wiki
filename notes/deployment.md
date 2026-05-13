@@ -44,13 +44,13 @@ Later deploy attempts after validator hardening did not become the active produc
 - `dpl_J1kt8Sbkz5hSUBLvGjKMwjtPTm58` / `https://froggyhatessnow-wiki-kyvn13zp7-yaportmax-5253s-projects.vercel.app` was created with `vercel build --prod --yes` plus `vercel deploy --prebuilt --prod`, but is still `QUEUED` behind the stuck build.
 - Latest successful production alias remains `https://froggyhatessnow-wiki.vercel.app`. Do not remove queued/building deployments without explicit approval.
 
-Non-destructive checks on 2026-05-13 confirmed the same state in `vercel list` and `vercel inspect --logs`. The queued/building deployments are not active aliases, and Vercel's CLI supports safe removal that skips deployments with active aliases:
+Non-destructive checks on 2026-05-13 confirmed the same state in `vercel list`, `vercel inspect --logs`, and `npm run deploy:status`. Vercel inspect output reports aliases on the queued/building deployments, so the repo helper does not print an automatic removal command. Review them in the Vercel dashboard or remove them only with explicit human approval.
 
 ```bash
-npx vercel remove --safe dpl_BysoqF8R65bguRBehVoXhJXeRPYW dpl_J1kt8Sbkz5hSUBLvGjKMwjtPTm58
+npm run deploy:status
 ```
 
-After explicit approval to remove those stuck deployments, rerun:
+After explicit approval and manual removal of those stuck deployments, rerun:
 
 ```bash
 npx vercel deploy --prebuilt --prod

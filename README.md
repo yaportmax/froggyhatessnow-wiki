@@ -26,6 +26,7 @@ npm run validate
 npm run generate
 npm run build
 npm run dev
+npm run deploy:status
 npm run domain:check
 npm run domain:status
 ```
