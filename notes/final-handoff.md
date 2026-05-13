@@ -46,7 +46,7 @@ Run:
 npm run domain:finish -- --confirm-register-and-dns
 ```
 
-This guarded finisher registers `froggyhatessnow.wiki`, creates the Vercel A records in Porkbun DNS, switches `astro.config.mjs` to `https://froggyhatessnow.wiki`, rebuilds, deploys, and reruns Vercel domain checks.
+This guarded finisher registers `froggyhatessnow.wiki`, creates the Vercel A records in Porkbun DNS, switches `astro.config.mjs` to `https://froggyhatessnow.wiki`, rebuilds, deploys, reruns Vercel domain checks, and then verifies live page markers on both `https://froggyhatessnow.wiki` and `https://www.froggyhatessnow.wiki`.
 
 Expected Porkbun DNS records:
 
@@ -61,6 +61,13 @@ Expected Vercel domain checks after DNS:
 npx vercel domains inspect froggyhatessnow.wiki
 npx vercel domains inspect www.froggyhatessnow.wiki
 ```
+
+Expected custom-domain live checks after deployment:
+
+- Homepage contains `FROGGY HATES SNOW Wiki`.
+- Steam source snapshot contains `All Steam News Items`.
+- Steam source snapshot contains the current local `steam-snapshot.json` `generated_at` marker.
+- Achievement source matrix contains `Loadout Names`.
 
 ## Do Not Mark Complete Until
 

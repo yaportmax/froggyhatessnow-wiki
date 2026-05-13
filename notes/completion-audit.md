@@ -17,7 +17,7 @@ The wiki/scaffold/data/source/deploy work is complete and verified. The remainin
 | Requirement | Evidence | Status |
 |---|---|---|
 | Separate wiki folder in this repo | Current root: `/Users/myaport/Documents/maxyaport-codex-project/froggyhatessnow_wiki`. | Done |
-| Own GitHub repo under `yaportmax` | `origin` is `https://github.com/yaportmax/froggyhatessnow-wiki.git`; local and remote `main` are both `6f491269a18137bb819e26d4e9cc3fc4a6783eab`. | Done |
+| Own GitHub repo under `yaportmax` | `origin` is `https://github.com/yaportmax/froggyhatessnow-wiki.git`; `git rev-parse HEAD` and `git ls-remote origin refs/heads/main` are checked before handoff to confirm local and remote `main` match. | Done |
 | Build with Astro Starlight | `astro.config.mjs`, `src/content/docs/`, Starlight dependencies, and `npm run build` pass. | Done |
 | Use TypeScript where practical | Scripts are TypeScript/TSX; `npx tsc --noEmit` passes after build-generated Astro types exist. | Done |
 | Required project folders | `src/content/docs/`, `src/content/docs/generated/`, `src/data/`, `scripts/`, `public/`, `notes/`, and `game-files/` exist. | Done |
@@ -61,7 +61,7 @@ curl -I --max-time 20 https://froggyhatessnow.wiki/
 
 ## Latest Results
 
-- `git status --short`: clean after commit `6f491269a18137bb819e26d4e9cc3fc4a6783eab`.
+- `git status --short`: clean before the latest script/doc edits; re-check after committing any audit or helper changes.
 - `npm run validate`: validated 11 entity datasets plus `public-sources.json` and `steam-snapshot.json`.
 - `npm test`: 2 test files, 10 tests passed.
 - `npm run build`: 178 pages built; Pagefind indexed 177 pages.
@@ -88,12 +88,13 @@ curl -I --max-time 20 https://froggyhatessnow.wiki/
    A www 76.76.21.21
    ```
 
-4. Verify Vercel and live custom-domain behavior:
+4. Verify Vercel and live custom-domain behavior. The guarded finisher now checks homepage/source/matrix markers on both the apex and `www` custom domains; these manual commands are fallback evidence if needed:
 
    ```bash
    npx vercel domains inspect froggyhatessnow.wiki
    npx vercel domains inspect www.froggyhatessnow.wiki
    curl -I https://froggyhatessnow.wiki/
+   curl -I https://www.froggyhatessnow.wiki/
    npm run deploy:status
    ```
 

@@ -91,10 +91,10 @@ Domain registration was attempted through the Porkbun API and blocked by account
 After the Porkbun account is verified:
 
 ```bash
-npm run domain:status
-npm run domain:register -- --max-cost-usd=2.06 --idempotency-suffix=post-verification
-npm run domain:dns
+npm run domain:finish -- --confirm-register-and-dns
 ```
+
+The finisher registers the domain, configures Porkbun DNS, switches the Astro canonical site, rebuilds/deploys, inspects both Vercel domains, and checks live markers on both the apex and `www` custom domains.
 
 See `notes/domain-options.md` for pricing and next steps.
 

@@ -147,7 +147,7 @@ After Porkbun account verification:
    npm run domain:finish -- --confirm-register-and-dns
    ```
 
-   The finisher registers the domain, configures Porkbun DNS, updates the Astro `site` value to `https://froggyhatessnow.wiki`, rebuilds, deploys, and reruns Vercel domain checks.
+   The finisher registers the domain, configures Porkbun DNS, updates the Astro `site` value to `https://froggyhatessnow.wiki`, rebuilds, deploys, reruns Vercel domain checks, and verifies live homepage/source/matrix markers on both the apex and `www` custom domains.
 
 Manual fallback:
 
@@ -173,6 +173,13 @@ Manual fallback:
    ```bash
    npx vercel domains inspect froggyhatessnow.wiki
    npx vercel domains inspect www.froggyhatessnow.wiki
+   ```
+
+4. Re-check custom-domain HTTP:
+
+   ```bash
+   curl -I https://froggyhatessnow.wiki/
+   curl -I https://www.froggyhatessnow.wiki/
    ```
 
 Alternative DNS plan: change the domain nameservers to Vercel's intended nameservers:
