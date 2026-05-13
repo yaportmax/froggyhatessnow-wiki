@@ -85,7 +85,7 @@ This note summarizes public metadata used to seed the wiki. It intentionally avo
 
 ## Review Summaries
 
-- Full game review summary: {"num_reviews":10,"review_score":8,"review_score_desc":"Very Positive","total_positive":181,"total_negative":14,"total_reviews":195}
+- Full game review summary: {"num_reviews":10,"review_score":8,"review_score_desc":"Very Positive","total_positive":184,"total_negative":14,"total_reviews":198}
 - Demo review summary: {"num_reviews":10,"review_score":8,"review_score_desc":"Very Positive","total_positive":140,"total_negative":3,"total_reviews":143}
 
 ## SteamCMD / Local Demo Acquisition Status

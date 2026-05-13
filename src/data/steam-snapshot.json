@@ -1,6 +1,6 @@
 {
   "accessed_date": "2026-05-13",
-  "generated_at": "2026-05-13T15:47:17.883Z",
+  "generated_at": "2026-05-13T16:07:29.110Z",
   "source_policy": [
     "Prefer official public Steam endpoints and pages for game metadata.",
     "Do not copy raw long descriptions, review text, proprietary assets, binaries, source code, or decompiled content.",
@@ -286,9 +286,9 @@
       "num_reviews": 10,
       "review_score": 8,
       "review_score_desc": "Very Positive",
-      "total_positive": 181,
+      "total_positive": 184,
       "total_negative": 14,
-      "total_reviews": 195
+      "total_reviews": 198
     },
     "demo": {
       "num_reviews": 10,
