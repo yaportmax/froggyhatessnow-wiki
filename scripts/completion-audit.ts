@@ -25,6 +25,7 @@ const REQUIRED_PATHS = [
   "notes/extracted-metadata.md",
   "notes/extracted-metadata.json",
   "notes/domain-options.md",
+  "notes/porkbun-verification-support.md",
   "notes/final-handoff.md",
   "notes/completion-audit.md",
   "src/content/docs/index.md",
