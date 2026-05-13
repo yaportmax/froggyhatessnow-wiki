@@ -62,9 +62,9 @@ curl -I --max-time 20 https://froggyhatessnow.wiki/
 
 ## Latest Results
 
-- `git status --short`: clean at commit `e82f86f97caa04187d722577475dd04f8d216741` before this continuation note refresh.
+- `git status --short`: clean at commit `a0bee7c399b3a9424e0dd9fb505ca219db7abb76` before this continuation note refresh.
 - `npm run validate`: validated 11 entity datasets plus `public-sources.json` and `steam-snapshot.json`.
-- `npm run audit:completion`: exit 1 as expected; all source/content/build/deploy checks passed, while `astro-canonical-custom-domain` and `command:domain-health` failed because `froggyhatessnow.wiki` DNS still returns `ENOTFOUND` and `astro.config.mjs` still points at the Vercel alias. Latest run at 2026-05-13 09:34 PDT confirmed local/remote `main` are clean at `e82f86f97caa04187d722577475dd04f8d216741`.
+- `npm run audit:completion`: exit 1 as expected; all source/content/build/deploy checks passed, while `astro-canonical-custom-domain` and `command:domain-health` failed because `froggyhatessnow.wiki` DNS still returns `ENOTFOUND` and `astro.config.mjs` still points at the Vercel alias. Latest run at 2026-05-13 09:41 PDT confirmed local/remote `main` are clean at `a0bee7c399b3a9424e0dd9fb505ca219db7abb76` and that the read-only `domain:account` helper is present in the package-script audit.
 - `npm test`: 2 test files, 10 tests passed.
 - `npm run build`: 190 pages built; Pagefind indexed 189 pages.
 - `npx tsc --noEmit`: currently fails in Starlight generated utility types (`astro:content` has no exported `RenderResult`); `npm run build`, `npm test`, and `npm run validate` pass.
