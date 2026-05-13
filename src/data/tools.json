@@ -1,0 +1,514 @@
+[
+  {
+    "id": "air-bomb",
+    "slug": "air-bomb",
+    "name": "Air Bomb",
+    "aliases": [],
+    "category": "tools",
+    "short_description": "Air Bomb is named in a public achievement condition.",
+    "effect": "Needs verification.",
+    "unlock_method": "Needs verification.",
+    "cost": "Needs verification.",
+    "mode": "Needs verification.",
+    "related_entities": [],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
+        "label": "Steam community achievements page",
+        "confidence": "high",
+        "notes": "Public achievement display names and descriptions."
+      },
+      {
+        "type": "inferred",
+        "path_or_url": "local inference from public-source wording",
+        "label": "Achievement condition classification",
+        "confidence": "medium",
+        "notes": "Classified as tools from public achievement wording; exact in-game type needs verification."
+      }
+    ],
+    "verification_status": "Inferred",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Name is public; category/effect details may need gameplay or local metadata verification."
+  },
+  {
+    "id": "cart",
+    "slug": "cart",
+    "name": "Cart",
+    "aliases": [],
+    "category": "tools",
+    "short_description": "Cart are mentioned in official Steam copy as part of digging, movement, or resource carrying.",
+    "effect": "Needs verification.",
+    "unlock_method": "Needs verification.",
+    "cost": "Needs verification.",
+    "mode": "Core game and demo.",
+    "related_entities": [],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://store.steampowered.com/app/3232380/FROGGY_HATES_SNOW/",
+        "label": "Steam full-game store page",
+        "confidence": "high",
+        "notes": "Official public Steam store listing."
+      },
+      {
+        "type": "public_source",
+        "path_or_url": "https://store.steampowered.com/app/4037600/FROGGY_HATES_SNOW_Demo/",
+        "label": "Steam demo store page",
+        "confidence": "high",
+        "notes": "Official public Steam demo listing."
+      }
+    ],
+    "verification_status": "Verified",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Specific stats and unlock details need verification from gameplay or safe local metadata."
+  },
+  {
+    "id": "dynamite",
+    "slug": "dynamite",
+    "name": "Dynamite",
+    "aliases": [],
+    "category": "tools",
+    "short_description": "Dynamite is named in a public achievement condition.",
+    "effect": "Needs verification.",
+    "unlock_method": "Needs verification.",
+    "cost": "Needs verification.",
+    "mode": "Needs verification.",
+    "related_entities": [],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
+        "label": "Steam community achievements page",
+        "confidence": "high",
+        "notes": "Public achievement display names and descriptions."
+      },
+      {
+        "type": "inferred",
+        "path_or_url": "local inference from public-source wording",
+        "label": "Achievement condition classification",
+        "confidence": "medium",
+        "notes": "Classified as tools from public achievement wording; exact in-game type needs verification."
+      }
+    ],
+    "verification_status": "Inferred",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Name is public; category/effect details may need gameplay or local metadata verification."
+  },
+  {
+    "id": "explosives",
+    "slug": "explosives",
+    "name": "Explosives",
+    "aliases": [],
+    "category": "tools",
+    "short_description": "Explosives are mentioned in official Steam copy as part of digging, movement, or resource carrying.",
+    "effect": "Needs verification.",
+    "unlock_method": "Needs verification.",
+    "cost": "Needs verification.",
+    "mode": "Core game and demo.",
+    "related_entities": [],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://store.steampowered.com/app/3232380/FROGGY_HATES_SNOW/",
+        "label": "Steam full-game store page",
+        "confidence": "high",
+        "notes": "Official public Steam store listing."
+      },
+      {
+        "type": "public_source",
+        "path_or_url": "https://store.steampowered.com/app/4037600/FROGGY_HATES_SNOW_Demo/",
+        "label": "Steam demo store page",
+        "confidence": "high",
+        "notes": "Official public Steam demo listing."
+      }
+    ],
+    "verification_status": "Verified",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Specific stats and unlock details need verification from gameplay or safe local metadata."
+  },
+  {
+    "id": "flamethrower",
+    "slug": "flamethrower",
+    "name": "Flamethrower",
+    "aliases": [],
+    "category": "tools",
+    "short_description": "Flamethrower is named in a public achievement condition.",
+    "effect": "Needs verification.",
+    "unlock_method": "Needs verification.",
+    "cost": "Needs verification.",
+    "mode": "Needs verification.",
+    "related_entities": [],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
+        "label": "Steam community achievements page",
+        "confidence": "high",
+        "notes": "Public achievement display names and descriptions."
+      },
+      {
+        "type": "inferred",
+        "path_or_url": "local inference from public-source wording",
+        "label": "Achievement condition classification",
+        "confidence": "medium",
+        "notes": "Classified as tools from public achievement wording; exact in-game type needs verification."
+      }
+    ],
+    "verification_status": "Inferred",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Name is public; category/effect details may need gameplay or local metadata verification."
+  },
+  {
+    "id": "flamethrowers",
+    "slug": "flamethrowers",
+    "name": "Flamethrowers",
+    "aliases": [],
+    "category": "tools",
+    "short_description": "Flamethrowers are mentioned in official Steam copy as part of digging, movement, or resource carrying.",
+    "effect": "Needs verification.",
+    "unlock_method": "Needs verification.",
+    "cost": "Needs verification.",
+    "mode": "Core game and demo.",
+    "related_entities": [],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://store.steampowered.com/app/3232380/FROGGY_HATES_SNOW/",
+        "label": "Steam full-game store page",
+        "confidence": "high",
+        "notes": "Official public Steam store listing."
+      },
+      {
+        "type": "public_source",
+        "path_or_url": "https://store.steampowered.com/app/4037600/FROGGY_HATES_SNOW_Demo/",
+        "label": "Steam demo store page",
+        "confidence": "high",
+        "notes": "Official public Steam demo listing."
+      }
+    ],
+    "verification_status": "Verified",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Specific stats and unlock details need verification from gameplay or safe local metadata."
+  },
+  {
+    "id": "gloves",
+    "slug": "gloves",
+    "name": "Gloves",
+    "aliases": [],
+    "category": "tools",
+    "short_description": "Gloves is named in a public achievement condition.",
+    "effect": "Needs verification.",
+    "unlock_method": "Needs verification.",
+    "cost": "Needs verification.",
+    "mode": "Needs verification.",
+    "related_entities": [],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
+        "label": "Steam community achievements page",
+        "confidence": "high",
+        "notes": "Public achievement display names and descriptions."
+      },
+      {
+        "type": "inferred",
+        "path_or_url": "local inference from public-source wording",
+        "label": "Achievement condition classification",
+        "confidence": "medium",
+        "notes": "Classified as tools from public achievement wording; exact in-game type needs verification."
+      }
+    ],
+    "verification_status": "Inferred",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Name is public; category/effect details may need gameplay or local metadata verification."
+  },
+  {
+    "id": "hands",
+    "slug": "hands",
+    "name": "Hands",
+    "aliases": [],
+    "category": "tools",
+    "short_description": "Hands are mentioned in official Steam copy as part of digging, movement, or resource carrying.",
+    "effect": "Needs verification.",
+    "unlock_method": "Needs verification.",
+    "cost": "Needs verification.",
+    "mode": "Core game and demo.",
+    "related_entities": [],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://store.steampowered.com/app/3232380/FROGGY_HATES_SNOW/",
+        "label": "Steam full-game store page",
+        "confidence": "high",
+        "notes": "Official public Steam store listing."
+      },
+      {
+        "type": "public_source",
+        "path_or_url": "https://store.steampowered.com/app/4037600/FROGGY_HATES_SNOW_Demo/",
+        "label": "Steam demo store page",
+        "confidence": "high",
+        "notes": "Official public Steam demo listing."
+      }
+    ],
+    "verification_status": "Verified",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Specific stats and unlock details need verification from gameplay or safe local metadata."
+  },
+  {
+    "id": "heater-sled",
+    "slug": "heater-sled",
+    "name": "Heater Sled",
+    "aliases": [],
+    "category": "tools",
+    "short_description": "Heater Sled is named in a public achievement condition.",
+    "effect": "Needs verification.",
+    "unlock_method": "Needs verification.",
+    "cost": "Needs verification.",
+    "mode": "Needs verification.",
+    "related_entities": [],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
+        "label": "Steam community achievements page",
+        "confidence": "high",
+        "notes": "Public achievement display names and descriptions."
+      },
+      {
+        "type": "inferred",
+        "path_or_url": "local inference from public-source wording",
+        "label": "Achievement condition classification",
+        "confidence": "medium",
+        "notes": "Classified as tools from public achievement wording; exact in-game type needs verification."
+      }
+    ],
+    "verification_status": "Inferred",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Name is public; category/effect details may need gameplay or local metadata verification."
+  },
+  {
+    "id": "locator",
+    "slug": "locator",
+    "name": "Locator",
+    "aliases": [],
+    "category": "tools",
+    "short_description": "Locator is named in a public achievement condition.",
+    "effect": "Needs verification.",
+    "unlock_method": "Needs verification.",
+    "cost": "Needs verification.",
+    "mode": "Needs verification.",
+    "related_entities": [],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
+        "label": "Steam community achievements page",
+        "confidence": "high",
+        "notes": "Public achievement display names and descriptions."
+      },
+      {
+        "type": "inferred",
+        "path_or_url": "local inference from public-source wording",
+        "label": "Achievement condition classification",
+        "confidence": "medium",
+        "notes": "Classified as tools from public achievement wording; exact in-game type needs verification."
+      }
+    ],
+    "verification_status": "Inferred",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Name is public; category/effect details may need gameplay or local metadata verification."
+  },
+  {
+    "id": "map",
+    "slug": "map",
+    "name": "Map",
+    "aliases": [],
+    "category": "tools",
+    "short_description": "Map is named in a public achievement condition.",
+    "effect": "Needs verification.",
+    "unlock_method": "Needs verification.",
+    "cost": "Needs verification.",
+    "mode": "Needs verification.",
+    "related_entities": [],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
+        "label": "Steam community achievements page",
+        "confidence": "high",
+        "notes": "Public achievement display names and descriptions."
+      },
+      {
+        "type": "inferred",
+        "path_or_url": "local inference from public-source wording",
+        "label": "Achievement condition classification",
+        "confidence": "medium",
+        "notes": "Classified as tools from public achievement wording; exact in-game type needs verification."
+      }
+    ],
+    "verification_status": "Inferred",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Name is public; category/effect details may need gameplay or local metadata verification."
+  },
+  {
+    "id": "pickaxe",
+    "slug": "pickaxe",
+    "name": "Pickaxe",
+    "aliases": [],
+    "category": "tools",
+    "short_description": "Pickaxe is named in a public achievement condition.",
+    "effect": "Needs verification.",
+    "unlock_method": "Needs verification.",
+    "cost": "Needs verification.",
+    "mode": "Needs verification.",
+    "related_entities": [],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
+        "label": "Steam community achievements page",
+        "confidence": "high",
+        "notes": "Public achievement display names and descriptions."
+      },
+      {
+        "type": "inferred",
+        "path_or_url": "local inference from public-source wording",
+        "label": "Achievement condition classification",
+        "confidence": "medium",
+        "notes": "Classified as tools from public achievement wording; exact in-game type needs verification."
+      }
+    ],
+    "verification_status": "Inferred",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Name is public; category/effect details may need gameplay or local metadata verification."
+  },
+  {
+    "id": "scanner",
+    "slug": "scanner",
+    "name": "Scanner",
+    "aliases": [],
+    "category": "tools",
+    "short_description": "Scanner is named in a public achievement condition.",
+    "effect": "Needs verification.",
+    "unlock_method": "Needs verification.",
+    "cost": "Needs verification.",
+    "mode": "Needs verification.",
+    "related_entities": [],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
+        "label": "Steam community achievements page",
+        "confidence": "high",
+        "notes": "Public achievement display names and descriptions."
+      },
+      {
+        "type": "inferred",
+        "path_or_url": "local inference from public-source wording",
+        "label": "Achievement condition classification",
+        "confidence": "medium",
+        "notes": "Classified as tools from public achievement wording; exact in-game type needs verification."
+      }
+    ],
+    "verification_status": "Inferred",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Name is public; category/effect details may need gameplay or local metadata verification."
+  },
+  {
+    "id": "shovel",
+    "slug": "shovel",
+    "name": "Shovel",
+    "aliases": [],
+    "category": "tools",
+    "short_description": "Shovel is named in a public achievement condition.",
+    "effect": "Needs verification.",
+    "unlock_method": "Needs verification.",
+    "cost": "Needs verification.",
+    "mode": "Needs verification.",
+    "related_entities": [],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
+        "label": "Steam community achievements page",
+        "confidence": "high",
+        "notes": "Public achievement display names and descriptions."
+      },
+      {
+        "type": "inferred",
+        "path_or_url": "local inference from public-source wording",
+        "label": "Achievement condition classification",
+        "confidence": "medium",
+        "notes": "Classified as tools from public achievement wording; exact in-game type needs verification."
+      }
+    ],
+    "verification_status": "Inferred",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Name is public; category/effect details may need gameplay or local metadata verification."
+  },
+  {
+    "id": "shovels",
+    "slug": "shovels",
+    "name": "Shovels",
+    "aliases": [],
+    "category": "tools",
+    "short_description": "Shovels are mentioned in official Steam copy as part of digging, movement, or resource carrying.",
+    "effect": "Needs verification.",
+    "unlock_method": "Needs verification.",
+    "cost": "Needs verification.",
+    "mode": "Core game and demo.",
+    "related_entities": [],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://store.steampowered.com/app/3232380/FROGGY_HATES_SNOW/",
+        "label": "Steam full-game store page",
+        "confidence": "high",
+        "notes": "Official public Steam store listing."
+      },
+      {
+        "type": "public_source",
+        "path_or_url": "https://store.steampowered.com/app/4037600/FROGGY_HATES_SNOW_Demo/",
+        "label": "Steam demo store page",
+        "confidence": "high",
+        "notes": "Official public Steam demo listing."
+      }
+    ],
+    "verification_status": "Verified",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Specific stats and unlock details need verification from gameplay or safe local metadata."
+  },
+  {
+    "id": "skis",
+    "slug": "skis",
+    "name": "Skis",
+    "aliases": [],
+    "category": "tools",
+    "short_description": "Skis are mentioned in official Steam copy as part of digging, movement, or resource carrying.",
+    "effect": "Needs verification.",
+    "unlock_method": "Needs verification.",
+    "cost": "Needs verification.",
+    "mode": "Core game and demo.",
+    "related_entities": [],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://store.steampowered.com/app/3232380/FROGGY_HATES_SNOW/",
+        "label": "Steam full-game store page",
+        "confidence": "high",
+        "notes": "Official public Steam store listing."
+      },
+      {
+        "type": "public_source",
+        "path_or_url": "https://store.steampowered.com/app/4037600/FROGGY_HATES_SNOW_Demo/",
+        "label": "Steam demo store page",
+        "confidence": "high",
+        "notes": "Official public Steam demo listing."
+      }
+    ],
+    "verification_status": "Verified",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Specific stats and unlock details need verification from gameplay or safe local metadata."
+  }
+]

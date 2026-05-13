@@ -1,0 +1,396 @@
+[
+  {
+    "id": "artifacts",
+    "slug": "artifacts",
+    "name": "Artifacts",
+    "aliases": [],
+    "category": "items",
+    "short_description": "Artifacts are mentioned by official Steam copy or public achievements.",
+    "effect": "Needs verification.",
+    "unlock_method": "Needs verification.",
+    "cost": "Needs verification.",
+    "mode": "Needs verification.",
+    "related_entities": [],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://store.steampowered.com/app/3232380/FROGGY_HATES_SNOW/",
+        "label": "Steam full-game store page",
+        "confidence": "high",
+        "notes": "Official public Steam store listing."
+      },
+      {
+        "type": "public_source",
+        "path_or_url": "https://store.steampowered.com/app/4037600/FROGGY_HATES_SNOW_Demo/",
+        "label": "Steam demo store page",
+        "confidence": "high",
+        "notes": "Official public Steam demo listing."
+      },
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
+        "label": "Steam community achievement page",
+        "confidence": "high",
+        "notes": "Public achievement names and descriptions."
+      }
+    ],
+    "verification_status": "Verified",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Amounts, drop rules, and exact use cases need verification."
+  },
+  {
+    "id": "energy-drink",
+    "slug": "energy-drink",
+    "name": "Energy Drink",
+    "aliases": [],
+    "category": "items",
+    "short_description": "Energy Drink is named in a public achievement condition.",
+    "effect": "Needs verification.",
+    "unlock_method": "Needs verification.",
+    "cost": "Needs verification.",
+    "mode": "Needs verification.",
+    "related_entities": [],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
+        "label": "Steam community achievements page",
+        "confidence": "high",
+        "notes": "Public achievement display names and descriptions."
+      },
+      {
+        "type": "inferred",
+        "path_or_url": "local inference from public-source wording",
+        "label": "Achievement condition classification",
+        "confidence": "medium",
+        "notes": "Classified as items from public achievement wording; exact in-game type needs verification."
+      }
+    ],
+    "verification_status": "Inferred",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Name is public; category/effect details may need gameplay or local metadata verification."
+  },
+  {
+    "id": "flashbang",
+    "slug": "flashbang",
+    "name": "Flashbang",
+    "aliases": [],
+    "category": "items",
+    "short_description": "Flashbang is named in a public achievement condition.",
+    "effect": "Needs verification.",
+    "unlock_method": "Needs verification.",
+    "cost": "Needs verification.",
+    "mode": "Needs verification.",
+    "related_entities": [],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
+        "label": "Steam community achievements page",
+        "confidence": "high",
+        "notes": "Public achievement display names and descriptions."
+      },
+      {
+        "type": "inferred",
+        "path_or_url": "local inference from public-source wording",
+        "label": "Achievement condition classification",
+        "confidence": "medium",
+        "notes": "Classified as items from public achievement wording; exact in-game type needs verification."
+      }
+    ],
+    "verification_status": "Inferred",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Name is public; category/effect details may need gameplay or local metadata verification."
+  },
+  {
+    "id": "frost-bomb",
+    "slug": "frost-bomb",
+    "name": "Frost Bomb",
+    "aliases": [],
+    "category": "items",
+    "short_description": "Frost Bomb is named in a public achievement condition.",
+    "effect": "Needs verification.",
+    "unlock_method": "Needs verification.",
+    "cost": "Needs verification.",
+    "mode": "Needs verification.",
+    "related_entities": [],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
+        "label": "Steam community achievements page",
+        "confidence": "high",
+        "notes": "Public achievement display names and descriptions."
+      },
+      {
+        "type": "inferred",
+        "path_or_url": "local inference from public-source wording",
+        "label": "Achievement condition classification",
+        "confidence": "medium",
+        "notes": "Classified as items from public achievement wording; exact in-game type needs verification."
+      }
+    ],
+    "verification_status": "Inferred",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Name is public; category/effect details may need gameplay or local metadata verification."
+  },
+  {
+    "id": "gems",
+    "slug": "gems",
+    "name": "Gems",
+    "aliases": [],
+    "category": "items",
+    "short_description": "Gems are mentioned by official Steam copy or public achievements.",
+    "effect": "Needs verification.",
+    "unlock_method": "Needs verification.",
+    "cost": "Needs verification.",
+    "mode": "Needs verification.",
+    "related_entities": [],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://store.steampowered.com/app/3232380/FROGGY_HATES_SNOW/",
+        "label": "Steam full-game store page",
+        "confidence": "high",
+        "notes": "Official public Steam store listing."
+      },
+      {
+        "type": "public_source",
+        "path_or_url": "https://store.steampowered.com/app/4037600/FROGGY_HATES_SNOW_Demo/",
+        "label": "Steam demo store page",
+        "confidence": "high",
+        "notes": "Official public Steam demo listing."
+      },
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
+        "label": "Steam community achievement page",
+        "confidence": "high",
+        "notes": "Public achievement names and descriptions."
+      }
+    ],
+    "verification_status": "Verified",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Amounts, drop rules, and exact use cases need verification."
+  },
+  {
+    "id": "hot-tea",
+    "slug": "hot-tea",
+    "name": "Hot Tea",
+    "aliases": [],
+    "category": "items",
+    "short_description": "Hot Tea is named in a public achievement condition.",
+    "effect": "Needs verification.",
+    "unlock_method": "Needs verification.",
+    "cost": "Needs verification.",
+    "mode": "Needs verification.",
+    "related_entities": [],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
+        "label": "Steam community achievements page",
+        "confidence": "high",
+        "notes": "Public achievement display names and descriptions."
+      },
+      {
+        "type": "inferred",
+        "path_or_url": "local inference from public-source wording",
+        "label": "Achievement condition classification",
+        "confidence": "medium",
+        "notes": "Classified as items from public achievement wording; exact in-game type needs verification."
+      }
+    ],
+    "verification_status": "Inferred",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Name is public; category/effect details may need gameplay or local metadata verification."
+  },
+  {
+    "id": "keys",
+    "slug": "keys",
+    "name": "Keys",
+    "aliases": [],
+    "category": "items",
+    "short_description": "Keys are mentioned by official Steam copy or public achievements.",
+    "effect": "Needs verification.",
+    "unlock_method": "Needs verification.",
+    "cost": "Needs verification.",
+    "mode": "Needs verification.",
+    "related_entities": [],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://store.steampowered.com/app/3232380/FROGGY_HATES_SNOW/",
+        "label": "Steam full-game store page",
+        "confidence": "high",
+        "notes": "Official public Steam store listing."
+      },
+      {
+        "type": "public_source",
+        "path_or_url": "https://store.steampowered.com/app/4037600/FROGGY_HATES_SNOW_Demo/",
+        "label": "Steam demo store page",
+        "confidence": "high",
+        "notes": "Official public Steam demo listing."
+      },
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
+        "label": "Steam community achievement page",
+        "confidence": "high",
+        "notes": "Public achievement names and descriptions."
+      }
+    ],
+    "verification_status": "Verified",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Amounts, drop rules, and exact use cases need verification."
+  },
+  {
+    "id": "poison-flask",
+    "slug": "poison-flask",
+    "name": "Poison Flask",
+    "aliases": [],
+    "category": "items",
+    "short_description": "Poison Flask is named in a public achievement condition.",
+    "effect": "Needs verification.",
+    "unlock_method": "Needs verification.",
+    "cost": "Needs verification.",
+    "mode": "Needs verification.",
+    "related_entities": [],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
+        "label": "Steam community achievements page",
+        "confidence": "high",
+        "notes": "Public achievement display names and descriptions."
+      },
+      {
+        "type": "inferred",
+        "path_or_url": "local inference from public-source wording",
+        "label": "Achievement condition classification",
+        "confidence": "medium",
+        "notes": "Classified as items from public achievement wording; exact in-game type needs verification."
+      }
+    ],
+    "verification_status": "Inferred",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Name is public; category/effect details may need gameplay or local metadata verification."
+  },
+  {
+    "id": "traps",
+    "slug": "traps",
+    "name": "Traps",
+    "aliases": [],
+    "category": "items",
+    "short_description": "Traps are mentioned by official Steam copy or public achievements.",
+    "effect": "Needs verification.",
+    "unlock_method": "Needs verification.",
+    "cost": "Needs verification.",
+    "mode": "Needs verification.",
+    "related_entities": [],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://store.steampowered.com/app/3232380/FROGGY_HATES_SNOW/",
+        "label": "Steam full-game store page",
+        "confidence": "high",
+        "notes": "Official public Steam store listing."
+      },
+      {
+        "type": "public_source",
+        "path_or_url": "https://store.steampowered.com/app/4037600/FROGGY_HATES_SNOW_Demo/",
+        "label": "Steam demo store page",
+        "confidence": "high",
+        "notes": "Official public Steam demo listing."
+      },
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
+        "label": "Steam community achievement page",
+        "confidence": "high",
+        "notes": "Public achievement names and descriptions."
+      }
+    ],
+    "verification_status": "Verified",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Amounts, drop rules, and exact use cases need verification."
+  },
+  {
+    "id": "treasure-chests",
+    "slug": "treasure-chests",
+    "name": "Treasure chests",
+    "aliases": [],
+    "category": "items",
+    "short_description": "Treasure chests are mentioned by official Steam copy or public achievements.",
+    "effect": "Needs verification.",
+    "unlock_method": "Needs verification.",
+    "cost": "Needs verification.",
+    "mode": "Needs verification.",
+    "related_entities": [],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://store.steampowered.com/app/3232380/FROGGY_HATES_SNOW/",
+        "label": "Steam full-game store page",
+        "confidence": "high",
+        "notes": "Official public Steam store listing."
+      },
+      {
+        "type": "public_source",
+        "path_or_url": "https://store.steampowered.com/app/4037600/FROGGY_HATES_SNOW_Demo/",
+        "label": "Steam demo store page",
+        "confidence": "high",
+        "notes": "Official public Steam demo listing."
+      },
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
+        "label": "Steam community achievement page",
+        "confidence": "high",
+        "notes": "Public achievement names and descriptions."
+      }
+    ],
+    "verification_status": "Verified",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Amounts, drop rules, and exact use cases need verification."
+  },
+  {
+    "id": "treasures",
+    "slug": "treasures",
+    "name": "Treasures",
+    "aliases": [],
+    "category": "items",
+    "short_description": "Treasures are mentioned by official Steam copy or public achievements.",
+    "effect": "Needs verification.",
+    "unlock_method": "Needs verification.",
+    "cost": "Needs verification.",
+    "mode": "Needs verification.",
+    "related_entities": [],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://store.steampowered.com/app/3232380/FROGGY_HATES_SNOW/",
+        "label": "Steam full-game store page",
+        "confidence": "high",
+        "notes": "Official public Steam store listing."
+      },
+      {
+        "type": "public_source",
+        "path_or_url": "https://store.steampowered.com/app/4037600/FROGGY_HATES_SNOW_Demo/",
+        "label": "Steam demo store page",
+        "confidence": "high",
+        "notes": "Official public Steam demo listing."
+      },
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
+        "label": "Steam community achievement page",
+        "confidence": "high",
+        "notes": "Public achievement names and descriptions."
+      }
+    ],
+    "verification_status": "Verified",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Amounts, drop rules, and exact use cases need verification."
+  }
+]

@@ -1,0 +1,610 @@
+[
+  {
+    "id": "adrenaline",
+    "slug": "adrenaline",
+    "name": "Adrenaline",
+    "aliases": [],
+    "category": "skills",
+    "short_description": "Adrenaline is named in a public achievement condition.",
+    "effect": "Needs verification.",
+    "unlock_method": "Needs verification.",
+    "cost": "Needs verification.",
+    "mode": "Needs verification.",
+    "related_entities": [],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
+        "label": "Steam community achievements page",
+        "confidence": "high",
+        "notes": "Public achievement display names and descriptions."
+      },
+      {
+        "type": "inferred",
+        "path_or_url": "local inference from public-source wording",
+        "label": "Achievement condition classification",
+        "confidence": "medium",
+        "notes": "Classified as skills from public achievement wording; exact in-game type needs verification."
+      }
+    ],
+    "verification_status": "Inferred",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Name is public; category/effect details may need gameplay or local metadata verification."
+  },
+  {
+    "id": "chain-lightning",
+    "slug": "chain-lightning",
+    "name": "Chain Lightning",
+    "aliases": [],
+    "category": "skills",
+    "short_description": "Chain Lightning is named in a public achievement condition.",
+    "effect": "Needs verification.",
+    "unlock_method": "Needs verification.",
+    "cost": "Needs verification.",
+    "mode": "Needs verification.",
+    "related_entities": [],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
+        "label": "Steam community achievements page",
+        "confidence": "high",
+        "notes": "Public achievement display names and descriptions."
+      },
+      {
+        "type": "inferred",
+        "path_or_url": "local inference from public-source wording",
+        "label": "Achievement condition classification",
+        "confidence": "medium",
+        "notes": "Classified as skills from public achievement wording; exact in-game type needs verification."
+      }
+    ],
+    "verification_status": "Inferred",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Name is public; category/effect details may need gameplay or local metadata verification."
+  },
+  {
+    "id": "curvy-tongue",
+    "slug": "curvy-tongue",
+    "name": "Curvy Tongue",
+    "aliases": [],
+    "category": "skills",
+    "short_description": "Curvy Tongue is named in a public achievement condition.",
+    "effect": "Needs verification.",
+    "unlock_method": "Needs verification.",
+    "cost": "Needs verification.",
+    "mode": "Needs verification.",
+    "related_entities": [],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
+        "label": "Steam community achievements page",
+        "confidence": "high",
+        "notes": "Public achievement display names and descriptions."
+      },
+      {
+        "type": "inferred",
+        "path_or_url": "local inference from public-source wording",
+        "label": "Achievement condition classification",
+        "confidence": "medium",
+        "notes": "Classified as skills from public achievement wording; exact in-game type needs verification."
+      }
+    ],
+    "verification_status": "Inferred",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Name is public; category/effect details may need gameplay or local metadata verification."
+  },
+  {
+    "id": "death-field",
+    "slug": "death-field",
+    "name": "Death Field",
+    "aliases": [],
+    "category": "skills",
+    "short_description": "Death Field is named in a public achievement condition.",
+    "effect": "Needs verification.",
+    "unlock_method": "Needs verification.",
+    "cost": "Needs verification.",
+    "mode": "Needs verification.",
+    "related_entities": [],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
+        "label": "Steam community achievements page",
+        "confidence": "high",
+        "notes": "Public achievement display names and descriptions."
+      },
+      {
+        "type": "inferred",
+        "path_or_url": "local inference from public-source wording",
+        "label": "Achievement condition classification",
+        "confidence": "medium",
+        "notes": "Classified as skills from public achievement wording; exact in-game type needs verification."
+      }
+    ],
+    "verification_status": "Inferred",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Name is public; category/effect details may need gameplay or local metadata verification."
+  },
+  {
+    "id": "electric-infusion",
+    "slug": "electric-infusion",
+    "name": "Electric Infusion",
+    "aliases": [],
+    "category": "skills",
+    "short_description": "Electric Infusion is named in a public achievement condition.",
+    "effect": "Needs verification.",
+    "unlock_method": "Needs verification.",
+    "cost": "Needs verification.",
+    "mode": "Needs verification.",
+    "related_entities": [],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
+        "label": "Steam community achievements page",
+        "confidence": "high",
+        "notes": "Public achievement display names and descriptions."
+      },
+      {
+        "type": "inferred",
+        "path_or_url": "local inference from public-source wording",
+        "label": "Achievement condition classification",
+        "confidence": "medium",
+        "notes": "Classified as skills from public achievement wording; exact in-game type needs verification."
+      }
+    ],
+    "verification_status": "Inferred",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Name is public; category/effect details may need gameplay or local metadata verification."
+  },
+  {
+    "id": "fire-infusion",
+    "slug": "fire-infusion",
+    "name": "Fire Infusion",
+    "aliases": [],
+    "category": "skills",
+    "short_description": "Fire Infusion is named in a public achievement condition.",
+    "effect": "Needs verification.",
+    "unlock_method": "Needs verification.",
+    "cost": "Needs verification.",
+    "mode": "Needs verification.",
+    "related_entities": [],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
+        "label": "Steam community achievements page",
+        "confidence": "high",
+        "notes": "Public achievement display names and descriptions."
+      },
+      {
+        "type": "inferred",
+        "path_or_url": "local inference from public-source wording",
+        "label": "Achievement condition classification",
+        "confidence": "medium",
+        "notes": "Classified as skills from public achievement wording; exact in-game type needs verification."
+      }
+    ],
+    "verification_status": "Inferred",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Name is public; category/effect details may need gameplay or local metadata verification."
+  },
+  {
+    "id": "frost-infusion",
+    "slug": "frost-infusion",
+    "name": "Frost Infusion",
+    "aliases": [],
+    "category": "skills",
+    "short_description": "Frost Infusion is named in a public achievement condition.",
+    "effect": "Needs verification.",
+    "unlock_method": "Needs verification.",
+    "cost": "Needs verification.",
+    "mode": "Needs verification.",
+    "related_entities": [],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
+        "label": "Steam community achievements page",
+        "confidence": "high",
+        "notes": "Public achievement display names and descriptions."
+      },
+      {
+        "type": "inferred",
+        "path_or_url": "local inference from public-source wording",
+        "label": "Achievement condition classification",
+        "confidence": "medium",
+        "notes": "Classified as skills from public achievement wording; exact in-game type needs verification."
+      }
+    ],
+    "verification_status": "Inferred",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Name is public; category/effect details may need gameplay or local metadata verification."
+  },
+  {
+    "id": "magnet",
+    "slug": "magnet",
+    "name": "Magnet",
+    "aliases": [],
+    "category": "skills",
+    "short_description": "Magnet is named in a public achievement condition.",
+    "effect": "Needs verification.",
+    "unlock_method": "Needs verification.",
+    "cost": "Needs verification.",
+    "mode": "Needs verification.",
+    "related_entities": [],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
+        "label": "Steam community achievements page",
+        "confidence": "high",
+        "notes": "Public achievement display names and descriptions."
+      },
+      {
+        "type": "inferred",
+        "path_or_url": "local inference from public-source wording",
+        "label": "Achievement condition classification",
+        "confidence": "medium",
+        "notes": "Classified as skills from public achievement wording; exact in-game type needs verification."
+      }
+    ],
+    "verification_status": "Inferred",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Name is public; category/effect details may need gameplay or local metadata verification."
+  },
+  {
+    "id": "piercing-icicles",
+    "slug": "piercing-icicles",
+    "name": "Piercing Icicles",
+    "aliases": [],
+    "category": "skills",
+    "short_description": "Piercing Icicles is named in a public achievement condition.",
+    "effect": "Needs verification.",
+    "unlock_method": "Needs verification.",
+    "cost": "Needs verification.",
+    "mode": "Needs verification.",
+    "related_entities": [],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
+        "label": "Steam community achievements page",
+        "confidence": "high",
+        "notes": "Public achievement display names and descriptions."
+      },
+      {
+        "type": "inferred",
+        "path_or_url": "local inference from public-source wording",
+        "label": "Achievement condition classification",
+        "confidence": "medium",
+        "notes": "Classified as skills from public achievement wording; exact in-game type needs verification."
+      }
+    ],
+    "verification_status": "Inferred",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Name is public; category/effect details may need gameplay or local metadata verification."
+  },
+  {
+    "id": "poison-infusion",
+    "slug": "poison-infusion",
+    "name": "Poison Infusion",
+    "aliases": [],
+    "category": "skills",
+    "short_description": "Poison Infusion is named in a public achievement condition.",
+    "effect": "Needs verification.",
+    "unlock_method": "Needs verification.",
+    "cost": "Needs verification.",
+    "mode": "Needs verification.",
+    "related_entities": [],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
+        "label": "Steam community achievements page",
+        "confidence": "high",
+        "notes": "Public achievement display names and descriptions."
+      },
+      {
+        "type": "inferred",
+        "path_or_url": "local inference from public-source wording",
+        "label": "Achievement condition classification",
+        "confidence": "medium",
+        "notes": "Classified as skills from public achievement wording; exact in-game type needs verification."
+      }
+    ],
+    "verification_status": "Inferred",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Name is public; category/effect details may need gameplay or local metadata verification."
+  },
+  {
+    "id": "revive",
+    "slug": "revive",
+    "name": "Revive",
+    "aliases": [],
+    "category": "skills",
+    "short_description": "Revive is named in a public achievement condition.",
+    "effect": "Needs verification.",
+    "unlock_method": "Needs verification.",
+    "cost": "Needs verification.",
+    "mode": "Needs verification.",
+    "related_entities": [],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
+        "label": "Steam community achievements page",
+        "confidence": "high",
+        "notes": "Public achievement display names and descriptions."
+      },
+      {
+        "type": "inferred",
+        "path_or_url": "local inference from public-source wording",
+        "label": "Achievement condition classification",
+        "confidence": "medium",
+        "notes": "Classified as skills from public achievement wording; exact in-game type needs verification."
+      }
+    ],
+    "verification_status": "Inferred",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Name is public; category/effect details may need gameplay or local metadata verification."
+  },
+  {
+    "id": "shield",
+    "slug": "shield",
+    "name": "Shield",
+    "aliases": [],
+    "category": "skills",
+    "short_description": "Shield is named in a public achievement condition.",
+    "effect": "Needs verification.",
+    "unlock_method": "Needs verification.",
+    "cost": "Needs verification.",
+    "mode": "Needs verification.",
+    "related_entities": [],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
+        "label": "Steam community achievements page",
+        "confidence": "high",
+        "notes": "Public achievement display names and descriptions."
+      },
+      {
+        "type": "inferred",
+        "path_or_url": "local inference from public-source wording",
+        "label": "Achievement condition classification",
+        "confidence": "medium",
+        "notes": "Classified as skills from public achievement wording; exact in-game type needs verification."
+      }
+    ],
+    "verification_status": "Inferred",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Name is public; category/effect details may need gameplay or local metadata verification."
+  },
+  {
+    "id": "snowball-volley",
+    "slug": "snowball-volley",
+    "name": "Snowball Volley",
+    "aliases": [],
+    "category": "skills",
+    "short_description": "Snowball Volley is named in a public achievement condition.",
+    "effect": "Needs verification.",
+    "unlock_method": "Needs verification.",
+    "cost": "Needs verification.",
+    "mode": "Needs verification.",
+    "related_entities": [],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
+        "label": "Steam community achievements page",
+        "confidence": "high",
+        "notes": "Public achievement display names and descriptions."
+      },
+      {
+        "type": "inferred",
+        "path_or_url": "local inference from public-source wording",
+        "label": "Achievement condition classification",
+        "confidence": "medium",
+        "notes": "Classified as skills from public achievement wording; exact in-game type needs verification."
+      }
+    ],
+    "verification_status": "Inferred",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Name is public; category/effect details may need gameplay or local metadata verification."
+  },
+  {
+    "id": "spark",
+    "slug": "spark",
+    "name": "Spark",
+    "aliases": [],
+    "category": "skills",
+    "short_description": "Spark is named in a public achievement condition.",
+    "effect": "Needs verification.",
+    "unlock_method": "Needs verification.",
+    "cost": "Needs verification.",
+    "mode": "Needs verification.",
+    "related_entities": [],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
+        "label": "Steam community achievements page",
+        "confidence": "high",
+        "notes": "Public achievement display names and descriptions."
+      },
+      {
+        "type": "inferred",
+        "path_or_url": "local inference from public-source wording",
+        "label": "Achievement condition classification",
+        "confidence": "medium",
+        "notes": "Classified as skills from public achievement wording; exact in-game type needs verification."
+      }
+    ],
+    "verification_status": "Inferred",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Name is public; category/effect details may need gameplay or local metadata verification."
+  },
+  {
+    "id": "stun-infusion",
+    "slug": "stun-infusion",
+    "name": "Stun Infusion",
+    "aliases": [],
+    "category": "skills",
+    "short_description": "Stun Infusion is named in a public achievement condition.",
+    "effect": "Needs verification.",
+    "unlock_method": "Needs verification.",
+    "cost": "Needs verification.",
+    "mode": "Needs verification.",
+    "related_entities": [],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
+        "label": "Steam community achievements page",
+        "confidence": "high",
+        "notes": "Public achievement display names and descriptions."
+      },
+      {
+        "type": "inferred",
+        "path_or_url": "local inference from public-source wording",
+        "label": "Achievement condition classification",
+        "confidence": "medium",
+        "notes": "Classified as skills from public achievement wording; exact in-game type needs verification."
+      }
+    ],
+    "verification_status": "Inferred",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Name is public; category/effect details may need gameplay or local metadata verification."
+  },
+  {
+    "id": "teleport",
+    "slug": "teleport",
+    "name": "Teleport",
+    "aliases": [],
+    "category": "skills",
+    "short_description": "Teleport is named in a public achievement condition.",
+    "effect": "Needs verification.",
+    "unlock_method": "Needs verification.",
+    "cost": "Needs verification.",
+    "mode": "Needs verification.",
+    "related_entities": [],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
+        "label": "Steam community achievements page",
+        "confidence": "high",
+        "notes": "Public achievement display names and descriptions."
+      },
+      {
+        "type": "inferred",
+        "path_or_url": "local inference from public-source wording",
+        "label": "Achievement condition classification",
+        "confidence": "medium",
+        "notes": "Classified as skills from public achievement wording; exact in-game type needs verification."
+      }
+    ],
+    "verification_status": "Inferred",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Name is public; category/effect details may need gameplay or local metadata verification."
+  },
+  {
+    "id": "tongue-attack",
+    "slug": "tongue-attack",
+    "name": "Tongue Attack",
+    "aliases": [],
+    "category": "skills",
+    "short_description": "Tongue Attack is named in a public achievement condition.",
+    "effect": "Needs verification.",
+    "unlock_method": "Needs verification.",
+    "cost": "Needs verification.",
+    "mode": "Needs verification.",
+    "related_entities": [],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
+        "label": "Steam community achievements page",
+        "confidence": "high",
+        "notes": "Public achievement display names and descriptions."
+      },
+      {
+        "type": "inferred",
+        "path_or_url": "local inference from public-source wording",
+        "label": "Achievement condition classification",
+        "confidence": "medium",
+        "notes": "Classified as skills from public achievement wording; exact in-game type needs verification."
+      }
+    ],
+    "verification_status": "Inferred",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Name is public; category/effect details may need gameplay or local metadata verification."
+  },
+  {
+    "id": "vampirism",
+    "slug": "vampirism",
+    "name": "Vampirism",
+    "aliases": [],
+    "category": "skills",
+    "short_description": "Vampirism is named in a public achievement condition.",
+    "effect": "Needs verification.",
+    "unlock_method": "Needs verification.",
+    "cost": "Needs verification.",
+    "mode": "Needs verification.",
+    "related_entities": [],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
+        "label": "Steam community achievements page",
+        "confidence": "high",
+        "notes": "Public achievement display names and descriptions."
+      },
+      {
+        "type": "inferred",
+        "path_or_url": "local inference from public-source wording",
+        "label": "Achievement condition classification",
+        "confidence": "medium",
+        "notes": "Classified as skills from public achievement wording; exact in-game type needs verification."
+      }
+    ],
+    "verification_status": "Inferred",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Name is public; category/effect details may need gameplay or local metadata verification."
+  },
+  {
+    "id": "voodoo-curse",
+    "slug": "voodoo-curse",
+    "name": "Voodoo Curse",
+    "aliases": [],
+    "category": "skills",
+    "short_description": "Voodoo Curse is named in a public achievement condition.",
+    "effect": "Needs verification.",
+    "unlock_method": "Needs verification.",
+    "cost": "Needs verification.",
+    "mode": "Needs verification.",
+    "related_entities": [],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
+        "label": "Steam community achievements page",
+        "confidence": "high",
+        "notes": "Public achievement display names and descriptions."
+      },
+      {
+        "type": "inferred",
+        "path_or_url": "local inference from public-source wording",
+        "label": "Achievement condition classification",
+        "confidence": "medium",
+        "notes": "Classified as skills from public achievement wording; exact in-game type needs verification."
+      }
+    ],
+    "verification_status": "Inferred",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Name is public; category/effect details may need gameplay or local metadata verification."
+  }
+]

@@ -1,0 +1,26 @@
+{
+  "name": "froggyhatessnow-wiki",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "scan": "tsx scripts/scan-game-files.ts",
+    "fetch:steam": "tsx scripts/fetch-steam-public-data.ts",
+    "generate": "tsx scripts/generate-pages.ts",
+    "validate": "tsx scripts/validate-data.ts",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@astrojs/starlight": "^0.35.0",
+    "astro": "^5.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.20.0",
+    "typescript": "^5.8.0",
+    "vitest": "^3.0.0"
+  }
+}

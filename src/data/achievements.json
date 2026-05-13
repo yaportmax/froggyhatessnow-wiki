@@ -1,0 +1,1581 @@
+[
+  {
+    "id": "all-eyes-open",
+    "slug": "all-eyes-open",
+    "name": "All Eyes Open",
+    "aliases": [],
+    "category": "achievements",
+    "short_description": "Survive a run with Map, Scanner & Locator",
+    "effect": "Steam achievement condition: Survive a run with Map, Scanner & Locator",
+    "unlock_method": "Survive a run with Map, Scanner & Locator",
+    "cost": "Needs verification.",
+    "mode": "Full game.",
+    "related_entities": [
+      "map",
+      "scanner",
+      "locator"
+    ],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
+        "label": "Steam community achievements page",
+        "confidence": "high",
+        "notes": "Public achievement display names and descriptions."
+      },
+      {
+        "type": "public_source",
+        "path_or_url": "https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=3232380&format=json",
+        "label": "Steam global achievement percentages API",
+        "confidence": "medium",
+        "notes": "Public no-key endpoint with volatile global percentages."
+      }
+    ],
+    "verification_status": "Verified",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Global percentage is volatile; refresh before publishing exact percentage-driven claims.",
+    "steam_internal_name": "all_eyes_open",
+    "steam_global_percent_api": "0.3",
+    "steam_community_percent": "0.3%",
+    "icon_url": "https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/3232380/92e5a230136868e1d6650d53a7e3de9edd767b94.jpg"
+  },
+  {
+    "id": "assemble-the-team-i",
+    "slug": "assemble-the-team-i",
+    "name": "Assemble the Team I",
+    "aliases": [],
+    "category": "achievements",
+    "short_description": "Unlock 1 Character",
+    "effect": "Steam achievement condition: Unlock 1 Character",
+    "unlock_method": "Unlock 1 Character",
+    "cost": "Needs verification.",
+    "mode": "Full game.",
+    "related_entities": [],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
+        "label": "Steam community achievements page",
+        "confidence": "high",
+        "notes": "Public achievement display names and descriptions."
+      },
+      {
+        "type": "public_source",
+        "path_or_url": "https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=3232380&format=json",
+        "label": "Steam global achievement percentages API",
+        "confidence": "medium",
+        "notes": "Public no-key endpoint with volatile global percentages."
+      }
+    ],
+    "verification_status": "Verified",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Global percentage is volatile; refresh before publishing exact percentage-driven claims.",
+    "steam_internal_name": "assemble_the_team_1",
+    "steam_global_percent_api": "68.7",
+    "steam_community_percent": "68.5%",
+    "icon_url": "https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/3232380/5cd2fccb5cf20d7040827d0d8de2d10a0819398d.jpg"
+  },
+  {
+    "id": "assemble-the-team-ii",
+    "slug": "assemble-the-team-ii",
+    "name": "Assemble the Team II",
+    "aliases": [],
+    "category": "achievements",
+    "short_description": "Unlock 3 Characters",
+    "effect": "Steam achievement condition: Unlock 3 Characters",
+    "unlock_method": "Unlock 3 Characters",
+    "cost": "Needs verification.",
+    "mode": "Full game.",
+    "related_entities": [],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
+        "label": "Steam community achievements page",
+        "confidence": "high",
+        "notes": "Public achievement display names and descriptions."
+      },
+      {
+        "type": "public_source",
+        "path_or_url": "https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=3232380&format=json",
+        "label": "Steam global achievement percentages API",
+        "confidence": "medium",
+        "notes": "Public no-key endpoint with volatile global percentages."
+      }
+    ],
+    "verification_status": "Verified",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Global percentage is volatile; refresh before publishing exact percentage-driven claims.",
+    "steam_internal_name": "assemble_the_team_2",
+    "steam_global_percent_api": "19.3",
+    "steam_community_percent": "19.4%",
+    "icon_url": "https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/3232380/1bbb38ad30784505fedab4f60794df1164004cea.jpg"
+  },
+  {
+    "id": "assemble-the-team-iii",
+    "slug": "assemble-the-team-iii",
+    "name": "Assemble the Team III",
+    "aliases": [],
+    "category": "achievements",
+    "short_description": "Unlock 9 Characters",
+    "effect": "Steam achievement condition: Unlock 9 Characters",
+    "unlock_method": "Unlock 9 Characters",
+    "cost": "Needs verification.",
+    "mode": "Full game.",
+    "related_entities": [],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
+        "label": "Steam community achievements page",
+        "confidence": "high",
+        "notes": "Public achievement display names and descriptions."
+      },
+      {
+        "type": "public_source",
+        "path_or_url": "https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=3232380&format=json",
+        "label": "Steam global achievement percentages API",
+        "confidence": "medium",
+        "notes": "Public no-key endpoint with volatile global percentages."
+      }
+    ],
+    "verification_status": "Verified",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Global percentage is volatile; refresh before publishing exact percentage-driven claims.",
+    "steam_internal_name": "assemble_the_team_3",
+    "steam_global_percent_api": "0.3",
+    "steam_community_percent": "0.3%",
+    "icon_url": "https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/3232380/11f0ab46ee16970e428b3f00a2bed2c590c7f3be.jpg"
+  },
+  {
+    "id": "bending-reality",
+    "slug": "bending-reality",
+    "name": "Bending Reality",
+    "aliases": [],
+    "category": "achievements",
+    "short_description": "Survive a run with Teleport & Magnet",
+    "effect": "Steam achievement condition: Survive a run with Teleport & Magnet",
+    "unlock_method": "Survive a run with Teleport & Magnet",
+    "cost": "Needs verification.",
+    "mode": "Full game.",
+    "related_entities": [
+      "teleport",
+      "magnet"
+    ],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
+        "label": "Steam community achievements page",
+        "confidence": "high",
+        "notes": "Public achievement display names and descriptions."
+      },
+      {
+        "type": "public_source",
+        "path_or_url": "https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=3232380&format=json",
+        "label": "Steam global achievement percentages API",
+        "confidence": "medium",
+        "notes": "Public no-key endpoint with volatile global percentages."
+      }
+    ],
+    "verification_status": "Verified",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Global percentage is volatile; refresh before publishing exact percentage-driven claims.",
+    "steam_internal_name": "bending_reality",
+    "steam_global_percent_api": "0.7",
+    "steam_community_percent": "0.7%",
+    "icon_url": "https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/3232380/09676731a24ea33371063f26e82ab18a33dac762.jpg"
+  },
+  {
+    "id": "burning-through",
+    "slug": "burning-through",
+    "name": "Burning Through",
+    "aliases": [],
+    "category": "achievements",
+    "short_description": "Survive a run with Flamethrower & Fire Infusion",
+    "effect": "Steam achievement condition: Survive a run with Flamethrower & Fire Infusion",
+    "unlock_method": "Survive a run with Flamethrower & Fire Infusion",
+    "cost": "Needs verification.",
+    "mode": "Full game.",
+    "related_entities": [
+      "flamethrower",
+      "fire-infusion"
+    ],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
+        "label": "Steam community achievements page",
+        "confidence": "high",
+        "notes": "Public achievement display names and descriptions."
+      },
+      {
+        "type": "public_source",
+        "path_or_url": "https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=3232380&format=json",
+        "label": "Steam global achievement percentages API",
+        "confidence": "medium",
+        "notes": "Public no-key endpoint with volatile global percentages."
+      }
+    ],
+    "verification_status": "Verified",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Global percentage is volatile; refresh before publishing exact percentage-driven claims.",
+    "steam_internal_name": "burning_through",
+    "steam_global_percent_api": "0.2",
+    "steam_community_percent": "0.2%",
+    "icon_url": "https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/3232380/d125013a03049fb4ce3494e76f8bb90d06badac2.jpg"
+  },
+  {
+    "id": "caffeinated-chaos",
+    "slug": "caffeinated-chaos",
+    "name": "Caffeinated Chaos",
+    "aliases": [],
+    "category": "achievements",
+    "short_description": "Survive a run with Hot Tea & Energy Drink",
+    "effect": "Steam achievement condition: Survive a run with Hot Tea & Energy Drink",
+    "unlock_method": "Survive a run with Hot Tea & Energy Drink",
+    "cost": "Needs verification.",
+    "mode": "Full game.",
+    "related_entities": [
+      "hot-tea",
+      "energy-drink"
+    ],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
+        "label": "Steam community achievements page",
+        "confidence": "high",
+        "notes": "Public achievement display names and descriptions."
+      },
+      {
+        "type": "public_source",
+        "path_or_url": "https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=3232380&format=json",
+        "label": "Steam global achievement percentages API",
+        "confidence": "medium",
+        "notes": "Public no-key endpoint with volatile global percentages."
+      }
+    ],
+    "verification_status": "Verified",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Global percentage is volatile; refresh before publishing exact percentage-driven claims.",
+    "steam_internal_name": "caffeinated_chaos",
+    "steam_global_percent_api": "0.4",
+    "steam_community_percent": "0.4%",
+    "icon_url": "https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/3232380/b2b562f22a7a4965285d5dd66f7063e3629f5e16.jpg"
+  },
+  {
+    "id": "close-call-energy",
+    "slug": "close-call-energy",
+    "name": "Close Call Energy",
+    "aliases": [],
+    "category": "achievements",
+    "short_description": "Survive a run with Adrenaline & Spark",
+    "effect": "Steam achievement condition: Survive a run with Adrenaline & Spark",
+    "unlock_method": "Survive a run with Adrenaline & Spark",
+    "cost": "Needs verification.",
+    "mode": "Full game.",
+    "related_entities": [
+      "adrenaline",
+      "spark"
+    ],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
+        "label": "Steam community achievements page",
+        "confidence": "high",
+        "notes": "Public achievement display names and descriptions."
+      },
+      {
+        "type": "public_source",
+        "path_or_url": "https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=3232380&format=json",
+        "label": "Steam global achievement percentages API",
+        "confidence": "medium",
+        "notes": "Public no-key endpoint with volatile global percentages."
+      }
+    ],
+    "verification_status": "Verified",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Global percentage is volatile; refresh before publishing exact percentage-driven claims.",
+    "steam_internal_name": "close_call_energy",
+    "steam_global_percent_api": "0.7",
+    "steam_community_percent": "0.7%",
+    "icon_url": "https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/3232380/bc096cc8be4567487236694245ec8f6aef68ce3f.jpg"
+  },
+  {
+    "id": "cozy-on-the-go",
+    "slug": "cozy-on-the-go",
+    "name": "Cozy on the Go",
+    "aliases": [],
+    "category": "achievements",
+    "short_description": "Survive a run with Heater Sled, Hot Tea & Gloves",
+    "effect": "Steam achievement condition: Survive a run with Heater Sled, Hot Tea & Gloves",
+    "unlock_method": "Survive a run with Heater Sled, Hot Tea & Gloves",
+    "cost": "Needs verification.",
+    "mode": "Full game.",
+    "related_entities": [
+      "heater-sled",
+      "hot-tea",
+      "gloves"
+    ],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
+        "label": "Steam community achievements page",
+        "confidence": "high",
+        "notes": "Public achievement display names and descriptions."
+      },
+      {
+        "type": "public_source",
+        "path_or_url": "https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=3232380&format=json",
+        "label": "Steam global achievement percentages API",
+        "confidence": "medium",
+        "notes": "Public no-key endpoint with volatile global percentages."
+      }
+    ],
+    "verification_status": "Verified",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Global percentage is volatile; refresh before publishing exact percentage-driven claims.",
+    "steam_internal_name": "cozy_on_the_go",
+    "steam_global_percent_api": "0.1",
+    "steam_community_percent": "0.1%",
+    "icon_url": "https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/3232380/13782178868f2bbe8772391a18be002ff51908ac.jpg"
+  },
+  {
+    "id": "cursed-survival",
+    "slug": "cursed-survival",
+    "name": "Cursed Survival",
+    "aliases": [],
+    "category": "achievements",
+    "short_description": "Survive a run with Voodoo Curse & Vampirism",
+    "effect": "Steam achievement condition: Survive a run with Voodoo Curse & Vampirism",
+    "unlock_method": "Survive a run with Voodoo Curse & Vampirism",
+    "cost": "Needs verification.",
+    "mode": "Full game.",
+    "related_entities": [
+      "voodoo-curse",
+      "vampirism"
+    ],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
+        "label": "Steam community achievements page",
+        "confidence": "high",
+        "notes": "Public achievement display names and descriptions."
+      },
+      {
+        "type": "public_source",
+        "path_or_url": "https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=3232380&format=json",
+        "label": "Steam global achievement percentages API",
+        "confidence": "medium",
+        "notes": "Public no-key endpoint with volatile global percentages."
+      }
+    ],
+    "verification_status": "Verified",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Global percentage is volatile; refresh before publishing exact percentage-driven claims.",
+    "steam_internal_name": "cursed_survival",
+    "steam_global_percent_api": "3.9",
+    "steam_community_percent": "3.9%",
+    "icon_url": "https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/3232380/e38bfd64882ea86a930683df81d16c9d0ace8dc6.jpg"
+  },
+  {
+    "id": "deadly-dose",
+    "slug": "deadly-dose",
+    "name": "Deadly Dose",
+    "aliases": [],
+    "category": "achievements",
+    "short_description": "Survive a run with Poison Flask & Poison Infusion",
+    "effect": "Steam achievement condition: Survive a run with Poison Flask & Poison Infusion",
+    "unlock_method": "Survive a run with Poison Flask & Poison Infusion",
+    "cost": "Needs verification.",
+    "mode": "Full game.",
+    "related_entities": [
+      "poison-flask",
+      "poison-infusion"
+    ],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
+        "label": "Steam community achievements page",
+        "confidence": "high",
+        "notes": "Public achievement display names and descriptions."
+      },
+      {
+        "type": "public_source",
+        "path_or_url": "https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=3232380&format=json",
+        "label": "Steam global achievement percentages API",
+        "confidence": "medium",
+        "notes": "Public no-key endpoint with volatile global percentages."
+      }
+    ],
+    "verification_status": "Verified",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Global percentage is volatile; refresh before publishing exact percentage-driven claims.",
+    "steam_internal_name": "deadly_dose",
+    "steam_global_percent_api": "1.1",
+    "steam_community_percent": "1.2%",
+    "icon_url": "https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/3232380/b67f31250ed7791be3af0893996ca1b2376c55e5.jpg"
+  },
+  {
+    "id": "deep-freeze",
+    "slug": "deep-freeze",
+    "name": "Deep Freeze",
+    "aliases": [],
+    "category": "achievements",
+    "short_description": "Survive a run with Frost Bomb & Frost Infusion",
+    "effect": "Steam achievement condition: Survive a run with Frost Bomb & Frost Infusion",
+    "unlock_method": "Survive a run with Frost Bomb & Frost Infusion",
+    "cost": "Needs verification.",
+    "mode": "Full game.",
+    "related_entities": [
+      "frost-bomb",
+      "frost-infusion"
+    ],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
+        "label": "Steam community achievements page",
+        "confidence": "high",
+        "notes": "Public achievement display names and descriptions."
+      },
+      {
+        "type": "public_source",
+        "path_or_url": "https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=3232380&format=json",
+        "label": "Steam global achievement percentages API",
+        "confidence": "medium",
+        "notes": "Public no-key endpoint with volatile global percentages."
+      }
+    ],
+    "verification_status": "Verified",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Global percentage is volatile; refresh before publishing exact percentage-driven claims.",
+    "steam_internal_name": "deep_freeze",
+    "steam_global_percent_api": "0.1",
+    "steam_community_percent": "0.1%",
+    "icon_url": "https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/3232380/6d7d12be4c98f5f76e55b1d178af46b8f50ee70a.jpg"
+  },
+  {
+    "id": "demolition-run",
+    "slug": "demolition-run",
+    "name": "Demolition Run",
+    "aliases": [],
+    "category": "achievements",
+    "short_description": "Survive a run with Dynamite, Air Bomb & Pickaxe",
+    "effect": "Steam achievement condition: Survive a run with Dynamite, Air Bomb & Pickaxe",
+    "unlock_method": "Survive a run with Dynamite, Air Bomb & Pickaxe",
+    "cost": "Needs verification.",
+    "mode": "Full game.",
+    "related_entities": [
+      "dynamite",
+      "air-bomb",
+      "pickaxe"
+    ],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
+        "label": "Steam community achievements page",
+        "confidence": "high",
+        "notes": "Public achievement display names and descriptions."
+      },
+      {
+        "type": "public_source",
+        "path_or_url": "https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=3232380&format=json",
+        "label": "Steam global achievement percentages API",
+        "confidence": "medium",
+        "notes": "Public no-key endpoint with volatile global percentages."
+      }
+    ],
+    "verification_status": "Verified",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Global percentage is volatile; refresh before publishing exact percentage-driven claims.",
+    "steam_internal_name": "demolition_run",
+    "steam_global_percent_api": "2.8",
+    "steam_community_percent": "2.8%",
+    "icon_url": "https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/3232380/fefe74c85a716c758e4a532d746e6990f1b6e020.jpg"
+  },
+  {
+    "id": "elemental-mayhem",
+    "slug": "elemental-mayhem",
+    "name": "Elemental Mayhem",
+    "aliases": [],
+    "category": "achievements",
+    "short_description": "Survive a run with Chain Lightning, Frost Bomb & Poison Flask",
+    "effect": "Steam achievement condition: Survive a run with Chain Lightning, Frost Bomb & Poison Flask",
+    "unlock_method": "Survive a run with Chain Lightning, Frost Bomb & Poison Flask",
+    "cost": "Needs verification.",
+    "mode": "Full game.",
+    "related_entities": [
+      "chain-lightning",
+      "frost-bomb",
+      "poison-flask"
+    ],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
+        "label": "Steam community achievements page",
+        "confidence": "high",
+        "notes": "Public achievement display names and descriptions."
+      },
+      {
+        "type": "public_source",
+        "path_or_url": "https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=3232380&format=json",
+        "label": "Steam global achievement percentages API",
+        "confidence": "medium",
+        "notes": "Public no-key endpoint with volatile global percentages."
+      }
+    ],
+    "verification_status": "Verified",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Global percentage is volatile; refresh before publishing exact percentage-driven claims.",
+    "steam_internal_name": "elemental_mayhem",
+    "steam_global_percent_api": "0.0",
+    "steam_community_percent": "0.1%",
+    "icon_url": "https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/3232380/bd3ea5da666bdae5907a0eaf0d7c782ef1677c3f.jpg"
+  },
+  {
+    "id": "master-of-the-tongue",
+    "slug": "master-of-the-tongue",
+    "name": "Master of the Tongue",
+    "aliases": [],
+    "category": "achievements",
+    "short_description": "Survive a run with Tongue Attack & Curvy Tongue",
+    "effect": "Steam achievement condition: Survive a run with Tongue Attack & Curvy Tongue",
+    "unlock_method": "Survive a run with Tongue Attack & Curvy Tongue",
+    "cost": "Needs verification.",
+    "mode": "Full game.",
+    "related_entities": [
+      "tongue-attack",
+      "curvy-tongue"
+    ],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
+        "label": "Steam community achievements page",
+        "confidence": "high",
+        "notes": "Public achievement display names and descriptions."
+      },
+      {
+        "type": "public_source",
+        "path_or_url": "https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=3232380&format=json",
+        "label": "Steam global achievement percentages API",
+        "confidence": "medium",
+        "notes": "Public no-key endpoint with volatile global percentages."
+      }
+    ],
+    "verification_status": "Verified",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Global percentage is volatile; refresh before publishing exact percentage-driven claims.",
+    "steam_internal_name": "master_of_the_tongue",
+    "steam_global_percent_api": "9.6",
+    "steam_community_percent": "9.6%",
+    "icon_url": "https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/3232380/60ec9b9fc17b2fb2dec41279f98cfdedcee24bfb.jpg"
+  },
+  {
+    "id": "old-school-explorer",
+    "slug": "old-school-explorer",
+    "name": "Old School Explorer",
+    "aliases": [],
+    "category": "achievements",
+    "short_description": "Survive a run with Map, Shovel & Cart",
+    "effect": "Steam achievement condition: Survive a run with Map, Shovel & Cart",
+    "unlock_method": "Survive a run with Map, Shovel & Cart",
+    "cost": "Needs verification.",
+    "mode": "Full game.",
+    "related_entities": [
+      "map",
+      "shovel",
+      "cart"
+    ],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
+        "label": "Steam community achievements page",
+        "confidence": "high",
+        "notes": "Public achievement display names and descriptions."
+      },
+      {
+        "type": "public_source",
+        "path_or_url": "https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=3232380&format=json",
+        "label": "Steam global achievement percentages API",
+        "confidence": "medium",
+        "notes": "Public no-key endpoint with volatile global percentages."
+      }
+    ],
+    "verification_status": "Verified",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Global percentage is volatile; refresh before publishing exact percentage-driven claims.",
+    "steam_internal_name": "old_school_explorer",
+    "steam_global_percent_api": "64.8",
+    "steam_community_percent": "64.7%",
+    "icon_url": "https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/3232380/bde329e39e9e27b133ff5d81c290e393e03e78d0.jpg"
+  },
+  {
+    "id": "pathfinder-i",
+    "slug": "pathfinder-i",
+    "name": "Pathfinder I",
+    "aliases": [],
+    "category": "achievements",
+    "short_description": "Unlock 1 Location",
+    "effect": "Steam achievement condition: Unlock 1 Location",
+    "unlock_method": "Unlock 1 Location",
+    "cost": "Needs verification.",
+    "mode": "Full game.",
+    "related_entities": [],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
+        "label": "Steam community achievements page",
+        "confidence": "high",
+        "notes": "Public achievement display names and descriptions."
+      },
+      {
+        "type": "public_source",
+        "path_or_url": "https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=3232380&format=json",
+        "label": "Steam global achievement percentages API",
+        "confidence": "medium",
+        "notes": "Public no-key endpoint with volatile global percentages."
+      }
+    ],
+    "verification_status": "Verified",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Global percentage is volatile; refresh before publishing exact percentage-driven claims.",
+    "steam_internal_name": "pathfinder_1",
+    "steam_global_percent_api": "76.5",
+    "steam_community_percent": "76.3%",
+    "icon_url": "https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/3232380/31af8b6e05d7297508a48e6e4150d2f17b53e00e.jpg"
+  },
+  {
+    "id": "pathfinder-ii",
+    "slug": "pathfinder-ii",
+    "name": "Pathfinder II",
+    "aliases": [],
+    "category": "achievements",
+    "short_description": "Unlock 5 Locations",
+    "effect": "Steam achievement condition: Unlock 5 Locations",
+    "unlock_method": "Unlock 5 Locations",
+    "cost": "Needs verification.",
+    "mode": "Full game.",
+    "related_entities": [],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
+        "label": "Steam community achievements page",
+        "confidence": "high",
+        "notes": "Public achievement display names and descriptions."
+      },
+      {
+        "type": "public_source",
+        "path_or_url": "https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=3232380&format=json",
+        "label": "Steam global achievement percentages API",
+        "confidence": "medium",
+        "notes": "Public no-key endpoint with volatile global percentages."
+      }
+    ],
+    "verification_status": "Verified",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Global percentage is volatile; refresh before publishing exact percentage-driven claims.",
+    "steam_internal_name": "pathfinder_2",
+    "steam_global_percent_api": "13.1",
+    "steam_community_percent": "13.3%",
+    "icon_url": "https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/3232380/6df446f0d745aee517a763c851184c518aa63408.jpg"
+  },
+  {
+    "id": "pathfinder-iii",
+    "slug": "pathfinder-iii",
+    "name": "Pathfinder III",
+    "aliases": [],
+    "category": "achievements",
+    "short_description": "Unlock 15 Locations",
+    "effect": "Steam achievement condition: Unlock 15 Locations",
+    "unlock_method": "Unlock 15 Locations",
+    "cost": "Needs verification.",
+    "mode": "Full game.",
+    "related_entities": [],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
+        "label": "Steam community achievements page",
+        "confidence": "high",
+        "notes": "Public achievement display names and descriptions."
+      },
+      {
+        "type": "public_source",
+        "path_or_url": "https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=3232380&format=json",
+        "label": "Steam global achievement percentages API",
+        "confidence": "medium",
+        "notes": "Public no-key endpoint with volatile global percentages."
+      }
+    ],
+    "verification_status": "Verified",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Global percentage is volatile; refresh before publishing exact percentage-driven claims.",
+    "steam_internal_name": "pathfinder_3",
+    "steam_global_percent_api": "0.4",
+    "steam_community_percent": "0.4%",
+    "icon_url": "https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/3232380/42b00f6185c8b7dd32bd8d46cb0c1d28b70458e6.jpg"
+  },
+  {
+    "id": "peak-performance-i",
+    "slug": "peak-performance-i",
+    "name": "Peak Performance I",
+    "aliases": [],
+    "category": "achievements",
+    "short_description": "Fully upgrade 1 Character",
+    "effect": "Steam achievement condition: Fully upgrade 1 Character",
+    "unlock_method": "Fully upgrade 1 Character",
+    "cost": "Needs verification.",
+    "mode": "Full game.",
+    "related_entities": [],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
+        "label": "Steam community achievements page",
+        "confidence": "high",
+        "notes": "Public achievement display names and descriptions."
+      },
+      {
+        "type": "public_source",
+        "path_or_url": "https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=3232380&format=json",
+        "label": "Steam global achievement percentages API",
+        "confidence": "medium",
+        "notes": "Public no-key endpoint with volatile global percentages."
+      }
+    ],
+    "verification_status": "Verified",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Global percentage is volatile; refresh before publishing exact percentage-driven claims.",
+    "steam_internal_name": "peak_performance_1",
+    "steam_global_percent_api": "22.0",
+    "steam_community_percent": "22.0%",
+    "icon_url": "https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/3232380/b3f991fc4e86534db8723a2d25ad66dd9ac13583.jpg"
+  },
+  {
+    "id": "peak-performance-ii",
+    "slug": "peak-performance-ii",
+    "name": "Peak Performance II",
+    "aliases": [],
+    "category": "achievements",
+    "short_description": "Fully upgrade 5 Characters",
+    "effect": "Steam achievement condition: Fully upgrade 5 Characters",
+    "unlock_method": "Fully upgrade 5 Characters",
+    "cost": "Needs verification.",
+    "mode": "Full game.",
+    "related_entities": [],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
+        "label": "Steam community achievements page",
+        "confidence": "high",
+        "notes": "Public achievement display names and descriptions."
+      },
+      {
+        "type": "public_source",
+        "path_or_url": "https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=3232380&format=json",
+        "label": "Steam global achievement percentages API",
+        "confidence": "medium",
+        "notes": "Public no-key endpoint with volatile global percentages."
+      }
+    ],
+    "verification_status": "Verified",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Global percentage is volatile; refresh before publishing exact percentage-driven claims.",
+    "steam_internal_name": "peak_performance_2",
+    "steam_global_percent_api": "0.8",
+    "steam_community_percent": "0.8%",
+    "icon_url": "https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/3232380/8b9e16d78f479225232d4113c897422a319640cc.jpg"
+  },
+  {
+    "id": "peak-performance-iii",
+    "slug": "peak-performance-iii",
+    "name": "Peak Performance III",
+    "aliases": [],
+    "category": "achievements",
+    "short_description": "Fully upgrade 10 Characters",
+    "effect": "Steam achievement condition: Fully upgrade 10 Characters",
+    "unlock_method": "Fully upgrade 10 Characters",
+    "cost": "Needs verification.",
+    "mode": "Full game.",
+    "related_entities": [],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
+        "label": "Steam community achievements page",
+        "confidence": "high",
+        "notes": "Public achievement display names and descriptions."
+      },
+      {
+        "type": "public_source",
+        "path_or_url": "https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=3232380&format=json",
+        "label": "Steam global achievement percentages API",
+        "confidence": "medium",
+        "notes": "Public no-key endpoint with volatile global percentages."
+      }
+    ],
+    "verification_status": "Verified",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Global percentage is volatile; refresh before publishing exact percentage-driven claims.",
+    "steam_internal_name": "peak_performance_3",
+    "steam_global_percent_api": "0.0",
+    "steam_community_percent": "0.1%",
+    "icon_url": "https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/3232380/9192f0067e2fd9f0d33ab27e30b688f94219768a.jpg"
+  },
+  {
+    "id": "power-hungry-i",
+    "slug": "power-hungry-i",
+    "name": "Power Hungry I",
+    "aliases": [],
+    "category": "achievements",
+    "short_description": "Unlock 1 Skill",
+    "effect": "Steam achievement condition: Unlock 1 Skill",
+    "unlock_method": "Unlock 1 Skill",
+    "cost": "Needs verification.",
+    "mode": "Full game.",
+    "related_entities": [],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
+        "label": "Steam community achievements page",
+        "confidence": "high",
+        "notes": "Public achievement display names and descriptions."
+      },
+      {
+        "type": "public_source",
+        "path_or_url": "https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=3232380&format=json",
+        "label": "Steam global achievement percentages API",
+        "confidence": "medium",
+        "notes": "Public no-key endpoint with volatile global percentages."
+      }
+    ],
+    "verification_status": "Verified",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Global percentage is volatile; refresh before publishing exact percentage-driven claims.",
+    "steam_internal_name": "power_hungry_1",
+    "steam_global_percent_api": "86.4",
+    "steam_community_percent": "86.1%",
+    "icon_url": "https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/3232380/96da977920e03d5fbd67c8bc03773312cc532365.jpg"
+  },
+  {
+    "id": "power-hungry-ii",
+    "slug": "power-hungry-ii",
+    "name": "Power Hungry II",
+    "aliases": [],
+    "category": "achievements",
+    "short_description": "Unlock 5 Skills",
+    "effect": "Steam achievement condition: Unlock 5 Skills",
+    "unlock_method": "Unlock 5 Skills",
+    "cost": "Needs verification.",
+    "mode": "Full game.",
+    "related_entities": [],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
+        "label": "Steam community achievements page",
+        "confidence": "high",
+        "notes": "Public achievement display names and descriptions."
+      },
+      {
+        "type": "public_source",
+        "path_or_url": "https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=3232380&format=json",
+        "label": "Steam global achievement percentages API",
+        "confidence": "medium",
+        "notes": "Public no-key endpoint with volatile global percentages."
+      }
+    ],
+    "verification_status": "Verified",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Global percentage is volatile; refresh before publishing exact percentage-driven claims.",
+    "steam_internal_name": "power_hungry_2",
+    "steam_global_percent_api": "64.6",
+    "steam_community_percent": "64.4%",
+    "icon_url": "https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/3232380/72db0c5f030a54daa0e77598fa24e82fedc6f20d.jpg"
+  },
+  {
+    "id": "power-hungry-iii",
+    "slug": "power-hungry-iii",
+    "name": "Power Hungry III",
+    "aliases": [],
+    "category": "achievements",
+    "short_description": "Unlock 10 Skills",
+    "effect": "Steam achievement condition: Unlock 10 Skills",
+    "unlock_method": "Unlock 10 Skills",
+    "cost": "Needs verification.",
+    "mode": "Full game.",
+    "related_entities": [],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
+        "label": "Steam community achievements page",
+        "confidence": "high",
+        "notes": "Public achievement display names and descriptions."
+      },
+      {
+        "type": "public_source",
+        "path_or_url": "https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=3232380&format=json",
+        "label": "Steam global achievement percentages API",
+        "confidence": "medium",
+        "notes": "Public no-key endpoint with volatile global percentages."
+      }
+    ],
+    "verification_status": "Verified",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Global percentage is volatile; refresh before publishing exact percentage-driven claims.",
+    "steam_internal_name": "power_hungry_3",
+    "steam_global_percent_api": "45.4",
+    "steam_community_percent": "45.2%",
+    "icon_url": "https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/3232380/958b2564a92ff6fa29076c35c9163a5df9a94e8b.jpg"
+  },
+  {
+    "id": "power-hungry-iv",
+    "slug": "power-hungry-iv",
+    "name": "Power Hungry IV",
+    "aliases": [],
+    "category": "achievements",
+    "short_description": "Unlock 20 Skills",
+    "effect": "Steam achievement condition: Unlock 20 Skills",
+    "unlock_method": "Unlock 20 Skills",
+    "cost": "Needs verification.",
+    "mode": "Full game.",
+    "related_entities": [],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
+        "label": "Steam community achievements page",
+        "confidence": "high",
+        "notes": "Public achievement display names and descriptions."
+      },
+      {
+        "type": "public_source",
+        "path_or_url": "https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=3232380&format=json",
+        "label": "Steam global achievement percentages API",
+        "confidence": "medium",
+        "notes": "Public no-key endpoint with volatile global percentages."
+      }
+    ],
+    "verification_status": "Verified",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Global percentage is volatile; refresh before publishing exact percentage-driven claims.",
+    "steam_internal_name": "power_hungry_4",
+    "steam_global_percent_api": "16.0",
+    "steam_community_percent": "16.0%",
+    "icon_url": "https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/3232380/42099f9e33e311a52976bbe3dcee92b85dba6d5c.jpg"
+  },
+  {
+    "id": "power-hungry-v",
+    "slug": "power-hungry-v",
+    "name": "Power Hungry V",
+    "aliases": [],
+    "category": "achievements",
+    "short_description": "Unlock 30 Skills",
+    "effect": "Steam achievement condition: Unlock 30 Skills",
+    "unlock_method": "Unlock 30 Skills",
+    "cost": "Needs verification.",
+    "mode": "Full game.",
+    "related_entities": [],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
+        "label": "Steam community achievements page",
+        "confidence": "high",
+        "notes": "Public achievement display names and descriptions."
+      },
+      {
+        "type": "public_source",
+        "path_or_url": "https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=3232380&format=json",
+        "label": "Steam global achievement percentages API",
+        "confidence": "medium",
+        "notes": "Public no-key endpoint with volatile global percentages."
+      }
+    ],
+    "verification_status": "Verified",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Global percentage is volatile; refresh before publishing exact percentage-driven claims.",
+    "steam_internal_name": "power_hungry_5",
+    "steam_global_percent_api": "3.9",
+    "steam_community_percent": "4.0%",
+    "icon_url": "https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/3232380/bfaaac25d21fc0d18d95f30093f2f37b67913874.jpg"
+  },
+  {
+    "id": "relic-hunter-i",
+    "slug": "relic-hunter-i",
+    "name": "Relic Hunter I",
+    "aliases": [],
+    "category": "achievements",
+    "short_description": "Collect 1 Artifact",
+    "effect": "Steam achievement condition: Collect 1 Artifact",
+    "unlock_method": "Collect 1 Artifact",
+    "cost": "Needs verification.",
+    "mode": "Full game.",
+    "related_entities": [],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
+        "label": "Steam community achievements page",
+        "confidence": "high",
+        "notes": "Public achievement display names and descriptions."
+      },
+      {
+        "type": "public_source",
+        "path_or_url": "https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=3232380&format=json",
+        "label": "Steam global achievement percentages API",
+        "confidence": "medium",
+        "notes": "Public no-key endpoint with volatile global percentages."
+      }
+    ],
+    "verification_status": "Verified",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Global percentage is volatile; refresh before publishing exact percentage-driven claims.",
+    "steam_internal_name": "relic_hunter_1",
+    "steam_global_percent_api": "85.4",
+    "steam_community_percent": "85.1%",
+    "icon_url": "https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/3232380/3f175040ca91ea04fcde8eb34bb14b2733e9d46c.jpg"
+  },
+  {
+    "id": "relic-hunter-ii",
+    "slug": "relic-hunter-ii",
+    "name": "Relic Hunter II",
+    "aliases": [],
+    "category": "achievements",
+    "short_description": "Collect 5 Artifacts",
+    "effect": "Steam achievement condition: Collect 5 Artifacts",
+    "unlock_method": "Collect 5 Artifacts",
+    "cost": "Needs verification.",
+    "mode": "Full game.",
+    "related_entities": [],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
+        "label": "Steam community achievements page",
+        "confidence": "high",
+        "notes": "Public achievement display names and descriptions."
+      },
+      {
+        "type": "public_source",
+        "path_or_url": "https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=3232380&format=json",
+        "label": "Steam global achievement percentages API",
+        "confidence": "medium",
+        "notes": "Public no-key endpoint with volatile global percentages."
+      }
+    ],
+    "verification_status": "Verified",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Global percentage is volatile; refresh before publishing exact percentage-driven claims.",
+    "steam_internal_name": "relic_hunter_2",
+    "steam_global_percent_api": "68.1",
+    "steam_community_percent": "68.0%",
+    "icon_url": "https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/3232380/b204cfb2d1e5a4a6b3b417beeb4d2759df4dbd07.jpg"
+  },
+  {
+    "id": "relic-hunter-iii",
+    "slug": "relic-hunter-iii",
+    "name": "Relic Hunter III",
+    "aliases": [],
+    "category": "achievements",
+    "short_description": "Collect 10 Artifacts",
+    "effect": "Steam achievement condition: Collect 10 Artifacts",
+    "unlock_method": "Collect 10 Artifacts",
+    "cost": "Needs verification.",
+    "mode": "Full game.",
+    "related_entities": [],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
+        "label": "Steam community achievements page",
+        "confidence": "high",
+        "notes": "Public achievement display names and descriptions."
+      },
+      {
+        "type": "public_source",
+        "path_or_url": "https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=3232380&format=json",
+        "label": "Steam global achievement percentages API",
+        "confidence": "medium",
+        "notes": "Public no-key endpoint with volatile global percentages."
+      }
+    ],
+    "verification_status": "Verified",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Global percentage is volatile; refresh before publishing exact percentage-driven claims.",
+    "steam_internal_name": "relic_hunter_3",
+    "steam_global_percent_api": "49.3",
+    "steam_community_percent": "49.3%",
+    "icon_url": "https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/3232380/3345ad2a1fa71647051e1a10929b06e6cf883e43.jpg"
+  },
+  {
+    "id": "relic-hunter-iv",
+    "slug": "relic-hunter-iv",
+    "name": "Relic Hunter IV",
+    "aliases": [],
+    "category": "achievements",
+    "short_description": "Collect 20 Artifacts",
+    "effect": "Steam achievement condition: Collect 20 Artifacts",
+    "unlock_method": "Collect 20 Artifacts",
+    "cost": "Needs verification.",
+    "mode": "Full game.",
+    "related_entities": [],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
+        "label": "Steam community achievements page",
+        "confidence": "high",
+        "notes": "Public achievement display names and descriptions."
+      },
+      {
+        "type": "public_source",
+        "path_or_url": "https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=3232380&format=json",
+        "label": "Steam global achievement percentages API",
+        "confidence": "medium",
+        "notes": "Public no-key endpoint with volatile global percentages."
+      }
+    ],
+    "verification_status": "Verified",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Global percentage is volatile; refresh before publishing exact percentage-driven claims.",
+    "steam_internal_name": "relic_hunter_4",
+    "steam_global_percent_api": "20.3",
+    "steam_community_percent": "20.3%",
+    "icon_url": "https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/3232380/ad7b563b3c85c04cb9256e9ba831852eee1b97c5.jpg"
+  },
+  {
+    "id": "relic-hunter-v",
+    "slug": "relic-hunter-v",
+    "name": "Relic Hunter V",
+    "aliases": [],
+    "category": "achievements",
+    "short_description": "Collect 30 Artifacts",
+    "effect": "Steam achievement condition: Collect 30 Artifacts",
+    "unlock_method": "Collect 30 Artifacts",
+    "cost": "Needs verification.",
+    "mode": "Full game.",
+    "related_entities": [],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
+        "label": "Steam community achievements page",
+        "confidence": "high",
+        "notes": "Public achievement display names and descriptions."
+      },
+      {
+        "type": "public_source",
+        "path_or_url": "https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=3232380&format=json",
+        "label": "Steam global achievement percentages API",
+        "confidence": "medium",
+        "notes": "Public no-key endpoint with volatile global percentages."
+      }
+    ],
+    "verification_status": "Verified",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Global percentage is volatile; refresh before publishing exact percentage-driven claims.",
+    "steam_internal_name": "relic_hunter_5",
+    "steam_global_percent_api": "3.2",
+    "steam_community_percent": "3.3%",
+    "icon_url": "https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/3232380/fe90f6eba47d52644159a134195466547a6e71e1.jpg"
+  },
+  {
+    "id": "seeing-stars",
+    "slug": "seeing-stars",
+    "name": "Seeing Stars",
+    "aliases": [],
+    "category": "achievements",
+    "short_description": "Survive a run with Flashbang & Stun Infusion",
+    "effect": "Steam achievement condition: Survive a run with Flashbang & Stun Infusion",
+    "unlock_method": "Survive a run with Flashbang & Stun Infusion",
+    "cost": "Needs verification.",
+    "mode": "Full game.",
+    "related_entities": [
+      "flashbang",
+      "stun-infusion"
+    ],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
+        "label": "Steam community achievements page",
+        "confidence": "high",
+        "notes": "Public achievement display names and descriptions."
+      },
+      {
+        "type": "public_source",
+        "path_or_url": "https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=3232380&format=json",
+        "label": "Steam global achievement percentages API",
+        "confidence": "medium",
+        "notes": "Public no-key endpoint with volatile global percentages."
+      }
+    ],
+    "verification_status": "Verified",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Global percentage is volatile; refresh before publishing exact percentage-driven claims.",
+    "steam_internal_name": "seeing_stars",
+    "steam_global_percent_api": "0.1",
+    "steam_community_percent": "0.1%",
+    "icon_url": "https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/3232380/0ff4b7355492f1fe3faa53970dcbdae66b69a7b0.jpg"
+  },
+  {
+    "id": "shock-therapy",
+    "slug": "shock-therapy",
+    "name": "Shock Therapy",
+    "aliases": [],
+    "category": "achievements",
+    "short_description": "Survive a run with Chain Lightning & Electric Infusion",
+    "effect": "Steam achievement condition: Survive a run with Chain Lightning & Electric Infusion",
+    "unlock_method": "Survive a run with Chain Lightning & Electric Infusion",
+    "cost": "Needs verification.",
+    "mode": "Full game.",
+    "related_entities": [
+      "chain-lightning",
+      "electric-infusion"
+    ],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
+        "label": "Steam community achievements page",
+        "confidence": "high",
+        "notes": "Public achievement display names and descriptions."
+      },
+      {
+        "type": "public_source",
+        "path_or_url": "https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=3232380&format=json",
+        "label": "Steam global achievement percentages API",
+        "confidence": "medium",
+        "notes": "Public no-key endpoint with volatile global percentages."
+      }
+    ],
+    "verification_status": "Verified",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Global percentage is volatile; refresh before publishing exact percentage-driven claims.",
+    "steam_internal_name": "shock_therapy",
+    "steam_global_percent_api": "0.0",
+    "steam_community_percent": "0.1%",
+    "icon_url": "https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/3232380/798cbf84ac7294477441fcf28da6d4e19ce3745e.jpg"
+  },
+  {
+    "id": "snow-day-arsenal",
+    "slug": "snow-day-arsenal",
+    "name": "Snow Day Arsenal",
+    "aliases": [],
+    "category": "achievements",
+    "short_description": "Survive a run with Gloves, Snowball Volley & Piercing Icicles",
+    "effect": "Steam achievement condition: Survive a run with Gloves, Snowball Volley & Piercing Icicles",
+    "unlock_method": "Survive a run with Gloves, Snowball Volley & Piercing Icicles",
+    "cost": "Needs verification.",
+    "mode": "Full game.",
+    "related_entities": [
+      "gloves",
+      "snowball-volley",
+      "piercing-icicles"
+    ],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
+        "label": "Steam community achievements page",
+        "confidence": "high",
+        "notes": "Public achievement display names and descriptions."
+      },
+      {
+        "type": "public_source",
+        "path_or_url": "https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=3232380&format=json",
+        "label": "Steam global achievement percentages API",
+        "confidence": "medium",
+        "notes": "Public no-key endpoint with volatile global percentages."
+      }
+    ],
+    "verification_status": "Verified",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Global percentage is volatile; refresh before publishing exact percentage-driven claims.",
+    "steam_internal_name": "snow_day_arsenal",
+    "steam_global_percent_api": "0.0",
+    "steam_community_percent": "0.1%",
+    "icon_url": "https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/3232380/3eb5f0757eb6b208adac802ea2af678fea1594c5.jpg"
+  },
+  {
+    "id": "snow-master-i",
+    "slug": "snow-master-i",
+    "name": "Snow Master I",
+    "aliases": [],
+    "category": "achievements",
+    "short_description": "Fully complete 1 Location",
+    "effect": "Steam achievement condition: Fully complete 1 Location",
+    "unlock_method": "Fully complete 1 Location",
+    "cost": "Needs verification.",
+    "mode": "Full game.",
+    "related_entities": [],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
+        "label": "Steam community achievements page",
+        "confidence": "high",
+        "notes": "Public achievement display names and descriptions."
+      },
+      {
+        "type": "public_source",
+        "path_or_url": "https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=3232380&format=json",
+        "label": "Steam global achievement percentages API",
+        "confidence": "medium",
+        "notes": "Public no-key endpoint with volatile global percentages."
+      }
+    ],
+    "verification_status": "Verified",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Global percentage is volatile; refresh before publishing exact percentage-driven claims.",
+    "steam_internal_name": "snow_master_1",
+    "steam_global_percent_api": "67.3",
+    "steam_community_percent": "67.2%",
+    "icon_url": "https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/3232380/89a9a76e8bd8eaf084e968b40dd935fa7dd4a81d.jpg"
+  },
+  {
+    "id": "snow-master-ii",
+    "slug": "snow-master-ii",
+    "name": "Snow Master II",
+    "aliases": [],
+    "category": "achievements",
+    "short_description": "Fully complete 5 Locations",
+    "effect": "Steam achievement condition: Fully complete 5 Locations",
+    "unlock_method": "Fully complete 5 Locations",
+    "cost": "Needs verification.",
+    "mode": "Full game.",
+    "related_entities": [],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
+        "label": "Steam community achievements page",
+        "confidence": "high",
+        "notes": "Public achievement display names and descriptions."
+      },
+      {
+        "type": "public_source",
+        "path_or_url": "https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=3232380&format=json",
+        "label": "Steam global achievement percentages API",
+        "confidence": "medium",
+        "notes": "Public no-key endpoint with volatile global percentages."
+      }
+    ],
+    "verification_status": "Verified",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Global percentage is volatile; refresh before publishing exact percentage-driven claims.",
+    "steam_internal_name": "snow_master_2",
+    "steam_global_percent_api": "14.3",
+    "steam_community_percent": "14.4%",
+    "icon_url": "https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/3232380/067fe6301f3c88d490d13b3c170ed2b8f45d49de.jpg"
+  },
+  {
+    "id": "snow-master-iii",
+    "slug": "snow-master-iii",
+    "name": "Snow Master III",
+    "aliases": [],
+    "category": "achievements",
+    "short_description": "Fully complete 15 Locations",
+    "effect": "Steam achievement condition: Fully complete 15 Locations",
+    "unlock_method": "Fully complete 15 Locations",
+    "cost": "Needs verification.",
+    "mode": "Full game.",
+    "related_entities": [],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
+        "label": "Steam community achievements page",
+        "confidence": "high",
+        "notes": "Public achievement display names and descriptions."
+      },
+      {
+        "type": "public_source",
+        "path_or_url": "https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=3232380&format=json",
+        "label": "Steam global achievement percentages API",
+        "confidence": "medium",
+        "notes": "Public no-key endpoint with volatile global percentages."
+      }
+    ],
+    "verification_status": "Verified",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Global percentage is volatile; refresh before publishing exact percentage-driven claims.",
+    "steam_internal_name": "snow_master_3",
+    "steam_global_percent_api": "0.3",
+    "steam_community_percent": "0.3%",
+    "icon_url": "https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/3232380/2fb83fc4772d864fa5836193b9e4a95c86c588ea.jpg"
+  },
+  {
+    "id": "still-standing",
+    "slug": "still-standing",
+    "name": "Still Standing",
+    "aliases": [],
+    "category": "achievements",
+    "short_description": "Survive a run with Shield & Revive",
+    "effect": "Steam achievement condition: Survive a run with Shield & Revive",
+    "unlock_method": "Survive a run with Shield & Revive",
+    "cost": "Needs verification.",
+    "mode": "Full game.",
+    "related_entities": [
+      "shield",
+      "revive"
+    ],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
+        "label": "Steam community achievements page",
+        "confidence": "high",
+        "notes": "Public achievement display names and descriptions."
+      },
+      {
+        "type": "public_source",
+        "path_or_url": "https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=3232380&format=json",
+        "label": "Steam global achievement percentages API",
+        "confidence": "medium",
+        "notes": "Public no-key endpoint with volatile global percentages."
+      }
+    ],
+    "verification_status": "Verified",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Global percentage is volatile; refresh before publishing exact percentage-driven claims.",
+    "steam_internal_name": "still_standing",
+    "steam_global_percent_api": "2.2",
+    "steam_community_percent": "2.2%",
+    "icon_url": "https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/3232380/a7e8477482f6be4f3990a4ec67ecf5000d90f4a7.jpg"
+  },
+  {
+    "id": "the-animal-squad",
+    "slug": "the-animal-squad",
+    "name": "The Animal Squad",
+    "aliases": [],
+    "category": "achievements",
+    "short_description": "Survive a run with Penguin, Mole & Owl",
+    "effect": "Steam achievement condition: Survive a run with Penguin, Mole & Owl",
+    "unlock_method": "Survive a run with Penguin, Mole & Owl",
+    "cost": "Needs verification.",
+    "mode": "Full game.",
+    "related_entities": [
+      "penguin",
+      "mole",
+      "owl"
+    ],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
+        "label": "Steam community achievements page",
+        "confidence": "high",
+        "notes": "Public achievement display names and descriptions."
+      },
+      {
+        "type": "public_source",
+        "path_or_url": "https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=3232380&format=json",
+        "label": "Steam global achievement percentages API",
+        "confidence": "medium",
+        "notes": "Public no-key endpoint with volatile global percentages."
+      }
+    ],
+    "verification_status": "Verified",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Global percentage is volatile; refresh before publishing exact percentage-driven claims.",
+    "steam_internal_name": "the_animal_squad",
+    "steam_global_percent_api": "2.0",
+    "steam_community_percent": "2.0%",
+    "icon_url": "https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/3232380/e4a87926d00adb628d458992170897da75009ad7.jpg"
+  },
+  {
+    "id": "thermal-shock",
+    "slug": "thermal-shock",
+    "name": "Thermal Shock",
+    "aliases": [],
+    "category": "achievements",
+    "short_description": "Survive a run with Flamethrower & Frost Bomb",
+    "effect": "Steam achievement condition: Survive a run with Flamethrower & Frost Bomb",
+    "unlock_method": "Survive a run with Flamethrower & Frost Bomb",
+    "cost": "Needs verification.",
+    "mode": "Full game.",
+    "related_entities": [
+      "flamethrower",
+      "frost-bomb"
+    ],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
+        "label": "Steam community achievements page",
+        "confidence": "high",
+        "notes": "Public achievement display names and descriptions."
+      },
+      {
+        "type": "public_source",
+        "path_or_url": "https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=3232380&format=json",
+        "label": "Steam global achievement percentages API",
+        "confidence": "medium",
+        "notes": "Public no-key endpoint with volatile global percentages."
+      }
+    ],
+    "verification_status": "Verified",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Global percentage is volatile; refresh before publishing exact percentage-driven claims.",
+    "steam_internal_name": "thermal_shock",
+    "steam_global_percent_api": "2.0",
+    "steam_community_percent": "2.0%",
+    "icon_url": "https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/3232380/4b1412b50895d4396e716976e56cf4add103582b.jpg"
+  },
+  {
+    "id": "walking-through-hell",
+    "slug": "walking-through-hell",
+    "name": "Walking Through Hell",
+    "aliases": [],
+    "category": "achievements",
+    "short_description": "Survive a run with Death Field & Shield",
+    "effect": "Steam achievement condition: Survive a run with Death Field & Shield",
+    "unlock_method": "Survive a run with Death Field & Shield",
+    "cost": "Needs verification.",
+    "mode": "Full game.",
+    "related_entities": [
+      "death-field",
+      "shield"
+    ],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
+        "label": "Steam community achievements page",
+        "confidence": "high",
+        "notes": "Public achievement display names and descriptions."
+      },
+      {
+        "type": "public_source",
+        "path_or_url": "https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=3232380&format=json",
+        "label": "Steam global achievement percentages API",
+        "confidence": "medium",
+        "notes": "Public no-key endpoint with volatile global percentages."
+      }
+    ],
+    "verification_status": "Verified",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Global percentage is volatile; refresh before publishing exact percentage-driven claims.",
+    "steam_internal_name": "walking_through_hell",
+    "steam_global_percent_api": "0.1",
+    "steam_community_percent": "0.1%",
+    "icon_url": "https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/3232380/2c3ab12cd9f663f50f99bfd49ed7cccbbc9249ab.jpg"
+  }
+]

@@ -1,0 +1,98 @@
+[
+  {
+    "id": "eerie-creatures",
+    "slug": "eerie-creatures",
+    "name": "Eerie creatures",
+    "aliases": [],
+    "category": "enemies",
+    "short_description": "Eerie creatures are public enemy descriptors from official Steam copy.",
+    "effect": "Hostile enemy category; exact behavior needs verification.",
+    "unlock_method": "Needs verification.",
+    "cost": "Needs verification.",
+    "mode": "Core game and demo, except Peaceful Mode is described as monster-free.",
+    "related_entities": [],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://store.steampowered.com/app/3232380/FROGGY_HATES_SNOW/",
+        "label": "Steam full-game store page",
+        "confidence": "high",
+        "notes": "Official public Steam store listing."
+      },
+      {
+        "type": "public_source",
+        "path_or_url": "https://store.steampowered.com/app/4037600/FROGGY_HATES_SNOW_Demo/",
+        "label": "Steam demo store page",
+        "confidence": "high",
+        "notes": "Official public Steam demo listing."
+      }
+    ],
+    "verification_status": "Verified",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Specific enemy names and behaviors need verification."
+  },
+  {
+    "id": "mystical-creatures",
+    "slug": "mystical-creatures",
+    "name": "Mystical creatures",
+    "aliases": [],
+    "category": "enemies",
+    "short_description": "Mystical creatures are public enemy descriptors from official Steam copy.",
+    "effect": "Hostile enemy category; exact behavior needs verification.",
+    "unlock_method": "Needs verification.",
+    "cost": "Needs verification.",
+    "mode": "Core game and demo, except Peaceful Mode is described as monster-free.",
+    "related_entities": [],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://store.steampowered.com/app/3232380/FROGGY_HATES_SNOW/",
+        "label": "Steam full-game store page",
+        "confidence": "high",
+        "notes": "Official public Steam store listing."
+      },
+      {
+        "type": "public_source",
+        "path_or_url": "https://store.steampowered.com/app/4037600/FROGGY_HATES_SNOW_Demo/",
+        "label": "Steam demo store page",
+        "confidence": "high",
+        "notes": "Official public Steam demo listing."
+      }
+    ],
+    "verification_status": "Verified",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Specific enemy names and behaviors need verification."
+  },
+  {
+    "id": "obsidian-creatures",
+    "slug": "obsidian-creatures",
+    "name": "Obsidian creatures",
+    "aliases": [],
+    "category": "enemies",
+    "short_description": "Obsidian creatures are public enemy descriptors from official Steam copy.",
+    "effect": "Hostile enemy category; exact behavior needs verification.",
+    "unlock_method": "Needs verification.",
+    "cost": "Needs verification.",
+    "mode": "Core game and demo, except Peaceful Mode is described as monster-free.",
+    "related_entities": [],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://store.steampowered.com/app/3232380/FROGGY_HATES_SNOW/",
+        "label": "Steam full-game store page",
+        "confidence": "high",
+        "notes": "Official public Steam store listing."
+      },
+      {
+        "type": "public_source",
+        "path_or_url": "https://store.steampowered.com/app/4037600/FROGGY_HATES_SNOW_Demo/",
+        "label": "Steam demo store page",
+        "confidence": "high",
+        "notes": "Official public Steam demo listing."
+      }
+    ],
+    "verification_status": "Verified",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "Specific enemy names and behaviors need verification."
+  }
+]

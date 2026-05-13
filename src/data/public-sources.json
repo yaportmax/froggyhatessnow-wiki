@@ -1,0 +1,106 @@
+[
+  {
+    "id": "steam-full-store",
+    "type": "public_source",
+    "path_or_url": "https://store.steampowered.com/app/3232380/FROGGY_HATES_SNOW/",
+    "label": "Steam full-game store page",
+    "confidence": "high",
+    "notes": "Official public Steam listing for app 3232380."
+  },
+  {
+    "id": "steam-demo-store",
+    "type": "public_source",
+    "path_or_url": "https://store.steampowered.com/app/4037600/FROGGY_HATES_SNOW_Demo/",
+    "label": "Steam demo store page",
+    "confidence": "high",
+    "notes": "Official public Steam listing for demo app 4037600."
+  },
+  {
+    "id": "steam-full-appdetails",
+    "type": "public_source",
+    "path_or_url": "https://store.steampowered.com/api/appdetails?appids=3232380&cc=us&l=english",
+    "label": "Steam full-game appdetails API",
+    "confidence": "high",
+    "notes": "Public Steam store API data summarized without raw long description dumps."
+  },
+  {
+    "id": "steam-demo-appdetails",
+    "type": "public_source",
+    "path_or_url": "https://store.steampowered.com/api/appdetails?appids=4037600&cc=us&l=english",
+    "label": "Steam demo appdetails API",
+    "confidence": "high",
+    "notes": "Public Steam store API data summarized without raw long description dumps."
+  },
+  {
+    "id": "steam-full-achievements-page",
+    "type": "public_source",
+    "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
+    "label": "Steam community achievements page",
+    "confidence": "high",
+    "notes": "Public display names, descriptions, icons, and current global percentages."
+  },
+  {
+    "id": "steam-full-global-achievement-percentages",
+    "type": "public_source",
+    "path_or_url": "https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=3232380&format=json",
+    "label": "Steam global achievement percentages API",
+    "confidence": "high",
+    "notes": "Public no-key endpoint for internal achievement ids and volatile global percentages."
+  },
+  {
+    "id": "steam-full-review-summary",
+    "type": "public_source",
+    "path_or_url": "https://store.steampowered.com/appreviews/3232380?json=1&language=all&filter=summary&purchase_type=all&num_per_page=0",
+    "label": "Steam full-game review summary API",
+    "confidence": "medium",
+    "notes": "Summary fetched only; review text not redistributed. Current summary: {\"num_reviews\":10,\"review_score\":8,\"review_score_desc\":\"Very Positive\",\"total_positive\":176,\"total_negative\":15,\"total_reviews\":191}."
+  },
+  {
+    "id": "steam-demo-review-summary",
+    "type": "public_source",
+    "path_or_url": "https://store.steampowered.com/appreviews/4037600?json=1&language=all&filter=summary&purchase_type=all&num_per_page=0",
+    "label": "Steam demo review summary API",
+    "confidence": "medium",
+    "notes": "Summary fetched only; review text not redistributed. Current summary: {\"num_reviews\":10,\"review_score\":8,\"review_score_desc\":\"Very Positive\",\"total_positive\":139,\"total_negative\":3,\"total_reviews\":142}."
+  },
+  {
+    "id": "steamdb-full",
+    "type": "public_source",
+    "path_or_url": "https://steamdb.info/app/3232380/",
+    "label": "SteamDB full-game page",
+    "confidence": "medium",
+    "notes": "Third-party corroboration for app metadata, changenumbers, technologies, depots, and timestamps."
+  },
+  {
+    "id": "steamdb-demo",
+    "type": "public_source",
+    "path_or_url": "https://steamdb.info/app/4037600/",
+    "label": "SteamDB demo page",
+    "confidence": "medium",
+    "notes": "Third-party corroboration for demo metadata, parent app, depot, build, and timestamps."
+  },
+  {
+    "id": "digital-bandidos-page",
+    "type": "public_source",
+    "path_or_url": "https://digitalbandidos.com/games/froggy-hates-snow/",
+    "label": "Digital Bandidos game page",
+    "confidence": "medium",
+    "notes": "Publisher page for platforms, price, genre, and one-player listing."
+  },
+  {
+    "id": "steam-full-appdetails-summary",
+    "type": "public_source",
+    "path_or_url": "https://store.steampowered.com/api/appdetails?appids=3232380&cc=us&l=english",
+    "label": "Steam full-game appdetails summary",
+    "confidence": "high",
+    "notes": "Summarized facts: type=game, name=FROGGY HATES SNOW, release={\"coming_soon\":false,\"date\":\"May 7, 2026\"}, achievements={\"total\":42,\"highlighted\":[{\"icon\":\"31af8b6e05d7297508a48e6e4150d2f17b53e00e.jpg\",\"localized_name\":\"Pathfinder I\",\"name\":\"Pathfinder I\",\"path\":\"https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/3232380/31af8b6e05d7297508a48e6e4150d2f17b53e00e.jpg\"},{\"icon\":\"6df446f0d745aee517a763c851184c518aa63408.jpg\",\"localized_name\":\"Pathfinder II\",\"name\":\"Pathfinder II\",\"path\":\"https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/3232380/6df446f0d745aee517a763c851184c518aa63408.jpg\"},{\"icon\":\"42b00f6185c8b7dd32bd8d46cb0c1d28b70458e6.jpg\",\"localized_name\":\"Pathfinder III\",\"name\":\"Pathfinder III\",\"path\":\"https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/3232380/42b00f6185c8b7dd32bd8d46cb0c1d28b70458e6.jpg\"},{\"icon\":\"89a9a76e8bd8eaf084e968b40dd935fa7dd4a81d.jpg\",\"localized_name\":\"Snow Master I\",\"name\":\"Snow Master I\",\"path\":\"https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/3232380/89a9a76e8bd8eaf084e968b40dd935fa7dd4a81d.jpg\"},{\"icon\":\"067fe6301f3c88d490d13b3c170ed2b8f45d49de.jpg\",\"localized_name\":\"Snow Master II\",\"name\":\"Snow Master II\",\"path\":\"https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/3232380/067fe6301f3c88d490d13b3c170ed2b8f45d49de.jpg\"},{\"icon\":\"2fb83fc4772d864fa5836193b9e4a95c86c588ea.jpg\",\"localized_name\":\"Snow Master III\",\"name\":\"Snow Master III\",\"path\":\"https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/3232380/2fb83fc4772d864fa5836193b9e4a95c86c588ea.jpg\"},{\"icon\":\"5cd2fccb5cf20d7040827d0d8de2d10a0819398d.jpg\",\"localized_name\":\"Assemble the Team I\",\"name\":\"Assemble the Team I\",\"path\":\"https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/3232380/5cd2fccb5cf20d7040827d0d8de2d10a0819398d.jpg\"},{\"icon\":\"1bbb38ad30784505fedab4f60794df1164004cea.jpg\",\"localized_name\":\"Assemble the Team II\",\"name\":\"Assemble the Team II\",\"path\":\"https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/3232380/1bbb38ad30784505fedab4f60794df1164004cea.jpg\"},{\"icon\":\"b3f991fc4e86534db8723a2d25ad66dd9ac13583.jpg\",\"localized_name\":\"Peak Performance I\",\"name\":\"Peak Performance I\",\"path\":\"https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/3232380/b3f991fc4e86534db8723a2d25ad66dd9ac13583.jpg\"},{\"icon\":\"8b9e16d78f479225232d4113c897422a319640cc.jpg\",\"localized_name\":\"Peak Performance II\",\"name\":\"Peak Performance II\",\"path\":\"https://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/3232380/8b9e16d78f479225232d4113c897422a319640cc.jpg\"}]}, platforms={\"windows\":true,\"mac\":false,\"linux\":false}."
+  },
+  {
+    "id": "steam-demo-appdetails-summary",
+    "type": "public_source",
+    "path_or_url": "https://store.steampowered.com/api/appdetails?appids=4037600&cc=us&l=english",
+    "label": "Steam demo appdetails summary",
+    "confidence": "high",
+    "notes": "Summarized facts: type=demo, name=FROGGY HATES SNOW Demo, fullgame={\"appid\":\"3232380\",\"name\":\"FROGGY HATES SNOW\"}, release={\"coming_soon\":false,\"date\":\"Sep 24, 2025\"}, platforms={\"windows\":true,\"mac\":false,\"linux\":false}."
+  }
+]

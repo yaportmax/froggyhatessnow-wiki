@@ -1,0 +1,17 @@
+{
+  "generated_at": "2026-05-13T09:50:09.406Z",
+  "gameFilesPresent": true,
+  "root": "/Users/myaport/Documents/maxyaport-codex-project/froggyhatessnow_wiki/game-files",
+  "rules": [
+    "Read only allowlisted text/metadata extensions.",
+    "Do not follow symlinks.",
+    "Do not copy assets, binaries, source code, or large raw text dumps.",
+    "Emit short labels, keys, paths, counts, and source references only."
+  ],
+  "filesScanned": 0,
+  "directoriesScanned": 0,
+  "extension_counts": {},
+  "top_level_entries": [],
+  "readable_files": [],
+  "skipped_files": []
+}

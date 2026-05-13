@@ -1,0 +1,119 @@
+[
+  {
+    "id": "mole",
+    "slug": "mole",
+    "name": "Mole",
+    "aliases": [],
+    "category": "companions",
+    "short_description": "Mole is listed publicly as a companion or ally type.",
+    "effect": "Aids the player; exact behavior needs verification.",
+    "unlock_method": "Needs verification.",
+    "cost": "Needs verification.",
+    "mode": "Needs verification.",
+    "related_entities": [],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://store.steampowered.com/app/3232380/FROGGY_HATES_SNOW/",
+        "label": "Steam full-game store page",
+        "confidence": "high",
+        "notes": "Official public Steam store listing."
+      },
+      {
+        "type": "public_source",
+        "path_or_url": "https://store.steampowered.com/app/4037600/FROGGY_HATES_SNOW_Demo/",
+        "label": "Steam demo store page",
+        "confidence": "high",
+        "notes": "Official public Steam demo listing."
+      },
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
+        "label": "Steam community achievement page",
+        "confidence": "high",
+        "notes": "The Animal Squad achievement mentions Penguin, Mole, and Owl."
+      }
+    ],
+    "verification_status": "Verified",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "The official store copy uses plural animal names; achievement text uses singular names."
+  },
+  {
+    "id": "owl",
+    "slug": "owl",
+    "name": "Owl",
+    "aliases": [],
+    "category": "companions",
+    "short_description": "Owl is listed publicly as a companion or ally type.",
+    "effect": "Aids the player; exact behavior needs verification.",
+    "unlock_method": "Needs verification.",
+    "cost": "Needs verification.",
+    "mode": "Needs verification.",
+    "related_entities": [],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://store.steampowered.com/app/3232380/FROGGY_HATES_SNOW/",
+        "label": "Steam full-game store page",
+        "confidence": "high",
+        "notes": "Official public Steam store listing."
+      },
+      {
+        "type": "public_source",
+        "path_or_url": "https://store.steampowered.com/app/4037600/FROGGY_HATES_SNOW_Demo/",
+        "label": "Steam demo store page",
+        "confidence": "high",
+        "notes": "Official public Steam demo listing."
+      },
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
+        "label": "Steam community achievement page",
+        "confidence": "high",
+        "notes": "The Animal Squad achievement mentions Penguin, Mole, and Owl."
+      }
+    ],
+    "verification_status": "Verified",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "The official store copy uses plural animal names; achievement text uses singular names."
+  },
+  {
+    "id": "penguin",
+    "slug": "penguin",
+    "name": "Penguin",
+    "aliases": [],
+    "category": "companions",
+    "short_description": "Penguin is listed publicly as a companion or ally type.",
+    "effect": "Aids the player; exact behavior needs verification.",
+    "unlock_method": "Needs verification.",
+    "cost": "Needs verification.",
+    "mode": "Needs verification.",
+    "related_entities": [],
+    "sources": [
+      {
+        "type": "public_source",
+        "path_or_url": "https://store.steampowered.com/app/3232380/FROGGY_HATES_SNOW/",
+        "label": "Steam full-game store page",
+        "confidence": "high",
+        "notes": "Official public Steam store listing."
+      },
+      {
+        "type": "public_source",
+        "path_or_url": "https://store.steampowered.com/app/4037600/FROGGY_HATES_SNOW_Demo/",
+        "label": "Steam demo store page",
+        "confidence": "high",
+        "notes": "Official public Steam demo listing."
+      },
+      {
+        "type": "public_source",
+        "path_or_url": "https://steamcommunity.com/stats/3232380/achievements/?l=english",
+        "label": "Steam community achievement page",
+        "confidence": "high",
+        "notes": "The Animal Squad achievement mentions Penguin, Mole, and Owl."
+      }
+    ],
+    "verification_status": "Verified",
+    "last_verified_game_version": "Public Steam metadata accessed 2026-05-13",
+    "notes": "The official store copy uses plural animal names; achievement text uses singular names."
+  }
+]
