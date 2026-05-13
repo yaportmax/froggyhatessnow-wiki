@@ -26,9 +26,9 @@ VERIFICATION_REQUIRED: Your account phone number and email address must be verif
 
 Latest confirmed purchase attempt:
 
-- Command: `npm run domain:finish -- --confirm-register-and-dns`
-- Check request id: `019e219a-80e4-723c-af60-4191806fc087`
-- Create request id: `019e217f-e6ac-723c-8134-3613a780f093`
+- Command: `npm run domain:finish:post-verification`
+- Check request id: `019e21d5-2161-7212-9556-3bf098d88f96`
+- Create request id: `019e21d5-23f8-7df7-b4e0-7d21ca0f9494`
 - Result: stopped before DNS, Astro site changes, build, or deploy.
 
 Latest read-only domain status:

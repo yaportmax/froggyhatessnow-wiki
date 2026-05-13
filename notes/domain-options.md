@@ -90,6 +90,13 @@ A follow-up confirmed `domain:finish` attempt on 2026-05-13, after the Steam-sou
 - Create request id: `019e217f-e6ac-723c-8134-3613a780f093`
 - Error code: `VERIFICATION_REQUIRED`
 
+A post-verification finisher attempt on 2026-05-13 used a fresh timestamped idempotency suffix and still stopped at the same registration gate before DNS, Astro site, build, or deploy steps ran.
+
+- Command: `npm run domain:finish:post-verification`
+- Check request id: `019e21d5-2161-7212-9556-3bf098d88f96`
+- Create request id: `019e21d5-23f8-7df7-b4e0-7d21ca0f9494`
+- Error code: `VERIFICATION_REQUIRED`
+
 The read-only helper checks currently succeed:
 
 ```bash
@@ -149,11 +156,10 @@ After Porkbun account verification:
 1. Run the guarded finisher:
 
    ```bash
-   npm run domain:finish -- --confirm-register-and-dns --commit-canonical-after-success
-   npm run audit:completion
+   npm run domain:finish:post-verification
    ```
 
-   The finisher registers the domain, configures Porkbun DNS, updates the Astro `site` value to `https://froggyhatessnow.wiki`, rebuilds, deploys, reruns Vercel domain checks, verifies live homepage/source/matrix markers on both the apex and `www` custom domains, and then runs `domain:health`. With `--commit-canonical-after-success`, it also runs `domain:commit-canonical`, which commits and pushes the canonical config switch only after `domain:health` passes and only if `astro.config.mjs` is the sole dirty file. `audit:completion` is the final goal-level verifier.
+   The finisher registers the domain, configures Porkbun DNS, updates the Astro `site` value to `https://froggyhatessnow.wiki`, validates/builds, commits and pushes the canonical config switch only if `astro.config.mjs` is the sole dirty file, deploys from that clean committed state, reruns Vercel domain checks, verifies live homepage/source/matrix markers on both the apex and `www` custom domains, and then runs `domain:health` plus `audit:completion`.
 
 Manual fallback:
 

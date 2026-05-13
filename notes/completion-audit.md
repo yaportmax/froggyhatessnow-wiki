@@ -76,6 +76,7 @@ curl -I --max-time 20 https://froggyhatessnow.wiki/
 - `npm run domain:commit-canonical`: guarded manual recovery helper exists; it commits/pushes the canonical config switch only after `domain:health` passes and only if `astro.config.mjs` is the sole dirty file. When run with `--deploy-after-commit`, it redeploys from the clean committed canonical state before the completion audit.
 - `domain:register` and `domain:finish` now generate a fresh timestamped idempotency suffix by default so a post-verification attempt does not reuse the earlier failed `post-verification` create request.
 - `npm run domain:finish -- --confirm-register-and-dns`: failed at `domain:register` with Porkbun `VERIFICATION_REQUIRED`; check request id `019e219a-80e4-723c-af60-4191806fc087`, create request id `019e217f-e6ac-723c-8134-3613a780f093`.
+- `npm run domain:finish:post-verification`: latest confirmed attempt also stopped at `domain:register` with Porkbun `VERIFICATION_REQUIRED`; check request id `019e21d5-2161-7212-9556-3bf098d88f96`, create request id `019e21d5-23f8-7df7-b4e0-7d21ca0f9494`.
 - `curl -I --max-time 20 https://froggyhatessnow.wiki/`: `Could not resolve host`, as expected while the domain is unregistered.
 
 ## Remaining Work
