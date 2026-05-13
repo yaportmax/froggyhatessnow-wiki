@@ -76,6 +76,7 @@ curl -fsS -o /tmp/froggy-game-metadata.html -w '%{http_code}\n' https://froggyha
 - Later `npx vercel deploy --prod`: deployment `dpl_BysoqF8R65bguRBehVoXhJXeRPYW` stuck in `BUILDING`; logs stop after downloading deployment files.
 - `npx vercel build --prod --yes`: local prebuilt output completed successfully in `.vercel/output`.
 - Later `npx vercel deploy --prebuilt --prod`: deployment `dpl_J1kt8Sbkz5hSUBLvGjKMwjtPTm58` stuck in `QUEUED` behind the previous build. Latest successful production alias remains `https://froggyhatessnow-wiki.vercel.app`.
+- `npx vercel list froggyhatessnow-wiki --scope yaportmax-5253s-projects`: confirms the same two non-ready production deployments ahead of the latest successful ready deployment. Candidate remediation, pending explicit approval: `npx vercel remove --safe dpl_BysoqF8R65bguRBehVoXhJXeRPYW dpl_J1kt8Sbkz5hSUBLvGjKMwjtPTm58`, then redeploy prebuilt output.
 - `npm run domain:check`: `froggyhatessnow.wiki` available yes, type registration, price `2.06`, regularPrice `26.26`, premium no, request id `019e2161-f193-7a28-8341-409373b969be`.
 - `npm run domain:register -- --max-cost-usd=2.06 --idempotency-suffix=audit-20260513-1`: guarded purchase attempt rechecked availability at `$2.06`, then Porkbun returned `VERIFICATION_REQUIRED`; check request id `019e2162-8fab-7bb3-a43d-f1d2e4eeb412`, create request id `019e2162-9228-713d-a94a-88112b03af51`.
 - `npm run domain:dns`: blocked before registration; Porkbun returned `INVALID_DOMAIN`, request id `019e2160-0873-76b9-8ab8-72820b93f7bf`.
