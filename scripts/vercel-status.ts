@@ -101,6 +101,7 @@ async function main() {
   const liveChecks = await Promise.all([
     checkPage("/", "FROGGY HATES SNOW Wiki"),
     checkPage("/generated/skills/", "Status effects", "skills status-effect column", "/generated/skills/bat-fire/"),
+    checkPage("/generated/skills/", "Adrenaline", "skills page has no screenshot strip", "steam-media-strip"),
     checkPage("/generated/skills/", "/generated/status-effects/bat-fire/", "skills link status effects"),
     checkPage("/generated/status-effects/bat-fire/", "/generated/skills/baseball-bat/", "status effect links to base skill", "/generated/skills/bat-fire/"),
     checkPage("/generated/enemies/", "wiki-table-scroll", "enemy reference table", "wiki-reference-grid"),
