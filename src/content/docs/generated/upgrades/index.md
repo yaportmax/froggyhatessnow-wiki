@@ -4,11 +4,6 @@ description: "Upgrade values, unlocks, and character relationships for FROGGY HA
 draft: false
 ---
 
-<div class="steam-media-strip">
-<a href="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3232380/167f5a01926f5458cbf8acdf6e5f57c0cf09230f/ss_167f5a01926f5458cbf8acdf6e5f57c0cf09230f.1920x1080.jpg?t=1778580427" rel="noopener"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3232380/167f5a01926f5458cbf8acdf6e5f57c0cf09230f/ss_167f5a01926f5458cbf8acdf6e5f57c0cf09230f.600x338.jpg?t=1778580427" alt="Public Steam screenshot for FROGGY HATES SNOW 1" loading="lazy" /></a>
-<a href="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3232380/f5fdcb7fcef1dbe323bb2db47c769234156778bf/ss_f5fdcb7fcef1dbe323bb2db47c769234156778bf.1920x1080.jpg?t=1778580427" rel="noopener"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3232380/f5fdcb7fcef1dbe323bb2db47c769234156778bf/ss_f5fdcb7fcef1dbe323bb2db47c769234156778bf.600x338.jpg?t=1778580427" alt="Public Steam screenshot for FROGGY HATES SNOW 2" loading="lazy" /></a>
-<a href="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3232380/69ace4199b27dd298b4c269ca3d282ee9e8019da/ss_69ace4199b27dd298b4c269ca3d282ee9e8019da.1920x1080.jpg?t=1778580427" rel="noopener"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3232380/69ace4199b27dd298b4c269ca3d282ee9e8019da/ss_69ace4199b27dd298b4c269ca3d282ee9e8019da.600x338.jpg?t=1778580427" alt="Public Steam screenshot for FROGGY HATES SNOW 3" loading="lazy" /></a>
-</div>
 <div class="wiki-table-scroll wiki-reference-table--upgrades">
 <table class="wiki-data-table">
 <thead><tr><th scope="col">Name</th><th scope="col">Description</th><th scope="col">Stats</th><th scope="col">Details</th></tr></thead>

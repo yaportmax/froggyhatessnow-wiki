@@ -4,11 +4,6 @@ description: "Core skill, tool, and attack reference for FROGGY HATES SNOW."
 draft: false
 ---
 
-<div class="steam-media-strip">
-<a href="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3232380/69ace4199b27dd298b4c269ca3d282ee9e8019da/ss_69ace4199b27dd298b4c269ca3d282ee9e8019da.1920x1080.jpg?t=1778580427" rel="noopener"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3232380/69ace4199b27dd298b4c269ca3d282ee9e8019da/ss_69ace4199b27dd298b4c269ca3d282ee9e8019da.600x338.jpg?t=1778580427" alt="Public Steam screenshot for FROGGY HATES SNOW 1" loading="lazy" /></a>
-<a href="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3232380/ded12669b5aed452dcc9c15645cfd7c8db9d197e/ss_ded12669b5aed452dcc9c15645cfd7c8db9d197e.1920x1080.jpg?t=1778580427" rel="noopener"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3232380/ded12669b5aed452dcc9c15645cfd7c8db9d197e/ss_ded12669b5aed452dcc9c15645cfd7c8db9d197e.600x338.jpg?t=1778580427" alt="Public Steam screenshot for FROGGY HATES SNOW 2" loading="lazy" /></a>
-<a href="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3232380/a4155c1532f95214f153374543b9142ce320fec4/ss_a4155c1532f95214f153374543b9142ce320fec4.1920x1080.jpg?t=1778580427" rel="noopener"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3232380/a4155c1532f95214f153374543b9142ce320fec4/ss_a4155c1532f95214f153374543b9142ce320fec4.600x338.jpg?t=1778580427" alt="Public Steam screenshot for FROGGY HATES SNOW 3" loading="lazy" /></a>
-</div>
 <div class="wiki-table-scroll wiki-reference-table--skills">
 <table class="wiki-data-table">
 <thead><tr><th scope="col">Name</th><th scope="col">Description</th><th scope="col">Details</th></tr></thead>

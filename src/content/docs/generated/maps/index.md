@@ -4,11 +4,6 @@ description: "Location objectives, generation data, and rewards for FROGGY HATES
 draft: false
 ---
 
-<div class="steam-media-strip">
-<a href="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3232380/d7e6f2e17759d89948a7200ca8e126b75b7c2496/ss_d7e6f2e17759d89948a7200ca8e126b75b7c2496.1920x1080.jpg?t=1778580427" rel="noopener"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3232380/d7e6f2e17759d89948a7200ca8e126b75b7c2496/ss_d7e6f2e17759d89948a7200ca8e126b75b7c2496.600x338.jpg?t=1778580427" alt="Public Steam screenshot for FROGGY HATES SNOW 1" loading="lazy" /></a>
-<a href="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3232380/2ab1c66d384491ead4a955290de1d96da2feed57/ss_2ab1c66d384491ead4a955290de1d96da2feed57.1920x1080.jpg?t=1778580427" rel="noopener"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3232380/2ab1c66d384491ead4a955290de1d96da2feed57/ss_2ab1c66d384491ead4a955290de1d96da2feed57.600x338.jpg?t=1778580427" alt="Public Steam screenshot for FROGGY HATES SNOW 2" loading="lazy" /></a>
-<a href="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3232380/e8a1af46b0b68937ea11583feff6b28a17bb9fbb/ss_e8a1af46b0b68937ea11583feff6b28a17bb9fbb.1920x1080.jpg?t=1778580427" rel="noopener"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3232380/e8a1af46b0b68937ea11583feff6b28a17bb9fbb/ss_e8a1af46b0b68937ea11583feff6b28a17bb9fbb.600x338.jpg?t=1778580427" alt="Public Steam screenshot for FROGGY HATES SNOW 3" loading="lazy" /></a>
-</div>
 <div class="wiki-table-scroll wiki-reference-table--maps">
 <table class="wiki-data-table">
 <thead><tr><th scope="col">Name</th><th scope="col">Stats</th><th scope="col">Details</th></tr></thead>

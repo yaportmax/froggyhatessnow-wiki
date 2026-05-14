@@ -129,6 +129,44 @@ main h1,
   width: 32px;
 }
 
+.wiki-entity-name {
+  align-items: center;
+  display: inline-flex;
+  gap: 0.45rem;
+  min-width: 0;
+}
+
+.wiki-entity-icon {
+  border: 1px solid var(--sl-color-gray-5);
+  border-radius: 6px;
+  flex: 0 0 auto;
+  height: 2rem;
+  object-fit: contain;
+  width: 2rem;
+}
+
+.wiki-entity-portrait {
+  border: 1px solid var(--sl-color-gray-5);
+  border-radius: 6px;
+  float: right;
+  margin: 0 0 1rem 1.5rem;
+  max-width: 18rem;
+  overflow: hidden;
+  width: min(18rem, 42vw);
+}
+
+.wiki-entity-portrait img {
+  aspect-ratio: 1 / 1;
+  display: block;
+  object-fit: contain;
+  width: 100%;
+}
+
+.wiki-entity-portrait--small {
+  max-width: 10rem;
+  width: min(10rem, 28vw);
+}
+
 .wiki-infobox {
   border: 1px solid var(--sl-color-gray-5);
   border-radius: 6px;
@@ -350,6 +388,13 @@ main h1,
   }
 
   .wiki-infobox {
+    float: none;
+    margin: 0 0 1rem;
+    max-width: none;
+    width: 100%;
+  }
+
+  .wiki-entity-portrait {
     float: none;
     margin: 0 0 1rem;
     max-width: none;

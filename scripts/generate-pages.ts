@@ -856,6 +856,7 @@ function referenceSectionHtml(sections?: Array<{ label: string; html?: string; v
 function wikiReferenceGrid(
   entries: Array<{
     title: unknown;
+    titleHtml?: string;
     href?: string;
     description?: unknown;
     facts?: Array<[string, unknown]>;
@@ -866,7 +867,7 @@ function wikiReferenceGrid(
   const visibleEntries = entries.filter((entry) => nonEmptyText(entry.title));
   if (visibleEntries.length === 0) return "";
   const prepared = visibleEntries.map((entry) => ({
-    title: entry.href ? htmlLink(entry.title, entry.href) : htmlText(entry.title),
+    title: entry.titleHtml ?? (entry.href ? htmlLink(entry.title, entry.href) : htmlText(entry.title)),
     description: nonEmptyText(entry.description) ? htmlText(entry.description) : "",
     facts: definitionListHtml(entry.facts),
     details: referenceSectionHtml(entry.sections)
@@ -909,6 +910,21 @@ function wikiInfoBox(title: unknown, rows: Array<{ label: string; value: unknown
       .join("\n") +
     `\n</tbody>\n</table>\n</aside>\n\n`
   );
+}
+
+function entityImageHtml(row: Record<string, unknown>, alt: unknown, className = "wiki-entity-image") {
+  const imageUrl = [row.icon_url, row.image_url, row.portrait_url, row.sprite_url].find((value) => typeof value === "string" && value.trim().length > 0);
+  if (!imageUrl) return "";
+  if (className === "wiki-entity-icon") {
+    return `<img class="wiki-entity-icon" src="${htmlEscape(imageUrl)}" alt="" loading="lazy" />`;
+  }
+  return `<figure class="${className}"><img src="${htmlEscape(imageUrl)}" alt="${htmlEscape(displayText(alt))}" loading="lazy" /></figure>\n\n`;
+}
+
+function entityNameHtml(row: Record<string, unknown>, title: unknown, href?: string) {
+  const image = entityImageHtml(row, title, "wiki-entity-icon");
+  const label = href ? htmlLink(title, href) : htmlText(title);
+  return image ? `<span class="wiki-entity-name">${image}${label}</span>` : label;
 }
 
 function strippedData(extracted: ExtractedMetadataSnapshot) {
@@ -1816,6 +1832,7 @@ function characterPage(character: Record<string, unknown>, model: ReturnType<typ
   return (
     frontmatter(String(character.name ?? "Character"), `${character.name} character reference for FROGGY HATES SNOW.`) +
     extractedSourceNote() +
+    entityImageHtml(character, `${displayText(character.name)} portrait`, "wiki-entity-portrait") +
     wikiInfoBox(character.name, [
       { label: "Specialty", value: character.specialty },
       { label: "Unlock cost", value: character.unlock_cost },
@@ -1919,12 +1936,11 @@ function frogsIndex(model: ReturnType<typeof extractedModel>, snapshot: SteamSna
   return (
     frontmatter("Frogs", "Playable frog roster and character progression for FROGGY HATES SNOW.") +
     extractedSourceNote() +
-    steamScreenshotStrip(snapshot, 0, 3) +
     "There are 10 playable frog rows in the local data. Each frog page follows the same character layout: overview, starting loadout, unlocks, stats, and skill progression.\n\n" +
     wikiDataTable(
       ["Frog", "Specialty", "Unlock cost", "Starting skills"],
       model.characters.map((character) => [
-        htmlLink(character.name, `/generated/frogs/${slugify(character.name)}/`),
+        entityNameHtml(character, character.name, `/generated/frogs/${slugify(character.name)}/`),
         htmlText(character.specialty),
         htmlText(character.unlock_cost),
         htmlText(asArray(character.skill_progression).filter((row) => row.empty_slot !== true && Number(row.unlock_step ?? 0) === 0).length)
@@ -1997,7 +2013,6 @@ function mapsIndex(model: ReturnType<typeof extractedModel>, snapshot: SteamSnap
   return (
     frontmatter("Maps", "Location objectives, generation data, and rewards for FROGGY HATES SNOW.") +
     extractedSourceNote() +
-    steamScreenshotStrip(snapshot, 3, 3) +
     wikiReferenceGrid(
       model.locations.map((location) => {
         const generation = asRecord(location.level_generation);
@@ -2062,7 +2077,6 @@ function itemsIndex(model: ReturnType<typeof extractedModel>, snapshot: SteamSna
   return (
     frontmatter("Items", "Artifacts, resources, and rarity data for FROGGY HATES SNOW.") +
     extractedSourceNote() +
-    steamScreenshotStrip(snapshot, 6, 3) +
     "## Artifacts\n\n" +
     wikiReferenceGrid(
       model.artifacts.map((artifact) => ({
@@ -2147,7 +2161,6 @@ function upgradesIndex(model: ReturnType<typeof extractedModel>, snapshot: Steam
   return (
     frontmatter("Upgrades", "Upgrade values, unlocks, and character relationships for FROGGY HATES SNOW.") +
     extractedSourceNote() +
-    steamScreenshotStrip(snapshot, 8, 3) +
     wikiReferenceGrid(
       model.upgrades.map((upgrade) => {
         const slug = slugify(upgrade.feature_name ?? upgrade.name ?? upgrade.class);
@@ -2180,13 +2193,12 @@ function skillsIndex(model: ReturnType<typeof extractedModel>, snapshot: SteamSn
   return (
     frontmatter("Skills", "Core skill, tool, and attack reference for FROGGY HATES SNOW.") +
     extractedSourceNote() +
-    steamScreenshotStrip(snapshot, 10, 3) +
     wikiReferenceGrid(
       model.skills.map((skill) => {
         const skillSlug = slugify(skill.name);
         return {
           title: skill.name,
-          href: `/generated/skills/${skillSlug}/`,
+          titleHtml: entityNameHtml(skill, skill.name, `/generated/skills/${skillSlug}/`),
           description: skill.description,
           sections: [{ label: "Status effects", html: wikiChipListHtml(statusEffectLinksForSkill(skillSlug, model).split(", ").filter(Boolean)) }]
         };
@@ -2211,7 +2223,7 @@ function extractedSkillCategoryIndex(title: string, description: string, model: 
         const skillSlug = slugify(skill.name);
         return {
           title: skill.name,
-          href: `/generated/skills/${skillSlug}/`,
+          titleHtml: entityNameHtml(skill, skill.name, `/generated/skills/${skillSlug}/`),
           description: skill.description
         };
       }),
@@ -2229,6 +2241,7 @@ function skillPage(skill: Record<string, unknown>, model: ReturnType<typeof extr
   return (
     frontmatter(String(skill.name ?? "Skill"), `${skill.name} skill reference for FROGGY HATES SNOW.`) +
     extractedSourceNote() +
+    entityImageHtml(skill, `${displayText(skill.name)} icon`, "wiki-entity-portrait wiki-entity-portrait--small") +
     wikiSummaryTable([
       { label: "Related upgrade", value: upgrade?.feature_name ?? upgrade?.name, href: upgradeSlug ? `/generated/upgrades/${upgradeSlug}/` : undefined }
     ]) +
@@ -2434,7 +2447,6 @@ function spawnerPage(spawner: Record<string, unknown>, model: ReturnType<typeof 
 function mechanicsHubIndex(model: ReturnType<typeof extractedModel>, snapshot: SteamSnapshot) {
   return (
     frontmatter("Mechanics", "Mechanics reference hub for FROGGY HATES SNOW.") +
-    steamScreenshotStrip(snapshot, 1, 3) +
     wikiReferenceGrid(
       [
         {
@@ -2533,7 +2545,6 @@ function terrainIndex(model: ReturnType<typeof extractedModel>, snapshot: SteamS
   ];
   return (
     frontmatter("Terrain", "Terrain height and texture pattern tables for FROGGY HATES SNOW.") +
-    steamScreenshotStrip(snapshot, 4, 3) +
     "Terrain rows describe named generation patterns used by map pages.\n\n" +
     wikiReferenceGrid(
       terrainRows.map((row) => ({
@@ -2590,7 +2601,6 @@ function bossesIndex(model: ReturnType<typeof extractedModel>, snapshot: SteamSn
   return (
     frontmatter("Bosses", "Boss attack IDs and phase orders for FROGGY HATES SNOW.") +
     extractedSourceNote() +
-    steamScreenshotStrip(snapshot, 7, 3) +
     wikiReferenceGrid(
       bosses.map((boss) => {
         const attacks = asArray(boss.boss_attack_ids).map((row) => `${row.id}: ${row.name}`).join(", ");
@@ -2695,7 +2705,6 @@ function enemiesIndex(model: ReturnType<typeof extractedModel>, snapshot: SteamS
   return (
     frontmatter("Enemies", "Enemy stats and wave data for FROGGY HATES SNOW.") +
     extractedSourceNote() +
-    steamScreenshotStrip(snapshot, 9, 3) +
     enemiesStatsTable(upgrades) +
     "\n\n## Wave Assets\n\n" +
     wikiReferenceGrid(
@@ -2877,7 +2886,6 @@ function homepage(snapshot: SteamSnapshot, extractedMetadata: ExtractedMetadataS
     frontmatter("FROGGY HATES SNOW Wiki", "Unofficial reference wiki for FROGGY HATES SNOW.") +
     steamHeroImage(snapshot) +
     "Unofficial reference wiki for **FROGGY HATES SNOW**.\n\n" +
-    steamScreenshotStrip(snapshot, 0, 4) +
     "## Reference Index\n\n" +
     wikiReferenceGrid(
       referenceRows.map(([label, href, contents]) => ({

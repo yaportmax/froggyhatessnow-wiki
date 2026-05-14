@@ -4,11 +4,6 @@ description: "Enemy stats and wave data for FROGGY HATES SNOW."
 draft: false
 ---
 
-<div class="steam-media-strip">
-<a href="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3232380/f5fdcb7fcef1dbe323bb2db47c769234156778bf/ss_f5fdcb7fcef1dbe323bb2db47c769234156778bf.1920x1080.jpg?t=1778580427" rel="noopener"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3232380/f5fdcb7fcef1dbe323bb2db47c769234156778bf/ss_f5fdcb7fcef1dbe323bb2db47c769234156778bf.600x338.jpg?t=1778580427" alt="Public Steam screenshot for FROGGY HATES SNOW 1" loading="lazy" /></a>
-<a href="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3232380/69ace4199b27dd298b4c269ca3d282ee9e8019da/ss_69ace4199b27dd298b4c269ca3d282ee9e8019da.1920x1080.jpg?t=1778580427" rel="noopener"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3232380/69ace4199b27dd298b4c269ca3d282ee9e8019da/ss_69ace4199b27dd298b4c269ca3d282ee9e8019da.600x338.jpg?t=1778580427" alt="Public Steam screenshot for FROGGY HATES SNOW 2" loading="lazy" /></a>
-<a href="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3232380/ded12669b5aed452dcc9c15645cfd7c8db9d197e/ss_ded12669b5aed452dcc9c15645cfd7c8db9d197e.1920x1080.jpg?t=1778580427" rel="noopener"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3232380/ded12669b5aed452dcc9c15645cfd7c8db9d197e/ss_ded12669b5aed452dcc9c15645cfd7c8db9d197e.600x338.jpg?t=1778580427" alt="Public Steam screenshot for FROGGY HATES SNOW 3" loading="lazy" /></a>
-</div>
 <div class="wiki-table-scroll wiki-reference-table--enemies">
 <table class="wiki-data-table">
 <thead><tr><th scope="col">Enemy</th><th scope="col">Stats</th></tr></thead>
