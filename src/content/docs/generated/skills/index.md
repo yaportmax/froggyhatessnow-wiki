@@ -1,43 +1,87 @@
 ---
 title: "Skills"
-description: "Skills entries for the unofficial FROGGY HATES SNOW wiki."
+description: "Core skill, tool, and attack reference for FROGGY HATES SNOW."
 draft: false
 ---
 
-# Skills
-
-Skills entries for the unofficial FROGGY HATES SNOW wiki.
-
-Status counts: Inferred: 17, Verified: 12.
-
-| Name | Status | Summary |
-|---|---|---|
-| [Adrenaline](adrenaline/) | Inferred | Adrenaline is named in a public achievement condition. |
-| [Armor](armor/) | Verified | Armor is named in official Steam news or devlog copy. |
-| [Chain Lightning](chain-lightning/) | Inferred | Chain Lightning is named in a public achievement condition. |
-| [Curvy Tongue](curvy-tongue/) | Inferred | Curvy Tongue is named in a public achievement condition. |
-| [Death Field](death-field/) | Inferred | Death Field is named in a public achievement condition. |
-| [Destructive Field](destructive-field/) | Verified | Destructive Field is named in official Steam news or devlog copy. |
-| [Electric Infusion](electric-infusion/) | Inferred | Electric Infusion is named in a public achievement condition. |
-| [Energy Wave](energy-wave/) | Verified | Energy Wave is named in official Steam news or devlog copy. |
-| [Fire Infusion](fire-infusion/) | Inferred | Fire Infusion is named in a public achievement condition. |
-| [Fireworks](fireworks/) | Verified | Fireworks is named in official Steam news or devlog copy. |
-| [Frost Infusion](frost-infusion/) | Inferred | Frost Infusion is named in a public achievement condition. |
-| [Glider](glider/) | Verified | Glider is named in official Steam news or devlog copy. |
-| [In-run skill reordering](in-run-skill-reordering/) | Verified | In-run skill reordering is named in official Steam news or devlog copy. |
-| [Invincible Roll](invincible-roll/) | Verified | Invincible Roll is named in official Steam news or devlog copy. |
-| [Leap Chain](leap-chain/) | Verified | Leap Chain is named in official Steam news or devlog copy. |
-| [Magnet](magnet/) | Inferred | Magnet is named in a public achievement condition. |
-| [Piercing Icicles](piercing-icicles/) | Verified | Piercing Icicles is named in official Steam news or devlog copy. |
-| [Poison Infusion](poison-infusion/) | Inferred | Poison Infusion is named in a public achievement condition. |
-| [Revive](revive/) | Inferred | Revive is named in a public achievement condition. |
-| [Shield](shield/) | Inferred | Shield is named in a public achievement condition. |
-| [Skill Banishing](skill-banishing/) | Verified | Skill Banishing is named in official Steam news or devlog copy. |
-| [Snowball Roll](snowball-roll/) | Verified | Snowball Roll is named in official Steam news or devlog copy. |
-| [Snowball Volley](snowball-volley/) | Verified | Snowball Volley is named in official Steam news or devlog copy. |
-| [Spark](spark/) | Inferred | Spark is named in a public achievement condition. |
-| [Stun Infusion](stun-infusion/) | Inferred | Stun Infusion is named in a public achievement condition. |
-| [Teleport](teleport/) | Inferred | Teleport is named in a public achievement condition. |
-| [Tongue Attack](tongue-attack/) | Inferred | Tongue Attack is named in a public achievement condition. |
-| [Vampirism](vampirism/) | Inferred | Vampirism is named in a public achievement condition. |
-| [Voodoo Curse](voodoo-curse/) | Inferred | Voodoo Curse is named in a public achievement condition. |
+<div class="steam-media-strip">
+<a href="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3232380/69ace4199b27dd298b4c269ca3d282ee9e8019da/ss_69ace4199b27dd298b4c269ca3d282ee9e8019da.1920x1080.jpg?t=1778580427" rel="noopener"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3232380/69ace4199b27dd298b4c269ca3d282ee9e8019da/ss_69ace4199b27dd298b4c269ca3d282ee9e8019da.600x338.jpg?t=1778580427" alt="Public Steam screenshot for FROGGY HATES SNOW 1" loading="lazy" /></a>
+<a href="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3232380/ded12669b5aed452dcc9c15645cfd7c8db9d197e/ss_ded12669b5aed452dcc9c15645cfd7c8db9d197e.1920x1080.jpg?t=1778580427" rel="noopener"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3232380/ded12669b5aed452dcc9c15645cfd7c8db9d197e/ss_ded12669b5aed452dcc9c15645cfd7c8db9d197e.600x338.jpg?t=1778580427" alt="Public Steam screenshot for FROGGY HATES SNOW 2" loading="lazy" /></a>
+<a href="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3232380/a4155c1532f95214f153374543b9142ce320fec4/ss_a4155c1532f95214f153374543b9142ce320fec4.1920x1080.jpg?t=1778580427" rel="noopener"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3232380/a4155c1532f95214f153374543b9142ce320fec4/ss_a4155c1532f95214f153374543b9142ce320fec4.600x338.jpg?t=1778580427" alt="Public Steam screenshot for FROGGY HATES SNOW 3" loading="lazy" /></a>
+</div>
+<div class="wiki-table-scroll wiki-reference-table--skills">
+<table class="wiki-data-table">
+<thead><tr><th scope="col">Name</th><th scope="col">Description</th><th scope="col">Details</th></tr></thead>
+<tbody>
+<tr><td><a href="/generated/skills/adrenaline/">Adrenaline</a></td><td>Regenerates health when you narrowly avoid taking damage</td><td></td></tr>
+<tr><td><a href="/generated/skills/air-bomb/">Air Bomb</a></td><td>Causes a series of explosions, covering a large area and dealing moderate damage. Effective against soft snow</td><td></td></tr>
+<tr><td><a href="/generated/skills/backpack/">Backpack</a></td><td>Increases the capacity of the backpack</td><td></td></tr>
+<tr><td><a href="/generated/skills/backpack-overload/">Backpack Overload</a></td><td>Increases Backpack capacity but slows you down when overloaded</td><td></td></tr>
+<tr><td><a href="/generated/skills/baseball-bat/">Baseball Bat</a></td><td>Hits enemies with a baseball bat, dealing area-of-effect damage</td><td><section class="wiki-table-section"><strong>Status effects</strong><ul class="wiki-inline-list"><li><a href="/generated/status-effects/bat-fire/">Bat Fire</a></li><li><a href="/generated/status-effects/bat-frost/">Bat Frost</a></li><li><a href="/generated/status-effects/bat-lightning/">Bat Lightning</a></li><li><a href="/generated/status-effects/bat-poison/">Bat Poison</a></li><li><a href="/generated/status-effects/bat-stun/">Bat Stun</a></li></ul></section></td></tr>
+<tr><td><a href="/generated/skills/black-hole/">Black Hole</a></td><td>Pulls all nearby enemies toward its center</td><td></td></tr>
+<tr><td><a href="/generated/skills/body-strength/">Body Strength</a></td><td>Improves vitals such as movement speed, digging, and resource gathering</td><td></td></tr>
+<tr><td><a href="/generated/skills/cart/">Cart</a></td><td>Carries a large amount of resources</td><td></td></tr>
+<tr><td><a href="/generated/skills/cart-overload/">Cart Overload</a></td><td>Increases Cart capacity but slows you down when overloaded</td><td></td></tr>
+<tr><td><a href="/generated/skills/chain-lightning/">Chain Lightning</a></td><td>Triggers Chain Effect, jumping between enemies and striking several at once</td><td></td></tr>
+<tr><td><a href="/generated/skills/concentration/">Concentration</a></td><td>Reduces the cooldown of all active skills</td><td></td></tr>
+<tr><td><a href="/generated/skills/cozy-bubble/">Cozy Bubble</a></td><td>Creates a tiny heat bubble that works as a portable home</td><td></td></tr>
+<tr><td><a href="/generated/skills/critical-hit/">Critical Hit</a></td><td>Deals critical damage with a certain chance</td><td></td></tr>
+<tr><td><a href="/generated/skills/curvy-tongue/">Curvy Tongue</a></td><td>Launches a long and maneuverable tongue that digs snow and hits enemies</td><td><section class="wiki-table-section"><strong>Status effects</strong><ul class="wiki-inline-list"><li><a href="/generated/status-effects/curvy-fire/">Curvy Fire</a></li><li><a href="/generated/status-effects/curvy-frost/">Curvy Frost</a></li><li><a href="/generated/status-effects/curvy-lightning/">Curvy Lightning</a></li><li><a href="/generated/status-effects/curvy-poison/">Curvy Poison</a></li><li><a href="/generated/status-effects/curvy-stun/">Curvy Stun</a></li></ul></section></td></tr>
+<tr><td><a href="/generated/skills/death-field/">Death Field</a></td><td>Generates a field of destructive energy, harming every enemy within range.</td><td></td></tr>
+<tr><td><a href="/generated/skills/drill/">Drill</a></td><td>Removes ice with high efficiency</td><td></td></tr>
+<tr><td><a href="/generated/skills/dynamite/">Dynamite</a></td><td>Deals heavy damage to enemies in a small blast radius.</td><td></td></tr>
+<tr><td><a href="/generated/skills/electric-infusion/">Electric Infusion</a></td><td>Allows other skills to apply Electric Infliction</td><td></td></tr>
+<tr><td><a href="/generated/skills/energy-drink/">Energy Drink</a></td><td>Temporarily increases movement speed and attack power for all types of attacks</td><td></td></tr>
+<tr><td><a href="/generated/skills/energy-wave/">Energy Wave</a></td><td>Unleashes a wide shockwave that pushes back enemies in a large radius</td><td><section class="wiki-table-section"><strong>Status effects</strong><ul class="wiki-inline-list"><li><a href="/generated/status-effects/wave-fire/">Wave Fire</a></li><li><a href="/generated/status-effects/wave-frost/">Wave Frost</a></li><li><a href="/generated/status-effects/wave-lightning/">Wave Lightning</a></li><li><a href="/generated/status-effects/wave-poison/">Wave Poison</a></li><li><a href="/generated/status-effects/wave-stun/">Wave Stun</a></li></ul></section></td></tr>
+<tr><td><a href="/generated/skills/fire-infusion/">Fire Infusion</a></td><td>Allows other skills to apply Fire Infliction</td><td></td></tr>
+<tr><td><a href="/generated/skills/fireball-attack/">Fireball Attack</a></td><td>Launches a fireball that sets enemies on fire</td><td></td></tr>
+<tr><td><a href="/generated/skills/flamethrower/">Flamethrower</a></td><td>Burns snow effectively and triggers Burn Effect, setting enemies in radius on fire</td><td></td></tr>
+<tr><td><a href="/generated/skills/flashbang/">Flashbang</a></td><td>Triggers Daze Effect, stunning enemies in radius (breaks on hit)</td><td></td></tr>
+<tr><td><a href="/generated/skills/forager/">Forager</a></td><td>Increases the amount of resources found</td><td></td></tr>
+<tr><td><a href="/generated/skills/frost-bomb/">Frost Bomb</a></td><td>Triggers Freeze Effect, freezing enemies in radius (unbreakable)</td><td></td></tr>
+<tr><td><a href="/generated/skills/frost-infusion/">Frost Infusion</a></td><td>Allows other skills to apply Frost Infliction</td><td></td></tr>
+<tr><td><a href="/generated/skills/gloves/">Gloves</a></td><td>Improves digging speed and reduces heat loss while digging</td><td></td></tr>
+<tr><td><a href="/generated/skills/health/">Health</a></td><td>Restores health and increases max health</td><td></td></tr>
+<tr><td><a href="/generated/skills/heater-sled/">Heater Sled</a></td><td>Keeps you warm on the move and recharges when brought home</td><td></td></tr>
+<tr><td><a href="/generated/skills/heating/">Heating</a></td><td>Improves heat loss and recovery rates</td><td></td></tr>
+<tr><td><a href="/generated/skills/hockey-stick/">Hockey Stick</a></td><td>Launches a hockey puck that ricochets between enemies</td><td><section class="wiki-table-section"><strong>Status effects</strong><ul class="wiki-inline-list"><li><a href="/generated/status-effects/hockey-stick-fire/">Hockey Stick Fire</a></li><li><a href="/generated/status-effects/hockey-stick-frost/">Hockey Stick Frost</a></li><li><a href="/generated/status-effects/hockey-stick-lightning/">Hockey Stick Lightning</a></li><li><a href="/generated/status-effects/hockey-stick-poison/">Hockey Stick Poison</a></li><li><a href="/generated/status-effects/hockey-stick-stun/">Hockey Stick Stun</a></li></ul></section></td></tr>
+<tr><td><a href="/generated/skills/hot-tea/">Hot Tea</a></td><td>Temporarily increases heat level and snow digging speed</td><td></td></tr>
+<tr><td><a href="/generated/skills/kinetic-rolls/">Kinetic Rolls</a></td><td>Expands Short Roll with increased impact damage and rolling defense</td><td></td></tr>
+<tr><td><a href="/generated/skills/locator/">Locator</a></td><td>Shows the distance to the nearest unexplored resource</td><td></td></tr>
+<tr><td><a href="/generated/skills/magnet/">Magnet</a></td><td>Launches a magnet that attracts the dug up resources directly to your home</td><td></td></tr>
+<tr><td><a href="/generated/skills/map/">Map</a></td><td>Gives information about unexplored resources around you</td><td></td></tr>
+<tr><td><a href="/generated/skills/mole/">Mole</a></td><td>Wanders around, digging through snow as it goes</td><td></td></tr>
+<tr><td><a href="/generated/skills/overload-gear/">Overload Gear</a></td><td>Unlocks overload features for carrying gear, increasing capacity but reducing speed</td><td></td></tr>
+<tr><td><a href="/generated/skills/owl/">Owl</a></td><td>Marks potential resource spots from above for you to investigate</td><td></td></tr>
+<tr><td><a href="/generated/skills/penguin/">Penguin</a></td><td>Gathers resources and delivers them back to your home</td><td></td></tr>
+<tr><td><a href="/generated/skills/pickaxe/">Pickaxe</a></td><td>Breaks ice with steady, reliable force</td><td><section class="wiki-table-section"><strong>Status effects</strong><ul class="wiki-inline-list"><li><a href="/generated/status-effects/pickaxe-fire/">Pickaxe Fire</a></li><li><a href="/generated/status-effects/pickaxe-frost/">Pickaxe Frost</a></li><li><a href="/generated/status-effects/pickaxe-lightning/">Pickaxe Lightning</a></li><li><a href="/generated/status-effects/pickaxe-poison/">Pickaxe Poison</a></li><li><a href="/generated/status-effects/pickaxe-stun/">Pickaxe Stun</a></li></ul></section></td></tr>
+<tr><td><a href="/generated/skills/pickaxe-attack/">Pickaxe Attack</a></td><td>Delivers a powerful close-range melee strike</td><td></td></tr>
+<tr><td><a href="/generated/skills/piercing-icicles/">Piercing Icicles</a></td><td>Launches icicles that pierce through multiple enemies</td><td><section class="wiki-table-section"><strong>Status effects</strong><ul class="wiki-inline-list"><li><a href="/generated/status-effects/icicle-fire/">Icicle Fire</a></li><li><a href="/generated/status-effects/icicle-frost/">Icicle Frost</a></li><li><a href="/generated/status-effects/icicle-lightning/">Icicle Lightning</a></li><li><a href="/generated/status-effects/icicle-poison/">Icicle Poison</a></li><li><a href="/generated/status-effects/icicle-stun/">Icicle Stun</a></li></ul></section></td></tr>
+<tr><td><a href="/generated/skills/poison-flask/">Poison Flask</a></td><td>Triggers Venom Effect, damaging and weakening all enemies in the area over time</td><td></td></tr>
+<tr><td><a href="/generated/skills/poison-infusion/">Poison Infusion</a></td><td>Allows other skills to apply Poison Infliction</td><td></td></tr>
+<tr><td><a href="/generated/skills/precise-jump/">Precise Jump</a></td><td>Scatters snow and knocks back nearby enemies</td><td><section class="wiki-table-section"><strong>Status effects</strong><ul class="wiki-inline-list"><li><a href="/generated/status-effects/jump-fire/">Jump Fire</a></li><li><a href="/generated/status-effects/jump-frost/">Jump Frost</a></li><li><a href="/generated/status-effects/jump-lightning/">Jump Lightning</a></li><li><a href="/generated/status-effects/jump-poison/">Jump Poison</a></li><li><a href="/generated/status-effects/jump-stun/">Jump Stun</a></li></ul></section></td></tr>
+<tr><td><a href="/generated/skills/revive/">Revive</a></td><td>Brings you back to life after death</td><td></td></tr>
+<tr><td><a href="/generated/skills/roll-resistance/">Roll Resistance</a></td><td>Short Roll grants temporary damage resistance while rolling</td><td></td></tr>
+<tr><td><a href="/generated/skills/salt-sack/">Salt Sack</a></td><td>Bursts on landing, turning ice into snow in the area</td><td></td></tr>
+<tr><td><a href="/generated/skills/scanner/">Scanner</a></td><td>Launches a radial wave that marks potential resource spots</td><td></td></tr>
+<tr><td><a href="/generated/skills/scarf/">Scarf</a></td><td>Maintains a high level of heat for much longer</td><td></td></tr>
+<tr><td><a href="/generated/skills/shield/">Shield</a></td><td>Temporarily absorbs a certain amount of damage</td><td></td></tr>
+<tr><td><a href="/generated/skills/shovel/">Shovel</a></td><td>Digs snow much easier and faster. Hits enemies with a powerful strike</td><td></td></tr>
+<tr><td><a href="/generated/skills/skis/">Skis</a></td><td>Increases the speed of movement. Does not work while digging or fighting</td><td></td></tr>
+<tr><td><a href="/generated/skills/snowball-volley/">Snowball Volley</a></td><td>Launches a volley of snowballs in quick succession</td><td><section class="wiki-table-section"><strong>Status effects</strong><ul class="wiki-inline-list"><li><a href="/generated/status-effects/snowball-fire/">Snowball Fire</a></li><li><a href="/generated/status-effects/snowball-frost/">Snowball Frost</a></li><li><a href="/generated/status-effects/snowball-lightning/">Snowball Lightning</a></li><li><a href="/generated/status-effects/snowball-poison/">Snowball Poison</a></li><li><a href="/generated/status-effects/snowball-stun/">Snowball Stun</a></li></ul></section></td></tr>
+<tr><td><a href="/generated/skills/snowballer/">Snowballer</a></td><td>Launches a rapid stream of snowballs</td><td><section class="wiki-table-section"><strong>Status effects</strong><ul class="wiki-inline-list"><li><a href="/generated/status-effects/snowballer-fire/">Snowballer Fire</a></li><li><a href="/generated/status-effects/snowballer-frost/">Snowballer Frost</a></li><li><a href="/generated/status-effects/snowballer-lightning/">Snowballer Lightning</a></li><li><a href="/generated/status-effects/snowballer-poison/">Snowballer Poison</a></li><li><a href="/generated/status-effects/snowballer-stun/">Snowballer Stun</a></li></ul></section></td></tr>
+<tr><td><a href="/generated/skills/snowblower/">Snowblower</a></td><td>Clears light snow in front of you with high efficiency</td><td></td></tr>
+<tr><td><a href="/generated/skills/spark/">Spark</a></td><td>Restores heat when you discover a resource</td><td></td></tr>
+<tr><td><a href="/generated/skills/spit-attack/">Spit Attack</a></td><td>Launches projectiles into enemies</td><td><section class="wiki-table-section"><strong>Status effects</strong><ul class="wiki-inline-list"><li><a href="/generated/status-effects/spit-fire/">Spit Fire</a></li><li><a href="/generated/status-effects/spit-frost/">Spit Frost</a></li><li><a href="/generated/status-effects/spit-lightning/">Spit Lightning</a></li><li><a href="/generated/status-effects/spit-poison/">Spit Poison</a></li><li><a href="/generated/status-effects/spit-stun/">Spit Stun</a></li></ul></section></td></tr>
+<tr><td><a href="/generated/skills/stun-infusion/">Stun Infusion</a></td><td>Allows other skills to apply Stun Infliction</td><td></td></tr>
+<tr><td><a href="/generated/skills/swift-roll/">Swift Roll</a></td><td>Dodges attacks and projectiles. Short distance, short cooldown time</td><td><section class="wiki-table-section"><strong>Status effects</strong><ul class="wiki-inline-list"><li><a href="/generated/status-effects/roll-fire/">Roll Fire</a></li><li><a href="/generated/status-effects/roll-frost/">Roll Frost</a></li><li><a href="/generated/status-effects/roll-lightning/">Roll Lightning</a></li><li><a href="/generated/status-effects/roll-poison/">Roll Poison</a></li><li><a href="/generated/status-effects/roll-stun/">Roll Stun</a></li></ul></section></td></tr>
+<tr><td><a href="/generated/skills/teleport/">Teleport</a></td><td>Instantly transports you home</td><td></td></tr>
+<tr><td><a href="/generated/skills/tongue-attack/">Tongue Attack</a></td><td>Strikes enemies with quick punches</td><td><section class="wiki-table-section"><strong>Status effects</strong><ul class="wiki-inline-list"><li><a href="/generated/status-effects/tongue-fire/">Tongue Fire</a></li><li><a href="/generated/status-effects/tongue-frost/">Tongue Frost</a></li><li><a href="/generated/status-effects/tongue-lightning/">Tongue Lightning</a></li><li><a href="/generated/status-effects/tongue-poison/">Tongue Poison</a></li><li><a href="/generated/status-effects/tongue-stun/">Tongue Stun</a></li></ul></section></td></tr>
+<tr><td><a href="/generated/skills/toxic-gas/">Toxic Gas</a></td><td>Creates a cloud of gas that poisons nearby enemies</td><td></td></tr>
+<tr><td><a href="/generated/skills/vampirism/">Vampirism</a></td><td>Restores a small amount of health when you kill an enemy</td><td></td></tr>
+<tr><td><a href="/generated/skills/voltstick/">Voltstick</a></td><td>Creates a chain lightning strike between multiple enemies</td><td></td></tr>
+<tr><td><a href="/generated/skills/voodoo-curse/">Voodoo Curse</a></td><td>Worsens enemies&#39; vitals such as movement speed, health and attack power</td><td></td></tr>
+<tr><td><a href="/generated/skills/wrench-attack/">Wrench Attack</a></td><td>Launches a wrench that returns, damaging enemies along the way</td><td><section class="wiki-table-section"><strong>Status effects</strong><ul class="wiki-inline-list"><li><a href="/generated/status-effects/wrench-fire/">Wrench Fire</a></li><li><a href="/generated/status-effects/wrench-frost/">Wrench Frost</a></li><li><a href="/generated/status-effects/wrench-lightning/">Wrench Lightning</a></li><li><a href="/generated/status-effects/wrench-poison/">Wrench Poison</a></li><li><a href="/generated/status-effects/wrench-stun/">Wrench Stun</a></li></ul></section></td></tr>
+</tbody>
+</table>
+</div>

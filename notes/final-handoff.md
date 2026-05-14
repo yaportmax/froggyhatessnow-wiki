@@ -10,9 +10,9 @@ The wiki is built, validated, pushed, and live on Vercel.
 - Live alias: https://froggyhatessnow-wiki.vercel.app
 - Active deployment: `dpl_6Ey7Ab2CJZHqCYanUFiPKgKfpmDu`
 - Active deployment URL: https://froggyhatessnow-wiki-a40k9ddau-yaportmax-5253s-projects.vercel.app
-- Current source snapshot marker: `2026-05-13T16:07:29.110Z`
+- Current Steam metadata marker: `2026-05-13T16:07:29.110Z`
 
-`npm run deploy:status` verifies the live alias, homepage, Steam source snapshot, source timestamp marker, achievement matrix, Open Graph image metadata, `/robots.txt`, and `/llms.txt`.
+`npm run deploy:status` verifies the live alias, homepage, generated wiki markers, Open Graph image metadata, `/robots.txt`, and `/llms.txt`.
 
 `npm run audit:completion` runs the consolidated goal-level audit. It is expected to fail until the custom-domain registration/DNS/canonical checks pass.
 
@@ -88,9 +88,9 @@ npx vercel domains inspect www.froggyhatessnow.wiki
 Expected custom-domain live checks after deployment:
 
 - Homepage contains `FROGGY HATES SNOW Wiki`.
-- Steam source snapshot contains `All Steam News Items`.
-- Steam source snapshot contains the current local `steam-snapshot.json` `generated_at` marker.
-- Achievement source matrix contains `Loadout Names`.
+- Homepage contains `FROGGY HATES SNOW Wiki`.
+- Media gallery contains `Full-Game Screenshots`.
+- Generated mechanics page links to the quest templates page.
 
 ## Do Not Mark Complete Until
 

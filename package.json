@@ -26,6 +26,9 @@
     "domain:commit-canonical": "tsx scripts/domain-commit-canonical.ts",
     "deploy:status": "tsx scripts/vercel-status.ts",
     "deploy:publish": "tsx scripts/vercel-publish.ts",
+    "r2:offload": "tsx scripts/r2-offload.ts",
+    "r2:offload:tmp": "tsx scripts/r2-offload.ts tmp",
+    "r2:offload:tmp:prune": "tsx scripts/r2-offload.ts tmp --delete-local",
     "generate": "tsx scripts/generate-pages.ts",
     "validate": "tsx scripts/validate-data.ts",
     "audit:completion": "tsx scripts/completion-audit.ts",
@@ -33,6 +36,7 @@
   },
   "dependencies": {
     "@astrojs/starlight": "^0.35.0",
+    "@aws-sdk/client-s3": "^3.1046.0",
     "astro": "^5.0.0"
   },
   "devDependencies": {

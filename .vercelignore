@@ -1,0 +1,10 @@
+game-files/
+tmp/
+node_modules/
+.astro/
+.playwright-cli/
+.env
+.env.*
+goal.rtf
+npm-debug.log*
+.DS_Store

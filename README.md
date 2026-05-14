@@ -1,6 +1,6 @@
 # FROGGY HATES SNOW Wiki
 
-Unofficial metadata-first fan wiki for **FROGGY HATES SNOW**.
+Unofficial player guide and wiki for **FROGGY HATES SNOW**.
 
 This project is built with Astro Starlight and seeded from public Steam metadata, the public Steam achievements page, public Steam review summaries, publisher metadata, and safe local metadata scanning.
 
@@ -9,16 +9,19 @@ This project is built with Astro Starlight and seeded from public Steam metadata
 - Full game Steam app ID: `3232380`
 - Demo Steam app ID: `4037600`
 - Parsed public achievements: `42`
-- Generated entity pages: `165`
-- Generated static HTML pages: `190`
+- Data rows: `164`
+- Player lookup table pages: `11`
+- Generated static HTML pages: `26`
 - Verification statuses used: `Verified`, `Inferred`, `Needs verification`
-- First-class source pages: `/game-metadata/`, `/steam-source-snapshot/`, `/achievement-source-matrix/`, and `/source-ledger/`
-- Crawler/source manifests: `/robots.txt` and `/llms.txt`
+- Crawler manifests: `/robots.txt` and `/llms.txt`
+- Media: `/generated/media/` exposes the public Steam header, full-game screenshots, demo screenshots, and video thumbnails.
 - Social preview metadata: Open Graph and Twitter image tags use the public Steam header image URL.
 
-The strongest current source is Steam/public metadata. The source snapshot records Steam appdetails, review summaries, all public Steam screenshots currently exposed by appdetails, a 42-row achievement fact matrix, all 15 current Steam News API items with evidence classifications, volatile price/review/achievement data, and explicit research gaps. Steam news/devlogs now confirm 10 playable frogs, 16 locations, 60+ skills/tools/attacks/companions, demo progress carryover, Puff, Zippy, several launch/update skills, robotic helpers, Blue Gems, artifact rarity tiers, character main-attack concepts, quest-based meta-progression, snow-system mechanics, and Devlog #4's broad enemy/boss attack-pattern/projectile/companion preview. Official Steam store copy also supports the home-base/resource-deposit loop, snow-as-cover combat use, Peaceful Mode puzzle pacing, and broad enemy/boss behavior variety. Local demo file extraction is blocked in this shell; see `notes/public-research.md` and `notes/extracted-metadata.md`.
+The strongest current evidence is Steam/public metadata plus safe local demo file extraction. The site exposes the 164 data rows as compact player lookup tables instead of auto-generated entity stub pages. The Steam snapshot records appdetails, review summaries, public Steam screenshots currently exposed by appdetails, a 42-row achievement fact matrix, all 15 current Steam News API items with evidence classifications, volatile price/review/achievement data, and explicit research gaps. Steam news/devlogs confirm 10 playable frogs, 16 locations, 60+ skills/tools/attacks/companions, demo progress carryover, Puff, Zippy, several launch/update skills, robotic helpers, Blue Gems, artifact rarity tiers, character main-attack concepts, quest-based meta-progression, snow mechanics, and Devlog #4's broad enemy/boss attack-pattern/projectile/companion preview.
 
-The Steam refresh fails loudly when expected source structure drifts: it requests up to 100 Steam News items and errors if the feed may be truncated, derives the achievement count from Steam appdetails, checks non-Steam corroborating pages for marker text, and records the currently blocked demo achievement API as its own source.
+Local demo extraction now adds player-useful game-file facts without redistributing game assets: 135 localized skill/tool rows with short descriptions, 10 character names and specialties, 16 location names, 34 artifact names, 53 stat labels, 5 resource labels, 49 quest strings, 11 event notifications, 4 rarity labels, 3 end-state labels, 127 Addressables level-object prefabs, 124 managed enum groups, 29 ScriptableObject/DataSO type summaries, 1 collectible reward list, and 343 decoded gameplay component instances. See `notes/extracted-metadata.md`.
+
+The Steam refresh fails loudly when expected public metadata structure drifts: it requests up to 100 Steam News items and errors if the feed may be truncated, derives the achievement count from Steam appdetails, checks non-Steam corroborating pages for marker text, and records the currently blocked demo achievement API separately.
 
 ## Commands
 
@@ -35,6 +38,8 @@ npm run build:verified
 npm run dev
 npm run deploy:status
 npm run deploy:publish
+npm run r2:offload:tmp
+npm run r2:offload:tmp:prune
 npm run domain:check
 npm run domain:status
 npm run domain:account
@@ -72,8 +77,14 @@ npm run audit:completion
 - Mark uncertain information as `Needs verification`.
 - Use only `Verified`, `Inferred`, or `Needs verification`.
 - Keep `game-files/` local-only and gitignored.
-- Do not redistribute proprietary assets, binaries, source code, decompiled content, DRM-bypassed material, or large raw text dumps.
+- Do not redistribute proprietary assets, binaries, program code, decompiled content, DRM-bypassed material, or large raw text dumps.
 - Do not modify files in `game-files/`.
+
+## Heavy Local Artifacts
+
+Cloudflare R2 credentials live in the gitignored `.env.local`. Use `npm run r2:offload:tmp` to copy ignored runtime artifacts from `tmp/` into the private `froggyhatessnow-wiki-heavy` R2 bucket. Use `npm run r2:offload:tmp:prune` only when the upload succeeds and the local `tmp/` artifacts can be removed.
+
+The offload script refuses to upload `game-files/` because the project keeps game files local-only.
 
 ## Steam Demo Acquisition
 
@@ -85,7 +96,9 @@ Attempted command:
 steamcmd +@sSteamCmdForcePlatformType windows +force_install_dir ./game-files +login anonymous +app_update 4037600 validate +quit
 ```
 
-Result in this environment: Homebrew SteamCMD installed, but the macOS SteamCMD runtime hung after repeated Steam launch/assertion output and left `game-files/` empty. Docker fallback was attempted, but Docker/Rancher Desktop was not running.
+Earlier result before macOS security approval: Homebrew SteamCMD installed, but the macOS SteamCMD runtime hung after repeated Steam launch/assertion output and left `game-files/` empty. Docker fallback was attempted, but Docker/Rancher Desktop was not running.
+
+Current result after allowing `Breakpad.framework` in macOS settings: Homebrew SteamCMD launches successfully, and the Windows demo build is installed under `game-files/`. The current safe extractor reads public-like metadata, localization strings, Addressables paths, managed enum/type names, and compact serialized summaries. `game-files/` remains local-only and gitignored.
 
 When SteamCMD is working, rerun:
 
@@ -136,9 +149,9 @@ See `notes/domain-options.md` for pricing and next steps.
 
 The concise remaining-blocker handoff is in `notes/final-handoff.md`.
 
-`npm run audit:completion` is read-only except for normal build output. It verifies the goal-level artifact checklist, required scripts, data coverage, generated pages, git state, validator, tests, build, deployed Vercel alias, and custom-domain health. It is expected to fail until the custom domain is registered, DNS resolves, and the Astro canonical site is switched.
+`npm run audit:completion` is read-only except for normal build output. It verifies the goal-level artifact checklist, required scripts, data coverage, generated player tables, git state, validator, tests, build, deployed Vercel alias, and custom-domain health. It is expected to fail until the custom domain is registered, DNS resolves, and the Astro canonical site is switched.
 
-`npm run deploy:status` is read-only. It checks which deployment the stable Vercel alias is actively serving, verifies key live wiki pages, compares the live Steam source page and `/llms.txt` against the local `steam-snapshot.json` timestamp, verifies `/robots.txt`, and reports any queued/building deployments without removing them.
+`npm run deploy:status` is read-only. It checks which deployment the stable Vercel alias is actively serving, verifies key live wiki pages, compares `/llms.txt` against the local `steam-snapshot.json` timestamp, verifies `/robots.txt`, and reports any queued/building deployments without removing them.
 
 `npm run deploy:publish` is guarded. By default it refuses to remove stuck remote deployments. After explicit approval to clear the Vercel queue, run:
 

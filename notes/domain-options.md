@@ -135,7 +135,7 @@ A confirmed `domain:finish` attempt on 2026-05-13 stopped at the same registrati
 - Create request id: `019e217f-e6ac-723c-8134-3613a780f093`
 - Error code: `VERIFICATION_REQUIRED`
 
-A follow-up confirmed `domain:finish` attempt on 2026-05-13, after the Steam-source refresh deployment, again stopped at the same registration gate before DNS, Astro site, build, or deploy steps ran. It reused the post-verification idempotency key, so Porkbun replayed the same create request id.
+A follow-up confirmed `domain:finish` attempt on 2026-05-13, after the Steam metadata refresh deployment, again stopped at the same registration gate before DNS, Astro site, build, or deploy steps ran. It reused the post-verification idempotency key, so Porkbun replayed the same create request id.
 
 - Command: `npm run domain:finish -- --confirm-register-and-dns`
 - Check request id: `019e219a-80e4-723c-af60-4191806fc087`
@@ -260,7 +260,7 @@ After Porkbun account verification and credit/payment setup:
    npm run domain:finish:post-verification
    ```
 
-   The finisher registers the domain, configures Porkbun DNS, updates the Astro `site` value to `https://froggyhatessnow.wiki`, validates/builds, commits and pushes the canonical config switch only if `astro.config.mjs` is the sole dirty file, deploys from that clean committed state, reruns Vercel domain checks, verifies live homepage/source/matrix markers on both the apex and `www` custom domains, and then runs `domain:health` plus `audit:completion`.
+   The finisher registers the domain, configures Porkbun DNS, updates the Astro `site` value to `https://froggyhatessnow.wiki`, validates/builds, commits and pushes the canonical config switch only if `astro.config.mjs` is the sole dirty file, deploys from that clean committed state, reruns Vercel domain checks, verifies live homepage/wiki markers on both the apex and `www` custom domains, and then runs `domain:health` plus `audit:completion`.
 
 Manual fallback:
 
@@ -305,7 +305,7 @@ Alternative DNS plan: change the domain nameservers to Vercel's intended nameser
 - `ns1.vercel-dns.com`
 - `ns2.vercel-dns.com`
 
-Sources:
+References:
 
 - Porkbun account contact settings: https://kb.porkbun.com/article/57-how-to-change-contact-information
 - Porkbun account email/phone verification location: https://kb.porkbun.com/article/182-subaccounts-guide

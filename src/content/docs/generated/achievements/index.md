@@ -1,56 +1,55 @@
 ---
 title: "Achievements"
-description: "Achievements entries for the unofficial FROGGY HATES SNOW wiki."
+description: "Achievements player lookup for FROGGY HATES SNOW."
 draft: false
 ---
 
-# Achievements
-
-Achievements entries for the unofficial FROGGY HATES SNOW wiki.
-
-Status counts: Verified: 42.
-
-| Name | Status | Summary |
-|---|---|---|
-| [All Eyes Open](all-eyes-open/) | Verified | Survive a run with Map, Scanner & Locator |
-| [Assemble the Team I](assemble-the-team-i/) | Verified | Unlock 1 Character |
-| [Assemble the Team II](assemble-the-team-ii/) | Verified | Unlock 3 Characters |
-| [Assemble the Team III](assemble-the-team-iii/) | Verified | Unlock 9 Characters |
-| [Bending Reality](bending-reality/) | Verified | Survive a run with Teleport & Magnet |
-| [Burning Through](burning-through/) | Verified | Survive a run with Flamethrower & Fire Infusion |
-| [Caffeinated Chaos](caffeinated-chaos/) | Verified | Survive a run with Hot Tea & Energy Drink |
-| [Close Call Energy](close-call-energy/) | Verified | Survive a run with Adrenaline & Spark |
-| [Cozy on the Go](cozy-on-the-go/) | Verified | Survive a run with Heater Sled, Hot Tea & Gloves |
-| [Cursed Survival](cursed-survival/) | Verified | Survive a run with Voodoo Curse & Vampirism |
-| [Deadly Dose](deadly-dose/) | Verified | Survive a run with Poison Flask & Poison Infusion |
-| [Deep Freeze](deep-freeze/) | Verified | Survive a run with Frost Bomb & Frost Infusion |
-| [Demolition Run](demolition-run/) | Verified | Survive a run with Dynamite, Air Bomb & Pickaxe |
-| [Elemental Mayhem](elemental-mayhem/) | Verified | Survive a run with Chain Lightning, Frost Bomb & Poison Flask |
-| [Master of the Tongue](master-of-the-tongue/) | Verified | Survive a run with Tongue Attack & Curvy Tongue |
-| [Old School Explorer](old-school-explorer/) | Verified | Survive a run with Map, Shovel & Cart |
-| [Pathfinder I](pathfinder-i/) | Verified | Unlock 1 Location |
-| [Pathfinder II](pathfinder-ii/) | Verified | Unlock 5 Locations |
-| [Pathfinder III](pathfinder-iii/) | Verified | Unlock 15 Locations |
-| [Peak Performance I](peak-performance-i/) | Verified | Fully upgrade 1 Character |
-| [Peak Performance II](peak-performance-ii/) | Verified | Fully upgrade 5 Characters |
-| [Peak Performance III](peak-performance-iii/) | Verified | Fully upgrade 10 Characters |
-| [Power Hungry I](power-hungry-i/) | Verified | Unlock 1 Skill |
-| [Power Hungry II](power-hungry-ii/) | Verified | Unlock 5 Skills |
-| [Power Hungry III](power-hungry-iii/) | Verified | Unlock 10 Skills |
-| [Power Hungry IV](power-hungry-iv/) | Verified | Unlock 20 Skills |
-| [Power Hungry V](power-hungry-v/) | Verified | Unlock 30 Skills |
-| [Relic Hunter I](relic-hunter-i/) | Verified | Collect 1 Artifact |
-| [Relic Hunter II](relic-hunter-ii/) | Verified | Collect 5 Artifacts |
-| [Relic Hunter III](relic-hunter-iii/) | Verified | Collect 10 Artifacts |
-| [Relic Hunter IV](relic-hunter-iv/) | Verified | Collect 20 Artifacts |
-| [Relic Hunter V](relic-hunter-v/) | Verified | Collect 30 Artifacts |
-| [Seeing Stars](seeing-stars/) | Verified | Survive a run with Flashbang & Stun Infusion |
-| [Shock Therapy](shock-therapy/) | Verified | Survive a run with Chain Lightning & Electric Infusion |
-| [Snow Day Arsenal](snow-day-arsenal/) | Verified | Survive a run with Gloves, Snowball Volley & Piercing Icicles |
-| [Snow Master I](snow-master-i/) | Verified | Fully complete 1 Location |
-| [Snow Master II](snow-master-ii/) | Verified | Fully complete 5 Locations |
-| [Snow Master III](snow-master-iii/) | Verified | Fully complete 15 Locations |
-| [Still Standing](still-standing/) | Verified | Survive a run with Shield & Revive |
-| [The Animal Squad](the-animal-squad/) | Verified | Survive a run with Penguin, Mole & Owl |
-| [Thermal Shock](thermal-shock/) | Verified | Survive a run with Flamethrower & Frost Bomb |
-| [Walking Through Hell](walking-through-hell/) | Verified | Survive a run with Death Field & Shield |
+<div class="wiki-table-scroll wiki-reference-table--achievements">
+<table class="wiki-data-table">
+<thead><tr><th scope="col">Name</th><th scope="col">Stats</th><th scope="col">Details</th></tr></thead>
+<tbody>
+<tr><td>All Eyes Open</td><td><dl class="wiki-compact-list"><div><dt>Rarity</dt><dd>0.3%</dd></div></dl></td><td><section class="wiki-table-section"><strong>How to earn</strong><p>Survive a run with Map, Scanner &amp; Locator</p></section><section class="wiki-table-section"><strong>Related names</strong><p>map, scanner, locator</p></section></td></tr>
+<tr><td>Assemble the Team I</td><td><dl class="wiki-compact-list"><div><dt>Rarity</dt><dd>69.4%</dd></div></dl></td><td><section class="wiki-table-section"><strong>How to earn</strong><p>Unlock 1 Character</p></section></td></tr>
+<tr><td>Assemble the Team II</td><td><dl class="wiki-compact-list"><div><dt>Rarity</dt><dd>20.2%</dd></div></dl></td><td><section class="wiki-table-section"><strong>How to earn</strong><p>Unlock 3 Characters</p></section></td></tr>
+<tr><td>Assemble the Team III</td><td><dl class="wiki-compact-list"><div><dt>Rarity</dt><dd>0.3%</dd></div></dl></td><td><section class="wiki-table-section"><strong>How to earn</strong><p>Unlock 9 Characters</p></section></td></tr>
+<tr><td>Bending Reality</td><td><dl class="wiki-compact-list"><div><dt>Rarity</dt><dd>0.8%</dd></div></dl></td><td><section class="wiki-table-section"><strong>How to earn</strong><p>Survive a run with Teleport &amp; Magnet</p></section><section class="wiki-table-section"><strong>Related names</strong><p>teleport, magnet</p></section></td></tr>
+<tr><td>Burning Through</td><td><dl class="wiki-compact-list"><div><dt>Rarity</dt><dd>0.2%</dd></div></dl></td><td><section class="wiki-table-section"><strong>How to earn</strong><p>Survive a run with Flamethrower &amp; Fire Infusion</p></section><section class="wiki-table-section"><strong>Related names</strong><p>flamethrower, fire-infusion</p></section></td></tr>
+<tr><td>Caffeinated Chaos</td><td><dl class="wiki-compact-list"><div><dt>Rarity</dt><dd>0.4%</dd></div></dl></td><td><section class="wiki-table-section"><strong>How to earn</strong><p>Survive a run with Hot Tea &amp; Energy Drink</p></section><section class="wiki-table-section"><strong>Related names</strong><p>hot-tea, energy-drink</p></section></td></tr>
+<tr><td>Close Call Energy</td><td><dl class="wiki-compact-list"><div><dt>Rarity</dt><dd>0.7%</dd></div></dl></td><td><section class="wiki-table-section"><strong>How to earn</strong><p>Survive a run with Adrenaline &amp; Spark</p></section><section class="wiki-table-section"><strong>Related names</strong><p>adrenaline, spark</p></section></td></tr>
+<tr><td>Cozy on the Go</td><td><dl class="wiki-compact-list"><div><dt>Rarity</dt><dd>0.1%</dd></div></dl></td><td><section class="wiki-table-section"><strong>How to earn</strong><p>Survive a run with Heater Sled, Hot Tea &amp; Gloves</p></section><section class="wiki-table-section"><strong>Related names</strong><p>heater-sled, hot-tea, gloves</p></section></td></tr>
+<tr><td>Cursed Survival</td><td><dl class="wiki-compact-list"><div><dt>Rarity</dt><dd>4.2%</dd></div></dl></td><td><section class="wiki-table-section"><strong>How to earn</strong><p>Survive a run with Voodoo Curse &amp; Vampirism</p></section><section class="wiki-table-section"><strong>Related names</strong><p>voodoo-curse, vampirism</p></section></td></tr>
+<tr><td>Deadly Dose</td><td><dl class="wiki-compact-list"><div><dt>Rarity</dt><dd>1.2%</dd></div></dl></td><td><section class="wiki-table-section"><strong>How to earn</strong><p>Survive a run with Poison Flask &amp; Poison Infusion</p></section><section class="wiki-table-section"><strong>Related names</strong><p>poison-flask, poison-infusion</p></section></td></tr>
+<tr><td>Deep Freeze</td><td><dl class="wiki-compact-list"><div><dt>Rarity</dt><dd>0.1%</dd></div></dl></td><td><section class="wiki-table-section"><strong>How to earn</strong><p>Survive a run with Frost Bomb &amp; Frost Infusion</p></section><section class="wiki-table-section"><strong>Related names</strong><p>frost-bomb, frost-infusion</p></section></td></tr>
+<tr><td>Demolition Run</td><td><dl class="wiki-compact-list"><div><dt>Rarity</dt><dd>2.9%</dd></div></dl></td><td><section class="wiki-table-section"><strong>How to earn</strong><p>Survive a run with Dynamite, Air Bomb &amp; Pickaxe</p></section><section class="wiki-table-section"><strong>Related names</strong><p>dynamite, air-bomb, pickaxe</p></section></td></tr>
+<tr><td>Elemental Mayhem</td><td><dl class="wiki-compact-list"><div><dt>Rarity</dt><dd>0.1%</dd></div></dl></td><td><section class="wiki-table-section"><strong>How to earn</strong><p>Survive a run with Chain Lightning, Frost Bomb &amp; Poison Flask</p></section><section class="wiki-table-section"><strong>Related names</strong><p>chain-lightning, frost-bomb, poison-flask</p></section></td></tr>
+<tr><td>Master of the Tongue</td><td><dl class="wiki-compact-list"><div><dt>Rarity</dt><dd>9.8%</dd></div></dl></td><td><section class="wiki-table-section"><strong>How to earn</strong><p>Survive a run with Tongue Attack &amp; Curvy Tongue</p></section><section class="wiki-table-section"><strong>Related names</strong><p>tongue-attack, curvy-tongue</p></section></td></tr>
+<tr><td>Old School Explorer</td><td><dl class="wiki-compact-list"><div><dt>Rarity</dt><dd>65.3%</dd></div></dl></td><td><section class="wiki-table-section"><strong>How to earn</strong><p>Survive a run with Map, Shovel &amp; Cart</p></section><section class="wiki-table-section"><strong>Related names</strong><p>map, shovel, cart</p></section></td></tr>
+<tr><td>Pathfinder I</td><td><dl class="wiki-compact-list"><div><dt>Rarity</dt><dd>76.7%</dd></div></dl></td><td><section class="wiki-table-section"><strong>How to earn</strong><p>Unlock 1 Location</p></section></td></tr>
+<tr><td>Pathfinder II</td><td><dl class="wiki-compact-list"><div><dt>Rarity</dt><dd>15.2%</dd></div></dl></td><td><section class="wiki-table-section"><strong>How to earn</strong><p>Unlock 5 Locations</p></section></td></tr>
+<tr><td>Pathfinder III</td><td><dl class="wiki-compact-list"><div><dt>Rarity</dt><dd>0.4%</dd></div></dl></td><td><section class="wiki-table-section"><strong>How to earn</strong><p>Unlock 15 Locations</p></section></td></tr>
+<tr><td>Peak Performance I</td><td><dl class="wiki-compact-list"><div><dt>Rarity</dt><dd>23.1%</dd></div></dl></td><td><section class="wiki-table-section"><strong>How to earn</strong><p>Fully upgrade 1 Character</p></section></td></tr>
+<tr><td>Peak Performance II</td><td><dl class="wiki-compact-list"><div><dt>Rarity</dt><dd>0.8%</dd></div></dl></td><td><section class="wiki-table-section"><strong>How to earn</strong><p>Fully upgrade 5 Characters</p></section></td></tr>
+<tr><td>Peak Performance III</td><td><dl class="wiki-compact-list"><div><dt>Rarity</dt><dd>0.1%</dd></div></dl></td><td><section class="wiki-table-section"><strong>How to earn</strong><p>Fully upgrade 10 Characters</p></section></td></tr>
+<tr><td>Power Hungry I</td><td><dl class="wiki-compact-list"><div><dt>Rarity</dt><dd>86.1%</dd></div></dl></td><td><section class="wiki-table-section"><strong>How to earn</strong><p>Unlock 1 Skill</p></section></td></tr>
+<tr><td>Power Hungry II</td><td><dl class="wiki-compact-list"><div><dt>Rarity</dt><dd>64.5%</dd></div></dl></td><td><section class="wiki-table-section"><strong>How to earn</strong><p>Unlock 5 Skills</p></section></td></tr>
+<tr><td>Power Hungry III</td><td><dl class="wiki-compact-list"><div><dt>Rarity</dt><dd>45.2%</dd></div></dl></td><td><section class="wiki-table-section"><strong>How to earn</strong><p>Unlock 10 Skills</p></section></td></tr>
+<tr><td>Power Hungry IV</td><td><dl class="wiki-compact-list"><div><dt>Rarity</dt><dd>16.2%</dd></div></dl></td><td><section class="wiki-table-section"><strong>How to earn</strong><p>Unlock 20 Skills</p></section></td></tr>
+<tr><td>Power Hungry V</td><td><dl class="wiki-compact-list"><div><dt>Rarity</dt><dd>4.1%</dd></div></dl></td><td><section class="wiki-table-section"><strong>How to earn</strong><p>Unlock 30 Skills</p></section></td></tr>
+<tr><td>Relic Hunter I</td><td><dl class="wiki-compact-list"><div><dt>Rarity</dt><dd>85.3%</dd></div></dl></td><td><section class="wiki-table-section"><strong>How to earn</strong><p>Collect 1 Artifact</p></section></td></tr>
+<tr><td>Relic Hunter II</td><td><dl class="wiki-compact-list"><div><dt>Rarity</dt><dd>68.7%</dd></div></dl></td><td><section class="wiki-table-section"><strong>How to earn</strong><p>Collect 5 Artifacts</p></section></td></tr>
+<tr><td>Relic Hunter III</td><td><dl class="wiki-compact-list"><div><dt>Rarity</dt><dd>50.0%</dd></div></dl></td><td><section class="wiki-table-section"><strong>How to earn</strong><p>Collect 10 Artifacts</p></section></td></tr>
+<tr><td>Relic Hunter IV</td><td><dl class="wiki-compact-list"><div><dt>Rarity</dt><dd>21.0%</dd></div></dl></td><td><section class="wiki-table-section"><strong>How to earn</strong><p>Collect 20 Artifacts</p></section></td></tr>
+<tr><td>Relic Hunter V</td><td><dl class="wiki-compact-list"><div><dt>Rarity</dt><dd>3.5%</dd></div></dl></td><td><section class="wiki-table-section"><strong>How to earn</strong><p>Collect 30 Artifacts</p></section></td></tr>
+<tr><td>Seeing Stars</td><td><dl class="wiki-compact-list"><div><dt>Rarity</dt><dd>0.1%</dd></div></dl></td><td><section class="wiki-table-section"><strong>How to earn</strong><p>Survive a run with Flashbang &amp; Stun Infusion</p></section><section class="wiki-table-section"><strong>Related names</strong><p>flashbang, stun-infusion</p></section></td></tr>
+<tr><td>Shock Therapy</td><td><dl class="wiki-compact-list"><div><dt>Rarity</dt><dd>0.1%</dd></div></dl></td><td><section class="wiki-table-section"><strong>How to earn</strong><p>Survive a run with Chain Lightning &amp; Electric Infusion</p></section><section class="wiki-table-section"><strong>Related names</strong><p>chain-lightning, electric-infusion</p></section></td></tr>
+<tr><td>Snow Day Arsenal</td><td><dl class="wiki-compact-list"><div><dt>Rarity</dt><dd>0.1%</dd></div></dl></td><td><section class="wiki-table-section"><strong>How to earn</strong><p>Survive a run with Gloves, Snowball Volley &amp; Piercing Icicles</p></section><section class="wiki-table-section"><strong>Related names</strong><p>gloves, snowball-volley, piercing-icicles</p></section></td></tr>
+<tr><td>Snow Master I</td><td><dl class="wiki-compact-list"><div><dt>Rarity</dt><dd>68.0%</dd></div></dl></td><td><section class="wiki-table-section"><strong>How to earn</strong><p>Fully complete 1 Location</p></section></td></tr>
+<tr><td>Snow Master II</td><td><dl class="wiki-compact-list"><div><dt>Rarity</dt><dd>15.8%</dd></div></dl></td><td><section class="wiki-table-section"><strong>How to earn</strong><p>Fully complete 5 Locations</p></section></td></tr>
+<tr><td>Snow Master III</td><td><dl class="wiki-compact-list"><div><dt>Rarity</dt><dd>0.4%</dd></div></dl></td><td><section class="wiki-table-section"><strong>How to earn</strong><p>Fully complete 15 Locations</p></section></td></tr>
+<tr><td>Still Standing</td><td><dl class="wiki-compact-list"><div><dt>Rarity</dt><dd>2.3%</dd></div></dl></td><td><section class="wiki-table-section"><strong>How to earn</strong><p>Survive a run with Shield &amp; Revive</p></section><section class="wiki-table-section"><strong>Related names</strong><p>shield, revive</p></section></td></tr>
+<tr><td>The Animal Squad</td><td><dl class="wiki-compact-list"><div><dt>Rarity</dt><dd>2.1%</dd></div></dl></td><td><section class="wiki-table-section"><strong>How to earn</strong><p>Survive a run with Penguin, Mole &amp; Owl</p></section><section class="wiki-table-section"><strong>Related names</strong><p>penguin, mole, owl</p></section></td></tr>
+<tr><td>Thermal Shock</td><td><dl class="wiki-compact-list"><div><dt>Rarity</dt><dd>2.0%</dd></div></dl></td><td><section class="wiki-table-section"><strong>How to earn</strong><p>Survive a run with Flamethrower &amp; Frost Bomb</p></section><section class="wiki-table-section"><strong>Related names</strong><p>flamethrower, frost-bomb</p></section></td></tr>
+<tr><td>Walking Through Hell</td><td><dl class="wiki-compact-list"><div><dt>Rarity</dt><dd>0.1%</dd></div></dl></td><td><section class="wiki-table-section"><strong>How to earn</strong><p>Survive a run with Death Field &amp; Shield</p></section><section class="wiki-table-section"><strong>Related names</strong><p>death-field, shield</p></section></td></tr>
+</tbody>
+</table>
+</div>

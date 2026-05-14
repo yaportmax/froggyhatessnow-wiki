@@ -16,7 +16,7 @@ export const GET: APIRoute = ({ site }) => {
     `Host: ${base.replace(/^https?:\/\//, "")}`,
     "",
     "# Unofficial FROGGY HATES SNOW wiki.",
-    "# Source policy: public Steam/public web/safe metadata summaries only."
+    "# Public game metadata and compact local extraction summaries only."
   ].join("\n");
 
   return new Response(`${body}\n`, {

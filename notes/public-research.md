@@ -4,7 +4,7 @@ Accessed: 2026-05-13
 
 This note summarizes public metadata used to seed the wiki. It intentionally avoids raw long store-description dumps and raw review text.
 
-## High-Confidence Sources
+## High-Confidence References
 
 - Steam full-game store page: https://store.steampowered.com/app/3232380/FROGGY_HATES_SNOW/
 - Steam demo store page: https://store.steampowered.com/app/4037600/FROGGY_HATES_SNOW_Demo/
@@ -30,7 +30,7 @@ This note summarizes public metadata used to seed the wiki. It intentionally avo
 - Genres from Steam appdetails: [{"id":"1","description":"Action"},{"id":"23","description":"Indie"},{"id":"2","description":"Strategy"}]
 - Categories from Steam appdetails: [{"id":2,"description":"Single-player"},{"id":22,"description":"Steam Achievements"},{"id":28,"description":"Full controller support"},{"id":78,"description":"Adjustable Difficulty"},{"id":74,"description":"Playable without Timed Input"},{"id":23,"description":"Steam Cloud"},{"id":62,"description":"Family Sharing"}]
 - Full game current US price from Steam appdetails: {"currency":"USD","initial":1499,"final":1349,"discount_percent":10,"initial_formatted":"$14.99","final_formatted":"$13.49"}
-- Full game Steam recommendations total from appdetails: 177
+- Full game Steam recommendations total from appdetails: 179
 - Full game screenshots listed by appdetails: 14
 - Demo screenshots listed by appdetails: 13
 - Full-game languages: English * , French * , German * , Spanish - Spain * , Japanese * , Korean * , Polish * , Portuguese - Brazil * , Simplified Chinese * , Ukrainian * , Turkish * , Traditional Chinese * * languages with full audio support
@@ -50,7 +50,7 @@ This note summarizes public metadata used to seed the wiki. It intentionally avo
 - Steam news/devlog confirmed terms added to the wiki: Zippy, Puff, Glider, Snowball Roll, Leap Chain, Delivery Bot, Flamethrower Bot, Scanner Drone, Piercing Icicles, Fireworks, Snowball Volley, Energy Wave, Destructive Field, Invincible Roll, Armor, new enemies and bosses, new attack patterns, new projectile types, new frog skills, movement abilities, snow digging abilities, new companions, animals, robots, ranged poison spit, Drill, Salt Sack, Snowblower, Blue Gems, Common artifacts, Uncommon artifacts, Rare artifacts, Legendary artifacts, Night Mode, UI Scale, full game launch, Skill Banishing, Stun, Fire, Frost, Poison, Lightning, Anomalous Zones, 10 playable frogs, 16 locations, 60+ skills/tools/attacks/companions, demo progress carryover, heightmap snow, snow layers, Dynamite, Air Bomb, Flamethrower, quests, abilities, locations, first two arenas, 10 playable frog characters, unique specialization, main attack, starting skillset, tongue attacks, spits, snow minigun, electric staff, hockey stick, quest-based meta-progression, 10 playable characters, unique skin, interactive snow, digging.
 - Exact stats, unlock costs, complete named map roster, named boss roster, named enemy roster, and the remaining frog/character roster remain Needs verification unless local metadata or gameplay notes confirm them.
 
-## Steam News / Devlog Source Items
+## Steam News / Devlog Reference Items
 
 - Steam News API items classified: 15
 - Steam News API classification counts: {"patch_or_update":1,"release_marketing_no_gameplay":2,"gameplay_devlog":4,"scope_marketing":1,"marketing_or_event":3,"demo_update_gameplay":1,"demo_devlog_gameplay":1,"demo_devlog_partial":1,"developer_intro_weak_gameplay":1}
@@ -67,7 +67,7 @@ This note summarizes public metadata used to seed the wiki. It intentionally avo
 - 2026-01-20 - Devlog #2: A quick update about the Froggy Hates Snow demo: https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1821922921824108 (Demo update devlog previewing quest-based meta-progression and ten planned characters with unique skins, skills, and main attacks.)
 - 2025-12-19 - Devlog #1: Meet The Developer: https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1819386365096417 (Developer introduction describing the game's interactive snow and digging ideas.)
 
-## External Source Checks
+## External Reference Checks
 
 - Digital Bandidos game page: https://digitalbandidos.com/games/froggy-hates-snow/ (matched markers: Froggy Hates Snow, Digital Bandidos, Crying Brick)
 - Xbox Wire developer interview: https://news.xbox.com/en-us/2026/05/05/froggy-hates-snow-interview/ (matched markers: Froggy Hates Snow, 16 maps, Peaceful Mode, heightmap, companions, tools, skills)
@@ -78,14 +78,14 @@ This note summarizes public metadata used to seed the wiki. It intentionally avo
 - Public global achievement API ids parsed: 42
 - Achievement fact matrix rows stored in src/data/steam-snapshot.json: 42
 - Achievement rows with parsed public loadout names: 20
-- Generated source page: /achievement-source-matrix/, covering milestone series, loadout-name evidence, Steam API ids, API percentages, community percentages, and source ids.
+- Achievement evidence matrix rows cover milestone series, loadout-name evidence, Steam API ids, API percentages, and community percentages.
 - Demo global achievement API status: 403 (https://api.steampowered.com/ISteamUserStats/GetGlobalAchievementPercentagesForApp/v0002/?gameid=4037600&format=json returned 403)
 - Demo global achievement API ids parsed: 0
 - Achievement percentages are volatile and may differ slightly by endpoint/cache. Use them as as-of metadata only.
 
 ## Review Summaries
 
-- Full game review summary: {"num_reviews":10,"review_score":8,"review_score_desc":"Very Positive","total_positive":184,"total_negative":14,"total_reviews":198}
+- Full game review summary: {"num_reviews":10,"review_score":8,"review_score_desc":"Very Positive","total_positive":188,"total_negative":14,"total_reviews":202}
 - Demo review summary: {"num_reviews":10,"review_score":8,"review_score_desc":"Very Positive","total_positive":140,"total_negative":3,"total_reviews":143}
 
 ## SteamCMD / Local Demo Acquisition Status
@@ -99,5 +99,5 @@ This note summarizes public metadata used to seed the wiki. It intentionally avo
 ## Cautions
 
 - Do not infer entity effects, unlock costs, or roster completeness from names alone.
-- Do not redistribute proprietary assets, binaries, source code, or large raw text excerpts from local game files.
+- Do not redistribute proprietary assets, binaries, program code, or large raw text excerpts from local game files.
 - Refresh prices, review counts, player counts, and achievement percentages before using them in visible copy.

@@ -22,7 +22,7 @@ Created and pushed on 2026-05-13:
 Command used:
 
 ```bash
-gh repo create yaportmax/froggyhatessnow-wiki --public --source=. --remote=origin --push
+gh repo create yaportmax/froggyhatessnow-wiki --public --remote=origin --push
 ```
 
 ## Vercel
@@ -36,7 +36,9 @@ Latest successful production deploy completed on 2026-05-13:
 - Deployment id: `dpl_6Ey7Ab2CJZHqCYanUFiPKgKfpmDu`
 - Inspect URL: https://vercel.com/yaportmax-5253s-projects/froggyhatessnow-wiki/6Ey7Ab2CJZHqCYanUFiPKgKfpmDu
 
-The current deploy includes the refreshed Steam source snapshot generated at `2026-05-13T16:07:29.110Z`, all 15 Steam News API items with evidence classifications, 11 direct Steam news/devlog source mappings, 70 confirmed Steam news/devlog terms, 42-row achievement source matrix, generated source ledger, game metadata page, explicit empty-local-metadata status, 16 public gameplay claims, and 190 static HTML pages. The build now clears Astro's local content cache in `prebuild` so restored Vercel caches do not emit stale duplicate-doc warnings.
+The last verified live deploy includes the refreshed Steam metadata snapshot generated at `2026-05-13T16:07:29.110Z`, all 15 Steam News API items with evidence classifications, 11 direct Steam news/devlog mappings, 70 confirmed Steam news/devlog terms, 42 achievement fact rows, explicit empty-local-metadata status, 16 public gameplay claims, and 25 static HTML pages. The generated data is exposed as compact player lookup tables rather than low-value entity detail stubs. The build clears Astro's local content cache in `prebuild` so restored Vercel caches do not emit stale duplicate-doc warnings.
+
+Current local build after game-file extraction adds `/game-file-extraction/`, 26 static HTML pages, and safe local demo metadata: 135 localized skill/tool rows, 10 character names and specialties, 16 location names, 34 artifact names, 53 stat labels, 5 resource labels, 49 quest strings, 11 event notifications, 4 rarity labels, 3 end-state labels, 127 Addressables level-object prefabs, 124 managed enum groups, 29 ScriptableObject/DataSO type summaries, 1 collectible reward list, and 343 decoded gameplay component instances. Deploy again before treating those additions as live on the stable Vercel alias.
 Astro's `site` setting points to the Vercel alias until `froggyhatessnow.wiki` is actually registered and connected.
 
 Earlier deploy attempts after validator hardening are no longer blocking the queue:
@@ -48,7 +50,7 @@ Earlier deploy attempts after validator hardening are no longer blocking the que
 - `dpl_8UYsVqC8BEkCweYPqWM6JEVQWd2p` / `https://froggyhatessnow-wiki-b3biql6p7-yaportmax-5253s-projects.vercel.app` resolved to `READY` and was superseded by `dpl_FQR7LnA2gPZ4NHhodyEAmQZ6fo9P`.
 - `dpl_FQR7LnA2gPZ4NHhodyEAmQZ6fo9P` / `https://froggyhatessnow-wiki-7980rz2cq-yaportmax-5253s-projects.vercel.app` resolved to `READY` and was superseded by `dpl_6Ey7Ab2CJZHqCYanUFiPKgKfpmDu`.
 
-Non-destructive checks on 2026-05-13 confirm the stable alias directly; `https://froggyhatessnow-wiki.vercel.app` resolves to READY deployment `dpl_6Ey7Ab2CJZHqCYanUFiPKgKfpmDu`, and the homepage, Steam source snapshot, local Steam snapshot timestamp, achievement matrix, Open Graph image metadata, `/robots.txt`, and `/llms.txt` live checks pass.
+Non-destructive checks on 2026-05-13 confirm the stable alias directly; `https://froggyhatessnow-wiki.vercel.app` resolves to READY deployment `dpl_6Ey7Ab2CJZHqCYanUFiPKgKfpmDu`, and the homepage, generated wiki markers, Open Graph image metadata, `/robots.txt`, and `/llms.txt` live checks pass.
 
 ```bash
 npm run deploy:status
@@ -62,10 +64,12 @@ npm run deploy:publish
 
 Live checks after this deploy:
 
-- `https://froggyhatessnow-wiki.vercel.app/steam-source-snapshot/` returns 200 and contains Steam News API items classified, All Steam News Items, Direct Steam News Sources, Devlog #4's `steam-prelaunch-content-devlog` mapping, Local Metadata Scan, 14 full-game screenshot count, and Achievement Source Matrix link.
-- `https://froggyhatessnow-wiki.vercel.app/achievement-source-matrix/` returns 200 and contains Milestone Series and Loadout Names sections.
-- `https://froggyhatessnow-wiki.vercel.app/game-metadata/` returns 200.
-- `https://froggyhatessnow-wiki.vercel.app/generated/frogs/puff/` returns 200 and contains Puff/ranged poison spit source data.
+- `https://froggyhatessnow-wiki.vercel.app/` returns 200 and contains the wiki landing page.
+- `https://froggyhatessnow-wiki.vercel.app/generated/media/` returns 200 and contains the public Steam media gallery.
+- `https://froggyhatessnow-wiki.vercel.app/generated/frogs/` returns 200 and contains the playable frog index.
+- `https://froggyhatessnow-wiki.vercel.app/generated/mechanics/` returns 200 and contains mechanics terminology.
+- `https://froggyhatessnow-wiki.vercel.app/generated/quests/` returns 200 and contains quest templates.
+- `https://froggyhatessnow-wiki.vercel.app/generated/terrain/` returns 200 and contains snow and terrain concepts.
 
 Command used:
 

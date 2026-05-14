@@ -69,13 +69,6 @@ function freshIdempotencySuffix() {
   return `post-verification-${new Date().toISOString().replace(/[-:.]/g, "").slice(0, 15)}Z`;
 }
 
-async function readSteamSnapshotGeneratedAt() {
-  const raw = await readFile("src/data/steam-snapshot.json", "utf8");
-  const snapshot = JSON.parse(raw) as { generated_at?: string };
-  if (!snapshot.generated_at) throw new Error("src/data/steam-snapshot.json is missing generated_at.");
-  return snapshot.generated_at;
-}
-
 async function switchAstroSite() {
   const configPath = "astro.config.mjs";
   const source = await readFile(configPath, "utf8");
@@ -148,17 +141,12 @@ async function fetchCheck(baseUrl: string, pathname: string, requiredText: strin
 }
 
 async function verifyCustomDomainLive() {
-  const generatedAt = await readSteamSnapshotGeneratedAt();
   const baseUrls = [CUSTOM_SITE, `https://www.${DOMAIN}`];
   const checks = [
     { pathname: "/", requiredText: "FROGGY HATES SNOW Wiki", label: "homepage" },
-    { pathname: "/steam-source-snapshot/", requiredText: "All Steam News Items", label: "Steam source page" },
-    {
-      pathname: "/steam-source-snapshot/",
-      requiredText: `Generated: ${generatedAt}`,
-      label: "current Steam snapshot marker"
-    },
-    { pathname: "/achievement-source-matrix/", requiredText: "Loadout Names", label: "achievement matrix" }
+    { pathname: "/generated/frogs/", requiredText: "Playable Frogs", label: "frogs page" },
+    { pathname: "/generated/mechanics/", requiredText: "Mechanics", label: "mechanics page" },
+    { pathname: "/generated/quests/", requiredText: "Quest Templates", label: "quests page" }
   ];
 
   let latestResults: Awaited<ReturnType<typeof fetchCheck>>[] = [];

@@ -1,5 +1,4 @@
 import { execFile } from "node:child_process";
-import { readFile } from "node:fs/promises";
 import { promisify } from "node:util";
 
 const execFileAsync = promisify(execFile);
@@ -8,7 +7,6 @@ const PROJECT = "froggyhatessnow-wiki";
 const SCOPE = "yaportmax-5253s-projects";
 const STABLE_ALIAS = "https://froggyhatessnow-wiki.vercel.app";
 const KNOWN_DEPLOYMENTS = [
-  "https://froggyhatessnow-wiki-md282qwlk-yaportmax-5253s-projects.vercel.app",
   "https://froggyhatessnow-wiki-kyvn13zp7-yaportmax-5253s-projects.vercel.app",
   "https://froggyhatessnow-wiki-biugqd5z2-yaportmax-5253s-projects.vercel.app"
 ];
@@ -21,10 +19,6 @@ type VercelInspect = {
   target?: string;
   alias?: string[];
   aliases?: string[];
-};
-
-type SteamSnapshot = {
-  generated_at?: string;
 };
 
 async function runVercel(args: string[], options: { allowJsonOnFailure?: boolean } = {}) {
@@ -56,64 +50,73 @@ function parseJsonOutput<T>(raw: string): T {
   return JSON.parse(raw.slice(jsonStart)) as T;
 }
 
-async function readSteamSnapshot() {
-  const snapshotPath = new URL("../src/data/steam-snapshot.json", import.meta.url);
-  const raw = await readFile(snapshotPath, "utf8");
-  const snapshot = JSON.parse(raw) as SteamSnapshot;
-  if (!snapshot.generated_at) throw new Error("steam-snapshot.json is missing generated_at");
-  return snapshot;
-}
-
 async function inspectDeployment(url: string) {
-  const raw = await runVercel(["inspect", url, "--format=json"], { allowJsonOnFailure: true });
-  const data = parseJsonOutput<VercelInspect>(raw);
-  return {
-    id: data.uid ?? data.id ?? "unknown",
-    url: data.url ? `https://${data.url.replace(/^https?:\/\//, "")}` : url,
-    readyState: data.readyState ?? "unknown",
-    target: data.target ?? "unknown",
-    aliases: data.aliases ?? data.alias ?? []
-  };
+  try {
+    const raw = await runVercel(["inspect", url, "--format=json"], { allowJsonOnFailure: true });
+    const data = parseJsonOutput<VercelInspect>(raw);
+    return {
+      id: data.uid ?? data.id ?? "unknown",
+      url: data.url ? `https://${data.url.replace(/^https?:\/\//, "")}` : url,
+      readyState: data.readyState ?? "unknown",
+      target: data.target ?? "unknown",
+      aliases: data.aliases ?? data.alias ?? []
+    };
+  } catch (error) {
+    return {
+      id: "missing",
+      url,
+      readyState: "MISSING",
+      target: "unknown",
+      aliases: [],
+      error: (error as Error).message
+    };
+  }
 }
 
-async function checkPage(pathname: string, requiredText: string, label = requiredText) {
+async function checkPage(pathname: string, requiredText: string, label = requiredText, forbiddenText?: string) {
   const url = `${STABLE_ALIAS}${pathname}`;
   const response = await fetch(url);
   const body = await response.text();
+  const containsForbiddenText = forbiddenText ? body.includes(forbiddenText) : false;
   return {
     url,
     httpStatus: response.status,
     ok: response.ok,
     containsRequiredText: body.includes(requiredText),
+    containsForbiddenText,
     requiredText,
+    forbiddenText: forbiddenText ?? null,
     label
   };
 }
 
 async function main() {
-  const [listOutput, activeDeployment, deployments, gitHead, gitStatus, steamSnapshot] = await Promise.all([
+  const [listOutput, activeDeployment, deployments, gitHead, gitStatus] = await Promise.all([
     runVercel(["list", PROJECT, "--scope", SCOPE]),
     inspectDeployment(STABLE_ALIAS),
     Promise.all(KNOWN_DEPLOYMENTS.map(inspectDeployment)),
     runGit(["rev-parse", "HEAD"]),
-    runGit(["status", "--short"]),
-    readSteamSnapshot()
+    runGit(["status", "--short"])
   ]);
   const liveChecks = await Promise.all([
     checkPage("/", "FROGGY HATES SNOW Wiki"),
-    checkPage("/steam-source-snapshot/", "All Steam News Items"),
-    checkPage(
-      "/steam-source-snapshot/",
-      `Generated: ${steamSnapshot.generated_at}`,
-      "Current local Steam snapshot generated_at"
-    ),
-    checkPage("/achievement-source-matrix/", "Loadout Names"),
+    checkPage("/generated/skills/", "Status effects", "skills status-effect column", "/generated/skills/bat-fire/"),
+    checkPage("/generated/skills/", "/generated/status-effects/bat-fire/", "skills link status effects"),
+    checkPage("/generated/status-effects/bat-fire/", "/generated/skills/baseball-bat/", "status effect links to base skill", "/generated/skills/bat-fire/"),
+    checkPage("/generated/enemies/", "wiki-table-scroll", "enemy reference table", "wiki-reference-grid"),
+    checkPage("/generated/enemies/bat/", "Level values", "enemy detail value table"),
+    checkPage("/generated/frogs/", "Froggy", "frog roster"),
+    checkPage("/generated/media/", "Full-Game Screenshots", "media gallery"),
+    checkPage("/generated/media/", "steam-media-grid", "media image grid"),
+    checkPage("/generated/mechanics/", "/generated/quests/", "mechanics split links"),
+    checkPage("/generated/quests/", "Quest Templates", "quest templates page"),
+    checkPage("/generated/terrain/", "Terrain", "terrain page"),
     checkPage("/", 'property="og:image"', "homepage Open Graph image"),
     checkPage("/robots.txt", "sitemap-index.xml", "robots sitemap"),
-    checkPage("/llms.txt", `Source snapshot generated: ${steamSnapshot.generated_at}`, "llms source snapshot marker")
+    checkPage("/llms.txt", "Generated Category Indexes", "llms generated index marker")
   ]);
-  const liveChecksPassed = liveChecks.every((check) => check.ok && check.containsRequiredText);
-  const failedLiveChecks = liveChecks.filter((check) => !check.ok || !check.containsRequiredText);
+  const liveChecksPassed = liveChecks.every((check) => check.ok && check.containsRequiredText && !check.containsForbiddenText);
+  const failedLiveChecks = liveChecks.filter((check) => !check.ok || !check.containsRequiredText || check.containsForbiddenText);
   const nonReady = deployments.filter((deployment) => !["READY", "CANCELED", "ERROR"].includes(deployment.readyState));
   const nonReadyWithAliases = nonReady.filter((deployment) => deployment.aliases.length > 0);
   const safeToRemove = nonReady.filter((deployment) => deployment.aliases.length === 0);
@@ -124,8 +127,7 @@ async function main() {
         project: `${SCOPE}/${PROJECT}`,
         local: {
           gitHead,
-          dirty: gitStatus.length > 0,
-          steamSnapshotGeneratedAt: steamSnapshot.generated_at
+          dirty: gitStatus.length > 0
         },
         stableAlias: STABLE_ALIAS,
         activeDeployment,
@@ -144,7 +146,7 @@ async function main() {
           failedLiveChecks.length > 0
             ? {
                 status: "stable_alias_missing_expected_content",
-                note: "The live alias is healthy, but it does not contain one or more expected local-source markers. The latest local/pushed snapshot is probably not deployed yet.",
+                note: "The live alias is healthy, but it does not contain one or more expected reference-wiki markers. The latest local build is probably not deployed yet.",
                 failedChecks: failedLiveChecks.map((check) => ({
                   url: check.url,
                   label: check.label,

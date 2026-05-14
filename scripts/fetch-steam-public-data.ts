@@ -797,7 +797,7 @@ function classifyUnmappedSteamNewsItem(item: SteamNewsApiItem): {
       fact_scope: ["release_status", "marketing"],
       claim_limits: "Use for release/update timing context only; no gameplay facts are extracted from this unmapped post.",
       needs_gameplay_verification: false,
-      notes: "Recorded for release/update source coverage; no additional gameplay facts are extracted unless mapped by direct source rules."
+      notes: "Recorded for release/update coverage; no additional gameplay facts are extracted unless mapped by direct evidence rules."
     };
   }
   if (/wishlist|fan fest|plays|stream|spotlight|thank you/i.test(title)) {
@@ -814,9 +814,9 @@ function classifyUnmappedSteamNewsItem(item: SteamNewsApiItem): {
     classification: "weak_or_no_gameplay_facts",
     evidence_strength: "weak",
     fact_scope: ["source_coverage"],
-    claim_limits: "No gameplay facts are extracted by current source rules.",
+    claim_limits: "No gameplay facts are extracted by current evidence rules.",
     needs_gameplay_verification: true,
-    notes: "Recorded for complete Steam News coverage; no gameplay facts are extracted by current source rules."
+    notes: "Recorded for complete Steam News coverage; no gameplay facts are extracted by current evidence rules."
   };
 }
 
@@ -1279,12 +1279,12 @@ function seedCoreEntities() {
     entity({
       name: "Unnamed location roster slots",
       category: "maps",
-      short_description: "Steam/Xbox public sources confirm 16 locations/maps, but the current safe source pass has not verified individual location names.",
+      short_description: "Steam/Xbox public references confirm 16 locations/maps, but the current safe evidence pass has not verified individual location names.",
       effect: "Location names, location order, completion requirements, and boss links still need direct verification.",
       unlock_method: "Achievements mention unlock thresholds at 1, 5, and 15 locations.",
       verification_status: "Needs verification",
       sources: [releaseDateNews, achievementsSource, xboxWire],
-      notes: "Tracker entry for missing map roster coverage; individual location pages should be added only after names are sourced."
+      notes: "Tracker entry for missing map roster coverage; individual location pages should be added only after names are verified."
     })
   );
 
@@ -1622,13 +1622,12 @@ function seedCoreEntities() {
     ["Character specializations", "Demo/devlog posts say the ten playable frogs have unique specializations, main attacks, and starting skillsets."],
     ["Character main attacks", "Demo/devlog examples include tongue attacks, spits, snow minigun, electric staff, and hockey stick."],
     ["Core attacks", "Launch devlog examples include tongue, spit, and baseball bat style core attacks, while the updated demo announcement identifies Puff's ranged poison spit."],
-    ["Attacks", "The public Steam release-scope wording counts attacks alongside skills, tools, and companions; this wiki currently folds attack-style facts into Skills and Glossary until a standalone attack roster is sourced."],
+    ["Attacks", "The public Steam release-scope wording counts attacks alongside skills, tools, and companions; this wiki currently folds attack-style facts into Skills and Glossary until a standalone attack roster is verified."],
     ["Projectile types", "Steam Devlog #4 previews new enemy and boss projectile types, but does not name or quantify them."],
     ["Movement abilities", "Steam Devlog #4 previews new frog movement abilities; later launch devlog posts name examples such as Glider, Snowball Roll, and Leap Chain."],
     ["Snow digging abilities", "Steam Devlog #4 previews more powerful snow digging abilities; exact stats and scaling need gameplay verification."],
     ["Companion roster", "Steam Devlog #4 previews new companions, including animals and robots; later public sources name several examples."],
     ["Quest-based meta-progression", "Demo/devlog posts describe quests and Blue Gems unlocking characters, abilities, and locations."],
-    ["Local metadata unavailable", "The local game-files scan currently found zero readable files, so the wiki is populated from public sources until SteamCMD/local extraction succeeds."],
     ["Peaceful Mode", "Monster-free cozy mode described by Steam copy."],
     ["Peaceful Mode puzzles", "Official Steam copy says Peaceful Mode lets players search for hidden treasures, solve puzzles, and escape at their own pace."],
     ["Survival loop", "Run structure: leave home, dig, fight, collect, return resources, and grow stronger."],
@@ -1829,7 +1828,7 @@ function buildSteamSnapshot(args: {
     generated_at: new Date().toISOString(),
     source_policy: [
       "Prefer official public Steam endpoints and pages for game metadata.",
-      "Do not copy raw long descriptions, review text, proprietary assets, binaries, source code, or decompiled content.",
+      "Do not copy raw long descriptions, review text, proprietary assets, binaries, program code, or decompiled content.",
       "Treat prices, review counts, recommendations, player counts, and achievement percentages as volatile as-of metadata.",
       "Treat achievement names as public names; classify gameplay effects only when another source or safe local metadata confirms them.",
       "Fetch non-Steam public pages during refresh and fail if marker text for cited claims disappears."
@@ -2107,7 +2106,7 @@ function buildPublicResearchMarkdown(args: {
     "",
     "This note summarizes public metadata used to seed the wiki. It intentionally avoids raw long store-description dumps and raw review text.",
     "",
-    "## High-Confidence Sources",
+    "## High-Confidence References",
     "",
     `- Steam full-game store page: ${urls.fullStore}`,
     `- Steam demo store page: ${urls.demoStore}`,
@@ -2153,14 +2152,14 @@ function buildPublicResearchMarkdown(args: {
     `- Steam news/devlog confirmed terms added to the wiki: ${args.newsFindings.confirmed_terms.join(", ")}.`,
     "- Exact stats, unlock costs, complete named map roster, named boss roster, named enemy roster, and the remaining frog/character roster remain Needs verification unless local metadata or gameplay notes confirm them.",
     "",
-    "## Steam News / Devlog Source Items",
+    "## Steam News / Devlog Reference Items",
     "",
     `- Steam News API items classified: ${args.newsFindings.fetched_news_item_count}`,
     `- Steam News API classification counts: ${JSON.stringify(newsClassificationCounts)}`,
     `- Direct news/devlog records parsed from Steam News API: ${args.newsFindings.news_item_count}`,
     ...args.newsItems.map((item) => `- ${item.date} - ${item.title}: ${item.url} (${item.supports})`),
     "",
-    "## External Source Checks",
+    "## External Reference Checks",
     "",
     ...args.externalSourceChecks.map(
       (check) => `- ${check.label}: ${check.url} (matched markers: ${check.matched_markers.join(", ")})`
@@ -2172,7 +2171,7 @@ function buildPublicResearchMarkdown(args: {
     `- Public global achievement API ids parsed: ${args.achievementPercentages.length}`,
     `- Achievement fact matrix rows stored in src/data/steam-snapshot.json: ${achievementFacts.length}`,
     `- Achievement rows with parsed public loadout names: ${achievementLoadoutFactCount}`,
-    "- Generated source page: /achievement-source-matrix/, covering milestone series, loadout-name evidence, Steam API ids, API percentages, community percentages, and source ids.",
+    "- Achievement evidence matrix rows cover milestone series, loadout-name evidence, Steam API ids, API percentages, community percentages, and reference ids.",
     `- Demo global achievement API status: ${args.demoAchievementPercentagesResult.status}${args.demoAchievementPercentagesResult.error ? ` (${args.demoAchievementPercentagesResult.error})` : ""}`,
     `- Demo global achievement API ids parsed: ${args.demoAchievementPercentages.length}`,
     "- Achievement percentages are volatile and may differ slightly by endpoint/cache. Use them as as-of metadata only.",
@@ -2193,7 +2192,7 @@ function buildPublicResearchMarkdown(args: {
     "## Cautions",
     "",
     "- Do not infer entity effects, unlock costs, or roster completeness from names alone.",
-    "- Do not redistribute proprietary assets, binaries, source code, or large raw text excerpts from local game files.",
+    "- Do not redistribute proprietary assets, binaries, program code, or large raw text excerpts from local game files.",
     "- Refresh prices, review counts, player counts, and achievement percentages before using them in visible copy."
   ];
 

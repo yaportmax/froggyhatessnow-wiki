@@ -1,44 +1,45 @@
 ---
 title: "FROGGY HATES SNOW Wiki"
-description: "Unofficial metadata-first fan wiki for FROGGY HATES SNOW."
+description: "Unofficial reference wiki for FROGGY HATES SNOW."
 draft: false
 ---
 
-# FROGGY HATES SNOW Wiki
+<figure class="wiki-hero-media"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3232380/4aec6dc45dab3a096faeda88c8036627817f0cfe/header_alt_assets_0.jpg?t=1778580427" alt="FROGGY HATES SNOW public Steam header art" loading="eager" /></figure>
 
-![FROGGY HATES SNOW Steam header](https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3232380/4aec6dc45dab3a096faeda88c8036627817f0cfe/header_alt_assets_0.jpg?t=1778580427)
+Unofficial reference wiki for **FROGGY HATES SNOW**.
 
-Unofficial metadata-first fan wiki for **FROGGY HATES SNOW**. The current build starts from public Steam metadata, the public Steam achievements page, public review summaries, publisher metadata, and safe local metadata scanning.
+<div class="steam-media-strip">
+<a href="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3232380/56938ae4d7d96120e416377cda93131fa5ef415c/ss_56938ae4d7d96120e416377cda93131fa5ef415c.1920x1080.jpg?t=1778580427" rel="noopener"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3232380/56938ae4d7d96120e416377cda93131fa5ef415c/ss_56938ae4d7d96120e416377cda93131fa5ef415c.600x338.jpg?t=1778580427" alt="Public Steam screenshot for FROGGY HATES SNOW 1" loading="lazy" /></a>
+<a href="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3232380/f8c9d55547cdfea778613fec7c541906c5ea2e40/ss_f8c9d55547cdfea778613fec7c541906c5ea2e40.1920x1080.jpg?t=1778580427" rel="noopener"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3232380/f8c9d55547cdfea778613fec7c541906c5ea2e40/ss_f8c9d55547cdfea778613fec7c541906c5ea2e40.600x338.jpg?t=1778580427" alt="Public Steam screenshot for FROGGY HATES SNOW 2" loading="lazy" /></a>
+<a href="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3232380/4802806329bda2cc1cd1a9233b33b99788513534/ss_4802806329bda2cc1cd1a9233b33b99788513534.1920x1080.jpg?t=1778580427" rel="noopener"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3232380/4802806329bda2cc1cd1a9233b33b99788513534/ss_4802806329bda2cc1cd1a9233b33b99788513534.600x338.jpg?t=1778580427" alt="Public Steam screenshot for FROGGY HATES SNOW 3" loading="lazy" /></a>
+<a href="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3232380/d7e6f2e17759d89948a7200ca8e126b75b7c2496/ss_d7e6f2e17759d89948a7200ca8e126b75b7c2496.1920x1080.jpg?t=1778580427" rel="noopener"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3232380/d7e6f2e17759d89948a7200ca8e126b75b7c2496/ss_d7e6f2e17759d89948a7200ca8e126b75b7c2496.600x338.jpg?t=1778580427" alt="Public Steam screenshot for FROGGY HATES SNOW 4" loading="lazy" /></a>
+</div>
+## Reference Index
 
-:::caution[Scope]
-This wiki does not redistribute proprietary game files, assets, binaries, source code, or large raw text dumps. Entries marked Inferred or Needs verification should be treated as work-in-progress.
-:::
-
-Current entity coverage: **165 entries** (136 Verified, 27 Inferred, 2 Needs verification).
-
-Steam source snapshot: full game app 3232380, demo app 4037600, 42 public achievement rows, accessed 2026-05-13.
-
-## Browse
-
-- [Frogs](/generated/frogs/)
-- [Maps](/generated/maps/)
-- [Tools](/generated/tools/)
-- [Items](/generated/items/)
-- [Skills](/generated/skills/)
-- [Companions](/generated/companions/)
-- [Upgrades](/generated/upgrades/)
-- [Bosses](/generated/bosses/)
-- [Enemies](/generated/enemies/)
-- [Achievements](/generated/achievements/)
-- [Glossary](/generated/glossary/)
-- [Game Metadata](/game-metadata/)
-- [Steam Source Snapshot](/steam-source-snapshot/)
-- [Achievement Source Matrix](/achievement-source-matrix/)
-- [Source Ledger](/source-ledger/)
-- [Verification Status](/verification-status/)
-
-## Priority Research Gaps
-
-- Local Steam demo acquisition is blocked in this macOS shell; see `notes/public-research.md`.
-- Individual frog/character names, map names, boss names, enemy names, exact upgrade stats, costs, and unlock conditions need gameplay or safe metadata verification.
-- Achievement percentages, review counts, and prices are volatile and should be refreshed before publishing numeric claims.
+<div class="wiki-table-scroll wiki-reference-table--home">
+<table class="wiki-data-table">
+<thead><tr><th scope="col">Name</th><th scope="col">Description</th></tr></thead>
+<tbody>
+<tr><td><a href="/generated/media/">Media</a></td><td>14 public Steam screenshots</td></tr>
+<tr><td><a href="/generated/frogs/">Frogs</a></td><td>10 character rows</td></tr>
+<tr><td><a href="/generated/skills/">Skills</a></td><td>69 core skill rows</td></tr>
+<tr><td><a href="/generated/tools/">Tools</a></td><td>Tool subset</td></tr>
+<tr><td><a href="/generated/companions/">Companions</a></td><td>Companion subset</td></tr>
+<tr><td><a href="/generated/upgrades/">Upgrades</a></td><td>68 upgrade rows</td></tr>
+<tr><td><a href="/generated/status-effects/">Status Effects</a></td><td>66 status-effect rows</td></tr>
+<tr><td><a href="/generated/items/">Items</a></td><td>34 artifacts plus resources</td></tr>
+<tr><td><a href="/generated/maps/">Maps</a></td><td>16 location rows</td></tr>
+<tr><td><a href="/generated/waves/">Enemy Waves</a></td><td>253 wave rows</td></tr>
+<tr><td><a href="/generated/spawners/">Object Spawners</a></td><td>127 level-object prefabs</td></tr>
+<tr><td><a href="/generated/enemies/">Enemies</a></td><td>29 enemy rows</td></tr>
+<tr><td><a href="/generated/bosses/">Bosses</a></td><td>5 boss rows</td></tr>
+<tr><td><a href="/generated/achievements/">Achievements</a></td><td>42 achievement rows</td></tr>
+<tr><td><a href="/generated/mechanics/">Mechanics</a></td><td>Quests, modes, difficulty, and terrain</td></tr>
+<tr><td><a href="/generated/quests/">Quest Templates</a></td><td>50 objective templates</td></tr>
+<tr><td><a href="/generated/achievement-conditions/">Achievement Conditions</a></td><td>42 achievement requirements</td></tr>
+<tr><td><a href="/generated/modes/">Modes &amp; Difficulty</a></td><td>Modes and difficulty levels</td></tr>
+<tr><td><a href="/generated/terrain/">Terrain</a></td><td>Height and texture patterns</td></tr>
+<tr><td><a href="/generated/glossary/">Glossary</a></td><td>System terms</td></tr>
+</tbody>
+</table>
+</div>

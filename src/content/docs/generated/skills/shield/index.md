@@ -1,36 +1,33 @@
 ---
 title: "Shield"
-description: "Shield is named in a public achievement condition."
+description: "Shield skill reference for FROGGY HATES SNOW."
 draft: false
 ---
 
-# Shield
+<div class="wiki-table-scroll wiki-table-scroll--summary">
+<table class="wiki-summary-table">
+<tbody>
+<tr><th scope="row">Related upgrade</th><td><a href="/generated/upgrades/shield/">Shield</a></td></tr>
+</tbody>
+</table>
+</div>
 
-:::caution[Inferred]
-The name is public, but one or more type/effect details are inferred and need gameplay or metadata confirmation.
-:::
+Temporarily absorbs a certain amount of damage
 
-Shield is named in a public achievement condition.
+## Values
 
-| Field | Value |
-|---|---|
-| Status | Inferred |
-| Category | skills |
-| Aliases | None listed |
-| Effect | Needs verification. |
-| Unlock Method | Needs verification. |
-| Cost | Needs verification. |
-| Mode | Needs verification. |
-| Verified Fields | name, category |
-| Fields Needing Verification | effect, unlock_method, cost, mode |
-| Last Verified | Public Steam metadata accessed 2026-05-13 |
-| Notes | Name is public; category/effect details may need gameplay or local metadata verification. |
+<div class="wiki-table-scroll wiki-data-table--values">
+<table class="wiki-data-table">
+<thead><tr><th scope="col">Parameter</th><th scope="col">Start</th><th scope="col">End</th><th scope="col">Level values</th></tr></thead>
+<tbody>
+<tr><td>Max Absorbed Damage</td><td>50</td><td>200</td><td><div class="wiki-value-sequence"><span>50</span><span>70</span><span>85</span><span>105</span><span>125</span><span>145</span><span>160</span><span>180</span><span>200</span></div></td></tr>
+<tr><td>Cooldown</td><td>30</td><td>30</td><td></td></tr>
+<tr><td>Usage Time</td><td>15</td><td>30</td><td><div class="wiki-value-sequence"><span>15</span><span>17</span><span>20</span><span>22</span><span>25</span><span>27</span><span>30</span></div></td></tr>
+</tbody>
+</table>
+</div>
+
 
 ## Related
 
-No related entities listed yet.
-
-## Sources
-
-- [Steam community achievements page](https://steamcommunity.com/stats/3232380/achievements/?l=english) — public_source, confidence high, source `steam-full-achievements-page`. Public achievement display names and descriptions.
-- [Achievement condition classification](local inference from public-source wording) — inferred, confidence medium, source `achievement-condition-classification`. Classified as skills from public achievement wording; exact in-game type needs verification.
+<ul class="wiki-inline-list"><li><a href="/generated/skills/">All skills</a></li><li><a href="/generated/upgrades/shield/">Shield</a></li><li><a href="/generated/frogs/puff/">Puff</a></li></ul>

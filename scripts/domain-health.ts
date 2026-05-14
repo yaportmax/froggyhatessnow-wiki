@@ -56,13 +56,6 @@ function combinedOutput(result: CommandResult) {
   return [result.stdout, result.stderr].filter(Boolean).join("\n");
 }
 
-async function readSteamSnapshotGeneratedAt() {
-  const raw = await readFile("src/data/steam-snapshot.json", "utf8");
-  const snapshot = JSON.parse(raw) as { generated_at?: string };
-  if (!snapshot.generated_at) throw new Error("src/data/steam-snapshot.json is missing generated_at.");
-  return snapshot.generated_at;
-}
-
 async function astroCanonicalCheck(): Promise<HealthCheck> {
   const configPath = "astro.config.mjs";
   const source = await readFile(configPath, "utf8");
@@ -141,7 +134,6 @@ async function fetchCheck(baseUrl: string, pathname: string, requiredText: strin
 }
 
 async function main() {
-  const generatedAt = await readSteamSnapshotGeneratedAt();
   const [canonical, porkbunStatus, vercelApex, vercelWww, apexDns, wwwDns] = await Promise.all([
     astroCanonicalCheck(),
     run("npm", ["run", "domain:status"]),
@@ -154,9 +146,9 @@ async function main() {
   const httpChecks = await Promise.all(
     [`https://${DOMAIN}`, `https://www.${DOMAIN}`].flatMap((baseUrl) => [
       fetchCheck(baseUrl, "/", "FROGGY HATES SNOW Wiki", "homepage"),
-      fetchCheck(baseUrl, "/steam-source-snapshot/", "All Steam News Items", "steam-source-page"),
-      fetchCheck(baseUrl, "/steam-source-snapshot/", `Generated: ${generatedAt}`, "steam-snapshot-marker"),
-      fetchCheck(baseUrl, "/achievement-source-matrix/", "Loadout Names", "achievement-matrix")
+      fetchCheck(baseUrl, "/generated/frogs/", "Playable Frogs", "frogs-page"),
+      fetchCheck(baseUrl, "/generated/mechanics/", "Mechanics", "mechanics-page"),
+      fetchCheck(baseUrl, "/generated/quests/", "Quest Templates", "quests-page")
     ])
   );
 
@@ -199,7 +191,6 @@ async function main() {
     ok,
     domain: DOMAIN,
     expectedVercelAddress: VERCEL_IP,
-    steamSnapshotGeneratedAt: generatedAt,
     checks
   };
 

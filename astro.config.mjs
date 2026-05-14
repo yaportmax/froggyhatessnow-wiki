@@ -9,7 +9,8 @@ export default defineConfig({
   integrations: [
     starlight({
       title: "FROGGY HATES SNOW Wiki",
-      description: "Unofficial metadata-first fan wiki for FROGGY HATES SNOW.",
+      description: "Unofficial reference wiki for FROGGY HATES SNOW.",
+      disable404Route: true,
       head: [
         { tag: "meta", attrs: { property: "og:image", content: steamHeaderImage } },
         { tag: "meta", attrs: { property: "og:image:alt", content: "FROGGY HATES SNOW Steam header art" } },
@@ -25,22 +26,55 @@ export default defineConfig({
         }
       ],
       sidebar: [
-        { label: "Start Here", link: "/" },
-        { label: "Game Metadata", link: "/game-metadata/" },
-        { label: "Steam Source Snapshot", link: "/steam-source-snapshot/" },
-        { label: "Achievement Source Matrix", link: "/achievement-source-matrix/" },
-        { label: "Source Ledger", link: "/source-ledger/" },
+        { label: "Home", link: "/" },
+        { label: "Media", link: "/generated/media/" },
         {
-          label: "Guides",
-          autogenerate: { directory: "guides" }
+          label: "Frogs",
+          items: [
+            { label: "All Frogs", link: "/generated/frogs/" },
+            { label: "Froggy", link: "/generated/frogs/froggy/" },
+            { label: "Puff", link: "/generated/frogs/puff/" },
+            { label: "Zippy", link: "/generated/frogs/zippy/" }
+          ]
         },
         {
-          label: "Generated Data",
-          autogenerate: { directory: "generated" }
+          label: "Skills & Tools",
+          items: [
+            { label: "All Skills", link: "/generated/skills/" },
+            { label: "Tools", link: "/generated/tools/" },
+            { label: "Companions", link: "/generated/companions/" },
+            { label: "Upgrades", link: "/generated/upgrades/" },
+            { label: "Status Effects", link: "/generated/status-effects/" }
+          ]
         },
-        { label: "FAQ", link: "/faq/" },
-        { label: "Contribute", link: "/contribute/" },
-        { label: "Verification Status", link: "/verification-status/" }
+        {
+          label: "Items & Maps",
+          items: [
+            { label: "Artifacts & Items", link: "/generated/items/" },
+            { label: "Locations", link: "/generated/maps/" },
+            { label: "Snowplain", link: "/generated/maps/snowplain/" },
+            { label: "Enemy Waves", link: "/generated/waves/" },
+            { label: "Object Spawners", link: "/generated/spawners/" }
+          ]
+        },
+        {
+          label: "Bestiary",
+          items: [
+            { label: "Enemies", link: "/generated/enemies/" },
+            { label: "Bosses", link: "/generated/bosses/" }
+          ]
+        },
+        {
+          label: "Progress",
+          items: [
+            { label: "Achievements", link: "/generated/achievements/" },
+            { label: "Mechanics", link: "/generated/mechanics/" },
+            { label: "Quest Templates", link: "/generated/quests/" },
+            { label: "Modes & Difficulty", link: "/generated/modes/" },
+            { label: "Terrain", link: "/generated/terrain/" },
+            { label: "Glossary", link: "/generated/glossary/" }
+          ]
+        }
       ]
     })
   ]

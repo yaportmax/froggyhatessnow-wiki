@@ -4,13 +4,13 @@ Checked: 2026-05-13
 
 ## Objective
 
-Build an unofficial, metadata-first SEO wiki for FROGGY HATES SNOW in this folder, with its own GitHub repo and domain path, seeded from public Steam/public web/safe local metadata, using Astro Starlight and TypeScript where practical. The wiki must be populated, generated, validated, documented, deployed or deployment-ready, and the domain researched and bought/configured if possible.
+Build an unofficial, player-useful SEO wiki for FROGGY HATES SNOW in this folder, with its own GitHub repo and domain path, seeded from public Steam/public web/safe local metadata, using Astro Starlight and TypeScript where practical. The wiki must be populated, generated, validated, documented, deployed or deployment-ready, and the domain researched and bought/configured if possible.
 
 ## Current Status
 
 Blocked, not complete.
 
-The wiki/scaffold/data/source/deploy work is complete and verified. The remaining explicit objective is the custom-domain purchase/DNS path: Porkbun still blocks registration with `VERIFICATION_REQUIRED` because the account phone number and email address must be verified. Fresh read-only account checks also show `0` Porkbun account credit and auto-topup disabled, while Porkbun's API registration endpoint uses account credit. The guarded finisher stops before DNS, Astro config, build, or deploy changes.
+The wiki/scaffold/data/deploy work is complete and verified. The remaining explicit objective is the custom-domain purchase/DNS path: Porkbun still blocks registration with `VERIFICATION_REQUIRED` because the account phone number and email address must be verified. Fresh read-only account checks also show `0` Porkbun account credit and auto-topup disabled, while Porkbun's API registration endpoint uses account credit. The guarded finisher stops before DNS, Astro config, build, or deploy changes.
 
 ## Prompt-to-Artifact Checklist
 
@@ -21,24 +21,24 @@ The wiki/scaffold/data/source/deploy work is complete and verified. The remainin
 | Build with Astro Starlight | `astro.config.mjs`, `src/content/docs/`, Starlight dependencies, and `npm run build` pass. | Done |
 | Use TypeScript where practical | Scripts are TypeScript/TSX and are exercised by `npm run validate`, `npm test`, `npm run fetch:steam`, and `npm run build`. Bare `npx tsc --noEmit` currently fails inside Starlight generated utility types (`astro:content` `RenderResult`), so build/test/validator execution is the reliable gate. | Done with noted typecheck caveat |
 | Required project folders | `src/content/docs/`, `src/content/docs/generated/`, `src/data/`, `scripts/`, `public/`, `notes/`, and `game-files/` exist. | Done |
-| Required named files | `.gitignore`, `README.md`, `AGENTS.md`, `package.json`, `astro.config.mjs`, all listed `src/data/*.json`, `scripts/scan-game-files.ts`, `scripts/generate-pages.ts`, `scripts/validate-data.ts`, required notes, and SEO/source endpoints `src/pages/robots.txt.ts` and `src/pages/llms.txt.ts` exist. | Done |
-| `game-files/` local-only | `.gitignore` ignores `game-files/`; scan page says local metadata contributes no facts because the directory contains no files. | Done |
-| SteamCMD demo acquisition | SteamCMD path was attempted and documented in `notes/public-research.md`; macOS SteamCMD and Docker fallback did not populate `game-files/`. | Blocked, documented |
-| Safe metadata scanner | `scripts/scan-game-files.ts`; scanner handles missing/empty dirs, skips symlinks/binaries, emits summaries only. `npm test` covers missing dir, readable file/binary/symlink, and empty dir status. | Done |
-| Extracted metadata notes | `notes/extracted-metadata.md` / `.json` show `gameFilesPresent: true`, `gameFilesContainFiles: false`, `filesScanned: 0`, `readable_files: 0`. | Done |
-| Public metadata and source URLs | `scripts/fetch-steam-public-data.ts`, `src/data/steam-snapshot.json`, `src/data/public-sources.json`, `notes/public-research.md`, and source pages are present. | Done |
-| Steam game sourcing prioritized | Snapshot generated `2026-05-13T16:07:29.110Z` includes all 15 Steam News API items from a 100-item request window, 11 direct Steam news/devlog sources, 70 confirmed Steam news/devlog terms, 42 achievement facts with public icon URLs, 20 parsed loadout-name rows, 14 full-game screenshots, 13 demo screenshots, Steam review summaries, external-source marker checks, 16 public gameplay claims, and research gaps. | Done |
-| Do not invent facts / mark uncertainty | Validator enforces allowed statuses; data includes 136 `Verified`, 27 `Inferred`, and 2 `Needs verification` rows. Named roster/map/enemy/boss behavior gaps remain explicit. | Done |
-| Structured datasets | 11 datasets exist with 165 entities: frogs 5, maps 5, tools 16, items 12, skills 29, companions 6, upgrades 7, bosses 5, enemies 5, achievements 42, glossary 33. | Done |
-| Entity fields and sources | Validator checks required fields, source types, verification statuses, source IDs, related links, duplicate ids/slugs, and Verified entries without sources. | Done |
-| Generated category/detail pages | `npm run generate` creates 165 entity detail pages and 11 category indexes; filesystem currently has 176 generated `index.md` files. | Done |
-| Required static pages | Homepage, beginner guide, warmth guide, best upgrades, unlocks, game modes, FAQ, contribute, verification status, game metadata, source ledger, Steam source snapshot, and achievement source matrix exist under `src/content/docs/`. | Done |
-| SEO targets | Page titles/descriptions and generated routes cover the requested terms for wiki, frogs, maps, tools, items, skills, achievements, unlocks, warmth guide, bosses, and game modes. `/robots.txt` points crawlers at the generated sitemap, `/llms.txt` summarizes source policy/snapshot metadata/key pages/category counts/primary public sources, and sitewide Open Graph/Twitter image tags use the public Steam header image URL. `astro.config.mjs` currently uses the Vercel alias until the custom domain is actually registered. | Done for deployed alias; custom canonical waits on domain |
+| Required named files | `.gitignore`, `README.md`, `AGENTS.md`, `package.json`, `astro.config.mjs`, all listed `src/data/*.json`, `scripts/scan-game-files.ts`, `scripts/generate-pages.ts`, `scripts/validate-data.ts`, required notes, and SEO endpoints `src/pages/robots.txt.ts` and `src/pages/llms.txt.ts` exist. | Done |
+| `game-files/` local-only | `.gitignore` ignores `game-files/`; the directory now contains the local Steam demo build but remains untracked and local-only. | Done |
+| SteamCMD demo acquisition | Homebrew SteamCMD now launches after macOS `Breakpad.framework` approval; the Windows demo build is installed under `game-files/` for local extraction. | Done |
+| Safe metadata scanner | `scripts/scan-game-files.ts`; scanner handles missing/empty dirs, skips symlinks/binaries, emits summaries only, and extracts compact Unity/Mono metadata without dumping assets or code. `npm test` covers missing dir, readable file/binary/symlink, empty dir status, and Unity metadata fixtures. | Done |
+| Extracted metadata notes | `notes/extracted-metadata.md` / `.json` show `gameFilesPresent: true`, `gameFilesContainFiles: true`, `filesScanned: 199`, 135 localized skill/tool rows, 10 characters, 16 locations, 34 artifacts, 53 stat labels, 5 resources, 49 quest strings, 11 event notifications, 4 rarity labels, 3 end states, 127 level-object prefabs, 124 managed enum groups, 29 ScriptableObject/DataSO type summaries, 1 collectible reward list, and 343 decoded gameplay component instances across chests, collectible heaps/pits/challenges, quick spawners, tree spawn point roots, heap spawners, spawn-slot managers, status effect bars, and collectible lists. | Done |
+| Public metadata and reference URLs | `scripts/fetch-steam-public-data.ts`, `src/data/steam-snapshot.json`, the public-reference JSON registry, and `notes/public-research.md` are present. | Done |
+| Steam game evidence prioritized | Snapshot generated `2026-05-13T16:07:29.110Z` includes all 15 Steam News API items from a 100-item request window, 11 direct Steam news/devlog references, 70 confirmed Steam news/devlog terms, 42 achievement facts with public icon URLs, 20 parsed loadout-name rows, 14 full-game screenshots, 13 demo screenshots, Steam review summaries, external reference marker checks, 16 public gameplay claims, and research gaps. | Done |
+| Do not invent facts / mark uncertainty | Validator enforces allowed statuses; data includes 135 `Verified`, 27 `Inferred`, and 2 `Needs verification` rows. Named roster/map/enemy/boss behavior gaps remain explicit. | Done |
+| Structured datasets | 11 datasets exist with 164 entities: frogs 5, maps 5, tools 16, items 12, skills 29, companions 6, upgrades 7, bosses 5, enemies 5, achievements 42, glossary 32. | Done |
+| Entity fields and evidence | Validator checks required fields, reference types, verification statuses, reference IDs, related links, duplicate ids/slugs, and Verified entries without evidence. | Done |
+| Generated player lookup pages | `npm run generate` creates 11 compact category/player lookup tables and intentionally suppresses 164 low-value entity detail stubs. | Done |
+| Required static pages | Homepage and generated wiki sections exist under `src/content/docs/`, including media, frogs, skills, upgrades, items, maps, enemies, bosses, achievements, mechanics, quests, modes, terrain, and glossary. | Done |
+| SEO targets | Page titles/descriptions and generated routes cover the requested terms for wiki, frogs, maps, tools, items, skills, achievements, unlocks, bosses, and game modes. `/robots.txt` points crawlers at the generated sitemap, `/llms.txt` summarizes evidence policy/snapshot metadata/key pages/category counts/primary public references, and sitewide Open Graph/Twitter image tags use the public Steam header image URL. `astro.config.mjs` currently uses the Vercel alias until the custom domain is actually registered. | Done for deployed alias; custom canonical waits on domain |
 | Package scripts | `dev`, `build`, `preview`, `scan`, `fetch:steam`, `refresh:data`, `generate`, `validate`, and `build:verified` exist, plus `test`, `deploy:*`, and `domain:*` helpers including read-only `domain:account`, `domain:finish:post-verification`, guarded Vercel registrar fallback scripts, `domain:finish:vercel-post-purchase`, the read-only `domain:health` final audit, and guarded `domain:commit-canonical` commit helper. | Done |
-| README and AGENTS | Both exist and document workflow, source rules, validation/deploy/domain paths, and fail-loud behavior. | Done |
+| README and AGENTS | Both exist and document workflow, evidence rules, validation/deploy/domain paths, and fail-loud behavior. | Done |
 | Domain research | `notes/domain-options.md` lists all required candidates, registrar, registration/renewal prices, pros/cons, best recommendation, backups, Porkbun attempt history, and Vercel registrar fallback prices. `notes/porkbun-verification-support.md` contains the current support-ready blocker packet. | Done |
 | Buy domain via Porkbun API and/or Chrome | Porkbun API confirms `froggyhatessnow.wiki` is available, non-premium, `$2.06` first year / `$26.26` renewal, but registration fails with `VERIFICATION_REQUIRED`. Read-only account checks confirm valid API credentials, `0` account credit, and auto-topup disabled, so credit/payment setup may also be needed after verification. Chrome plugin control is still blocked because the required Node REPL execution tool is not exposed; Computer Use still cannot attach to Chrome (`cgWindowNotFound`), so UI verification could not proceed safely. | Blocked |
-| Vercel deployment | Vercel project `yaportmax-5253s-projects/froggyhatessnow-wiki`; active deployment `dpl_6Ey7Ab2CJZHqCYanUFiPKgKfpmDu`; stable alias `https://froggyhatessnow-wiki.vercel.app` passes live checks including source marker `2026-05-13T16:07:29.110Z`. | Done |
+| Vercel deployment | Vercel project `yaportmax-5253s-projects/froggyhatessnow-wiki`; active deployment `dpl_6Ey7Ab2CJZHqCYanUFiPKgKfpmDu`; stable alias `https://froggyhatessnow-wiki.vercel.app` passes live checks from the prior deployment. | Done |
 | Custom domain DNS if registered | Vercel has `froggyhatessnow.wiki` and `www.froggyhatessnow.wiki` attached, but DNS is not configured because the domain is not registered. Porkbun DNS returns `INVALID_DOMAIN`. | Waiting on registration |
 | Completion criteria | All criteria are met except “Buy the domain” and resulting DNS/custom-domain canonical verification. | Not complete |
 
@@ -63,13 +63,13 @@ curl -I --max-time 20 https://froggyhatessnow.wiki/
 ## Latest Results
 
 - `git status --short`: clean at commit `a0bee7c399b3a9424e0dd9fb505ca219db7abb76` before this continuation note refresh.
-- `npm run validate`: validated 11 entity datasets plus `public-sources.json` and `steam-snapshot.json`.
-- `npm run audit:completion`: exit 1 as expected; all source/content/build/deploy checks passed, while `astro-canonical-custom-domain` and `command:domain-health` failed because `froggyhatessnow.wiki` DNS still returns `ENOTFOUND` and `astro.config.mjs` still points at the Vercel alias. Latest run at 2026-05-13 09:41 PDT confirmed local/remote `main` are clean at `a0bee7c399b3a9424e0dd9fb505ca219db7abb76` and that the read-only `domain:account` helper is present in the package-script audit.
-- `npm test`: 2 test files, 10 tests passed.
-- `npm run build`: 190 pages built; Pagefind indexed 189 pages.
+- `npm run validate`: validated 11 entity datasets plus public-reference JSON and `steam-snapshot.json`.
+- `npm run audit:completion`: exit 1 as expected at that time; all content/build/deploy checks passed, while `astro-canonical-custom-domain` and `command:domain-health` failed because `froggyhatessnow.wiki` DNS still returned `ENOTFOUND` and `astro.config.mjs` still pointed at the Vercel alias. Latest run at 2026-05-13 09:41 PDT confirmed local/remote `main` were clean at `a0bee7c399b3a9424e0dd9fb505ca219db7abb76` and that the read-only `domain:account` helper was present in the package-script audit.
+- `npm test`: 2 test files, 11 tests passed.
+- `npm run build`: 26 pages built; Pagefind indexed 25 pages.
 - `npx tsc --noEmit`: currently fails in Starlight generated utility types (`astro:content` has no exported `RenderResult`); `npm run build`, `npm test`, and `npm run validate` pass.
 - `git diff --check`: passed.
-- `npm run deploy:status`: stable alias live checks passed for homepage, Steam source snapshot, current source timestamp `2026-05-13T16:07:29.110Z`, achievement matrix, homepage Open Graph image metadata, `/robots.txt`, and `/llms.txt`.
+- `npm run deploy:status`: stable alias live checks passed for homepage, generated wiki markers, homepage Open Graph image metadata, `/robots.txt`, and `/llms.txt`.
 - `npm run domain:status`: `domain_available_not_registered`; latest check request id `019e2233-d920-7616-909e-967a34950523`, DNS retrieve request id `019e2233-dc0c-7053-840f-52545dbcb74e`.
 - `npm run domain:account`: `/ping` credentials valid; `/account/balance` reports `balance: 0`; `/account/apiSettings` reports `monthlySpend: 0`. Request ids: `019e2235-5708-7f33-9956-0ba5f8e4ac98`, `019e2235-594a-7bfa-927c-a9f0323ca725`, `019e2235-5b2e-75d6-b4e2-30a9a040f6fa`.
 - `npm run domain:health`: expected failure while registration/DNS/canonical switch are incomplete. It now includes an `astro-canonical-site` check for `astro.config.mjs` in addition to Porkbun registration state, Vercel attachment, DNS A records, and custom-domain page markers.
@@ -98,7 +98,7 @@ curl -I --max-time 20 https://froggyhatessnow.wiki/
    A www 76.76.21.21
    ```
 
-5. Verify Vercel and live custom-domain behavior. The guarded finisher now checks homepage/source/matrix markers on both the apex and `www` custom domains and then runs `domain:health`; these manual commands are fallback evidence if needed:
+5. Verify Vercel and live custom-domain behavior. The guarded finisher now checks homepage/wiki markers on both the apex and `www` custom domains and then runs `domain:health`; these manual commands are fallback evidence if needed:
 
    ```bash
    npx vercel domains inspect froggyhatessnow.wiki
